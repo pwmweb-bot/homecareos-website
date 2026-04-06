@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing Plans — homecareOS | Home Care Software</title>
-  <meta name="description" content="Affordable pricing for UK home care agencies. Start free with homecareOS Starter, or upgrade to PRO and Enterprise for advanced features.">
+  <meta name="description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.homecareos.co.uk/pricing">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Pricing Plans — homecareOS | Home Care Software">
-  <meta property="og:description" content="Affordable pricing for UK home care agencies. Start free with homecareOS Starter, or upgrade to PRO and Enterprise for advanced features.">
+  <meta property="og:description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/pricing">
   <meta property="og:image" content="images/photos/companion-elderly-woman.jpg">
@@ -20,7 +20,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pricing Plans — homecareOS | Home Care Software">
-  <meta name="twitter:description" content="Affordable pricing for UK home care agencies. Start free with homecareOS Starter, or upgrade to PRO and Enterprise for advanced features.">
+  <meta name="twitter:description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
   <meta name="twitter:image" content="images/photos/companion-elderly-woman.jpg">
 
   <!-- Google Fonts -->
@@ -40,7 +40,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Pricing Plans — homecareOS",
-    "description": "Affordable pricing for UK home care agencies. Start free with homecareOS Starter, or upgrade to PRO and Enterprise for advanced features.",
+    "description": "Simple per-staff pricing for UK home care agencies. Start free with up to 5 staff, then scale with Start or Pro plans.",
     "url": "https://www.homecareos.co.uk/pricing",
     "publisher": {
       "@type": "Organization",
@@ -95,32 +95,118 @@
           <span aria-hidden="true">/</span>
           <span class="current" aria-current="page">Pricing</span>
         </nav>
-        <h1 data-aos="fade-up">Simple, Transparent Pricing</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Start free and scale as you grow. No hidden fees, no long-term contracts.</p>
+        <h1 data-aos="fade-up">Get Started for Free</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Start managing care in minutes with up to <strong>5 staff</strong> and <strong>25 service users</strong> — completely free, no credit card required. When you grow beyond that, simple per-staff pricing from just <strong>&pound;7/staff/month</strong>.</p>
       </div>
     </section>
 
     <!-- ============================================
-         PRICING GRID
+         HOW IT WORKS STRIP
          ============================================ -->
-    <section class="section" aria-labelledby="pricing-heading">
+    <section class="section" style="padding-bottom: 0;">
       <div class="container">
-        <div class="pricing-grid">
+        <div class="pricing-journey" data-aos="fade-up">
+          <div class="journey-step">
+            <div class="journey-icon" style="background: var(--accent); color: #fff;">1</div>
+            <h4>Sign Up Free</h4>
+            <p>Create your account in under 2 minutes. No credit card, no commitment.</p>
+          </div>
+          <div class="journey-arrow" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon" style="background: var(--accent); color: #fff;">2</div>
+            <h4>Use It Free</h4>
+            <p>Manage up to <strong>5 staff</strong> and <strong>25 service users</strong> with core features — free forever.</p>
+          </div>
+          <div class="journey-arrow" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon" style="background: var(--accent); color: #fff;">3</div>
+            <h4>Grow &amp; Upgrade</h4>
+            <p>Need more staff or features? Upgrade to <strong>Start</strong> or <strong>Pro</strong> — from just &pound;7/staff/mo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Starter Plan (Featured) -->
-          <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="0">
-            <div class="pricing-badge">Most Popular</div>
-            <h3>Starter</h3>
-            <div class="price">FREE<span> / month</span></div>
-            <p class="price-note">No credit card required</p>
+    <!-- ============================================
+         BILLING TOGGLE + PRICING CALCULATOR
+         ============================================ -->
+    <section class="section" aria-labelledby="pricing-heading"
+      x-data="{
+        staffCount: 10,
+        billing: 'monthly',
+        boltOns: {
+          voip: { enabled: false, price: 0, name: 'VoIP Telephony' },
+          callRecording: { enabled: false, price: 0, name: 'Call Recording' },
+          webHosting: { enabled: false, price: 0, name: 'Web Hosting' },
+          ewa: { enabled: false, price: 0, name: 'Earned Wage Access' },
+          sims: { enabled: false, price: 0, name: 'SIM Cards' },
+          training: { enabled: false, price: 0, name: 'Training Marketplace' }
+        },
+        get multiplier() { return this.billing === 'annual' ? 0.8 : 1 },
+        get startCost() { return Math.round(this.staffCount * 7 * this.multiplier) },
+        get proCost() { return Math.round(this.staffCount * 10 * this.multiplier) },
+        get startAnnualSaving() { return this.staffCount * 7 * 12 * 0.2 },
+        get proAnnualSaving() { return this.staffCount * 10 * 12 * 0.2 },
+        get billingLabel() { return this.billing === 'annual' ? '/mo (billed annually)' : '/mo' },
+        formatCurrency(val) { return '\u00A3' + val.toLocaleString() }
+      }">
+      <div class="container">
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle" data-aos="fade-up">
+          <span class="toggle-label" :class="{ active: billing === 'monthly' }" @click="billing = 'monthly'">Monthly</span>
+          <div class="toggle-switch" :class="{ active: billing === 'annual' }" @click="billing = billing === 'monthly' ? 'annual' : 'monthly'" role="switch" :aria-checked="billing === 'annual'" aria-label="Toggle annual billing" tabindex="0" @keydown.enter="billing = billing === 'monthly' ? 'annual' : 'monthly'" @keydown.space.prevent="billing = billing === 'monthly' ? 'annual' : 'monthly'">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="toggle-label" :class="{ active: billing === 'annual' }" @click="billing = 'annual'">Annual</span>
+          <span class="toggle-badge" x-show="billing === 'annual'" x-transition>Save 20%</span>
+        </div>
+
+        <!-- Interactive Calculator -->
+        <div class="pricing-calculator" data-aos="fade-up" data-aos-delay="100">
+          <h3>Calculate Your Cost</h3>
+          <p class="calculator-subtitle">Drag the slider or enter a number to see your monthly cost instantly.</p>
+
+          <div class="calculator-staff-input">
+            <label for="staff-slider">Number of staff</label>
+            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" x-model.number="staffCount" aria-label="Number of staff">
+            <input type="number" min="1" max="200" x-model.number="staffCount" aria-label="Staff count" @input="if(staffCount < 1) staffCount = 1; if(staffCount > 200) staffCount = 200">
+          </div>
+
+          <div class="calculator-display">
+            <div class="calculator-display-card highlight">
+              <div class="tier-name">Start</div>
+              <div class="tier-price" x-text="formatCurrency(startCost)"></div>
+              <div class="tier-unit" x-text="billingLabel"></div>
+              <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(startAnnualSaving) + '/yr'"></div>
+            </div>
+            <div class="calculator-display-card">
+              <div class="tier-name">Pro</div>
+              <div class="tier-price" x-text="formatCurrency(proCost)"></div>
+              <div class="tier-unit" x-text="billingLabel"></div>
+              <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             PRICING CARDS
+             ============================================ -->
+        <div class="pricing-grid" data-aos="fade-up" data-aos-delay="150">
+
+          <!-- Free Plan -->
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <div class="price">&pound;0<span> / month</span></div>
+            <p class="price-note">Up to 5 staff &middot; 25 service users</p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Up to 10 clients
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Basic scheduling
+                Drag-and-drop rota scheduling
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -128,7 +214,23 @@
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Compliance checklists
+                Mobile app (check-in/out, GPS)
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Care notes &amp; visit logging
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Basic compliance checklists
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Medication (MAR) records
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Basic reporting (3 reports)
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -136,41 +238,32 @@
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Mobile app access
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Basic reporting
+                1 admin user
               </li>
             </ul>
-            <a href="booking.html" class="btn btn-primary">Get Started Free</a>
+            <a href="booking.html" class="btn btn-outline">Get Started Free</a>
           </div>
 
-          <!-- PRO Plan -->
-          <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>PRO</h3>
-            <div class="price">&pound;299<span> / month</span></div>
-            <p class="price-note">Billed monthly or save 20% annually</p>
+          <!-- Start Plan (Featured) -->
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <h3>Start</h3>
+            <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '5.60' : '7'"></span><span> / staff / mo</span></div>
+            <p class="price-note">
+              <span x-text="staffCount + ' staff = ' + formatCurrency(startCost) + billingLabel"></span>
+            </p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Unlimited clients
+                Everything in Free
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Advanced scheduling &amp; rostering
+                Unlimited staff &amp; service users
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Full care plan suite
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Automated compliance reporting
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Staff management dashboard
+                Unlimited admin/coordinator users
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -178,37 +271,87 @@
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                API integrations
+                Training &amp; DBS expiry tracking
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Priority phone support
+                Leave management &amp; Bradford Factor
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Advanced analytics
+                Incident &amp; safeguarding management
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Invoice generation &amp; billing
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Payroll exports
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Run templates
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Full reporting suite (8 types)
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Phone &amp; chat support
               </li>
             </ul>
-            <a href="booking.html" class="btn btn-secondary">Start Free Trial</a>
+            <a href="booking.html" class="btn btn-primary">Start Free Trial</a>
           </div>
 
-          <!-- Enterprise Plan -->
-          <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Enterprise</h3>
-            <div class="price">Custom<span> Quote</span></div>
-            <p class="price-note">Tailored to your organisation</p>
+          <!-- Pro Plan -->
+          <div class="pricing-card">
+            <h3>Pro</h3>
+            <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '8' : '10'"></span><span> / staff / mo</span></div>
+            <p class="price-note">
+              <span x-text="staffCount + ' staff = ' + formatCurrency(proCost) + billingLabel"></span>
+            </p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Everything in PRO
+                Everything in Start
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Multi-branch support
+                AI Cover Finder
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Custom development
+                AI Rota Builder
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Advanced analytics &amp; benchmarking
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                API access &amp; integrations hub
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Commissioner portal
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                White-label branding
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Earned Wage Access (EWA)
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                VoIP telephony
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom report builder
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -216,22 +359,340 @@
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                SLA guarantees
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                White-label options
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                On-site training
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                24/7 premium support
+                Priority support &amp; SLA
               </li>
             </ul>
-            <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+            <a href="booking.html" class="btn btn-secondary">Start Free Trial</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURE COMPARISON TABLE
+         ============================================ -->
+    <section class="section section-gray" aria-labelledby="comparison-heading">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label">Compare</span>
+          <h2 id="comparison-heading">Full Feature Comparison</h2>
+          <p>See exactly what is included in each plan.</p>
+        </div>
+
+        <div class="feature-table-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Free</th>
+                <th class="featured-col">Start</th>
+                <th>Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Scheduling & Rostering -->
+              <tr class="category-row"><td colspan="4">Scheduling &amp; Rostering</td></tr>
+              <tr>
+                <td>Drag-and-drop rota</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Run templates</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>AI Cover Finder</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>AI Rota Builder</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Care Records -->
+              <tr class="category-row"><td colspan="4">Care Records</td></tr>
+              <tr>
+                <td>Digital care plans</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Care notes &amp; visit logging</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Medication (MAR) records</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Mobile App -->
+              <tr class="category-row"><td colspan="4">Mobile App</td></tr>
+              <tr>
+                <td>Carer mobile app (check-in/out)</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>GPS visit verification</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Compliance -->
+              <tr class="category-row"><td colspan="4">Compliance</td></tr>
+              <tr>
+                <td>Basic compliance checklists</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Incident &amp; safeguarding management</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Training &amp; DBS expiry tracking</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Staff Management -->
+              <tr class="category-row"><td colspan="4">Staff Management</td></tr>
+              <tr>
+                <td>Leave management &amp; Bradford Factor</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Staff management dashboard</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Earned Wage Access (EWA)</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Finance -->
+              <tr class="category-row"><td colspan="4">Finance</td></tr>
+              <tr>
+                <td>Invoice generation &amp; billing</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Payroll exports</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Portals -->
+              <tr class="category-row"><td colspan="4">Portals</td></tr>
+              <tr>
+                <td>Family portal</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Commissioner portal</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Reporting & Analytics -->
+              <tr class="category-row"><td colspan="4">Reporting &amp; Analytics</td></tr>
+              <tr>
+                <td>Basic reporting (3 reports)</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Full reporting suite (8 types)</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Advanced analytics &amp; benchmarking</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Custom report builder</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Integrations & Platform -->
+              <tr class="category-row"><td colspan="4">Integrations &amp; Platform</td></tr>
+              <tr>
+                <td>API access &amp; integrations hub</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>White-label branding</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>VoIP telephony</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Support -->
+              <tr class="category-row"><td colspan="4">Support</td></tr>
+              <tr>
+                <td>Email support</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Phone &amp; chat support</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Dedicated account manager</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr>
+                <td>Priority support &amp; SLA</td>
+                <td class="cross">&mdash;</td>
+                <td class="featured-col cross">&mdash;</td>
+                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+
+              <!-- Limits -->
+              <tr class="category-row"><td colspan="4">Limits</td></tr>
+              <tr>
+                <td>Staff</td>
+                <td>Up to 5</td>
+                <td class="featured-col">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Service users</td>
+                <td>Up to 25</td>
+                <td class="featured-col">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Admin/coordinator users</td>
+                <td>1</td>
+                <td class="featured-col">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         BOLT-ON SERVICES
+         ============================================ -->
+    <section class="section" aria-labelledby="bolt-on-heading">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label">Add-Ons</span>
+          <h2 id="bolt-on-heading">Bolt-On Services</h2>
+          <p>Additional services to help your agency thrive. All coming soon — register your interest and we will notify you at launch.</p>
+        </div>
+
+        <div class="bolt-on-grid" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h4>VoIP Telephony</h4>
+            <p>Built-in business phone system for your office and carers.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
+          </div>
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Call Recording</h4>
+            <p>Automatic call recording with secure cloud storage and search.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
+          </div>
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4>Agency Website Hosting</h4>
+            <p>Professional website for your agency with your own domain.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
+          </div>
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h4>Earned Wage Access</h4>
+            <p>Let carers access earned wages before payday at no cost to you.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
+          </div>
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <h4>SIM Cards &amp; Mobile Phones</h4>
+            <p>Discounted data SIMs and devices for your care team.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
+          </div>
+
+          <div class="bolt-on-card">
+            <div class="bolt-on-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <h4>Training Marketplace</h4>
+            <p>Access accredited care training courses directly from the platform.</p>
+            <span class="bolt-on-badge">Coming Soon</span>
           </div>
 
         </div>
@@ -253,48 +714,72 @@
 
           <div class="faq-item" :class="{ open: active === 1 }">
             <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="faq-answer-1">
-              Can I switch plans at any time?
+              What is included in the Free plan?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-answer-1" x-show="active === 1" x-transition.duration.300ms>
               <div class="faq-answer-inner">
-                Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. When you upgrade, the new features become available immediately. If you downgrade, the change takes effect at the start of your next billing cycle.
+                The Free plan gives you full access to core scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, basic compliance checklists, and basic reporting. It supports up to 5 staff, 25 service users, and 1 admin user. No credit card is required and there is no time limit — it is free forever.
               </div>
             </div>
           </div>
 
           <div class="faq-item" :class="{ open: active === 2 }">
             <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="faq-answer-2">
-              Is there a long-term contract?
+              How does per-staff pricing work?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-answer-2" x-show="active === 2" x-transition.duration.300ms>
               <div class="faq-answer-inner">
-                No. All homecareOS plans are month-to-month with no long-term commitment. You can cancel at any time with no cancellation fees. We believe our platform should earn your business every month.
+                On the Start and Pro plans, you pay a fixed amount per staff member per month. "Staff" means active carers and field workers on your roster. Admin and coordinator users are unlimited and do not count towards your staff total. If your team size changes, your bill adjusts automatically the following month.
               </div>
             </div>
           </div>
 
           <div class="faq-item" :class="{ open: active === 3 }">
             <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="faq-answer-3">
-              What payment methods do you accept?
+              Can I switch plans at any time?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-answer-3" x-show="active === 3" x-transition.duration.300ms>
               <div class="faq-answer-inner">
-                We accept all major credit and debit cards (Visa, Mastercard, American Express), direct debit via GoCardless, and BACS bank transfers for annual Enterprise plans. All payments are processed securely through Stripe.
+                Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. When you upgrade, the new features become available immediately. If you downgrade, the change takes effect at the start of your next billing cycle. There are no penalties for switching.
               </div>
             </div>
           </div>
 
           <div class="faq-item" :class="{ open: active === 4 }">
             <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="faq-answer-4">
-              Do you offer discounts for larger agencies?
+              Is there a long-term contract?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-answer-4" x-show="active === 4" x-transition.duration.300ms>
               <div class="faq-answer-inner">
-                Yes. We offer volume discounts for agencies managing multiple branches or large teams. Annual billing also saves you 20% compared to monthly payments. Contact our sales team for a bespoke quote tailored to your organisation.
+                No. All homecareOS plans are month-to-month with no long-term commitment. Annual billing simply gives you a 20% discount — you can still cancel at any time with no fees. We believe our platform should earn your business every month.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 5 }">
+            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="faq-answer-5">
+              What payment methods do you accept?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" x-show="active === 5" x-transition.duration.300ms>
+              <div class="faq-answer-inner">
+                We accept all major credit and debit cards (Visa, Mastercard, American Express) and direct debit via GoCardless. All payments are processed securely through Stripe. BACS bank transfers are available for annual plans on request.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 6 }">
+            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="faq-answer-6">
+              What happens if I go over 5 staff on the Free plan?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-answer-6" x-show="active === 6" x-transition.duration.300ms>
+              <div class="faq-answer-inner">
+                When you reach 5 staff on the Free plan, you will be prompted to upgrade to Start or Pro. Your existing data is fully preserved — nothing is lost. You can continue using the platform with your current staff while you decide which plan to move to.
               </div>
             </div>
           </div>
@@ -308,11 +793,11 @@
          ============================================ -->
     <section class="cta-section" aria-labelledby="pricing-cta-heading">
       <div class="container">
-        <h2 id="pricing-cta-heading" data-aos="fade-up">Not Sure Which Plan Is Right?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Our team is happy to walk you through the options and help you find the perfect fit for your agency.</p>
+        <h2 id="pricing-cta-heading" data-aos="fade-up">Ready to Get Started?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Sign up in under two minutes. No credit card required, no sales calls. Just start managing care.</p>
         <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
-          <a href="booking.html" class="btn btn-primary btn-lg">Book a Demo</a>
-          <a href="contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
+          <a href="booking.html" class="btn btn-primary btn-lg">Start Free</a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Us</a>
         </div>
       </div>
     </section>
