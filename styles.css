@@ -2866,13 +2866,16 @@ p {
 .journey-icon {
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  max-width: 48px;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 1.125rem;
   margin: 0 auto 16px;
+  flex-shrink: 0;
 }
 .journey-step h4 {
   font-size: 1.05rem;
