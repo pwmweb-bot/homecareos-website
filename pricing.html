@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing Plans — homecareOS | Home Care Software</title>
   <meta name="description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
@@ -147,11 +148,19 @@
           training: { enabled: false, price: 0, name: 'Training Marketplace' }
         },
         get multiplier() { return this.billing === 'annual' ? 0.8 : 1 },
-        get startCost() { return Math.round(this.staffCount * 7 * this.multiplier) },
-        get proCost() { return Math.round(this.staffCount * 10 * this.multiplier) },
+        get startCost() {
+          const monthly = Math.round(this.staffCount * 7 * this.multiplier);
+          return this.billing === 'annual' ? monthly * 12 : monthly;
+        },
+        get proCost() {
+          const monthly = Math.round(this.staffCount * 10 * this.multiplier);
+          return this.billing === 'annual' ? monthly * 12 : monthly;
+        },
+        get startMonthly() { return Math.round(this.staffCount * 7 * this.multiplier) },
+        get proMonthly() { return Math.round(this.staffCount * 10 * this.multiplier) },
         get startAnnualSaving() { return this.staffCount * 7 * 12 * 0.2 },
         get proAnnualSaving() { return this.staffCount * 10 * 12 * 0.2 },
-        get billingLabel() { return this.billing === 'annual' ? '/mo (billed annually)' : '/mo' },
+        get billingLabel() { return this.billing === 'annual' ? '/yr' : '/mo' },
         formatCurrency(val) { return '\u00A3' + val.toLocaleString() }
       }">
       <div class="container">
@@ -169,7 +178,7 @@
         <!-- Interactive Calculator -->
         <div class="pricing-calculator" data-aos="fade-up" data-aos-delay="100">
           <h3>Calculate Your Cost</h3>
-          <p class="calculator-subtitle">Drag the slider or enter a number to see your monthly cost instantly.</p>
+          <p class="calculator-subtitle" x-text="billing === 'annual' ? 'Drag the slider or enter a number to see your annual cost instantly.' : 'Drag the slider or enter a number to see your monthly cost instantly.'"></p>
 
           <div class="calculator-staff-input">
             <label for="staff-slider">Number of staff</label>
@@ -182,12 +191,14 @@
               <div class="tier-name">Start</div>
               <div class="tier-price" x-text="formatCurrency(startCost)"></div>
               <div class="tier-unit" x-text="billingLabel"></div>
+              <div class="tier-equivalent" x-show="billing === 'annual'" x-transition x-text="'(' + formatCurrency(startMonthly) + '/mo)'"></div>
               <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(startAnnualSaving) + '/yr'"></div>
             </div>
             <div class="calculator-display-card">
               <div class="tier-name">Pro</div>
               <div class="tier-price" x-text="formatCurrency(proCost)"></div>
               <div class="tier-unit" x-text="billingLabel"></div>
+              <div class="tier-equivalent" x-show="billing === 'annual'" x-transition x-text="'(' + formatCurrency(proMonthly) + '/mo)'"></div>
               <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
             </div>
           </div>
@@ -250,7 +261,7 @@
             <h3>Start</h3>
             <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '5.60' : '7'"></span><span> / staff / mo</span></div>
             <p class="price-note">
-              <span x-text="staffCount + ' staff = ' + formatCurrency(startCost) + billingLabel"></span>
+              <span x-text="staffCount + ' staff = ' + formatCurrency(startCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(startMonthly) + '/mo)' : '')"></span>
             </p>
             <ul class="pricing-features">
               <li>
@@ -310,7 +321,7 @@
             <h3>Pro</h3>
             <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '8' : '10'"></span><span> / staff / mo</span></div>
             <p class="price-note">
-              <span x-text="staffCount + ' staff = ' + formatCurrency(proCost) + billingLabel"></span>
+              <span x-text="staffCount + ' staff = ' + formatCurrency(proCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(proMonthly) + '/mo)' : '')"></span>
             </p>
             <ul class="pricing-features">
               <li>
@@ -767,7 +778,7 @@
             </button>
             <div class="faq-answer" id="faq-answer-5" x-show="active === 5" x-transition.duration.300ms>
               <div class="faq-answer-inner">
-                We accept all major credit and debit cards (Visa, Mastercard, American Express) and direct debit via GoCardless. All payments are processed securely through Stripe. BACS bank transfers are available for annual plans on request.
+                We accept all major credit and debit cards (Visa, Mastercard, American Express), processed securely through Stripe. Annual plans can also be paid by BACS bank transfer on request — contact us to arrange this.
               </div>
             </div>
           </div>

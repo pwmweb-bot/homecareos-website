@@ -3055,6 +3055,11 @@ p {
   color: var(--gray-500);
 }
 
+.calculator-display-card .tier-equivalent {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
 .calculator-display-card .tier-saving {
   display: inline-block;
   margin-top: 8px;
