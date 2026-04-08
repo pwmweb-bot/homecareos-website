@@ -37,29 +37,55 @@
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "homecareOS",
-    "description": "Holistic operations management for home care agencies. Scheduling, care plans, compliance & more — all in one platform.",
-    "url": "https://www.homecareos.co.uk",
-    "telephone": "+44-1905-674704",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "F23, 18 Foregate Street",
-      "addressLocality": "Worcester",
-      "postalCode": "WR1 1DN",
-      "addressCountry": "GB"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.homecareos.co.uk/#organization",
+      "name": "homecareOS",
+      "url": "https://www.homecareos.co.uk",
+      "logo": "https://www.homecareos.co.uk/images/logo.png",
+      "description": "The complete operating system for UK home care agencies. Free scheduling, care records, compliance and more.",
+      "foundingDate": "2026",
+      "founder": {
+        "@type": "Person",
+        "name": "Philip Martin"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://www.homecareos.co.uk/contact.html"
+      },
+      "sameAs": []
     },
-    "email": "hello@homecareos.co.uk",
-    "sameAs": [
-      "https://twitter.com/homecareos",
-      "https://linkedin.com/company/homecareos",
-      "https://facebook.com/homecareos"
-    ],
-    "priceRange": "$$"
-  }
-  </script>
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.homecareos.co.uk/#software",
+      "name": "homecareOS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "description": "Free for up to 5 staff and 25 service users"
+      },
+      "description": "Home care management software for UK agencies. Scheduling, digital care records, compliance, finance, mobile app and AI-powered features.",
+      "featureList": "Drag-and-drop scheduling, Digital care records, eMAR, CQC/CIW/Care Inspectorate/RQIA compliance, AI cover finder, Bradford Factor, Mobile carer app, Family portal, Commissioner portal, Finance and billing, Reporting and analytics",
+      "screenshot": "https://www.homecareos.co.uk/images/screenshots/dashboard.png",
+      "provider": {"@id": "https://www.homecareos.co.uk/#organization"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.homecareos.co.uk/#website",
+      "url": "https://www.homecareos.co.uk",
+      "name": "homecareOS",
+      "publisher": {"@id": "https://www.homecareos.co.uk/#organization"}
+    }
+  ]
+}
+</script>
 <!-- Calendly popup widget -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
