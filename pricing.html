@@ -148,20 +148,23 @@
           sims: { enabled: false, price: 0, name: 'SIM Cards' },
           training: { enabled: false, price: 0, name: 'Training Marketplace' }
         },
+        get isFree() { return this.staffCount <= 5 },
         get multiplier() { return this.billing === 'annual' ? 0.8 : 1 },
         get startCost() {
+          if (this.isFree) return 0;
           const monthly = Math.round(this.staffCount * 7 * this.multiplier);
           return this.billing === 'annual' ? monthly * 12 : monthly;
         },
         get proCost() {
+          if (this.isFree) return 0;
           const monthly = Math.round(this.staffCount * 10 * this.multiplier);
           return this.billing === 'annual' ? monthly * 12 : monthly;
         },
-        get startMonthly() { return Math.round(this.staffCount * 7 * this.multiplier) },
-        get proMonthly() { return Math.round(this.staffCount * 10 * this.multiplier) },
-        get startAnnualSaving() { return this.staffCount * 7 * 12 * 0.2 },
-        get proAnnualSaving() { return this.staffCount * 10 * 12 * 0.2 },
-        get billingLabel() { return this.billing === 'annual' ? '/yr' : '/mo' },
+        get startMonthly() { return this.isFree ? 0 : Math.round(this.staffCount * 7 * this.multiplier) },
+        get proMonthly() { return this.isFree ? 0 : Math.round(this.staffCount * 10 * this.multiplier) },
+        get startAnnualSaving() { return this.isFree ? 0 : this.staffCount * 7 * 12 * 0.2 },
+        get proAnnualSaving() { return this.isFree ? 0 : this.staffCount * 10 * 12 * 0.2 },
+        get billingLabel() { return this.isFree ? '' : (this.billing === 'annual' ? '/yr' : '/mo') },
         formatCurrency(val) { return '\u00A3' + val.toLocaleString() }
       }">
       <div class="container">
@@ -187,20 +190,27 @@
             <input type="number" min="1" max="200" x-model.number="staffCount" aria-label="Staff count" @input="if(staffCount < 1) staffCount = 1; if(staffCount > 200) staffCount = 200">
           </div>
 
-          <div class="calculator-display">
+          <div class="calculator-display" x-show="!isFree" x-transition>
             <div class="calculator-display-card highlight">
               <div class="tier-name">Start</div>
               <div class="tier-price" x-text="formatCurrency(startCost)"></div>
               <div class="tier-unit" x-text="billingLabel"></div>
-              <div class="tier-equivalent" x-show="billing === 'annual'" x-transition x-text="'(' + formatCurrency(startMonthly) + '/mo)'"></div>
-              <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(startAnnualSaving) + '/yr'"></div>
+              <div class="tier-equivalent" x-show="billing === 'annual' && !isFree" x-transition x-text="'(' + formatCurrency(startMonthly) + '/mo)'"></div>
+              <div class="tier-saving" x-show="billing === 'annual' && !isFree" x-transition x-text="'Save ' + formatCurrency(startAnnualSaving) + '/yr'"></div>
             </div>
             <div class="calculator-display-card">
               <div class="tier-name">Pro</div>
               <div class="tier-price" x-text="formatCurrency(proCost)"></div>
               <div class="tier-unit" x-text="billingLabel"></div>
-              <div class="tier-equivalent" x-show="billing === 'annual'" x-transition x-text="'(' + formatCurrency(proMonthly) + '/mo)'"></div>
-              <div class="tier-saving" x-show="billing === 'annual'" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
+              <div class="tier-equivalent" x-show="billing === 'annual' && !isFree" x-transition x-text="'(' + formatCurrency(proMonthly) + '/mo)'"></div>
+              <div class="tier-saving" x-show="billing === 'annual' && !isFree" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
+            </div>
+          </div>
+          <div class="calculator-display" x-show="isFree" x-transition>
+            <div class="calculator-display-card highlight" style="text-align:center">
+              <div class="tier-price" style="color:#059669;font-size:2rem">Free</div>
+              <div class="tier-unit">Up to 5 staff &amp; 25 service users</div>
+              <div style="margin-top:8px;font-size:0.85rem;color:var(--text-light)">No credit card required</div>
             </div>
           </div>
         </div>
@@ -262,7 +272,7 @@
             <h3>Start</h3>
             <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '5.60' : '7'"></span><span> / staff / mo</span></div>
             <p class="price-note">
-              <span x-text="staffCount + ' staff = ' + formatCurrency(startCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(startMonthly) + '/mo)' : '')"></span>
+              <span x-text="isFree ? staffCount + ' staff — Free!' : staffCount + ' staff = ' + formatCurrency(startCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(startMonthly) + '/mo)' : '')"></span>
             </p>
             <ul class="pricing-features">
               <li>
@@ -322,7 +332,7 @@
             <h3>Pro</h3>
             <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '8' : '10'"></span><span> / staff / mo</span></div>
             <p class="price-note">
-              <span x-text="staffCount + ' staff = ' + formatCurrency(proCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(proMonthly) + '/mo)' : '')"></span>
+              <span x-text="isFree ? staffCount + ' staff — Free!' : staffCount + ' staff = ' + formatCurrency(proCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(proMonthly) + '/mo)' : '')"></span>
             </p>
             <ul class="pricing-features">
               <li>
