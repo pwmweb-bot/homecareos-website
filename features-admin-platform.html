@@ -46,13 +46,17 @@
         homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
-        <a href="index.html" role="menuitem">Home</a>
         <a href="about.html" role="menuitem">About</a>
-        <a href="features.html" class="active" role="menuitem">Features</a>
-        <a href="personas.html" role="menuitem">Who It's For</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" role="menuitem" aria-expanded="false" aria-haspopup="true">Software <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="features.html" role="menuitem">Features</a>
+            <a href="services.html" role="menuitem">Services</a>
+            <a href="personas.html" role="menuitem">Who It's For</a>
+            <a href="compare.html" role="menuitem">Compare</a>
+          </div>
+        </div>
         <a href="pricing.html" role="menuitem">Pricing</a>
-        <a href="testimonials.html" role="menuitem">Testimonials</a>
-        <a href="blog.html" role="menuitem">Blog</a>
         <a href="contact.html" role="menuitem">Contact</a>
         <a href="tel:01905674704" class="nav-phone" role="menuitem" aria-label="Call us"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 01905 674704</a>
         <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-sm nav-cta" role="menuitem">Start Free Trial</a>
@@ -382,6 +386,24 @@
       const isOpen = links.classList.toggle('open');
       toggle.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Dropdown toggle (mobile tap + desktop click outside)
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = btn.closest('.nav-dropdown');
+        const isOpen = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+      }
     });
     AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
