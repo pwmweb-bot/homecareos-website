@@ -32,6 +32,9 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+<!-- Calendly popup widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
@@ -324,7 +327,7 @@
         <h2 data-aos="fade-up">Connect Your Team Today</h2>
         <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and see how homecareOS keeps your entire care team connected &mdash; securely, professionally, and effortlessly.</p>
         <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Book a Free Demo</a>
+          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
         </div>
       </div>
@@ -373,7 +376,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>
-            <li><a href="https://app.homecareos.co.uk">Book a Demo</a></li>
+            <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;">Book a Demo</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
           </ul>
