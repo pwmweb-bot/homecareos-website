@@ -101,15 +101,83 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="section feature-hero" aria-label="Carer Mobile App overview">
+    <section class="section" aria-label="Carer Mobile App overview">
       <div class="container">
-        <div class="feature-hero-content" data-aos="fade-up">
-          <span class="label">CARER MOBILE APP</span>
-          <h2>Built for Carers, Not Against Them</h2>
-          <p>Most care software treats the mobile app as an afterthought — a stripped-down version of the desktop built to tick a box. homecareOS was different from day one. We built the carer mobile experience as a core part of the platform, designed around how carers actually work in the field: one-handed, between visits, often with patchy signal. The result is an app your carers will genuinely want to use.</p>
+        <div class="feature-hero" data-aos="fade-up">
+          <div class="feature-hero-content">
+            <span class="label">CARER MOBILE APP</span>
+            <h2>Built for Carers, Not Against Them</h2>
+            <p>Most care software treats the mobile app as an afterthought — a stripped-down version of the desktop built to tick a box. homecareOS was different from day one. We built the carer mobile experience as a core part of the platform, designed around how carers actually work in the field: one-handed, between visits, often with patchy signal. The result is an app your carers will genuinely want to use.</p>
+          </div>
+          <div class="feature-hero-visual has-phone">
+            <img src="images/photos/observations.PNG" alt="homecareOS mobile app visit screen showing Check In, Tasks, Medications, Observations, Body Map, Photos and Goals" width="390" height="844" loading="lazy">
+          </div>
         </div>
-        <div class="feature-hero-visual" data-aos="fade-up" data-aos-delay="100">
-          <span aria-hidden="true">&#x1F4F1;</span>
+      </div>
+    </section>
+
+    <!-- Scroll-driven Phone Gallery -->
+    <section class="section phone-gallery-section" aria-label="Mobile app feature gallery">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label">THE CARER EXPERIENCE</span>
+          <h2>Everything a Carer Needs, Right in Their Pocket</h2>
+          <p>Scroll to explore each feature — designed for one-handed use between visits.</p>
+        </div>
+      </div>
+      <div class="phone-gallery-track">
+        <div class="phone-gallery-sticky">
+          <div class="phone-gallery-inner container">
+            <div class="phone-gallery-phone">
+              <div class="phone-gallery-images">
+                <img src="images/photos/visitinfo.PNG" alt="Visit details with navigation and key safe access" class="phone-gallery-img active" data-index="0" width="390" height="844">
+                <img src="images/photos/observations.PNG" alt="Visit actions: Check In, Tasks, Medications, Observations, Body Map" class="phone-gallery-img" data-index="1" width="390" height="844">
+                <img src="images/photos/obs.PNG" alt="Observation types including Bristol Stool, Fluid Intake, Vital Signs" class="phone-gallery-img" data-index="2" width="390" height="844">
+                <img src="images/photos/bodymap.PNG" alt="Body map recording with front and back views" class="phone-gallery-img" data-index="3" width="390" height="844">
+                <img src="images/photos/goals.PNG" alt="Care goals with progress tracking and targets" class="phone-gallery-img" data-index="4" width="390" height="844">
+                <img src="images/photos/pay.PNG" alt="Pay dashboard showing projected gross pay and rate breakdown" class="phone-gallery-img" data-index="5" width="390" height="844">
+                <img src="images/photos/messaging.PNG" alt="In-app messaging between carer and coordinator" class="phone-gallery-img" data-index="6" width="390" height="844">
+                <img src="images/photos/holiday.PNG" alt="Leave requests with status tracking" class="phone-gallery-img" data-index="7" width="390" height="844">
+              </div>
+            </div>
+            <div class="phone-gallery-info">
+              <div class="phone-gallery-progress">
+                <div class="phone-gallery-progress-fill"></div>
+              </div>
+              <div class="phone-gallery-slide active" data-index="0">
+                <h3>Visit Details & Navigation</h3>
+                <p>Every visit shows the service user, address, scheduled time, and one-tap navigation. Key safe codes are hidden behind a tap for security. Carers know exactly where they're going and what to expect before they arrive.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="1">
+                <h3>Visit Action Hub</h3>
+                <p>One screen with every action a carer needs during a visit — check in, record tasks, administer medications, add notes, log observations, capture body maps, take photos, and update goals. No hunting through menus.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="2">
+                <h3>Clinical Observations</h3>
+                <p>Record Bristol Stool charts, fluid intake, food intake, repositioning, mood and wellbeing, seizures, vital signs, sleep, personal care, and home environment assessments — all with structured templates that feed directly into the care record.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="3">
+                <h3>Body Map Recording</h3>
+                <p>Tap to mark wounds, bruises, or skin concerns on a front or back body outline. Each mark records the date, carer, and notes — building a visual history that's invaluable for safeguarding and clinical handovers.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="4">
+                <h3>Care Goal Tracking</h3>
+                <p>Track progress against health, safety, and wellbeing goals with visual progress bars and target dates. Carers update goals during visits, giving managers and families real-time visibility into outcomes — not just task completion.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="5">
+                <h3>Pay Transparency</h3>
+                <p>Carers see their projected gross pay, hours worked, rate breakdowns, bank holiday rates, and mileage — updated in real time. No more end-of-month surprises. Transparency builds trust and reduces payroll queries by up to 80%.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="6">
+                <h3>Team Messaging</h3>
+                <p>Secure, GDPR-compliant messaging between carers and the office — replacing WhatsApp groups and personal texts. Conversations are logged, searchable, and tied to the agency — not someone's personal phone number.</p>
+              </div>
+              <div class="phone-gallery-slide" data-index="7">
+                <h3>Leave Requests</h3>
+                <p>Carers submit annual leave, request time off, and track approval status directly from the app. Managers approve or decline with one tap. No more paper forms, lost emails, or coordinators finding out about leave too late.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -457,6 +525,61 @@
       e.preventDefault();
       document.getElementById('main-content').focus();
     });
+  </script>
+
+  <!-- Phone Gallery Scroll Controller -->
+  <script>
+    (function() {
+      const track = document.querySelector('.phone-gallery-track');
+      if (!track) return;
+
+      const images = track.querySelectorAll('.phone-gallery-img');
+      const slides = track.querySelectorAll('.phone-gallery-slide');
+      const progressFill = track.querySelector('.phone-gallery-progress-fill');
+      const totalSlides = images.length;
+      let currentIndex = 0;
+
+      function updateGallery(index) {
+        if (index === currentIndex) return;
+        currentIndex = index;
+
+        images.forEach((img, i) => {
+          img.classList.toggle('active', i === index);
+        });
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          window.addEventListener('scroll', onScroll);
+        });
+      }, { threshold: 0 });
+
+      observer.observe(track);
+
+      function onScroll() {
+        const rect = track.getBoundingClientRect();
+        const trackHeight = track.offsetHeight;
+        const viewH = window.innerHeight;
+
+        // How far through the track section are we?
+        const scrolled = -rect.top;
+        const scrollable = trackHeight - viewH;
+        if (scrollable <= 0) return;
+
+        const progress = Math.max(0, Math.min(1, scrolled / scrollable));
+        const index = Math.min(totalSlides - 1, Math.floor(progress * totalSlides));
+
+        if (progressFill) {
+          progressFill.style.width = (progress * 100) + '%';
+        }
+
+        updateGallery(index);
+      }
+    })();
   </script>
 
 </body>

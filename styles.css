@@ -698,6 +698,7 @@ p {
 
 .hero-visual {
   position: relative;
+  z-index: 2;
 }
 
 .hero-image-wrapper {
@@ -2628,6 +2629,20 @@ p {
   overflow: hidden;
 }
 
+.feature-hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-hero-visual.has-screenshot {
+  padding: 24px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+}
+
 .feature-hero-visual::before {
   content: '';
   position: absolute;
@@ -2738,6 +2753,11 @@ p {
   .feature-hero-visual {
     min-height: 240px;
     font-size: 3.5rem;
+  }
+
+  .feature-hero-visual.has-screenshot {
+    padding: 12px;
+    min-height: auto;
   }
 }
 
@@ -3430,6 +3450,181 @@ p {
     border-radius: 0;
     border-left: none;
     border-right: none;
+  }
+}
+
+/* Phone hero — border only, no dark bg */
+.feature-hero-visual.has-phone {
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-hero-visual.has-phone img {
+  max-width: 280px;
+  border-radius: 32px;
+  border: 3px solid var(--gray-200, #e5e7eb);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.feature-hero-visual.has-phone::before {
+  display: none;
+}
+
+/* Phone hero on other feature pages (care records, comms, finance) */
+.feature-hero-visual.has-screenshot-mobile {
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-hero-visual.has-screenshot-mobile::before {
+  display: none;
+}
+
+.feature-hero-visual.has-screenshot-mobile img {
+  max-width: 260px;
+  border-radius: 32px;
+  border: 3px solid var(--gray-200, #e5e7eb);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* ---- Scroll-driven Phone Gallery ---- */
+.phone-gallery-track {
+  height: 500vh; /* scroll distance = 8 slides worth */
+  position: relative;
+}
+
+.phone-gallery-sticky {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.phone-gallery-inner {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.phone-gallery-phone {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.phone-gallery-images {
+  position: relative;
+  width: 100%;
+}
+
+.phone-gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  border: 3px solid var(--gray-200, #e5e7eb);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.phone-gallery-img:first-child {
+  position: relative;
+}
+
+.phone-gallery-img.active {
+  opacity: 1;
+}
+
+.phone-gallery-info {
+  max-width: 520px;
+}
+
+.phone-gallery-progress {
+  width: 100%;
+  height: 3px;
+  background: var(--gray-200, #e5e7eb);
+  border-radius: 2px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.phone-gallery-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary, #1e3a5f);
+  border-radius: 2px;
+  transition: width 0.15s ease;
+}
+
+.phone-gallery-slide {
+  display: none;
+}
+
+.phone-gallery-slide.active {
+  display: block;
+  animation: fadeSlideIn 0.35s ease;
+}
+
+.phone-gallery-slide h3 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  color: var(--dark, #1a1a2e);
+}
+
+.phone-gallery-slide p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--gray-500, #6b7280);
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .feature-hero-visual.has-phone img {
+    max-width: 200px;
+  }
+
+  .feature-hero-visual.has-screenshot-mobile img {
+    max-width: 180px;
+  }
+
+  .phone-gallery-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .phone-gallery-phone {
+    width: 200px;
+  }
+
+  .phone-gallery-track {
+    height: 400vh;
+  }
+
+  .phone-gallery-slide h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* App showcase grid — responsive */
+@media (max-width: 768px) {
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
   }
 }
 
