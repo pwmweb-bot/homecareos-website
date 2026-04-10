@@ -759,36 +759,8 @@
       </div>
     </div>
   </footer>
-
-  <!-- Chat Widget -->
-  <div class="chat-widget" x-data="{ open: false, messages: [{text: 'Hi there! Welcome to homecareOS. I can help you find the right solution for your role. What do you do?', type: 'incoming'}], typing: false }" x-init="$watch('open', val => { if(val && messages.length === 1) { typing = true; setTimeout(() => { messages.push({text: 'Whether you\'re an agency owner, care manager, coordinator, carer, family member, or local authority — we have features built specifically for you.', type: 'incoming'}); typing = false; }, 1500); } })">
-    <button class="chat-bubble" @click="open = !open" :aria-label="open ? 'Close chat' : 'Open live chat'" aria-haspopup="dialog">
-      <span x-show="!open" aria-hidden="true">&#128172;</span>
-      <span x-show="open" aria-hidden="true">&#10005;</span>
-    </button>
-    <div class="chat-panel" x-show="open" x-transition.scale.origin.bottom.right role="dialog" aria-label="Live chat">
-      <div class="chat-header">
-        <div class="chat-header-avatar">OS</div>
-        <div class="chat-header-info"><strong>homecareOS Support</strong><span>Online now</span></div>
-      </div>
-      <div class="chat-messages">
-        <template x-for="(msg, i) in messages" :key="i">
-          <div class="chat-msg" :class="msg.type" x-text="msg.text"></div>
-        </template>
-      </div>
-      <div class="chat-typing" x-show="typing">Typing...</div>
-      <div class="chat-input-area">
-        <input class="chat-input" type="text" placeholder="Type a message..." aria-label="Chat message" @keydown.enter="if($el.value.trim()) { messages.push({text: $el.value, type: 'outgoing'}); $el.value = ''; typing = true; setTimeout(() => { messages.push({text: 'Thanks for your message! A member of our team will be in touch shortly. In the meantime, you can book a demo at any time.', type: 'incoming'}); typing = false; }, 1500); }">
-        <button class="chat-send" aria-label="Send message">&#8594;</button>
-      </div>
     </div>
   </div>
-
-  <!-- Floating CTA -->
-  <a href="https://app.homecareos.co.uk" class="floating-cta" x-data="{ show: false }" x-init="setTimeout(() => show = true, 2000)" x-show="show" x-transition aria-label="Start your free trial">
-    &#128640; Start Free Trial
-  </a>
-
   <!-- Alpine.js -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

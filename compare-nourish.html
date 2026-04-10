@@ -309,35 +309,8 @@
       </div>
     </div>
   </footer>
-
-  <!-- Chat Widget -->
-  <div class="chat-widget" x-data="{ open: false, messages: [{text: 'Hi there! Welcome to homecareOS. How can I help you today?', type: 'incoming'}], typing: false }" x-init="$watch('open', val => { if(val && messages.length === 1) { typing = true; setTimeout(() => { messages.push({text: 'Whether you need help with scheduling, care plans, or compliance — I am here to assist. What would you like to know?', type: 'incoming'}); typing = false; }, 1500); } })">
-    <button class="chat-bubble" @click="open = !open" :aria-label="open ? 'Close chat' : 'Open live chat'" aria-haspopup="dialog">
-      <span x-show="!open" aria-hidden="true">&#x1F4AC;</span>
-      <span x-show="open" aria-hidden="true">&#x2715;</span>
-    </button>
-    <div class="chat-panel" x-show="open" x-transition.scale.origin.bottom.right role="dialog" aria-label="Live chat">
-      <div class="chat-header">
-        <div class="chat-header-avatar">OS</div>
-        <div class="chat-header-info"><strong>homecareOS Support</strong><span>Online now</span></div>
-      </div>
-      <div class="chat-messages">
-        <template x-for="(msg, i) in messages" :key="i">
-          <div class="chat-msg" :class="msg.type" x-text="msg.text"></div>
-        </template>
-      </div>
-      <div class="chat-typing" x-show="typing">Typing...</div>
-      <div class="chat-input-area">
-        <input class="chat-input" type="text" placeholder="Type a message..." aria-label="Chat message" @keydown.enter="if($el.value.trim()) { messages.push({text: $el.value, type: 'outgoing'}); $el.value = ''; typing = true; setTimeout(() => { messages.push({text: 'Thanks for your message! A member of our team will get back to you shortly.', type: 'incoming'}); typing = false; }, 1500); }">
-        <button class="chat-send" aria-label="Send message">&rarr;</button>
-      </div>
     </div>
   </div>
-
-  <a href="https://app.homecareos.co.uk" class="floating-cta" x-data="{ show: false }" x-init="setTimeout(() => show = true, 2000)" x-show="show" x-transition aria-label="Start your free trial">
-    &#x1F680; Start Free Trial
-  </a>
-
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

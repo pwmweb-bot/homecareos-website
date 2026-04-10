@@ -331,20 +331,6 @@
   <!-- ============================================
        INTERACTIVE FEATURES
        ============================================ -->
-
-  <!-- Live Chat Widget (Alpine.js) -->
-  <div class="chat-widget" x-data="{ open: false, messages: [{text: 'Hi there! Welcome to homecareOS. How can I help you today?', type: 'incoming'}], typing: false }" x-init="$watch('open', val => { if(val && messages.length === 1) { typing = true; setTimeout(() => { messages.push({text: 'Whether you need help with scheduling, care plans, or compliance — I am here to assist. What would you like to know?', type: 'incoming'}); typing = false; }, 1500); } })">
-    <!-- chat bubble button -->
-    <button class="chat-bubble" @click="open = !open" :aria-label="open ? 'Close chat' : 'Open live chat'" aria-haspopup="dialog">
-      <span x-show="!open" aria-hidden="true">&#x1F4AC;</span>
-      <span x-show="open" aria-hidden="true">&#x2715;</span>
-    </button>
-    <!-- chat panel -->
-    <div class="chat-panel" x-show="open" x-transition.scale.origin.bottom.right role="dialog" aria-label="Live chat">
-      <div class="chat-header">
-        <div class="chat-header-avatar">OS</div>
-        <div class="chat-header-info"><strong>homecareOS Support</strong><span>Online now</span></div>
-      </div>
       <div class="chat-messages">
         <template x-for="(msg, i) in messages" :key="i">
           <div class="chat-msg" :class="msg.type" x-text="msg.text"></div>
@@ -357,12 +343,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Floating CTA (Alpine.js) -->
-  <a href="https://app.homecareos.co.uk" class="floating-cta" x-data="{ show: false }" x-init="setTimeout(() => show = true, 2000)" x-show="show" x-transition aria-label="Start your free trial">
-    &#x1F680; Start Free Trial
-  </a>
-
   <!-- ============================================
        SCRIPTS
        ============================================ -->

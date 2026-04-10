@@ -235,39 +235,12 @@
       <div class="footer-bottom"><p>&copy; 2026 homecareOS. All rights reserved.</p><div><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div></div>
     </div>
   </footer>
-
-  <!-- Chat Widget (Alpine.js) -->
-  <div class="chat-widget" x-data="{ open: false }">
-    <div class="chat-panel" x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" @click.outside="open = false">
-      <div class="chat-header">
-        <div class="chat-header-avatar">HC</div>
-        <div class="chat-header-info">
-          <strong>homecareOS Support</strong>
-          <span>We typically reply within minutes</span>
-        </div>
-      </div>
-      <div class="chat-messages">
-        <div class="chat-msg incoming">Hello! How can we help you today? Whether you have questions about our platform or need support, we're here for you.</div>
-      </div>
-      <div class="chat-input-area">
-        <input type="text" class="chat-input" placeholder="Type your message..." aria-label="Type your message">
-        <button class="chat-send" aria-label="Send message">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-        </button>
-      </div>
     </div>
     <button class="chat-bubble" @click="open = !open" :aria-expanded="open.toString()" aria-label="Open chat">
       <svg x-show="!open" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
       <svg x-show="open" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
     </button>
   </div>
-
-  <!-- Floating CTA -->
-  <a href="https://app.homecareos.co.uk" class="floating-cta" id="floating-cta" style="display:none" aria-label="Start your free trial">
-    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    Start Free Trial
-  </a>
-
   <!-- Scripts -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -308,14 +281,6 @@
       }
     });
 
-    // Floating CTA — show after 2s
-    setTimeout(() => {
-      const floatingCta = document.getElementById('floating-cta');
-      if (floatingCta) {
-        floatingCta.style.display = 'inline-flex';
-        floatingCta.style.animation = 'fadeInUp 0.4s ease-out';
-      }
-    }, 2000);
   </script>
 
 </body>
