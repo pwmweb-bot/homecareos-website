@@ -146,16 +146,25 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <h1 class="hero-title">The Complete <span class="highlight">Operating System</span> for Home Care Agencies</h1>
-            <p class="hero-subtitle">Streamline scheduling, care plans, compliance and team management — all from one powerful platform built for UK home care providers.</p>
+            <h1 class="hero-title">The Complete <span class="highlight">Operating System</span> for Home Care</h1>
+            <p class="hero-subtitle">Scheduling, care plans, compliance and team management — one platform for your office and your carers in the field.</p>
             <div class="hero-actions">
-              <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Start Free Trial</a>
-              <a href="#" class="btn btn-ghost">Watch Demo</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Get Started for Free</a>
+              <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-ghost">Book a Demo</a>
             </div>
+            <p class="hero-note">No credit card required. Free for agencies with under 5 staff.</p>
           </div>
           <div class="hero-visual">
-            <div class="hero-image-wrapper">
-              <img src="images/photos/dashboard.png" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860">
+            <div class="hero-devices">
+              <div class="hero-desktop">
+                <img src="images/photos/dashboard.png" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860">
+              </div>
+              <div class="hero-phone hero-phone-1">
+                <img src="images/photos/observations.PNG" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844">
+              </div>
+              <div class="hero-phone hero-phone-2">
+                <img src="images/photos/pay.PNG" alt="homecareOS carer pay dashboard showing projected earnings" width="390" height="844">
+              </div>
             </div>
           </div>
         </div>
@@ -258,38 +267,60 @@
          ============================================ -->
     <section class="section section-gray" id="solution" aria-labelledby="solution-heading">
       <div class="container">
-        <div class="feature-grid">
-          <div class="feature-image" data-aos="fade-right">
-            <img src="images/photos/carer-care-plan-table.jpg" alt="Carer reviewing care plan with elderly service user at home" width="700" height="500" loading="lazy">
-          </div>
-          <div class="feature-content" data-aos="fade-left">
-            <span class="section-label">THE SOLUTION</span>
-            <h2 id="solution-heading">One Platform. Everything You Need.</h2>
-            <p>homecareOS brings together every tool your agency needs into a single, intuitive platform. No more switching between apps, duplicating data, or worrying about compliance gaps.</p>
-            <ul class="feature-list">
-              <li>
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#10b981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Digital care plans with real-time updates
-              </li>
-              <li>
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#10b981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Smart scheduling with conflict detection
-              </li>
-              <li>
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#10b981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Real-time compliance tracking for CQC
-              </li>
-              <li>
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#10b981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Staff management and training records
-              </li>
-              <li>
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#10b981"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Family portal for transparent communication
-              </li>
-            </ul>
-            <a href="services.html" class="btn btn-primary">Explore Features</a>
-          </div>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">THE SOLUTION</span>
+          <h2 id="solution-heading">One Platform. Every Role Connected.</h2>
+          <p>homecareOS gives every person in the care chain their own purpose-built experience — from the office to the field to the family home.</p>
+        </div>
+        <div class="role-cards-grid" data-aos="fade-up">
+          <a href="personas.html#persona-owners" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3z"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
+            </div>
+            <h3>Business Owners</h3>
+            <p>Financial dashboards, profitability tracking, and growth tools to scale your agency with confidence.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
+          <a href="personas.html#persona-managers" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 11a4 4 0 108 0 4 4 0 00-8 0z"/><path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/></svg>
+            </div>
+            <h3>Care Managers</h3>
+            <p>Live compliance tracking, audit-ready records, and incident management to protect your CQC rating.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
+          <a href="features-scheduling.html" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Coordinators</h3>
+            <p>Drag-and-drop rota, smart cover finder, and real-time availability — no more rota chaos.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
+          <a href="features-mobile-app.html" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3>Carers</h3>
+            <p>Mobile app with offline access, digital visit logging, pay transparency, and leave requests.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
+          <a href="features-family-portal.html" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <h3>Families</h3>
+            <p>Real-time visit notifications, care note access, and carer profiles — so they never have to wonder.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
+          <a href="features-commissioner-portal.html" class="role-card">
+            <div class="role-card-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <h3>Local Authorities</h3>
+            <p>Outcome dashboards, automated reporting, and audit trails for evidence-based commissioning.</p>
+            <span class="role-card-link">See how &rarr;</span>
+          </a>
         </div>
       </div>
     </section>
@@ -308,8 +339,8 @@
           <div class="step-card" data-aos="fade-up" data-aos-delay="0">
             <div class="step-number" aria-hidden="true">1</div>
             <img src="images/photos/mobile-app-hand.jpg" alt="Person using the homecareOS mobile app on a smartphone" width="400" height="280" loading="lazy">
-            <h3>Sign Up in Minutes</h3>
-            <p>Create your account and configure your agency settings. Our guided setup wizard makes it effortless to get started.</p>
+            <h3>Sign Up for Free</h3>
+            <p>Create your account in minutes. Free for agencies with fewer than 5 staff — no credit card, no commitment. Larger teams can trial every feature before deciding.</p>
           </div>
           <div class="step-card" data-aos="fade-up" data-aos-delay="150">
             <div class="step-number" aria-hidden="true">2</div>
@@ -330,31 +361,55 @@
     <!-- ============================================
          5b. APP SHOWCASE
          ============================================ -->
-    <section class="section" aria-label="Platform screenshots" style="background:#0f0f1a;color:#fff">
+    <section class="section desktop-gallery-section" aria-label="Platform screenshots">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label" style="color:var(--accent)">SEE IT IN ACTION</span>
-          <h2 style="color:#fff">Built for the Way Home Care Really Works</h2>
-          <p style="color:rgba(255,255,255,0.7)">From the drag-and-drop rota to live visit tracking on a map — every screen is designed for care coordinators, not generic project managers.</p>
+          <span class="section-label">SEE IT IN ACTION</span>
+          <h2>Built for the Way Home Care Really Works</h2>
+          <p>Scroll to explore the platform — every screen designed for care, not generic project management.</p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px" data-aos="fade-up">
-          <div>
-            <img src="images/photos/rota.png" alt="homecareOS rota grid showing carer schedules, visit blocks and travel times" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-            <p style="text-align:center;margin-top:12px;font-size:0.9rem;color:rgba(255,255,255,0.6)">Drag-and-drop rota with real-time availability</p>
-          </div>
-          <div>
-            <img src="images/photos/mapping.png" alt="homecareOS Visit Flow Map showing live carer locations on an interactive map" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-            <p style="text-align:center;margin-top:12px;font-size:0.9rem;color:rgba(255,255,255,0.6)">Live Visit Flow Map with real-time tracking</p>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px" data-aos="fade-up" data-aos-delay="100">
-          <div>
-            <img src="images/photos/carers.png" alt="homecareOS carers list with staff details, DBS dates and weekly hours" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-            <p style="text-align:center;margin-top:12px;font-size:0.9rem;color:rgba(255,255,255,0.6)">Staff management with DBS and training tracking</p>
-          </div>
-          <div>
-            <img src="images/photos/compliance.png" alt="homecareOS Compliance Hub with CQC tools, audits and safeguarding" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-            <p style="text-align:center;margin-top:12px;font-size:0.9rem;color:rgba(255,255,255,0.6)">CQC Compliance Hub — always audit-ready</p>
+      </div>
+      <div class="desktop-gallery-track">
+        <div class="desktop-gallery-sticky">
+          <div class="desktop-gallery-inner container">
+            <div class="desktop-gallery-screen">
+              <div class="desktop-gallery-images">
+                <img src="images/photos/dashboard.png" alt="homecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840">
+                <img src="images/photos/rota.png" alt="homecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840">
+                <img src="images/photos/mapping.png" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840">
+                <img src="images/photos/carers.png" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840">
+                <img src="images/photos/compliance.png" alt="CQC Compliance Hub with audits and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840">
+              </div>
+            </div>
+            <div class="desktop-gallery-info">
+              <div class="desktop-gallery-nav">
+                <button class="desktop-gallery-dot active" data-index="0" aria-label="Dashboard"></button>
+                <button class="desktop-gallery-dot" data-index="1" aria-label="Rota"></button>
+                <button class="desktop-gallery-dot" data-index="2" aria-label="Flow Map"></button>
+                <button class="desktop-gallery-dot" data-index="3" aria-label="Carers"></button>
+                <button class="desktop-gallery-dot" data-index="4" aria-label="Compliance"></button>
+              </div>
+              <div class="desktop-gallery-slide active" data-index="0">
+                <h3>Dashboard</h3>
+                <p>Your agency at a glance — today's visits, completion rates, active carers, late visit alerts, and compliance status. Everything a manager needs to start the day with confidence.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="1">
+                <h3>Drag-and-Drop Rota</h3>
+                <p>The visual scheduling grid that coordinators love. See every carer, every visit, and every travel gap on one screen. Move visits in seconds with full conflict detection.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="2">
+                <h3>Live Visit Flow Map</h3>
+                <p>Watch your carers move through the day on a real-time map. Spot late arrivals, understand travel patterns, and see visit status at a glance — with a timeline you can scrub through.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="3">
+                <h3>Staff Management</h3>
+                <p>Every carer's details, role, contact info, DBS expiry, and contracted hours in one searchable list. Filter by employment status or job role. Add new carers in seconds.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="4">
+                <h3>CQC Compliance Hub</h3>
+                <p>Training records, compliance framework self-assessment, PIR export, CQC notifications, complaints, safeguarding, audits, incidents, and improvement plans — all in one place, always audit-ready.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -629,6 +684,49 @@
       e.preventDefault();
       document.getElementById('main-content').focus();
     });
+  </script>
+
+  <!-- Desktop Gallery Scroll Controller -->
+  <script>
+    (function() {
+      const track = document.querySelector('.desktop-gallery-track');
+      if (!track) return;
+
+      const images = track.querySelectorAll('.desktop-gallery-img');
+      const slides = track.querySelectorAll('.desktop-gallery-slide');
+      const dots = track.querySelectorAll('.desktop-gallery-dot');
+      const totalSlides = images.length;
+      let currentIndex = 0;
+
+      function updateGallery(index) {
+        if (index === currentIndex) return;
+        currentIndex = index;
+        images.forEach((img, i) => img.classList.toggle('active', i === index));
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+
+      // Dot click handlers
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          const idx = parseInt(this.dataset.index);
+          updateGallery(idx);
+        });
+      });
+
+      // Scroll-driven updates
+      function onScroll() {
+        const rect = track.getBoundingClientRect();
+        const scrolled = -rect.top;
+        const scrollable = track.offsetHeight - window.innerHeight;
+        if (scrollable <= 0) return;
+        const progress = Math.max(0, Math.min(1, scrolled / scrollable));
+        const index = Math.min(totalSlides - 1, Math.floor(progress * totalSlides));
+        updateGallery(index);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
   </script>
 
 </body>
