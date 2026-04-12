@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Carer Day — Scroll-Driven Prototype</title>
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --accent: #f59e0b;
+      --green: #1D9E75;
+      --red: #E24B4A;
+      --amber: #EF9F27;
+      --purple: #8B5CF6;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: var(--gray-700);
+    }
+
+    /* ===== INTRO ===== */
+    .intro {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .intro h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .intro p {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+    .scroll-hint {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ===== STICKY VIEWPORT ===== */
+    .scroll-track {
+      position: relative;
+    }
+    .sticky-viewport {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== TOP STATS BAR ===== */
+    .stats-bar {
+      background: var(--primary);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+    .time-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .time-badge .pulse {
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .stats-pills {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .stat-pill .sv {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    /* ===== PROGRESS BAR ===== */
+    .progress-track {
+      height: 3px;
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    /* ===== MAIN SCENE ===== */
+    .scene {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      background: linear-gradient(180deg, #e8f4f8 0%, #f0f7f2 50%, #f5f3ed 100%);
+      overflow: hidden;
+    }
+
+    /* Scene card — the current event */
+    .event-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px 24px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* House illustration area */
+    .house-scene {
+      margin: 0 auto 16px;
+      position: relative;
+      height: 120px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 16px;
+    }
+    .house-svg {
+      transition: transform 0.4s ease;
+    }
+    .car-svg {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-80px);
+      transition: left 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Road under the house */
+    .mini-road {
+      width: 100%;
+      height: 16px;
+      background: #555;
+      border-radius: 3px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .mini-road::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #fff 0, #fff 12px, transparent 12px, transparent 24px);
+      opacity: 0.5;
+    }
+
+    /* Status badge */
+    .event-status {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 12px;
+    }
+    .event-status.scheduled { background: #1A1A2E; color: #fff; }
+    .event-status.in-progress { background: var(--amber); color: #1A1A2E; }
+    .event-status.completed { background: var(--green); color: #fff; }
+    .event-status.incident { background: var(--red); color: #fff; }
+    .event-status.break { background: var(--gray-200); color: var(--gray-700); }
+    .event-status.driving { background: #4A90D9; color: #fff; }
+    .event-status.ai { background: var(--purple); color: #fff; }
+
+    /* Event text */
+    .event-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .event-subtitle {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    /* Speech bubble inside card */
+    .event-speech {
+      background: var(--gray-100);
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      color: var(--gray-700);
+      line-height: 1.45;
+      margin-top: 10px;
+      position: relative;
+    }
+    .event-speech::before {
+      content: '💬';
+      position: absolute;
+      top: -10px;
+      left: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* Notification inside card */
+    .event-notif {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-top: 12px;
+      text-align: left;
+    }
+    .event-notif-icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .event-notif-icon.green { background: #D1FAE5; }
+    .event-notif-icon.amber { background: #FEF3C7; }
+    .event-notif-icon.red { background: #FEE2E2; }
+    .event-notif-icon.blue { background: #DBEAFE; }
+    .event-notif-icon.purple { background: #EDE9FE; }
+    .event-notif-text strong { display: block; font-size: 0.78rem; color: var(--primary); }
+    .event-notif-text span { font-size: 0.68rem; color: var(--gray-500); }
+
+    /* Mini stats grid (shown on some events) */
+    .mini-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .mini-stat {
+      background: var(--gray-100);
+      border-radius: 10px;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .mini-stat .ms-label { font-size: 0.65rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.3px; }
+    .mini-stat .ms-value { font-size: 0.95rem; font-weight: 700; color: var(--primary); }
+
+    /* Visit counter dots */
+    .visit-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+    }
+    .v-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gray-200);
+      transition: background 0.3s;
+    }
+    .v-dot.done { background: var(--green); }
+    .v-dot.active { background: var(--amber); transform: scale(1.2); }
+    .v-dot.incident-dot { background: var(--red); }
+
+    /* Background houses (subtle) */
+    .bg-houses {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding: 0 20px;
+      opacity: 0.15;
+    }
+
+    /* ===== SCROLL SPACER ===== */
+    .scroll-spacer {
+      height: 300vh;
+    }
+
+    /* ===== END SECTION ===== */
+    .outro {
+      text-align: center;
+      padding: 60px 24px;
+      background: var(--primary);
+      color: #fff;
+    }
+    .outro h2 { font-size: 1.3rem; margin-bottom: 10px; }
+    .outro p { font-size: 0.85rem; opacity: 0.7; max-width: 500px; margin: 0 auto; line-height: 1.5; }
+
+    /* ===== DESKTOP TWEAKS ===== */
+    @media (min-width: 768px) {
+      .event-card {
+        max-width: 500px;
+        padding: 32px 32px;
+      }
+      .event-title { font-size: 1.3rem; }
+      .stats-pills { gap: 18px; }
+      .stat-pill { font-size: 0.75rem; }
+      .stat-pill .sv { font-size: 0.85rem; }
+      .house-scene { height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <h1>A Day in the Life of a Carer</h1>
+    <p>Follow Sarah through a real day — from morning meds to teatime visits. See how homecareOS keeps everyone connected.</p>
+    <div class="scroll-hint">↓ Scroll to begin</div>
+  </div>
+
+  <div class="scroll-track" id="scrollTrack">
+    <div class="sticky-viewport">
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="time-badge">
+          <span class="pulse"></span>
+          <span id="clock">06:45</span>
+        </div>
+        <div class="stats-pills">
+          <div class="stat-pill">📋 <span class="sv" id="sv-visits">0/10</span> Visits</div>
+          <div class="stat-pill">⏱ <span class="sv" id="sv-care">0h</span> Care</div>
+          <div class="stat-pill">🚗 <span class="sv" id="sv-miles">0mi</span></div>
+          <div class="stat-pill">👤 <span class="sv" id="sv-staff">0h</span> Staff</div>
+        </div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressBar"></div></div>
+
+      <!-- Main scene -->
+      <div class="scene">
+        <div class="event-card" id="eventCard">
+          <div class="house-scene" id="houseScene"></div>
+          <div class="mini-road"></div>
+          <div id="statusBadge"></div>
+          <div class="event-title" id="eventTitle">Getting Ready</div>
+          <div class="event-subtitle" id="eventSubtitle">Sarah starts her day</div>
+          <div id="eventBody"></div>
+          <div class="visit-dots" id="visitDots"></div>
+        </div>
+
+        <!-- Subtle background houses -->
+        <div class="bg-houses" id="bgHouses"></div>
+      </div>
+    </div>
+
+    <!-- Scroll spacers — each event gets a chunk of scroll distance -->
+    <div class="scroll-spacer" id="spacer1"></div>
+    <div class="scroll-spacer" id="spacer2"></div>
+    <div class="scroll-spacer" id="spacer3"></div>
+    <div class="scroll-spacer" id="spacer4"></div>
+    <div class="scroll-spacer" id="spacer5"></div>
+    <div class="scroll-spacer" id="spacer6"></div>
+    <div class="scroll-spacer" id="spacer7"></div>
+    <div class="scroll-spacer" id="spacer8"></div>
+    <div class="scroll-spacer" id="spacer9"></div>
+    <div class="scroll-spacer" id="spacer10"></div>
+    <div class="scroll-spacer" id="spacer11"></div>
+  </div>
+
+  <div class="outro">
+    <h2>That's homecareOS in action</h2>
+    <p>Every visit tracked. Every carer supported. Every family informed. One platform for your entire agency.</p>
+  </div>
+
+<script>
+// ============================================================
+// HOUSE SVG GENERATOR
+// ============================================================
+function houseSVG(color, roofColor, w, h, type) {
+  if (type === 'office') {
+    return `<svg width="${w+10}" height="${h+20}" viewBox="0 0 ${w+10} ${h+20}">
+      <rect x="5" y="20" width="${w}" height="${h-4}" rx="3" fill="${color}"/>
+      <rect x="3" y="16" width="${w+4}" height="6" rx="2" fill="${roofColor}"/>
+      <rect x="12" y="26" width="${w-14}" height="14" rx="3" fill="#f59e0b"/>
+      <text x="${(w+10)/2}" y="37" text-anchor="middle" font-size="7" font-weight="700" fill="#1e3a5f">homecare OS</text>
+      <rect x="12" y="46" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.6"/>
+      <rect x="28" y="46" width="12" height="10" rx="2" fill="#FDE68A" opacity="0.5"/>
+      <rect x="44" y="46" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.6"/>
+      <rect x="${(w+10)/2 - 8}" y="${h+4}" width="16" height="16" rx="2" fill="#2a5580"/>
+    </svg>`;
+  }
+  if (type === 'bench') {
+    return `<svg width="80" height="60" viewBox="0 0 80 60">
+      <rect x="25" y="20" width="6" height="32" fill="#8B7355"/>
+      <ellipse cx="28" cy="16" rx="20" ry="16" fill="#6BAF5B"/>
+      <ellipse cx="28" cy="12" rx="14" ry="12" fill="#7EC86A" opacity="0.6"/>
+      <rect x="45" y="40" width="30" height="4" rx="1" fill="#A07850"/>
+      <rect x="48" y="44" width="4" height="8" fill="#8B6B47"/>
+      <rect x="68" y="44" width="4" height="8" fill="#8B6B47"/>
+    </svg>`;
+  }
+  // Regular house
+  const sw = w + 10;
+  const sh = h + 20;
+  return `<svg width="${sw}" height="${sh}" viewBox="0 0 ${sw} ${sh}">
+    <rect x="${sw-18}" y="4" width="7" height="16" fill="${roofColor}"/>
+    <polygon points="${sw/2},2 ${sw-2},24 2,24" fill="${roofColor}"/>
+    <rect x="5" y="22" width="${w}" height="${h-2}" rx="2" fill="${color}"/>
+    <rect x="11" y="32" width="12" height="10" rx="2" fill="#FDE68A" opacity="0.55"/>
+    <rect x="${w-16}" y="32" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.65"/>
+    ${h > 50 ? `<rect x="11" y="48" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.45"/>` : ''}
+    <rect x="${sw/2-6}" y="${sh-20}" width="12" height="20" rx="2" fill="#8B7355"/>
+    <circle cx="${sw/2+2}" cy="${sh-9}" r="1.5" fill="#f59e0b"/>
+  </svg>`;
+}
+
+const carSVG = `<svg width="56" height="30" viewBox="0 0 56 30">
+  <rect x="4" y="12" width="48" height="14" rx="4" fill="#4A90D9"/>
+  <path d="M15 12 L19 3 L38 3 L42 12" fill="#5BA3EC" stroke="#4A90D9" stroke-width="0.5"/>
+  <rect x="20" y="4.5" width="8" height="6" rx="1.5" fill="#B8DCF8" opacity="0.8"/>
+  <rect x="30" y="4.5" width="8" height="6" rx="1.5" fill="#B8DCF8" opacity="0.8"/>
+  <circle cx="15" cy="26" r="4" fill="#333"/><circle cx="15" cy="26" r="2" fill="#666"/>
+  <circle cx="41" cy="26" r="4" fill="#333"/><circle cx="41" cy="26" r="2" fill="#666"/>
+  <rect x="49" y="16" width="3" height="4" rx="1" fill="#FDE68A"/>
+</svg>`;
+
+// ============================================================
+// EVENTS DATA
+// ============================================================
+const events = [
+  {
+    time: '06:45', title: 'Good Morning, Sarah!', subtitle: 'Time to start the day',
+    status: 'driving', statusText: '🚗 Getting Ready',
+    house: { color: '#7C9EB2', roof: '#5A7A8A', w: 55, h: 60, type: 'house' },
+    houseLabel: "Sarah's Home",
+    speech: 'Alarm goes off, coffee on, uniform ready. Another day caring for the community.',
+    visits: 0, care: 0, miles: 0, staff: 0,
+    progress: 0,
+  },
+  {
+    time: '07:15', title: 'Office Briefing', subtitle: 'CareOS Agency — checking the rota',
+    status: 'driving', statusText: '📋 Briefing',
+    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    houseLabel: 'CareOS Agency',
+    speech: '"Morning everyone! 48 visits across 6 carers today. Sarah, you\'ve got 9 — plus we might need cover for Mrs. Wilson later."',
+    notif: { icon: '📋', bg: 'blue', title: 'Rota Updated', sub: '9 visits assigned for today' },
+    miniStats: [['Carers on Shift', '6'], ['Total Visits', '48'], ['Care Hours Target', '62h'], ['Unallocated', '0']],
+    visits: 0, care: 0, miles: 4, staff: 0.3,
+    progress: 5,
+  },
+  {
+    time: '07:30', title: 'Mrs. Patel', subtitle: 'Morning medication round — 30 min visit',
+    status: 'in-progress', statusText: '💊 Medication Round',
+    house: { color: '#E8B4B4', roof: '#C48888', w: 50, h: 55, type: 'house' },
+    houseLabel: "Mrs. Patel's Home",
+    speech: 'Check-in via GPS. Administer morning meds, record in the MAR chart, quick chat about how she slept.',
+    notif: { icon: '📍', bg: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30 — GPS verified ✓' },
+    activeVisit: 1,
+    visits: 0, care: 0, miles: 6, staff: 0.8,
+    progress: 10,
+  },
+  {
+    time: '08:00', title: 'Mrs. Patel — Complete', subtitle: 'Visit done, care notes logged in the app',
+    status: 'completed', statusText: '✅ Visit Complete',
+    house: { color: '#E8B4B4', roof: '#C48888', w: 50, h: 55, type: 'house' },
+    houseLabel: "Mrs. Patel's Home",
+    notif: { icon: '✅', bg: 'green', title: 'Visit Complete', sub: 'Mrs. Patel — 30 min · on time' },
+    visits: 1, care: 0.5, miles: 6, staff: 1.3,
+    progress: 14,
+  },
+  {
+    time: '08:15', title: 'Mr. Davies', subtitle: 'Personal care — 45 min visit',
+    status: 'in-progress', statusText: '🧼 Personal Care',
+    house: { color: '#B4C8E8', roof: '#8AA4C8', w: 50, h: 52, type: 'house' },
+    houseLabel: "Mr. Davies' Home",
+    speech: 'Helping with washing, dressing, and getting ready for the day. Mr. Davies likes Radio 4 on while we work.',
+    activeVisit: 2,
+    visits: 1, care: 0.5, miles: 8, staff: 1.8,
+    progress: 20,
+  },
+  {
+    time: '09:15', title: 'Mrs. Jones', subtitle: 'Breakfast prep & medication — 30 min',
+    status: 'in-progress', statusText: '🍳 Breakfast & Meds',
+    house: { color: '#D4C4A8', roof: '#B0A080', w: 50, h: 56, type: 'house' },
+    houseLabel: "Mrs. Jones' Home",
+    speech: 'Toast and tea, just how she likes it. Morning medication administered and logged.',
+    activeVisit: 3,
+    visits: 2, care: 1.3, miles: 10, staff: 2.5,
+    progress: 27,
+  },
+  {
+    time: '09:50', title: 'Cover Needed!', subtitle: 'Alert from the office — carer called in sick',
+    status: 'incident', statusText: '🚨 Cover Alert',
+    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    houseLabel: 'CareOS Agency',
+    speech: '"Sarah, can you fit in Mrs. Wilson at 2pm? Her regular carer called in sick and the AI cover finder matched you as the best fit."',
+    notif: { icon: '🚨', bg: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00) — carer called in sick' },
+    visits: 3, care: 1.8, miles: 10, staff: 3.0,
+    progress: 30,
+  },
+  {
+    time: '09:52', title: 'Shift Accepted', subtitle: 'Sarah picks up the extra visit',
+    status: 'completed', statusText: '👍 Shift Accepted',
+    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    houseLabel: 'CareOS Agency',
+    notif: { icon: '✅', bg: 'green', title: 'Shift Confirmed', sub: 'Mrs. Wilson added to afternoon rota' },
+    speech: '"No problem — I can fit her in after lunch. The care plan is already on my app."',
+    visits: 3, care: 1.8, miles: 10, staff: 3.0,
+    progress: 32, total: 10,
+  },
+  {
+    time: '10:00', title: 'Mr. Thompson', subtitle: 'Welfare check — 30 min visit',
+    status: 'in-progress', statusText: '🏠 Welfare Check',
+    house: { color: '#C4D8B4', roof: '#98B480', w: 50, h: 50, type: 'house' },
+    houseLabel: "Mr. Thompson's Home",
+    speech: 'Checking in on Mr. Thompson — making sure he\'s eaten, taken his meds, and the house is warm.',
+    activeVisit: 4,
+    visits: 3, care: 1.8, miles: 12, staff: 3.5,
+    progress: 36,
+  },
+  {
+    time: '10:45', title: 'Mr. Ahmed', subtitle: 'Companionship visit — 45 min',
+    status: 'in-progress', statusText: '♟️ Companionship',
+    house: { color: '#B4D4D8', roof: '#88B0B8', w: 50, h: 52, type: 'house' },
+    houseLabel: "Mr. Ahmed's Home",
+    speech: 'A cup of tea and a game of chess. These visits make such a difference — Mr. Ahmed lives alone and this is his highlight of the week.',
+    activeVisit: 5,
+    visits: 4, care: 2.3, miles: 16, staff: 4.3,
+    progress: 42,
+  },
+  {
+    time: '11:00', title: 'AI Care Plan Review', subtitle: 'homecareOS flags a change in Mr. Ahmed\'s mobility',
+    status: 'ai', statusText: '🤖 AI Care Plan',
+    house: { color: '#B4D4D8', roof: '#88B0B8', w: 50, h: 52, type: 'house' },
+    houseLabel: "Mr. Ahmed's Home",
+    speech: 'The AI has noticed Mr. Ahmed\'s mobility scores are declining over the last 3 weeks. It suggests updated goals and a GP referral.',
+    notif: { icon: '🤖', bg: 'purple', title: 'AI Care Plan Alert', sub: 'Mobility declining — new goals suggested' },
+    visits: 4, care: 2.3, miles: 16, staff: 4.5,
+    progress: 46,
+  },
+  {
+    time: '11:45', title: 'Mrs. Brown', subtitle: 'Lunch preparation — 30 min',
+    status: 'in-progress', statusText: '🍽️ Lunch Prep',
+    house: { color: '#D8C4D8', roof: '#B098B0', w: 50, h: 55, type: 'house' },
+    houseLabel: "Mrs. Brown's Home",
+    speech: 'Preparing a warm lunch — soup and a sandwich. Making sure she eats well and stays hydrated.',
+    activeVisit: 6,
+    visits: 5, care: 3.1, miles: 18, staff: 5.3,
+    progress: 54,
+  },
+  {
+    time: '12:20', title: 'Lunch Break', subtitle: '45 minutes — well deserved',
+    status: 'break', statusText: '☕ Break',
+    house: { color: '#8B7355', roof: '#6B5335', w: 80, h: 60, type: 'bench' },
+    houseLabel: 'Local Park',
+    speech: 'Quick sandwich on the bench, check the afternoon schedule. 4 more visits to go — including the cover shift.',
+    miniStats: [['Morning Visits', '6 of 10'], ['Care Hours', '3.6h'], ['Mileage So Far', '20 mi'], ['Travel Time', '1h 10m']],
+    visits: 6, care: 3.6, miles: 20, staff: 5.8,
+    progress: 58,
+  },
+  {
+    time: '13:15', title: 'Mrs. Wilson', subtitle: 'Cover visit — first time meeting',
+    status: 'in-progress', statusText: '🤝 Cover Visit',
+    house: { color: '#E8D4B4', roof: '#C8A878', w: 50, h: 53, type: 'house' },
+    houseLabel: "Mrs. Wilson's Home",
+    speech: 'First time visiting Mrs. Wilson. Care plan loaded on the app — I know her needs, preferences, and medication before I walk in.',
+    notif: { icon: '📋', bg: 'blue', title: 'Care Plan Loaded', sub: 'Reviewing Mrs. Wilson\'s needs before arrival' },
+    activeVisit: 7,
+    visits: 6, care: 3.6, miles: 22, staff: 6.5,
+    progress: 64,
+  },
+  {
+    time: '14:00', title: "Mr. O'Brien", subtitle: 'Afternoon medication — 45 min',
+    status: 'in-progress', statusText: '💊 Afternoon Meds',
+    house: { color: '#C8D4B8', roof: '#A0B490', w: 50, h: 50, type: 'house' },
+    houseLabel: "Mr. O'Brien's Home",
+    speech: 'New prescription added to Mr. O\'Brien\'s MAR chart this morning. The app flagged it immediately so there are no surprises.',
+    notif: { icon: '⚠️', bg: 'amber', title: 'Medication Alert', sub: "New prescription added — review before administering" },
+    activeVisit: 8,
+    visits: 7, care: 4.1, miles: 25, staff: 7.5,
+    progress: 72,
+  },
+  {
+    time: '14:20', title: 'Incident Reported', subtitle: "Mr. O'Brien had a near-fall in the kitchen",
+    status: 'incident', statusText: '⚠️ Incident',
+    house: { color: '#C8D4B8', roof: '#A0B490', w: 50, h: 50, type: 'house' },
+    houseLabel: "Mr. O'Brien's Home",
+    speech: 'Logged the incident in the app with photos and details. Office notified instantly. Care manager is reviewing the risk assessment.',
+    notif: { icon: '🚨', bg: 'red', title: 'Incident Reported', sub: 'Near-fall — logged, photos attached, office notified' },
+    miniStats: [['Incident Type', 'Near-fall'], ['Location', 'Kitchen'], ['Status', 'Under Review'], ['Action', 'Risk Update']],
+    visits: 7, care: 4.1, miles: 25, staff: 7.8,
+    progress: 76, incidentAt: 8,
+  },
+  {
+    time: '15:00', title: 'Mrs. Clarke', subtitle: 'Repositioning check — 30 min',
+    status: 'in-progress', statusText: '🛏️ Repositioning',
+    house: { color: '#E0C8B0', roof: '#C0A080', w: 50, h: 53, type: 'house' },
+    houseLabel: "Mrs. Clarke's Home",
+    speech: 'Helping Mrs. Clarke reposition to prevent pressure sores. Body map updated in the app.',
+    activeVisit: 9,
+    visits: 8, care: 4.9, miles: 27, staff: 8.5,
+    progress: 84,
+  },
+  {
+    time: '15:45', title: 'Mr. Singh', subtitle: 'Teatime medication — last visit!',
+    status: 'in-progress', statusText: '💊 Final Visit',
+    house: { color: '#B8C8E0', roof: '#90A8C0', w: 50, h: 56, type: 'house' },
+    houseLabel: "Mr. Singh's Home",
+    speech: 'Last visit of the day! Teatime meds administered, care notes logged. Mr. Singh sends Sarah off with a smile.',
+    activeVisit: 10,
+    visits: 9, care: 5.4, miles: 29, staff: 9.3,
+    progress: 90,
+  },
+  {
+    time: '16:15', title: 'All Visits Complete!', subtitle: '10 out of 10 — what a day',
+    status: 'completed', statusText: '🎉 Day Complete',
+    house: { color: '#7C9EB2', roof: '#5A7A8A', w: 55, h: 60, type: 'house' },
+    houseLabel: "Heading Home",
+    notif: { icon: '⭐', bg: 'green', title: 'Day Summary', sub: '10 visits · 5.9h care · 34 miles · 1 incident' },
+    miniStats: [['Visits', '10 / 10'], ['Care Hours', '5.9h'], ['Mileage', '34 miles'], ['Staff Hours', '9.8h']],
+    visits: 10, care: 5.9, miles: 34, staff: 9.8,
+    progress: 100,
+  },
+];
+
+// Track total for visit dots
+let totalVisits = 9;
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderEvent(idx) {
+  const e = events[idx];
+  if (e.total) totalVisits = e.total;
+
+  // Clock + stats
+  document.getElementById('clock').textContent = e.time;
+  document.getElementById('sv-visits').textContent = e.visits + '/' + totalVisits;
+  document.getElementById('sv-care').textContent = e.care + 'h';
+  document.getElementById('sv-miles').textContent = e.miles + 'mi';
+  document.getElementById('sv-staff').textContent = e.staff + 'h';
+  document.getElementById('progressBar').style.width = e.progress + '%';
+
+  // House illustration
+  const hs = document.getElementById('houseScene');
+  hs.innerHTML = houseSVG(e.house.color, e.house.roof, e.house.w, e.house.h, e.house.type) +
+    '<div style="position:absolute;bottom:0;left:20px">' + carSVG + '</div>';
+
+  // Status
+  const sb = document.getElementById('statusBadge');
+  sb.innerHTML = `<span class="event-status ${e.status}">${e.statusText}</span>`;
+
+  // Title + subtitle
+  document.getElementById('eventTitle').textContent = e.title;
+  document.getElementById('eventSubtitle').textContent = e.subtitle;
+
+  // Body content
+  let body = '';
+  if (e.speech) {
+    body += `<div class="event-speech">${e.speech}</div>`;
+  }
+  if (e.notif) {
+    body += `<div class="event-notif">
+      <div class="event-notif-icon ${e.notif.bg}">${e.notif.icon}</div>
+      <div class="event-notif-text"><strong>${e.notif.title}</strong><span>${e.notif.sub}</span></div>
+    </div>`;
+  }
+  if (e.miniStats) {
+    body += '<div class="mini-stats">' + e.miniStats.map(s =>
+      `<div class="mini-stat"><div class="ms-label">${s[0]}</div><div class="ms-value">${s[1]}</div></div>`
+    ).join('') + '</div>';
+  }
+  document.getElementById('eventBody').innerHTML = body;
+
+  // Visit dots
+  let dots = '';
+  for (let i = 1; i <= totalVisits; i++) {
+    let cls = 'v-dot';
+    if (e.incidentAt === i) cls += ' incident-dot';
+    else if (e.activeVisit === i) cls += ' active';
+    else if (i <= e.visits) cls += ' done';
+    dots += `<div class="${cls}"></div>`;
+  }
+  document.getElementById('visitDots').innerHTML = dots;
+}
+
+// ============================================================
+// SCROLL DRIVER
+// ============================================================
+let lastRendered = -1;
+
+function onScroll() {
+  const track = document.getElementById('scrollTrack');
+  const rect = track.getBoundingClientRect();
+  const trackHeight = track.offsetHeight - window.innerHeight;
+
+  // How far through the scroll track (0 to 1)
+  const scrolled = Math.max(0, Math.min(1, -rect.top / trackHeight));
+
+  // Map to event index
+  const idx = Math.min(events.length - 1, Math.floor(scrolled * events.length));
+
+  if (idx !== lastRendered) {
+    lastRendered = idx;
+    renderEvent(idx);
+
+    // Subtle card animation
+    const card = document.getElementById('eventCard');
+    card.style.transform = 'scale(0.97)';
+    card.style.opacity = '0.7';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        card.style.transform = 'scale(1)';
+        card.style.opacity = '1';
+      });
+    });
+  }
+}
+
+// Render initial state
+renderEvent(0);
+
+// Background houses
+const bgHouseColors = ['#E8B4B4','#B4C8E8','#D4C4A8','#C4D8B4','#E8D4B4','#B4D4D8','#D8C4D8','#C8D4B8','#E0C8B0','#B8C8E0'];
+document.getElementById('bgHouses').innerHTML = bgHouseColors.map((c,i) =>
+  `<svg width="24" height="30" viewBox="0 0 24 30"><polygon points="12,2 23,14 1,14" fill="${c}" opacity="0.7"/><rect x="3" y="13" width="18" height="17" fill="${c}" opacity="0.5"/></svg>`
+).join('');
+
+// Listen
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
+</script>
+
+</body>
+</html>

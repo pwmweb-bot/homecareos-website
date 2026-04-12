@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Carer Day Animation — Prototype v2</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+    h1 { font-size: 1.2rem; color: #1e3a5f; margin-bottom: 4px; }
+    .subtitle { font-size: 0.8rem; color: #999; margin-bottom: 20px; }
+
+    .animation-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      background: linear-gradient(180deg, #dceef8 0%, #e8f4f0 35%, #f2f0e8 55%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      height: 440px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* ===== TOP BAR: Time + Stats ===== */
+    .top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 48px;
+      background: rgba(30,58,95,0.92);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 20;
+    }
+    .time-display {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+    .time-display .dot {
+      width: 7px; height: 7px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .stats-row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+    .stat-item .stat-icon {
+      font-size: 0.85rem;
+    }
+    .stat-item .stat-value {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      min-width: 28px;
+    }
+    .stat-item .stat-label {
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ===== CLOUDS ===== */
+    .cloud {
+      position: absolute;
+      fill: rgba(255,255,255,0.6);
+    }
+
+    /* ===== GROUND / ROAD ===== */
+    .ground {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(180deg, #c8c3b4 0%, #d4cfbf 100%);
+    }
+    .grass-strip {
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: #a8c490;
+    }
+    .road {
+      position: absolute;
+      bottom: 42px;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background: #4a4a4a;
+      border-top: 2px solid #666;
+      border-bottom: 2px solid #666;
+    }
+    .road::after {
+      content: '';
+      position: absolute;
+      top: 13px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #fff 0, #fff 24px, transparent 24px, transparent 48px);
+      opacity: 0.7;
+    }
+
+    /* ===== SCENE ===== */
+    .scene {
+      position: absolute;
+      bottom: 82px;
+      left: 0;
+      right: 0;
+      height: 280px;
+    }
+
+    /* ===== BUILDINGS ===== */
+    .building {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .building-label {
+      font-size: 0.65rem;
+      color: #555;
+      margin-top: 3px;
+      white-space: nowrap;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    }
+
+    /* ===== STATUS BADGES ===== */
+    .status-badge {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      white-space: nowrap;
+      opacity: 0;
+      transition: all 0.4s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .status-badge.visible { opacity: 1; }
+    .status-badge.scheduled { background: #1A1A2E; color: #fff; }
+    .status-badge.in-progress { background: #EF9F27; color: #1A1A2E; }
+    .status-badge.completed { background: #1D9E75; color: #fff; }
+    .status-badge.incident { background: #E24B4A; color: #fff; animation: pulse-badge 1s infinite; }
+    @keyframes pulse-badge { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.05); } }
+
+    /* ===== CAR ===== */
+    .car-container {
+      position: absolute;
+      bottom: 42px;
+      left: 20px;
+      z-index: 15;
+      transition: left 2s ease-in-out;
+    }
+
+    /* ===== SPEECH BUBBLE ===== */
+    .speech-bubble {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      color: #1e3a5f;
+      padding: 8px 14px;
+      border-radius: 14px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: normal;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 25;
+      pointer-events: none;
+      max-width: 220px;
+      text-align: center;
+      line-height: 1.35;
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0; height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+    }
+    .speech-bubble.visible { opacity: 1; }
+
+    /* ===== NOTIFICATION PANEL ===== */
+    .notification {
+      position: absolute;
+      top: 58px;
+      right: 12px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+      font-size: 0.75rem;
+      color: #1e3a5f;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.4s ease;
+      max-width: 260px;
+      border-left: 3px solid transparent;
+    }
+    .notification.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .notification.type-green { border-left-color: #1D9E75; }
+    .notification.type-amber { border-left-color: #EF9F27; }
+    .notification.type-blue { border-left-color: #4A90D9; }
+    .notification.type-red { border-left-color: #E24B4A; }
+    .notification.type-purple { border-left-color: #8B5CF6; }
+    .notif-icon {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .notif-icon.amber { background: #FEF3C7; }
+    .notif-icon.green { background: #D1FAE5; }
+    .notif-icon.blue { background: #DBEAFE; }
+    .notif-icon.red { background: #FEE2E2; }
+    .notif-icon.purple { background: #EDE9FE; }
+    .notif-text { line-height: 1.3; }
+    .notif-text strong { display: block; font-size: 0.78rem; }
+    .notif-text span { color: #888; font-size: 0.68rem; }
+
+    /* ===== OFFICE STATS POPUP ===== */
+    .office-stats {
+      position: absolute;
+      top: 58px;
+      left: 12px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+      z-index: 28;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.4s ease;
+      border-left: 3px solid #1e3a5f;
+      min-width: 180px;
+    }
+    .office-stats.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .office-stats-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .office-stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.72rem;
+    }
+    .office-stat-row:last-child { border: none; }
+    .office-stat-row .osr-label { color: #666; }
+    .office-stat-row .osr-value { font-weight: 700; color: #1e3a5f; }
+
+    /* ===== PROGRESS BAR ===== */
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(30,58,95,0.1);
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #f59e0b, #1D9E75);
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    /* ===== CONTROLS ===== */
+    .controls {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .controls button {
+      padding: 8px 18px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #1e3a5f;
+      transition: all 0.2s;
+    }
+    .controls button:hover { background: #1e3a5f; color: #fff; border-color: #1e3a5f; }
+    .controls button.primary { background: #f59e0b; color: #1e3a5f; border-color: #f59e0b; }
+    .controls button.primary:hover { background: #d97706; }
+    .speed-label { font-size: 0.72rem; color: #999; }
+
+    /* ===== SMALL TREE DECORATIONS ===== */
+    .tree {
+      position: absolute;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A Day in the Life — Animation Prototype v2</h1>
+  <p class="subtitle">Standalone section — iterate here before going live</p>
+
+  <div class="animation-wrapper" id="scene">
+
+    <!-- Top bar: time + running stats -->
+    <div class="top-bar">
+      <div class="time-display">
+        <span class="dot"></span>
+        <span id="clock">06:45</span>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-icon">📋</span>
+          <span class="stat-value" id="stat-visits">0/9</span>
+          <span class="stat-label">Visits</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">⏱️</span>
+          <span class="stat-value" id="stat-care-hrs">0h</span>
+          <span class="stat-label">Care</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🚗</span>
+          <span class="stat-value" id="stat-miles">0mi</span>
+          <span class="stat-label">Miles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🕐</span>
+          <span class="stat-value" id="stat-travel">0m</span>
+          <span class="stat-label">Travel</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">👤</span>
+          <span class="stat-value" id="stat-staff-hrs">0h</span>
+          <span class="stat-label">Staff</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification (right side) -->
+    <div class="notification" id="notification">
+      <div class="notif-icon" id="notif-icon">📱</div>
+      <div class="notif-text" id="notif-text">
+        <strong>Notification</strong>
+        <span>Just now</span>
+      </div>
+    </div>
+
+    <!-- Office stats popup (left side) -->
+    <div class="office-stats" id="office-stats">
+      <div class="office-stats-title" id="ost-title">Agency Dashboard</div>
+      <div id="ost-rows"></div>
+    </div>
+
+    <!-- Clouds -->
+    <svg class="cloud" style="top:55px;left:6%;opacity:0.5" width="90" height="32" viewBox="0 0 90 32">
+      <ellipse cx="35" cy="20" rx="32" ry="11" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="55" cy="15" rx="28" ry="13" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="22" cy="18" rx="22" ry="9" fill="rgba(255,255,255,0.7)"/>
+    </svg>
+    <svg class="cloud" style="top:65px;left:50%;opacity:0.35" width="110" height="38" viewBox="0 0 110 38">
+      <ellipse cx="45" cy="24" rx="38" ry="13" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="70" cy="18" rx="30" ry="15" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="28" cy="22" rx="24" ry="10" fill="rgba(255,255,255,0.7)"/>
+    </svg>
+    <svg class="cloud" style="top:58px;left:80%;opacity:0.3" width="70" height="28" viewBox="0 0 70 28">
+      <ellipse cx="28" cy="16" rx="28" ry="11" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="45" cy="13" rx="20" ry="11" fill="rgba(255,255,255,0.7)"/>
+    </svg>
+
+    <!-- Scene with buildings + trees -->
+    <div class="scene" id="buildings"></div>
+
+    <!-- Grass / Road / Ground -->
+    <div class="grass-strip"></div>
+    <div class="road"></div>
+    <div class="ground"></div>
+
+    <!-- Car -->
+    <div class="car-container" id="car">
+      <div class="speech-bubble" id="speech"></div>
+      <svg width="52" height="30" viewBox="0 0 52 30">
+        <rect x="4" y="12" width="44" height="14" rx="3" fill="#4A90D9"/>
+        <path d="M14 12 L18 3 L36 3 L40 12" fill="#5BA3EC" stroke="#4A90D9" stroke-width="0.5"/>
+        <rect x="19" y="4.5" width="7" height="6" rx="1" fill="#B8DCF8" opacity="0.8"/>
+        <rect x="28" y="4.5" width="7" height="6" rx="1" fill="#B8DCF8" opacity="0.8"/>
+        <circle cx="14" cy="26" r="4" fill="#333"/>
+        <circle cx="14" cy="26" r="2" fill="#666"/>
+        <circle cx="38" cy="26" r="4" fill="#333"/>
+        <circle cx="38" cy="26" r="2" fill="#666"/>
+        <rect x="45" y="16" width="3" height="4" rx="1" fill="#FDE68A"/>
+        <rect x="4" y="16" width="2" height="4" rx="1" fill="#EF4444"/>
+      </svg>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="primary" id="playBtn" onclick="startAnimation()">&#9654; Play</button>
+    <button onclick="resetAnimation()">&#8634; Reset</button>
+    <button onclick="changeSpeed(-1)">Slower</button>
+    <button onclick="changeSpeed(1)">Faster</button>
+    <span class="speed-label" id="speedLabel">1x speed</span>
+  </div>
+
+<script>
+// ============================================================
+// BUILDINGS DATA
+// ============================================================
+const buildings = [
+  { id: 'carer-home', type: 'home', x: 15, label: "Sarah's Home", color: '#7C9EB2', roofColor: '#5A7A8A', w: 48, h: 58 },
+  { id: 'office', type: 'office', x: 95, label: 'CareOS Agency', color: '#1e3a5f', roofColor: '#152d4a', w: 62, h: 70 },
+  { id: 'h1', type: 'house', x: 190, label: 'Mrs. Patel', color: '#E8B4B4', roofColor: '#C48888', w: 42, h: 50 },
+  { id: 'h2', type: 'house', x: 265, label: 'Mr. Davies', color: '#B4C8E8', roofColor: '#8AA4C8', w: 42, h: 46 },
+  { id: 'h3', type: 'house', x: 340, label: 'Mrs. Jones', color: '#D4C4A8', roofColor: '#B0A080', w: 42, h: 52 },
+  { id: 'h4', type: 'house', x: 420, label: 'Mr. Thompson', color: '#C4D8B4', roofColor: '#98B480', w: 42, h: 44 },
+  { id: 'cafe', type: 'cafe', x: 500, label: 'Park Bench', color: '#8B7355', roofColor: '#6B5335', w: 46, h: 30 },
+  { id: 'h5', type: 'house', x: 575, label: 'Mrs. Wilson', color: '#E8D4B4', roofColor: '#C8A878', w: 42, h: 48 },
+  { id: 'h6', type: 'house', x: 650, label: 'Mr. Ahmed', color: '#B4D4D8', roofColor: '#88B0B8', w: 42, h: 46 },
+  { id: 'h7', type: 'house', x: 730, label: 'Mrs. Brown', color: '#D8C4D8', roofColor: '#B098B0', w: 42, h: 50 },
+  { id: 'h8', type: 'house', x: 810, label: "Mr. O'Brien", color: '#C8D4B8', roofColor: '#A0B490', w: 42, h: 44 },
+  { id: 'h9', type: 'house', x: 890, label: 'Mrs. Clarke', color: '#E0C8B0', roofColor: '#C0A080', w: 42, h: 48 },
+  { id: 'h10', type: 'house', x: 970, label: 'Mr. Singh', color: '#B8C8E0', roofColor: '#90A8C0', w: 42, h: 52 },
+];
+
+// Trees placed between buildings
+const trees = [
+  { x: 165, h: 40 }, { x: 315, h: 35 }, { x: 395, h: 38 },
+  { x: 550, h: 42 }, { x: 625, h: 36 }, { x: 705, h: 40 },
+  { x: 785, h: 34 }, { x: 865, h: 38 }, { x: 945, h: 36 },
+  { x: 1045, h: 32 },
+];
+
+// ============================================================
+// RUNNING TOTALS
+// ============================================================
+let stats = { visits: 0, total: 9, careHrs: 0, miles: 0, travel: 0, staffHrs: 0 };
+
+function updateStats(overrides) {
+  Object.assign(stats, overrides);
+  document.getElementById('stat-visits').textContent = stats.visits + '/' + stats.total;
+  document.getElementById('stat-care-hrs').textContent = stats.careHrs + 'h';
+  document.getElementById('stat-miles').textContent = stats.miles + 'mi';
+  const travelHrs = Math.floor(stats.travel / 60);
+  const travelMin = stats.travel % 60;
+  document.getElementById('stat-travel').textContent = travelHrs > 0 ? travelHrs + 'h' + (travelMin > 0 ? travelMin + 'm' : '') : stats.travel + 'm';
+  document.getElementById('stat-staff-hrs').textContent = stats.staffHrs + 'h';
+}
+
+// ============================================================
+// TIMELINE
+// ============================================================
+const timeline = [
+  // === MORNING START ===
+  // Realistic UK carer day: 07:00–17:00, morning round + lunch break + afternoon round
+  // Visits 30–45 min, 10–15 min travel between. Split shift pattern.
+
+  { time: '06:45', carX: 15, speech: '☀️ Morning! Time to get ready', dur: 2000, progress: 0 },
+  { time: '06:55', carX: 40, speech: null, dur: 800, progress: 1 },
+
+  // === DRIVE TO OFFICE (15 min drive) ===
+  { time: '07:00', carX: 95, speech: '🚗 Heading to the office', dur: 1800, progress: 3,
+    stats: { miles: 4, travel: 15, staffHrs: 0.3 },
+    notif: { icon: '📋', bg: 'blue', type: 'blue', title: 'Good Morning, Sarah!', sub: '9 visits on your rota today' }
+  },
+
+  // === OFFICE BRIEFING (07:15–07:25) ===
+  { time: '07:15', carX: 115, speech: '☕ Quick briefing — checking the rota', dur: 2200, progress: 5,
+    statuses: { h1: 'scheduled', h2: 'scheduled', h3: 'scheduled', h4: 'scheduled', h5: 'scheduled', h6: 'scheduled', h7: 'scheduled', h8: 'scheduled', h9: 'scheduled', h10: 'scheduled' },
+    officeStats: { title: 'Today\'s Rota', rows: [
+      ['Carers on shift', '6'],
+      ['Total visits', '48'],
+      ['Care hours', '0 / 62h'],
+      ['Unallocated', '0'],
+    ]}
+  },
+  { time: '07:25', carX: 115, speech: null, dur: 800, progress: 7 },
+
+  // === VISIT 1: Mrs. Patel — Morning Meds (07:30–08:00, 30 min) ===
+  { time: '07:30', carX: 190, speech: '💊 Mrs. Patel — morning medication', dur: 1800, progress: 8,
+    stats: { miles: 6, travel: 20 },
+    statuses: { h1: 'in-progress' },
+    notif: { icon: '📍', bg: 'green', type: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30 — GPS verified ✓' }
+  },
+  { time: '08:00', carX: 205, speech: '✅ Meds given, notes logged', dur: 1800, progress: 12,
+    stats: { visits: 1, careHrs: 0.5, staffHrs: 1.3 },
+    statuses: { h1: 'completed' },
+    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Visit Complete', sub: 'Mrs. Patel — 30 min' }
+  },
+
+  // === VISIT 2: Mr. Davies — Personal Care (08:15–09:00, 45 min) ===
+  { time: '08:15', carX: 265, speech: '🧼 Mr. Davies — personal care', dur: 1800, progress: 15,
+    stats: { miles: 8, travel: 30 },
+    statuses: { h2: 'in-progress' }
+  },
+  { time: '09:00', carX: 280, speech: null, dur: 1200, progress: 20,
+    stats: { visits: 2, careHrs: 1.3, staffHrs: 2.3 },
+    statuses: { h2: 'completed' },
+    officeStats: { title: 'Agency Live View', rows: [
+      ['Visits completed', '10 / 48'],
+      ['Care hours logged', '12.5h'],
+      ['On-time rate', '100%'],
+      ['Active carers', '6'],
+    ]}
+  },
+
+  // === VISIT 3: Mrs. Jones — Breakfast & Meds (09:15–09:45, 30 min) ===
+  { time: '09:15', carX: 340, speech: '🍳 Mrs. Jones — breakfast & meds', dur: 1800, progress: 23,
+    stats: { miles: 10, travel: 40 },
+    statuses: { h3: 'in-progress' }
+  },
+  { time: '09:45', carX: 355, speech: '📝 Updating care notes in the app', dur: 1800, progress: 27,
+    stats: { visits: 3, careHrs: 1.8, staffHrs: 3.0 },
+    statuses: { h3: 'completed' }
+  },
+
+  // === COVER ALERT (09:50) ===
+  { time: '09:50', carX: 355, speech: '📱 Alert from the office!', dur: 2000, progress: 29,
+    notif: { icon: '🚨', bg: 'amber', type: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00) — carer called in sick' },
+    stats: { total: 10 }
+  },
+  { time: '09:52', carX: 355, speech: '👍 I\'ll take Mrs. Wilson at 2pm', dur: 2200, progress: 30,
+    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Shift Accepted', sub: 'Mrs. Wilson added to your afternoon rota' }
+  },
+
+  // === VISIT 4: Mr. Thompson — Welfare Check (10:00–10:30, 30 min) ===
+  { time: '10:00', carX: 420, speech: '🏠 Mr. Thompson — welfare check', dur: 1800, progress: 32,
+    stats: { miles: 12, travel: 48 },
+    statuses: { h4: 'in-progress' }
+  },
+  { time: '10:30', carX: 435, speech: null, dur: 1200, progress: 36,
+    stats: { visits: 4, careHrs: 2.3, staffHrs: 3.8 },
+    statuses: { h4: 'completed' },
+    notif: { icon: '📊', bg: 'blue', type: 'blue', title: '4 of 10 Complete', sub: 'Morning round on track!' }
+  },
+
+  // === VISIT 5: Mrs. Wilson Cover — moved to afternoon, so visit 5 is now Mr. Ahmed ===
+  // === VISIT 5: Mr. Ahmed — Companionship + AI CARE PLAN (10:45–11:30, 45 min) ===
+  { time: '10:45', carX: 650, speech: '♟️ Mr. Ahmed — companionship visit', dur: 1800, progress: 39,
+    stats: { miles: 16, travel: 58 },
+    statuses: { h6: 'in-progress' }
+  },
+  { time: '11:00', carX: 665, speech: '🤖 AI flagged: care plan review due', dur: 2200, progress: 42,
+    notif: { icon: '🤖', bg: 'purple', type: 'purple', title: 'AI Care Plan Alert', sub: 'Mr. Ahmed — mobility declining, review recommended' }
+  },
+  { time: '11:10', carX: 665, speech: '📋 Updating care plan with AI assist', dur: 2200, progress: 44,
+    notif: { icon: '✨', bg: 'purple', type: 'purple', title: 'Care Plan Updated', sub: 'AI suggested new mobility goals — approved by Sarah' }
+  },
+  { time: '11:30', carX: 665, speech: null, dur: 1200, progress: 47,
+    stats: { visits: 5, careHrs: 3.1, staffHrs: 4.8 },
+    statuses: { h6: 'completed' }
+  },
+
+  // === VISIT 6: Mrs. Brown — Lunch Prep (11:45–12:15, 30 min) ===
+  { time: '11:45', carX: 730, speech: '🍽️ Mrs. Brown — lunch prep', dur: 1800, progress: 50,
+    stats: { miles: 18, travel: 65 },
+    statuses: { h7: 'in-progress' },
+    officeStats: { title: 'Agency Totals (11:45)', rows: [
+      ['Visits completed', '28 / 48'],
+      ['Total care hours', '34.2h'],
+      ['Incidents today', '0'],
+      ['On-time rate', '98%'],
+    ]}
+  },
+  { time: '12:15', carX: 745, speech: null, dur: 1200, progress: 54,
+    stats: { visits: 6, careHrs: 3.6, staffHrs: 5.5 },
+    statuses: { h7: 'completed' }
+  },
+
+  // === LUNCH BREAK (12:15–13:00, 45 min) ===
+  { time: '12:20', carX: 500, speech: '☕ Lunch break — 45 minutes', dur: 2500, progress: 56,
+    stats: { miles: 20, travel: 70 },
+    officeStats: { title: 'Sarah\'s Morning', rows: [
+      ['Visits done', '6 / 10'],
+      ['Care hours', '3.6h'],
+      ['Mileage', '20 miles'],
+      ['Travel time', '1h 10m'],
+    ]}
+  },
+  { time: '12:45', carX: 515, speech: '📱 Checking afternoon schedule', dur: 1800, progress: 58 },
+  { time: '13:00', carX: 515, speech: null, dur: 1000, progress: 60 },
+
+  // === AFTERNOON ROUND ===
+
+  // === VISIT 7: Mrs. Wilson — Cover Visit (13:15–13:45, 30 min) ===
+  { time: '13:15', carX: 575, speech: '🤝 Mrs. Wilson — cover visit', dur: 1800, progress: 62,
+    stats: { miles: 22, travel: 78 },
+    statuses: { h5: 'in-progress' },
+    notif: { icon: '📋', bg: 'blue', type: 'blue', title: 'Care Plan Loaded', sub: 'Reviewing Mrs. Wilson\'s needs' }
+  },
+  { time: '13:45', carX: 590, speech: '✅ Visit done — she was lovely!', dur: 1800, progress: 66,
+    stats: { visits: 7, careHrs: 4.1, staffHrs: 7.0 },
+    statuses: { h5: 'completed' }
+  },
+
+  // === VISIT 8: Mr. O'Brien — INCIDENT! (14:00–14:45, 45 min) ===
+  { time: '14:00', carX: 810, speech: "🏠 Mr. O'Brien — afternoon meds", dur: 1800, progress: 69,
+    stats: { miles: 25, travel: 86 },
+    statuses: { h8: 'in-progress' },
+    notif: { icon: '⚠️', bg: 'amber', type: 'amber', title: 'Medication Alert', sub: "Mr. O'Brien — new prescription added" }
+  },
+  { time: '14:20', carX: 825, speech: "⚠️ Mr. O'Brien had a near-fall", dur: 2200, progress: 73,
+    statuses: { h8: 'incident' },
+    notif: { icon: '🚨', bg: 'red', type: 'red', title: 'Incident Reported', sub: "Near-fall — Mr. O'Brien. Logged & sent to office" }
+  },
+  { time: '14:30', carX: 825, speech: '📝 Incident logged, office notified', dur: 2200, progress: 76,
+    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Incident Acknowledged', sub: 'Care manager reviewing — risk assessment updated' },
+    officeStats: { title: 'Incident Report', rows: [
+      ['Type', 'Near-fall'],
+      ['Service user', "Mr. O'Brien"],
+      ['Status', 'Under review'],
+      ['Action', 'Risk assessment updated'],
+    ]}
+  },
+  { time: '14:45', carX: 825, speech: null, dur: 1200, progress: 79,
+    stats: { visits: 8, careHrs: 4.9, staffHrs: 8.0 },
+    statuses: { h8: 'completed' }
+  },
+
+  // === VISIT 9: Mrs. Clarke — Repositioning (15:00–15:30, 30 min) ===
+  { time: '15:00', carX: 890, speech: '🛏️ Mrs. Clarke — repositioning check', dur: 1800, progress: 82,
+    stats: { miles: 27, travel: 94 },
+    statuses: { h9: 'in-progress' }
+  },
+  { time: '15:30', carX: 905, speech: null, dur: 1200, progress: 86,
+    stats: { visits: 9, careHrs: 5.4, staffHrs: 8.8 },
+    statuses: { h9: 'completed' }
+  },
+
+  // === VISIT 10: Mr. Singh — Teatime Meds (15:45–16:15, 30 min) ===
+  { time: '15:45', carX: 970, speech: '🏠 Last one! Mr. Singh — teatime meds', dur: 1800, progress: 88,
+    stats: { miles: 29, travel: 102 },
+    statuses: { h10: 'in-progress' }
+  },
+  { time: '16:15', carX: 985, speech: '💊 All medications administered', dur: 1800, progress: 92,
+    notif: { icon: '🎉', bg: 'green', type: 'green', title: 'All Visits Complete!', sub: '10/10 — 100% done, 1 incident reported' }
+  },
+  { time: '16:20', carX: 985, speech: null, dur: 1200, progress: 94,
+    stats: { visits: 10, careHrs: 5.9, staffHrs: 9.5 },
+    statuses: { h10: 'completed' },
+    officeStats: { title: 'Agency End of Day', rows: [
+      ['Visits completed', '48 / 48'],
+      ['Total care hours', '62.1h'],
+      ['Incidents', '1 (under review)'],
+      ['On-time rate', '97%'],
+    ]}
+  },
+
+  // === DRIVE HOME (16:30) ===
+  { time: '16:30', carX: 40, speech: '🏡 Heading home — great day!', dur: 3000, progress: 98,
+    stats: { miles: 34, travel: 115, staffHrs: 9.8 },
+    notif: { icon: '⭐', bg: 'green', type: 'green', title: 'Day Summary', sub: '10 visits · 5.9h care · 34 miles · 1 incident' }
+  },
+  { time: '16:45', carX: 15, speech: '👋 See you tomorrow!', dur: 2500, progress: 100,
+    officeStats: { title: 'Sarah\'s Day Complete', rows: [
+      ['Visits', '10 / 10'],
+      ['Care hours', '5.9h'],
+      ['Total mileage', '34 miles'],
+      ['Staff hours', '9.8h'],
+    ]}
+  },
+];
+
+// ============================================================
+// RENDER BUILDINGS
+// ============================================================
+function renderBuildings() {
+  const container = document.getElementById('buildings');
+  container.innerHTML = '';
+
+  // Trees first (behind buildings)
+  trees.forEach(t => {
+    const div = document.createElement('div');
+    div.className = 'tree';
+    div.style.left = (t.x / 1060 * 100) + '%';
+    div.innerHTML = `
+      <svg width="20" height="${t.h}" viewBox="0 0 20 ${t.h}">
+        <rect x="8" y="${t.h - 12}" width="4" height="12" fill="#8B7355"/>
+        <ellipse cx="10" cy="${t.h - 18}" rx="9" ry="${t.h - 18}" fill="#6BAF5B" opacity="0.7"/>
+        <ellipse cx="10" cy="${t.h - 22}" rx="7" ry="${t.h - 24}" fill="#7EC86A" opacity="0.5"/>
+      </svg>
+    `;
+    container.appendChild(div);
+  });
+
+  buildings.forEach(b => {
+    const div = document.createElement('div');
+    div.className = 'building';
+    div.style.left = (b.x / 1060 * 100) + '%';
+    div.id = 'building-' + b.id;
+
+    const sw = b.w + 10;
+    const sh = b.h + 22;
+    let svg = '';
+
+    if (b.type === 'office') {
+      svg = `<svg width="${sw}" height="${sh}" viewBox="0 0 ${sw} ${sh}">
+        <rect x="5" y="22" width="${b.w}" height="${b.h - 6}" rx="2" fill="${b.color}"/>
+        <rect x="3" y="18" width="${b.w + 4}" height="6" rx="1" fill="${b.roofColor}"/>
+        <rect x="12" y="28" width="${b.w - 14}" height="12" rx="2" fill="#f59e0b"/>
+        <text x="${sw/2}" y="37" text-anchor="middle" font-size="5.5" font-weight="700" fill="#1e3a5f">homecare OS</text>
+        <rect x="12" y="46" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
+        <rect x="26" y="46" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
+        <rect x="40" y="46" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.5"/>
+        <rect x="54" y="46" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
+        <rect x="12" y="58" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.5"/>
+        <rect x="26" y="58" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
+        <rect x="40" y="58" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
+        <rect x="54" y="58" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.5"/>
+        <rect x="${sw/2 - 7}" y="${sh - 18}" width="14" height="18" rx="2" fill="#2a5580"/>
+        <circle cx="${sw/2 + 4}" cy="${sh - 8}" r="1.2" fill="#f59e0b"/>
+      </svg>`;
+    } else if (b.type === 'cafe') {
+      // Park bench + tree area
+      svg = `<svg width="${sw}" height="${sh}" viewBox="0 0 ${sw} ${sh}">
+        <rect x="5" y="${sh - 10}" width="36" height="3" rx="1" fill="#8B6B47"/>
+        <rect x="8" y="${sh - 7}" width="3" height="7" fill="#8B6B47"/>
+        <rect x="35" y="${sh - 7}" width="3" height="7" fill="#8B6B47"/>
+        <rect x="3" y="${sh - 13}" width="40" height="4" rx="1" fill="#A07850"/>
+        <rect x="20" y="${sh - 40}" width="5" height="28" fill="#8B7355"/>
+        <ellipse cx="22" cy="${sh - 44}" rx="16" ry="14" fill="#6BAF5B"/>
+        <ellipse cx="22" cy="${sh - 48}" rx="12" ry="10" fill="#7EC86A" opacity="0.6"/>
+      </svg>`;
+    } else {
+      // Houses
+      const chimneyX = b.x % 2 === 0 ? 10 : sw - 16;
+      svg = `<svg width="${sw}" height="${sh}" viewBox="0 0 ${sw} ${sh}">
+        <rect x="${chimneyX}" y="5" width="6" height="14" fill="${b.roofColor}"/>
+        <polygon points="${sw/2},3 ${sw - 2},23 2,23" fill="${b.roofColor}"/>
+        <rect x="5" y="21" width="${b.w}" height="${b.h - 4}" rx="1" fill="${b.color}"/>
+        <rect x="10" y="30" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.55"/>
+        <rect x="${b.w - 14}" y="30" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.65"/>
+        ${b.h > 44 ? `<rect x="10" y="44" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.45"/>` : ''}
+        <rect x="${sw/2 - 5}" y="${sh - 19}" width="10" height="19" rx="1.5" fill="#8B7355"/>
+        <circle cx="${sw/2 + 2}" cy="${sh - 9}" r="1" fill="#f59e0b"/>
+      </svg>`;
+    }
+
+    const badge = (b.type === 'house') ? `<div class="status-badge" id="status-${b.id}"></div>` : '';
+    div.innerHTML = badge + svg + `<span class="building-label">${b.label}</span>`;
+    container.appendChild(div);
+  });
+}
+
+// ============================================================
+// ANIMATION ENGINE
+// ============================================================
+let currentStep = 0;
+let animationTimer = null;
+let speedMultiplier = 1;
+
+function moveCar(xVal) {
+  const car = document.getElementById('car');
+  const wrapperWidth = document.getElementById('scene').offsetWidth;
+  car.style.left = (xVal / 1060 * wrapperWidth) + 'px';
+}
+
+function setClock(t) { document.getElementById('clock').textContent = t; }
+
+function setSpeech(text) {
+  const el = document.getElementById('speech');
+  if (text) { el.innerHTML = text; el.classList.add('visible'); }
+  else { el.classList.remove('visible'); }
+}
+
+function setStatuses(s) {
+  if (!s) return;
+  Object.entries(s).forEach(([id, status]) => {
+    const el = document.getElementById('status-' + id);
+    if (!el) return;
+    el.className = 'status-badge visible ' + status;
+    const labels = {
+      'scheduled': '⏳ Scheduled',
+      'in-progress': '🔄 In Progress',
+      'completed': '✅ Complete',
+      'incident': '⚠️ Incident',
+    };
+    el.textContent = labels[status] || status;
+  });
+}
+
+function showNotification(data) {
+  const el = document.getElementById('notification');
+  if (!data) { el.classList.remove('visible'); return; }
+  el.className = 'notification visible type-' + (data.type || 'blue');
+  document.getElementById('notif-icon').className = 'notif-icon ' + data.bg;
+  document.getElementById('notif-icon').textContent = data.icon;
+  document.getElementById('notif-text').innerHTML = `<strong>${data.title}</strong><span>${data.sub}</span>`;
+  setTimeout(() => el.classList.remove('visible'), 2800 / speedMultiplier);
+}
+
+function showOfficeStats(data) {
+  const el = document.getElementById('office-stats');
+  if (!data) { el.classList.remove('visible'); return; }
+  document.getElementById('ost-title').textContent = data.title;
+  document.getElementById('ost-rows').innerHTML = data.rows.map(
+    r => `<div class="office-stat-row"><span class="osr-label">${r[0]}</span><span class="osr-value">${r[1]}</span></div>`
+  ).join('');
+  el.classList.add('visible');
+  setTimeout(() => el.classList.remove('visible'), 3500 / speedMultiplier);
+}
+
+function setProgress(p) { document.getElementById('progress').style.width = p + '%'; }
+
+function playStep() {
+  if (currentStep >= timeline.length) {
+    document.getElementById('playBtn').innerHTML = '&#9654; Replay';
+    document.getElementById('playBtn').onclick = () => { resetAnimation(); startAnimation(); };
+    return;
+  }
+  const step = timeline[currentStep];
+  setClock(step.time);
+  moveCar(step.carX);
+  setSpeech(step.speech);
+  setStatuses(step.statuses);
+  setProgress(step.progress);
+  if (step.stats) updateStats(step.stats);
+  if (step.notif) showNotification(step.notif);
+  if (step.officeStats) showOfficeStats(step.officeStats);
+
+  currentStep++;
+  animationTimer = setTimeout(playStep, step.dur / speedMultiplier);
+}
+
+function startAnimation() {
+  if (currentStep >= timeline.length) resetAnimation();
+  document.getElementById('playBtn').innerHTML = '⏸ Pause';
+  document.getElementById('playBtn').onclick = pauseAnimation;
+  playStep();
+}
+
+function pauseAnimation() {
+  clearTimeout(animationTimer);
+  document.getElementById('playBtn').innerHTML = '&#9654; Resume';
+  document.getElementById('playBtn').onclick = startAnimation;
+}
+
+function resetAnimation() {
+  clearTimeout(animationTimer);
+  currentStep = 0;
+  moveCar(15);
+  setClock('06:45');
+  setSpeech(null);
+  setProgress(0);
+  stats = { visits: 0, total: 9, careHrs: 0, miles: 0, travel: 0, staffHrs: 0 };
+  updateStats({});
+  document.getElementById('notification').classList.remove('visible');
+  document.getElementById('office-stats').classList.remove('visible');
+  document.querySelectorAll('.status-badge').forEach(el => { el.className = 'status-badge'; el.textContent = ''; });
+  document.getElementById('playBtn').innerHTML = '&#9654; Play';
+  document.getElementById('playBtn').onclick = startAnimation;
+}
+
+function changeSpeed(dir) {
+  const speeds = [0.5, 1, 1.5, 2, 3];
+  let idx = speeds.indexOf(speedMultiplier);
+  idx = Math.max(0, Math.min(speeds.length - 1, idx + dir));
+  speedMultiplier = speeds[idx];
+  document.getElementById('speedLabel').textContent = speedMultiplier + 'x speed';
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderBuildings();
+moveCar(15);
+updateStats({});
+window.addEventListener('resize', () => {
+  if (currentStep > 0 && currentStep <= timeline.length) {
+    moveCar(timeline[Math.max(0, currentStep - 1)].carX);
+  }
+});
+</script>
+
+</body>
+</html>
