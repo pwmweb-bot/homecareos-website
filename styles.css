@@ -181,7 +181,7 @@ p {
 
 /* --- Section Spacing --- */
 .section {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .section-sm {
@@ -221,7 +221,7 @@ p {
 .section-header {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 64px;
+  margin: 0 auto 48px;
 }
 
 .section-header .label {
@@ -889,7 +889,7 @@ p {
   }
 
   .section {
-    padding: 56px 0;
+    padding: 40px 0;
   }
 
   .section-header h2 {
@@ -915,7 +915,7 @@ p {
   background: var(--white);
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
-  padding: 40px 0;
+  padding: 28px 0;
 }
 
 .stats-grid {
@@ -2237,7 +2237,7 @@ p {
 
 /* --- Partners / Trusted By --- */
 .partners-bar {
-  padding: 48px 0;
+  padding: 32px 0;
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
 }
@@ -3655,7 +3655,7 @@ p {
 
 /* ---- Feature Pills Marquee ---- */
 .feature-pills-section {
-  padding: 32px 0 40px;
+  padding: 24px 0 28px;
   overflow-x: clip;
   overflow-y: visible;
   background: var(--gray-50, #f8fafc);
