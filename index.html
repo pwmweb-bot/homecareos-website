@@ -27,13 +27,15 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- AOS CSS (deferred — not render-critical) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -383,15 +385,15 @@
           <div class="onboarding-inner container">
             <div class="onboarding-screen">
               <div class="onboarding-images">
-                <img src="images/photos/signup.webp" alt="homecareOS sign-up screen" class="onboarding-img active" data-index="0">
-                <img src="images/photos/analytics-charts-laptop.webp" alt="Importing and organising agency data" class="onboarding-img" loading="lazy" data-index="1">
-                <img src="images/photos/carers.webp" alt="Creating carers and service users" class="onboarding-img" loading="lazy" data-index="2">
-                <img src="images/photos/rota.webp" alt="Creating visits on the rota" class="onboarding-img" loading="lazy" data-index="3">
-                <img src="images/photos/messaging.webp" alt="Inviting team members" class="onboarding-img" loading="lazy" data-index="4">
-                <img src="images/photos/dashboard.webp" alt="Dashboard after going live" class="onboarding-img" loading="lazy" data-index="5">
-                <img src="images/photos/visits.webp" alt="Carer mobile app with visits" class="onboarding-img" loading="lazy" data-index="6">
-                <img src="images/photos/mapping.webp" alt="Real-time alerts and live map" class="onboarding-img" loading="lazy" data-index="7">
-                <img src="images/photos/compliance.webp" alt="Invoices and compliance reports" class="onboarding-img" loading="lazy" data-index="8">
+                <img src="images/photos/signup.webp" alt="homecareOS sign-up screen" class="onboarding-img active" data-index="0" width="1400" height="840">
+                <img src="images/photos/analytics-charts-laptop.webp" alt="Importing and organising agency data" class="onboarding-img" loading="lazy" data-index="1" width="1400" height="840">
+                <img src="images/photos/carers.webp" alt="Creating carers and service users" class="onboarding-img" loading="lazy" data-index="2" width="1400" height="840">
+                <img src="images/photos/rota.webp" alt="Creating visits on the rota" class="onboarding-img" loading="lazy" data-index="3" width="1400" height="840">
+                <img src="images/photos/messaging.webp" alt="Inviting team members" class="onboarding-img" loading="lazy" data-index="4" width="1400" height="840">
+                <img src="images/photos/dashboard.webp" alt="Dashboard after going live" class="onboarding-img" loading="lazy" data-index="5" width="1400" height="840">
+                <img src="images/photos/visits.webp" alt="Carer mobile app with visits" class="onboarding-img" loading="lazy" data-index="6" width="1400" height="840">
+                <img src="images/photos/mapping.webp" alt="Real-time alerts and live map" class="onboarding-img" loading="lazy" data-index="7" width="1400" height="840">
+                <img src="images/photos/compliance.webp" alt="Invoices and compliance reports" class="onboarding-img" loading="lazy" data-index="8" width="1400" height="840">
               </div>
             </div>
             <div class="onboarding-info">
@@ -465,10 +467,10 @@
             <div class="desktop-gallery-screen">
               <div class="desktop-gallery-images">
                 <img src="images/photos/dashboard.webp" alt="homecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840">
-                <img src="images/photos/rota.webp" alt="homecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840">
-                <img src="images/photos/mapping.webp" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840">
-                <img src="images/photos/carers.webp" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840">
-                <img src="images/photos/compliance.webp" alt="CQC Compliance Hub with audits and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840">
+                <img src="images/photos/rota.webp" alt="homecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840" loading="lazy">
+                <img src="images/photos/mapping.webp" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840" loading="lazy">
+                <img src="images/photos/carers.webp" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840" loading="lazy">
+                <img src="images/photos/compliance.webp" alt="CQC Compliance Hub with audits and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840" loading="lazy">
               </div>
             </div>
             <div class="desktop-gallery-info">
@@ -511,7 +513,7 @@
     <section class="section section-gray" id="mobile-app" aria-labelledby="mobile-heading">
       <div class="container">
         <div class="feature-grid">
-          <div class="feature-content" data-aos="fade-right">
+          <div class="feature-content" data-aos="fade-up">
             <span class="section-label">MOBILE APP</span>
             <h2 id="mobile-heading">Your Agency in Your Pocket</h2>
             <p>Purpose-built for field carers on iOS and Android. Everything they need for every visit — even without signal.</p>
@@ -562,7 +564,7 @@
               </a>
             </div>
           </div>
-          <div class="feature-image feature-image-phone" data-aos="fade-left">
+          <div class="feature-image feature-image-phone" data-aos="fade-up">
             <img src="images/photos/visits.webp" alt="homecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
           </div>
         </div>
@@ -644,7 +646,7 @@
     <section class="section" id="about" aria-labelledby="about-heading">
       <div class="container">
         <div class="feature-grid feature-grid-reverse">
-          <div class="feature-content" data-aos="fade-right">
+          <div class="feature-content" data-aos="fade-up">
             <span class="section-label">WHY CHOOSE US</span>
             <h2 id="about-heading">Built by Industry Experts, For Industry Experts</h2>
             <p>homecareOS was created by Philip Martin, who brings over 13 years of hands-on experience in home care software and operations. Having worked alongside agencies of all sizes, Philip understands the real challenges you face every day.</p>
@@ -652,7 +654,7 @@
             <p>Our team combines deep care-sector expertise with modern software engineering to deliver a platform that is powerful, reliable, and genuinely easy to use.</p>
             <a href="about.html" class="btn btn-outline">Learn More About Us</a>
           </div>
-          <div class="feature-image" data-aos="fade-left">
+          <div class="feature-image" data-aos="fade-up">
             <img src="images/photos/carer-helping-elderly-man.webp" alt="Carer providing compassionate support to an elderly gentleman at home" width="700" height="500" loading="lazy">
           </div>
         </div>
@@ -750,10 +752,10 @@
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 
   <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
   <!-- Page Scripts -->
   <script>
