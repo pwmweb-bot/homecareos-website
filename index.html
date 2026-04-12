@@ -14,7 +14,7 @@
   <meta property="og:description" content="Holistic operations management for home care agencies. Scheduling, care plans, compliance & more — all in one platform.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/">
-  <meta property="og:image" content="images/photos/companion-elderly-woman.jpg">
+  <meta property="og:image" content="images/photos/companion-elderly-woman.webp">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
 
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="homecareOS — Home Care Software for UK Agencies">
   <meta name="twitter:description" content="Holistic operations management for home care agencies. Scheduling, care plans, compliance & more — all in one platform.">
-  <meta name="twitter:image" content="images/photos/companion-elderly-woman.jpg">
+  <meta name="twitter:image" content="images/photos/companion-elderly-woman.webp">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,9 +86,13 @@
   ]
 }
 </script>
-<!-- Calendly popup widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<!-- Calendly popup widget — CSS deferred so it doesn't block rendering -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript></noscript>
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Preload LCP image -->
+<link rel="preload" as="image" href="images/photos/observations.webp" fetchpriority="high">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
@@ -157,13 +161,13 @@
           <div class="hero-visual">
             <div class="hero-devices">
               <div class="hero-desktop">
-                <img src="images/photos/dashboard.png" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860">
+                <img src="images/photos/dashboard.webp" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860">
               </div>
               <div class="hero-phone hero-phone-1">
-                <img src="images/photos/observations.PNG" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844">
+                <img src="images/photos/observations.webp" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" fetchpriority="high">
               </div>
               <div class="hero-phone hero-phone-2">
-                <img src="images/photos/pay.PNG" alt="homecareOS carer pay dashboard showing projected earnings" width="390" height="844">
+                <img src="images/photos/pay.webp" alt="homecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="lazy">
               </div>
             </div>
           </div>
@@ -203,31 +207,31 @@
     <section class="feature-pills-section" aria-label="Platform features">
       <div class="feature-pills-track" aria-hidden="true">
         <div class="feature-pills-row feature-pills-row-1">
-          <a href="features-scheduling.html" class="feature-pill" data-tooltip="AI scores available carers by distance, continuity and hours to instantly find the best cover.">AI Cover Finder</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Structured, audit-ready care plans built from templates — auto-populated from assessments.">Digital Care Plans</a>
-          <a href="features-ai-rota.html" class="feature-pill" data-tooltip="Let AI build your weekly rota in seconds based on continuity, travel and carer preferences.">AI Rota Builder</a>
-          <a href="features-mobile-app.html" class="feature-pill" data-tooltip="Carers check in and out with GPS verification — no manual timesheets needed.">GPS Check-in</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Full electronic medication administration records with alerts for missed or late doses.">eMAR System</a>
-          <a href="features-staff-management.html" class="feature-pill" data-tooltip="Automatic absence scoring using the Bradford Factor formula — spot patterns early.">Bradford Factor</a>
-          <a href="features-mobile-app.html" class="feature-pill" data-tooltip="Purpose-built mobile app for field carers — visit info, notes, tasks and navigation.">Carer App</a>
-          <a href="features-finance.html" class="feature-pill" data-tooltip="Get invoices paid faster with built-in invoice financing — improve cash flow instantly.">Invoice Financing</a>
-          <a href="features-finance.html" class="feature-pill" data-tooltip="Let carers access earned wages before payday — boost retention and morale.">Earned Wage Access</a>
-          <a href="features-staff-management.html" class="feature-pill" data-tooltip="Track mandatory training, DBS checks and certifications with automatic expiry alerts.">Training Records</a>
-          <a href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
+          <a tabindex="-1" href="features-scheduling.html" class="feature-pill" data-tooltip="AI scores available carers by distance, continuity and hours to instantly find the best cover.">AI Cover Finder</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured, audit-ready care plans built from templates — auto-populated from assessments.">Digital Care Plans</a>
+          <a tabindex="-1" href="features-ai-rota.html" class="feature-pill" data-tooltip="Let AI build your weekly rota in seconds based on continuity, travel and carer preferences.">AI Rota Builder</a>
+          <a tabindex="-1" href="features-mobile-app.html" class="feature-pill" data-tooltip="Carers check in and out with GPS verification — no manual timesheets needed.">GPS Check-in</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Full electronic medication administration records with alerts for missed or late doses.">eMAR System</a>
+          <a tabindex="-1" href="features-staff-management.html" class="feature-pill" data-tooltip="Automatic absence scoring using the Bradford Factor formula — spot patterns early.">Bradford Factor</a>
+          <a tabindex="-1" href="features-mobile-app.html" class="feature-pill" data-tooltip="Purpose-built mobile app for field carers — visit info, notes, tasks and navigation.">Carer App</a>
+          <a tabindex="-1" href="features-finance.html" class="feature-pill" data-tooltip="Get invoices paid faster with built-in invoice financing — improve cash flow instantly.">Invoice Financing</a>
+          <a tabindex="-1" href="features-finance.html" class="feature-pill" data-tooltip="Let carers access earned wages before payday — boost retention and morale.">Earned Wage Access</a>
+          <a tabindex="-1" href="features-staff-management.html" class="feature-pill" data-tooltip="Track mandatory training, DBS checks and certifications with automatic expiry alerts.">Training Records</a>
+          <a tabindex="-1" href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
           <!-- duplicate set for seamless loop -->
-          <a href="features-scheduling.html" class="feature-pill" data-tooltip="AI scores available carers by distance, continuity and hours to instantly find the best cover.">AI Cover Finder</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Structured, audit-ready care plans built from templates — auto-populated from assessments.">Digital Care Plans</a>
-          <a href="features-ai-rota.html" class="feature-pill" data-tooltip="Let AI build your weekly rota in seconds based on continuity, travel and carer preferences.">AI Rota Builder</a>
-          <a href="features-mobile-app.html" class="feature-pill" data-tooltip="Carers check in and out with GPS verification — no manual timesheets needed.">GPS Check-in</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Full electronic medication administration records with alerts for missed or late doses.">eMAR System</a>
-          <a href="features-staff-management.html" class="feature-pill" data-tooltip="Automatic absence scoring using the Bradford Factor formula — spot patterns early.">Bradford Factor</a>
-          <a href="features-mobile-app.html" class="feature-pill" data-tooltip="Purpose-built mobile app for field carers — visit info, notes, tasks and navigation.">Carer App</a>
-          <a href="features-finance.html" class="feature-pill" data-tooltip="Get invoices paid faster with built-in invoice financing — improve cash flow instantly.">Invoice Financing</a>
-          <a href="features-finance.html" class="feature-pill" data-tooltip="Let carers access earned wages before payday — boost retention and morale.">Earned Wage Access</a>
-          <a href="features-staff-management.html" class="feature-pill" data-tooltip="Track mandatory training, DBS checks and certifications with automatic expiry alerts.">Training Records</a>
-          <a href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
-          <a href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
+          <a tabindex="-1" href="features-scheduling.html" class="feature-pill" data-tooltip="AI scores available carers by distance, continuity and hours to instantly find the best cover.">AI Cover Finder</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured, audit-ready care plans built from templates — auto-populated from assessments.">Digital Care Plans</a>
+          <a tabindex="-1" href="features-ai-rota.html" class="feature-pill" data-tooltip="Let AI build your weekly rota in seconds based on continuity, travel and carer preferences.">AI Rota Builder</a>
+          <a tabindex="-1" href="features-mobile-app.html" class="feature-pill" data-tooltip="Carers check in and out with GPS verification — no manual timesheets needed.">GPS Check-in</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Full electronic medication administration records with alerts for missed or late doses.">eMAR System</a>
+          <a tabindex="-1" href="features-staff-management.html" class="feature-pill" data-tooltip="Automatic absence scoring using the Bradford Factor formula — spot patterns early.">Bradford Factor</a>
+          <a tabindex="-1" href="features-mobile-app.html" class="feature-pill" data-tooltip="Purpose-built mobile app for field carers — visit info, notes, tasks and navigation.">Carer App</a>
+          <a tabindex="-1" href="features-finance.html" class="feature-pill" data-tooltip="Get invoices paid faster with built-in invoice financing — improve cash flow instantly.">Invoice Financing</a>
+          <a tabindex="-1" href="features-finance.html" class="feature-pill" data-tooltip="Let carers access earned wages before payday — boost retention and morale.">Earned Wage Access</a>
+          <a tabindex="-1" href="features-staff-management.html" class="feature-pill" data-tooltip="Track mandatory training, DBS checks and certifications with automatic expiry alerts.">Training Records</a>
+          <a tabindex="-1" href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
+          <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
         </div>
       </div>
       <div class="container">
@@ -243,22 +247,22 @@
         <span class="label">Aligned with UK Care Industry Standards</span>
         <div class="partners-logos">
           <a href="https://www.homecareassociation.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Homecare Association">
-            <img src="images/partners/homecare-association.png" alt="Homecare Association logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/homecare-association.webp" alt="Homecare Association logo" height="48" width="144" loading="lazy">
           </a>
           <a href="https://www.cqc.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Care Quality Commission">
-            <img src="images/partners/cqc.png" alt="Care Quality Commission (CQC) logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/cqc.webp" alt="Care Quality Commission (CQC) logo" height="48" width="144" loading="lazy">
           </a>
           <a href="https://www.rqia.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Regulation and Quality Improvement Authority">
-            <img src="images/partners/rqia.png" alt="RQIA — Regulation and Quality Improvement Authority logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/rqia.webp" alt="RQIA — Regulation and Quality Improvement Authority logo" height="48" width="144" loading="lazy">
           </a>
           <a href="https://www.careinspectorate.com/" target="_blank" rel="noopener noreferrer" aria-label="Care Inspectorate Scotland">
-            <img src="images/partners/care-inspectorate.png" alt="Care Inspectorate Scotland logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/care-inspectorate.webp" alt="Care Inspectorate Scotland logo" height="48" width="144" loading="lazy">
           </a>
           <a href="https://www.careinspectorate.wales/" target="_blank" rel="noopener noreferrer" aria-label="Care Inspectorate Wales">
-            <img src="images/partners/care-inspectorate-wales.png" alt="Care Inspectorate Wales logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/care-inspectorate-wales.webp" alt="Care Inspectorate Wales logo" height="48" width="144" loading="lazy">
           </a>
           <a href="https://www.hiqa.ie/" target="_blank" rel="noopener noreferrer" aria-label="Health Information and Quality Authority">
-            <img src="images/partners/hiqa.png" alt="HIQA — Health Information and Quality Authority logo" height="48" width="auto" loading="lazy">
+            <img src="images/partners/hiqa.webp" alt="HIQA — Health Information and Quality Authority logo" height="48" width="144" loading="lazy">
           </a>
         </div>
       </div>
@@ -379,15 +383,15 @@
           <div class="onboarding-inner container">
             <div class="onboarding-screen">
               <div class="onboarding-images">
-                <img src="images/photos/signup.png" alt="homecareOS sign-up screen" class="onboarding-img active" data-index="0">
-                <img src="images/photos/analytics-charts-laptop.jpg" alt="Importing and organising agency data" class="onboarding-img" data-index="1">
-                <img src="images/photos/carers.png" alt="Creating carers and service users" class="onboarding-img" data-index="2">
-                <img src="images/photos/rota.png" alt="Creating visits on the rota" class="onboarding-img" data-index="3">
-                <img src="images/photos/messaging.PNG" alt="Inviting team members" class="onboarding-img" data-index="4">
-                <img src="images/photos/dashboard.png" alt="Dashboard after going live" class="onboarding-img" data-index="5">
-                <img src="images/photos/visits.PNG" alt="Carer mobile app with visits" class="onboarding-img" data-index="6">
-                <img src="images/photos/mapping.png" alt="Real-time alerts and live map" class="onboarding-img" data-index="7">
-                <img src="images/photos/compliance.png" alt="Invoices and compliance reports" class="onboarding-img" data-index="8">
+                <img src="images/photos/signup.webp" alt="homecareOS sign-up screen" class="onboarding-img active" data-index="0">
+                <img src="images/photos/analytics-charts-laptop.webp" alt="Importing and organising agency data" class="onboarding-img" loading="lazy" data-index="1">
+                <img src="images/photos/carers.webp" alt="Creating carers and service users" class="onboarding-img" loading="lazy" data-index="2">
+                <img src="images/photos/rota.webp" alt="Creating visits on the rota" class="onboarding-img" loading="lazy" data-index="3">
+                <img src="images/photos/messaging.webp" alt="Inviting team members" class="onboarding-img" loading="lazy" data-index="4">
+                <img src="images/photos/dashboard.webp" alt="Dashboard after going live" class="onboarding-img" loading="lazy" data-index="5">
+                <img src="images/photos/visits.webp" alt="Carer mobile app with visits" class="onboarding-img" loading="lazy" data-index="6">
+                <img src="images/photos/mapping.webp" alt="Real-time alerts and live map" class="onboarding-img" loading="lazy" data-index="7">
+                <img src="images/photos/compliance.webp" alt="Invoices and compliance reports" class="onboarding-img" loading="lazy" data-index="8">
               </div>
             </div>
             <div class="onboarding-info">
@@ -460,11 +464,11 @@
           <div class="desktop-gallery-inner container">
             <div class="desktop-gallery-screen">
               <div class="desktop-gallery-images">
-                <img src="images/photos/dashboard.png" alt="homecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840">
-                <img src="images/photos/rota.png" alt="homecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840">
-                <img src="images/photos/mapping.png" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840">
-                <img src="images/photos/carers.png" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840">
-                <img src="images/photos/compliance.png" alt="CQC Compliance Hub with audits and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840">
+                <img src="images/photos/dashboard.webp" alt="homecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840">
+                <img src="images/photos/rota.webp" alt="homecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840">
+                <img src="images/photos/mapping.webp" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840">
+                <img src="images/photos/carers.webp" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840">
+                <img src="images/photos/compliance.webp" alt="CQC Compliance Hub with audits and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840">
               </div>
             </div>
             <div class="desktop-gallery-info">
@@ -516,28 +520,28 @@
                 <div class="mobile-feature-icon">
                   <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
                 </div>
-                <h4>Offline Mode</h4>
+                <h3>Offline Mode</h3>
                 <p>Check in, log notes and record MAR with no signal. Syncs when back online.</p>
               </div>
               <div class="mobile-feature-card">
                 <div class="mobile-feature-icon">
                   <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
                 </div>
-                <h4>Real-time Alerts</h4>
+                <h3>Real-time Alerts</h3>
                 <p>Late visit warnings, schedule changes and new assignments pushed instantly.</p>
               </div>
               <div class="mobile-feature-card">
                 <div class="mobile-feature-icon">
                   <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <h4>GPS Check-in</h4>
+                <h3>GPS Check-in</h3>
                 <p>Verified visit times with location proof — no manual timesheets.</p>
               </div>
               <div class="mobile-feature-card">
                 <div class="mobile-feature-icon">
                   <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
                 </div>
-                <h4>Pay Transparency</h4>
+                <h3>Pay Transparency</h3>
                 <p>Projected earnings, payslips and mileage — all visible in the app.</p>
               </div>
             </div>
@@ -559,7 +563,7 @@
             </div>
           </div>
           <div class="feature-image feature-image-phone" data-aos="fade-left">
-            <img src="images/photos/visits.PNG" alt="homecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
+            <img src="images/photos/visits.webp" alt="homecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
           </div>
         </div>
       </div>
@@ -577,7 +581,7 @@
         </div>
         <div class="card-grid card-grid-3">
           <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
@@ -595,7 +599,7 @@
             </div>
           </div>
           <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
@@ -613,7 +617,7 @@
             </div>
           </div>
           <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
               <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
@@ -649,7 +653,7 @@
             <a href="about.html" class="btn btn-outline">Learn More About Us</a>
           </div>
           <div class="feature-image" data-aos="fade-left">
-            <img src="images/photos/carer-helping-elderly-man.jpg" alt="Carer providing compassionate support to an elderly gentleman at home" width="700" height="500" loading="lazy">
+            <img src="images/photos/carer-helping-elderly-man.webp" alt="Carer providing compassionate support to an elderly gentleman at home" width="700" height="500" loading="lazy">
           </div>
         </div>
       </div>
@@ -694,7 +698,7 @@
           </div>
         </div>
         <div>
-          <h4>Product</h4>
+          <h3>Product</h3>
           <ul class="footer-links">
             <li><a href="services.html">Services</a></li>
             <li><a href="features.html">Features</a></li>
@@ -706,7 +710,7 @@
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h3>Company</h3>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
             <li><a href="team.html">Our Team</a></li>
@@ -715,7 +719,7 @@
           </ul>
         </div>
         <div>
-          <h4>Support</h4>
+          <h3>Support</h3>
           <ul class="footer-links">
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>

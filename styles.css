@@ -55,6 +55,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -352,7 +353,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition: box-shadow var(--transition-base), background var(--transition-base);
@@ -534,25 +535,37 @@ p {
 
 /* --- Mobile Nav --- */
 @media (max-width: 1024px) {
+  /* backdrop-filter on the nav traps position:fixed children inside the nav bounds — remove it on mobile */
+  .nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255,255,255,0.97);
+  }
+
   .nav-links {
     position: fixed;
     top: 72px;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
     background: var(--white);
     flex-direction: column;
     align-items: stretch;
     padding: 24px;
     gap: 4px;
-    transform: translateX(100%);
-    transition: transform var(--transition-base);
+    /* clip-path instead of transform: panel stays at left:0 so iOS rubber-band
+       overscroll cannot reveal it off the right edge of the screen */
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path var(--transition-base), visibility var(--transition-base);
+    visibility: hidden;
     overflow-y: auto;
     z-index: 999;
   }
 
   .nav-links.open {
-    transform: translateX(0);
+    clip-path: inset(0 0 0 0%);
+    visibility: visible;
   }
 
   .nav-links a {
@@ -1340,7 +1353,7 @@ p {
   color: var(--secondary);
 }
 
-.footer h4 {
+.footer h3 {
   color: var(--white);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -3824,7 +3837,7 @@ p {
   color: var(--accent, #f59e0b);
 }
 
-.mobile-feature-card h4 {
+.mobile-feature-card h3 {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 6px;
@@ -4350,7 +4363,9 @@ p {
   border: 2px solid var(--gray-300, #d1d5db);
   background: none;
   cursor: pointer;
-  padding: 0;
+  /* 17px padding gives 44px touch target (10 + 17*2) without changing visual size */
+  padding: 17px;
+  margin: -17px;
   transition: all 0.2s ease;
 }
 
