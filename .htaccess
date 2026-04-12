@@ -1,0 +1,41 @@
+# Cache Control
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images — 1 year (immutable after deploy)
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg  "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/gif  "access plus 1 year"
+
+  # CSS/JS — 1 day, revalidate in background
+  ExpiresByType text/css   "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+
+  # HTML — always revalidate
+  ExpiresByType text/html  "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Images
+  <FilesMatch "\.(webp|png|jpe?g|gif|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # CSS/JS
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
+  </FilesMatch>
+
+  # HTML
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/plain
+</IfModule>
