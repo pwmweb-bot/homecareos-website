@@ -4157,6 +4157,22 @@ p {
   }
 }
 
+/* ---- Scroll gallery sections: tighten top, kill bottom padding so gallery exits cleanly ---- */
+.onboarding-section {
+  padding-top: 48px;
+  padding-bottom: 0;
+}
+
+.desktop-gallery-section {
+  padding-top: 32px;
+  padding-bottom: 0;
+}
+
+.onboarding-section .section-header,
+.desktop-gallery-section .section-header {
+  margin-bottom: 24px;
+}
+
 /* ---- Onboarding Scroll Journey ---- */
 .onboarding-track {
   height: 800vh;
