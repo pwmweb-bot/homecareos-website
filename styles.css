@@ -4419,3 +4419,458 @@ p {
 @media (prefers-color-scheme: dark) {
   /* Keeping light mode as default per brand, but providing basic dark hints */
 }
+
+/* ============================================
+   LANDING PAGE — /start.html
+   ============================================ */
+
+/* ---- LP Hero ---- */
+.lp-hero {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.lp-hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.lp-hero-badge {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.lp-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.lp-hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.lp-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.lp-hero-actions .btn-ghost {
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+}
+
+.lp-hero-actions .btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.lp-hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  flex-wrap: wrap;
+}
+
+.lp-trust-logos {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.lp-trust-logos img {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+.lp-hero-visual {
+  position: relative;
+}
+
+.lp-hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+}
+
+/* ---- LP Pain Cards ---- */
+.lp-pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.lp-pain-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+}
+
+.lp-pain-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #dc2626;
+  line-height: 1.1;
+}
+
+.lp-pain-period {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.lp-pain-card p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---- LP Solution Grid ---- */
+.lp-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.lp-solution-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--gray-100);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.lp-solution-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.lp-solution-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(245, 158, 11, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.lp-solution-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--gray-900);
+}
+
+.lp-solution-card p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.lp-free-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: #ecfdf5;
+  color: #059669;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---- LP Support Section ---- */
+.lp-support-section {
+  background: var(--primary);
+  color: #fff;
+}
+
+.lp-support-content {
+  max-width: 720px;
+}
+
+.lp-support-section .section-label {
+  color: var(--accent);
+}
+
+.lp-support-section h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 16px;
+}
+
+.lp-support-section > .container > .lp-support-grid > .lp-support-content > p {
+  opacity: 0.85;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.lp-support-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.lp-support-point {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.lp-support-point svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lp-support-point strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.lp-support-point p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lp-phone-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.lp-phone-cta:hover {
+  opacity: 0.8;
+}
+
+/* ---- LP FAQ Accordion ---- */
+.lp-faq {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lp-faq-item {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.lp-faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  text-align: left;
+  gap: 16px;
+}
+
+.lp-faq-q svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+  color: var(--gray-400);
+}
+
+.lp-faq-item.open .lp-faq-q svg {
+  transform: rotate(180deg);
+}
+
+.lp-faq-a {
+  padding: 0 0 20px;
+}
+
+.lp-faq-a p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin: 0;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* ---- LP Final CTA ---- */
+.lp-final-cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+}
+
+.lp-final-cta {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.lp-final-cta h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 40px;
+}
+
+.lp-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.lp-step {
+  text-align: center;
+}
+
+.lp-step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.lp-step p {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.lp-step p span {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.lp-step-arrow {
+  opacity: 0.4;
+}
+
+.lp-final-actions {
+  margin-top: 8px;
+}
+
+.lp-final-phone {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.lp-final-phone a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---- LP Sticky Mobile CTA ---- */
+.lp-sticky-cta {
+  display: none;
+}
+
+.lp-sticky-cta.hidden {
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+/* ---- LP Responsive ---- */
+@media (max-width: 1024px) {
+  .lp-hero .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .lp-hero-visual {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lp-hero {
+    padding: 120px 0 56px;
+  }
+
+  .lp-pain-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .lp-solution-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lp-steps {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lp-step-arrow {
+    transform: rotate(90deg);
+  }
+
+  .lp-sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background: #fff;
+    border-top: 1px solid var(--gray-200);
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: transform var(--transition-base);
+  }
+
+  .lp-sticky-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
