@@ -4172,10 +4172,11 @@ p {
 }
 
 .onboarding-inner {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 48px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .onboarding-screen {
@@ -4216,13 +4217,18 @@ p {
 .onboarding-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .onboarding-steps-nav {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .onboarding-step-dot {
@@ -4276,11 +4282,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .onboarding-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
   .onboarding-sticky {
     padding: 24px 0;
   }
@@ -4298,10 +4299,11 @@ p {
 }
 
 .desktop-gallery-inner {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 48px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .desktop-gallery-screen {
@@ -4337,21 +4339,24 @@ p {
 }
 
 .desktop-gallery-info {
-  max-width: 360px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .desktop-gallery-nav {
   display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 16px;
+  justify-content: center;
 }
 
 .desktop-gallery-dot {
-  width: 10px;
-  height: 10px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid var(--gray-300, #d1d5db);
-  background: none;
+  background: white;
   cursor: pointer;
   /* 17px padding gives 44px touch target (10 + 17*2) without changing visual size */
   padding: 17px;
@@ -4387,18 +4392,8 @@ p {
 }
 
 @media (max-width: 768px) {
-  .desktop-gallery-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
   .desktop-gallery-info {
     max-width: 100%;
-    text-align: center;
-  }
-
-  .desktop-gallery-nav {
-    justify-content: center;
   }
 
 }
