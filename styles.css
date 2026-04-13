@@ -4346,28 +4346,38 @@ p {
 
 .desktop-gallery-nav {
   display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.desktop-gallery-dot {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid var(--gray-300, #d1d5db);
+.desktop-gallery-tab {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--gray-200, #e5e7eb);
   background: white;
+  color: var(--gray-600, #4b5563);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-body);
   cursor: pointer;
+  transition: all var(--transition-fast);
   /* 17px padding gives 44px touch target (10 + 17*2) without changing visual size */
   padding: 17px;
   margin: -17px;
   transition: all 0.2s ease;
 }
 
-.desktop-gallery-dot.active {
+.desktop-gallery-tab:hover {
+  border-color: var(--primary, #1e3a5f);
+  color: var(--primary, #1e3a5f);
+}
+
+.desktop-gallery-tab.active {
   background: var(--primary, #1e3a5f);
   border-color: var(--primary, #1e3a5f);
-  transform: scale(1.2);
+  color: white;
 }
 
 .desktop-gallery-slide {

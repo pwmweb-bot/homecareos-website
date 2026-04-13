@@ -475,11 +475,11 @@
             </div>
             <div class="desktop-gallery-info">
               <div class="desktop-gallery-nav">
-                <button class="desktop-gallery-dot active" data-index="0" aria-label="Dashboard"></button>
-                <button class="desktop-gallery-dot" data-index="1" aria-label="Rota"></button>
-                <button class="desktop-gallery-dot" data-index="2" aria-label="Flow Map"></button>
-                <button class="desktop-gallery-dot" data-index="3" aria-label="Carers"></button>
-                <button class="desktop-gallery-dot" data-index="4" aria-label="Compliance"></button>
+                <button class="desktop-gallery-tab active" data-index="0">Dashboard</button>
+                <button class="desktop-gallery-tab" data-index="1">Rota</button>
+                <button class="desktop-gallery-tab" data-index="2">Flow Map</button>
+                <button class="desktop-gallery-tab" data-index="3">Carers</button>
+                <button class="desktop-gallery-tab" data-index="4">Compliance</button>
               </div>
               <div class="desktop-gallery-slide active" data-index="0">
                 <h3>Dashboard</h3>
@@ -852,7 +852,7 @@
 
       const images = track.querySelectorAll('.desktop-gallery-img');
       const slides = track.querySelectorAll('.desktop-gallery-slide');
-      const dots = track.querySelectorAll('.desktop-gallery-dot');
+      const dots = track.querySelectorAll('.desktop-gallery-tab');
       let currentIndex = 0;
 
       function updateGallery(index) {
