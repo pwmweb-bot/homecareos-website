@@ -4162,7 +4162,7 @@ p {
 
 /* ---- Onboarding Scroll Journey ---- */
 .onboarding-track {
-  height: 800vh;
+  height: 500vh;
   position: relative;
 }
 
@@ -4172,6 +4172,7 @@ p {
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+  background: var(--bg);
 }
 
 .onboarding-inner {
@@ -4298,7 +4299,7 @@ p {
 
 /* ---- Desktop Scroll Gallery ---- */
 .desktop-gallery-track {
-  height: 400vh;
+  height: 250vh;
   position: relative;
 }
 
@@ -4308,6 +4309,7 @@ p {
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+  background: var(--bg);
 }
 
 .desktop-gallery-inner {
@@ -4415,7 +4417,7 @@ p {
   }
 
   .desktop-gallery-track {
-    height: 300vh;
+    height: 200vh;
   }
 }
 

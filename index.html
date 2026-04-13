@@ -792,16 +792,20 @@
       }
     });
 
-    // GSAP Hero Animation
-    if (typeof gsap !== 'undefined') {
-      gsap.from('.hero-title', { opacity: 0, y: 60, duration: 1, ease: 'power3.out' });
-      gsap.from('.hero-subtitle', { opacity: 0, y: 40, duration: 1, delay: 0.2, ease: 'power3.out' });
-      gsap.from('.hero-actions', { opacity: 0, y: 30, duration: 1, delay: 0.4, ease: 'power3.out' });
-      gsap.from('.hero-visual', { opacity: 0, x: 60, duration: 1.2, delay: 0.3, ease: 'power3.out' });
-    }
+    // GSAP Hero Animation — wait for deferred script to load
+    window.addEventListener('load', function() {
+      if (typeof gsap !== 'undefined') {
+        gsap.from('.hero-title', { opacity: 0, y: 60, duration: 1, ease: 'power3.out' });
+        gsap.from('.hero-subtitle', { opacity: 0, y: 40, duration: 1, delay: 0.2, ease: 'power3.out' });
+        gsap.from('.hero-actions', { opacity: 0, y: 30, duration: 1, delay: 0.4, ease: 'power3.out' });
+        gsap.from('.hero-visual', { opacity: 0, x: 60, duration: 1.2, delay: 0.3, ease: 'power3.out' });
+      }
 
-    // AOS Init
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+      // AOS Init — must wait for deferred AOS script
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+      }
+    });
 
     // Skip link
     document.getElementById('skip-link').addEventListener('click', function(e) {
