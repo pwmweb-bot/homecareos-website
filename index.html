@@ -814,7 +814,7 @@
     });
   </script>
 
-  <!-- Onboarding Journey Scroll Controller -->
+  <!-- Onboarding Journey Click Controller -->
   <script>
     (function() {
       const track = document.querySelector('.onboarding-track');
@@ -823,7 +823,6 @@
       const images = track.querySelectorAll('.onboarding-img');
       const slides = track.querySelectorAll('.onboarding-slide');
       const dots = track.querySelectorAll('.onboarding-step-dot');
-      const totalSlides = images.length;
       let currentIndex = 0;
 
       function updateStep(index) {
@@ -839,26 +838,13 @@
 
       dots.forEach(dot => {
         dot.addEventListener('click', function() {
-          const idx = parseInt(this.dataset.index);
-          updateStep(idx);
+          updateStep(parseInt(this.dataset.index));
         });
       });
-
-      function onScroll() {
-        const rect = track.getBoundingClientRect();
-        const scrolled = -rect.top;
-        const scrollable = track.offsetHeight - window.innerHeight;
-        if (scrollable <= 0) return;
-        const progress = Math.max(0, Math.min(1, scrolled / scrollable));
-        const index = Math.min(totalSlides - 1, Math.floor(progress * totalSlides));
-        updateStep(index);
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
     })();
   </script>
 
-  <!-- Desktop Gallery Scroll Controller -->
+  <!-- Desktop Gallery Click Controller -->
   <script>
     (function() {
       const track = document.querySelector('.desktop-gallery-track');
@@ -867,7 +853,6 @@
       const images = track.querySelectorAll('.desktop-gallery-img');
       const slides = track.querySelectorAll('.desktop-gallery-slide');
       const dots = track.querySelectorAll('.desktop-gallery-dot');
-      const totalSlides = images.length;
       let currentIndex = 0;
 
       function updateGallery(index) {
@@ -878,26 +863,11 @@
         dots.forEach((d, i) => d.classList.toggle('active', i === index));
       }
 
-      // Dot click handlers
       dots.forEach(dot => {
         dot.addEventListener('click', function() {
-          const idx = parseInt(this.dataset.index);
-          updateGallery(idx);
+          updateGallery(parseInt(this.dataset.index));
         });
       });
-
-      // Scroll-driven updates
-      function onScroll() {
-        const rect = track.getBoundingClientRect();
-        const scrolled = -rect.top;
-        const scrollable = track.offsetHeight - window.innerHeight;
-        if (scrollable <= 0) return;
-        const progress = Math.max(0, Math.min(1, scrolled / scrollable));
-        const index = Math.min(totalSlides - 1, Math.floor(progress * totalSlides));
-        updateGallery(index);
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
     })();
   </script>
 

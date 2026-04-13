@@ -4162,17 +4162,13 @@ p {
 
 /* ---- Onboarding Scroll Journey ---- */
 .onboarding-track {
-  height: 500vh;
   position: relative;
 }
 
 .onboarding-sticky {
-  position: sticky;
-  top: 80px;
-  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  background: var(--bg);
+  padding: 0 0 48px;
 }
 
 .onboarding-inner {
@@ -4285,31 +4281,20 @@ p {
     gap: 24px;
   }
 
-  .onboarding-track {
-    height: auto;
-  }
-
   .onboarding-sticky {
-    position: relative;
-    top: auto;
-    height: auto;
     padding: 24px 0;
   }
 }
 
 /* ---- Desktop Scroll Gallery ---- */
 .desktop-gallery-track {
-  height: 250vh;
   position: relative;
 }
 
 .desktop-gallery-sticky {
-  position: sticky;
-  top: 80px;
-  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  background: var(--bg);
+  padding: 0 0 48px;
 }
 
 .desktop-gallery-inner {
@@ -4416,9 +4401,6 @@ p {
     justify-content: center;
   }
 
-  .desktop-gallery-track {
-    height: 200vh;
-  }
 }
 
 /* App showcase grid — responsive */
