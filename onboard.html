@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free for Your First 5 Staff — homecareOS | UK Home Care Software</title>
+  <meta name="description" content="The full homecareOS platform — free for up to 5 staff. Scheduling, care records, compliance, finance and more. No credit card. Set up in minutes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.homecareos.co.uk/onboard">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free for Your First 5 Staff — homecareOS">
+  <meta property="og:description" content="The full homecareOS platform — free for up to 5 staff. Scheduling, care records, compliance, finance and more. No credit card.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.homecareos.co.uk/onboard">
+  <meta property="og:image" content="images/photos/dashboard.webp">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="homecareOS">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free for Your First 5 Staff — homecareOS">
+  <meta name="twitter:description" content="The full homecareOS platform — free for up to 5 staff. No credit card. Set up in minutes.">
+  <meta name="twitter:image" content="images/photos/dashboard.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="images/photos/dashboard.webp" fetchpriority="high">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6GD4NJK9LZ');
+  </script>
+
+  <!-- Conversion tracking — fires when Get Started clicked -->
+  <script>
+    function trackSignupClick() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {
+          'send_to': 'G-6GD4NJK9LZ/signup_click',
+          'event_category': 'engagement',
+          'event_label': 'onboard_landing'
+        });
+      }
+      return true;
+    }
+  </script>
+
+  <!-- Minimal landing page styles -->
+  <style>
+    .onboard-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      z-index: 100;
+      padding: 14px 0;
+    }
+    .onboard-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .onboard-nav a.logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .onboard-nav a.logo span { color: var(--accent); }
+
+    .onboard-hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .onboard-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+      z-index: 0;
+    }
+    .onboard-hero .container { position: relative; z-index: 1; }
+    .onboard-tag {
+      display: inline-block;
+      background: rgba(30,58,95,0.08);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .onboard-hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      line-height: 1.1;
+      color: var(--primary);
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-weight: 800;
+    }
+    .onboard-hero h1 .accent { color: var(--accent); }
+    .onboard-hero .sub {
+      font-size: 1.2rem;
+      color: var(--gray-600);
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .onboard-cta-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .onboard-note {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+    }
+
+    .onboard-section { padding: 70px 0; }
+    .onboard-section.alt { background: var(--gray-50); }
+    .onboard-section h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .onboard-section .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+    .onboard-section-label {
+      display: block;
+      text-align: center;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .feature-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .feature-col {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.25s ease;
+    }
+    .feature-col:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .feature-col h3 {
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+    .feature-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-col li {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .feature-col li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .compare-banner {
+      background: var(--primary);
+      color: var(--white);
+      padding: 24px 32px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin-top: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .compare-banner strong { color: var(--accent); }
+
+    .savings-card {
+      background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+      color: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .savings-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 60%);
+    }
+    .savings-card > * { position: relative; z-index: 1; }
+    .savings-eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+    .savings-card h2 {
+      color: var(--white);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      margin-bottom: 16px;
+    }
+    .savings-card .big-number {
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .savings-card p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .price-card {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      transition: all 0.25s ease;
+    }
+    .price-card.highlight {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.03);
+    }
+    .price-card .tier {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .price-card .price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-card .price-meta {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+    .price-card h4 {
+      color: var(--primary);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    .price-card li {
+      padding: 6px 0;
+      color: var(--gray-700);
+      font-size: 0.92rem;
+      display: flex;
+      gap: 8px;
+    }
+    .price-card li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .price-card li.starred::before { content: '✦'; }
+    .price-card .btn { width: 100%; }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .roadmap-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    .roadmap-card .status {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .roadmap-card .status.in-dev {
+      background: rgba(16,185,129,0.1);
+      color: #059669;
+    }
+    .roadmap-card .status.coming {
+      background: rgba(30,58,95,0.1);
+      color: var(--primary);
+    }
+    .roadmap-card h4 {
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .roadmap-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .training-card {
+      background: linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(30,58,95,0.05) 100%);
+      border: 2px dashed #10b981;
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      max-width: 900px;
+      margin: 48px auto 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+    .training-card .eyebrow {
+      color: #059669;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+    }
+    .training-card h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    .training-card p {
+      color: var(--gray-600);
+      margin: 0;
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) {
+      .training-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+      color: var(--white);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      color: var(--white);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .onboard-footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .onboard-footer a { color: var(--gray-300); text-decoration: none; }
+    .onboard-footer a:hover { color: var(--white); }
+    .onboard-footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal nav — logo + single CTA -->
+  <nav class="onboard-nav">
+    <div class="onboard-nav-inner">
+      <a href="index.html" class="logo" aria-label="homecareOS">
+        <svg viewBox="0 0 36 36" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#1e3a5f"/><path d="M10 18h6v8h-6zM20 12h6v14h-6z" fill="#f59e0b"/><circle cx="18" cy="10" r="3" fill="#fff"/></svg>
+        homecare<span>OS</span>
+      </a>
+      <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-sm" onclick="trackSignupClick()">Get Started Free</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="onboard-hero">
+      <div class="container">
+        <span class="onboard-tag">The operating system for UK home care</span>
+        <h1>Everything your agency needs.<br><span class="accent">Free for your first 5 staff.</span></h1>
+        <p class="sub">Try the full homecareOS platform completely free — scheduling, care records, compliance, recruitment and more — for up to 5 staff members. No card, no time limit. Upgrade when you're ready to grow.</p>
+        <div class="onboard-cta-row">
+          <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg" onclick="trackSignupClick()">Get Started Free →</a>
+        </div>
+        <p class="onboard-note">No credit card required · Set up in minutes</p>
+      </div>
+    </section>
+
+    <!-- Full platform features -->
+    <section class="onboard-section">
+      <div class="container">
+        <span class="onboard-section-label">Try it free</span>
+        <h2>The full platform, free for up to 5 staff</h2>
+        <p class="section-sub">New to homecareOS? Every agency starts free — no card, no trial clock. You get the complete platform for up to 5 staff members, so you can see exactly what it does before spending a penny.</p>
+
+        <div class="feature-columns">
+          <div class="feature-col">
+            <h3>Scheduling</h3>
+            <ul>
+              <li>Drag-and-drop rota grid</li>
+              <li>Carer mobile app (iOS &amp; Android)</li>
+              <li>GPS check-in &amp; check-out</li>
+              <li>Double-up &amp; shadow visits</li>
+              <li>Run templates &amp; recurring patterns</li>
+              <li>On-call &amp; live visit tracking</li>
+            </ul>
+          </div>
+
+          <div class="feature-col">
+            <h3>People &amp; HR</h3>
+            <ul>
+              <li>Bradford Factor attendance tracking</li>
+              <li>Training records &amp; expiry alerts</li>
+              <li>DBS check management</li>
+              <li>Leave &amp; absence management</li>
+              <li>Supervision records</li>
+              <li>Full recruitment pipeline</li>
+            </ul>
+          </div>
+
+          <div class="feature-col">
+            <h3>Care Records</h3>
+            <ul>
+              <li>Digital care notes (mobile)</li>
+              <li>Medication administration (MAR)</li>
+              <li>Body maps &amp; observations</li>
+              <li>Care plans, goals &amp; risk assessments</li>
+              <li>Service user profiles</li>
+              <li>Offline-capable mobile app</li>
+            </ul>
+          </div>
+
+          <div class="feature-col">
+            <h3>Compliance</h3>
+            <ul>
+              <li>CQC, CIW, SSSC &amp; RQIA ready</li>
+              <li>Incident management &amp; audit trail</li>
+              <li>PIR submissions &amp; self-assessments</li>
+              <li>Safeguarding referral tracker</li>
+              <li>Scheduled audit management</li>
+            </ul>
+          </div>
+
+          <div class="feature-col">
+            <h3>Finance</h3>
+            <ul>
+              <li>Invoicing &amp; billing</li>
+              <li>Multi-payer rate management</li>
+              <li>Payroll reports &amp; mileage claims</li>
+              <li>Banded &amp; fixed rate billing</li>
+              <li>Financial dashboards</li>
+            </ul>
+          </div>
+
+          <div class="feature-col">
+            <h3>Portals &amp; Comms</h3>
+            <ul>
+              <li>Family &amp; service user portal</li>
+              <li>Commissioner portal</li>
+              <li>Missed visit family alerts</li>
+              <li>In-app messaging</li>
+              <li>Document management</li>
+              <li>8 report types &amp; audit log</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="compare-banner">
+          <strong>Already more than Birdie, Carely and Person Centred Software</strong> — and it costs you nothing to start.
+        </div>
+      </div>
+    </section>
+
+    <!-- Real results / savings -->
+    <section class="onboard-section alt">
+      <div class="container">
+        <div class="savings-card">
+          <div class="savings-eyebrow">🎉 Real results — switching agency</div>
+          <h2>One agency is saving <span class="big-number">£2,500 every month</span> after switching to homecareOS.</h2>
+          <p>That's over <strong style="color:#fff">£30,000 a year</strong> they now have back to reinvest in their business — better staff pay, more carers, service expansion. And they started on the free plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="onboard-section">
+      <div class="container">
+        <span class="onboard-section-label">Pricing</span>
+        <h2>Scale as you grow</h2>
+        <p class="section-sub">Free for up to 5 staff — no card needed. Paid plans from £6.99/staff/month when you're ready to scale.</p>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="tier">Free Trial</div>
+            <div class="price">£0</div>
+            <div class="price-meta">up to 5 staff members</div>
+            <h4>Full platform — no limits, no card</h4>
+            <ul>
+              <li>Full scheduling platform</li>
+              <li>Carer mobile app</li>
+              <li>Digital care records</li>
+              <li>Compliance tools</li>
+              <li>Finance &amp; invoicing</li>
+              <li>Family &amp; carer portals</li>
+              <li>Unlimited care records</li>
+            </ul>
+            <a href="https://app.homecareos.co.uk" class="btn btn-outline" onclick="trackSignupClick()">Try free today</a>
+          </div>
+
+          <div class="price-card">
+            <div class="tier">Starter</div>
+            <div class="price">£6.99</div>
+            <div class="price-meta">per staff / month · 6+ staff</div>
+            <h4>Everything in Free, plus:</h4>
+            <ul>
+              <li>Stock control (PPE &amp; uniforms)</li>
+              <li>Advanced absence management</li>
+              <li>Integrations hub</li>
+              <li>Earned Wage Access (EWA)</li>
+              <li>Priority email support</li>
+              <li>Custom branding</li>
+            </ul>
+            <a href="https://app.homecareos.co.uk" class="btn btn-outline" onclick="trackSignupClick()">Get Starter</a>
+          </div>
+
+          <div class="price-card highlight">
+            <div class="tier">Pro</div>
+            <div class="price">£10</div>
+            <div class="price-meta">per staff / month · 6+ staff</div>
+            <h4>Everything in Starter, plus:</h4>
+            <ul>
+              <li>AI Rota Builder</li>
+              <li>AI Cover Finder</li>
+              <li>AI Care Plan Builder</li>
+              <li>Advanced analytics</li>
+              <li>White-label branding</li>
+              <li>API access</li>
+              <li class="starred">All new features included</li>
+            </ul>
+            <a href="https://app.homecareos.co.uk" class="btn btn-primary" onclick="trackSignupClick()">Get Pro</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pro roadmap -->
+    <section class="onboard-section alt">
+      <div class="container">
+        <span class="onboard-section-label">Pro Plan — Roadmap</span>
+        <h2>New features included in Pro as they ship</h2>
+        <p class="section-sub">Every new feature we build goes straight into the Pro plan at no extra cost. Here's what's on the way:</p>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-card">
+            <span class="status in-dev">In development</span>
+            <h4>VoIP Phone System</h4>
+            <p>Built-in telephony with call logging, transcripts, on-call routing and AI voicemail triage. Replaces Avaya, 8x8 or Teams Phone.</p>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="status coming">Coming soon</span>
+            <h4>Invoice Financing</h4>
+            <p>Advance payment on outstanding council invoices so cashflow never holds back your growth. Integrated, no extra logins.</p>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="status coming">Coming soon</span>
+            <h4>EV Salary Sacrifice</h4>
+            <p>Let your team lease an electric car through payroll. Fewer no-shows, greener fleet — without you taking on lease risk.</p>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="status coming">Coming soon</span>
+            <h4>Mobile Phones &amp; SIMs</h4>
+            <p>Provision work phones with the right apps and a work SIM — activated when staff start, deactivated automatically when they leave.</p>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="status coming">Coming soon</span>
+            <h4>Benchmarking &amp; Insights</h4>
+            <p>See how your agency compares across the sector — retention, utilisation, missed visits, cost per hour — with anonymised industry data.</p>
+          </div>
+
+          <div class="roadmap-card">
+            <span class="status coming">Coming soon</span>
+            <h4>Retention Risk Scoring</h4>
+            <p>AI flags carers at risk of leaving before they hand in notice — based on hours patterns, absences, engagement signals and more.</p>
+          </div>
+        </div>
+
+        <!-- Training add-on -->
+        <div class="training-card">
+          <div>
+            <div class="eyebrow">Coming soon — separate add-on</div>
+            <h3>Staff Training &amp; Care Certificate</h3>
+            <p>We're building a complete training library for care staff — covering mandatory training, skills refreshers and the full Care Certificate. All delivered inside the platform your team already uses. Pricing and full details coming soon.</p>
+          </div>
+          <a href="contact.html" class="btn btn-outline">Register interest</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Ready to modernise your agency?</h2>
+        <p>Join agencies already running on homecareOS. Start free today — no contract, no card, no catch.</p>
+        <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg" onclick="trackSignupClick()">Start Free Today →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="onboard-footer">
+    <div class="container">
+      <p>&copy; 2026 homecareOS · PsycheMeta Ltd · F23, 18 Foregate Street, Worcester, WR1 1DN</p>
+      <p style="margin-top:8px">
+        <a href="tel:01905674704">01905 674704</a> · <a href="mailto:hello@homecareos.co.uk">hello@homecareos.co.uk</a>
+      </p>
+      <div class="onboard-footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Full Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
