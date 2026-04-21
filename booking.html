@@ -54,14 +54,25 @@
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+<!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
+  // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-6GD4NJK9LZ');
 </script>
+<script src="/cookie-consent.js" defer></script>
 </head>
 <body>
 
@@ -276,7 +287,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 homecareOS. All rights reserved.</p>
         <div>
-          <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="#" class="manage-cookies">Manage cookies</a>
         </div>
       </div>
     </div>

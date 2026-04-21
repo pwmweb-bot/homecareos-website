@@ -34,14 +34,25 @@
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+<!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
+  // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-6GD4NJK9LZ');
 </script>
+<script src="/cookie-consent.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy — homecareOS","description":"homecareOS privacy policy. Learn how we collect, use, and protect your personal data in accordance with UK GDPR.","provider":{"@type":"Organization","name":"homecareOS","url":"https://www.homecareos.co.uk"}}
 </script>
@@ -98,7 +109,7 @@
           <span class="current" aria-current="page">Privacy Policy</span>
         </nav>
         <h1 id="page-heading">Privacy Policy</h1>
-        <p>Last updated: March 2026</p>
+        <p>Last updated: 15 April 2026</p>
       </div>
     </section>
 
@@ -141,6 +152,22 @@
 
           <h3>2.3 Cookies and Tracking Technologies</h3>
           <p>We use cookies and similar technologies to enhance your experience, analyse usage patterns, and deliver relevant content. For full details, please see Section 8 (Cookies) below.</p>
+
+          <h3>2.4 Data Collected via the homecareOS Carer Mobile App</h3>
+          <p>The homecareOS Carer app (iOS and Android) is provided to care workers by their employing agency for use in the course of their employment. When you use the app, we collect:</p>
+          <ul>
+            <li><strong>Identity &amp; contact data</strong> — name, email address, phone number, employment role (linked to your agency's staff record)</li>
+            <li><strong>Precise location</strong> — GPS coordinates captured only at the moment of visit check-in and check-out, and when the app is used for mileage tracking between visits. Location is used solely to verify visit attendance and to calculate mileage reimbursement. It is not tracked continuously, sold, shared with advertisers, or used for any advertising or profiling purpose.</li>
+            <li><strong>Camera &amp; photo library</strong> — photos you choose to capture or attach to care notes, body maps, and incident reports. Photos are stored within your agency's tenant only and are never used for facial recognition, advertising, or shared with third parties.</li>
+            <li><strong>Biometric authentication (Face ID / Touch ID)</strong> — used only to unlock the app on your device. Biometric data never leaves your device and is never transmitted to our servers. We only receive a yes/no signal that authentication succeeded.</li>
+            <li><strong>Push notification tokens</strong> — to deliver shift reminders, messages from coordinators, and urgent visit updates. Tokens are tied to your app install and are removed when you uninstall or log out.</li>
+            <li><strong>Care records you enter</strong> — check-in/out times, care notes, medication administration records, observations, goals, and tasks. This data is held on behalf of your employing agency as the Data Controller.</li>
+            <li><strong>Device &amp; diagnostic data</strong> — device type, operating system version, app version, and crash logs. Used to diagnose technical issues and improve reliability. Not used for advertising or profiling.</li>
+          </ul>
+          <p>The mobile app does <strong>not</strong> collect contacts, browsing history, health and fitness data from HealthKit/Google Fit, SMS/call logs, microphone audio, financial or payment information, or any advertising identifiers (IDFA/AAID). The app contains no third-party advertising SDKs and no third-party analytics SDKs beyond Expo/Sentry for crash diagnostics.</p>
+
+          <h3>2.5 Controller / Processor Relationship (Mobile App)</h3>
+          <p>When a care worker uses the homecareOS Carer mobile app in the course of their employment, the employing care agency is the <strong>Data Controller</strong> for all care records, service user data, and visit information. homecareOS Ltd acts as the <strong>Data Processor</strong> under a written Data Processing Agreement with each agency, processing data strictly in accordance with the agency's documented instructions. For questions about how your agency uses the data you enter in the app, contact your agency's Data Protection Lead.</p>
 
           <!-- 3. How We Use Your Information -->
           <h2 id="how-we-use">3. How We Use Your Information</h2>
@@ -212,8 +239,12 @@
             <li><strong>Marketing cookies</strong> — used to track visitors across websites to display relevant advertisements</li>
           </ul>
 
-          <h3>8.2 Managing Cookies</h3>
-          <p>You can manage your cookie preferences at any time through your browser settings. Please note that disabling certain cookies may affect the functionality of our website. Most browsers allow you to refuse or delete cookies. The methods for doing so vary by browser — consult your browser's help documentation for instructions.</p>
+          <h3>8.2 Our Consent Banner</h3>
+          <p>When you first visit our website, a consent banner appears at the bottom of the screen asking whether you would like to accept or reject non-essential cookies (analytics and marketing). Your decision is stored in your browser's local storage so we don't ask again on subsequent visits. By default, all non-essential cookies are denied until you explicitly accept them.</p>
+          <p>We use Google Analytics 4 with Consent Mode v2. If you reject, no identifying analytics data is collected; Google may still receive anonymised, cookieless pings for statistical modelling, which cannot be linked back to you.</p>
+
+          <h3>8.3 Changing Your Mind</h3>
+          <p>You can change your cookie preferences at any time by clicking <button type="button" class="manage-cookies" style="background:none;border:none;color:#1e3a5f;text-decoration:underline;cursor:pointer;font:inherit;padding:0;">Manage cookies</button> — this will reopen the banner so you can accept or reject. Alternatively, most browsers allow you to refuse or delete cookies directly — consult your browser's help documentation for instructions. Disabling certain cookies may affect the functionality of our website.</p>
 
           <!-- 9. Data Security -->
           <h2 id="data-security">9. Data Security</h2>
@@ -242,8 +273,55 @@
           </ul>
           <p>We encourage you to review this policy periodically to stay informed about how we protect your data.</p>
 
-          <!-- 12. Contact Us -->
-          <h2 id="contact-us">12. Contact Us</h2>
+          <!-- 12. Mobile App Account &amp; Data Deletion -->
+          <h2 id="mobile-app-deletion">12. Mobile App Account &amp; Data Deletion</h2>
+          <p>This section explains how to request deletion of your account and associated personal data from the homecareOS mobile application, in accordance with Apple App Store and Google Play Store requirements.</p>
+
+          <h3>12.1 Your Right to Delete</h3>
+          <p>You have the right to request deletion of your account and personal data at any time. We offer two routes:</p>
+          <ul>
+            <li><strong>In-app deletion</strong> — open the Carer app, go to <em>Profile → Settings → Delete my account</em>, and confirm. Your deletion request will be submitted immediately.</li>
+            <li><strong>Web deletion</strong> — visit <a href="https://www.homecareos.co.uk/account/delete.html">www.homecareos.co.uk/account/delete</a> and submit the form with your registered email address. You will receive a confirmation email within 24 hours.</li>
+          </ul>
+
+          <h3>12.2 What Gets Deleted</h3>
+          <p>Within 30 days of a verified deletion request, we will permanently delete or irreversibly anonymise the following data:</p>
+          <ul>
+            <li>Your user profile (name, email, phone, avatar, biometric enrolment)</li>
+            <li>Your authentication credentials and session tokens</li>
+            <li>Your push notification tokens and device registrations</li>
+            <li>Personal preferences, availability, leave records, mileage claims submitted in your name</li>
+            <li>Messages and conversations where you were a participant (content may be preserved for other participants in accordance with their retention rights)</li>
+          </ul>
+
+          <h3>12.3 What We Must Retain</h3>
+          <p>UK law (Health and Social Care Act 2008, CQC fundamental standards, and equivalent regulations in Wales, Scotland, and Northern Ireland) requires care records to be retained for up to <strong>8 years</strong> (or until a child service user's 25th birthday, whichever is longer). This includes:</p>
+          <ul>
+            <li>Care notes, medication administration records, and body map entries you authored</li>
+            <li>Visit check-in/out timestamps and GPS verification events</li>
+            <li>Incident reports and safeguarding records</li>
+            <li>Financial and employment records retained for HMRC purposes (up to 7 years)</li>
+          </ul>
+          <p>Where retention is legally required, records you authored will be <strong>anonymised or pseudonymised</strong> so that they no longer identify you personally. Your name will be replaced with an opaque identifier, and your contact details will be removed. This satisfies UK GDPR Article 17(3)(b) (retention for legal obligation) while honouring your deletion request to the maximum extent possible.</p>
+
+          <h3>12.4 Timeline</h3>
+          <ul>
+            <li><strong>Within 24 hours</strong> — confirmation of your request</li>
+            <li><strong>Within 30 days</strong> — personal profile data deleted; care records anonymised</li>
+            <li><strong>After 8 years</strong> — retained care records fully deleted from archival storage</li>
+          </ul>
+
+          <h3>12.5 Agency Employees: Important</h3>
+          <p>If you are a care worker currently employed by an agency that uses homecareOS, your account is provisioned and managed by your employer. You may still request deletion of your personal data using the routes above, but note:</p>
+          <ul>
+            <li>Deleting your account will end your ability to use the app for work</li>
+            <li>Your employing agency will be notified so they can provision an alternative record-keeping method</li>
+            <li>Care records you authored will be anonymised but not removed from the agency's care-record system, as the agency is the legal Data Controller for those records</li>
+          </ul>
+          <p>If you are leaving employment, your agency will normally trigger deletion of your account within a reasonable period after your end date. You may request an expedited deletion at any time.</p>
+
+          <!-- 13. Contact Us -->
+          <h2 id="contact-us">13. Contact Us</h2>
           <p>If you have any questions, concerns, or requests regarding this privacy policy or our data protection practices, please contact our Data Protection Officer:</p>
           <ul>
             <li><strong>Data Protection Officer</strong> — homecareOS Ltd</li>
@@ -318,7 +396,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 homecareOS. All rights reserved.</p>
         <div>
-          <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="#" class="manage-cookies">Manage cookies</a>
         </div>
       </div>
     </div>

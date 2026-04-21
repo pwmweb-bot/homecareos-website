@@ -35,14 +35,25 @@
   <!-- Preload LCP image -->
   <link rel="preload" as="image" href="images/photos/dashboard.webp" fetchpriority="high">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+  <!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
   <script>
+    // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-6GD4NJK9LZ');
   </script>
+  <script src="/cookie-consent.js" defer></script>
 
   <!-- Conversion tracking — fires when Get Started clicked -->
   <script>
