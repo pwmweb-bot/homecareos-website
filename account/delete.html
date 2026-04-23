@@ -94,11 +94,11 @@
           <h2 style="margin-top:56px">Submit a Deletion Request</h2>
           <p>Fill in the form below. We will verify your identity by sending a confirmation link to the email address registered on your account.</p>
 
-          <form action="https://formspree.io/f/CONFIGURE_ME" method="POST" novalidate aria-label="Account deletion request form" style="margin-top:24px">
+          <form id="deletion-form" novalidate aria-label="Account deletion request form" style="margin-top:24px">
 
             <div class="form-group">
               <label for="del-name" class="form-label">Full Name <span aria-hidden="true" style="color:var(--accent)">*</span></label>
-              <input type="text" id="del-name" name="name" class="form-input" required autocomplete="name" aria-required="true">
+              <input type="text" id="del-name" name="full_name" class="form-input" required autocomplete="name" aria-required="true">
             </div>
 
             <div class="form-group">
@@ -108,7 +108,7 @@
 
             <div class="form-group">
               <label for="del-agency" class="form-label">Employing Agency (if applicable)</label>
-              <input type="text" id="del-agency" name="agency" class="form-input" placeholder="e.g. Phil's Care, Preeminent Care">
+              <input type="text" id="del-agency" name="agency_name" class="form-input" placeholder="e.g. Phil's Care, Preeminent Care">
             </div>
 
             <div class="form-group">
@@ -135,12 +135,83 @@
               </label>
             </div>
 
-            <input type="hidden" name="_subject" value="homecareOS Account Deletion Request">
-            <input type="hidden" name="_replyto" value="privacy@homecareos.co.uk">
+            <!-- Honeypot — legitimate users leave this empty; bots fill it. -->
+            <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+              <label for="del-website">Website (leave blank)</label>
+              <input type="text" id="del-website" name="_website" tabindex="-1" autocomplete="off">
+            </div>
 
-            <button type="submit" class="btn btn-primary" style="margin-top:16px">Submit Deletion Request</button>
+            <button type="submit" id="del-submit" class="btn btn-primary" style="margin-top:16px">Submit Deletion Request</button>
+
+            <div id="del-status" role="status" aria-live="polite" style="margin-top:16px"></div>
 
           </form>
+
+          <script>
+          (function () {
+            var form = document.getElementById('deletion-form');
+            var submitBtn = document.getElementById('del-submit');
+            var status = document.getElementById('del-status');
+            if (!form || !submitBtn || !status) return;
+
+            // Production API origin. Override in dev via window.__DELETION_API_BASE before this script runs.
+            var API_BASE = window.__DELETION_API_BASE || 'https://app.homecareos.co.uk';
+
+            form.addEventListener('submit', async function (e) {
+              e.preventDefault();
+              status.textContent = '';
+              status.style.color = '';
+
+              if (!form.confirm.checked) {
+                status.style.color = '#b45309';
+                status.textContent = 'Please confirm you understand the consequences before submitting.';
+                return;
+              }
+
+              submitBtn.disabled = true;
+              submitBtn.textContent = 'Submitting…';
+
+              var payload = {
+                full_name: (form.full_name.value || '').trim(),
+                email: (form.email.value || '').trim(),
+                agency_name: (form.agency_name.value || '').trim() || undefined,
+                reason: form.reason.value || undefined,
+                notes: (form.notes.value || '').trim() || undefined,
+                source: 'web',
+                _website: form._website.value || ''
+              };
+
+              try {
+                var res = await fetch(API_BASE + '/api/account/request-deletion', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                });
+                var data = await res.json().catch(function () { return {}; });
+
+                if (res.ok && data && data.success) {
+                  form.style.display = 'none';
+                  status.style.color = '#065f46';
+                  var ref = data.reference ? ' (reference <strong>' + data.reference.slice(0, 8).toUpperCase() + '</strong>)' : '';
+                  status.innerHTML = '<div style="background:#d1fae5;border-left:4px solid #059669;padding:20px 24px;border-radius:8px">'
+                    + '<h3 style="margin:0 0 8px">Request received</h3>'
+                    + '<p style="margin:0">We&rsquo;ve recorded your deletion request' + ref + '. A confirmation email is on its way to <strong>' + payload.email + '</strong>. If you don&rsquo;t see it within an hour, check spam, or email <a href="mailto:privacy@homecareos.co.uk">privacy@homecareos.co.uk</a>.</p>'
+                    + '</div>';
+                } else {
+                  status.style.color = '#991b1b';
+                  status.textContent = (data && data.error) || 'Something went wrong. Please try again in a minute, or email privacy@homecareos.co.uk.';
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = 'Submit Deletion Request';
+                }
+              } catch (err) {
+                status.style.color = '#991b1b';
+                status.textContent = 'We couldn\u2019t reach the server. Please check your connection and try again, or email privacy@homecareos.co.uk.';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Deletion Request';
+              }
+            });
+          })();
+          </script>
 
           <h2 style="margin-top:56px">Prefer to email us?</h2>
           <p>Send a signed request from your registered email address to <a href="mailto:privacy@homecareos.co.uk?subject=Account%20Deletion%20Request">privacy@homecareos.co.uk</a>. Include your full name, registered email, and employing agency (if applicable). We will respond within 24 hours.</p>
