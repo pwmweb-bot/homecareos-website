@@ -52,9 +52,10 @@
 
   <!--
     JSON-LD Structured Data
-    TODO: Populate Organization "sameAs" array with verified profile URLs
-    once available — LinkedIn company page, X/Twitter, Crunchbase, eventually
-    Wikidata. Empty is fine; placeholder URLs that 404 will hurt entity ranking.
+    homecareOS = product/brand owned by PsycheMeta Ltd (the legal parent).
+    Knowledge-Graph signals via sameAs (homecareOS LinkedIn) and
+    parentOrganization (PsycheMeta Ltd LinkedIn). Add X/Twitter handles +
+    Wikidata + Companies House URL to sameAs as they become available.
   -->
   <script type="application/ld+json">
 {
@@ -83,7 +84,23 @@
         "@type": "Country",
         "name": "United Kingdom"
       },
-      "sameAs": []
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "PsycheMeta Ltd",
+        "url": "https://psychemeta.com",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Companies House",
+          "value": "16586115"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/psychemetaltd",
+          "https://find-and-update.company-information.service.gov.uk/company/16586115"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/homecareos"
+      ]
     },
     {
       "@type": "SoftwareApplication",
