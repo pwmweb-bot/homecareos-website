@@ -22,7 +22,10 @@
   <meta property="og:description" content="Holistic operations management for home care agencies. Scheduling, care plans, compliance & more — all in one platform.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/">
-  <meta property="og:image" content="images/photos/companion-elderly-woman.webp">
+  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/companion-elderly-woman.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="homecareOS — UK home care management software">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
 
@@ -30,7 +33,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="homecareOS — Home Care Software for UK Agencies">
   <meta name="twitter:description" content="Holistic operations management for home care agencies. Scheduling, care plans, compliance & more — all in one platform.">
-  <meta name="twitter:image" content="images/photos/companion-elderly-woman.webp">
+  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/companion-elderly-woman.webp">
+  <meta name="twitter:image:alt" content="homecareOS — UK home care management software">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +49,12 @@
   <!-- AOS CSS (deferred — not render-critical) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
 
-  <!-- JSON-LD Structured Data -->
+  <!--
+    JSON-LD Structured Data
+    TODO: Populate Organization "sameAs" array with verified profile URLs
+    once available — LinkedIn company page, X/Twitter, Crunchbase, eventually
+    Wikidata. Empty is fine; placeholder URLs that 404 will hurt entity ranking.
+  -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +65,7 @@
       "name": "homecareOS",
       "url": "https://www.homecareos.co.uk",
       "logo": "https://www.homecareos.co.uk/images/logo.png",
-      "description": "The complete operating system for UK home care agencies. Free scheduling, care records, compliance and more.",
+      "description": "Home care management software for UK agencies. Free for up to 5 staff and 25 service users; per-staff pricing from £7/month above that.",
       "foundingDate": "2026",
       "founder": {
         "@type": "Person",
@@ -65,7 +74,13 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
-        "url": "https://www.homecareos.co.uk/contact.html"
+        "url": "https://www.homecareos.co.uk/contact.html",
+        "areaServed": "GB",
+        "availableLanguage": "en"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
       },
       "sameAs": []
     },
@@ -74,13 +89,44 @@
       "@id": "https://www.homecareos.co.uk/#software",
       "name": "homecareOS",
       "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Home Care Management Software",
       "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "GBP",
-        "description": "Free for up to 5 staff and 25 service users"
-      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Plan",
+          "price": "0",
+          "priceCurrency": "GBP",
+          "description": "Free for up to 5 staff and 25 service users — full core features, no credit card required.",
+          "category": "Free"
+        },
+        {
+          "@type": "Offer",
+          "name": "Start",
+          "price": "7",
+          "priceCurrency": "GBP",
+          "description": "£7/staff/month for agencies above 5 staff.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "7",
+            "priceCurrency": "GBP",
+            "unitText": "per staff per month"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "10",
+          "priceCurrency": "GBP",
+          "description": "£10/staff/month with AI rota builder, advanced analytics and white-label options.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "10",
+            "priceCurrency": "GBP",
+            "unitText": "per staff per month"
+          }
+        }
+      ],
       "description": "Home care management software for UK agencies. Scheduling, digital care records, compliance, finance, mobile app and AI-powered features.",
       "featureList": "Drag-and-drop scheduling, Digital care records, eMAR, CQC/CIW/Care Inspectorate/RQIA compliance, AI cover finder, Bradford Factor, Mobile carer app, Family portal, Commissioner portal, Finance and billing, Reporting and analytics, Pre-built UK policy library with one-click adopt and version control, VoIP phone system with IVR voicemail transcription and SMS, PPE inventory and vehicle MOT tracking",
       "screenshot": "https://www.homecareos.co.uk/images/screenshots/dashboard.png",
@@ -91,7 +137,91 @@
       "@id": "https://www.homecareos.co.uk/#website",
       "url": "https://www.homecareos.co.uk",
       "name": "homecareOS",
-      "publisher": {"@id": "https://www.homecareos.co.uk/#organization"}
+      "alternateName": "homecareos",
+      "publisher": {"@id": "https://www.homecareos.co.uk/#organization"},
+      "inLanguage": "en-GB",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.homecareos.co.uk/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- FAQPage schema — unlocks FAQ rich snippets in Google SERPs -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is homecareOS really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. homecareOS is free for up to 5 staff and 25 service users — full core features including scheduling, digital care records, compliance and the carer mobile app. No credit card required, no time limit. Above 5 staff, simple per-staff pricing starts at £7/month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS support CQC compliance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. homecareOS is built specifically for the UK across all four nations: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland). PIR auto-population, incident audit trails, training expiry tracking and inspection-ready dashboards are all included free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I import data from Birdie, Access, CarePlanner or other care software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer a free import service from any major UK care software including Birdie, Access Care Planning, CarePlanner, Nourish, CareLineLive, Log my Care and others. Most agencies are fully migrated within 7 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in the carer mobile app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPS-verified visit check-in/out, digital care notes, eMAR (electronic Medication Administration Record), body maps, observations, holiday requests and offline mode for poor signal areas. Available on iOS and Android — included free on every plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does homecareOS pricing compare to Birdie or Access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "homecareOS Start plan is £7/staff/month — typically 50–75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15–30/staff/month. The free tier (up to 5 staff) means small and starting agencies pay nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data secure and where is it stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All data is stored in UK data centres, encrypted at rest and in transit, with row-level security ensuring strict tenant isolation. We are GDPR compliant, registered with the ICO, and provide full data export at any time. Service users' care records are immutable with full audit trails as required by CQC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does AI Rota Builder do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Rota Builder is a Pro plan feature that builds optimal rotas in seconds based on carer availability, distance to service users, qualifications, continuity of care, contract hours and preferences. It also runs the AI Cover Finder for last-minute cancellations — finding the best available carer based on weighted scoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a family portal for service users' relatives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Family & Service User Portal is included free on every plan. Families get real-time visit notifications, carer profiles, care notes access and a direct communication channel with the agency. No more anxious phone calls about whether the carer turned up."
+      }
     }
   ]
 }

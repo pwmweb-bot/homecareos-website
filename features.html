@@ -65,6 +65,102 @@
   gtag('config', 'G-6GD4NJK9LZ');
 </script>
 <script src="/cookie-consent.js" defer></script>
+
+<!-- FAQPage schema — feature-specific Q&As for SERP rich snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What features are included in homecareOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "homecareOS includes 12 core modules — drag-and-drop scheduling and rota, AI Rota Builder, carer mobile app, digital care records with eMAR, four-nation compliance (CQC/CIW/Care Inspectorate/RQIA), staff management with Bradford Factor, recruitment, finance and billing, reporting and analytics, phone system with VoIP, UK policy library and stock/PPE/vehicle tracking — plus two stakeholder portals for families and commissioners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS include a carer mobile app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The carer mobile app (iOS and Android) is included free on every plan. Carers get GPS-verified visit check-in/out, digital care notes, eMAR, body maps, observations, holiday requests and full offline mode for poor signal areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Bradford Factor and how does homecareOS calculate it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bradford Factor is an absence-pattern score (S² × D) where S is number of absences and D is total days. homecareOS calculates it automatically for every staff member with traffic-light scoring (green 0-99, amber 100-199, red 200+). It's a feature most home care competitors lack — making attendance management easier for managers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI Cover Finder work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Cover Finder is a free feature that scores available carers when a visit needs cover, ranking them by distance (30%), continuity of care with the service user (25%), hours headroom (20%), preferred-carer flag (15%) and schedule fit (10%). It runs in seconds when you click 'Find Cover' on any visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS support all four UK nations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Compliance frameworks for England (CQC), Wales (CIW), Scotland (Care Inspectorate) and Northern Ireland (RQIA) are built in from day one — including the right regulator IDs for staff (DBS, SCW, SSSC, NISCC), nation-specific care plan templates and PIR auto-population for England."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an API for integrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Third-party API access is available on the Pro plan, allowing integrations with payroll software, accounting platforms, NHS systems, GP Connect and custom workflows. The API uses REST + JSON with OAuth 2.0 authentication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The carer mobile app works fully offline — visits, care notes, MAR records and observations all sync automatically when connectivity returns. This is critical for community care where carers visit rural areas or basement flats with poor signal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the family portal and is it included free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Family & Service User Portal lets relatives see real-time visit confirmations, carer profiles, recent care notes and message the agency directly. It's included free on every plan and dramatically reduces 'did the carer turn up?' phone calls to the office."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.homecareos.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://www.homecareos.co.uk/features.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -1,3 +1,32 @@
+# --- Canonical redirects ---
+# /index.html -> / (avoid duplicate canonical, preserve query strings)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html(\?.*)?\ HTTP
+  RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# --- Security headers ---
+<IfModule mod_headers.c>
+  # HSTS — force HTTPS for 1 year, include subdomains, preload-eligible
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Prevent clickjacking via iframe embedding
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Block MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Limit referrer info leakage cross-origin
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Disable browser features the site doesn't use (camera, mic, geo, payment, etc.)
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+  # Cross-origin policies — allow embeddable resources but block evil cross-origin reads
+  Header always set X-XSS-Protection "0"
+</IfModule>
+
 # Cache Control
 <IfModule mod_expires.c>
   ExpiresActive On

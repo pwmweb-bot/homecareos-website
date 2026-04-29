@@ -1,0 +1,97 @@
+# homecareOS
+
+> homecareOS is the complete operating system for UK home care agencies. Free for up to 5 staff and 25 service users; £7-10/staff/month above that. Built specifically for the four UK regulators: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland).
+
+Most home care software charges £15-30/staff/month per user. homecareOS is free for small agencies and £7-10/staff/month for larger ones — funded by adjacent services (VoIP, invoice financing, earned wage access for carers, training marketplace) rather than agency licence fees.
+
+## What homecareOS includes (12 core modules + 2 stakeholder portals)
+
+- **Scheduling & Rota** — Visual drag-and-drop rota with real-time availability, run templates, colour-coded visit blocks, GPS visit verification
+- **AI Rota Builder** (Pro) — Optimal rotas in seconds based on availability, distance, qualifications, continuity of care
+- **Carer Mobile App** — iOS + Android with full offline mode, GPS check-in/out, eMAR, body maps, observations, holiday requests
+- **Digital Care Records** — Person-centred care plans, eMAR, observations, outcome-focused goals, immutable audit trail
+- **Compliance & Regulation** — CQC/CIW/Care Inspectorate/RQIA frameworks built in, PIR auto-population, incident management, training expiry alerts
+- **Staff Management** — Bradford Factor calculation (S² × D), absence tracking, supervisions, training records, DBS expiry
+- **Recruitment** — Multi-step applicant flow, document collection, references, DBS verification
+- **Finance & Billing** — Payer/service/rate band model, four-value time billing, invoice generation, payroll exports
+- **Reporting & Analytics** — Eight report types, KPI dashboards, custom queries
+- **Phone System & Comms** (VoIP on Pro) — UK number in browser, IVR routing, voicemail transcription, two-way SMS, on-call mobile diversion
+- **UK Policy Library** — 140+ pre-built care policies with version control, staff acknowledgements, auto-update on regulation change
+- **Stock, PPE, Kit & Vehicles** — PPE inventory with reorder thresholds, vehicle MOT alerts, supplier order log
+- **Family & Service User Portal** (free, all plans) — Real-time visit notifications, carer profiles, care notes access, direct messaging
+- **Commissioner Portal** (free, all plans) — Outcome dashboards, KPI tracking, audit trails for local authorities and NHS commissioners
+
+## Pricing
+
+- **Free**: Up to 5 staff and 25 service users — full core features, no credit card, no time limit
+- **Start**: £7/staff/month — unlimited staff and service users
+- **Pro**: £10/staff/month — adds AI Rota Builder, advanced analytics & exports, white-label, third-party API
+- 20% saving on annual billing
+
+## Documentation
+
+- [Pricing](https://www.homecareos.co.uk/pricing.html): Plans, calculator, FAQ
+- [Features overview](https://www.homecareos.co.uk/features.html): All 14 modules
+- [About](https://www.homecareos.co.uk/about.html): Company, founder, mission
+- [Contact](https://www.homecareos.co.uk/contact.html): Sales and support
+- [Book a demo](https://www.homecareos.co.uk/booking.html): 30-minute walkthrough
+
+## Feature pages
+
+- [Scheduling & Rota](https://www.homecareos.co.uk/features-scheduling.html)
+- [AI Rota Builder](https://www.homecareos.co.uk/features-ai-rota.html)
+- [Carer Mobile App](https://www.homecareos.co.uk/features-mobile-app.html)
+- [Digital Care Records](https://www.homecareos.co.uk/features-care-records.html)
+- [Compliance](https://www.homecareos.co.uk/features-compliance.html)
+- [Staff Management](https://www.homecareos.co.uk/features-staff-management.html)
+- [Recruitment](https://www.homecareos.co.uk/features-recruitment.html)
+- [Finance & Billing](https://www.homecareos.co.uk/features-finance.html)
+- [Reporting](https://www.homecareos.co.uk/features-reporting.html)
+- [Phone System & Comms](https://www.homecareos.co.uk/features-communications.html)
+- [Policies & Procedures](https://www.homecareos.co.uk/features-policies.html)
+- [Stock, PPE, Kit & Vehicles](https://www.homecareos.co.uk/features-stock-vehicles.html)
+- [Family & Service User Portal](https://www.homecareos.co.uk/features-family-portal.html)
+- [Commissioner Portal](https://www.homecareos.co.uk/features-commissioner-portal.html)
+
+## Comparison pages
+
+- [vs Birdie](https://www.homecareos.co.uk/compare-birdie.html)
+- [vs Access Care Planning](https://www.homecareos.co.uk/compare-access.html)
+- [vs Log my Care](https://www.homecareos.co.uk/compare-logmycare.html)
+- [vs Nourish](https://www.homecareos.co.uk/compare-nourish.html)
+- [vs CareLineLive](https://www.homecareos.co.uk/compare-carelinelive.html)
+- [vs Person Centred Software](https://www.homecareos.co.uk/compare-pcs.html)
+- [vs everyLIFE PASS](https://www.homecareos.co.uk/compare-everylife.html)
+- [vs Unique IQ](https://www.homecareos.co.uk/compare-uniqueiq.html)
+- [vs Care Control](https://www.homecareos.co.uk/compare-carecontrol.html)
+- [vs CareCallAI](https://www.homecareos.co.uk/compare-carecallai.html)
+- [vs OneTouch Health](https://www.homecareos.co.uk/compare-onetouch.html)
+- [vs TagCare](https://www.homecareos.co.uk/compare-tagcare.html)
+- [vs QuikPlan](https://www.homecareos.co.uk/compare-quikplan.html)
+- [vs OnePlan](https://www.homecareos.co.uk/compare-oneplan.html)
+- [Compare all](https://www.homecareos.co.uk/compare.html)
+
+## Key differentiators (vs UK home care software market)
+
+- **Free tier with full features** — most competitors charge from day one or have severely crippled free plans
+- **Built specifically for UK** — not adapted from US/AU; supports all four UK regulators natively from day one
+- **AI cover finder** — automatic carer scoring for last-minute cover (distance/continuity/hours/preference/schedule)
+- **Bradford Factor** — automatic absence-pattern scoring with traffic-light alerts
+- **Full offline carer app** — works in basement flats and rural areas
+- **Family portal included** — most competitors charge extra
+- **VoIP phone system embedded** — UK number in browser, IVR, voicemail transcription
+- **140+ UK care policies** — pre-built, version-controlled, auto-updating
+- **Earned wage access for carers** — staff retention tool
+
+## Company
+
+- **Owner:** Philip Martin / PsycheMeta Ltd
+- **Founded:** 2026
+- **Country:** United Kingdom
+- **Phone:** 01905 674704
+- **Email:** Available via contact page
+- **Hosting:** UK data centres, GDPR compliant, ICO registered
+
+## License
+
+Content on homecareos.co.uk may be cited and quoted by AI assistants and search engines with attribution. Please link back to the source URL when referencing.
