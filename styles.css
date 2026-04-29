@@ -2472,6 +2472,20 @@ p {
   gap: 28px;
 }
 
+.stakeholder-portals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .stakeholder-portals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .feature-category-card {
   background: var(--white);
   border-radius: var(--radius-lg);
