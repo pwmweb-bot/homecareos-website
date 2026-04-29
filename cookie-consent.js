@@ -32,6 +32,28 @@
       'ad_user_data': decision,
       'ad_personalization': decision
     });
+    if (decision === CONSENT_GRANTED) loadMetricool();
+  }
+
+  // Metricool tracker — only loaded after analytics consent is granted.
+  // Idempotent: safe to call repeatedly.
+  var metricoolLoaded = false;
+  function loadMetricool() {
+    if (metricoolLoaded) return;
+    metricoolLoaded = true;
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://tracker.metricool.com/resources/be.js';
+    script.async = true;
+    var fire = function () {
+      if (typeof beTracker !== 'undefined') {
+        beTracker.t({ hash: 'f7e34aa86183f4790e7604e09af1db68' });
+      }
+    };
+    script.onload = fire;
+    script.onreadystatechange = fire;
+    head.appendChild(script);
   }
 
   function saveDecision(decision) {
