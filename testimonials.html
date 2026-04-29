@@ -23,6 +23,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/testimonials.html">
   <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/companion-elderly-woman.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="homecareOS — UK home care management software">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
 
@@ -57,12 +60,7 @@
       "url": "https://www.homecareos.co.uk"
     }
   }
-  </script>
-<!-- Calendly popup widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  </script><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -103,6 +101,7 @@
   ]
 }
 </script>
+<script src="/js/book-demo.js" defer></script>
 </head>
 <body>
 
@@ -361,7 +360,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>
-            <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;">Book a Demo</a></li>
+            <li><a href="#" onclick="return bookDemo(event)">Book a Demo</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
           </ul>

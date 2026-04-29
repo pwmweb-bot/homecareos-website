@@ -19,11 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <style>
+  <link rel="stylesheet" href="styles.css"><noscript></noscript>  <style>
     /* Feature Showcase — alternating layout */
     .feature-showcase {
       padding: 0;
@@ -223,6 +219,7 @@
   ]
 }
 </script>
+<script src="/js/book-demo.js" defer></script>
 </head>
 <body>
 
@@ -987,7 +984,7 @@
         <h2 data-aos="fade-up">See Every Feature in Action</h2>
         <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and we'll show you exactly how homecareOS can transform your agency's operations.</p>
         <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
-          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-primary btn-lg">Book a Free Demo</a>
+          <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
         </div>
       </div>
@@ -1039,7 +1036,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>
-            <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;">Book a Demo</a></li>
+            <li><a href="#" onclick="return bookDemo(event)">Book a Demo</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
           </ul>

@@ -1,7 +1,16 @@
 # --- Canonical redirects ---
-# /index.html -> / (avoid duplicate canonical, preserve query strings)
+# Force HTTPS + non-www-to-www in a single hop, then handle /index.html -> /
+# Order matters: do protocol/host normalisation BEFORE path rewrites so
+# /index.html doesn't trigger a 2-hop chain (http://...index.html -> http://.../ -> https://.../)
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # 1. Force HTTPS + www together (single 301 even if both differ)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.homecareos.co.uk%{REQUEST_URI} [R=301,L]
+
+  # 2. /index.html -> / (only after HTTPS+www is canonical, so single-hop)
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html(\?.*)?\ HTTP
   RewriteRule ^index\.html$ / [R=301,L]
 </IfModule>

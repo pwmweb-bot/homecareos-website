@@ -225,13 +225,7 @@
     }
   ]
 }
-</script>
-<!-- Calendly popup widget — CSS deferred so it doesn't block rendering -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript></noscript>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Preload LCP image -->
+</script><noscript><noscript></noscript></noscript><!-- Preload LCP image -->
 <link rel="preload" as="image" href="images/photos/observations.webp" fetchpriority="high">
 <!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
@@ -252,6 +246,7 @@
   gtag('config', 'G-6GD4NJK9LZ');
 </script>
 <script src="/cookie-consent.js" defer></script>
+<script src="/js/book-demo.js" defer></script>
 </head>
 <body>
 
@@ -301,11 +296,12 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
+            <span class="hero-eyebrow">Built for UK domiciliary &amp; home care agencies</span>
             <h1 class="hero-title">Complete <span class="highlight">Operating System</span> for Home Care</h1>
-            <p class="hero-subtitle">Scheduling, care plans, compliance and team management — one platform for your office and your carers in the field.</p>
+            <p class="hero-subtitle">Scheduling, care plans, compliance and team management — one platform for your office and your carers in the field. <strong>Built for home care, not care homes.</strong></p>
             <div class="hero-actions">
               <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Get Started for Free</a>
-              <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-ghost">Book a Demo</a>
+              <a href="#" onclick="return bookDemo(event)" class="btn btn-ghost">Book a Demo</a>
             </div>
             <p class="hero-note">No credit card required. Free for agencies with under 5 staff.</p>
           </div>
@@ -826,7 +822,7 @@
           <p>Join hundreds of UK agencies already using homecareOS to streamline operations and deliver better care.</p>
           <div class="cta-actions">
             <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Start Free Trial</a>
-            <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-outline-light btn-lg">Book a Demo</a>
+            <a href="#" onclick="return bookDemo(event)" class="btn btn-outline-light btn-lg">Book a Demo</a>
           </div>
         </div>
       </div>
@@ -880,7 +876,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>
-            <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;">Book a Demo</a></li>
+            <li><a href="#" onclick="return bookDemo(event)">Book a Demo</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
           </ul>

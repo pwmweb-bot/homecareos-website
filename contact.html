@@ -21,18 +21,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/contact.html">
   <meta property="og:image" content="https://www.homecareos.co.uk/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="homecareOS — UK home care management software">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="styles.css">
-<!-- Calendly popup widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -76,6 +74,7 @@
   ]
 }
 </script>
+<script src="/js/book-demo.js" defer></script>
 </head>
 <body>
 
@@ -252,6 +251,50 @@
       </div>
     </section>
 
+    <!-- What to Expect + Mini FAQ -->
+    <section class="section section-light" aria-labelledby="expect-heading">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 id="expect-heading">What to expect when you contact us</h2>
+          <p>We're a small UK team that responds personally — no offshore call centres, no chatbot queues, no support tickets that vanish into a CRM black hole.</p>
+        </div>
+
+        <div class="contact-expect-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-expect-card">
+            <h3>Response within one working day</h3>
+            <p>Every enquiry submitted before 4pm Monday to Friday gets a personal reply the same day. Anything after that lands first thing the next working day. No auto-responders pretending to be people.</p>
+          </div>
+
+          <div class="contact-expect-card">
+            <h3>Talk to someone who knows the product</h3>
+            <p>You'll speak to people who've actually built or supported the system — not a sales-development rep with a script. Whether you're an agency owner sizing up the platform or a coordinator stuck on a rota import, you'll get a useful answer.</p>
+          </div>
+
+          <div class="contact-expect-card">
+            <h3>No hard sell</h3>
+            <p>The core platform is free for up to 5 staff and 25 service users — there's no commission, no contract, no sales quota chasing you. We'd rather help you decide whether homecareOS fits your agency than push you into something you'll regret.</p>
+          </div>
+
+          <div class="contact-expect-card">
+            <h3>UK-based, UK-focused</h3>
+            <p>Our office is in Worcester. Our team understands CQC, CIW, the Care Inspectorate and RQIA frameworks because we've worked with UK home care providers across all four nations. We're not adapting US software for a UK audience — homecareOS was built here.</p>
+          </div>
+        </div>
+
+        <div class="contact-faq" data-aos="fade-up" data-aos-delay="150">
+          <h3 style="margin-top:48px;text-align:center">Common reasons people get in touch</h3>
+          <ul class="contact-reasons">
+            <li><strong>Booking a demo</strong> — see the rota, mobile app and compliance dashboards in action with your own data. About 30 minutes, no slide deck.</li>
+            <li><strong>Migrating from another system</strong> — we offer a free import service from Birdie, Access Care Planning, Log my Care, Nourish, CareLineLive, CarePlanner and others. Most agencies are fully migrated within a week.</li>
+            <li><strong>CQC compliance questions</strong> — PIR auto-population, audit trails, training expiry, incident management. We can walk you through how each maps to your KLOEs.</li>
+            <li><strong>Pricing or plan advice</strong> — most small agencies stay on the free plan permanently. We'll help you work out which tier (Free / Start / Pro) fits.</li>
+            <li><strong>Partnership and integration enquiries</strong> — payroll, accounting, NHS Spine, GP Connect, ICBs and local authority data sharing.</li>
+            <li><strong>Press, careers, or general enquiries</strong> — drop a line and we'll route it to the right person.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Map Placeholder -->
     <section class="section-sm section-gray" aria-labelledby="map-heading">
       <div class="container">
@@ -276,7 +319,7 @@
         <h2 id="cta-heading" data-aos="fade-up">Prefer a Live Walkthrough?</h2>
         <p data-aos="fade-up" data-aos-delay="100">Book a free demo and see homecareOS in action. Our team will tailor the session to your agency's needs.</p>
         <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
-          <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;" class="btn btn-primary btn-lg">Book a Demo</a>
+          <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Demo</a>
           <a href="services.html" class="btn btn-ghost btn-lg">View Services</a>
         </div>
       </div>
@@ -305,7 +348,7 @@
           <li><a href="personas.html">Who It's For</a></li><li><a href="portfolio.html">Case Studies</a></li><li><a href="faq.html">FAQ</a></li><li><a href="roadmap.html">Roadmap</a></li></ul></div>
         <div><h3>Company</h3><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></div>
         <div><h3>Support</h3><ul class="footer-links"><li><a href="contact.html">Contact</a></li>
-            <li><a href="tel:01905674704">01905 674704</a></li><li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/190align/15min'});return false;">Book a Demo</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+            <li><a href="tel:01905674704">01905 674704</a></li><li><a href="#" onclick="return bookDemo(event)">Book a Demo</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 homecareOS. All rights reserved.</p><div><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="#" class="manage-cookies">Manage cookies</a></div></div>
     </div>

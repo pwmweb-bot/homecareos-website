@@ -2486,6 +2486,116 @@ p {
   }
 }
 
+/* --- Compare-with-alternatives pill grid (auto-injected on feature pages) --- */
+.section-compare-links { padding: 64px 0; }
+
+.compare-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.compare-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), color var(--transition-base);
+}
+
+.compare-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+  color: var(--brand);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-decoration: none;
+}
+
+.compare-pills-footer {
+  text-align: center;
+  margin-top: 28px;
+}
+
+/* --- Contact "What to expect" + reasons block --- */
+.contact-expect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-expect-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+}
+
+.contact-expect-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.contact-expect-card p {
+  color: var(--gray-600);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.contact-faq {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.contact-reasons {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-reasons li {
+  padding: 14px 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-reasons li strong {
+  color: var(--primary);
+}
+
+/* --- Hero eyebrow (above H1) for SEO disambiguation --- */
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 999px;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
 .feature-category-card {
   background: var(--white);
   border-radius: var(--radius-lg);
