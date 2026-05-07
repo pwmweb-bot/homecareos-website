@@ -235,7 +235,37 @@
   </url>
   <url>
     <loc>https://www.homecareos.co.uk/blog/bradford-factor-home-care-uk-guide.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/smart-scheduling-ai-powered-rota-management.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/cqc-compliance-home-care-2026-guide.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/family-portal-home-care-keeping-loved-ones-connected.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/future-digital-care-plans-uk.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/home-care-agency-admin-time-reduction.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
