@@ -163,8 +163,10 @@
       <div class="container">
         <div class="flex flex-wrap gap-8 justify-center" role="tablist" aria-label="Filter blog posts by category" x-data="{ active: 'all' }">
           <button role="tab" class="btn btn-sm" :class="active === 'all' ? 'btn-primary' : 'btn-outline'" @click="active = 'all'" :aria-selected="active === 'all'">All</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'news' ? 'btn-primary' : 'btn-outline'" @click="active = 'news'" :aria-selected="active === 'news'">Home Care News</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'updates' ? 'btn-primary' : 'btn-outline'" @click="active = 'updates'" :aria-selected="active === 'updates'">Feature Updates</button>
+          <button role="tab" class="btn btn-sm" :class="active === 'compliance' ? 'btn-primary' : 'btn-outline'" @click="active = 'compliance'" :aria-selected="active === 'compliance'">Compliance</button>
+          <button role="tab" class="btn btn-sm" :class="active === 'operations' ? 'btn-primary' : 'btn-outline'" @click="active = 'operations'" :aria-selected="active === 'operations'">Operations</button>
+          <button role="tab" class="btn btn-sm" :class="active === 'growth' ? 'btn-primary' : 'btn-outline'" @click="active = 'growth'" :aria-selected="active === 'growth'">Agency Growth</button>
+          <button role="tab" class="btn btn-sm" :class="active === 'features' ? 'btn-primary' : 'btn-outline'" @click="active = 'features'" :aria-selected="active === 'features'">Software &amp; Features</button>
         </div>
       </div>
     </section>
@@ -177,19 +179,19 @@
         <h2 id="blog-grid-heading" class="visually-hidden">Blog Posts</h2>
         <div class="blog-grid">
 
-          <!-- Post 1 -->
+          <!-- Post 1: Bradford Factor cornerstone (live) -->
           <article class="blog-card" data-reveal data-reveal-delay="0">
             <div class="blog-card-image">
-              <img src="images/photos/carer-care-plan-table.webp" alt="Carer reviewing digital care records with an elderly service user" width="640" height="360" loading="lazy">
+              <img src="images/photos/team-reviewing-analytics.webp" alt="Care agency managers reviewing absence analytics on a laptop" width="640" height="360" loading="lazy">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
-                <span class="blog-category">Home Care News</span>
-                <time datetime="2026-03-25">25 Mar 2026</time>
+                <span class="blog-category">Operations</span>
+                <time datetime="2026-05-07">7 May 2026</time>
               </div>
-              <h3><a href="#">5 Signs Your Home Care Agency Needs Better Software</a></h3>
-              <p>From missed visits to compliance gaps, outdated systems are costing agencies time and money. Here are the warning signs that it is time for a digital upgrade.</p>
-              <a href="#" class="read-more">Read More &rarr;</a>
+              <h3><a href="blog/bradford-factor-home-care-uk-guide.html">Bradford Factor in Home Care: The Definitive UK Guide (2026)</a></h3>
+              <p>A practical, ethical guide to using the Bradford Factor in UK home care: how the S² × D formula works, RAG thresholds, real-world examples, and what to do (and not do) with the score.</p>
+              <a href="blog/bradford-factor-home-care-uk-guide.html" class="read-more">Read More &rarr;</a>
             </div>
           </article>
 

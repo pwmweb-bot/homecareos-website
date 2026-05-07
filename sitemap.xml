@@ -229,9 +229,15 @@
   <!-- Blog / FAQ / Team / Booking / Portfolio -->
   <url>
     <loc>https://www.homecareos.co.uk/blog.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.homecareos.co.uk/blog/bradford-factor-home-care-uk-guide.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.homecareos.co.uk/faq.html</loc>
