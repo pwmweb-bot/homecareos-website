@@ -32,8 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -84,6 +83,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -128,20 +128,20 @@
           <span aria-hidden="true">/</span>
           <span class="current" aria-current="page">homecareOS vs Access Group</span>
         </nav>
-        <h1 data-aos="fade-up">homecareOS vs Access Group</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Access is enterprise-grade with deep NHS integration. But enterprise comes with enterprise complexity and cost. homecareOS delivers the power without the price tag.</p>
+        <h1 data-reveal>homecareOS vs Access Group</h1>
+        <p data-reveal data-reveal-delay="100">Access is enterprise-grade with deep NHS integration. But enterprise comes with enterprise complexity and cost. homecareOS delivers the power without the price tag.</p>
       </div>
     </header>
 
     <!-- Key Advantages -->
     <section class="section" aria-label="Key advantages over Access Group">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Why Agencies Switch</span>
           <h2>6 Reasons Agencies Choose homecareOS Over Access Group</h2>
           <p>Access Group is the most widely used care software in the UK. But size does not always mean the best fit for your agency.</p>
         </div>
-        <div class="compare-advantages" data-aos="fade-up">
+        <div class="compare-advantages" data-reveal>
           <div class="advantage-card">
             <span class="advantage-badge">Simpler</span>
             <h4>Simplicity Over Complexity</h4>
@@ -179,13 +179,13 @@
     <!-- Feature Comparison Table -->
     <section class="section section-gray" aria-label="Feature comparison table">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Feature-by-Feature</span>
           <h2>Full Comparison Table</h2>
           <p>A transparent look at how both platforms stack up across every major feature category.</p>
         </div>
 
-        <div class="compare-table-wrap" data-aos="fade-up">
+        <div class="compare-table-wrap" data-reveal>
           <table class="compare-table" role="table">
             <thead>
               <tr>
@@ -256,16 +256,16 @@
           </table>
         </div>
 
-        <p class="compare-note" data-aos="fade-up">Comparison data is based on publicly available information from <a href="https://www.theaccessgroup.com" target="_blank" rel="noopener">theaccessgroup.com</a> as of March 2026. If anything is inaccurate, <a href="contact.html">let us know</a> and we will update it.</p>
+        <p class="compare-note" data-reveal>Comparison data is based on publicly available information from <a href="https://www.theaccessgroup.com" target="_blank" rel="noopener">theaccessgroup.com</a> as of March 2026. If anything is inaccurate, <a href="contact.html">let us know</a> and we will update it.</p>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-aos="fade-up">Enterprise Power. Zero Enterprise Cost.</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and see why agencies are choosing homecareOS over Access Group — with faster setup, simpler tools, and no licence fees.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 data-reveal>Enterprise Power. Zero Enterprise Cost.</h2>
+        <p data-reveal data-reveal-delay="100">Book a personalised demo and see why agencies are choosing homecareOS over Access Group — with faster setup, simpler tools, and no licence fees.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="compare.html" class="btn btn-ghost">See All Comparisons</a>
         </div>
@@ -339,7 +339,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
@@ -368,7 +367,6 @@
         });
       }
     });
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();

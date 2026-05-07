@@ -29,8 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -75,6 +74,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -116,8 +116,8 @@
         <span aria-hidden="true">/</span>
         <span class="current" aria-current="page">Roadmap</span>
       </nav>
-      <h1 data-aos="fade-up">Product Roadmap</h1>
-      <p data-aos="fade-up" data-aos-delay="100">What we're building next. homecareOS is evolving fast — here's where we're heading.</p>
+      <h1 data-reveal>Product Roadmap</h1>
+      <p data-reveal data-reveal-delay="100">What we're building next. homecareOS is evolving fast — here's where we're heading.</p>
     </div>
   </header>
 
@@ -131,7 +131,7 @@
         <div class="roadmap-timeline">
 
           <!-- Item 1: VoIP -->
-          <div class="roadmap-item roadmap-next" data-aos="fade-up">
+          <div class="roadmap-item roadmap-next" data-reveal>
             <div class="roadmap-marker">
               <div class="roadmap-status-badge">Up Next</div>
             </div>
@@ -220,7 +220,7 @@
           </div>
 
           <!-- Item 2: Email -->
-          <div class="roadmap-item" data-aos="fade-up">
+          <div class="roadmap-item" data-reveal>
             <div class="roadmap-marker">
               <div class="roadmap-status-badge roadmap-planned">Planned</div>
             </div>
@@ -312,7 +312,7 @@
           </div>
 
           <!-- Item 3: Website & Social Media -->
-          <div class="roadmap-item" data-aos="fade-up">
+          <div class="roadmap-item" data-reveal>
             <div class="roadmap-marker">
               <div class="roadmap-status-badge roadmap-planned">Planned</div>
             </div>
@@ -370,7 +370,7 @@
           </div>
 
           <!-- Item 4: Dynamic Reporting Engine -->
-          <div class="roadmap-item" data-aos="fade-up">
+          <div class="roadmap-item" data-reveal>
             <div class="roadmap-marker">
               <div class="roadmap-status-badge roadmap-planned">Planned</div>
             </div>
@@ -436,7 +436,7 @@
           </div>
 
           <!-- Item 5: GP Connect -->
-          <div class="roadmap-item" data-aos="fade-up">
+          <div class="roadmap-item" data-reveal>
             <div class="roadmap-marker">
               <div class="roadmap-status-badge roadmap-future">Future</div>
             </div>
@@ -504,9 +504,9 @@
     <!-- CTA Section -->
     <section class="cta-section" aria-labelledby="cta-heading">
       <div class="container">
-        <h2 id="cta-heading" data-aos="fade-up">Want to Shape What We Build?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">We build in partnership with our agencies. If there's a feature you need, we want to hear about it.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 id="cta-heading" data-reveal>Want to Shape What We Build?</h2>
+        <p data-reveal data-reveal-delay="100">We build in partnership with our agencies. If there's a feature you need, we want to hear about it.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Start Free Trial</a>
           <a href="contact.html" class="btn btn-ghost btn-lg">Request a Feature</a>
         </div>
@@ -559,9 +559,6 @@
 
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 600, once: true, offset: 80 });</script>
   <!-- Mobile nav toggle -->
   <script>
   (function(){const t=document.getElementById('nav-toggle'),n=document.getElementById('nav-links');if(t&&n){t.addEventListener('click',function(){const open=n.classList.toggle('active');t.classList.toggle('active');t.setAttribute('aria-expanded',open)});}const dd=document.querySelectorAll('.nav-dropdown-toggle');dd.forEach(function(btn){btn.addEventListener('click',function(e){e.preventDefault();const menu=this.nextElementSibling;const open=menu.classList.toggle('show');this.setAttribute('aria-expanded',open);});});})();

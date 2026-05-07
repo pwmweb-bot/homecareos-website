@@ -32,8 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -84,6 +83,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -136,7 +136,7 @@
     <!-- VS Hero -->
     <section class="section" aria-label="Brand comparison">
       <div class="container">
-        <div class="compare-hero" data-aos="fade-up">
+        <div class="compare-hero" data-reveal>
           <div class="compare-brand">
             <div class="brand-name">homecare<span>OS</span></div>
             <p>Purpose-built for UK home care. Free forever.</p>
@@ -153,12 +153,12 @@
     <!-- Key Advantages -->
     <section class="section section-gray" aria-label="Key advantages">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Why Home Care Agencies Choose homecareOS</span>
           <h2>6 Key Advantages Over QuikPlan</h2>
           <p>QuikPlan delivers solid rostering and finance tools. But homecareOS brings AI-powered scheduling, absence analytics, richer care records, and zero licence fees.</p>
         </div>
-        <div class="compare-advantages" data-aos="fade-up">
+        <div class="compare-advantages" data-reveal>
           <div class="advantage-card">
             <span class="advantage-badge">Unique to homecareOS</span>
             <h4>AI Cover Finder</h4>
@@ -196,12 +196,12 @@
     <!-- Feature Table -->
     <section class="section" aria-label="Feature comparison table">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Feature by Feature</span>
           <h2>Detailed Comparison</h2>
           <p>A transparent, side-by-side look at what each platform offers for home care agencies.</p>
         </div>
-        <div class="compare-table-wrapper" data-aos="fade-up">
+        <div class="compare-table-wrapper" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -283,11 +283,11 @@
     <!-- About QuikPlan -->
     <section class="section section-gray" aria-label="About QuikPlan">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">About the Competitor</span>
           <h2>Who Are QuikPlan?</h2>
         </div>
-        <div data-aos="fade-up" style="max-width:720px;margin:0 auto">
+        <div data-reveal style="max-width:720px;margin:0 auto">
           <p style="margin-bottom:16px;color:var(--gray-600)">QuikPlan is an established UK-based cloud platform built specifically for home care rostering and finance. It offers visit rostering with calendar and grid views, a Template Manager for recurring schedules, and a Task Manager for visit-level task assignment.</p>
           <p style="margin-bottom:16px;color:var(--gray-600)">Their QuikApp mobile app supports visit times, tasks, eMAR, notes, and incident reporting. QPLive! provides real-time visit monitoring, and QuikDocs handles document management. The platform also includes invoicing, staff pay, client and staff portals, maps with mileage and travel tracking, and around 100 standard reports.</p>
           <p style="color:var(--gray-600)">QuikPlan supports regulators across the UK including CQC, RQIA, Care Inspectorate, CIW, and HIQA. They are known for free unlimited training and UK-based human support. Where homecareOS goes further is with AI-powered scheduling, Bradford Factor absence analytics, richer digital care records, and a permanently free core platform.</p>
@@ -298,9 +298,9 @@
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-aos="fade-up">See Why homecareOS Goes Further</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and we'll show you exactly how homecareOS builds on what QuikPlan offers with AI, care records, and zero fees.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 data-reveal>See Why homecareOS Goes Further</h2>
+        <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly how homecareOS builds on what QuikPlan offers with AI, care records, and zero fees.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="compare.html" class="btn btn-ghost">View All Comparisons</a>
         </div>
@@ -374,7 +374,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
@@ -403,7 +402,6 @@
         });
       }
     });
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();

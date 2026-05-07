@@ -41,10 +41,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
   <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260505">
+  <link rel="stylesheet" href="styles.css?v=20260507">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -128,6 +126,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -181,8 +180,8 @@
             <li aria-current="page">FAQ</li>
           </ol>
         </nav>
-        <h1 id="page-title" data-aos="fade-up">Frequently Asked Questions</h1>
-        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Everything you need to know about homecareOS</p>
+        <h1 id="page-title" data-reveal>Frequently Asked Questions</h1>
+        <p class="page-subtitle" data-reveal data-reveal-delay="100">Everything you need to know about homecareOS</p>
       </div>
     </section>
 
@@ -191,13 +190,13 @@
          ============================================ -->
     <section class="section" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="section-label">GOT QUESTIONS?</span>
           <h2 id="faq-heading">We Have Answers</h2>
           <p>Find answers to the most common questions about homecareOS, from migration to compliance and beyond.</p>
         </div>
 
-        <div class="faq-list" data-aos="fade-up">
+        <div class="faq-list" data-reveal>
 
           <!-- FAQ 1 -->
           <div class="faq-item">
@@ -296,7 +295,7 @@
          ============================================ -->
     <section class="cta-section" id="cta" aria-labelledby="cta-heading">
       <div class="container">
-        <div class="cta-content" data-aos="fade-up">
+        <div class="cta-content" data-reveal>
           <h2 id="cta-heading">Still Have Questions?</h2>
           <p>Our team is always happy to help. Reach out directly or book a personalised demo to see homecareOS in action.</p>
           <div class="cta-actions">
@@ -397,7 +396,6 @@
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Page Scripts -->
   <script>
@@ -462,8 +460,6 @@
     });
 
     // AOS Init
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
-
     // Skip link
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();

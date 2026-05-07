@@ -32,8 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -84,6 +83,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -136,7 +136,7 @@
     <!-- Compare Hero -->
     <section class="section" aria-label="Comparison overview">
       <div class="container">
-        <div class="compare-hero" data-aos="fade-up">
+        <div class="compare-hero" data-reveal>
           <div class="compare-brand">
             <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="64" height="64"><rect width="36" height="36" rx="8" fill="#1e3a5f"/><path d="M10 18h6v8h-6zM20 12h6v14h-6z" fill="#f59e0b"/><circle cx="18" cy="10" r="3" fill="#fff"/></svg>
             <span class="brand-name">homecare<span>OS</span></span>
@@ -154,11 +154,11 @@
     <!-- Key Advantages -->
     <section class="section section-gray" aria-label="Key advantages">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Why Agencies Switch</span>
           <h2>Where homecareOS Wins</h2>
         </div>
-        <div class="compare-advantages" data-aos="fade-up">
+        <div class="compare-advantages" data-reveal>
           <div class="advantage-card">
             <span class="advantage-badge">homecareOS: Day 1 / Birdie: Not on roadmap</span>
             <h4>Bradford Factor</h4>
@@ -196,11 +196,11 @@
     <!-- Feature Comparison Table -->
     <section class="section" aria-label="Feature comparison table">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Side by Side</span>
           <h2>Feature-by-Feature Comparison</h2>
         </div>
-        <div class="compare-table-wrapper" data-aos="fade-up">
+        <div class="compare-table-wrapper" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -283,9 +283,9 @@
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-aos="fade-up">Ready to See Why Agencies Choose homecareOS?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and we'll show you exactly how homecareOS outperforms Birdie — at zero cost.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 data-reveal>Ready to See Why Agencies Choose homecareOS?</h2>
+        <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly how homecareOS outperforms Birdie — at zero cost.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Demo</a>
           <a href="compare.html" class="btn btn-ghost">View All Comparisons</a>
         </div>
@@ -359,7 +359,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
@@ -388,7 +387,6 @@
         });
       }
     });
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();

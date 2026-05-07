@@ -32,8 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -78,6 +77,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -128,12 +128,12 @@
     <!-- Key Differentiators -->
     <section class="section" aria-label="Key differentiators">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Why Agencies Switch</span>
           <h2>What Sets homecareOS Apart</h2>
           <p>Features no other platform offers on day one — at any price.</p>
         </div>
-        <div class="compare-advantages" data-aos="fade-up">
+        <div class="compare-advantages" data-reveal>
           <div class="advantage-card">
             <span class="advantage-badge">Unique to homecareOS</span>
             <h4>Bradford Factor Scoring</h4>
@@ -171,13 +171,13 @@
     <!-- Competitor Grid -->
     <section class="section section-gray" aria-label="Competitor comparisons">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">15 Competitors Analysed</span>
           <h2>Choose a Comparison</h2>
           <p>Select any competitor below to see a detailed, feature-by-feature breakdown of how homecareOS compares.</p>
         </div>
 
-        <div class="competitor-grid" data-aos="fade-up">
+        <div class="competitor-grid" data-reveal>
 
           <div class="competitor-card">
             <h3><a href="compare-birdie.html">homecareOS vs Birdie</a></h3>
@@ -291,9 +291,9 @@
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-aos="fade-up">Ready to See the Difference?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and we'll show you exactly why agencies are choosing homecareOS over the competition.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 data-reveal>Ready to See the Difference?</h2>
+        <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly why agencies are choosing homecareOS over the competition.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="features.html" class="btn btn-ghost">See All Features</a>
         </div>
@@ -367,7 +367,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
@@ -396,7 +395,6 @@
         });
       }
     });
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();

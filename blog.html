@@ -41,10 +41,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
   <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260505">
+  <link rel="stylesheet" href="styles.css?v=20260507">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -102,6 +100,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -152,8 +151,8 @@
           <span aria-hidden="true">/</span>
           <span class="current" aria-current="page">Blog</span>
         </nav>
-        <h1 data-aos="fade-up">Blog &amp; Industry News</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Expert insights, feature updates, and home care industry news</p>
+        <h1 data-reveal>Blog &amp; Industry News</h1>
+        <p data-reveal data-reveal-delay="100">Expert insights, feature updates, and home care industry news</p>
       </div>
     </section>
 
@@ -179,7 +178,7 @@
         <div class="blog-grid">
 
           <!-- Post 1 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="0">
+          <article class="blog-card" data-reveal data-reveal-delay="0">
             <div class="blog-card-image">
               <img src="images/photos/carer-care-plan-table.webp" alt="Carer reviewing digital care records with an elderly service user" width="640" height="360" loading="lazy">
             </div>
@@ -195,7 +194,7 @@
           </article>
 
           <!-- Post 2 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <article class="blog-card" data-reveal data-reveal-delay="100">
             <div class="blog-card-image">
               <img src="images/photos/analytics-charts-laptop.webp" alt="Analytics dashboard showing scheduling data and performance metrics" width="640" height="360" loading="lazy">
             </div>
@@ -211,7 +210,7 @@
           </article>
 
           <!-- Post 3 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <article class="blog-card" data-reveal data-reveal-delay="200">
             <div class="blog-card-image">
               <img src="images/photos/carer-arm-exercise.webp" alt="Carer helping elderly person with mobility exercises at home" width="640" height="360" loading="lazy">
             </div>
@@ -227,7 +226,7 @@
           </article>
 
           <!-- Post 4 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="0">
+          <article class="blog-card" data-reveal data-reveal-delay="0">
             <div class="blog-card-image">
               <img src="images/photos/elderly-phone-park-bench.webp" alt="Younger woman helping elderly lady use a smartphone on a park bench" width="640" height="360" loading="lazy">
             </div>
@@ -243,7 +242,7 @@
           </article>
 
           <!-- Post 5 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <article class="blog-card" data-reveal data-reveal-delay="100">
             <div class="blog-card-image">
               <img src="images/photos/mobile-app-hand.webp" alt="Person using the homecareOS mobile care app on a smartphone" width="640" height="360" loading="lazy">
             </div>
@@ -259,7 +258,7 @@
           </article>
 
           <!-- Post 6 -->
-          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <article class="blog-card" data-reveal data-reveal-delay="200">
             <div class="blog-card-image">
               <img src="images/photos/team-reviewing-analytics.webp" alt="Care agency team reviewing analytics and performance data together" width="640" height="360" loading="lazy">
             </div>
@@ -288,7 +287,7 @@
          ============================================ -->
     <section class="section section-gray" aria-labelledby="newsletter-heading">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Newsletter</span>
           <h2 id="newsletter-heading">Stay in the Loop</h2>
           <p>Get the latest home care insights, product updates, and industry news delivered straight to your inbox.</p>
@@ -307,9 +306,9 @@
          ============================================ -->
     <section class="cta-section" aria-labelledby="blog-cta-heading">
       <div class="container">
-        <h2 id="blog-cta-heading" data-aos="fade-up">Ready to Transform Your Agency?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Join hundreds of UK home care providers already using homecareOS to deliver better care.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 id="blog-cta-heading" data-reveal>Ready to Transform Your Agency?</h2>
+        <p data-reveal data-reveal-delay="100">Join hundreds of UK home care providers already using homecareOS to deliver better care.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Start Free Trial</a>
           <a href="contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
         </div>
@@ -406,7 +405,6 @@
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Page Scripts -->
   <script>
@@ -444,8 +442,6 @@
     });
 
     // AOS Init
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
-
     // Skip link
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();

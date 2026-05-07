@@ -41,10 +41,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
   <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260505">
+  <link rel="stylesheet" href="styles.css?v=20260507">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -168,6 +166,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -218,8 +217,8 @@
           <span aria-hidden="true">/</span>
           <span class="current" aria-current="page">Pricing</span>
         </nav>
-        <h1 data-aos="fade-up">Get Started for Free</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Start managing care in minutes with up to <strong>5 staff</strong> and <strong>25 service users</strong> — completely free, no credit card required. When you grow beyond that, simple per-staff pricing from just <strong>&pound;7/staff/month</strong>.</p>
+        <h1 data-reveal>Get Started for Free</h1>
+        <p data-reveal data-reveal-delay="100">Start managing care in minutes with up to <strong>5 staff</strong> and <strong>25 service users</strong> — completely free, no credit card required. When you grow beyond that, simple per-staff pricing from just <strong>&pound;7/staff/month</strong>.</p>
       </div>
     </section>
 
@@ -228,7 +227,7 @@
          ============================================ -->
     <section class="section" style="padding-bottom: 0;">
       <div class="container">
-        <div class="pricing-journey" data-aos="fade-up">
+        <div class="pricing-journey" data-reveal>
           <div class="journey-step">
             <div class="journey-icon" style="background: var(--accent); color: #fff;">1</div>
             <h4>Sign Up Free</h4>
@@ -291,7 +290,7 @@
       <div class="container">
 
         <!-- Billing Toggle -->
-        <div class="billing-toggle" data-aos="fade-up">
+        <div class="billing-toggle" data-reveal>
           <span class="toggle-label" :class="{ active: billing === 'monthly' }" @click="billing = 'monthly'">Monthly</span>
           <div class="toggle-switch" :class="{ active: billing === 'annual' }" @click="billing = billing === 'monthly' ? 'annual' : 'monthly'" role="switch" :aria-checked="billing === 'annual'" aria-label="Toggle annual billing" tabindex="0" @keydown.enter="billing = billing === 'monthly' ? 'annual' : 'monthly'" @keydown.space.prevent="billing = billing === 'monthly' ? 'annual' : 'monthly'">
             <div class="toggle-knob"></div>
@@ -301,7 +300,7 @@
         </div>
 
         <!-- Interactive Calculator -->
-        <div class="pricing-calculator" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-calculator" data-reveal data-reveal-delay="100">
           <h3>Calculate Your Cost</h3>
           <p class="calculator-subtitle" x-text="billing === 'annual' ? 'Drag the slider or enter a number to see your annual cost instantly.' : 'Drag the slider or enter a number to see your monthly cost instantly.'"></p>
 
@@ -339,7 +338,7 @@
         <!-- ============================================
              PRICING CARDS
              ============================================ -->
-        <div class="pricing-grid" data-aos="fade-up" data-aos-delay="150">
+        <div class="pricing-grid" data-reveal data-reveal-delay="150">
 
           <!-- Free Plan -->
           <div class="pricing-card">
@@ -518,13 +517,13 @@
          ============================================ -->
     <section class="section section-gray" aria-labelledby="comparison-heading">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Compare</span>
           <h2 id="comparison-heading">Full Feature Comparison</h2>
           <p>See exactly what is included in each plan.</p>
         </div>
 
-        <div class="feature-table-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-table-wrapper" data-reveal data-reveal-delay="100">
           <table class="feature-table">
             <thead>
               <tr>
@@ -776,13 +775,13 @@
          ============================================ -->
     <section class="section" aria-labelledby="bolt-on-heading">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Add-Ons</span>
           <h2 id="bolt-on-heading">Bolt-On Services</h2>
           <p>Additional services to help your agency thrive. All coming soon — register your interest and we will notify you at launch.</p>
         </div>
 
-        <div class="bolt-on-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="bolt-on-grid" data-reveal data-reveal-delay="100">
 
           <div class="bolt-on-card">
             <div class="bolt-on-icon">
@@ -847,7 +846,7 @@
          ============================================ -->
     <section class="section section-gray" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">FAQ</span>
           <h2 id="faq-heading">Frequently Asked Questions</h2>
           <p>Everything you need to know about our plans and billing.</p>
@@ -936,9 +935,9 @@
          ============================================ -->
     <section class="cta-section" aria-labelledby="pricing-cta-heading">
       <div class="container">
-        <h2 id="pricing-cta-heading" data-aos="fade-up">Ready to Get Started?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Sign up in under two minutes. No credit card required, no sales calls. Just start managing care.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 id="pricing-cta-heading" data-reveal>Ready to Get Started?</h2>
+        <p data-reveal data-reveal-delay="100">Sign up in under two minutes. No credit card required, no sales calls. Just start managing care.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Start Free</a>
           <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Us</a>
         </div>
@@ -1035,7 +1034,6 @@
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Page Scripts -->
   <script>
@@ -1073,8 +1071,6 @@
     });
 
     // AOS Init
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
-
     // Skip link
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();

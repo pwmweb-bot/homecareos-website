@@ -37,10 +37,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
   <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -85,6 +83,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -145,7 +144,7 @@
     <!-- ============================================
          TERMS & CONDITIONS CONTENT
          ============================================ -->
-    <section class="section" data-aos="fade-up">
+    <section class="section" data-reveal>
       <div class="container">
         <div class="legal-content">
 
@@ -401,7 +400,6 @@
        SCRIPTS
        ============================================ -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
     // Sticky nav scroll shadow
@@ -438,8 +436,6 @@
     });
 
     // AOS Init
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
-
     // Skip link
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();

@@ -32,8 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260505"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260507"><noscript></noscript><!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -84,6 +83,7 @@
 }
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
 
@@ -136,7 +136,7 @@
     <!-- VS Hero -->
     <section class="section" aria-label="Brand comparison">
       <div class="container">
-        <div class="compare-hero" data-aos="fade-up">
+        <div class="compare-hero" data-reveal>
           <div class="compare-brand">
             <div class="brand-name">homecare<span>OS</span></div>
             <p>Purpose-built for UK home care. Free forever.</p>
@@ -153,12 +153,12 @@
     <!-- Key Advantages -->
     <section class="section section-gray" aria-label="Key advantages">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Why Home Care Agencies Choose homecareOS</span>
           <h2>6 Key Advantages Over PCS</h2>
           <p>PCS built their reputation in residential care. Their domiciliary module is an extension, not the core product. Here's where homecareOS pulls ahead.</p>
         </div>
-        <div class="compare-advantages" data-aos="fade-up">
+        <div class="compare-advantages" data-reveal>
           <div class="advantage-card">
             <span class="advantage-badge">Architecture</span>
             <h4>Purpose-Built for Dom Care</h4>
@@ -196,12 +196,12 @@
     <!-- Feature Table -->
     <section class="section" aria-label="Feature comparison table">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">Feature by Feature</span>
           <h2>Detailed Comparison</h2>
           <p>A transparent, side-by-side look at what each platform offers for home care agencies.</p>
         </div>
-        <div class="compare-table-wrapper" data-aos="fade-up">
+        <div class="compare-table-wrapper" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -277,11 +277,11 @@
     <!-- About PCS -->
     <section class="section section-gray" aria-label="About Person Centred Software">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header" data-reveal>
           <span class="label">About the Competitor</span>
           <h2>Who Are Person Centred Software?</h2>
         </div>
-        <div data-aos="fade-up" style="max-width:720px;margin:0 auto">
+        <div data-reveal style="max-width:720px;margin:0 auto">
           <p style="margin-bottom:16px;color:var(--gray-600)">Person Centred Software (PCS) is the market leader in residential care technology, trusted by over 6,000 care homes across the UK. Their Connected Care Platform covers digital care planning, eMAR, and compliance — primarily designed for residential and nursing home settings.</p>
           <p style="margin-bottom:16px;color:var(--gray-600)">PCS also offers an eLearning platform and runs weekly webinars. They are NHS Assured and have a training portal for onboarding, though their public-facing help centre is more limited compared to some competitors.</p>
           <p style="color:var(--gray-600)">Their domiciliary care offering exists but is secondary to their residential focus. For agencies whose entire operation is community-based home care, a purpose-built platform like homecareOS is a stronger fit.</p>
@@ -292,9 +292,9 @@
     <!-- CTA -->
     <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-aos="fade-up">Ready to See the Difference?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Book a personalised demo and we'll show you exactly how homecareOS outperforms PCS for domiciliary care.</p>
-        <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <h2 data-reveal>Ready to See the Difference?</h2>
+        <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly how homecareOS outperforms PCS for domiciliary care.</p>
+        <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a Free Demo</a>
           <a href="compare.html" class="btn btn-ghost">See All Comparisons</a>
         </div>
@@ -368,7 +368,6 @@
     </div>
   </div>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
@@ -397,7 +396,6 @@
         });
       }
     });
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();
