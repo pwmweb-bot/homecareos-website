@@ -10,6 +10,11 @@
   RewriteRule ^index\.html$ / [R=301,L]
 </IfModule>
 
+# --- Legacy URL redirects ---
+# Old generic migration page (still ghost-indexed by Google but returns 404).
+# Consolidated into the per-competitor compare-* pages; redirect to compare hub.
+Redirect 301 /home-care-software-migration.html /compare.html
+
 # --- Security headers ---
 <IfModule mod_headers.c>
   # HSTS — force HTTPS for 1 year, include subdomains, preload-eligible
