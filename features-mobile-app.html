@@ -93,11 +93,12 @@
 }
 </script>
 
-<!-- MobileApplication schema — homecareOS Carer iOS app -->
+<!-- MobileApplication schema — homecareOS Carer iOS app (linked to homepage @id graph) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
+  "@id": "https://www.homecareos.co.uk/#carer-app",
   "name": "homecareOS Carer",
   "applicationCategory": "HealthApplication",
   "applicationSubCategory": "Domiciliary care worker app",
@@ -111,10 +112,11 @@
     "price": "0",
     "priceCurrency": "GBP"
   },
+  "isPartOf": {
+    "@id": "https://www.homecareos.co.uk/#software"
+  },
   "publisher": {
-    "@type": "Organization",
-    "name": "homecareOS",
-    "url": "https://www.homecareos.co.uk"
+    "@id": "https://www.homecareos.co.uk/#organization"
   }
 }
 </script>
