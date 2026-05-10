@@ -277,7 +277,7 @@
   ]
 }
 </script><noscript><noscript></noscript></noscript><!-- Preload LCP image -->
-<link rel="preload" as="image" href="images/photos/observations.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/photos/observations-390.webp" imagesrcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" fetchpriority="high">
 <!-- Google tag (gtag.js) — with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2 — default all to denied. cookie-consent.js updates after user chooses.
@@ -291,10 +291,25 @@
     'wait_for_update': 500
   });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
+  // Lazy-load GTM on first interaction or 5s idle (mobile LCP optimization).
+  // Consent Mode v2 defaults are already set above; this just defers the
+  // actual gtag/js fetch out of the critical render path.
   gtag('js', new Date());
-  gtag('config', 'G-6GD4NJK9LZ');
+  var __gtmLoaded = false;
+  function __loadGTM() {
+    if (__gtmLoaded) return;
+    __gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
+    s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
+    document.head.appendChild(s);
+  }
+  ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
+    window.addEventListener(e, __loadGTM, { once: true, passive: true });
+  });
+  setTimeout(__loadGTM, 5000);
 </script>
 <script src="/cookie-consent.js?v=20260429" defer></script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
@@ -363,10 +378,10 @@
                 <img src="images/photos/dashboard.webp" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860">
               </div>
               <div class="hero-phone hero-phone-1">
-                <img src="images/photos/observations.webp" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" fetchpriority="high">
+                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" fetchpriority="high">
               </div>
               <div class="hero-phone hero-phone-2">
-                <img src="images/photos/pay.webp" alt="homecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="lazy">
+                <img src="images/photos/pay-390.webp" srcset="images/photos/pay-390.webp 1x, images/photos/pay.webp 2x" alt="homecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="lazy">
               </div>
             </div>
           </div>
@@ -768,7 +783,7 @@
             </div>
           </div>
           <div class="feature-image feature-image-phone" data-reveal>
-            <img src="images/photos/visits.webp" alt="homecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
+            <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="homecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
           </div>
         </div>
       </div>

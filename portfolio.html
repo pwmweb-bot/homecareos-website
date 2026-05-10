@@ -71,10 +71,25 @@
     'wait_for_update': 500
   });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
+  // Lazy-load GTM on first interaction or 5s idle (mobile LCP optimization).
+  // Consent Mode v2 defaults are already set above; this just defers the
+  // actual gtag/js fetch out of the critical render path.
   gtag('js', new Date());
-  gtag('config', 'G-6GD4NJK9LZ');
+  var __gtmLoaded = false;
+  function __loadGTM() {
+    if (__gtmLoaded) return;
+    __gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
+    s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
+    document.head.appendChild(s);
+  }
+  ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
+    window.addEventListener(e, __loadGTM, { once: true, passive: true });
+  });
+  setTimeout(__loadGTM, 5000);
 </script>
 <script src="/cookie-consent.js?v=20260429" defer></script>
 

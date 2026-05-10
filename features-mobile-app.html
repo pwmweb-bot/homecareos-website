@@ -55,10 +55,25 @@
     'wait_for_update': 500
   });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
+  // Lazy-load GTM on first interaction or 5s idle (mobile LCP optimization).
+  // Consent Mode v2 defaults are already set above; this just defers the
+  // actual gtag/js fetch out of the critical render path.
   gtag('js', new Date());
-  gtag('config', 'G-6GD4NJK9LZ');
+  var __gtmLoaded = false;
+  function __loadGTM() {
+    if (__gtmLoaded) return;
+    __gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
+    s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
+    document.head.appendChild(s);
+  }
+  ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
+    window.addEventListener(e, __loadGTM, { once: true, passive: true });
+  });
+  setTimeout(__loadGTM, 5000);
 </script>
 <script src="/cookie-consent.js?v=20260429" defer></script>
 <script type="application/ld+json">
@@ -184,7 +199,7 @@
             <p>Most care software treats the mobile app as an afterthought — a stripped-down version of the desktop built to tick a box. homecareOS was different from day one. We built the carer mobile experience as a core part of the platform, designed around how carers actually work in the field: one-handed, between visits, often with patchy signal. The result is an app your carers will genuinely want to use.</p>
           </div>
           <div class="feature-hero-visual has-phone">
-            <img src="images/photos/observations.webp" alt="homecareOS mobile app visit screen showing Check In, Tasks, Medications, Observations, Body Map, Photos and Goals" width="390" height="844" loading="lazy">
+            <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="homecareOS mobile app visit screen showing Check In, Tasks, Medications, Observations, Body Map, Photos and Goals" width="390" height="844" loading="lazy">
           </div>
         </div>
       </div>
@@ -244,12 +259,12 @@
             <div class="phone-gallery-phone">
               <div class="phone-gallery-images">
                 <img src="images/photos/visitinfo.webp" alt="Visit details with navigation and key safe access" class="phone-gallery-img active" data-index="0" width="390" height="844">
-                <img src="images/photos/observations.webp" alt="Visit actions: Check In, Tasks, Medications, Observations, Body Map" class="phone-gallery-img" data-index="1" width="390" height="844" loading="lazy">
+                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="Visit actions: Check In, Tasks, Medications, Observations, Body Map" class="phone-gallery-img" data-index="1" width="390" height="844" loading="lazy">
                 <img src="images/photos/obs.webp" alt="Observation types including Bristol Stool, Fluid Intake, Vital Signs" class="phone-gallery-img" data-index="2" width="390" height="844" loading="lazy">
                 <img src="images/photos/bodymap.webp" alt="Body map recording with front and back views" class="phone-gallery-img" data-index="3" width="390" height="844" loading="lazy">
                 <img src="images/photos/goals.webp" alt="Care goals with progress tracking and targets" class="phone-gallery-img" data-index="4" width="390" height="844" loading="lazy">
-                <img src="images/photos/pay.webp" alt="Pay dashboard showing projected gross pay and rate breakdown" class="phone-gallery-img" data-index="5" width="390" height="844" loading="lazy">
-                <img src="images/photos/messaging.webp" alt="In-app messaging between carer and coordinator" class="phone-gallery-img" data-index="6" width="390" height="844" loading="lazy">
+                <img src="images/photos/pay-390.webp" srcset="images/photos/pay-390.webp 1x, images/photos/pay.webp 2x" alt="Pay dashboard showing projected gross pay and rate breakdown" class="phone-gallery-img" data-index="5" width="390" height="844" loading="lazy">
+                <img src="images/photos/messaging-390.webp" srcset="images/photos/messaging-390.webp 1x, images/photos/messaging.webp 2x" alt="In-app messaging between carer and coordinator" class="phone-gallery-img" data-index="6" width="390" height="844" loading="lazy">
                 <img src="images/photos/holiday.webp" alt="Leave requests with status tracking" class="phone-gallery-img" data-index="7" width="390" height="844" loading="lazy">
               </div>
             </div>

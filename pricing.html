@@ -12,14 +12,14 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#16323D">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing Plans — homecareOS | Home Care Software</title>
-  <meta name="description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
+  <title>Home Care Software Cost UK 2026 — From £7/Staff/Month | homecareOS</title>
+  <meta name="description" content="How much does home care software cost in the UK? Free for agencies up to 5 staff, then £7/staff/month (Start) or £10/staff/month (Pro with AI rota builder). No setup fees, no contracts, no credit card to start.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.homecareos.co.uk/pricing.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Pricing Plans — homecareOS | Home Care Software">
-  <meta property="og:description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
+  <meta property="og:title" content="Home Care Software Cost UK 2026 — From £7/Staff/Month">
+  <meta property="og:description" content="How much does home care software cost in the UK? Free for agencies up to 5 staff, then £7/staff/month (Start) or £10/staff/month (Pro with AI rota builder). No setup fees, no contracts.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/pricing.html">
   <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/rota.png">
@@ -31,8 +31,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pricing Plans — homecareOS | Home Care Software">
-  <meta name="twitter:description" content="Get started for free with up to 5 staff and 25 service users. When you grow, simple per-staff pricing from £7/month. No credit card required.">
+  <meta name="twitter:title" content="Home Care Software Cost UK 2026 — From £7/Staff/Month">
+  <meta name="twitter:description" content="Free for up to 5 staff. Then £7/staff/month (Start) or £10/staff/month (Pro with AI rota builder). No setup fees, no contracts.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/rota.png">
 
   <!-- Google Fonts -->
@@ -71,10 +71,25 @@
     'wait_for_update': 500
   });
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ"></script>
 <script>
+  // Lazy-load GTM on first interaction or 5s idle (mobile LCP optimization).
+  // Consent Mode v2 defaults are already set above; this just defers the
+  // actual gtag/js fetch out of the critical render path.
   gtag('js', new Date());
-  gtag('config', 'G-6GD4NJK9LZ');
+  var __gtmLoaded = false;
+  function __loadGTM() {
+    if (__gtmLoaded) return;
+    __gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
+    s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
+    document.head.appendChild(s);
+  }
+  ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
+    window.addEventListener(e, __loadGTM, { once: true, passive: true });
+  });
+  setTimeout(__loadGTM, 5000);
 </script>
 <script src="/cookie-consent.js?v=20260429" defer></script>
 
