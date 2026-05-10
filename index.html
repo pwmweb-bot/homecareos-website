@@ -37,12 +37,12 @@
   <meta name="twitter:image:alt" content="homecareOS — UK home care management software">
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/dmsans.css?v=20260510">
+  <noscript><link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/dmsans.css?v=20260510"></noscript>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=20260507">
@@ -1023,8 +1023,6 @@
         gsap.from('.hero-actions', { opacity: 0, y: 30, duration: 1, delay: 0.4, ease: 'power3.out' });
         gsap.from('.hero-visual', { opacity: 0, x: 60, duration: 1.2, delay: 0.3, ease: 'power3.out' });
       }
-
-      // AOS Init — must wait for deferred AOS script
     });
 
     // Skip link
