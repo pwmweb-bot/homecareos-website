@@ -1,0 +1,47 @@
+{
+  "title": "Compliance & Regulation \u2014 homecareOS | CQC, CIW, Care Inspectorate & RQIA",
+  "meta_description": "Stay inspection-ready every day with homecareOS. Built-in compliance for CQC, CIW, Care Inspectorate and RQIA \u2014 PIR auto-generation, scheduled audits, incident management and self-assessments.",
+  "canonical": "https://www.homecareos.co.uk/features-compliance.html",
+  "robots_meta": "index, follow",
+  "h1": "Home Care Compliance for CQC, CIW, Care Inspectorate &amp; RQIA",
+  "h2s": [
+    "Stop Preparing for Inspections. Be Ready Always.",
+    "Compliance That Works With You, Not Against You",
+    "Complete Regulatory Toolkit",
+    "The Cost of Compliance Failures",
+    "Be Inspection-Ready from Day One",
+    "Compare homecareOS to your current software"
+  ],
+  "schema_types": [
+    "Organization",
+    "ListItem",
+    "WebPage",
+    "BreadcrumbList"
+  ],
+  "og_tags": {
+    "og:title": "Compliance & Regulation \u2014 homecareOS | CQC, CIW, Care Inspectorate & RQIA",
+    "og:description": "Stay inspection-ready every day with homecareOS. Built-in compliance for all four UK nations.",
+    "og:type": "website",
+    "og:url": "https://www.homecareos.co.uk/features-compliance.html",
+    "og:locale": "en_GB",
+    "og:site_name": "homecareOS",
+    "og:image": "https://www.homecareos.co.uk/images/photos/rota.png",
+    "og:image:width": "1650",
+    "og:image:height": "976",
+    "og:image:alt": "The homecareOS rota grid \u2014 a week of visit blocks for a UK home care agency, with carers down the left and visits across"
+  },
+  "content_hash": "cc5cc33a448e0c6e328b94e6753dd8a87fdafe570061f5dd9ee7a727453e02ac",
+  "domiciliary_keyword_hits": {
+    "domiciliary": 2,
+    "home care": 4,
+    "care at home": 1
+  },
+  "residential_keyword_hits": {
+    "care home": 2,
+    "residential care": 1,
+    "nursing home": 1
+  },
+  "url": "https://www.homecareos.co.uk/features-compliance.html",
+  "captured_at": "2026-05-10T00:00:00Z",
+  "baseline_note": "Post content/schema change designed to repel residential care home queries and reinforce domiciliary/home care positioning. Compare in ~4 weeks."
+}

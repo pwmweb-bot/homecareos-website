@@ -15,6 +15,11 @@
 # Consolidated into the per-competitor compare-* pages; redirect to compare hub.
 Redirect 301 /home-care-software-migration.html /compare.html
 
+# Old onboarding landing (duplicate of /start.html — same intent, weaker copy,
+# broken canonical). Consolidate signal to /start.html.
+Redirect 301 /onboard.html /start.html
+Redirect 301 /onboard /start.html
+
 # --- Security headers ---
 <IfModule mod_headers.c>
   # HSTS — force HTTPS for 1 year, include subdomains, preload-eligible

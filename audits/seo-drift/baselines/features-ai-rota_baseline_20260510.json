@@ -1,0 +1,46 @@
+{
+  "title": "AI Rota Builder \u2014 homecareOS | AI-Powered Home Care Scheduling",
+  "meta_description": "Let AI build your perfect rota in seconds. The homecareOS AI Rota Builder considers distance, continuity, qualifications and carer preferences to create optimal schedules.",
+  "canonical": "https://www.homecareos.co.uk/features-ai-rota.html",
+  "robots_meta": "index, follow",
+  "h1": "AI Rota Builder for Home Care Visits",
+  "h2s": [
+    "What Takes You Hours, AI Does in Seconds",
+    "How AI Transforms Your Scheduling",
+    "Under the Hood",
+    "Manual vs AI Rota Building",
+    "Ready to Let AI Handle Your Rota?",
+    "Compare homecareOS to your current software"
+  ],
+  "schema_types": [
+    "Organization",
+    "ListItem",
+    "WebPage",
+    "BreadcrumbList"
+  ],
+  "og_tags": {
+    "og:title": "AI Rota Builder \u2014 homecareOS | AI-Powered Home Care Scheduling",
+    "og:description": "Let AI build your perfect rota in seconds. Considers distance, continuity, qualifications and carer preferences to create optimal schedules.",
+    "og:type": "website",
+    "og:url": "https://www.homecareos.co.uk/features-ai-rota.html",
+    "og:locale": "en_GB",
+    "og:site_name": "homecareOS",
+    "og:image": "https://www.homecareos.co.uk/images/photos/rota.png",
+    "og:image:width": "1650",
+    "og:image:height": "976",
+    "og:image:alt": "The homecareOS rota grid \u2014 a week of visit blocks for a UK home care agency, with carers down the left and visits across"
+  },
+  "content_hash": "d353516003b7ef980bdf47c795f8bc2df01166a2baad263c283be762fb660cc7",
+  "domiciliary_keyword_hits": {
+    "domiciliary": 1,
+    "home care": 4
+  },
+  "residential_keyword_hits": {
+    "care home": 2,
+    "residential care": 1,
+    "nursing home": 1
+  },
+  "url": "https://www.homecareos.co.uk/features-ai-rota.html",
+  "captured_at": "2026-05-10T00:00:00Z",
+  "baseline_note": "Post content/schema change designed to repel residential care home queries and reinforce domiciliary/home care positioning. Compare in ~4 weeks."
+}
