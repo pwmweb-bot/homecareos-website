@@ -1,24 +1,31 @@
-# --- Canonical redirects ---
-# /index.html -> / so we don't have duplicate canonicals indexed.
-# 20i terminates SSL at the LB so %{HTTPS} doesn't reflect the real request
-# protocol; we rely on 20i's built-in HTTPS+www canonicalisation for those
-# rather than custom rules (previous attempt at combined HTTPS/www caused
-# a self-redirect loop on / because %{HTTPS} was always "off" at Apache).
+# --- Canonical host + redirects ---
+# 20i terminates SSL at the LB, so %{HTTPS} reads "off" at Apache and any rule
+# that branches on it self-redirect-loops. We avoid %{HTTPS} entirely:
+#   - the host rule matches only the bare apex (Host header passes through the
+#     LB intact) and hardcodes the https://www target, so it fires at most once
+#     and can't loop.
+#   - every redirect target below is an absolute https://www URL, which also
+#     fixes the previous insecure http:// Location hop the mod_alias `Redirect`
+#     directive emitted (Apache built it from its wrong notion of scheme).
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Canonical host: non-www apex -> www (single hop, hardcoded https, loop-safe)
+  RewriteCond %{HTTP_HOST} ^homecareos\.co\.uk$ [NC]
+  RewriteRule ^(.*)$ https://www.homecareos.co.uk/$1 [R=301,L]
+
+  # /index.html -> / (absolute target so it can't land on http:// or non-www)
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html(\?.*)?\ HTTP
-  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^index\.html$ https://www.homecareos.co.uk/ [R=301,L]
+
+  # --- Legacy URL redirects (explicit https://www targets — no insecure hop) ---
+  # Old generic migration page (ghost-indexed, returns 404). -> compare hub.
+  RewriteRule ^home-care-software-migration\.html$ https://www.homecareos.co.uk/compare.html [R=301,L]
+
+  # Old onboarding landing (duplicate of /start.html, weaker copy). -> /start.html.
+  RewriteRule ^onboard\.html$ https://www.homecareos.co.uk/start.html [R=301,L]
+  RewriteRule ^onboard/?$ https://www.homecareos.co.uk/start.html [R=301,L]
 </IfModule>
-
-# --- Legacy URL redirects ---
-# Old generic migration page (still ghost-indexed by Google but returns 404).
-# Consolidated into the per-competitor compare-* pages; redirect to compare hub.
-Redirect 301 /home-care-software-migration.html /compare.html
-
-# Old onboarding landing (duplicate of /start.html — same intent, weaker copy,
-# broken canonical). Consolidate signal to /start.html.
-Redirect 301 /onboard.html /start.html
-Redirect 301 /onboard /start.html
 
 # --- Security headers ---
 <IfModule mod_headers.c>
