@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>homecareOS — Experience (prototype)</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon-light.svg">
+  <style>
+    :root{
+      --navy:#0a0a14; --ink:#16323D; --amber:#F59E0B; --green:#1D9E75; --blue:#378ADD;
+      --paper:#F5F1E8; --paper-ink:#2a2a28;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{background:#0a0a14;color:#fff;font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    canvas{display:block}
+
+    /* Fixed 3D layer */
+    #stage{position:fixed;inset:0;z-index:1}
+
+    /* Loader */
+    #loader{position:fixed;inset:0;z-index:60;background:#0a0a14;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .8s ease;}
+    #loader.hidden{opacity:0;pointer-events:none}
+    .ldr-mark{font-weight:600;letter-spacing:.02em;font-size:1.4rem;opacity:.9}
+    .ldr-mark span{color:var(--amber)}
+    .ldr-bar{width:160px;height:2px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden}
+    .ldr-fill{height:100%;width:0;background:var(--amber);transition:width .3s ease}
+
+    /* Audio gate */
+    #gate{position:fixed;inset:0;z-index:55;background:rgba(10,10,20,.86);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:28px;text-align:center;padding:24px;transition:opacity .6s ease}
+    #gate.hidden{opacity:0;pointer-events:none}
+    #gate h1{font-weight:300;font-size:clamp(1.6rem,5vw,2.6rem);letter-spacing:-.01em;line-height:1.2}
+    #gate h1 b{font-weight:600}
+    #gate p{opacity:.55;font-size:.95rem;max-width:340px;line-height:1.6}
+    .gate-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+    .gbtn{cursor:pointer;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;padding:14px 26px;border-radius:999px;font-size:.95rem;font-family:inherit;transition:all .25s ease;display:inline-flex;align-items:center;gap:9px}
+    .gbtn:hover{border-color:var(--amber);background:rgba(245,158,11,.08)}
+    .gbtn.primary{background:var(--amber);color:#1a1a14;border-color:var(--amber);font-weight:500}
+    .gbtn.primary:hover{filter:brightness(1.08)}
+
+    /* Mute toggle */
+    #mute{position:fixed;top:18px;right:18px;z-index:40;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(10,10,20,.4);color:#fff;display:none;align-items:center;justify-content:center;font-size:1rem;transition:all .2s ease}
+    #mute:hover{border-color:var(--amber)}
+    #mute.show{display:flex}
+
+    /* Scroll content */
+    #scroll{position:relative;z-index:10;pointer-events:none}
+    .beat{height:100vh;display:flex;align-items:center;padding:0 8vw}
+    .beat .copy{max-width:520px;opacity:0;transform:translateY(20px);transition:opacity .5s ease, transform .5s ease}
+    .beat.active .copy{opacity:1;transform:none}
+    .beat.right{justify-content:flex-end;text-align:right}
+    .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;font-weight:500}
+    .beat h2{font-weight:300;font-size:clamp(1.9rem,4.6vw,3.4rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:18px}
+    .beat h2 b{font-weight:600}
+    .beat p{font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.65;color:rgba(255,255,255,.66);max-width:440px}
+    .beat.right p{margin-left:auto}
+    .scrollcue{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:12;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .5s}
+    .scrollcue .line{width:1px;height:30px;background:linear-gradient(rgba(255,255,255,.5),transparent);animation:cue 1.8s ease-in-out infinite}
+    @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.3}50%{transform:scaleY(1);opacity:.8}}
+
+    /* CTA — warm paper resolve */
+    #cta{position:relative;z-index:10;background:var(--paper);color:var(--paper-ink);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;pointer-events:auto}
+    #cta .inner{max-width:640px}
+    #cta .mark{font-weight:600;font-size:1.1rem;margin-bottom:28px;letter-spacing:.01em}
+    #cta .mark span{color:var(--amber)}
+    #cta h2{font-family:'Source Serif 4',Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+    #cta p{font-size:1.1rem;line-height:1.6;color:#55524b;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+    .cbtn{cursor:pointer;padding:15px 32px;border-radius:999px;font-size:1rem;text-decoration:none;font-weight:500;transition:all .2s ease;display:inline-block}
+    .cbtn.primary{background:var(--ink);color:var(--paper)}
+    .cbtn.primary:hover{filter:brightness(1.15)}
+    .cbtn.ghost{border:1px solid rgba(0,0,0,.2);color:var(--paper-ink)}
+    .cbtn.ghost:hover{border-color:var(--ink)}
+    #replay{cursor:pointer;background:none;border:none;color:#8a857c;font-size:.85rem;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+    .proto-tag{position:fixed;left:14px;bottom:12px;z-index:45;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);pointer-events:none}
+  </style>
+</head>
+<body>
+
+  <div id="stage"></div>
+
+  <div id="scroll">
+    <section class="beat" data-beat="0"><div class="copy">
+      <div class="eyebrow">homecareOS</div>
+      <h2>The operating system for <b>UK home care</b>.</h2>
+      <p>Scroll to boot it up.</p>
+    </div></section>
+    <section class="beat right" data-beat="1"><div class="copy">
+      <div class="eyebrow">One platform</div>
+      <h2>Everything an agency runs on — <b>assembled</b>.</h2>
+      <p>Scheduling, care records, compliance, a carer app and AI, in one connected system.</p>
+    </div></section>
+    <section class="beat" data-beat="2"><div class="copy">
+      <div class="eyebrow">The rota</div>
+      <h2>Every visit, every carer, <b>one screen</b>.</h2>
+      <p>Drag-and-drop scheduling built for 80 carers and 480 visits a day.</p>
+    </div></section>
+    <section class="beat right" data-beat="3"><div class="copy">
+      <div class="eyebrow">AI cover finder</div>
+      <h2>A carer calls in sick. The AI finds <b>cover</b> first.</h2>
+      <p>Scored on distance, continuity, hours, preference and fit — before the kettle's boiled.</p>
+    </div></section>
+    <section class="beat" data-beat="4"><div class="copy">
+      <div class="eyebrow">Four-nation compliance</div>
+      <h2>CQC. CIW. Care Inspectorate. <b>RQIA</b>.</h2>
+      <p>Built for all four UK nations. Most platforms stop at England.</p>
+    </div></section>
+    <section class="beat right" data-beat="5"><div class="copy">
+      <div class="eyebrow">The carer's app</div>
+      <h2>Check in. Record care. Sign meds. <b>Even offline</b>.</h2>
+      <p>For the carer on the doorstep — GPS check-in, notes, eMAR and pay transparency.</p>
+    </div></section>
+    <section class="beat" data-beat="6"><div class="copy">
+      <div class="eyebrow">Everything connects</div>
+      <h2>One visit. The family sees it. The office sees it. <b>The evidence is filed</b>.</h2>
+      <p>The whole network, talking to itself — in real time.</p>
+    </div></section>
+    <section class="beat" data-beat="7"><div class="copy"></div></section>
+  </div>
+
+  <div class="scrollcue" id="scrollcue"><span>scroll</span><span class="line"></span></div>
+
+  <section id="cta"><div class="inner">
+    <div class="mark">homecare<span>OS</span></div>
+    <h2>The home care platform that doesn't look like 2010.</h2>
+    <p>Free for up to 5 active carers. Four-nation compliance. AI-native. No card, no demo call.</p>
+    <div class="cta-btns">
+      <a class="cbtn primary" href="https://app.homecareos.co.uk">Start free</a>
+      <a class="cbtn ghost" href="/pricing.html">See pricing</a>
+    </div>
+    <button id="replay">↻ Replay the experience</button>
+  </div></section>
+
+  <button id="mute" aria-label="Toggle sound"><span id="muteicon">♪</span></button>
+  <div class="proto-tag">Prototype · Phase 1</div>
+
+  <div id="gate">
+    <h1>This is an <b>experience</b>.<br>Best with sound on.</h1>
+    <p>A 90-second flight through homecareOS. Headphones recommended.</p>
+    <div class="gate-btns">
+      <button class="gbtn primary" id="enterSound">▶ Enter with sound</button>
+      <button class="gbtn" id="enterMuted">Continue muted</button>
+    </div>
+  </div>
+
+  <div id="loader">
+    <div class="ldr-mark">homecare<span>OS</span></div>
+    <div class="ldr-bar"><div class="ldr-fill" id="ldrfill"></div></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ---------- Three.js scene ----------
+    var stage = document.getElementById('stage');
+    var scene = new THREE.Scene();
+    var DARK = new THREE.Color('#0a0a14'), PAPER = new THREE.Color('#F5F1E8');
+    scene.background = DARK.clone();
+    scene.fog = new THREE.Fog(DARK.clone(), 6, 26);
+
+    var camera = new THREE.PerspectiveCamera(48, window.innerWidth/window.innerHeight, 0.1, 100);
+    camera.position.set(0, 0, 9);
+    var look = new THREE.Vector3(0, 0, 0);
+
+    var renderer = new THREE.WebGLRenderer({antialias:true, alpha:false, powerPreference:'high-performance'});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    stage.appendChild(renderer.domElement);
+
+    // ---------- Panels ----------
+    // pos = resting position; accent for rim glow
+    var L = 1400/828; // landscape ratio
+    var P = 780/1695; // portrait ratio
+    var PANELS = [
+      {key:'rota', tex:'images/photos/rota.webp', w:3.6, h:3.6/L, pos:[0,0.25,0], rot:[0,0,0], accent:'#1D9E75'},
+      {key:'map', tex:'images/photos/mapping.webp', w:3.2, h:3.2/L, pos:[4.3,0.8,-1.2], rot:[0,-0.32,0], accent:'#F59E0B'},
+      {key:'comp', tex:'images/photos/compliance.webp', w:3.2, h:3.2/L, pos:[-4.3,0.55,-1.6], rot:[0,0.32,0], accent:'#378ADD'},
+      {key:'phone', tex:'images/photos/visits.webp', w:3.0*P, h:3.0, pos:[2.1,-1.25,1.7], rot:[0,-0.18,0], accent:'#1D9E75'},
+      {key:'dash', tex:'images/photos/dashboard.webp', w:3.0, h:3.0/L, pos:[-2.2,-1.2,-0.4], rot:[0,0.2,0], accent:'#F59E0B'}
+    ];
+
+    var loader = new THREE.TextureLoader();
+    var groups = {}; var loaded = 0; var rims = [];
+    var fill = document.getElementById('ldrfill');
+
+    function makePanel(cfg){
+      var g = new THREE.Group();
+      g.position.set(cfg.pos[0], cfg.pos[1], cfg.pos[2]);
+      g.rotation.set(cfg.rot[0], cfg.rot[1], cfg.rot[2]);
+      g.userData = {base:cfg.pos.slice(), baseRotY:cfg.rot[1], phase:Math.random()*6.28};
+      // rim glow (behind)
+      var rimMat = new THREE.MeshBasicMaterial({color:new THREE.Color(cfg.accent), transparent:true, opacity:0.32, blending:THREE.AdditiveBlending, depthWrite:false});
+      var rim = new THREE.Mesh(new THREE.PlaneGeometry(cfg.w+0.16, cfg.h+0.16), rimMat);
+      rim.position.z = -0.03;
+      g.add(rim); rims.push(rimMat);
+      // main panel
+      var mat = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, opacity:0.0, depthWrite:true});
+      var mesh = new THREE.Mesh(new THREE.PlaneGeometry(cfg.w, cfg.h), mat);
+      g.add(mesh);
+      g.userData.mat = mat; g.userData.rimMat = rimMat;
+      g.scale.setScalar(0.001);
+      loader.load(cfg.tex, function(t){
+        t.colorSpace = THREE.SRGBColorSpace;
+        mat.map = t; mat.opacity = 0.94; mat.needsUpdate = true;
+        loaded++; fill.style.width = Math.round(loaded/PANELS.length*100)+'%';
+        if(loaded === PANELS.length) ready();
+      }, undefined, function(){ loaded++; if(loaded===PANELS.length) ready(); });
+      scene.add(g);
+      return g;
+    }
+    PANELS.forEach(function(c){ groups[c.key] = makePanel(c); });
+
+    // boot pulse
+    var bootMat = new THREE.MeshBasicMaterial({color:new THREE.Color('#F59E0B'), transparent:true, opacity:0.9, blending:THREE.AdditiveBlending, depthWrite:false});
+    var boot = new THREE.Mesh(new THREE.PlaneGeometry(0.5,0.5), bootMat);
+    boot.position.set(0,0.25,1.2); scene.add(boot);
+
+    // connection lines (revealed at beat 6)
+    var lineMats = [];
+    function connect(a,b,color){
+      var pa = groups[a].position, pb = groups[b].position;
+      var geo = new THREE.BufferGeometry().setFromPoints([pa.clone(), pb.clone()]);
+      var m = new THREE.LineBasicMaterial({color:new THREE.Color(color), transparent:true, opacity:0, blending:THREE.AdditiveBlending});
+      scene.add(new THREE.Line(geo, m)); lineMats.push(m);
+    }
+    function buildLines(){
+      connect('phone','dash','#1D9E75'); connect('dash','rota','#F59E0B');
+      connect('rota','map','#F59E0B'); connect('rota','comp','#378ADD');
+      connect('phone','rota','#1D9E75');
+    }
+
+    // ---------- Camera keyframes per beat ----------
+    var KF = [
+      {p:[0,0.25,9], l:[0,0.25,0]},      // 0 boot
+      {p:[0,0.4,11.5], l:[0,0.2,0]},     // 1 assemble (pull back)
+      {p:[0,0.25,4.0], l:[0,0.25,0]},    // 2 rota
+      {p:[4.3,0.8,2.4], l:[4.3,0.8,-1.2]},// 3 map / cover
+      {p:[-4.3,0.55,2.0], l:[-4.3,0.55,-1.6]},// 4 compliance
+      {p:[2.1,-1.25,4.5], l:[2.1,-1.25,1.7]}, // 5 phone
+      {p:[0,0.6,12.5], l:[0,-0.1,0]},    // 6 connect (wide)
+      {p:[0,0.3,11], l:[0,0,0]}          // 7 resolve hold
+    ];
+    if(isMobile){ KF.forEach(function(k){ k.p[2]*=1.18; }); } // pull camera back on mobile
+
+    // ---------- Master scroll timeline ----------
+    var resolve = {t:0};
+    function ready(){
+      buildLines();
+      document.getElementById('loader').classList.add('hidden');
+      var camPos = {x:KF[0].p[0],y:KF[0].p[1],z:KF[0].p[2]};
+      var camLook = {x:KF[0].l[0],y:KF[0].l[1],z:KF[0].l[2]};
+
+      var tl = gsap.timeline({scrollTrigger:{trigger:'#scroll', start:'top top', end:'bottom bottom', scrub:0.7}});
+      for(var i=1;i<KF.length;i++){
+        var t = i-1;
+        tl.to(camPos, {x:KF[i].p[0],y:KF[i].p[1],z:KF[i].p[2], duration:1, ease:'power1.inOut'}, t);
+        tl.to(camLook,{x:KF[i].l[0],y:KF[i].l[1],z:KF[i].l[2], duration:1, ease:'power1.inOut'}, t);
+      }
+      // panels assemble during beat 0->1
+      PANELS.forEach(function(c,idx){
+        tl.to(groups[c.key].scale, {x:1,y:1,z:1, duration:1.1, ease:'back.out(1.4)'}, 0.15 + idx*0.06);
+      });
+      // boot pulse fades as panels assemble
+      tl.to(bootMat, {opacity:0, duration:0.8}, 0.2);
+      // accent flares per beat (rim brighten on focus)
+      function flare(key, at){ var m=groups[key].userData.rimMat; tl.to(m,{opacity:0.7,duration:0.4},at).to(m,{opacity:0.32,duration:0.6},at+0.5); }
+      flare('rota',2); flare('map',3); flare('comp',4); flare('phone',5);
+      // connection lines fade in at beat 6, heartbeat pulse
+      lineMats.forEach(function(m){ tl.to(m,{opacity:0.85,duration:0.6},5.4); });
+      lineMats.forEach(function(m){ tl.to(m,{opacity:0.3,duration:0.3,yoyo:true,repeat:1},6.0); });
+      // dark -> light resolve at beat 6->7
+      tl.to(resolve, {t:1, duration:1, ease:'power2.inOut'}, 6.0);
+
+      gsap.ticker.add(function(){
+        camera.position.set(camPos.x,camPos.y,camPos.z);
+        look.set(camLook.x,camLook.y,camLook.z);
+        camera.lookAt(look);
+        // resolve dark->light
+        scene.background.copy(DARK).lerp(PAPER, resolve.t);
+        scene.fog.color.copy(scene.background);
+        var rimScale = 1-resolve.t;
+        rims.forEach(function(m){ m.userData = m.userData; });
+        // float
+        var tm = performance.now()*0.001;
+        if(!reduce){
+          PANELS.forEach(function(c){
+            var g=groups[c.key], u=g.userData;
+            g.position.y = u.base[1] + Math.sin(tm*0.5+u.phase)*0.045;
+            g.rotation.y = u.baseRotY + Math.sin(tm*0.32+u.phase)*0.02;
+          });
+        }
+        renderer.render(scene, camera);
+      });
+      ScrollTrigger.refresh();
+    }
+
+    // dim rim glows as we resolve to light (separate ticker tie-in)
+    gsap.ticker.add(function(){
+      var k = 1 - resolve.t;
+      rims.forEach(function(m){ m.opacity = Math.min(m.opacity, 0.7) * (0.4 + 0.6*k); });
+    });
+
+    // ---------- Beat copy activation ----------
+    document.querySelectorAll('.beat').forEach(function(b){
+      ScrollTrigger.create({trigger:b, start:'top 60%', end:'bottom 40%',
+        onToggle:function(s){ b.classList.toggle('active', s.isActive); }});
+    });
+    // hide scroll cue after first scroll
+    ScrollTrigger.create({start:'top -5%', onEnter:function(){ document.getElementById('scrollcue').style.opacity=0; },
+      onLeaveBack:function(){ document.getElementById('scrollcue').style.opacity=1; }});
+
+    // ---------- Resize ----------
+    window.addEventListener('resize', function(){
+      camera.aspect = window.innerWidth/window.innerHeight; camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    });
+
+    // ---------- Synthesized audio (no external asset needed) ----------
+    var actx=null, master=null, pad=null, muted=false;
+    function initAudio(){
+      try{
+        actx = new (window.AudioContext||window.webkitAudioContext)();
+        master = actx.createGain(); master.gain.value=0.0; master.connect(actx.destination);
+        var lp = actx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=620; lp.connect(master);
+        pad = actx.createGain(); pad.gain.value=0.5; pad.connect(lp);
+        [110,164.81,220].forEach(function(f,i){
+          var o=actx.createOscillator(); o.type='sine'; o.frequency.value=f;
+          var g=actx.createGain(); g.gain.value=(i===0?0.18:0.09); o.connect(g); g.connect(pad);
+          var lfo=actx.createOscillator(); lfo.frequency.value=0.05+i*0.02; var lg=actx.createGain(); lg.gain.value=0.04;
+          lfo.connect(lg); lg.connect(g.gain); lfo.start(); o.start();
+        });
+        gsap.to(master.gain,{value:0.5,duration:2.5});
+      }catch(e){}
+    }
+    function sfx(type){
+      if(!actx||muted) return;
+      var t=actx.currentTime, g=actx.createGain(); g.connect(master); g.gain.setValueAtTime(0.0001,t);
+      if(type==='chord'){ [261.6,329.6,392].forEach(function(f){var o=actx.createOscillator();o.type='triangle';o.frequency.value=f;o.connect(g);o.start(t);o.stop(t+0.9);}); g.gain.exponentialRampToValueAtTime(0.12,t+0.05); g.gain.exponentialRampToValueAtTime(0.0001,t+0.9);}
+      else if(type==='chime'){ var o=actx.createOscillator();o.type='sine';o.frequency.setValueAtTime(880,t);o.frequency.exponentialRampToValueAtTime(1320,t+0.18);o.connect(g);o.start(t);o.stop(t+0.4); g.gain.exponentialRampToValueAtTime(0.1,t+0.03); g.gain.exponentialRampToValueAtTime(0.0001,t+0.4);}
+      else { var o2=actx.createOscillator();o2.type='sine';o2.frequency.value=140;o2.connect(g);o2.start(t);o2.stop(t+0.5); g.gain.exponentialRampToValueAtTime(0.14,t+0.04); g.gain.exponentialRampToValueAtTime(0.0001,t+0.5);}
+    }
+    // trigger sfx on beats
+    ['2','3','4','5','6'].forEach(function(n){
+      var el=document.querySelector('.beat[data-beat="'+n+'"]');
+      ScrollTrigger.create({trigger:el,start:'top 60%',onEnter:function(){ sfx(n==='3'?'chord':(n==='5'?'chime':'pulse')); }});
+    });
+
+    var muteBtn=document.getElementById('mute'), muteIcon=document.getElementById('muteicon');
+    muteBtn.addEventListener('click', function(){
+      muted=!muted; if(master) gsap.to(master.gain,{value:muted?0:0.5,duration:0.4}); muteIcon.textContent=muted?'⊘':'♪';
+    });
+
+    // ---------- Gate ----------
+    function startExperience(withSound){
+      document.getElementById('gate').classList.add('hidden');
+      document.getElementById('mute').classList.add('show');
+      if(withSound){ initAudio(); muted=false; muteIcon.textContent='♪'; }
+      else { muted=true; muteIcon.textContent='⊘'; }
+    }
+    document.getElementById('enterSound').addEventListener('click', function(){ startExperience(true); });
+    document.getElementById('enterMuted').addEventListener('click', function(){ startExperience(false); });
+    document.getElementById('replay').addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  })();
+  </script>
+</body>
+</html>
