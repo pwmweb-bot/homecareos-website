@@ -25,6 +25,9 @@
   # Old onboarding landing (duplicate of /start.html, weaker copy). -> /start.html.
   RewriteRule ^onboard\.html$ https://www.homecareos.co.uk/start.html [R=301,L]
   RewriteRule ^onboard/?$ https://www.homecareos.co.uk/start.html [R=301,L]
+
+  # Old admin/platform features page (removed; now 404 in GSC). -> features hub.
+  RewriteRule ^features-admin-platform\.html$ https://www.homecareos.co.uk/features.html [R=301,L]
 </IfModule>
 
 # --- Security headers ---
