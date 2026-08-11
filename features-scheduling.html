@@ -106,6 +106,20 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is care rota software?","acceptedAnswer":{"@type":"Answer","text":"Care rota software plans and tracks home care visits, assigns carers to each call, fills cover when someone is off, and evidences that visits happened. It replaces spreadsheets and paper rotas with one live view of your whole operation."}},
+{"@type":"Question","name":"How much does home care rota software cost in the UK?","acceptedAnswer":{"@type":"Answer","text":"homecareOS is priced per active carer, with your office team unmetered. Start is 7 pounds per staff per month and Pro is 10 pounds, and there is a free starter tier for the smallest agencies. You only pay for carers who are rostered in a given month."}},
+{"@type":"Question","name":"How do I choose the best home care rostering software?","acceptedAnswer":{"@type":"Answer","text":"Check that it is built for visits rather than shift patterns, fills cover quickly, works offline on carer phones, evidences every call, and supports your nation's regulator. Then trial it with your own rota before you commit."}},
+{"@type":"Question","name":"What should I look for in home care rota software?","acceptedAnswer":{"@type":"Answer","text":"Visit-centric scheduling, an AI cover finder, travel-time and route awareness, GPS check-in and check-out, absence tracking, and a direct link from the rota through to care records, pay and billing."}},
+{"@type":"Question","name":"What is the best care rota software for UK home care agencies?","acceptedAnswer":{"@type":"Answer","text":"homecareOS is built only for domiciliary care and pairs a drag-and-drop rota with an AI cover finder and AI rota builder, plus compliance for all four UK nations, which many rivals do not offer on day one."}},
+{"@type":"Question","name":"Does the rota software work across all four UK nations?","acceptedAnswer":{"@type":"Answer","text":"Yes. homecareOS supports CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland from one platform, with the right framework applied to each branch."}},
+{"@type":"Question","name":"Can the software find cover automatically when a carer calls in sick?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI cover finder ranks available carers on continuity, distance and hours headroom, so you can offer a visit and confirm cover in seconds rather than working through a phone list."}},
+{"@type":"Question","name":"Can homecareOS build the rota automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI rota builder autoschedules visits around availability, preferences, qualifications and travel, then hands you a complete rota to review and adjust before you publish it."}},
+{"@type":"Question","name":"Does the rota app work offline for carers in the field?","acceptedAnswer":{"@type":"Answer","text":"Yes. The carer mobile app is offline-first, so carers can check in, view their visits and record notes without a signal, and everything syncs automatically when they are back online."}},
+{"@type":"Question","name":"Can I move my rota from Birdie to homecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch."}}
+]}
+</script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
@@ -416,6 +430,121 @@
           <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px">Backed by research</div>
           <p style="margin:0 0 12px;color:var(--gray-800);line-height:1.65">The scheduling engine tackles what operational-research literature calls the home health care routing and scheduling problem — the well-studied challenge of balancing travel, time windows and workload that our AI optimises.</p>
           <a href="/evidence.html#scheduling" style="font-weight:600;color:var(--primary);text-decoration:none">See the evidence &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+<!-- FAQ SECTION -->
+    <section class="section section-gray" aria-labelledby="sched-faq-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">FAQ</span>
+          <h2 id="sched-faq-heading">Care Rota Software: Frequently Asked Questions</h2>
+          <p>Cost, compliance, cover and switching, answered.</p>
+        </div>
+
+        <div class="faq-list" x-data="{ active: null }" data-reveal>
+
+          <div class="faq-item" :class="{ open: active === 1 }">
+            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="sfaq-1">
+              What is care rota software?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-1" x-show="active === 1" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Care rota software plans and tracks home care visits, assigns carers to each call, fills cover when someone is off, and evidences that visits happened. It replaces spreadsheets and paper rotas with one live view of your whole operation.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 2 }">
+            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="sfaq-2">
+              How much does home care rota software cost in the UK?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-2" x-show="active === 2" x-transition.duration.300ms>
+              <div class="faq-answer-inner">homecareOS is priced per active carer, with your office team unmetered. Start is &pound;7 per staff per month and Pro is &pound;10, and there is a free starter tier for the smallest agencies. You only pay for carers who are rostered in a given month. <a href="pricing.html">See home care rota software pricing</a>.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 3 }">
+            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="sfaq-3">
+              How do I choose the best home care rostering software?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-3" x-show="active === 3" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Check that it is built for visits rather than shift patterns, fills cover quickly, works offline on carer phones, evidences every call, and supports your nation's regulator. Then trial it with your own rota before you commit.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 4 }">
+            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="sfaq-4">
+              What should I look for in home care rota software?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-4" x-show="active === 4" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Visit-centric scheduling, an AI cover finder, travel-time and route awareness, GPS check-in and check-out, absence tracking, and a direct link from the rota through to care records, pay and billing.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 5 }">
+            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="sfaq-5">
+              What is the best care rota software for UK home care agencies?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-5" x-show="active === 5" x-transition.duration.300ms>
+              <div class="faq-answer-inner">homecareOS is built only for domiciliary care and pairs a drag-and-drop rota with an <a href="features-ai-rota.html">AI cover finder and AI rota builder</a>, plus compliance for all four UK nations, which many rivals do not offer on day one.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 6 }">
+            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="sfaq-6">
+              Does the rota software work across all four UK nations?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-6" x-show="active === 6" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Yes. homecareOS supports CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland from one platform, with the right <a href="features-compliance.html">four-nation compliance</a> framework applied to each branch.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 7 }">
+            <button class="faq-question" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7" aria-controls="sfaq-7">
+              Can the software find cover automatically when a carer calls in sick?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-7" x-show="active === 7" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Yes. The AI cover finder ranks available carers on continuity, distance and hours headroom, so you can offer a visit and confirm cover in seconds rather than working through a phone list.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 8 }">
+            <button class="faq-question" @click="active = active === 8 ? null : 8" :aria-expanded="active === 8" aria-controls="sfaq-8">
+              Can homecareOS build the rota automatically?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-8" x-show="active === 8" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Yes. The <a href="features-ai-rota.html">AI rota builder</a> autoschedules visits around availability, preferences, qualifications and travel, then hands you a complete rota to review and adjust before you publish it.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 9 }">
+            <button class="faq-question" @click="active = active === 9 ? null : 9" :aria-expanded="active === 9" aria-controls="sfaq-9">
+              Does the rota app work offline for carers in the field?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-9" x-show="active === 9" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Yes. The carer mobile app is offline-first, so carers can check in, view their visits and record notes without a signal, and everything syncs automatically when they are back online.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 10 }">
+            <button class="faq-question" @click="active = active === 10 ? null : 10" :aria-expanded="active === 10" aria-controls="sfaq-10">
+              Can I move my rota from Birdie to homecareOS?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-10" x-show="active === 10" x-transition.duration.300ms>
+              <div class="faq-answer-inner">Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch. <a href="compare-birdie.html">See how homecareOS compares to Birdie</a>.</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
