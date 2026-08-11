@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Carer Day — Scroll-Driven Prototype</title>
+  <title>Carer Day | Scroll-Driven Prototype</title>
   <style>
     :root {
       --primary: #1e3a5f;
@@ -138,7 +138,7 @@
       overflow: hidden;
     }
 
-    /* Scene card — the current event */
+    /* Scene card, the current event */
     .event-card {
       background: #fff;
       border-radius: 20px;
@@ -384,7 +384,7 @@
 
   <div class="intro">
     <h1>A Day in the Life of a Carer</h1>
-    <p>Follow Sarah through a real day — from morning meds to teatime visits. See how homecareOS keeps everyone connected.</p>
+    <p>Follow Sarah through a real day, from morning meds to teatime visits. See how homecareOS keeps everyone connected.</p>
     <div class="scroll-hint">↓ Scroll to begin</div>
   </div>
 
@@ -422,7 +422,7 @@
       </div>
     </div>
 
-    <!-- Scroll spacers — each event gets a chunk of scroll distance -->
+    <!-- Scroll spacers, each event gets a chunk of scroll distance -->
     <div class="scroll-spacer" id="spacer1"></div>
     <div class="scroll-spacer" id="spacer2"></div>
     <div class="scroll-spacer" id="spacer3"></div>
@@ -507,38 +507,38 @@ const events = [
     progress: 0,
   },
   {
-    time: '07:15', title: 'Office Briefing', subtitle: 'homecareOS Agency — checking the rota',
+    time: '07:15', title: 'Office Briefing', subtitle: 'homecareOS Agency, checking the rota',
     status: 'driving', statusText: '📋 Briefing',
     house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
-    speech: '"Morning everyone! 48 visits across 6 carers today. Sarah, you\'ve got 9 — plus we might need cover for Mrs. Wilson later."',
+    speech: '"Morning everyone! 48 visits across 6 carers today. Sarah, you\'ve got 9, plus we might need cover for Mrs. Wilson later."',
     notif: { icon: '📋', bg: 'blue', title: 'Rota Updated', sub: '9 visits assigned for today' },
     miniStats: [['Carers on Shift', '6'], ['Total Visits', '48'], ['Care Hours Target', '62h'], ['Unallocated', '0']],
     visits: 0, care: 0, miles: 4, staff: 0.3,
     progress: 5,
   },
   {
-    time: '07:30', title: 'Mrs. Patel', subtitle: 'Morning medication round — 30 min visit',
+    time: '07:30', title: 'Mrs. Patel', subtitle: 'Morning medication round, 30 min visit',
     status: 'in-progress', statusText: '💊 Medication Round',
     house: { color: '#E8B4B4', roof: '#C48888', w: 50, h: 55, type: 'house' },
     houseLabel: "Mrs. Patel's Home",
     speech: 'Check-in via GPS. Administer morning meds, record in the MAR chart, quick chat about how she slept.',
-    notif: { icon: '📍', bg: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30 — GPS verified ✓' },
+    notif: { icon: '📍', bg: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30, GPS verified ✓' },
     activeVisit: 1,
     visits: 0, care: 0, miles: 6, staff: 0.8,
     progress: 10,
   },
   {
-    time: '08:00', title: 'Mrs. Patel — Complete', subtitle: 'Visit done, care notes logged in the app',
+    time: '08:00', title: 'Mrs. Patel: Complete', subtitle: 'Visit done, care notes logged in the app',
     status: 'completed', statusText: '✅ Visit Complete',
     house: { color: '#E8B4B4', roof: '#C48888', w: 50, h: 55, type: 'house' },
     houseLabel: "Mrs. Patel's Home",
-    notif: { icon: '✅', bg: 'green', title: 'Visit Complete', sub: 'Mrs. Patel — 30 min · on time' },
+    notif: { icon: '✅', bg: 'green', title: 'Visit Complete', sub: 'Mrs. Patel, 30 min · on time' },
     visits: 1, care: 0.5, miles: 6, staff: 1.3,
     progress: 14,
   },
   {
-    time: '08:15', title: 'Mr. Davies', subtitle: 'Personal care — 45 min visit',
+    time: '08:15', title: 'Mr. Davies', subtitle: 'Personal care, 45 min visit',
     status: 'in-progress', statusText: '🧼 Personal Care',
     house: { color: '#B4C8E8', roof: '#8AA4C8', w: 50, h: 52, type: 'house' },
     houseLabel: "Mr. Davies' Home",
@@ -548,7 +548,7 @@ const events = [
     progress: 20,
   },
   {
-    time: '09:15', title: 'Mrs. Jones', subtitle: 'Breakfast prep & medication — 30 min',
+    time: '09:15', title: 'Mrs. Jones', subtitle: 'Breakfast prep & medication, 30 min',
     status: 'in-progress', statusText: '🍳 Breakfast & Meds',
     house: { color: '#D4C4A8', roof: '#B0A080', w: 50, h: 56, type: 'house' },
     houseLabel: "Mrs. Jones' Home",
@@ -558,12 +558,12 @@ const events = [
     progress: 27,
   },
   {
-    time: '09:50', title: 'Cover Needed!', subtitle: 'Alert from the office — carer called in sick',
+    time: '09:50', title: 'Cover Needed!', subtitle: 'Alert from the office, carer called in sick',
     status: 'incident', statusText: '🚨 Cover Alert',
     house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
     speech: '"Sarah, can you fit in Mrs. Wilson at 2pm? Her regular carer called in sick and the AI cover finder matched you as the best fit."',
-    notif: { icon: '🚨', bg: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00) — carer called in sick' },
+    notif: { icon: '🚨', bg: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00), carer called in sick' },
     visits: 3, care: 1.8, miles: 10, staff: 3.0,
     progress: 30,
   },
@@ -573,26 +573,26 @@ const events = [
     house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
     notif: { icon: '✅', bg: 'green', title: 'Shift Confirmed', sub: 'Mrs. Wilson added to afternoon rota' },
-    speech: '"No problem — I can fit her in after lunch. The care plan is already on my app."',
+    speech: '"No problem, I can fit her in after lunch. The care plan is already on my app."',
     visits: 3, care: 1.8, miles: 10, staff: 3.0,
     progress: 32, total: 10,
   },
   {
-    time: '10:00', title: 'Mr. Thompson', subtitle: 'Welfare check — 30 min visit',
+    time: '10:00', title: 'Mr. Thompson', subtitle: 'Welfare check, 30 min visit',
     status: 'in-progress', statusText: '🏠 Welfare Check',
     house: { color: '#C4D8B4', roof: '#98B480', w: 50, h: 50, type: 'house' },
     houseLabel: "Mr. Thompson's Home",
-    speech: 'Checking in on Mr. Thompson — making sure he\'s eaten, taken his meds, and the house is warm.',
+    speech: 'Checking in on Mr. Thompson, making sure he\'s eaten, taken his meds, and the house is warm.',
     activeVisit: 4,
     visits: 3, care: 1.8, miles: 12, staff: 3.5,
     progress: 36,
   },
   {
-    time: '10:45', title: 'Mr. Ahmed', subtitle: 'Companionship visit — 45 min',
+    time: '10:45', title: 'Mr. Ahmed', subtitle: 'Companionship visit, 45 min',
     status: 'in-progress', statusText: '♟️ Companionship',
     house: { color: '#B4D4D8', roof: '#88B0B8', w: 50, h: 52, type: 'house' },
     houseLabel: "Mr. Ahmed's Home",
-    speech: 'A cup of tea and a game of chess. These visits make such a difference — Mr. Ahmed lives alone and this is his highlight of the week.',
+    speech: 'A cup of tea and a game of chess. These visits make such a difference. Mr. Ahmed lives alone and this is his highlight of the week.',
     activeVisit: 5,
     visits: 4, care: 2.3, miles: 16, staff: 4.3,
     progress: 42,
@@ -603,48 +603,48 @@ const events = [
     house: { color: '#B4D4D8', roof: '#88B0B8', w: 50, h: 52, type: 'house' },
     houseLabel: "Mr. Ahmed's Home",
     speech: 'The AI has noticed Mr. Ahmed\'s mobility scores are declining over the last 3 weeks. It suggests updated goals and a GP referral.',
-    notif: { icon: '🤖', bg: 'purple', title: 'AI Care Plan Alert', sub: 'Mobility declining — new goals suggested' },
+    notif: { icon: '🤖', bg: 'purple', title: 'AI Care Plan Alert', sub: 'Mobility declining, new goals suggested' },
     visits: 4, care: 2.3, miles: 16, staff: 4.5,
     progress: 46,
   },
   {
-    time: '11:45', title: 'Mrs. Brown', subtitle: 'Lunch preparation — 30 min',
+    time: '11:45', title: 'Mrs. Brown', subtitle: 'Lunch preparation, 30 min',
     status: 'in-progress', statusText: '🍽️ Lunch Prep',
     house: { color: '#D8C4D8', roof: '#B098B0', w: 50, h: 55, type: 'house' },
     houseLabel: "Mrs. Brown's Home",
-    speech: 'Preparing a warm lunch — soup and a sandwich. Making sure she eats well and stays hydrated.',
+    speech: 'Preparing a warm lunch: soup and a sandwich. Making sure she eats well and stays hydrated.',
     activeVisit: 6,
     visits: 5, care: 3.1, miles: 18, staff: 5.3,
     progress: 54,
   },
   {
-    time: '12:20', title: 'Lunch Break', subtitle: '45 minutes — well deserved',
+    time: '12:20', title: 'Lunch Break', subtitle: '45 minutes, well deserved',
     status: 'break', statusText: '☕ Break',
     house: { color: '#8B7355', roof: '#6B5335', w: 80, h: 60, type: 'bench' },
     houseLabel: 'Local Park',
-    speech: 'Quick sandwich on the bench, check the afternoon schedule. 4 more visits to go — including the cover shift.',
+    speech: 'Quick sandwich on the bench, check the afternoon schedule. 4 more visits to go, including the cover shift.',
     miniStats: [['Morning Visits', '6 of 10'], ['Care Hours', '3.6h'], ['Mileage So Far', '20 mi'], ['Travel Time', '1h 10m']],
     visits: 6, care: 3.6, miles: 20, staff: 5.8,
     progress: 58,
   },
   {
-    time: '13:15', title: 'Mrs. Wilson', subtitle: 'Cover visit — first time meeting',
+    time: '13:15', title: 'Mrs. Wilson', subtitle: 'Cover visit, first time meeting',
     status: 'in-progress', statusText: '🤝 Cover Visit',
     house: { color: '#E8D4B4', roof: '#C8A878', w: 50, h: 53, type: 'house' },
     houseLabel: "Mrs. Wilson's Home",
-    speech: 'First time visiting Mrs. Wilson. Care plan loaded on the app — I know her needs, preferences, and medication before I walk in.',
+    speech: 'First time visiting Mrs. Wilson. Care plan loaded on the app. I know her needs, preferences, and medication before I walk in.',
     notif: { icon: '📋', bg: 'blue', title: 'Care Plan Loaded', sub: 'Reviewing Mrs. Wilson\'s needs before arrival' },
     activeVisit: 7,
     visits: 6, care: 3.6, miles: 22, staff: 6.5,
     progress: 64,
   },
   {
-    time: '14:00', title: "Mr. O'Brien", subtitle: 'Afternoon medication — 45 min',
+    time: '14:00', title: "Mr. O'Brien", subtitle: 'Afternoon medication, 45 min',
     status: 'in-progress', statusText: '💊 Afternoon Meds',
     house: { color: '#C8D4B8', roof: '#A0B490', w: 50, h: 50, type: 'house' },
     houseLabel: "Mr. O'Brien's Home",
     speech: 'New prescription added to Mr. O\'Brien\'s MAR chart this morning. The app flagged it immediately so there are no surprises.',
-    notif: { icon: '⚠️', bg: 'amber', title: 'Medication Alert', sub: "New prescription added — review before administering" },
+    notif: { icon: '⚠️', bg: 'amber', title: 'Medication Alert', sub: "New prescription added, review before administering" },
     activeVisit: 8,
     visits: 7, care: 4.1, miles: 25, staff: 7.5,
     progress: 72,
@@ -655,13 +655,13 @@ const events = [
     house: { color: '#C8D4B8', roof: '#A0B490', w: 50, h: 50, type: 'house' },
     houseLabel: "Mr. O'Brien's Home",
     speech: 'Logged the incident in the app with photos and details. Office notified instantly. Care manager is reviewing the risk assessment.',
-    notif: { icon: '🚨', bg: 'red', title: 'Incident Reported', sub: 'Near-fall — logged, photos attached, office notified' },
+    notif: { icon: '🚨', bg: 'red', title: 'Incident Reported', sub: 'Near-fall: logged, photos attached, office notified' },
     miniStats: [['Incident Type', 'Near-fall'], ['Location', 'Kitchen'], ['Status', 'Under Review'], ['Action', 'Risk Update']],
     visits: 7, care: 4.1, miles: 25, staff: 7.8,
     progress: 76, incidentAt: 8,
   },
   {
-    time: '15:00', title: 'Mrs. Clarke', subtitle: 'Repositioning check — 30 min',
+    time: '15:00', title: 'Mrs. Clarke', subtitle: 'Repositioning check, 30 min',
     status: 'in-progress', statusText: '🛏️ Repositioning',
     house: { color: '#E0C8B0', roof: '#C0A080', w: 50, h: 53, type: 'house' },
     houseLabel: "Mrs. Clarke's Home",
@@ -671,7 +671,7 @@ const events = [
     progress: 84,
   },
   {
-    time: '15:45', title: 'Mr. Singh', subtitle: 'Teatime medication — last visit!',
+    time: '15:45', title: 'Mr. Singh', subtitle: 'Teatime medication, last visit!',
     status: 'in-progress', statusText: '💊 Final Visit',
     house: { color: '#B8C8E0', roof: '#90A8C0', w: 50, h: 56, type: 'house' },
     houseLabel: "Mr. Singh's Home",
@@ -681,7 +681,7 @@ const events = [
     progress: 90,
   },
   {
-    time: '16:15', title: 'All Visits Complete!', subtitle: '10 out of 10 — what a day',
+    time: '16:15', title: 'All Visits Complete!', subtitle: '10 out of 10, what a day',
     status: 'completed', statusText: '🎉 Day Complete',
     house: { color: '#7C9EB2', roof: '#5A7A8A', w: 55, h: 60, type: 'house' },
     houseLabel: "Heading Home",

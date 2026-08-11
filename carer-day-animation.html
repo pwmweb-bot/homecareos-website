@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Carer Day Animation — Prototype v2</title>
+  <title>Carer Day Animation | Prototype v2</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -393,8 +393,8 @@
 </head>
 <body>
 
-  <h1>A Day in the Life — Animation Prototype v2</h1>
-  <p class="subtitle">Standalone section — iterate here before going live</p>
+  <h1>A Day in the Life: Animation Prototype v2</h1>
+  <p class="subtitle">Standalone section, iterate here before going live</p>
 
   <div class="animation-wrapper" id="scene">
 
@@ -552,8 +552,8 @@ function updateStats(overrides) {
 // ============================================================
 const timeline = [
   // === MORNING START ===
-  // Realistic UK carer day: 07:00–17:00, morning round + lunch break + afternoon round
-  // Visits 30–45 min, 10–15 min travel between. Split shift pattern.
+  // Realistic UK carer day: 07:00-17:00, morning round + lunch break + afternoon round
+  // Visits 30-45 min, 10-15 min travel between. Split shift pattern.
 
   { time: '06:45', carX: 15, speech: '☀️ Morning! Time to get ready', dur: 2000, progress: 0 },
   { time: '06:55', carX: 40, speech: null, dur: 800, progress: 1 },
@@ -564,8 +564,8 @@ const timeline = [
     notif: { icon: '📋', bg: 'blue', type: 'blue', title: 'Good Morning, Sarah!', sub: '9 visits on your rota today' }
   },
 
-  // === OFFICE BRIEFING (07:15–07:25) ===
-  { time: '07:15', carX: 115, speech: '☕ Quick briefing — checking the rota', dur: 2200, progress: 5,
+  // === OFFICE BRIEFING (07:15-07:25) ===
+  { time: '07:15', carX: 115, speech: '☕ Quick briefing, checking the rota', dur: 2200, progress: 5,
     statuses: { h1: 'scheduled', h2: 'scheduled', h3: 'scheduled', h4: 'scheduled', h5: 'scheduled', h6: 'scheduled', h7: 'scheduled', h8: 'scheduled', h9: 'scheduled', h10: 'scheduled' },
     officeStats: { title: 'Today\'s Rota', rows: [
       ['Carers on shift', '6'],
@@ -576,20 +576,20 @@ const timeline = [
   },
   { time: '07:25', carX: 115, speech: null, dur: 800, progress: 7 },
 
-  // === VISIT 1: Mrs. Patel — Morning Meds (07:30–08:00, 30 min) ===
-  { time: '07:30', carX: 190, speech: '💊 Mrs. Patel — morning medication', dur: 1800, progress: 8,
+  // === VISIT 1: Mrs. Patel, Morning Meds (07:30-08:00, 30 min) ===
+  { time: '07:30', carX: 190, speech: '💊 Mrs. Patel, morning medication', dur: 1800, progress: 8,
     stats: { miles: 6, travel: 20 },
     statuses: { h1: 'in-progress' },
-    notif: { icon: '📍', bg: 'green', type: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30 — GPS verified ✓' }
+    notif: { icon: '📍', bg: 'green', type: 'green', title: 'Check-in: Mrs. Patel', sub: '07:30, GPS verified ✓' }
   },
   { time: '08:00', carX: 205, speech: '✅ Meds given, notes logged', dur: 1800, progress: 12,
     stats: { visits: 1, careHrs: 0.5, staffHrs: 1.3 },
     statuses: { h1: 'completed' },
-    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Visit Complete', sub: 'Mrs. Patel — 30 min' }
+    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Visit Complete', sub: 'Mrs. Patel, 30 min' }
   },
 
-  // === VISIT 2: Mr. Davies — Personal Care (08:15–09:00, 45 min) ===
-  { time: '08:15', carX: 265, speech: '🧼 Mr. Davies — personal care', dur: 1800, progress: 15,
+  // === VISIT 2: Mr. Davies, Personal Care (08:15-09:00, 45 min) ===
+  { time: '08:15', carX: 265, speech: '🧼 Mr. Davies, personal care', dur: 1800, progress: 15,
     stats: { miles: 8, travel: 30 },
     statuses: { h2: 'in-progress' }
   },
@@ -604,8 +604,8 @@ const timeline = [
     ]}
   },
 
-  // === VISIT 3: Mrs. Jones — Breakfast & Meds (09:15–09:45, 30 min) ===
-  { time: '09:15', carX: 340, speech: '🍳 Mrs. Jones — breakfast & meds', dur: 1800, progress: 23,
+  // === VISIT 3: Mrs. Jones, Breakfast & Meds (09:15-09:45, 30 min) ===
+  { time: '09:15', carX: 340, speech: '🍳 Mrs. Jones, breakfast & meds', dur: 1800, progress: 23,
     stats: { miles: 10, travel: 40 },
     statuses: { h3: 'in-progress' }
   },
@@ -616,15 +616,15 @@ const timeline = [
 
   // === COVER ALERT (09:50) ===
   { time: '09:50', carX: 355, speech: '📱 Alert from the office!', dur: 2000, progress: 29,
-    notif: { icon: '🚨', bg: 'amber', type: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00) — carer called in sick' },
+    notif: { icon: '🚨', bg: 'amber', type: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00), carer called in sick' },
     stats: { total: 10 }
   },
   { time: '09:52', carX: 355, speech: '👍 I\'ll take Mrs. Wilson at 2pm', dur: 2200, progress: 30,
     notif: { icon: '✅', bg: 'green', type: 'green', title: 'Shift Accepted', sub: 'Mrs. Wilson added to your afternoon rota' }
   },
 
-  // === VISIT 4: Mr. Thompson — Welfare Check (10:00–10:30, 30 min) ===
-  { time: '10:00', carX: 420, speech: '🏠 Mr. Thompson — welfare check', dur: 1800, progress: 32,
+  // === VISIT 4: Mr. Thompson, Welfare Check (10:00-10:30, 30 min) ===
+  { time: '10:00', carX: 420, speech: '🏠 Mr. Thompson, welfare check', dur: 1800, progress: 32,
     stats: { miles: 12, travel: 48 },
     statuses: { h4: 'in-progress' }
   },
@@ -634,25 +634,25 @@ const timeline = [
     notif: { icon: '📊', bg: 'blue', type: 'blue', title: '4 of 10 Complete', sub: 'Morning round on track!' }
   },
 
-  // === VISIT 5: Mrs. Wilson Cover — moved to afternoon, so visit 5 is now Mr. Ahmed ===
-  // === VISIT 5: Mr. Ahmed — Companionship + AI CARE PLAN (10:45–11:30, 45 min) ===
-  { time: '10:45', carX: 650, speech: '♟️ Mr. Ahmed — companionship visit', dur: 1800, progress: 39,
+  // === VISIT 5: Mrs. Wilson Cover, moved to afternoon, so visit 5 is now Mr. Ahmed ===
+  // === VISIT 5: Mr. Ahmed, Companionship + AI CARE PLAN (10:45-11:30, 45 min) ===
+  { time: '10:45', carX: 650, speech: '♟️ Mr. Ahmed, companionship visit', dur: 1800, progress: 39,
     stats: { miles: 16, travel: 58 },
     statuses: { h6: 'in-progress' }
   },
   { time: '11:00', carX: 665, speech: '🤖 AI flagged: care plan review due', dur: 2200, progress: 42,
-    notif: { icon: '🤖', bg: 'purple', type: 'purple', title: 'AI Care Plan Alert', sub: 'Mr. Ahmed — mobility declining, review recommended' }
+    notif: { icon: '🤖', bg: 'purple', type: 'purple', title: 'AI Care Plan Alert', sub: 'Mr. Ahmed, mobility declining, review recommended' }
   },
   { time: '11:10', carX: 665, speech: '📋 Updating care plan with AI assist', dur: 2200, progress: 44,
-    notif: { icon: '✨', bg: 'purple', type: 'purple', title: 'Care Plan Updated', sub: 'AI suggested new mobility goals — approved by Sarah' }
+    notif: { icon: '✨', bg: 'purple', type: 'purple', title: 'Care Plan Updated', sub: 'AI suggested new mobility goals, approved by Sarah' }
   },
   { time: '11:30', carX: 665, speech: null, dur: 1200, progress: 47,
     stats: { visits: 5, careHrs: 3.1, staffHrs: 4.8 },
     statuses: { h6: 'completed' }
   },
 
-  // === VISIT 6: Mrs. Brown — Lunch Prep (11:45–12:15, 30 min) ===
-  { time: '11:45', carX: 730, speech: '🍽️ Mrs. Brown — lunch prep', dur: 1800, progress: 50,
+  // === VISIT 6: Mrs. Brown, Lunch Prep (11:45-12:15, 30 min) ===
+  { time: '11:45', carX: 730, speech: '🍽️ Mrs. Brown, lunch prep', dur: 1800, progress: 50,
     stats: { miles: 18, travel: 65 },
     statuses: { h7: 'in-progress' },
     officeStats: { title: 'Agency Totals (11:45)', rows: [
@@ -667,8 +667,8 @@ const timeline = [
     statuses: { h7: 'completed' }
   },
 
-  // === LUNCH BREAK (12:15–13:00, 45 min) ===
-  { time: '12:20', carX: 500, speech: '☕ Lunch break — 45 minutes', dur: 2500, progress: 56,
+  // === LUNCH BREAK (12:15-13:00, 45 min) ===
+  { time: '12:20', carX: 500, speech: '☕ Lunch break, 45 minutes', dur: 2500, progress: 56,
     stats: { miles: 20, travel: 70 },
     officeStats: { title: 'Sarah\'s Morning', rows: [
       ['Visits done', '6 / 10'],
@@ -682,29 +682,29 @@ const timeline = [
 
   // === AFTERNOON ROUND ===
 
-  // === VISIT 7: Mrs. Wilson — Cover Visit (13:15–13:45, 30 min) ===
-  { time: '13:15', carX: 575, speech: '🤝 Mrs. Wilson — cover visit', dur: 1800, progress: 62,
+  // === VISIT 7: Mrs. Wilson, Cover Visit (13:15-13:45, 30 min) ===
+  { time: '13:15', carX: 575, speech: '🤝 Mrs. Wilson, cover visit', dur: 1800, progress: 62,
     stats: { miles: 22, travel: 78 },
     statuses: { h5: 'in-progress' },
     notif: { icon: '📋', bg: 'blue', type: 'blue', title: 'Care Plan Loaded', sub: 'Reviewing Mrs. Wilson\'s needs' }
   },
-  { time: '13:45', carX: 590, speech: '✅ Visit done — she was lovely!', dur: 1800, progress: 66,
+  { time: '13:45', carX: 590, speech: '✅ Visit done, she was lovely!', dur: 1800, progress: 66,
     stats: { visits: 7, careHrs: 4.1, staffHrs: 7.0 },
     statuses: { h5: 'completed' }
   },
 
-  // === VISIT 8: Mr. O'Brien — INCIDENT! (14:00–14:45, 45 min) ===
-  { time: '14:00', carX: 810, speech: "🏠 Mr. O'Brien — afternoon meds", dur: 1800, progress: 69,
+  // === VISIT 8: Mr. O'Brien, INCIDENT! (14:00-14:45, 45 min) ===
+  { time: '14:00', carX: 810, speech: "🏠 Mr. O'Brien, afternoon meds", dur: 1800, progress: 69,
     stats: { miles: 25, travel: 86 },
     statuses: { h8: 'in-progress' },
-    notif: { icon: '⚠️', bg: 'amber', type: 'amber', title: 'Medication Alert', sub: "Mr. O'Brien — new prescription added" }
+    notif: { icon: '⚠️', bg: 'amber', type: 'amber', title: 'Medication Alert', sub: "Mr. O'Brien, new prescription added" }
   },
   { time: '14:20', carX: 825, speech: "⚠️ Mr. O'Brien had a near-fall", dur: 2200, progress: 73,
     statuses: { h8: 'incident' },
-    notif: { icon: '🚨', bg: 'red', type: 'red', title: 'Incident Reported', sub: "Near-fall — Mr. O'Brien. Logged & sent to office" }
+    notif: { icon: '🚨', bg: 'red', type: 'red', title: 'Incident Reported', sub: "Near-fall, Mr. O'Brien. Logged & sent to office" }
   },
   { time: '14:30', carX: 825, speech: '📝 Incident logged, office notified', dur: 2200, progress: 76,
-    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Incident Acknowledged', sub: 'Care manager reviewing — risk assessment updated' },
+    notif: { icon: '✅', bg: 'green', type: 'green', title: 'Incident Acknowledged', sub: 'Care manager reviewing, risk assessment updated' },
     officeStats: { title: 'Incident Report', rows: [
       ['Type', 'Near-fall'],
       ['Service user', "Mr. O'Brien"],
@@ -717,8 +717,8 @@ const timeline = [
     statuses: { h8: 'completed' }
   },
 
-  // === VISIT 9: Mrs. Clarke — Repositioning (15:00–15:30, 30 min) ===
-  { time: '15:00', carX: 890, speech: '🛏️ Mrs. Clarke — repositioning check', dur: 1800, progress: 82,
+  // === VISIT 9: Mrs. Clarke, Repositioning (15:00-15:30, 30 min) ===
+  { time: '15:00', carX: 890, speech: '🛏️ Mrs. Clarke, repositioning check', dur: 1800, progress: 82,
     stats: { miles: 27, travel: 94 },
     statuses: { h9: 'in-progress' }
   },
@@ -727,13 +727,13 @@ const timeline = [
     statuses: { h9: 'completed' }
   },
 
-  // === VISIT 10: Mr. Singh — Teatime Meds (15:45–16:15, 30 min) ===
-  { time: '15:45', carX: 970, speech: '🏠 Last one! Mr. Singh — teatime meds', dur: 1800, progress: 88,
+  // === VISIT 10: Mr. Singh, Teatime Meds (15:45-16:15, 30 min) ===
+  { time: '15:45', carX: 970, speech: '🏠 Last one! Mr. Singh, teatime meds', dur: 1800, progress: 88,
     stats: { miles: 29, travel: 102 },
     statuses: { h10: 'in-progress' }
   },
   { time: '16:15', carX: 985, speech: '💊 All medications administered', dur: 1800, progress: 92,
-    notif: { icon: '🎉', bg: 'green', type: 'green', title: 'All Visits Complete!', sub: '10/10 — 100% done, 1 incident reported' }
+    notif: { icon: '🎉', bg: 'green', type: 'green', title: 'All Visits Complete!', sub: '10/10-100% done, 1 incident reported' }
   },
   { time: '16:20', carX: 985, speech: null, dur: 1200, progress: 94,
     stats: { visits: 10, careHrs: 5.9, staffHrs: 9.5 },
@@ -747,7 +747,7 @@ const timeline = [
   },
 
   // === DRIVE HOME (16:30) ===
-  { time: '16:30', carX: 40, speech: '🏡 Heading home — great day!', dur: 3000, progress: 98,
+  { time: '16:30', carX: 40, speech: '🏡 Heading home, great day!', dur: 3000, progress: 98,
     stats: { miles: 34, travel: 115, staffHrs: 9.8 },
     notif: { icon: '⭐', bg: 'green', type: 'green', title: 'Day Summary', sub: '10 visits · 5.9h care · 34 miles · 1 incident' }
   },
