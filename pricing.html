@@ -179,6 +179,59 @@
   ]
 }
 </script>
+
+<!-- Product + Offers schema, pricing-page eligibility for price rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "homecareOS",
+  "description": "Domiciliary home care management software for UK agencies covering scheduling, digital care records, eMAR, compliance and billing across all four nations.",
+  "brand": {
+    "@type": "Brand",
+    "name": "homecareOS"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.homecareos.co.uk/pricing.html",
+      "description": "Free for up to 5 active carers, 25 service users and 1 office admin. Office team unmetered, no credit card required."
+    },
+    {
+      "@type": "Offer",
+      "name": "Start",
+      "price": "7",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.homecareos.co.uk/pricing.html",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "7",
+        "priceCurrency": "GBP",
+        "unitText": "per active carer per month"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro",
+      "price": "10",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.homecareos.co.uk/pricing.html",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "10",
+        "priceCurrency": "GBP",
+        "unitText": "per active carer per month"
+      }
+    }
+  ]
+}
+</script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
@@ -868,7 +921,7 @@
         <div class="section-header" data-reveal>
           <span class="label">FAQ</span>
           <h2 id="faq-heading">Frequently Asked Questions</h2>
-          <p>Everything you need to know about our plans and billing.</p>
+          <p>Everything you need to know about our plans and billing. Still weighing up your options? Read our <a href="blog/home-care-software-uk-guide.html">guide to choosing home care software in the UK</a>.</p>
         </div>
 
         <div class="faq-list" x-data="{ active: null }">

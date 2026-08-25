@@ -12,8 +12,8 @@
   <meta name="theme-color" content="#16323D">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Introducing Smart Scheduling: AI-Powered Rota Management | homecareOS</title>
-  <meta name="description" content="How AI rota management actually works in UK home care: cover-finder scoring, AI rota builder, continuity weighting, travel-time optimisation. What's real, what's still a research project, and what to expect.">
+  <title>AI Rota Management for UK Home Care | homecareOS</title>
+  <meta name="description" content="How AI rota management works in UK home care: cover finder scoring, AI rota builder, continuity weighting, travel time optimisation and what to expect.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.homecareos.co.uk/blog/smart-scheduling-ai-powered-rota-management.html">
   <meta name="author" content="Philip Martin">
@@ -189,7 +189,7 @@
             <thead><tr><th>Factor</th><th>Weight</th><th>What it measures</th></tr></thead>
             <tbody>
               <tr><td><strong>Distance</strong></td><td>30%</td><td>Travel time from carer's previous visit (or home, if start of day) to the uncovered visit, via Mapbox routing.</td></tr>
-              <tr><td><strong>Continuity</strong></td><td>25%</td><td>How many visits this carer has done with this service user in the past 90 days. Familiar faces score higher.</td></tr>
+              <tr><td><strong>Continuity</strong></td><td>25%</td><td>How many visits this carer has done with this service user in the past 90 days. <a href="/evidence.html#continuity-of-care">Familiar faces score higher</a>.</td></tr>
               <tr><td><strong>Hours headroom</strong></td><td>20%</td><td>Capacity left in the carer's contracted hours this week. Avoids creating overtime / availability conflicts.</td></tr>
               <tr><td><strong>Preferred carer</strong></td><td>15%</td><td>Whether the service user has explicitly flagged this carer as preferred (or excluded them).</td></tr>
               <tr><td><strong>Schedule fit</strong></td><td>10%</td><td>How well the visit slots into the carer's existing day without breaking another visit's window.</td></tr>

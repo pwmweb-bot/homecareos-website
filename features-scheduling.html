@@ -120,6 +120,75 @@
 {"@type":"Question","name":"Can I move my rota from Birdie to homecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch."}}
 ]}
 </script>
+
+<!-- SoftwareApplication schema, rota-scoped, linked to homepage @id graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://www.homecareos.co.uk/features-scheduling.html#rota-software",
+  "name": "homecareOS Rota & Scheduling",
+  "url": "https://www.homecareos.co.uk/features-scheduling.html",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Care rota software for UK domiciliary home care agencies",
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "UK domiciliary home care agencies",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  },
+  "operatingSystem": "Web, iOS, Android",
+  "description": "Drag-and-drop care rota and visit scheduling for UK home care agencies. AI cover finder, AI rota builder, travel-time awareness, GPS check-in and check-out, absence tracking and four-nation compliance.",
+  "featureList": "Drag-and-drop rota grid, AI cover finder, AI rota builder, Run templates, Travel time calculation, GPS check-in and check-out, Absence and leave tracking, Bradford Factor, Missed and late visit alerts",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free Plan",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "description": "Free for up to 5 active carers, 25 service users and 1 office admin, full core features, no credit card required. Office team (coordinators, managers) unmetered.",
+      "category": "Free"
+    },
+    {
+      "@type": "Offer",
+      "name": "Start",
+      "price": "7",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "description": "£7/active carer/month for agencies above 5 active carers. Office team unmetered.",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "7",
+        "priceCurrency": "GBP",
+        "unitText": "per active carer per month"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro",
+      "price": "10",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "description": "£10/active carer/month with AI rota builder, advanced analytics and white-label options.",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "10",
+        "priceCurrency": "GBP",
+        "unitText": "per active carer per month"
+      }
+    }
+  ],
+  "isPartOf": {
+    "@id": "https://www.homecareos.co.uk/#software"
+  },
+  "provider": {
+    "@id": "https://www.homecareos.co.uk/#organization"
+  }
+}
+</script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
