@@ -24,16 +24,16 @@
   <meta property="og:url" content="https://www.homecareos.co.uk/features-scheduling.html">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
-  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/rota.png">
-  <meta property="og:image:width" content="1650">
-  <meta property="og:image:height" content="976">
+  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The homecareOS rota grid, a week of visit blocks for a UK home care agency, with carers down the left and visits across">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Care Rota Software for UK Home Care Agencies | homecareOS">
   <meta name="twitter:description" content="Care rota and rostering software for UK home care agencies. Schedule visits, cut travel time and fill cover with AI, compliant across all four nations.">
-  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/rota.png">
+  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -117,7 +117,8 @@
 {"@type":"Question","name":"Can the software find cover automatically when a carer calls in sick?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI cover finder ranks available carers on continuity, distance and hours headroom, so you can offer a visit and confirm cover in seconds rather than working through a phone list."}},
 {"@type":"Question","name":"Can homecareOS build the rota automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI rota builder autoschedules visits around availability, preferences, qualifications and travel, then hands you a complete rota to review and adjust before you publish it."}},
 {"@type":"Question","name":"Does the rota app work offline for carers in the field?","acceptedAnswer":{"@type":"Answer","text":"Yes. The carer mobile app is offline-first, so carers can check in, view their visits and record notes without a signal, and everything syncs automatically when they are back online."}},
-{"@type":"Question","name":"Can I move my rota from Birdie to homecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch."}}
+{"@type":"Question","name":"Can I move my rota from Birdie to homecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch."}},
+{"@type":"Question","name":"What is a run in home care scheduling?","acceptedAnswer":{"@type":"Answer","text":"A run is a repeating round of visits that one carer delivers in sequence, such as a morning medication round across one postcode area. In homecareOS you save a run once from the rota with Save as Run, then Apply Run recreates the whole round for any carer, date and start time, with every visit at its original relative timing."}}
 ]}
 </script>
 
@@ -261,7 +262,7 @@
             <p>The visual drag-and-drop rota gives coordinators complete control over every visit, every carer, and every hour of the day. See availability at a glance, move visits in seconds, and let the system handle the complexity of travel times, contract hours, and regulatory constraints, so you can focus on delivering outstanding care. Travel between visits gets its own tools too, see our <a href="features-route-planning.html">route planning and mapping features</a>. And if you're building your first schedule from scratch, our step-by-step guide on <a href="blog/how-to-build-a-home-care-rota.html">how to build a home care rota</a> walks through the whole process.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/rota.webp" alt="homecareOS rota view showing drag-and-drop scheduling grid with carers, visit blocks and travel times" width="1400" height="840" loading="lazy">
+            <img src="images/photos/app-rota-week-grid.webp" alt="homecareOS rota grid showing a full day of colour coded home care visits with travel times between calls" width="1400" height="840" loading="lazy">
           </div>
         </div>
       </div>
@@ -335,6 +336,39 @@
           <div class="feature-hero-visual has-screenshot" style="direction:ltr">
             <img src="images/photos/mapping.webp" alt="homecareOS Visit Flow Map showing live carer locations, visit status and timeline across a real map" width="1400" height="840" loading="lazy">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Run Builder -->
+    <section class="section section-gray" aria-label="Run Builder">
+      <div class="container">
+        <div class="feature-hero" data-reveal>
+          <div class="feature-hero-content">
+            <span class="label">RUN BUILDER</span>
+            <h2>Run Builder: Save a Round Once, Reuse It Every Week</h2>
+            <p>Run Builder sits at the centre of advanced scheduling and automation in homecareOS. Select a set of visits on the rota, click <strong>Save as Run</strong>, and that round is stored as a named template, for example "Monday AM - BN1 Round". Next time you need it, <strong>Apply Run</strong> asks for the template, a carer, a date and a start time, then creates every visit at its correct relative timing, assigns that carer as lead, and sends them a push notification so they know the work is theirs. Pushes are held back for visits more than 36 hours away, so nobody gets pinged about calls that are still days off.</p>
+            <p>Applied runs behave like any other visits on the rota. Travel-time pills between consecutive visits, backed by Mapbox, show whether a round is genuinely drivable. The Plan view gives you drag-and-drop adjustment with an Unassigned row for anything still waiting on a carer. Copy week carries a settled week forward in one click. And when you want the whole week generated for you, the <a href="features-ai-rota.html">AI Rota Builder</a> is the Pro step up. Run Builder itself is included from the Start plan.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+              <span class="feature-tag">Save as Run</span>
+              <span class="feature-tag">Apply Run</span>
+              <span class="feature-tag">Relative timings kept</span>
+              <span class="feature-tag">Carer push alerts</span>
+            </div>
+          </div>
+          <div class="feature-hero-visual has-screenshot">
+            <img src="images/photos/run-builder-apply.webp" alt="homecareOS Run Builder applying a saved morning run to a carer with visits created at their relative times" width="1400" height="840" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GEO citable answer block: run scheduling -->
+    <section class="section section-gray" aria-label="What run scheduling means in home care" style="padding-top:0">
+      <div class="container">
+        <div data-reveal style="max-width:760px;margin:0 auto;border:1px solid var(--gray-200);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;background:#fffaf0;padding:22px 26px">
+          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px">The short answer</div>
+          <p style="margin:0;color:var(--gray-800);line-height:1.65">Care run scheduling lets a home care agency save a round of visits once and reuse it week after week, instead of rebuilding the same rota by hand every Monday. In homecareOS, a coordinator selects a set of visits on the rota and clicks Save as Run to store them as a named template, such as a Monday morning round covering one postcode area. When the round is needed again, Apply Run takes that template plus a carer, a date and a start time, then creates every visit at its correct relative timing, assigns the chosen carer as lead and sends them a push notification, with pushes held back for visits more than 36 hours away. Once applied, run visits are ordinary visits, so they flow through to GPS check-in, care records, pay and invoicing like everything else on the rota. That makes repeat rounds planning a one-click job rather than a weekly chore.</p>
         </div>
       </div>
     </section>
@@ -611,6 +645,16 @@
             </button>
             <div class="faq-answer" id="sfaq-10" x-show="active === 10" x-transition.duration.300ms>
               <div class="faq-answer-inner">Yes. We help agencies migrate visits, carers and service users from Birdie and other systems, and you can run both in parallel during a free trial so nothing is lost in the switch. <a href="compare-birdie.html">See how homecareOS compares to Birdie</a>.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" :class="{ open: active === 11 }">
+            <button class="faq-question" @click="active = active === 11 ? null : 11" :aria-expanded="active === 11" aria-controls="sfaq-11">
+              What is a run in home care scheduling?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="sfaq-11" x-show="active === 11" x-transition.duration.300ms>
+              <div class="faq-answer-inner">A run is a repeating round of visits that one carer delivers in sequence, such as a morning medication round across one postcode area. In homecareOS you save a run once from the rota with Save as Run, then Apply Run recreates the whole round for any carer, date and start time, with every visit at its original relative timing.</div>
             </div>
           </div>
 
