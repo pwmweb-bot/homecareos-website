@@ -1,5 +1,5 @@
 /*
- * homecareOS — Cookie Consent Banner
+ * homecareOS Cookie Consent Banner
  *
  * Consent Mode v2 aware. Works with the inline gtag consent defaults
  * that are set in each page's <head> before the gtag.js script loads.
@@ -35,7 +35,7 @@
     if (decision === CONSENT_GRANTED) { loadMetricool(); loadClarity(); }
   }
 
-  // Metricool tracker — only loaded after analytics consent is granted.
+  // Metricool tracker, only loaded after analytics consent is granted.
   // Idempotent: safe to call repeatedly.
   var metricoolLoaded = false;
   function loadMetricool() {
@@ -56,7 +56,7 @@
     head.appendChild(script);
   }
 
-  // Microsoft Clarity — only loaded after analytics consent is granted.
+  // Microsoft Clarity, only loaded after analytics consent is granted.
   // Idempotent: safe to call repeatedly.
   var clarityLoaded = false;
   function loadClarity() {
@@ -117,7 +117,7 @@
       '<div class="hcos-cookie-banner-inner">' +
         '<div class="hcos-cookie-text">' +
           'We use cookies to understand how you use our site and improve your experience. ' +
-          'You can accept or reject analytics cookies — essential cookies remain active. ' +
+          'You can accept or reject analytics cookies. Essential cookies remain active. ' +
           '<a href="/privacy.html#cookies">Privacy policy</a>.' +
         '</div>' +
         '<div class="hcos-cookie-buttons">' +
@@ -180,17 +180,17 @@
     var existingDecision = readDecision();
 
     if (existingDecision === CONSENT_GRANTED) {
-      // User previously accepted — grant consent, no banner
+      // User previously accepted, grant consent, no banner
       applyConsent(CONSENT_GRANTED);
       return;
     }
 
     if (existingDecision === CONSENT_DENIED) {
-      // User previously rejected — keep denied (already the default), no banner
+      // User previously rejected, keep denied (already the default), no banner
       return;
     }
 
-    // No decision yet — show banner
+    // No decision yet, show banner
     showBanner();
   }
 
