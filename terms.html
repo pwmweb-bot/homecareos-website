@@ -400,22 +400,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ============================================
-       INTERACTIVE FEATURES
-       ============================================ -->
-      <div class="chat-messages">
-        <template x-for="(msg, i) in messages" :key="i">
-          <div class="chat-msg" :class="msg.type" x-text="msg.text"></div>
-        </template>
-      </div>
-      <div class="chat-typing" x-show="typing">Typing...</div>
-      <div class="chat-input-area">
-        <input class="chat-input" type="text" placeholder="Type a message..." aria-label="Chat message" @keydown.enter="if($el.value.trim()) { messages.push({text: $el.value, type: 'outgoing'}); $el.value = ''; typing = true; setTimeout(() => { messages.push({text: 'Thanks for your message! A member of our team will get back to you shortly. In the meantime, feel free to explore our features.', type: 'incoming'}); typing = false; }, 1500); }">
-        <button class="chat-send" aria-label="Send message">&rarr;</button>
-      </div>
-    </div>
-  </div>
   <!-- ============================================
        SCRIPTS
        ============================================ -->

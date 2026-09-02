@@ -70,7 +70,7 @@
         "name": "Is homecareOS CQC compliant?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. homecareOS is designed with CQC compliance built into every feature. Our compliance tracking, documentation tools, and automated reporting ensure you're always audit-ready."
+          "text": "Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, so you are always inspection-ready."
         }
       },
       {
@@ -252,7 +252,7 @@
               <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer" role="region">
-              <p>Absolutely. homecareOS is designed with CQC compliance built into every single feature. Our compliance tracking tools, documentation systems, and automated reporting capabilities ensure you are always audit-ready. We continuously update the platform to reflect changes in CQC regulations, so you never fall behind. Many of our clients have achieved Outstanding ratings with CQC after switching to homecareOS.</p>
+              <p>Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, and we keep the platform current as each regulator's rules change, so you never fall behind. Agencies have reached the top inspection ratings, including CQC Outstanding in England, after switching to homecareOS.</p>
             </div>
           </div>
 
@@ -393,22 +393,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ============================================
-       INTERACTIVE FEATURES
-       ============================================ -->
-      <div class="chat-messages">
-        <template x-for="(msg, i) in messages" :key="i">
-          <div class="chat-msg" :class="msg.type" x-text="msg.text"></div>
-        </template>
-      </div>
-      <div class="chat-typing" x-show="typing">Typing...</div>
-      <div class="chat-input-area">
-        <input class="chat-input" type="text" placeholder="Type a message..." aria-label="Chat message" @keydown.enter="if($el.value.trim()) { messages.push({text: $el.value, type: 'outgoing'}); $el.value = ''; typing = true; setTimeout(() => { messages.push({text: 'Thanks for your message! A member of our team will get back to you shortly. In the meantime, feel free to explore our features.', type: 'incoming'}); typing = false; }, 1500); }">
-        <button class="chat-send" aria-label="Send message">&rarr;</button>
-      </div>
-    </div>
-  </div>
   <!-- ============================================
        SCRIPTS
        ============================================ -->
