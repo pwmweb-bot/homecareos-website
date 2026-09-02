@@ -5275,3 +5275,47 @@ p {
     text-align: center;
   }
 }
+
+
+/* ===== Mega menu (Software dropdown) ===== */
+.nav-dropdown-mega .nav-dropdown-menu {
+  left: 0;
+  transform: none;
+  min-width: 560px;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 2px 22px;
+}
+.nav-mega-group h4 {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gray-400);
+  margin: 8px 0 3px;
+  padding: 0 14px;
+}
+.nav-mega-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--gray-200);
+}
+.nav-mega-footer a { font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .nav-dropdown-mega .nav-dropdown-menu {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    padding: 0 0 0 12px;
+    gap: 0;
+  }
+  .nav-dropdown-mega.nav-dropdown.open .nav-dropdown-menu { max-height: 2000px; }
+  .nav-mega-group h4 { padding: 12px 16px 2px; margin: 0; }
+  .nav-mega-footer { border-top: none; margin-top: 4px; padding-top: 4px; }
+}
