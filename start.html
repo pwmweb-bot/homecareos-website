@@ -236,7 +236,7 @@
             </div>
             <h3>Invoicing &amp; Payroll</h3>
             <p>Generate invoices, run payroll exports, track mileage. No double entry, no spreadsheets.</p>
-            <span class="lp-free-badge">Start plan</span>
+            <span class="lp-free-badge">Included</span>
           </div>
           <div class="lp-solution-card" data-reveal>
             <div class="lp-solution-icon">
@@ -288,78 +288,12 @@
     <!-- ============================================
          5. PRICING, Anchoring + Decoy
          ============================================ -->
-    <section class="section" id="pricing" aria-labelledby="pricing-heading"
-      x-data="{
-        staffCount: 10,
-        billing: 'monthly',
-        get isFree() { return this.staffCount <= 5 },
-        get multiplier() { return this.billing === 'annual' ? 0.8 : 1 },
-        get startCost() {
-          if (this.isFree) return 0;
-          const monthly = Math.round(this.staffCount * 7 * this.multiplier);
-          return this.billing === 'annual' ? monthly * 12 : monthly;
-        },
-        get proCost() {
-          if (this.isFree) return 0;
-          const monthly = Math.round(this.staffCount * 10 * this.multiplier);
-          return this.billing === 'annual' ? monthly * 12 : monthly;
-        },
-        get startMonthly() { return this.isFree ? 0 : Math.round(this.staffCount * 7 * this.multiplier) },
-        get proMonthly() { return this.isFree ? 0 : Math.round(this.staffCount * 10 * this.multiplier) },
-        get startAnnualSaving() { return this.isFree ? 0 : this.staffCount * 7 * 12 * 0.2 },
-        get proAnnualSaving() { return this.isFree ? 0 : this.staffCount * 10 * 12 * 0.2 },
-        get billingLabel() { return this.isFree ? '' : (this.billing === 'annual' ? '/yr' : '/mo') },
-        formatCurrency(val) { return '\u00A3' + val.toLocaleString() }
-      }">
+    <section class="section" id="pricing" aria-labelledby="pricing-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-label">TRANSPARENT PRICING</span>
-          <h2 id="pricing-heading">Simple, Per-Active-Carer Pricing</h2>
-          <p>No hidden fees. No per-user gotchas. You pay per active carer, your office team stays unmetered, and pricing scales only when you do. There's a free starter tier for agencies with up to 5 active carers.</p>
-        </div>
-
-        <!-- Billing Toggle -->
-        <div class="billing-toggle" data-reveal>
-          <span class="toggle-label" :class="{ active: billing === 'monthly' }" @click="billing = 'monthly'">Monthly</span>
-          <div class="toggle-switch" :class="{ active: billing === 'annual' }" @click="billing = billing === 'monthly' ? 'annual' : 'monthly'" role="switch" :aria-checked="billing === 'annual'" aria-label="Toggle annual billing" tabindex="0" @keydown.enter="billing = billing === 'monthly' ? 'annual' : 'monthly'" @keydown.space.prevent="billing = billing === 'monthly' ? 'annual' : 'monthly'">
-            <div class="toggle-knob"></div>
-          </div>
-          <span class="toggle-label" :class="{ active: billing === 'annual' }" @click="billing = 'annual'">Annual</span>
-          <span class="toggle-badge" x-show="billing === 'annual'" x-transition>Save 20%</span>
-        </div>
-
-        <!-- Interactive Calculator -->
-        <div class="pricing-calculator" data-reveal>
-          <h3>Calculate Your Cost</h3>
-          <p class="calculator-subtitle" x-text="billing === 'annual' ? 'Drag the slider to see your annual cost.' : 'Drag the slider to see your monthly cost.'"></p>
-          <div class="calculator-staff-input">
-            <label for="staff-slider">Number of active carers</label>
-            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" x-model.number="staffCount" aria-label="Number of active carers">
-            <input type="number" min="1" max="200" x-model.number="staffCount" aria-label="Active carer count" @input="if(staffCount < 1) staffCount = 1; if(staffCount > 200) staffCount = 200">
-          </div>
-          <div class="calculator-display" x-show="!isFree" x-transition>
-            <div class="calculator-display-card highlight">
-              <div class="tier-name">Start</div>
-              <div class="tier-price" x-text="formatCurrency(startCost)"></div>
-              <div class="tier-unit" x-text="billingLabel"></div>
-              <div class="tier-equivalent" x-show="billing === 'annual' && !isFree" x-transition x-text="'(' + formatCurrency(startMonthly) + '/mo)'"></div>
-              <div class="tier-saving" x-show="billing === 'annual' && !isFree" x-transition x-text="'Save ' + formatCurrency(startAnnualSaving) + '/yr'"></div>
-            </div>
-            <div class="calculator-display-card">
-              <div class="tier-name">Pro</div>
-              <div class="tier-price" x-text="formatCurrency(proCost)"></div>
-              <div class="tier-unit" x-text="billingLabel"></div>
-              <div class="tier-equivalent" x-show="billing === 'annual' && !isFree" x-transition x-text="'(' + formatCurrency(proMonthly) + '/mo)'"></div>
-              <div class="tier-saving" x-show="billing === 'annual' && !isFree" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
-            </div>
-          </div>
-          <div class="calculator-display" x-show="isFree" x-transition>
-            <div class="calculator-display-card highlight" style="text-align:center">
-              <div class="tier-price" style="color:#059669;font-size:2rem">Free</div>
-              <div class="tier-unit">Up to 5 active carers &amp; 25 service users</div>
-              <div style="margin-top:8px;font-size:0.85rem;color:var(--text-light)">No credit card required</div>
-            </div>
-          </div>
+          <h2 id="pricing-heading">Simple, Per-Carer Pricing</h2>
+          <p>No hidden fees and no per-user gotchas. Free for your first 5 carers, then &pound;10 per carer per month. Your office team and service users are always unmetered, so you only pay for the carers delivering visits.</p>
         </div>
 
         <!-- Pricing Cards -->
@@ -368,53 +302,39 @@
           <div class="pricing-card">
             <h3>Free</h3>
             <div class="price">&pound;0<span> / month</span></div>
-            <p class="price-note">Up to 5 active carers &middot; 25 service users &middot; 1 office admin</p>
+            <p class="price-note">Your first 5 carers &middot; office team &amp; service users unmetered</p>
             <ul class="pricing-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Drag-and-drop rota</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Digital care plans</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Mobile app (GPS check-in)</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Care notes &amp; MAR</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Compliance checklists</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Email support</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Drag-and-drop rota &amp; run templates</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Digital care plans, care notes &amp; MAR</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Carer mobile app (GPS check-in)</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Invoicing, payroll &amp; family portal</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full reporting suite &amp; AI Cover Finder</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Four-nation compliance</li>
             </ul>
             <a href="https://app.homecareos.co.uk" onclick="trackSignupClick()" class="btn btn-outline">Get started for free</a>
           </div>
 
-          <!-- Start Plan (Featured) -->
+          <!-- Pro Plan (Featured) -->
           <div class="pricing-card featured">
             <div class="pricing-badge">Most Popular</div>
-            <h3>Start</h3>
-            <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '5.60' : '7'"></span><span> / active carer / mo</span></div>
-            <p class="price-note"><span x-text="isFree ? staffCount + ' active carers, Free!' : staffCount + ' active carers = ' + formatCurrency(startCost) + billingLabel"></span></p>
+            <h3>Pro</h3>
+            <div class="price">&pound;10<span> / carer / mo</span></div>
+            <p class="price-note">Once you pass 5 carers &middot; annual billing saves 20%</p>
             <ul class="pricing-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited carers &amp; service users</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Family portal</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Training &amp; DBS tracking</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Bradford Factor</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Invoicing &amp; payroll</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Phone &amp; chat support</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Free</strong></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Rota Builder</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Advanced analytics &amp; benchmarking</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Commissioner portal</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> White-label branding &amp; API access</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority support + SLA</li>
             </ul>
             <a href="https://app.homecareos.co.uk" onclick="trackSignupClick()" class="btn btn-primary">Get started for free</a>
           </div>
-
-          <!-- Pro Plan -->
-          <div class="pricing-card">
-            <h3>Pro</h3>
-            <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '8' : '10'"></span><span> / active carer / mo</span></div>
-            <p class="price-note"><span x-text="isFree ? staffCount + ' active carers, Free!' : staffCount + ' active carers = ' + formatCurrency(proCost) + billingLabel"></span></p>
-            <ul class="pricing-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Start</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Cover Finder</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Rota Builder</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> API access</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> White-label branding</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account manager</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority support + SLA</li>
-            </ul>
-            <a href="https://app.homecareos.co.uk" onclick="trackSignupClick()" class="btn btn-outline">Get started for free</a>
-          </div>
         </div>
+
+        <p style="text-align:center;margin-top:28px">
+          <a href="pricing.html" class="btn btn-ghost">See full pricing, the cost calculator and feature comparison &rarr;</a>
+        </p>
       </div>
     </section>
 
@@ -479,11 +399,11 @@
         <div class="lp-faq" x-data="{ open: null }">
           <div class="lp-faq-item" :class="{ open: open === 1 }">
             <button class="lp-faq-q" @click="open = open === 1 ? null : 1" :aria-expanded="open === 1">
-              <span>What happens when I grow past 5 active carers?</span>
+              <span>What happens when I grow past 5 carers?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="lp-faq-a" x-show="open === 1" x-transition x-cloak>
-              <p>Simple per-active-carer pricing kicks in automatically. Start plan is &pound;7/active carer/month, Pro is &pound;10/active carer/month. Your office team (coordinators, managers, owners) stays unmetered. No surprises, no hidden costs. You only pay for carers actually rostered to visits each billing month.</p>
+              <p>Simple per-carer pricing kicks in automatically: &pound;10 per carer per month on Pro, once you pass 5 carers. Your office team (coordinators, managers, owners) and your service users stay unmetered. Headcount is taken at your renewal date, so no surprises and no hidden costs.</p>
             </div>
           </div>
           <div class="lp-faq-item" :class="{ open: open === 2 }">
