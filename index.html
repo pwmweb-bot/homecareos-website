@@ -355,8 +355,39 @@
 <script src="/cookie-consent.js?v=20260719" defer></script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <!-- Branded page loader (first paint, no JS library needed) -->
+  <style>
+    #hco-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
+      background:#F5EFE4;transition:opacity .45s ease;}
+    #hco-loader.hco-done{opacity:0;pointer-events:none;}
+    #hco-loader svg{width:78px;height:78px;}
+    #hco-loader .hco-track{opacity:.16;}
+    #hco-loader .hco-arc{transform-box:fill-box;transform-origin:center;animation:hco-spin 1.1s linear infinite;}
+    #hco-loader .hco-heart{transform-box:fill-box;transform-origin:center;animation:hco-beat 1.1s ease-in-out infinite;}
+    @keyframes hco-spin{to{transform:rotate(360deg);}}
+    @keyframes hco-beat{0%,100%{transform:scale(1);}42%{transform:scale(1.15);}72%{transform:scale(1);}}
+    @media (prefers-reduced-motion:reduce){#hco-loader .hco-arc,#hco-loader .hco-heart{animation:none;}}
+  </style>
 </head>
 <body>
+
+  <!-- Branded loader overlay -->
+  <div id="hco-loader" role="status" aria-label="Loading homecareOS">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle class="hco-track" cx="32" cy="32" r="25" fill="none" stroke="#16323D" stroke-width="4.5"/>
+      <g class="hco-arc"><circle cx="32" cy="32" r="25" fill="none" stroke="#E8A14A" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="40 118"/></g>
+      <path d="M14 32 L32 16 L50 32" fill="none" stroke="#16323D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <g class="hco-heart"><path d="M32 46 L21 35 A6 6 0 0 1 32 30 A6 6 0 0 1 43 35 Z" fill="#E8A14A"/></g>
+    </svg>
+  </div>
+  <script>
+    (function(){var l=document.getElementById('hco-loader');if(!l)return;
+      function hide(){l.classList.add('hco-done');setTimeout(function(){l.style.display='none';},500);}
+      if(document.readyState==='complete'){hide();}
+      else{window.addEventListener('load',hide);}
+      setTimeout(hide,4000);/* safety: never let the loader stick */
+    })();
+  </script>
 
   <!-- Skip Link -->
   <a href="#" class="skip-link" id="skip-link">Skip to main content</a>
@@ -578,7 +609,7 @@
         <div class="section-header" data-reveal>
           <span class="section-label">THE CHALLENGE</span>
           <h2 id="problem-heading">Running a Home Care Agency Shouldn't Be This Hard</h2>
-          <p>Juggling spreadsheets, paper rotas, and disconnected tools wastes time and puts compliance at risk.</p>
+          <p>Running everything through disconnected apps, spreadsheets and phone lines wastes time and puts compliance at risk.</p>
         </div>
         <div class="card-grid card-grid-3">
           <div class="card" data-reveal data-reveal-delay="0">
@@ -586,21 +617,21 @@
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h8" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/><path d="M16 16l4 4m0-4l-4 4" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <h3>Scattered Systems</h3>
-            <p>Most UK home care agencies run their rota, care records, compliance tracking, and invoicing in three or four separate systems that don't talk to each other, typically a scheduling tool, a paper or PDF-based care planning process, a separate compliance spreadsheet, and standalone accounting software. That gap between systems is where most preventable errors happen: a carer's availability changes in the rota tool but nobody updates the care plan, a missed visit doesn't trigger a family alert, or a training certificate expires without anyone noticing until a CQC inspector asks for it. homecareOS replaces that patchwork with a single visit-centric record: one visit connects the carer, the care plan, the compliance evidence, and the invoice line, so a change in one place is reflected everywhere else automatically. For a 30-carer agency, coordinators typically report going from checking four systems each morning to one.</p>
+            <p>Your rota, care records, calls and messages are spread across a scheduling tool, WhatsApp groups, email and a separate phone system. Nothing joins up, so the same update gets typed in two or three times.</p>
           </div>
           <div class="card" data-reveal data-reveal-delay="100">
             <div class="card-icon" aria-hidden="true">
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 9v4l3 3" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#e74c3c" stroke-width="2"/><path d="M12 3v2M3 12h2M12 21v-2M21 12h-2" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <h3>Compliance Anxiety</h3>
-            <p>Keeping up with CQC regulations and ensuring every visit is documented correctly is stressful and time-consuming without the right tools.</p>
+            <p>Evidencing every visit correctly and staying inspection ready, across CQC, CIW, Care Inspectorate and RQIA, gets stressful when the proof is scattered across different tools.</p>
           </div>
           <div class="card" data-reveal data-reveal-delay="200">
             <div class="card-icon" aria-hidden="true">
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#e74c3c" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Wasted Time</h3>
-            <p>Hours lost on admin tasks, manual data entry, and chasing paperwork instead of focusing on what matters most, delivering quality care.</p>
+            <p>Hours disappear into admin: re-keying the same details from one app to the next, and chasing updates that should have flowed through on their own.</p>
           </div>
         </div>
       </div>
