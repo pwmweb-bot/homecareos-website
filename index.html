@@ -38,7 +38,7 @@
 
   <!-- Critical above-the-fold CSS (inlined to eliminate render-blocking) -->
   <style>
-    :root{--primary:#1e3a5f;--primary-light:#2a4f7a;--secondary:#0f172a;--accent:#f59e0b;--accent-hover:#d97706;--bg:#f8fafc;--white:#fff;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-500:#6b7280;--gray-600:#4b5563;--gray-700:#374151;--radius-md:10px;--radius-lg:16px;--radius-full:9999px;--font-heading:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--container-wide:1400px}
+    :root{--primary:#16323D;--primary-light:#24485A;--secondary:#0f172a;--accent:#E8A14A;--accent-hover:#CE8A2E;--bg:#f8fafc;--white:#fff;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-500:#6b7280;--gray-600:#4b5563;--gray-700:#374151;--radius-md:10px;--radius-lg:16px;--radius-full:9999px;--font-heading:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--container-wide:1400px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%;overflow-x:hidden}
     body{font-family:var(--font-body);font-weight:400;line-height:1.7;color:var(--gray-700);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -66,11 +66,11 @@
     .nav-toggle{display:none;background:transparent;border:0;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
     .nav-toggle span{display:block;width:24px;height:2px;background:var(--primary);border-radius:1px}
     .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);color:var(--white)}
-    .hero::before{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;border-radius:50%;background:rgba(245,158,11,.08);pointer-events:none}
+    .hero::before{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;border-radius:50%;background:rgba(232,161,74,.08);pointer-events:none}
     .hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.03);pointer-events:none}
     .hero .container{position:relative;z-index:2}
     .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .hero-eyebrow{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding:6px 14px;background:rgba(245,158,11,.1);border-radius:999px;border:1px solid rgba(245,158,11,.25)}
+    .hero-eyebrow{display:inline-block;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding:6px 14px;background:rgba(232,161,74,.1);border-radius:999px;border:1px solid rgba(232,161,74,.25)}
     .hero-title{font-size:clamp(2.1rem,3.6vw,3.4rem);color:var(--white);margin-bottom:24px;letter-spacing:-.02em;line-height:1.1}
     .hero-title .highlight{color:var(--accent)}
     .hero-subtitle{font-size:clamp(1.0625rem,1.5vw,1.25rem);color:rgba(255,255,255,.8);margin-bottom:40px;max-width:520px;line-height:1.7}
@@ -93,10 +93,10 @@
 
   <!-- Async-load full stylesheets (non-blocking) -->
   <link rel="preload" as="style" href="/fonts/dmsans.css?v=20260521" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="styles.css?v=20260902meganav" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="styles.css?v=20260906brand" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-    <link rel="stylesheet" href="styles.css?v=20260902meganav">
+    <link rel="stylesheet" href="styles.css?v=20260906brand">
   </noscript>
 
   <!-- AOS CSS (deferred, not render-critical) -->
@@ -614,21 +614,21 @@
         <div class="card-grid card-grid-3">
           <div class="card" data-reveal data-reveal-delay="0">
             <div class="card-icon" aria-hidden="true">
-              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h8" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/><path d="M16 16l4 4m0-4l-4 4" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h8" stroke="#E24B4A" stroke-width="2" stroke-linecap="round"/><path d="M16 16l4 4m0-4l-4 4" stroke="#E24B4A" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <h3>Scattered Systems</h3>
             <p>Your rota, care records, calls and messages are spread across a scheduling tool, WhatsApp groups, email and a separate phone system. Nothing joins up, so the same update gets typed in two or three times.</p>
           </div>
           <div class="card" data-reveal data-reveal-delay="100">
             <div class="card-icon" aria-hidden="true">
-              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 9v4l3 3" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#e74c3c" stroke-width="2"/><path d="M12 3v2M3 12h2M12 21v-2M21 12h-2" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 9v4l3 3" stroke="#E24B4A" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#E24B4A" stroke-width="2"/><path d="M12 3v2M3 12h2M12 21v-2M21 12h-2" stroke="#E24B4A" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <h3>Compliance Anxiety</h3>
             <p>Evidencing every visit correctly and staying inspection ready, across CQC, CIW, Care Inspectorate and RQIA, gets stressful when the proof is scattered across different tools.</p>
           </div>
           <div class="card" data-reveal data-reveal-delay="200">
             <div class="card-icon" aria-hidden="true">
-              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#e74c3c" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#E24B4A" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#E24B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Wasted Time</h3>
             <p>Hours disappear into admin: re-keying the same details from one app to the next, and chasing updates that should have flowed through on their own.</p>
@@ -915,11 +915,11 @@
         <div class="card-grid card-grid-3">
           <div class="card testimonial-card" data-reveal data-reveal-delay="0">
             <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
             </div>
             <blockquote class="testimonial-quote">
               <p>"homecareOS has so many features, but for us the AI smart care plans was a huge improvement over manually typing everything. Profit/Loss reports were a big help to ensure we are looking at every possible angle for our finances."</p>
@@ -933,11 +933,11 @@
           </div>
           <div class="card testimonial-card" data-reveal data-reveal-delay="100">
             <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
             </div>
             <blockquote class="testimonial-quote">
               <p>"homecareOS has made the agency run so much smoother. In our office the heads up display works wonders to keep the team informed and the real-time alerts have been a huge blessing."</p>
@@ -951,11 +951,11 @@
           </div>
           <div class="card testimonial-card" data-reveal data-reveal-delay="200">
             <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
-              <svg width="18" height="18" fill="#f59e0b" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+              <svg width="18" height="18" fill="#E8A14A" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
             </div>
             <blockquote class="testimonial-quote">
               <p>"The mobile app is easy to use and now I can book holidays and get alerted to this straight away. The pay section allows me to be in control with personal finances and even makes me want to do more work so I can see it increase."</p>

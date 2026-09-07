@@ -41,7 +41,7 @@
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260902meganav"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260906brand"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2, default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -172,6 +172,13 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:16px auto 0;max-width:560px}
+  </style>
 </head>
 <body>
 
@@ -282,6 +289,17 @@
     </section>
 
     <!-- GEO citable answer block -->
+    <section class="section motion-band" aria-label="From scattered visits to a protected run">
+      <div class="container" style="max-width:720px;text-align:center">
+        <h2 data-reveal style="margin-bottom:10px">From scattered visits to a protected run</h2>
+        <div class="lottie-stage" style="max-width:560px"><div id="run-anim" data-lottie="/lottie/homecareos-run.json" style="aspect-ratio:48/34" role="img" aria-label="Six scattered visits are gathered into one optimised run assigned to the best-matched carer, cutting travel time"></div></div>
+        <p class="lottie-cap">Scattered visits become one optimised run, matched to the best carer. Ninety-six minutes of separate trips becomes fifty-four.</p>
+        <div style="height:36px"></div>
+        <div class="lottie-stage" style="max-width:560px"><div id="flood-anim" data-lottie="/lottie/homecareos-flood.json" style="aspect-ratio:48/30" role="img" aria-label="A carer is blocked by a flooded bridge and the system re-routes a nearer carer so the visit is covered on time"></div></div>
+        <p class="lottie-cap">When a flood cuts a route in real time, the nearest suitable carer is re-routed so the visit still lands on time.</p>
+      </div>
+    </section>
+
     <section class="section" aria-label="What mapping software does for domiciliary care" style="padding-top:0">
       <div class="container">
         <div data-reveal style="max-width:760px;margin:0 auto;border:1px solid var(--gray-200);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;background:#fffaf0;padding:22px 26px">
@@ -707,5 +725,23 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

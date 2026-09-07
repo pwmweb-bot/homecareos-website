@@ -7,8 +7,8 @@
   <title>Carer Day | Scroll-Driven Prototype</title>
   <style>
     :root {
-      --primary: #1e3a5f;
-      --accent: #f59e0b;
+      --primary: #16323D;
+      --accent: #E8A14A;
       --green: #1D9E75;
       --red: #E24B4A;
       --amber: #EF9F27;
@@ -204,8 +204,8 @@
       letter-spacing: 0.3px;
       margin-bottom: 12px;
     }
-    .event-status.scheduled { background: #1A1A2E; color: #fff; }
-    .event-status.in-progress { background: var(--amber); color: #1A1A2E; }
+    .event-status.scheduled { background: #16323D; color: #fff; }
+    .event-status.in-progress { background: var(--amber); color: #16323D; }
     .event-status.completed { background: var(--green); color: #fff; }
     .event-status.incident { background: var(--red); color: #fff; }
     .event-status.break { background: var(--gray-200); color: var(--gray-700); }
@@ -450,8 +450,8 @@ function houseSVG(color, roofColor, w, h, type) {
     return `<svg width="${w+10}" height="${h+20}" viewBox="0 0 ${w+10} ${h+20}">
       <rect x="5" y="20" width="${w}" height="${h-4}" rx="3" fill="${color}"/>
       <rect x="3" y="16" width="${w+4}" height="6" rx="2" fill="${roofColor}"/>
-      <rect x="12" y="26" width="${w-14}" height="14" rx="3" fill="#f59e0b"/>
-      <text x="${(w+10)/2}" y="37" text-anchor="middle" font-size="7" font-weight="700" fill="#1e3a5f">homecare OS</text>
+      <rect x="12" y="26" width="${w-14}" height="14" rx="3" fill="#E8A14A"/>
+      <text x="${(w+10)/2}" y="37" text-anchor="middle" font-size="7" font-weight="700" fill="#16323D">homecare OS</text>
       <rect x="12" y="46" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.6"/>
       <rect x="28" y="46" width="12" height="10" rx="2" fill="#FDE68A" opacity="0.5"/>
       <rect x="44" y="46" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.6"/>
@@ -479,7 +479,7 @@ function houseSVG(color, roofColor, w, h, type) {
     <rect x="${w-16}" y="32" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.65"/>
     ${h > 50 ? `<rect x="11" y="48" width="12" height="10" rx="2" fill="#B8DCF8" opacity="0.45"/>` : ''}
     <rect x="${sw/2-6}" y="${sh-20}" width="12" height="20" rx="2" fill="#8B7355"/>
-    <circle cx="${sw/2+2}" cy="${sh-9}" r="1.5" fill="#f59e0b"/>
+    <circle cx="${sw/2+2}" cy="${sh-9}" r="1.5" fill="#E8A14A"/>
   </svg>`;
 }
 
@@ -509,7 +509,7 @@ const events = [
   {
     time: '07:15', title: 'Office Briefing', subtitle: 'homecareOS Agency, checking the rota',
     status: 'driving', statusText: '📋 Briefing',
-    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    house: { color: '#16323D', roof: '#0E2229', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
     speech: '"Morning everyone! 48 visits across 6 carers today. Sarah, you\'ve got 9, plus we might need cover for Mrs. Wilson later."',
     notif: { icon: '📋', bg: 'blue', title: 'Rota Updated', sub: '9 visits assigned for today' },
@@ -560,7 +560,7 @@ const events = [
   {
     time: '09:50', title: 'Cover Needed!', subtitle: 'Alert from the office, carer called in sick',
     status: 'incident', statusText: '🚨 Cover Alert',
-    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    house: { color: '#16323D', roof: '#0E2229', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
     speech: '"Sarah, can you fit in Mrs. Wilson at 2pm? Her regular carer called in sick and the AI cover finder matched you as the best fit."',
     notif: { icon: '🚨', bg: 'amber', title: 'Cover Needed!', sub: 'Mrs. Wilson (14:00), carer called in sick' },
@@ -570,7 +570,7 @@ const events = [
   {
     time: '09:52', title: 'Shift Accepted', subtitle: 'Sarah picks up the extra visit',
     status: 'completed', statusText: '👍 Shift Accepted',
-    house: { color: '#1e3a5f', roof: '#152d4a', w: 70, h: 75, type: 'office' },
+    house: { color: '#16323D', roof: '#0E2229', w: 70, h: 75, type: 'office' },
     houseLabel: 'homecareOS Agency',
     notif: { icon: '✅', bg: 'green', title: 'Shift Confirmed', sub: 'Mrs. Wilson added to afternoon rota' },
     speech: '"No problem, I can fit her in after lunch. The care plan is already on my app."',

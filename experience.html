@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="/images/brand/favicon-light.svg">
   <style>
     :root{
-      --navy:#0a0a14; --ink:#16323D; --amber:#F59E0B; --green:#1D9E75; --blue:#378ADD;
+      --navy:#0a0a14; --ink:#16323D; --amber:#E8A14A; --green:#1D9E75; --blue:#378ADD;
       --paper:#F5F1E8; --paper-ink:#2a2a28;
     }
     *{margin:0;padding:0;box-sizing:border-box}
@@ -34,7 +34,7 @@
     #gate p{opacity:.55;font-size:.95rem;max-width:340px;line-height:1.6}
     .gate-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
     .gbtn{cursor:pointer;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;padding:14px 26px;border-radius:999px;font-size:.95rem;font-family:inherit;transition:all .25s ease;display:inline-flex;align-items:center;gap:9px}
-    .gbtn:hover{border-color:var(--amber);background:rgba(245,158,11,.08)}
+    .gbtn:hover{border-color:var(--amber);background:rgba(232,161,74,.08)}
     .gbtn.primary{background:var(--amber);color:#1a1a14;border-color:var(--amber);font-weight:500}
     .gbtn.primary:hover{filter:brightness(1.08)}
 
@@ -180,10 +180,10 @@
     var P = 780/1695; // portrait ratio
     var PANELS = [
       {key:'rota', tex:'images/photos/rota.webp', w:3.6, h:3.6/L, pos:[0,0.25,0], rot:[0,0,0], accent:'#1D9E75'},
-      {key:'map', tex:'images/photos/mapping.webp', w:3.2, h:3.2/L, pos:[4.3,0.8,-1.2], rot:[0,-0.32,0], accent:'#F59E0B'},
+      {key:'map', tex:'images/photos/mapping.webp', w:3.2, h:3.2/L, pos:[4.3,0.8,-1.2], rot:[0,-0.32,0], accent:'#E8A14A'},
       {key:'comp', tex:'images/photos/compliance.webp', w:3.2, h:3.2/L, pos:[-4.3,0.55,-1.6], rot:[0,0.32,0], accent:'#378ADD'},
       {key:'phone', tex:'images/photos/visits.webp', w:3.0*P, h:3.0, pos:[2.1,-1.25,1.7], rot:[0,-0.18,0], accent:'#1D9E75'},
-      {key:'dash', tex:'images/photos/dashboard.webp', w:3.0, h:3.0/L, pos:[-2.2,-1.2,-0.4], rot:[0,0.2,0], accent:'#F59E0B'}
+      {key:'dash', tex:'images/photos/dashboard.webp', w:3.0, h:3.0/L, pos:[-2.2,-1.2,-0.4], rot:[0,0.2,0], accent:'#E8A14A'}
     ];
 
     var loader = new THREE.TextureLoader();
@@ -218,7 +218,7 @@
     PANELS.forEach(function(c){ groups[c.key] = makePanel(c); });
 
     // boot pulse
-    var bootMat = new THREE.MeshBasicMaterial({color:new THREE.Color('#F59E0B'), transparent:true, opacity:0.9, blending:THREE.AdditiveBlending, depthWrite:false});
+    var bootMat = new THREE.MeshBasicMaterial({color:new THREE.Color('#E8A14A'), transparent:true, opacity:0.9, blending:THREE.AdditiveBlending, depthWrite:false});
     var boot = new THREE.Mesh(new THREE.PlaneGeometry(0.5,0.5), bootMat);
     boot.position.set(0,0.25,1.2); scene.add(boot);
 
@@ -231,8 +231,8 @@
       scene.add(new THREE.Line(geo, m)); lineMats.push(m);
     }
     function buildLines(){
-      connect('phone','dash','#1D9E75'); connect('dash','rota','#F59E0B');
-      connect('rota','map','#F59E0B'); connect('rota','comp','#378ADD');
+      connect('phone','dash','#1D9E75'); connect('dash','rota','#E8A14A');
+      connect('rota','map','#E8A14A'); connect('rota','comp','#378ADD');
       connect('phone','rota','#1D9E75');
     }
 

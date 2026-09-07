@@ -41,7 +41,7 @@
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260902meganav"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260906brand"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2, default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -178,6 +178,13 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:16px auto 0;max-width:560px}
+  </style>
 </head>
 <body>
 
@@ -288,6 +295,14 @@
     </section>
 
     <!-- Benefits Grid -->
+    <section class="section motion-band" aria-label="See the rota build itself">
+      <div class="container" style="max-width:720px;text-align:center">
+        <h2 data-reveal style="margin-bottom:10px">See the rota build itself</h2>
+        <div class="lottie-stage" style="max-width:560px"><div id="rota-anim" data-lottie="/lottie/homecareos-rota.json" style="aspect-ratio:48/30" role="img" aria-label="A rota grid fills with visit blocks that slide into place and move through the day, navy for scheduled, amber for in progress, green for completed, with one dark-orange block still needing cover"></div></div>
+        <p class="lottie-cap">Visits drop onto the grid and move through the day. One block stays dark orange: the visit that still needs cover.</p>
+      </div>
+    </section>
+
     <section class="section section-gray" aria-label="Scheduling benefits">
       <div class="container">
         <div class="section-header" data-reveal>
@@ -851,5 +866,23 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

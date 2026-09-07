@@ -17,7 +17,7 @@
       min-height: 100vh;
       padding: 30px 20px;
     }
-    h1 { font-size: 1.2rem; color: #1e3a5f; margin-bottom: 4px; }
+    h1 { font-size: 1.2rem; color: #16323D; margin-bottom: 4px; }
     .subtitle { font-size: 0.8rem; color: #999; margin-bottom: 20px; }
 
     .animation-wrapper {
@@ -38,7 +38,7 @@
       left: 0;
       right: 0;
       height: 48px;
-      background: rgba(30,58,95,0.92);
+      background: rgba(22,50,61,0.92);
       backdrop-filter: blur(8px);
       display: flex;
       align-items: center;
@@ -57,7 +57,7 @@
     }
     .time-display .dot {
       width: 7px; height: 7px;
-      background: #f59e0b;
+      background: #E8A14A;
       border-radius: 50%;
       animation: blink 1s infinite;
     }
@@ -177,8 +177,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     .status-badge.visible { opacity: 1; }
-    .status-badge.scheduled { background: #1A1A2E; color: #fff; }
-    .status-badge.in-progress { background: #EF9F27; color: #1A1A2E; }
+    .status-badge.scheduled { background: #16323D; color: #fff; }
+    .status-badge.in-progress { background: #EF9F27; color: #16323D; }
     .status-badge.completed { background: #1D9E75; color: #fff; }
     .status-badge.incident { background: #E24B4A; color: #fff; animation: pulse-badge 1s infinite; }
     @keyframes pulse-badge { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.05); } }
@@ -199,7 +199,7 @@
       left: 50%;
       transform: translateX(-50%);
       background: #fff;
-      color: #1e3a5f;
+      color: #16323D;
       padding: 8px 14px;
       border-radius: 14px;
       font-size: 0.75rem;
@@ -237,7 +237,7 @@
       padding: 10px 14px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.14);
       font-size: 0.75rem;
-      color: #1e3a5f;
+      color: #16323D;
       z-index: 30;
       display: flex;
       align-items: center;
@@ -288,7 +288,7 @@
       opacity: 0;
       transform: translateX(-20px);
       transition: all 0.4s ease;
-      border-left: 3px solid #1e3a5f;
+      border-left: 3px solid #16323D;
       min-width: 180px;
     }
     .office-stats.visible {
@@ -298,7 +298,7 @@
     .office-stats-title {
       font-size: 0.68rem;
       font-weight: 700;
-      color: #1e3a5f;
+      color: #16323D;
       margin-bottom: 6px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -313,7 +313,7 @@
     }
     .office-stat-row:last-child { border: none; }
     .office-stat-row .osr-label { color: #666; }
-    .office-stat-row .osr-value { font-weight: 700; color: #1e3a5f; }
+    .office-stat-row .osr-value { font-weight: 700; color: #16323D; }
 
     /* ===== PROGRESS BAR ===== */
     .progress-bar {
@@ -322,11 +322,11 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: rgba(30,58,95,0.1);
+      background: rgba(22,50,61,0.1);
     }
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, #f59e0b, #1D9E75);
+      background: linear-gradient(90deg, #E8A14A, #1D9E75);
       width: 0%;
       transition: width 0.5s ease;
     }
@@ -346,12 +346,12 @@
       font-size: 0.78rem;
       cursor: pointer;
       font-weight: 600;
-      color: #1e3a5f;
+      color: #16323D;
       transition: all 0.2s;
     }
-    .controls button:hover { background: #1e3a5f; color: #fff; border-color: #1e3a5f; }
-    .controls button.primary { background: #f59e0b; color: #1e3a5f; border-color: #f59e0b; }
-    .controls button.primary:hover { background: #d97706; }
+    .controls button:hover { background: #16323D; color: #fff; border-color: #16323D; }
+    .controls button.primary { background: #E8A14A; color: #16323D; border-color: #E8A14A; }
+    .controls button.primary:hover { background: #CE8A2E; }
     .speed-label { font-size: 0.72rem; color: #999; }
 
     /* ===== SMALL TREE DECORATIONS ===== */
@@ -509,7 +509,7 @@
 // ============================================================
 const buildings = [
   { id: 'carer-home', type: 'home', x: 15, label: "Sarah's Home", color: '#7C9EB2', roofColor: '#5A7A8A', w: 48, h: 58 },
-  { id: 'office', type: 'office', x: 95, label: 'homecareOS Agency', color: '#1e3a5f', roofColor: '#152d4a', w: 62, h: 70 },
+  { id: 'office', type: 'office', x: 95, label: 'homecareOS Agency', color: '#16323D', roofColor: '#0E2229', w: 62, h: 70 },
   { id: 'h1', type: 'house', x: 190, label: 'Mrs. Patel', color: '#E8B4B4', roofColor: '#C48888', w: 42, h: 50 },
   { id: 'h2', type: 'house', x: 265, label: 'Mr. Davies', color: '#B4C8E8', roofColor: '#8AA4C8', w: 42, h: 46 },
   { id: 'h3', type: 'house', x: 340, label: 'Mrs. Jones', color: '#D4C4A8', roofColor: '#B0A080', w: 42, h: 52 },
@@ -797,8 +797,8 @@ function renderBuildings() {
       svg = `<svg width="${sw}" height="${sh}" viewBox="0 0 ${sw} ${sh}">
         <rect x="5" y="22" width="${b.w}" height="${b.h - 6}" rx="2" fill="${b.color}"/>
         <rect x="3" y="18" width="${b.w + 4}" height="6" rx="1" fill="${b.roofColor}"/>
-        <rect x="12" y="28" width="${b.w - 14}" height="12" rx="2" fill="#f59e0b"/>
-        <text x="${sw/2}" y="37" text-anchor="middle" font-size="5.5" font-weight="700" fill="#1e3a5f">homecare OS</text>
+        <rect x="12" y="28" width="${b.w - 14}" height="12" rx="2" fill="#E8A14A"/>
+        <text x="${sw/2}" y="37" text-anchor="middle" font-size="5.5" font-weight="700" fill="#16323D">homecare OS</text>
         <rect x="12" y="46" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
         <rect x="26" y="46" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
         <rect x="40" y="46" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.5"/>
@@ -808,7 +808,7 @@ function renderBuildings() {
         <rect x="40" y="58" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.6"/>
         <rect x="54" y="58" width="10" height="8" rx="1" fill="#FDE68A" opacity="0.5"/>
         <rect x="${sw/2 - 7}" y="${sh - 18}" width="14" height="18" rx="2" fill="#2a5580"/>
-        <circle cx="${sw/2 + 4}" cy="${sh - 8}" r="1.2" fill="#f59e0b"/>
+        <circle cx="${sw/2 + 4}" cy="${sh - 8}" r="1.2" fill="#E8A14A"/>
       </svg>`;
     } else if (b.type === 'cafe') {
       // Park bench + tree area
@@ -832,7 +832,7 @@ function renderBuildings() {
         <rect x="${b.w - 14}" y="30" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.65"/>
         ${b.h > 44 ? `<rect x="10" y="44" width="10" height="8" rx="1" fill="#B8DCF8" opacity="0.45"/>` : ''}
         <rect x="${sw/2 - 5}" y="${sh - 19}" width="10" height="19" rx="1.5" fill="#8B7355"/>
-        <circle cx="${sw/2 + 2}" cy="${sh - 9}" r="1" fill="#f59e0b"/>
+        <circle cx="${sw/2 + 2}" cy="${sh - 9}" r="1" fill="#E8A14A"/>
       </svg>`;
     }
 

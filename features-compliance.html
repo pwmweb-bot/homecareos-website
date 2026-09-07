@@ -41,7 +41,7 @@
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260902meganav"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260906brand"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2, default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -117,6 +117,13 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:16px auto 0;max-width:560px}
+  </style>
 </head>
 <body>
 
@@ -227,6 +234,14 @@
     </section>
 
     <!-- Benefits Grid -->
+    <section class="section motion-band" aria-label="Four nations, covered">
+      <div class="container" style="max-width:720px;text-align:center">
+        <h2 data-reveal style="margin-bottom:10px">Four nations, covered</h2>
+        <div class="lottie-stage" style="max-width:560px"><div id="nations-anim" data-lottie="/lottie/homecareos-nations.json" style="aspect-ratio:52/22" role="img" aria-label="Four shields for England, Wales, Scotland and Northern Ireland are drawn and ticked in turn"></div></div>
+        <p class="lottie-cap">CQC, CIW, Care Inspectorate and RQIA, built in from day one, not bolted on for England alone.</p>
+      </div>
+    </section>
+
     <section class="section section-gray" aria-label="Compliance benefits">
       <div class="container">
         <div class="section-header" data-reveal>
@@ -688,5 +703,23 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>
