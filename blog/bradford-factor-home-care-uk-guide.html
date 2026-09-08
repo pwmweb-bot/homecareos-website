@@ -42,7 +42,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/team-reviewing-analytics.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260908care"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20260908blog"><noscript></noscript>
 
   <!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
   <script>
@@ -304,6 +304,11 @@
           <p>This guide covers the formula, the thresholds, real-world examples, the legal and ethical landmines, and how it actually works inside <a href="/features-staff-management.html">homecareOS staff management</a>. It is the only Bradford Factor guide written specifically for UK domiciliary agencies. If you are a registered manager, coordinator, or owner trying to decide whether to use this tool, and how, start here.</p>
 
           <h2 id="what-is-bradford-factor">What is the Bradford Factor?</h2>
+
+          <figure class="lottie-figure" data-reveal>
+            <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-bradford.json" style="aspect-ratio:320/230" role="img" aria-label="Two absence patterns scored with the Bradford formula against red, amber and green bands. Several short frequent spells push the score deep into red while one long spell stays green, despite the longer spell costing more days."></div></div>
+            <figcaption>Five separate single days score 125 while ten consecutive days score 10, which is exactly what the squared term on spells is for.</figcaption>
+          </figure>
           <p>The Bradford Factor is a single number that scores each employee's absence pattern over a rolling window, typically the previous 52 weeks. The higher the number, the more disruptive the absence pattern is judged to be. The formula is brutally simple:</p>
 
           <div style="background:var(--gray-100);padding:24px;border-radius:12px;border-left:4px solid var(--primary);margin:24px 0;text-align:center">
@@ -642,5 +647,38 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

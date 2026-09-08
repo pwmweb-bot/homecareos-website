@@ -42,7 +42,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/mobile-app-hand.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260908care"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20260908blog"><noscript></noscript>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -289,6 +289,11 @@
 
         <section data-reveal>
           <h2>What eMAR actually is</h2>
+
+          <figure class="lottie-figure" data-reveal>
+            <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-doses.json" style="aspect-ratio:700/300" role="img" aria-label="A day of scheduled medication times on a timeline. One visit opens a window with an hour of grace either side, the doses inside that window drop into the visit, and each one then resolves to given or refused."></div></div>
+            <figcaption>One call opens a window with an hour of grace either side, and only the doses falling inside it appear on that visit.</figcaption>
+          </figure>
           <p>An eMAR replaces the printed MAR chart that sits in a service user's home with a digital medication record on the carer's phone. When a carer arrives for a visit, the app shows exactly which medicines are due, the drug, the dose, the route, the time window, and asks the carer to record the outcome of each one: given, refused, not required, or unavailable. The carer signs electronically, the entry is timestamped, and it syncs to the office in real time.</p>
           <p>That last point is what separates <strong>electronic medication administration records</strong> from a scanned paper chart. On paper, the office is blind until the chart comes back, often weeks later, sometimes never. With eMAR, a coordinator can see medication compliance across every service user on a live dashboard, and an alert can fire the moment a scheduled medicine is overdue. The record is a by-product of the carer doing their normal round, not a separate administrative task bolted on afterwards.</p>
         </section>
@@ -514,5 +519,38 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

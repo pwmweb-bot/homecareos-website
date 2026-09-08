@@ -44,7 +44,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/analytics-charts-laptop.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260908care"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20260908blog"><noscript></noscript>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -274,6 +274,11 @@
         <!-- 6. Care data as early warning -->
         <section data-reveal>
           <h2>Routine care data as an early-warning system</h2>
+
+          <figure class="lottie-figure" data-reveal>
+            <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-observations.json" style="aspect-ratio:640/280" role="img" aria-label="Routine observations recorded on home care visits. One reading falls inside the expected range and is stored without fuss. A later reading falls outside the range, is flagged, and raises an alert with the office team."></div></div>
+            <figcaption>One reading lands inside the expected range and is simply recorded. The next falls outside it, flags itself, and reaches the office.</figcaption>
+          </figure>
           <p>The distinctive asset of home care is that carers see people repeatedly, in their own environment, in a way no clinic can. A carer notices that Mrs Okafor is eating less, that the flat is colder than usual, that she seems more confused than last week, that the same bruise has appeared twice. Historically that knowledge evaporated, trapped in one carer's head or an unread paper note. Structured, routinely-collected care data changes the arithmetic: if observations are captured consistently, small signals can be aggregated into a picture of change that no single visit would reveal.</p>
           <p>This is where population health management theory meets the visit-level reality of domiciliary care. NHS England's model depends on data to segment and target (NHS England, 2025); home care is, potentially, one of the richest and least-exploited data sources feeding that model, because it observes the frail population precisely where deterioration begins: at home, between appointments. The prize is an early-warning system built not from expensive new sensors but from the observations carers already make on every visit. The condition, as with everything above, is that the data is captured well enough to be trusted and that someone is positioned to act on it.</p>
         </section>
@@ -485,5 +490,38 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

@@ -42,7 +42,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/analytics-charts-laptop.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260908care"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20260908blog"><noscript></noscript>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -334,6 +334,11 @@
 
         <section data-reveal>
           <h2>Common payroll errors home care agencies make</h2>
+
+          <figure class="lottie-figure" data-reveal>
+            <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-timemodel.json" style="aspect-ratio:640/240" role="img" aria-label="A single visit shown with four separate time values, planned, actual, paid and charged. Each is set independently, so what the carer is paid for and what the funder is charged for never have to derive from one another."></div></div>
+            <figcaption>One visit carries four independent times, so paying a carer for 50 minutes while charging the council 45 is a setting rather than an error.</figcaption>
+          </figure>
           <p>The same failure modes come up in agency after agency:</p>
           <ul>
             <li><strong>Paying from the rota.</strong> The planned week is treated as the worked week. Overruns go unpaid, shortfalls go overpaid, and carers learn that staying the extra 20 minutes with a distressed service user costs them money.</li>
@@ -535,5 +540,38 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

@@ -42,7 +42,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/analytics-charts-laptop.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260908care"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20260908blog"><noscript></noscript>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -218,6 +218,11 @@
           <p>This update changes that. The new <a href="/features-ai-rota.html">AI cover finder</a> does the legwork before the coordinator picks up the phone. The <a href="/features-ai-rota.html">AI rota builder</a> (Pro tier) takes it further, generating an entire week's rota in under 60 seconds, ready for review. Here's what's actually under the hood.</p>
 
           <h2 id="cover-finder">How the AI cover finder works</h2>
+
+          <figure class="lottie-figure" data-reveal>
+            <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-coverfinder.json" style="aspect-ratio:640/250" role="img" aria-label="A home care visit is left uncovered. Each available carer is scored on distance, continuity with the client, hours headroom, preferred carer status and schedule fit, and the highest scoring carers are ranked for the coordinator, who makes the final call."></div></div>
+            <figcaption>A visit loses its carer, every available carer is scored on the five factors, and a ranked shortlist comes back for the coordinator to choose from.</figcaption>
+          </figure>
           <p>When a visit becomes uncovered, sickness, sudden cancellation, late running, anything, the system runs every available carer through a five-factor scoring model. The factors and default weights:</p>
 
           <table class="compare-table" style="margin:24px 0">
@@ -434,5 +439,38 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

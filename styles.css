@@ -1583,6 +1583,19 @@ p {
   display: block;
 }
 
+.lottie-figure {
+  margin: 36px 0;
+  padding: 0;
+}
+
+.lottie-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin: 10px auto 0;
+  text-align: center;
+  max-width: 640px;
+}
+
 .lottie-cap {
   font-size: 0.95rem;
   color: var(--gray-600);
