@@ -172,7 +172,6 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
   <style>
     .motion-band{background:var(--gray-50)}
     .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
@@ -729,12 +728,26 @@
   <script>
     (function(){
       var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){                     // fetch the player only when an animation is near
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
       function mount(el){
         if (el.dataset.mounted) return;
-        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
         el.dataset.mounted = '1';
-        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
-        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+        });
       }
       var targets = document.querySelectorAll('[data-lottie]');
       if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
