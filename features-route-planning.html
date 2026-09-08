@@ -519,54 +519,54 @@
           <p>Maps, travel time, GPS verification and cost, answered.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }" data-reveal>
+        <div class="faq-list" data-reveal>
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="mfaq-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="mfaq-1">
               What is mapping software for domiciliary care companies?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="mfaq-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="mfaq-1" role="region">
               <div class="faq-answer-inner">Mapping software for domiciliary care plots visits and carers on a real map so coordinators can plan runs geographically, see travel time between calls, and verify that each visit happened at the right address. It replaces guesswork about distances with a live picture of the whole patch.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="mfaq-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="mfaq-2">
               How does GPS visit verification work in home care?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="mfaq-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="mfaq-2" role="region">
               <div class="faq-answer-inner">Carers check in and out of each visit with one tap on the <a href="features-mobile-app.html">mobile app</a>, and the check-in and check-out are GPS verified. That gives the office an accurate record of arrival and departure for compliance, billing and safeguarding, without micromanaging carers.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="mfaq-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="mfaq-3">
               Can I plan carer runs geographically with homecareOS?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="mfaq-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="mfaq-3" role="region">
               <div class="faq-answer-inner">Yes. Run templates let you group visits into recurring rounds and apply them across weeks, and the <a href="features-scheduling.html">rota</a> factors actual travel times between visits, so you can build runs that keep each carer's day in one area rather than criss-crossing town.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="mfaq-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="mfaq-4">
               How does homecareOS cut travel time between visits?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="mfaq-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="mfaq-4" role="region">
               <div class="faq-answer-inner">The rota factors real travel times between consecutive visits so carers are not rushed, the Visit Flow Map makes travel patterns across your patch visible, and the <a href="features-ai-rota.html">AI cover finder</a> weighs distance when ranking carers for a vacant visit, so cover goes to someone nearby.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="mfaq-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="mfaq-5">
               How much does domiciliary care mapping software cost in the UK?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="mfaq-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="mfaq-5" role="region">
               <div class="faq-answer-inner">The live Visit Flow Map, travel-time awareness and GPS check-in are part of the homecareOS platform, priced per carer with the office team unmetered. It is free for your first 5 carers, then &pound;10 per carer per month on Pro. <a href="pricing.html">See pricing</a>.</div>
             </div>
           </div>
@@ -694,8 +694,7 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
-  <script>
+    <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
     const toggle = document.getElementById('nav-toggle');
@@ -761,6 +760,27 @@
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
     })();
+  </script>
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
   </script>
 </body>
 </html>

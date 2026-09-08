@@ -127,7 +127,7 @@
       "name": "Is there an API for integrations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Third-party API access is available on the Pro plan, allowing integrations with payroll software, accounting platforms, NHS systems, GP Connect and custom workflows. The API uses REST + JSON with OAuth 2.0 authentication."
+        "text": "Not yet as a public API with API keys. What exists today is a FHIR R4 interface: thirteen record types are mapped to UK Core profiles and homecareOS publishes a FHIR CapabilityStatement, though those endpoints answer to a signed in session rather than an external token. Pay runs also export as files shaped for Sage, Xero and BrightPay. Named connectors such as GP Connect and the accounting platforms sit in the integrations hub, where agencies vote for which are built first."
       }
     },
     {

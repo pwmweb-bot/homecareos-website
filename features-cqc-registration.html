@@ -379,74 +379,74 @@
           <p>Using the software before registration, timelines, and what the checklist covers.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }" data-reveal>
+        <div class="faq-list" data-reveal>
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="cfaq-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-1">
               Can I use homecareOS before my agency is CQC registered?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-1" role="region">
               <div class="faq-answer-inner">Yes, that is the point. You can sign up on the free tier before you register, set up your agency and work through the registration checklist. When your registration lands, you are already set up and ready to deliver care.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="cfaq-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-2">
               What is on the CQC registration checklist?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-2" role="region">
               <div class="faq-answer-inner">It covers what a new provider needs: your registered manager and provider applications, statement of purpose, policies and procedures, DBS and background checks, insurance, recruitment and training, and evidence that you are ready to deliver safe care.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="cfaq-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-3">
               How long does CQC registration take?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-3" role="region">
               <div class="faq-answer-inner">CQC registration usually takes a few months from a complete application, though it varies. Working through a structured checklist first means your application is complete and evidenced, which avoids the delays that come from missing information.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="cfaq-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-4">
               Do I need a registered manager to register with CQC?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-4" role="region">
               <div class="faq-answer-inner">Yes. A domiciliary care agency needs a registered manager as well as a registered provider. The checklist tracks both applications and the evidence each one needs, so nothing is missed.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="cfaq-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-5">
               Does the checklist work for Wales, Scotland and Northern Ireland?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-5" role="region">
               <div class="faq-answer-inner">Yes. homecareOS adapts the checklist to your nation, so it reflects CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland, including the right background check and registration body.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 6 }">
-            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="cfaq-6">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-6">
               Is it really free before I register?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-6" x-show="active === 6" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-6" role="region">
               <div class="faq-answer-inner">Yes. The free starter tier lets a new agency get set up and work through registration without a software bill. You only move to a paid plan as you grow past the free tier limits and start delivering visits.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 7 }">
-            <button class="faq-question" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7" aria-controls="cfaq-7">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="cfaq-7">
               What is a statement of purpose?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="cfaq-7" x-show="active === 7" x-transition.duration.300ms>
+            <div class="faq-answer" id="cfaq-7" role="region">
               <div class="faq-answer-inner">It is a document the regulator requires that sets out who you are, the services you provide, your aims and the people you support. The checklist prompts you for what it needs and keeps it with your other registration evidence.</div>
             </div>
           </div>
@@ -565,8 +565,7 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
-  <script>
+    <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
     const toggle = document.getElementById('nav-toggle');
@@ -577,5 +576,26 @@
     document.getElementById('skip-link').addEventListener('click', function(e) { e.preventDefault(); document.getElementById('main-content').focus(); });
   </script>
 
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
+  </script>
 </body>
 </html>

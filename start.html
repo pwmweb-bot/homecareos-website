@@ -360,7 +360,7 @@
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Rota Builder</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Advanced analytics &amp; benchmarking</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Commissioner portal</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> White-label branding &amp; API access</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> White-label branding &amp; integrations hub</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority support + SLA</li>
             </ul>
             <a href="https://app.homecareos.co.uk" onclick="trackSignupClick()" class="btn btn-primary">Get started for free</a>
@@ -431,49 +431,49 @@
           <span class="section-label">COMMON QUESTIONS</span>
           <h2>Everything You're Wondering, Answered</h2>
         </div>
-        <div class="lp-faq" x-data="{ open: null }">
-          <div class="lp-faq-item" :class="{ open: open === 1 }">
-            <button class="lp-faq-q" @click="open = open === 1 ? null : 1" :aria-expanded="open === 1">
+        <div class="lp-faq">
+          <div class="lp-faq-item">
+            <button class="lp-faq-q" aria-expanded="false">
               <span>What happens when I grow past 5 carers?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="lp-faq-a" x-show="open === 1" x-transition x-cloak>
+            <div class="lp-faq-a" style="display:none">
               <p>Simple per-carer pricing kicks in automatically: &pound;10 per carer per month on Pro, once you pass 5 carers. Your office team (coordinators, managers, owners) and your service users stay unmetered. Headcount is taken at your renewal date, so no surprises and no hidden costs.</p>
             </div>
           </div>
-          <div class="lp-faq-item" :class="{ open: open === 2 }">
-            <button class="lp-faq-q" @click="open = open === 2 ? null : 2" :aria-expanded="open === 2">
+          <div class="lp-faq-item">
+            <button class="lp-faq-q" aria-expanded="false">
               <span>Can I really move my whole agency across?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="lp-faq-a" x-show="open === 2" x-transition x-cloak>
-              <p>Yes. We provide free data migration support. We'll help you import your staff, service users, care plans and schedules. Most agencies are fully migrated within a week.</p>
+            <div class="lp-faq-a" style="display:none">
+              <p>Yes. We run the migration with you rather than handing you an importer: staff, service users, care plans and schedules come across from a CSV export, and every import can be undone in one step if something is not right. Bringing your live data over is quoted before any work starts. See <a href="/migration.html">how a migration runs</a>.</p>
             </div>
           </div>
-          <div class="lp-faq-item" :class="{ open: open === 3 }">
-            <button class="lp-faq-q" @click="open = open === 3 ? null : 3" :aria-expanded="open === 3">
+          <div class="lp-faq-item">
+            <button class="lp-faq-q" aria-expanded="false">
               <span>What if I don't like it?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="lp-faq-a" x-show="open === 3" x-transition x-cloak>
+            <div class="lp-faq-a" style="display:none">
               <p>No contract. Leave anytime. Export all your data with one click. We don't hold you hostage, we earn your business every month.</p>
             </div>
           </div>
-          <div class="lp-faq-item" :class="{ open: open === 4 }">
-            <button class="lp-faq-q" @click="open = open === 4 ? null : 4" :aria-expanded="open === 4">
+          <div class="lp-faq-item">
+            <button class="lp-faq-q" aria-expanded="false">
               <span>Is my data safe and GDPR compliant?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="lp-faq-a" x-show="open === 4" x-transition x-cloak>
+            <div class="lp-faq-a" style="display:none">
               <p>Absolutely. UK-hosted infrastructure, fully GDPR compliant, encrypted at rest and in transit. Your care records are safer with us than in a filing cabinet.</p>
             </div>
           </div>
-          <div class="lp-faq-item" :class="{ open: open === 5 }">
-            <button class="lp-faq-q" @click="open = open === 5 ? null : 5" :aria-expanded="open === 5">
+          <div class="lp-faq-item">
+            <button class="lp-faq-q" aria-expanded="false">
               <span>Do you work with councils and commissioners?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="lp-faq-a" x-show="open === 5" x-transition x-cloak>
+            <div class="lp-faq-a" style="display:none">
               <p>Yes. We support all four UK nations, England (CQC), Wales (CIW), Scotland (Care Inspectorate), and Northern Ireland (RQIA). Our commissioner portal gives local authorities direct visibility into visit delivery.</p>
             </div>
           </div>
@@ -595,8 +595,6 @@
     <a href="https://app.homecareos.co.uk" onclick="trackSignupClick()" class="btn btn-primary">Get started for free</a>
   </div>
 
-  <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
   <!-- AOS JS -->
 
   <script>
@@ -669,5 +667,26 @@
     }
   </script>
 
+  <script>
+    /* Landing page FAQ. Plain JS: the site's CSP has no 'unsafe-eval', so Alpine
+       cannot evaluate its inline expressions. */
+    document.querySelectorAll('.lp-faq-q').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.lp-faq-a');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.lp-faq-item.open').forEach(function (other) {
+          if (other !== item) {
+            other.classList.remove('open');
+            other.querySelector('.lp-faq-q').setAttribute('aria-expanded', 'false');
+            other.querySelector('.lp-faq-a').style.display = 'none';
+          }
+        });
+        item.classList.toggle('open', !isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>

@@ -634,84 +634,84 @@
           <p>Offline, eMAR, check in and out, and getting the app on carer phones.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }" data-reveal>
+        <div class="faq-list" data-reveal>
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="afaq-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-1">
               Does the homecareOS carer app work offline?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-1" role="region">
               <div class="faq-answer-inner">Yes. The carer app is offline-first, so carers can view their visits, check in and out, record notes and complete eMAR with no signal. Everything syncs automatically when they are back online, so nothing is lost in a dead zone.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="afaq-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-2">
               What is eMAR and does the carer app include it?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-2" role="region">
               <div class="faq-answer-inner">eMAR is an electronic medication administration record. The app replaces paper MAR charts with a digital round at the point of care, with prompts, alerts and refusal tracking, so medication is recorded accurately and is ready as <a href="features-compliance.html">inspection evidence</a>.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="afaq-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-3">
               Is the carer app free for carers?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-3" role="region">
               <div class="faq-answer-inner">Yes. The homecareOS Carer app is free for every carer on every plan, including the free starter tier. You are billed <a href="pricing.html">per carer</a> for the platform, never per app install.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="afaq-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-4">
               How do carers check in and out of visits?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-4" role="region">
               <div class="faq-answer-inner">With one tap. Check in and check out are GPS verified, giving the office an accurate record for compliance, billing and safeguarding without micromanaging. Local authorities increasingly prefer GPS over QR codes, so it is the robust default.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="afaq-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-5">
               Which phones does the carer app run on?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-5" role="region">
               <div class="faq-answer-inner">Both. The homecareOS Carer app is on the App Store for iPhone and on Google Play for Android, so carers can use the device they already own.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 6 }">
-            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="afaq-6">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-6">
               Can carers see their pay and request leave in the app?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-6" x-show="active === 6" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-6" role="region">
               <div class="faq-answer-inner">Yes. Carers see projected gross pay, hours, rate breakdowns and mileage in real time, and can request annual leave and track approval from the app, which cuts payroll queries and admin.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 7 }">
-            <button class="faq-question" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7" aria-controls="afaq-7">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-7">
               Does the app record body maps, observations and care notes?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-7" x-show="active === 7" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-7" role="region">
               <div class="faq-answer-inner">Yes. Carers capture body maps, structured observations, photos and care notes during the visit, and voice to text speeds up longer notes. Everything feeds straight into the <a href="features-care-records.html">digital care record</a>.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 8 }">
-            <button class="faq-question" @click="active = active === 8 ? null : 8" :aria-expanded="active === 8" aria-controls="afaq-8">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="afaq-8">
               What happens to data a carer records offline?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="afaq-8" x-show="active === 8" x-transition.duration.300ms>
+            <div class="faq-answer" id="afaq-8" role="region">
               <div class="faq-answer-inner">It is stored securely on the device and syncs automatically the moment a connection returns. Carers never have to remember to upload, and the office sees the record as soon as the phone is back online.</div>
             </div>
           </div>
@@ -856,8 +856,7 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
-  <script>
+    <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
     const toggle = document.getElementById('nav-toggle');
@@ -974,6 +973,27 @@
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
     })();
+  </script>
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
   </script>
 </body>
 </html>

@@ -103,7 +103,7 @@
       "name": "How much does homecareOS cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "homecareOS is free while you have up to 5 carers, with no credit card and no time limit. Your office team (coordinators, managers, owners who don't deliver visits) is always unmetered, and there is no cap on service users. Once you have 6 or more carers, it is £10 per carer per month on the Pro plan (6 carers = £60, 20 = £200), which adds the AI Rota Builder, advanced analytics, white-label and API access. Annual billing saves 20%."
+        "text": "homecareOS is free while you have up to 5 carers, with no credit card and no time limit. Your office team (coordinators, managers, owners who don't deliver visits) is always unmetered, and there is no cap on service users. Once you have 6 or more carers, it is £10 per carer per month on the Pro plan (6 carers = £60, 20 = £200), which adds the AI Rota Builder, advanced analytics, white-label branding and the integrations hub. Annual billing saves 20%."
       }
     },
     {
@@ -119,7 +119,7 @@
       "name": "What's the difference between the Free and Pro plans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Free (up to 5 carers) is the full core platform. Pro (£10 per carer per month, once you pass 5 carers) adds the AI Rota Builder, advanced analytics and benchmarking, white-label branding, third-party API access and the commissioner portal. Your office team stays unmetered on both plans and there is no limit on service users."
+        "text": "Free (up to 5 carers) is the full core platform. Pro (£10 per carer per month, once you pass 5 carers) adds the AI Rota Builder, advanced analytics and benchmarking, white-label branding, the integrations hub and the commissioner portal. Your office team stays unmetered on both plans and there is no limit on service users."
       }
     },
     {
@@ -363,56 +363,41 @@
     <!-- ============================================
          BILLING TOGGLE + PRICING CALCULATOR
          ============================================ -->
-    <section class="section" aria-labelledby="pricing-heading"
-      x-data="{
-        staffCount: 10,
-        billing: 'monthly',
-        get isFree() { return this.staffCount <= 5 },
-        get multiplier() { return this.billing === 'annual' ? 0.8 : 1 },
-        get proCost() {
-          if (this.isFree) return 0;
-          const monthly = Math.round(this.staffCount * 10 * this.multiplier);
-          return this.billing === 'annual' ? monthly * 12 : monthly;
-        },
-        get proMonthly() { return this.isFree ? 0 : Math.round(this.staffCount * 10 * this.multiplier) },
-        get proAnnualSaving() { return this.isFree ? 0 : this.staffCount * 10 * 12 * 0.2 },
-        get billingLabel() { return this.isFree ? '' : (this.billing === 'annual' ? '/yr' : '/mo') },
-        formatCurrency(val) { return '\u00A3' + val.toLocaleString() }
-      }">
+    <section class="section" aria-labelledby="pricing-heading">
       <div class="container">
 
         <!-- Billing Toggle -->
         <div class="billing-toggle" data-reveal>
-          <span class="toggle-label" :class="{ active: billing === 'monthly' }" @click="billing = 'monthly'">Monthly</span>
-          <div class="toggle-switch" :class="{ active: billing === 'annual' }" @click="billing = billing === 'monthly' ? 'annual' : 'monthly'" role="switch" :aria-checked="billing === 'annual'" aria-label="Toggle annual billing" tabindex="0" @keydown.enter="billing = billing === 'monthly' ? 'annual' : 'monthly'" @keydown.space.prevent="billing = billing === 'monthly' ? 'annual' : 'monthly'">
+          <span class="toggle-label active" id="label-monthly" data-billing="monthly" role="button" tabindex="0">Monthly</span>
+          <div class="toggle-switch" id="billing-switch" role="switch" aria-checked="false" aria-label="Toggle annual billing" tabindex="0">
             <div class="toggle-knob"></div>
           </div>
-          <span class="toggle-label" :class="{ active: billing === 'annual' }" @click="billing = 'annual'">Annual</span>
-          <span class="toggle-badge" x-show="billing === 'annual'" x-transition>Save 20%</span>
+          <span class="toggle-label" id="label-annual" data-billing="annual" role="button" tabindex="0">Annual</span>
+          <span class="toggle-badge" id="billing-badge" style="display:none">Save 20%</span>
         </div>
 
         <!-- Interactive Calculator -->
         <div class="pricing-calculator" data-reveal data-reveal-delay="100">
           <h3>Calculate Your Cost</h3>
-          <p class="calculator-subtitle" x-text="billing === 'annual' ? 'Drag the slider or enter a number to see your annual cost instantly.' : 'Drag the slider or enter a number to see your monthly cost instantly.'"></p>
+          <p class="calculator-subtitle" id="calc-subtitle">Drag the slider or enter a number to see your monthly cost instantly.</p>
 
           <div class="calculator-staff-input">
             <label for="staff-slider">Number of carers</label>
-            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" x-model.number="staffCount" aria-label="Number of carers">
-            <input type="number" min="1" max="200" x-model.number="staffCount" aria-label="Carer count" @input="if(staffCount < 1) staffCount = 1; if(staffCount > 200) staffCount = 200">
+            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" value="10" aria-label="Number of carers">
+            <input type="number" id="staff-number" min="1" max="200" value="10" aria-label="Carer count">
             <p class="calculator-hint" style="font-size:0.85rem;color:var(--text-light);margin-top:0.5rem;">Office team (coordinators, managers, owners who don't deliver visits) and service users are unmetered.</p>
           </div>
 
-          <div class="calculator-display" x-show="!isFree" x-transition>
+          <div class="calculator-display" id="calc-paid" aria-live="polite">
             <div class="calculator-display-card highlight">
               <div class="tier-name">Pro</div>
-              <div class="tier-price" x-text="formatCurrency(proCost)"></div>
-              <div class="tier-unit" x-text="billingLabel"></div>
-              <div class="tier-equivalent" x-show="billing === 'annual' && !isFree" x-transition x-text="'(' + formatCurrency(proMonthly) + '/mo)'"></div>
-              <div class="tier-saving" x-show="billing === 'annual' && !isFree" x-transition x-text="'Save ' + formatCurrency(proAnnualSaving) + '/yr'"></div>
+              <div class="tier-price" id="calc-price">&pound;100</div>
+              <div class="tier-unit" id="calc-unit">/mo</div>
+              <div class="tier-equivalent" id="calc-equivalent" style="display:none"></div>
+              <div class="tier-saving" id="calc-saving" style="display:none"></div>
             </div>
           </div>
-          <div class="calculator-display" x-show="isFree" x-transition>
+          <div class="calculator-display" id="calc-free" style="display:none">
             <div class="calculator-display-card highlight" style="text-align:center">
               <div class="tier-price" style="color:#059669;font-size:2rem">Free</div>
               <div class="tier-unit">Up to 5 carers, office team and service users unmetered</div>
@@ -476,6 +461,14 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 Unlimited office team &amp; service users
               </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                30 minute remote overview to get you started
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Support by email and chat
+              </li>
             </ul>
             <a href="https://app.homecareos.co.uk" class="btn btn-outline">Get started for free</a>
           </div>
@@ -484,9 +477,9 @@
           <div class="pricing-card featured">
             <div class="pricing-badge">Most Popular</div>
             <h3>Pro</h3>
-            <div class="price"><span>&pound;</span><span x-text="billing === 'annual' ? '8' : '10'"></span><span> / carer / mo</span></div>
+            <div class="price"><span>&pound;</span><span id="pro-rate">10</span><span> / carer / mo</span></div>
             <p class="price-note">
-              <span x-text="isFree ? staffCount + ' carers = Free!' : staffCount + ' carers = ' + formatCurrency(proCost) + billingLabel + (billing === 'annual' ? ' (' + formatCurrency(proMonthly) + '/mo)' : '')"></span>
+              <span id="pro-summary">10 carers = &pound;100/mo</span>
             </p>
             <ul class="pricing-features">
               <li>
@@ -515,11 +508,15 @@
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                API access &amp; integrations hub
+                Integrations hub with roadmap voting
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 Dedicated account manager
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <strong>Remote training for your team, included</strong>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -531,6 +528,48 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============================================
+         SUPPORT AND TRAINING
+         ============================================ -->
+    <section class="section" aria-labelledby="support-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">Getting Going</span>
+          <h2 id="support-heading">Support and training, and what costs extra</h2>
+          <p>Software you cannot get started with is not cheap at any price. Here is what comes with each plan, and what sits outside the licence so there are no surprises later.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-content" data-reveal>
+            <span class="label">On Free</span>
+            <h3 style="margin-top:8px">A 30 minute remote overview, then help when you need it</h3>
+            <p>Every agency on the Free plan gets a 30 minute remote session to walk through setup: getting your carers and service users in, building your first week of rota, and putting the app on a carer's phone.</p>
+            <p>After that, support is by email and chat. You are not paying, and you are still answered.</p>
+          </div>
+          <div class="feature-content" data-reveal data-reveal-delay="100">
+            <span class="label">On Pro</span>
+            <h3 style="margin-top:8px">Remote training and support, in the licence</h3>
+            <p>Pro includes live remote training for your team, office staff and field carers alike, rather than a video library and good luck. It is part of the per carer price, not an add on, and it is available again when you take on new coordinators or change how you work.</p>
+            <p>Support is included on Pro too, with priority handling.</p>
+          </div>
+        </div>
+        <div class="card-grid" style="margin-top:48px">
+          <div class="card" data-reveal>
+            <h3>Onsite training</h3>
+            <p>Training delivered at your office, for agencies that would rather get everyone in a room. This sits outside the licence and is quoted before anything is booked, because the cost depends on where you are and how many people are being trained.</p>
+          </div>
+          <div class="card" data-reveal data-reveal-delay="100">
+            <h3>Bringing your live data across</h3>
+            <p>Your current carers, service users, care plans and the running rota. We do this work for you rather than handing you an importer, so it is quoted separately from the licence.</p>
+            <p style="margin-top:14px"><a href="/migration.html">How a migration runs</a></p>
+          </div>
+          <div class="card" data-reveal data-reveal-delay="200">
+            <h3>Bringing your history across</h3>
+            <p>Past service users, former staff and old visit records are a separate job from your live data, and usually a larger one. It is optional: your statutory retention duty can be met by keeping the old system's export, so this is worth deciding on rather than assuming.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -722,7 +761,7 @@
               <!-- Integrations & Platform -->
               <tr class="category-row"><td colspan="3">Integrations &amp; Platform</td></tr>
               <tr>
-                <td>API access &amp; integrations hub</td>
+                <td>Integrations hub with roadmap voting</td>
                 <td class="cross">&times;</td>
                 <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
               </tr>
@@ -865,74 +904,74 @@
           <p>Everything you need to know about our plans and billing. Still weighing up your options? Read our <a href="blog/home-care-software-uk-guide.html">guide to choosing home care software in the UK</a>.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }">
+        <div class="faq-list">
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="faq-answer-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
               What is included in the Free plan?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-1" role="region">
               <div class="faq-answer-inner">
                 The Free plan gives you the full core platform: scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, invoicing, payroll, the family portal, four-nation compliance and the full reporting suite. It's free while you have up to 5 carers, with your office team and service users unmetered. No credit card is required and there is no time limit.
               </div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="faq-answer-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
               How does per-carer pricing work?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-2" role="region">
               <div class="faq-answer-inner">
                 You pay nothing while you have up to 5 carers. Once you have 6 or more, it's <strong>£10 per carer</strong> per month on Pro (6 carers = £60, 20 = £200). Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle and leavers are not charged after they go. Coordinators, managers, owners and other office staff who don't deliver visits are never counted, and there is no limit on service users. See how <a href="/blog/per-carer-pricing-home-care-software.html">per-carer pricing compares to per-user pricing</a>, and what is included in the <a href="features-scheduling.html">rota and scheduling features</a>.
               </div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="faq-answer-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
               Can I switch plans at any time?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-3" role="region">
               <div class="faq-answer-inner">
                 Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. When you upgrade, the new features become available immediately. If you downgrade, the change takes effect at the start of your next billing cycle. There are no penalties for switching.
               </div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="faq-answer-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
               Is there a long-term contract?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-4" role="region">
               <div class="faq-answer-inner">
                 No. All homecareOS plans are month-to-month with no long-term commitment. Annual billing simply gives you a 20% discount. You can still cancel at any time with no fees. We believe our platform should earn your business every month. Weighing us against your current system? See how <a href="compare-birdie.html">homecareOS compares to Birdie</a>, or read the <a href="home-care-software-buyers-guide.html">home care software buyer's guide</a>.
               </div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="faq-answer-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
               What payment methods do you accept?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-5" role="region">
               <div class="faq-answer-inner">
                 We accept all major credit and debit cards (Visa, Mastercard, American Express), processed securely through Stripe. Annual plans can also be paid by BACS bank transfer on request. Contact us to arrange this.
               </div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 6 }">
-            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="faq-answer-6">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
               What happens if I go over 5 carers on the Free plan?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="faq-answer-6" x-show="active === 6" x-transition.duration.300ms>
+            <div class="faq-answer" id="faq-answer-6" role="region">
               <div class="faq-answer-inner">
                 When you go past 5 carers, you'll be prompted to move to Pro at £10 per carer per month. Your existing data is fully preserved, nothing is lost, and your office team and service users stay unmetered. You can keep working while you decide.
               </div>
@@ -1036,7 +1075,6 @@
        SCRIPTS
        ============================================ -->
   <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
 
   <!-- AOS JS -->
 
@@ -1115,6 +1153,114 @@
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
     })();
+  </script>
+  <script>
+    /* Pricing calculator and billing toggle.
+       Plain JS on purpose: the site sends a Content-Security-Policy without
+       'unsafe-eval', which blocks Alpine's expression evaluation entirely. */
+    (function () {
+      var RATE = 10;            // pounds per carer per month
+      var FREE_UPTO = 5;        // carers included at no charge
+      var ANNUAL_DISCOUNT = 0.2;
+
+      var staff = 10;
+      var billing = 'monthly';
+
+      function $(id) { return document.getElementById(id); }
+      var slider = $('staff-slider'), number = $('staff-number');
+      if (!slider || !number) return;
+
+      function money(v) { return '\u00A3' + v.toLocaleString('en-GB'); }
+      function isFree() { return staff <= FREE_UPTO; }
+      function monthly() { return isFree() ? 0 : Math.round(staff * RATE * (billing === 'annual' ? 1 - ANNUAL_DISCOUNT : 1)); }
+      function total() { return billing === 'annual' ? monthly() * 12 : monthly(); }
+      function saving() { return isFree() ? 0 : Math.round(staff * RATE * 12 * ANNUAL_DISCOUNT); }
+
+      function show(el, on) { if (el) el.style.display = on ? '' : 'none'; }
+      function text(el, v) { if (el) el.textContent = v; }
+
+      function render() {
+        var annual = billing === 'annual', free = isFree();
+
+        if (slider.value !== String(staff)) slider.value = staff;
+        if (number.value !== String(staff)) number.value = staff;
+
+        text($('calc-subtitle'), annual
+          ? 'Drag the slider or enter a number to see your annual cost instantly.'
+          : 'Drag the slider or enter a number to see your monthly cost instantly.');
+
+        show($('calc-paid'), !free);
+        show($('calc-free'), free);
+        text($('calc-price'), money(total()));
+        text($('calc-unit'), annual ? '/yr' : '/mo');
+        show($('calc-equivalent'), annual && !free);
+        text($('calc-equivalent'), '(' + money(monthly()) + '/mo)');
+        show($('calc-saving'), annual && !free);
+        text($('calc-saving'), 'Save ' + money(saving()) + '/yr');
+
+        text($('pro-rate'), annual ? '8' : '10');
+        text($('pro-summary'), free
+          ? staff + ' carers = Free'
+          : staff + ' carers = ' + money(total()) + (annual ? '/yr (' + money(monthly()) + '/mo)' : '/mo'));
+
+        var sw = $('billing-switch');
+        if (sw) { sw.classList.toggle('active', annual); sw.setAttribute('aria-checked', annual ? 'true' : 'false'); }
+        var lm = $('label-monthly'), la = $('label-annual');
+        if (lm) lm.classList.toggle('active', !annual);
+        if (la) la.classList.toggle('active', annual);
+        show($('billing-badge'), annual);
+      }
+
+      function setStaff(v) {
+        v = parseInt(v, 10);
+        if (isNaN(v)) return;
+        staff = Math.min(200, Math.max(1, v));
+        render();
+      }
+      function setBilling(v) { billing = v; render(); }
+      function toggleBilling() { setBilling(billing === 'annual' ? 'monthly' : 'annual'); }
+
+      slider.addEventListener('input', function () { setStaff(slider.value); });
+      number.addEventListener('input', function () { setStaff(number.value); });
+      number.addEventListener('blur', function () { setStaff(number.value || 1); });
+
+      var sw = $('billing-switch');
+      if (sw) {
+        sw.addEventListener('click', toggleBilling);
+        sw.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggleBilling(); }
+        });
+      }
+      [['label-monthly', 'monthly'], ['label-annual', 'annual']].forEach(function (pair) {
+        var el = $(pair[0]);
+        if (!el) return;
+        el.addEventListener('click', function () { setBilling(pair[1]); });
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); setBilling(pair[1]); }
+        });
+      });
+
+      render();
+    })();
+
+    /* FAQ accordion, the same vanilla pattern used across the site. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
   </script>
 </body>
 </html>

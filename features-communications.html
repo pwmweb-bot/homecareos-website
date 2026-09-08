@@ -514,84 +514,84 @@
           <p>Desk phones, working from anywhere, diverting to mobile, and keeping your number.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }" data-reveal>
+        <div class="faq-list" data-reveal>
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="vfaq-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-1">
               Do I still need desk phones with homecareOS?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-1" role="region">
               <div class="faq-answer-inner">No. The phone system runs in your browser and on the mobile app, so you can retire desk phones and the PBX hardware they need. There is nothing to buy and nothing to wire in.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="vfaq-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-2">
               Can my team answer the office phone from home or anywhere?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-2" role="region">
               <div class="faq-answer-inner">Yes. Because the number lives in the cloud, coordinators can answer, transfer and make calls from any laptop or phone, at the office, at home or on the move.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="vfaq-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-3">
               Can I divert the office number to a mobile?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-3" role="region">
               <div class="faq-answer-inner">Yes. Out of hours, calls divert to whichever carer or coordinator is on call, following the rota, so no one has to share a personal mobile number and no call is missed.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="vfaq-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-4">
               Does it replace my separate phone provider and bill?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-4" role="region">
               <div class="faq-answer-inner">Yes. The phone system is built into homecareOS, so you can drop the separate telephony contract and desk-phone line rental and run everything on one bill.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="vfaq-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-5">
               Can I keep my existing phone number?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-5" role="region">
               <div class="faq-answer-inner">Yes. Pick a new local 01, 02 or 03 number, or port your existing landline across, so customers and families still reach you on the number they know.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 6 }">
-            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="vfaq-6">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-6">
               Are calls recorded and logged?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-6" x-show="active === 6" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-6" role="region">
               <div class="faq-answer-inner">Yes. Calls and texts are logged, and can be recorded, against the right service user, carer or family contact, giving you one audit trail for compliance and safeguarding.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 7 }">
-            <button class="faq-question" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7" aria-controls="vfaq-7">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-7">
               Is the phone system included or an add-on?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-7" x-show="active === 7" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-7" role="region">
               <div class="faq-answer-inner">The VoIP phone system is available on Pro plans. It is part of the platform, so there is no separate vendor to manage and no extra system to log in to.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 8 }">
-            <button class="faq-question" @click="active = active === 8 ? null : 8" :aria-expanded="active === 8" aria-controls="vfaq-8">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="vfaq-8">
               Can callers reach the right person automatically?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="vfaq-8" x-show="active === 8" x-transition.duration.300ms>
+            <div class="faq-answer" id="vfaq-8" role="region">
               <div class="faq-answer-inner">Yes. A visual IVR menu routes callers, for example press 1 for emergency cover and press 2 for the rota, and out-of-hours options switch automatically on a schedule.</div>
             </div>
           </div>
@@ -720,8 +720,7 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
-  <script>
+    <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
     const toggle = document.getElementById('nav-toggle');
@@ -755,5 +754,26 @@
     });
   </script>
 
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
+  </script>
 </body>
 </html>

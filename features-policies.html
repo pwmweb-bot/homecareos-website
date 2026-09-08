@@ -462,74 +462,74 @@
           <p>What you get, how they stay current, and how they hold up at inspection.</p>
         </div>
 
-        <div class="faq-list" x-data="{ active: null }" data-reveal>
+        <div class="faq-list" data-reveal>
 
-          <div class="faq-item" :class="{ open: active === 1 }">
-            <button class="faq-question" @click="active = active === 1 ? null : 1" :aria-expanded="active === 1" aria-controls="pfaq-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-1">
               How many policies and procedures do I get?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-1" x-show="active === 1" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-1" role="region">
               <div class="faq-answer-inner">You get 40 UK home care policies and procedures covering the areas a domiciliary agency is assessed on, all written and ready to adopt.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 2 }">
-            <button class="faq-question" @click="active = active === 2 ? null : 2" :aria-expanded="active === 2" aria-controls="pfaq-2">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-2">
               Are the policies aligned to CQC and the other UK regulators?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-2" x-show="active === 2" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-2" role="region">
               <div class="faq-answer-inner">Yes. Every policy is mapped to CQC, CIW, the Care Inspectorate and RQIA, so they fit whichever nation you operate in. See <a href="features-compliance.html">four-nation compliance</a>.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 3 }">
-            <button class="faq-question" @click="active = active === 3 ? null : 3" :aria-expanded="active === 3" aria-controls="pfaq-3">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-3">
               Do I have to write anything myself?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-3" x-show="active === 3" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-3" role="region">
               <div class="faq-answer-inner">No. You adopt each policy in one click and your agency details merge in automatically. You start from a complete, professionally written document, not a blank page.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 4 }">
-            <button class="faq-question" @click="active = active === 4 ? null : 4" :aria-expanded="active === 4" aria-controls="pfaq-4">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-4">
               What happens when regulations change?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-4" x-show="active === 4" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-4" role="region">
               <div class="faq-answer-inner">Policies update when the frameworks change, so your library does not quietly go out of date. You are told which policies are affected and can review and re-adopt the new wording.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 5 }">
-            <button class="faq-question" @click="active = active === 5 ? null : 5" :aria-expanded="active === 5" aria-controls="pfaq-5">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-5">
               Can staff read and acknowledge policies?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-5" x-show="active === 5" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-5" role="region">
               <div class="faq-answer-inner">Yes. Staff read each policy and record their acknowledgement, giving you an audit trail of who has read what and when.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 6 }">
-            <button class="faq-question" @click="active = active === 6 ? null : 6" :aria-expanded="active === 6" aria-controls="pfaq-6">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-6">
               Can I export policies for an inspection?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-6" x-show="active === 6" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-6" role="region">
               <div class="faq-answer-inner">Yes. You can export inspector-ready PDFs of any policy, so your evidence is ready the moment the regulator asks.</div>
             </div>
           </div>
 
-          <div class="faq-item" :class="{ open: active === 7 }">
-            <button class="faq-question" @click="active = active === 7 ? null : 7" :aria-expanded="active === 7" aria-controls="pfaq-7">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="pfaq-7">
               Can I edit the templates or add my own?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer" id="pfaq-7" x-show="active === 7" x-transition.duration.300ms>
+            <div class="faq-answer" id="pfaq-7" role="region">
               <div class="faq-answer-inner">Yes. Adopt what you need, edit the wording to match your agency, and add your own policies alongside the templates.</div>
             </div>
           </div>
@@ -656,8 +656,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
-  <script>
+    <script>
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
     const toggle = document.getElementById('nav-toggle');
@@ -686,6 +685,27 @@
     document.getElementById('skip-link').addEventListener('click', function(e) {
       e.preventDefault();
       document.getElementById('main-content').focus();
+    });
+  </script>
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
     });
   </script>
 </body>

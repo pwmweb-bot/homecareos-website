@@ -210,13 +210,7 @@
          ============================================ -->
     <section class="section-sm" aria-label="Blog category filters">
       <div class="container">
-        <div class="flex flex-wrap gap-8 justify-center" role="tablist" aria-label="Filter blog posts by category" x-data="{ active: 'all' }">
-          <button role="tab" class="btn btn-sm" :class="active === 'all' ? 'btn-primary' : 'btn-outline'" @click="active = 'all'" :aria-selected="active === 'all'">All</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'compliance' ? 'btn-primary' : 'btn-outline'" @click="active = 'compliance'" :aria-selected="active === 'compliance'">Compliance</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'operations' ? 'btn-primary' : 'btn-outline'" @click="active = 'operations'" :aria-selected="active === 'operations'">Operations</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'growth' ? 'btn-primary' : 'btn-outline'" @click="active = 'growth'" :aria-selected="active === 'growth'">Agency Growth</button>
-          <button role="tab" class="btn btn-sm" :class="active === 'features' ? 'btn-primary' : 'btn-outline'" @click="active = 'features'" :aria-selected="active === 'features'">Software &amp; Features</button>
-        </div>
+        <div class="flex flex-wrap gap-8 justify-center" role="tablist" aria-label="Filter blog posts by category" id="blog-filters"></div>
       </div>
     </section>
 
@@ -939,8 +933,6 @@
   <!-- ============================================
        SCRIPTS
        ============================================ -->
-  <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.17.2/dist/cdn.min.js" integrity="sha384-lcaMFHdvRVsEXVuhit4fTnbxq6eTLm5HPdNzO7vXNZjr8HOCMouPmv4hSGF3PCJV" crossorigin="anonymous" defer></script>
 
   <!-- AOS JS -->
 
@@ -987,5 +979,57 @@
     });
   </script>
 
+  <script>
+    /* Category filter, built from the categories actually present on the page so
+       the buttons can never drift from the posts. Plain JS: the site's CSP has no
+       'unsafe-eval'. With JS off, every post stays visible, which is the right default. */
+    (function () {
+      var bar = document.getElementById('blog-filters');
+      var cards = [].slice.call(document.querySelectorAll('.blog-card'));
+      if (!bar || !cards.length) return;
+
+      function categoryOf(card) {
+        var el = card.querySelector('.blog-category');
+        return el ? el.textContent.trim() : '';
+      }
+      var categories = [];
+      cards.forEach(function (c) {
+        var cat = categoryOf(c);
+        if (cat && categories.indexOf(cat) === -1) categories.push(cat);
+      });
+      categories.sort(function (a, b) { return a.localeCompare(b); });
+
+      function makeChip(label, value) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('role', 'tab');
+        b.className = 'btn btn-sm btn-outline';
+        b.textContent = label;
+        b.dataset.filter = value;
+        b.setAttribute('aria-selected', 'false');
+        bar.appendChild(b);
+        return b;
+      }
+      var chips = [makeChip('All', '')].concat(categories.map(function (c) { return makeChip(c, c); }));
+
+      function apply(value) {
+        cards.forEach(function (card) {
+          var match = !value || categoryOf(card) === value;
+          card.style.display = match ? '' : 'none';
+        });
+        chips.forEach(function (chip) {
+          var on = chip.dataset.filter === value;
+          chip.classList.toggle('btn-primary', on);
+          chip.classList.toggle('btn-outline', !on);
+          chip.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+      }
+      bar.addEventListener('click', function (e) {
+        var chip = e.target.closest('button[data-filter]');
+        if (chip) apply(chip.dataset.filter);
+      });
+      apply('');
+    })();
+  </script>
 </body>
 </html>
