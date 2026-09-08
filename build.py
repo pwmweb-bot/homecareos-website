@@ -10,7 +10,7 @@ Usage:
 import io, re, sys, glob, os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CSS_VERSION = "20260908tech"
+CSS_VERSION = "20260908anim"
 
 HEADER = io.open(os.path.join(ROOT, "partials/header.html"), encoding="utf-8").read().rstrip("\n")
 FOOTER = io.open(os.path.join(ROOT, "partials/footer.html"), encoding="utf-8").read().rstrip("\n")

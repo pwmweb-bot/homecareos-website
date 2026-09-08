@@ -1561,6 +1561,97 @@ p {
   line-height: 1.75;
 }
 
+/* --- Animation stage (Lottie) ---------------------------------------
+   Shared by every page that carries an animation. Text labels live in the
+   HTML, never inside the animation JSON, so they stay selectable and
+   readable by screen readers. Caption sits ABOVE the stage by default;
+   pages that put it below keep a one-line margin override. */
+.motion-band {
+  background: var(--gray-50);
+}
+
+.lottie-stage {
+  background: #F3EFE7;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.lottie-stage > div {
+  width: 100%;
+  display: block;
+}
+
+.lottie-cap {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  margin: 0 auto 24px;
+  max-width: 640px;
+}
+
+.anim-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.anim-legend {
+  list-style: none;
+  display: grid;
+  gap: 12px 22px;
+  margin: 18px 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+.anim-legend li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  line-height: 1.35;
+}
+
+.anim-legend .chip {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex: 0 0 14px;
+}
+
+.anim-legend .chip.hollow {
+  background: transparent;
+  border: 2px solid #B4B2A9;
+  border-radius: 50%;
+}
+
+.anim-legend .chip.round {
+  border-radius: 50%;
+}
+
+.legend-4 { grid-template-columns: repeat(4, 1fr); }
+.legend-3 { grid-template-columns: repeat(3, 1fr); }
+.legend-2 { grid-template-columns: repeat(2, 1fr); }
+
+.day-heads {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.day-heads li {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .legend-4, .legend-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* --- Team --- */
 .team-grid {
   display: grid;
