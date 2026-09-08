@@ -148,6 +148,22 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:0 auto 24px;max-width:640px}
+    .anim-wrap{max-width:700px;margin:0 auto}
+    .anim-sub{font-size:1.05rem;margin:0 0 12px;color:var(--secondary)}
+    .anim-legend{list-style:none;display:grid;gap:12px 22px;margin:16px 0 0;padding:0;text-align:left}
+    .anim-legend li{display:flex;align-items:center;gap:9px;font-size:0.85rem;color:var(--gray-700);line-height:1.35}
+    .anim-legend .chip{width:14px;height:14px;border-radius:4px;flex:0 0 14px}
+    .anim-legend .chip.hollow{background:transparent;border:2px solid #B4B2A9;border-radius:50%}
+    .anim-legend .chip.round{border-radius:50%}
+    .legend-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:640px){.legend-3{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
@@ -347,6 +363,35 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section motion-band" aria-label="GPS check in and offline working">
+      <div class="container" style="max-width:900px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">Proof of the visit, even with no signal</h2>
+        <p class="lottie-cap">Two things a carer's phone has to get right in the field: confirming they arrived where they should have, and never losing a note because the signal dropped.</p>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">GPS-verified check-in</h3>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-gps.json" data-rest="330" style="aspect-ratio:640/280" role="img" aria-label="A carer travels to a service user's home. As they cross the geofence around the property the boundary turns green and the check-in is confirmed"></div></div>
+          <ul class="anim-legend legend-3">
+            <li><span class="chip round" style="background:#16323D"></span>Carer location, GPS verified</li>
+            <li><span class="chip hollow"></span>Geofence around the home</li>
+            <li><span class="chip round" style="background:#1D9E75"></span>Check-in confirmed on arrival</li>
+          </ul>
+        </div>
+
+        <div style="height:46px"></div>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Offline first, syncing when signal returns</h3>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-offline.json" data-rest="345" style="aspect-ratio:640/280" role="img" aria-label="With no signal, care notes are written and queued on the device. When signal returns they upload one by one and the record is confirmed complete"></div></div>
+          <ul class="anim-legend legend-3">
+            <li><span class="chip round" style="background:#EF9F27"></span>Queued on the device</li>
+            <li><span class="chip" style="background:#1D9E75"></span>Signal restored</li>
+            <li><span class="chip round" style="background:#1D9E75"></span>Synced to the record</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -880,5 +925,23 @@
     })();
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||300), true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>
