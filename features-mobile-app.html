@@ -317,14 +317,14 @@
           <div class="phone-gallery-inner container">
             <div class="phone-gallery-phone">
               <div class="phone-gallery-images">
-                <img src="images/photos/visitinfo.webp" alt="Visit details with navigation and key safe access" class="phone-gallery-img active" data-index="0" width="390" height="844">
-                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="Visit actions: Check In, Tasks, Medications, Observations, Body Map" class="phone-gallery-img" data-index="1" width="390" height="844" loading="lazy">
-                <img src="images/photos/obs.webp" alt="Observation types including Bristol Stool, Fluid Intake, Vital Signs" class="phone-gallery-img" data-index="2" width="390" height="844" loading="lazy">
-                <img src="images/photos/bodymap.webp" alt="Body map recording with front and back views" class="phone-gallery-img" data-index="3" width="390" height="844" loading="lazy">
-                <img src="images/photos/goals.webp" alt="Care goals with progress tracking and targets" class="phone-gallery-img" data-index="4" width="390" height="844" loading="lazy">
-                <img src="images/photos/pay-390.webp" srcset="images/photos/pay-390.webp 1x, images/photos/pay.webp 2x" alt="Pay dashboard showing projected gross pay and rate breakdown" class="phone-gallery-img" data-index="5" width="390" height="844" loading="lazy">
-                <img src="images/photos/messaging-390.webp" srcset="images/photos/messaging-390.webp 1x, images/photos/messaging.webp 2x" alt="In-app messaging between carer and coordinator" class="phone-gallery-img" data-index="6" width="390" height="844" loading="lazy">
-                <img src="images/photos/holiday.webp" alt="Leave requests with status tracking" class="phone-gallery-img" data-index="7" width="390" height="844" loading="lazy">
+                <img src="images/photos/visitinfo-390.webp" srcset="images/photos/visitinfo-390.webp 1x, images/photos/visitinfo.webp 2x" alt="Visit details with navigation and key safe access" class="phone-gallery-img active" data-index="0" width="390" height="844" fetchpriority="high">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/observations-390.webp" data-srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="Visit actions: Check In, Tasks, Medications, Observations, Body Map" class="phone-gallery-img" data-index="1" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/obs-390.webp" data-srcset="images/photos/obs-390.webp 1x, images/photos/obs.webp 2x" alt="Observation types including Bristol Stool, Fluid Intake, Vital Signs" class="phone-gallery-img" data-index="2" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/bodymap-390.webp" data-srcset="images/photos/bodymap-390.webp 1x, images/photos/bodymap.webp 2x" alt="Body map recording with front and back views" class="phone-gallery-img" data-index="3" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/goals-390.webp" data-srcset="images/photos/goals-390.webp 1x, images/photos/goals.webp 2x" alt="Care goals with progress tracking and targets" class="phone-gallery-img" data-index="4" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/pay-390.webp" data-srcset="images/photos/pay-390.webp 1x, images/photos/pay.webp 2x" alt="Pay dashboard showing projected gross pay and rate breakdown" class="phone-gallery-img" data-index="5" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/messaging-390.webp" data-srcset="images/photos/messaging-390.webp 1x, images/photos/messaging.webp 2x" alt="In-app messaging between carer and coordinator" class="phone-gallery-img" data-index="6" width="390" height="844">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/photos/holiday-390.webp" data-srcset="images/photos/holiday-390.webp 1x, images/photos/holiday.webp 2x" alt="Leave requests with status tracking" class="phone-gallery-img" data-index="7" width="390" height="844">
               </div>
             </div>
             <div class="phone-gallery-info">
@@ -894,7 +894,17 @@
       const slides = document.querySelectorAll('.phone-gallery-slide');
       if (!tabs.length || !images.length || !slides.length) return;
 
+      function ensure(i) {
+        const img = images[i];
+        if (!img || !img.dataset.src) return;
+        if (img.dataset.srcset) { img.srcset = img.dataset.srcset; delete img.dataset.srcset; }
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+      }
+
       function show(index) {
+        ensure(index);
+        ensure(index + 1);          // warm the next tab so switching feels instant
         tabs.forEach((t, i) => {
           const active = i === index;
           t.classList.toggle('active', active);
@@ -907,6 +917,9 @@
       tabs.forEach((tab, i) => {
         tab.addEventListener('click', () => show(i));
       });
+
+      // warm the second screenshot once the page is settled
+      setTimeout(() => ensure(1), 1800);
 
       // Keyboard navigation across tabs (← →) for accessibility
       tabs.forEach((tab, i) => {
