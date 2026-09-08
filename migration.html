@@ -84,7 +84,7 @@
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.homecareos.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Migration", "item": "https://www.homecareos.co.uk/migration.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What data can be moved from my old home care software?", "acceptedAnswer": {"@type": "Answer", "text": "Seven things come across: carers, service users, visits, care plans, background checks such as DBS, training records, and worker registrations for SCW, SSSC and NISCC. They are imported from CSV, which is the format nearly every home care platform can produce."}}, {"@type": "Question", "name": "Do I have to do the migration myself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Today the homecareOS team runs the migration for you. You send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you rather than leaving you with an importer and good luck."}}, {"@type": "Question", "name": "What happens if the import goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every row created by an import is stamped with that import's id, and an import can be undone in one step. The audit record of what was attempted is kept even after an undo, so nothing is lost and nothing is guessed at. That is why we can afford to try an import rather than agonise over it."}}, {"@type": "Question", "name": "Is there a limit on how much data I can bring?", "acceptedAnswer": {"@type": "Answer", "text": "No. The licence prices carers rather than capping them, so an import is never refused because your agency is too big or your history too long."}}, {"@type": "Question", "name": "What should I ask my current provider for?", "acceptedAnswer": {"@type": "Answer", "text": "Ask for a full CSV export of clients, staff, the rota or visit history, care plans, training records and background checks. Under UK GDPR you have a right to your personal data in a portable format, and that right covers the records you have put into their system. Ask early, because export requests are where notice periods quietly get used up."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What data can be moved from my old home care software?", "acceptedAnswer": {"@type": "Answer", "text": "Seven things come across: carers, service users, visits, care plans, background checks such as DBS, training records, and worker registrations for SCW, SSSC and NISCC. They are imported from CSV, which is the format nearly every home care platform can produce."}}, {"@type": "Question", "name": "Do you charge to migrate my data?", "acceptedAnswer": {"@type": "Answer", "text": "Not for your live data. Current carers, current service users, their care plans and the running rota come across free. Historic records are a separate job and are quoted on what your current provider will actually release, because that, rather than the volume of history, is what sets the effort. We review a sample at no charge before quoting anything."}}, {"@type": "Question", "name": "Do I have to do the migration myself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Today the homecareOS team runs the migration for you. You send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you rather than leaving you with an importer and good luck."}}, {"@type": "Question", "name": "What happens if the import goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every row created by an import is stamped with that import's id, and an import can be undone in one step. The audit record of what was attempted is kept even after an undo, so nothing is lost and nothing is guessed at. That is why we can afford to try an import rather than agonise over it."}}, {"@type": "Question", "name": "Is there a limit on how much data I can bring?", "acceptedAnswer": {"@type": "Answer", "text": "No. The licence prices carers rather than capping them, so an import is never refused because your agency is too big or your history too long."}}, {"@type": "Question", "name": "Do I need my old records inside the new system?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Your retention duty under CQC, CIW, Care Inspectorate or RQIA can be met by keeping your previous provider's export somewhere safe and retrievable. Bringing history into homecareOS is about convenience, having it searchable next to everything else, rather than about compliance."}}, {"@type": "Question", "name": "What should I ask my current provider for?", "acceptedAnswer": {"@type": "Answer", "text": "Ask for a full CSV export of clients, staff, the rota or visit history, care plans, training records and background checks. Under UK GDPR you have a right to your personal data in a portable format, and that right covers the records you have put into their system. Ask early, because export requests are where notice periods quietly get used up."}}]}
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -265,6 +265,29 @@
       </div>
     </section>
 
+    <section class="section" aria-label="What a migration costs">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">What It Costs</span>
+          <h2>Your live data comes across free</h2>
+          <p>Two different jobs, priced differently, and it is worth knowing which one you are asking for.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-content" data-reveal>
+            <h3>Live data, free</h3>
+            <p>Your current carers, current service users, their care plans and the running rota. This is everything you need to open homecareOS on a Monday morning and carry on working, and there is no charge for it.</p>
+            <p>Plenty of the market prices this. Access publish implementation fees on their G-Cloud listing running from £720 to several thousand depending on the product and tier, and everyLIFE file a typical one off fee of £3,600 for implementation and training. We would rather not put a toll on the way in. A charge to get your data into a system sits uncomfortably close to a charge to get it out, and one of those is the thing agencies fear most about switching.</p>
+          </div>
+          <div class="feature-content" data-reveal data-reveal-delay="100">
+            <h3>History, quoted on what is obtainable</h3>
+            <p>Past service users, staff who have left, and old visit and care records are a separate job. It is quoted rather than fixed, and the reason is worth saying plainly: the price is set by what your current provider will actually release, not by how much history you have.</p>
+            <p>A clean CSV export of historic records is quick work whether it covers one year or six. A provider who will only produce PDFs, or who makes you open records one at a time on screen, is slow work at any volume. So we ask for a sample first, at no charge, and quote from what is really there rather than from a band on a price list.</p>
+            <p>It is also optional. Your statutory retention duty can be met by keeping your old provider's export, so bringing history into the new system is a convenience rather than a requirement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-label="Getting your data out">
       <div class="container">
         <div class="section-header" data-reveal>
@@ -312,6 +335,88 @@
             <p>There is a longer walkthrough of that route, including what Birdie exports well and where the gaps usually are.</p>
             <p style="margin-top:14px"><a href="/blog/migrating-from-birdie-to-homecareos.html">Read the Birdie migration guide</a></p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">Questions</span>
+          <h2>The ones agencies ask before they give notice</h2>
+        </div>
+        <div class="faq-list" data-reveal>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What data can be moved from my old home care software?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Seven things come across: carers, service users, visits, care plans, background checks such as DBS, training records, and worker registrations for SCW, SSSC and NISCC. They are imported from CSV, which is the format nearly every home care platform can produce.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you charge to migrate my data?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Not for your live data. Current carers, current service users, their care plans and the running rota come across free. Historic records are a separate job and are quoted on what your current provider will actually release, because that, rather than the volume of history, is what sets the effort. We review a sample at no charge before quoting anything.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I have to do the migration myself?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">No. Today the homecareOS team runs the migration for you. You send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you rather than leaving you with an importer and good luck.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What happens if the import goes wrong?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Every row created by an import is stamped with that import's id, and an import can be undone in one step. The audit record of what was attempted is kept even after an undo, so nothing is lost and nothing is guessed at. That is why we can afford to try an import rather than agonise over it.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is there a limit on how much data I can bring?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">No. The licence prices carers rather than capping them, so an import is never refused because your agency is too big or your history too long.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I need my old records inside the new system?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Usually not. Your retention duty under CQC, CIW, Care Inspectorate or RQIA can be met by keeping your previous provider's export somewhere safe and retrievable. Bringing history into homecareOS is about convenience, having it searchable next to everything else, rather than about compliance.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What should I ask my current provider for?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Ask for a full CSV export of clients, staff, the rota or visit history, care plans, training records and background checks. Under UK GDPR you have a right to your personal data in a portable format, and that right covers the records you have put into their system. Ask early, because export requests are where notice periods quietly get used up.</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -469,6 +574,26 @@
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
     })();
+  </script>
+  <script>
+    /* FAQ accordion, the site's standard vanilla pattern. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
   </script>
 </body>
 </html>
