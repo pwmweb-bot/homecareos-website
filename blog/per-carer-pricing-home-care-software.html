@@ -159,10 +159,10 @@
       },
       {
         "@type": "Question",
-        "name": "What counts as an 'active carer' for billing?",
+        "name": "How is my carer count worked out for billing?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At homecareOS, an active carer is one who attended at least one visit in the billing month (recorded as a check-in). A carer on your books but not currently working (on a long break, awaiting their next placement, or going through DBS renewal) does not count toward your bill until they're back in the field."
+          "text": "Your bill is based on your carer headcount, taken at your renewal date. A carer who joins mid-cycle is billed from the next cycle, and a leaver is not charged for after they go. It is free while you have up to 5 carers, then £10 per carer per month for every carer."
         }
       },
       {
@@ -170,7 +170,7 @@
         "name": "Does homecareOS charge for the office team?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Coordinators, registered managers, owners, payroll, recruiters, and any other office staff log into the platform free of charge. Free agencies get 1 office admin login, Start tier gets 5, and Pro tier is unlimited. None of them count toward the per-carer bill."
+          "text": "No. Coordinators, registered managers, owners, payroll, recruiters, and any other office staff log into the platform free of charge on every plan, and there is no cap on service users. None of them count toward the per-carer bill."
         }
       },
       {
@@ -313,32 +313,32 @@
 
         <section data-reveal>
           <h2>The maths that nobody shows you</h2>
-          <p>Home care has the highest office-to-field ratio of any care setting. The CQC's own state-of-care reports note that domiciliary agencies typically run with <strong>one office person for every 4-6 active carers</strong>, and at smaller agencies that ratio tightens further. A 6-carer agency might still need a coordinator, a registered manager and an owner-operator to run lawfully.</p>
+          <p>Home care has the highest office-to-field ratio of any care setting. The CQC's own state-of-care reports note that domiciliary agencies typically run with <strong>one office person for every 4-6 carers</strong>, and at smaller agencies that ratio tightens further. A 6-carer agency might still need a coordinator, a registered manager and an owner-operator to run lawfully.</p>
           <p>That makes "per user" a 25-50% mark-up on the cost you might mentally budget for. If you assume you'll pay for your carers and forget about the office, you'll get a bill that's a quarter to a half larger than expected.</p>
 
           <h3>A worked example: 12 carers, 4 office staff</h3>
           <p>Take a typical small-to-medium domiciliary agency:</p>
           <ul>
-            <li>12 active carers in the field</li>
+            <li>12 carers in the field</li>
             <li>1 registered manager (also owner)</li>
             <li>1 care coordinator</li>
             <li>1 part-time payroll/admin clerk</li>
             <li>1 part-time recruiter / training coordinator</li>
           </ul>
           <p>That's <strong>16 user accounts</strong> on a per-user platform. At an indicative £8/user/month, that's £128/mo for software. At £10/user/month (closer to where the established home care platforms sit once you add modules) it's £160/mo. Multiply by 12 months and the office team has added <strong>£480-£640 a year</strong> to a bill that already covers your field carers.</p>
-          <p>On a per-carer model, the same agency pays for the <strong>12 carers only</strong>. At homecareOS Start tier (£7/active carer/month) that's £84/mo. At Pro (£10/active carer/month with AI features) it's £120/mo. The office team is free.</p>
+          <p>On a per-carer model, the same agency pays for the <strong>12 carers only</strong>. At £10 per carer per month on Pro that's £120/mo. The office team is free, and there is no cap on service users.</p>
 
           <div style="background:#f0fdf4;border-left:4px solid #16a34a;border-radius:8px;padding:20px;margin:24px 0">
             <p style="margin:0 0 8px;color:#166534"><strong>Side-by-side, same 12-carer agency:</strong></p>
             <ul style="color:#166534;margin:8px 0;padding-left:20px">
               <li>Per-user at £8/user × 16 users = <strong>£128/mo</strong> (£1,536/yr)</li>
-              <li>homecareOS Start at £7/active carer × 12 = <strong>£84/mo</strong> (£1,008/yr)</li>
-              <li>homecareOS Pro at £10/active carer × 12 = <strong>£120/mo</strong> (£1,440/yr)</li>
+              <li>Per-user at £10/user × 16 users = <strong>£160/mo</strong> (£1,920/yr)</li>
+              <li>homecareOS Pro at £10 per carer × 12 = <strong>£120/mo</strong> (£1,440/yr)</li>
             </ul>
-            <p style="margin:8px 0 0;color:#166534">The Start tier saves <strong>£44/mo (~34%)</strong>. Even the Pro tier (which adds AI rota building, AI cover finding, white-label and a load more) comes in under the per-user model.</p>
+            <p style="margin:8px 0 0;color:#166534">Like for like at £10 a head, that is <strong>£40/mo (25%)</strong> saved, purely because you pay for 12 carers rather than 16 seats. Against a cheaper £8 per-user platform the gap narrows to £8/mo, and either way it widens as your office team grows.</p>
           </div>
 
-          <p>Run the same comparison at a slightly bigger agency (say 25 carers and 7 office) and the gap stretches further: 32 per-user seats × £8 = £256/mo, vs 25 active carers × £7 = £175/mo. About £1,000/yr difference, and it grows linearly with the size of your office team.</p>
+          <p>Run the same comparison at a slightly bigger agency (say 25 carers and 7 office) and the gap stretches: 32 per-user seats at £10 = £320/mo, vs 25 carers at £10 = £250/mo. That is £840 a year, and it grows with the size of your office team rather than your field team.</p>
         </section>
 
         <section data-reveal>
@@ -353,7 +353,7 @@
         </section>
 
         <section data-reveal>
-          <h2>What "per active carer" means at homecareOS</h2>
+          <h2>What "per carer" means at homecareOS</h2>
           <p>We define "active" the same way you do operationally: <strong>a carer who actually attended at least one visit in the calendar month</strong>. The check-in time on the visit attendance record is the source of truth. If it's there, the carer counts. If it isn't, they don't.</p>
           <p>That means:</p>
           <ul>
@@ -365,7 +365,7 @@
           <p>You don't need to deactivate anyone manually, and there's no "off-boarding fee". The materialized view that calculates active-carer counts runs nightly and rolls over at the start of each month automatically.</p>
 
           <h3>What we don't bill for</h3>
-          <p>We charge per active carer. That's it. Specifically <strong>not</strong> billed:</p>
+          <p>We charge per carer. That's it. Specifically <strong>not</strong> billed:</p>
           <ul>
             <li>Office team logins (coordinators, registered managers, owners, payroll, recruitment, quality)</li>
             <li>Service-user records (your 80 service users don't add a penny; Birdie and several others charge per active service user)</li>
@@ -375,7 +375,7 @@
             <li>Auditor / inspector temporary logins</li>
             <li>API access for integrations (on Pro)</li>
           </ul>
-          <p>On the Free tier you get 1 admin user and up to 5 active carers (with up to 25 service users) at zero cost, no time limit. Start tier opens up 5 admin users and unlimited carers. Pro removes the admin cap entirely.</p>
+          <p>The free tier covers up to 5 carers at zero cost, with no time limit. Office logins and service users are unmetered on every plan, including the free one. Past five carers it is £10 per carer per month for every carer.</p>
         </section>
 
         <section data-reveal>
@@ -400,7 +400,7 @@
             <li><strong>Onboarding new office staff shouldn't be a finance decision.</strong> We've watched small agencies hesitate to bring in a quality manager or part-time recruiter because every additional login adds to the monthly invoice. That's the wrong incentive. Better office staffing means better care, better compliance, and less burnout for the existing team.</li>
             <li><strong>It's defensible long-term.</strong> The carer count is the metric that matters. It's what scales with your business. Tying our revenue to that means our incentive is aligned with yours: we grow when you grow.</li>
           </ol>
-          <p>We're holding the £7 / £10 per-active-carer prices through 2026. Free tier (up to 5 carers) is permanent, no trial, no time bomb.</p>
+          <p>We're holding the £10 per-carer price through 2026. The free tier (up to 5 carers) is permanent, no trial, no time bomb.</p>
         </section>
 
         <section data-reveal>
@@ -415,7 +415,7 @@
           <p>A few real-world scenarios we've seen:</p>
           <ul>
             <li><strong>A 4-carer micro-agency in Wales:</strong> sits on the Free tier indefinitely. £0/mo software cost. Adds a part-time office admin without changing the bill.</li>
-            <li><strong>An 18-carer agency in the Midlands</strong> with 5 office staff: previously paid ~£200/mo on a per-user platform. Moved to homecareOS Pro (£180/mo for 18 active carers) and gained AI cover finder + Bradford Factor + family portal.</li>
+            <li><strong>An 18-carer agency in the Midlands</strong> with 5 office staff: previously paid ~£200/mo on a per-user platform. Moved to homecareOS Pro (£180/mo for 18 carers) and gained AI cover finder + Bradford Factor + family portal.</li>
             <li><strong>A 35-carer Scottish agency:</strong> on Pro at £350/mo. Tested adding a part-time training coordinator and a payroll temp; bill stayed at £350.</li>
           </ul>
           <p>None of those numbers will exactly match your situation, but the principle holds: the bill tracks your field workforce, not your back office.</p>
@@ -439,7 +439,7 @@
           <h2>The bottom line</h2>
           <p>Per-user pricing is the SaaS default because it's easy to bill and easy to forecast, for the vendor. In home care it quietly penalises agencies for hiring the office staff their regulator requires them to have.</p>
           <p>Per-carer pricing, billing on the people who actually deliver care, tracks the thing that generates your revenue, makes the software cost predictable, and removes a small but real friction every time you want to add an office hire.</p>
-          <p>It's the model we chose for homecareOS. It's why our Free tier covers a 5-carer agency at £0, why our Start tier sits at £7 per active carer (office team unmetered), and why our Pro tier at £10 per active carer keeps the office unmetered too while unlocking AI rota and cover features.</p>
+          <p>It's the model we chose for homecareOS. It's why our free tier covers a 5-carer agency at £0, and why Pro at £10 per carer keeps the office team and your service users unmetered while unlocking the AI rota and cover features.</p>
           <p>If the back-office tax has been eating into your margin, the maths is worth running.</p>
         </section>
 
@@ -451,7 +451,7 @@
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of homecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building homecareOS, with a genuinely free starter tier for small agencies, transparent per-active-carer pricing as they grow, and the office team unmetered.</p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of homecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building homecareOS, with a genuinely free starter tier for small agencies, transparent per-carer pricing as they grow, and the office team unmetered.</p>
               <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about homecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
@@ -465,7 +465,7 @@
               <div class="blog-card-body">
                 <div class="blog-meta"><span class="blog-category">Compare</span></div>
                 <h3><a href="/compare-birdie.html">homecareOS vs Birdie</a></h3>
-                <p>Honest comparison: per-active-carer vs per-active-service-user, AI cover finding, Bradford Factor, and where each platform actually wins.</p>
+                <p>Honest comparison: per-carer vs per-active-service-user, AI cover finding, Bradford Factor, and where each platform actually wins.</p>
                 <a href="/compare-birdie.html" class="read-more">Compare &rarr;</a>
               </div>
             </article>
@@ -481,7 +481,7 @@
               <div class="blog-card-body">
                 <div class="blog-meta"><span class="blog-category">Pricing</span></div>
                 <h3><a href="/pricing.html">homecareOS pricing</a></h3>
-                <p>Free for up to 5 active carers (1 admin, 25 service users). Start at £7/carer/month, Pro at £10/carer/month. Office team unmetered.</p>
+                <p>Free while you have up to 5 carers, with the office team and service users unmetered. Then £10 per carer per month on Pro.</p>
                 <a href="/pricing.html" class="read-more">See pricing &rarr;</a>
               </div>
             </article>
@@ -492,7 +492,7 @@
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>Run the maths on your own agency</h2>
-            <p>Free for up to 5 active carers, no time limit, no credit card. See exactly what you'd pay before you commit a penny.</p>
+            <p>Free while you have up to 5 carers, no time limit, no credit card. See exactly what you'd pay before you commit a penny.</p>
             <div class="cta-actions">
               <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Get started for free</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
