@@ -389,6 +389,68 @@
       </div>
     </section>
 
+    <!-- ============================================
+         TASKS, MEDICATIONS, OBSERVATIONS, CARE NOTES
+         ============================================ -->
+    <section class="section" aria-label="Tasks, medications, observations and care notes on the app">
+      <div class="container" style="max-width:900px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">Four lists, and four different meanings of a tick</h2>
+        <p class="lottie-cap">Tasks, medication, observations and notes all look like a list on the phone. What separates them is what a tick is allowed to mean, and care software that treats all four the same is the reason records come back thin.</p>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Tasks: done, skipped, or not applicable today</h3>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-tasks.json" data-rest="310" style="aspect-ratio:700/300" role="img" aria-label="A visit task list resolving line by line: most complete, one is skipped and carries a written reason, one is marked not applicable"></div></div>
+          <ul class="anim-legend legend-3">
+            <li><span class="chip" style="background:#1D9E75"></span>Completed</li>
+            <li><span class="chip" style="background:#EF9F27"></span>Skipped, with a reason</li>
+            <li><span class="chip" style="background:#B4B2A9"></span>Not applicable today</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">A task is not a checkbox with two states. It is completed, skipped or not applicable, and a skip has to carry a reason. That distinction is the difference between a record that says care was refused and a record that just looks unfinished. The list itself is not retyped for each visit either: it comes from the person's care plan, filtered to the time of the call, so a morning task never appears on a tea-time visit.</p>
+        </div>
+
+        <div style="height:46px"></div>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Medication: the right doses, and what happened to each</h3>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-doses.json" data-rest="310" style="aspect-ratio:700/300" role="img" aria-label="A day of scheduled doses along a timeline. One call opens a window with an hour of grace either side, the doses inside it drop into that visit, and each then resolves to given or refused"></div></div>
+          <ul class="anim-legend legend-4">
+            <li><span class="chip round" style="background:#B4B2A9"></span>Due at another call</li>
+            <li><span class="chip" style="background:#E8A14A"></span>This call, plus an hour either side</li>
+            <li><span class="chip" style="background:#1D9E75"></span>Given</li>
+            <li><span class="chip" style="background:#EF9F27"></span>Refused</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">A carer sees the doses due at the visit they are on, not the person's entire prescription. A dose belongs to a call if it falls inside the visit window with an hour of grace at each end, and where two calls could both claim it the nearest one takes it, so a dose is offered once and cannot be given twice by two carers who each thought it was theirs.</p>
+          <p class="lottie-cap" style="margin-top:14px">Given and refused are only the two most common answers. The record supports eight: given, refused, not available, vomited, hospitalised, self administered, destroyed, and other. A dose that was not given because the box was empty is a different fact from one the person turned down, and an inspector reading the MAR chart will treat them differently.</p>
+        </div>
+
+        <div style="height:46px"></div>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Observations: varied by type, and checked as they are entered</h3>
+          <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-observations.json" data-rest="320" style="aspect-ratio:640/280" role="img" aria-label="One reading lands inside the expected band and is simply recorded. A second lands outside it, turns red, flags its own record and sends an alert to the office"></div></div>
+          <ul class="anim-legend legend-3">
+            <li><span class="chip round" style="background:#1D9E75"></span>Inside the expected range</li>
+            <li><span class="chip round" style="background:#E24B4A"></span>Outside it, flagged automatically</li>
+            <li><span class="chip" style="background:#E24B4A"></span>Alert raised to the office</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">Observations are not one shape. Each type carries its own fields, so a fluid chart, a Bristol stool chart, a set of vital signs and a mood score each ask for what they actually need rather than forcing everything through one box.</p>
+          <p class="lottie-cap" style="margin-top:14px">They are also checked as they are entered. A blood sugar under 4 or over 15, an oxygen saturation under 94, a temperature over 38 or under 35.5, an abnormal stool type or colour, or any seizure at all: the record flags itself and the office is alerted. That matters because it does not depend on a carer deciding a number was worth mentioning, at the end of a long shift, on a form.</p>
+        </div>
+
+        <div style="height:46px"></div>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Care notes: typed, or spoken and written up for you</h3>
+          <div class="lottie-stage" style="max-width:640px"><div data-lottie="/lottie/homecareos-carenotes.json" data-rest="320" style="aspect-ratio:640/280" role="img" aria-label="A carer speaks a note into the phone, a waveform runs while they talk, and the recording resolves into written lines of a transcribed care note"></div></div>
+          <ul class="anim-legend legend-2">
+            <li><span class="chip round" style="background:#1D9E75"></span>Spoken at the point of care</li>
+            <li><span class="chip" style="background:#16323D"></span>Transcribed into the record</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">The note is the part carers most often leave until later, and later is where detail goes to die. A note can be typed, or spoken and transcribed, so it can be recorded while the visit is still in the room rather than written from memory in a car park at the end of a run. The recording and the transcription are both kept, so nothing rests on the transcription being perfect.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Benefits Grid -->
     <section class="section section-gray" aria-label="Benefits of the carer mobile app">
       <div class="container">

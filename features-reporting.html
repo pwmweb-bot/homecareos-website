@@ -503,13 +503,19 @@
     <section class="section" aria-label="How close visits run to plan">
       <div class="container" style="max-width:900px;text-align:center">
         <h2 data-reveal style="margin-bottom:12px">How close your visits run to the time you planned</h2>
-        <p class="lottie-cap">Every completed visit has a planned length and an actual one. Plotting the difference tells you something an average cannot: whether your call times are realistic, or whether carers are quietly absorbing the gap.</p>
+        <p class="lottie-cap">Every completed visit has a planned length and an actual one. This is the spread of the difference between the two, in minutes: how much each visit ran over or under the time it was given. It tells you something an average cannot, namely whether your call times are realistic or whether carers are quietly absorbing the gap.</p>
         <div class="anim-wrap" data-reveal>
           <div class="lottie-stage"><div data-lottie="/lottie/homecareos-overrun.json" data-rest="380" style="aspect-ratio:700/260" role="img" aria-label="Completed visits stack into bins either side of zero, building a hump centred on the planned time, with a bracket marking fifteen minutes either way"></div></div>
           <ul class="anim-legend legend-2">
             <li><span class="chip" style="background:#1D9E75"></span>Within fifteen minutes of plan</li>
             <li><span class="chip" style="background:#B4B2A9"></span>Running long, or finishing early</li>
           </ul>
+          <ul class="day-heads" style="grid-template-columns:repeat(3,1fr);margin:14px 0 0">
+            <li style="text-align:left">Finished early</li>
+            <li><strong>Bang on the planned time</strong></li>
+            <li style="text-align:right">Ran over</li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gray-500);margin:10px 0 0">Horizontal axis: actual visit length minus planned visit length, in minutes.</p>
         </div>
         <p data-reveal style="max-width:660px;margin:26px auto 0;color:var(--gray-600);font-size:0.9rem">A tail on the right is a call that needs more time on the rota. A tail on the left is a call that may not need the time it is billed for. Both are worth knowing before a commissioner asks.</p>
       </div>
