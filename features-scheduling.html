@@ -184,6 +184,17 @@
     .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
     .lottie-stage > div{width:100%;display:block}
     .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:16px auto 0;max-width:560px}
+    .rota-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:30px 44px;text-align:left;margin:34px auto 0;max-width:800px}
+    .legend-title{font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray-500);margin:0 0 14px;font-weight:600}
+    .legend-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+    .legend-list.cols{grid-template-columns:1fr 1fr;gap:11px 18px}
+    .legend-list li{display:flex;align-items:flex-start;gap:10px;font-size:0.9rem;color:var(--gray-700);line-height:1.45}
+    .legend-sw{width:14px;height:14px;border-radius:4px;flex:0 0 14px;margin-top:3px}
+    .legend-ico{flex:0 0 16px;margin-top:2px}
+    .legend-dot{width:13px;height:13px;border-radius:50%;border:2px solid var(--gray-500);flex:0 0 13px;margin-top:3px}
+    .legend-bar{width:16px;height:5px;border-radius:3px;background:#1D9E75;flex:0 0 16px;margin-top:7px}
+    .legend-avail{width:14px;height:14px;border:2px dashed #BA7517;border-radius:4px;flex:0 0 14px;margin-top:3px}
+    @media (max-width:600px){.rota-legend{grid-template-columns:1fr}.legend-list.cols{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -295,11 +306,37 @@
     </section>
 
     <!-- Benefits Grid -->
-    <section class="section motion-band" aria-label="See the rota build itself">
-      <div class="container" style="max-width:720px;text-align:center">
-        <h2 data-reveal style="margin-bottom:10px">See the rota build itself</h2>
-        <div class="lottie-stage" style="max-width:560px"><div id="rota-anim" data-lottie="/lottie/homecareos-rota.json" style="aspect-ratio:48/30" role="img" aria-label="A rota grid fills with visit blocks that slide into place and move through the day, navy for scheduled, amber for in progress, green for completed, with one dark-orange block still needing cover"></div></div>
-        <p class="lottie-cap">Visits drop onto the grid and move through the day. One block stays dark orange: the visit that still needs cover.</p>
+    <section class="section motion-band" aria-label="A colour-coded rota">
+      <div class="container" style="max-width:860px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">Colour-coded, so you can read the day at a glance</h2>
+        <p class="lottie-cap" style="margin:0 auto 24px">Every visit carries its status as a colour. A coordinator can scan a whole day and see what is finished, what is running, what is late and what still has nobody on it, without opening a single record.</p>
+        <div class="lottie-stage" style="max-width:560px"><div id="rota-anim" data-lottie="/lottie/homecareos-rota.json" style="aspect-ratio:48/30" role="img" aria-label="A rota grid of visit blocks colour-coded by status: navy for scheduled, amber for in progress, green for completed, and dark orange for a visit that still needs cover"></div></div>
+        <div class="rota-legend" data-reveal>
+          <div>
+            <h3 class="legend-title">Visit colours</h3>
+            <ul class="legend-list cols">
+            <li><span class="legend-sw" style="background:#1A1A2E"></span>Scheduled</li>
+            <li><span class="legend-sw" style="background:#EF9F27"></span>In progress</li>
+            <li><span class="legend-sw" style="background:#1D9E75"></span>Completed</li>
+            <li><span class="legend-sw" style="background:#E24B4A"></span>Missed / late</li>
+            <li><span class="legend-sw" style="background:#B4B2A9"></span>Cancelled</li>
+            <li><span class="legend-sw" style="background:#BA7517"></span>Unallocated</li>
+            <li><span class="legend-sw" style="background:#AFA9EC"></span>Sickness row</li>
+            <li><span class="legend-sw" style="background:#ED93B1"></span>Other absence</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="legend-title">Marks on a visit</h3>
+            <ul class="legend-list">
+            <li><svg class="legend-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16323D" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Double-up, two carers</li>
+            <li><svg class="legend-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF9F27" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Overlaps another visit</li>
+            <li><span class="legend-sw" style="background:#1D9E75"></span>Margin square: green healthy, amber tight, red loss</li>
+            <li><span class="legend-dot"></span>Hollow dot: covering for the run's regular</li>
+            <li><span class="legend-bar"></span>Run thread: the run's area colour, named below the row</li>
+            <li><span class="legend-avail"></span>Outside the carer's usual availability</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 

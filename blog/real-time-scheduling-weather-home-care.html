@@ -215,11 +215,12 @@
           <p>Before the disruption, one thing is worth saying: resilience starts with the plan itself. A day built as tight, geographic <a href="/features-route-planning.html">runs</a> carries slack, the small cushion of time that lets an agency absorb a problem without every visit behind it running late. How to build that is the subject of the companion piece on <a href="/blog/visit-optimisation-planning-home-care.html">visit optimisation and run planning</a>. Here, we are interested in what happens when even a well-planned run meets a road that has just gone under water.</p>
 
           <h2 id="when-the-road-is-cut-off">When the road is cut off</h2>
-          <p>Now the disruption. A flood warning comes in and a crossing on a carer's run is impassable. A static schedule has no answer to this: the visit is simply going to be late, and someone has to notice, phone round, and improvise. With real-time data feeding the schedule, the system sees the blockage as it happens. Rather than pushing one carer the long way round and delaying every visit behind it, it looks for a better answer, and often there is one: a different carer, already on the right side of the water, who can take the visit and keep it on time.</p>
+          <p>Now the disruption. A flood warning comes in and a crossing on a carer's run is impassable. A static schedule has no answer to this: the visit is simply going to be late, and someone has to notice, phone round, and improvise. This is where we think scheduling should go next. If live conditions fed the rota directly, the blockage would register as it happened, and rather than pushing one carer the long way round and delaying every visit behind it, the system could look for a better answer. Often there is one: a different carer, already on the right side of the water, who can take the visit and keep it on time. To be clear, that live weather re-routing is something we are building, not something homecareOS does today.</p>
 
           <figure class="lottie-figure flood" data-reveal>
             <div class="lottie-stage"><div id="flood-anim" data-lottie="/lottie/homecareos-flood.json" role="img" aria-label="A carer heads for a visit across a bridge. A live weather feed flags a flood, the bridge is blocked with a red alert, and the system re-routes a nearer carer on the far side so the visit is covered on time"></div></div>
-            <figcaption>A live weather feed flags a flooded crossing. Rather than a missed visit, the nearest suitable carer on the far side is re-routed, and care still arrives on time.</figcaption>
+            <figcaption>A live weather feed flags a flooded crossing. Rather than a missed visit, the nearest suitable carer on the far side is re-routed, and care still arrives on time.*<br>
+            <span style="font-size:0.85em;color:var(--gray-500)">* Live weather re-routing is currently in development and is not yet available in homecareOS.</span></figcaption>
           </figure>
 
           <h2 id="data-points">The real-time data points that matter</h2>
@@ -232,7 +233,7 @@
           </ul>
 
           <h2 id="decision-intelligence">Data is not a decision</h2>
-          <p>Here is the part that is easy to underestimate. Knowing a road has flooded does not fix anything on its own. In the middle of a bad morning, a coordinator does not need more alerts, they need the right move, quickly. That is decision intelligence: the schedule does not just flag the problem, it proposes the answer.</p>
+          <p>Here is the part that is easy to underestimate. Knowing a road has flooded does not fix anything on its own. In the middle of a bad morning, a coordinator does not need more alerts, they need the right move, quickly. That is decision intelligence: a schedule that does not just flag the problem but proposes the answer. It is the principle behind the cover finder in homecareOS today, and the direction we are taking it as more live signals are added.</p>
           <p>When a visit needs re-covering, the <a href="/features-ai-rota.html">cover finder</a> scores every available carer on distance, continuity with that client, spare hours in their week, and the skills the visit needs, and surfaces the best fit in seconds. The coordinator stays in control and makes the call, but they are choosing from a ranked shortlist rather than starting from a blank page while the clock runs. A decision that used to take twenty minutes of phone calls takes one.</p>
 
           <h2 id="the-winter-ahead">About the winter ahead</h2>
@@ -289,7 +290,7 @@
               <div class="blog-card-body">
                 <div class="blog-meta"><span class="blog-category">Product</span></div>
                 <h3><a href="/features-ai-rota.html">AI Rota Builder and Cover Finder</a></h3>
-                <p>The scoring behind a real-time re-route: distance, continuity, hours and skills, ranked in seconds.</p>
+                <p>The scoring behind fast cover: distance, continuity, hours and skills, ranked in seconds.</p>
                 <a href="/features-ai-rota.html" class="read-more">View feature &rarr;</a>
               </div>
             </article>
@@ -300,7 +301,7 @@
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>See real-time scheduling on your own rota</h2>
-            <p>Book a short demo and we will show you how homecareOS builds efficient runs and re-routes visits when conditions change, so care stays on time whatever the weather.</p>
+            <p>Book a short demo and we will show you how homecareOS builds efficient runs and finds cover quickly when the day changes, and where we are taking real-time conditions next.</p>
             <div class="cta-actions">
               <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a demo</a>
               <a href="/features-scheduling.html" class="btn btn-ghost">Explore Scheduling</a>

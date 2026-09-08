@@ -220,6 +220,25 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:0 auto 24px;max-width:640px}
+    .anim-wrap{max-width:760px;margin:0 auto}
+    .anim-legend{list-style:none;display:grid;gap:12px 22px;margin:18px 0 0;padding:0;text-align:left}
+    .anim-legend li{display:flex;align-items:center;gap:9px;font-size:0.85rem;color:var(--gray-700);line-height:1.35}
+    .anim-legend .chip{width:14px;height:14px;border-radius:4px;flex:0 0 14px}
+    .anim-legend .chip.hollow{background:transparent;border:2px solid #B4B2A9;border-radius:50%}
+    .anim-legend .chip.round{border-radius:50%}
+    .legend-4{grid-template-columns:repeat(4,1fr)}
+    .legend-3{grid-template-columns:repeat(3,1fr)}
+    .legend-2{grid-template-columns:repeat(2,1fr)}
+    .day-heads{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);margin:0 0 8px;padding:0}
+    .day-heads li{font-size:0.75rem;color:var(--gray-500);text-align:center}
+    @media (max-width:640px){.legend-4,.legend-3{grid-template-columns:repeat(2,1fr)}}
+  </style>
 </head>
 <body>
 
@@ -517,6 +536,20 @@
     <!-- ============================================
          PLATFORM SCREENSHOT
          ============================================ -->
+    <section class="section motion-band" aria-label="What a licence counts">
+      <div class="container" style="max-width:900px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">You pay for carers, not logins</h2>
+        <p class="lottie-cap">Free while you have up to five carers. Once you pass five it is &pound;10 per carer per month for every carer, so twelve carers is &pound;120. Coordinators, managers and owners who do not deliver visits are never counted, and there is no cap on service users.</p>
+        <div class="anim-wrap" data-reveal>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-pricing.json" data-rest="285" style="aspect-ratio:640/190" role="img" aria-label="Twelve filled dots representing billed carers appear, alongside five hollow dots representing office staff who are never counted"></div></div>
+          <ul class="anim-legend legend-2">
+            <li><span class="chip round" style="background:#1D9E75"></span>Carers, &pound;10 each per month</li>
+            <li><span class="chip hollow"></span>Office team, always unmetered</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-label="Platform screenshot">
       <div class="container">
         <div class="feature-hero-visual has-screenshot" data-reveal>
@@ -1047,5 +1080,23 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(Number(el.dataset.rest||290), true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>

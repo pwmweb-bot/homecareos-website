@@ -108,6 +108,17 @@
 </script>
 <script src="/js/book-demo.js?v=20260429" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+  <style>
+    .motion-band{background:var(--gray-50)}
+    .lottie-stage{background:#F3EFE7;border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;margin:0 auto}
+    .lottie-stage > div{width:100%;display:block}
+    .lottie-cap{font-size:0.95rem;color:var(--gray-600);margin:0 auto 24px;max-width:620px}
+    .pipeline{max-width:860px;margin:0 auto}
+    .pipeline-labels{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);margin:12px 0 0;padding:0}
+    .pipeline-labels li{font-size:0.78rem;color:var(--gray-600);text-align:center;line-height:1.3}
+    @media (max-width:620px){.pipeline-labels li{font-size:0.6rem}}
+  </style>
 </head>
 <body>
 
@@ -205,6 +216,19 @@
           <div class="feature-hero-visual has-screenshot">
             <img src="images/photos/carers.webp" alt="homecareOS carers list showing staff details, roles, contact info and DBS expiry dates" width="1400" height="840" loading="lazy">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section motion-band" aria-label="The recruitment pipeline">
+      <div class="container" style="max-width:900px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">Every applicant, one tracked pipeline</h2>
+        <p class="lottie-cap">Seven stages, from first application to first shift. You can see at a glance who is waiting on a document, whose background check is still out, and who is ready to start.</p>
+        <div class="pipeline" data-reveal>
+          <div class="lottie-stage"><div id="recruit-anim" data-lottie="/lottie/homecareos-recruitment.json" style="aspect-ratio:960/120" role="img" aria-label="A recruitment pipeline of seven stages completing in sequence: application, documents, references, background check, interview, offer and onboarding"></div></div>
+          <ol class="pipeline-labels">
+            <li>Application</li><li>Documents</li><li>References</li><li>DBS Check</li><li>Interview</li><li>Offer</li><li>Onboarding</li>
+          </ol>
         </div>
       </div>
     </section>
@@ -521,5 +545,23 @@
     });
   </script>
 
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function mount(el){
+        if (el.dataset.mounted) return;
+        if (typeof lottie === 'undefined'){ setTimeout(function(){mount(el);}, 120); return; }
+        el.dataset.mounted = '1';
+        var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+        if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(310, true); }); }
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>
