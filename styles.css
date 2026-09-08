@@ -92,6 +92,7 @@ textarea:focus-visible,
 select:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(22, 50, 61, 0.85);
 }
 
 ul, ol {
@@ -2224,6 +2225,24 @@ p {
 }
 [data-reveal="left"] { transform: translate3d(24px, 0, 0); }
 [data-reveal="right"] { transform: translate3d(-24px, 0, 0); }
+/* LCP candidates must never start transparent. An opacity fade defers Largest
+   Contentful Paint until the animation ends, so headings move but never fade. */
+h1[data-reveal],
+h2[data-reveal],
+.hero-title[data-reveal] {
+  opacity: 1;
+}
+
+/* Wide comparison tables scroll on their own instead of pushing the page sideways. */
+@media (max-width: 768px) {
+  .compare-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 [data-reveal].is-revealed {
   opacity: 1;
   transform: translate3d(0, 0, 0);

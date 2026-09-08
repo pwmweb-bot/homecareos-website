@@ -656,6 +656,7 @@
         state = 1;
         var s = document.createElement('script');
         s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
         s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
         s.onerror = function(){ state = 0; queue.length = 0; };
         document.head.appendChild(s);
