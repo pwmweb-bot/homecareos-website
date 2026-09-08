@@ -1139,7 +1139,6 @@
        SCRIPTS
        ============================================ -->
   <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -1182,13 +1181,19 @@
     });
 
     // GSAP Hero Animation, wait for deferred script to load
-    window.addEventListener('load', function() {
-      if (typeof gsap !== 'undefined') {
-        gsap.from('.hero-title', { opacity: 0, y: 60, duration: 1, ease: 'power3.out' });
-        gsap.from('.hero-subtitle', { opacity: 0, y: 40, duration: 1, delay: 0.2, ease: 'power3.out' });
-        gsap.from('.hero-actions', { opacity: 0, y: 30, duration: 1, delay: 0.4, ease: 'power3.out' });
-        gsap.from('.hero-visual', { opacity: 0, x: 60, duration: 1.2, delay: 0.3, ease: 'power3.out' });
-      }
+    // Hero motion. Two things here are load-bearing for Largest Contentful Paint:
+    //  1. .hero-title and .hero-visual are the LCP candidates, so they must NEVER
+    //     start at opacity 0. A transform-only animation still paints immediately;
+    //     an opacity fade defers LCP until the fade completes.
+    //  2. Run on DOMContentLoaded, not load. gsap is a defer script so it has
+    //     already executed by then, and we stop waiting on every image first.
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof gsap === 'undefined') return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      gsap.from('.hero-title',    { y: 40, duration: 0.8, ease: 'power3.out' });
+      gsap.from('.hero-visual',   { x: 40, duration: 1.0, delay: 0.1, ease: 'power3.out' });
+      gsap.from('.hero-subtitle', { opacity: 0, y: 30, duration: 0.8, delay: 0.15, ease: 'power3.out' });
+      gsap.from('.hero-actions',  { opacity: 0, y: 24, duration: 0.8, delay: 0.3, ease: 'power3.out' });
     });
 
     // Skip link
