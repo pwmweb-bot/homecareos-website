@@ -41,7 +41,7 @@
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20260908anim"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
+  <link rel="stylesheet" href="styles.css?v=20260908care"><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2, default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -237,6 +237,43 @@
         <h2 data-reveal style="margin-bottom:10px">Four nations, covered</h2>
         <div class="lottie-stage" style="max-width:560px"><div id="nations-anim" data-lottie="/lottie/homecareos-nations.json" style="aspect-ratio:52/22" role="img" aria-label="Four shields for England, Wales, Scotland and Northern Ireland are drawn and ticked in turn"></div></div>
         <p class="lottie-cap">CQC, CIW, Care Inspectorate and RQIA, built in from day one, not bolted on for England alone.</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INCIDENTS AND RISK ASSESSMENTS
+         ============================================ -->
+    <section class="section" aria-label="Incidents and risk assessments">
+      <div class="container" style="max-width:900px;text-align:center">
+        <h2 data-reveal style="margin-bottom:12px">An incident you cannot quietly file away</h2>
+        <p class="lottie-cap">Most systems let you record an incident and mark it closed. The gap between those two clicks is where learning is supposed to happen, and where it usually does not.</p>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Six stages, and a close that has to be earned</h3>
+          <div class="lottie-stage"><div data-lottie="/lottie/homecareos-incident.json" data-rest="340" style="aspect-ratio:700/280" role="img" aria-label="An incident moves through six stages. The final Closed stage stays locked and greyed until every condition beneath it has been satisfied, then unlocks"></div></div>
+          <ul class="anim-legend legend-3">
+            <li><span class="chip" style="background:#1D9E75"></span>Stage completed</li>
+            <li><span class="chip" style="background:#B4B2A9"></span>Closed, still locked</li>
+            <li><span class="chip" style="background:#16323D"></span>Closed, now permitted</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">An incident runs through six stages: reported, under investigation, root cause identified, actions assigned, learning shared, closed. The last one is not a button somebody can simply press.</p>
+          <p class="lottie-cap" style="margin-top:14px">Closing requires all of it: an investigator named, a root cause chosen, at least one action, every one of those actions completed rather than merely raised, lessons written down, and the learning shared with someone. Until then the close stays shut. It is a small piece of friction, deliberately placed where the sector's worst habit lives.</p>
+        </div>
+
+        <div style="height:46px"></div>
+
+        <div class="anim-wrap" data-reveal>
+          <h3 class="anim-sub">Risk scored the way an inspector expects to see it</h3>
+          <div class="lottie-stage" style="max-width:560px"><div data-lottie="/lottie/homecareos-riskmatrix.json" data-rest="300" style="aspect-ratio:560/300" role="img" aria-label="A five by five likelihood and impact grid shading from low to critical, with a marker settling on a cell where likelihood four meets impact four"></div></div>
+          <ul class="anim-legend legend-4">
+            <li><span class="chip" style="background:#1D9E75"></span>Low, under 5</li>
+            <li><span class="chip" style="background:#E8A14A"></span>Medium, 5 and above</li>
+            <li><span class="chip" style="background:#EF9F27"></span>High, 10 and above</li>
+            <li><span class="chip" style="background:#E24B4A"></span>Critical, 15 and above</li>
+          </ul>
+          <p class="lottie-cap" style="margin-top:18px">Likelihood from one to five, impact from one to five, and the band follows from the two. The score is not typed in and it cannot drift: it is computed by the database from the two numbers, so a critical risk cannot be recorded as a medium one because somebody was optimistic on a Friday.</p>
+          <p class="lottie-cap" style="margin-top:14px">Existing controls and any further controls needed are recorded against the risk, and each risk carries a version, so the assessment you had in place on the day of an incident is still there to be read.</p>
+        </div>
       </div>
     </section>
 

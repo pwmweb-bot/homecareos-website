@@ -1595,6 +1595,12 @@ p {
   margin: 0 auto;
 }
 
+.anim-sub {
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+  color: var(--secondary);
+}
+
 .anim-legend {
   list-style: none;
   display: grid;
