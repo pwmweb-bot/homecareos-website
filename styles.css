@@ -2694,6 +2694,33 @@ h2[data-reveal],
   color: var(--secondary);
 }
 
+/* Verbatim quote from a published inspection report. Always attributed and
+   always framed as illustration, never as a frequency claim. */
+.insp-quote {
+  margin: 0 0 28px;
+  padding: 24px 28px;
+  background: var(--white);
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.insp-quote blockquote {
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--gray-800);
+}
+
+.insp-quote figcaption {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+}
+
 .persona-divider {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--gray-300), transparent);
