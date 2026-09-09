@@ -331,6 +331,72 @@ p {
   color: var(--white);
 }
 
+/* ── .btn-outline-light ────────────────────────────────────────────────────
+   Used on four dark CTA panels (index, faq, team, portfolio) but never
+   defined anywhere, so those buttons fell through to base .btn alone:
+   transparent border, no background, inherited text colour — i.e. dark text
+   on a dark gradient. "Book a Demo" was sitting next to the primary CTA and
+   was effectively unreadable. White on the .cta-section gradient measures
+   13.5:1 at its lightest stop. */
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-light:hover {
+  background: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ── .btn-ghost on a LIGHT section ─────────────────────────────────────────
+   .btn-ghost is white text on transparent. That is correct on the dark
+   surfaces where 85 of its 115 uses live (.cta-section, .hero, .page-header,
+   .lp-hero), so the base rule is left alone. On a light section the same
+   button measures 1.10:1 against .section-gray (#f3f4f6) and 1.05:1 against
+   the body (#f8fafc) — mathematically invisible, not merely low contrast,
+   and its 30%-white border comes to 1.03:1. Inverting to --primary gives
+   12.3:1 and 12.9:1 on those two backgrounds.
+
+   .section-compare-links carries 16 of these and sets only padding, so it
+   inherits the body background; .section-light had no definition at all,
+   which is why it never protected anything. Both are made real below. */
+.section-gray .btn-ghost,
+.section-light .btn-ghost,
+.section-compare-links .btn-ghost {
+  color: var(--primary);
+  border-color: rgba(22, 50, 61, 0.6);
+}
+
+.section-gray .btn-ghost:hover,
+.section-light .btn-ghost:hover,
+.section-compare-links .btn-ghost:hover {
+  background: rgba(22, 50, 61, 0.06);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* A light section states its background rather than relying on the body
+   showing through, so "is this surface light or dark?" is answerable from
+   the class alone — which is the question .btn-ghost above depends on. */
+.section-light {
+  background-color: var(--bg);
+}
+
+/* ── the nav CTA ──────────────────────────────────────────────────────────
+   .nav-links a sets a grey link colour at specificity (0,1,1), which beats
+   .btn-primary (0,1,0). The result is that the one .btn-primary in the header
+   renders #4b5563 on amber at 3.46:1, under the 4.5:1 AA floor for its 14px
+   text, while every other .btn-primary on the site renders #0f172a at 8.18:1.
+   Restoring the button's own colour is enough; nothing else in the nav needs
+   to change. */
+.nav-links a.btn-primary {
+  color: var(--secondary);
+}
+
 .btn-sm {
   padding: 10px 24px;
   font-size: 0.875rem;
