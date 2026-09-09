@@ -2672,6 +2672,28 @@ h2[data-reveal],
   color: #10b981;
 }
 
+/* Source attribution under a statistics band. Every number in a loss-stats
+   band either cites a published source here or is a statement about the
+   product, never an unsourced sector figure. */
+.stat-source {
+  margin: 20px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--gray-500);
+}
+
+.stat-source a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.stat-source a:hover,
+.stat-source a:focus-visible {
+  color: var(--secondary);
+}
+
 .persona-divider {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--gray-300), transparent);
