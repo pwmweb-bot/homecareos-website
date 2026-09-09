@@ -33,7 +33,7 @@ set -euo pipefail
 # CONFIG — edit if you rotate the key (see README for rotation procedure)
 # ============================================================================
 HOST="www.homecareos.co.uk"
-KEY="988cc8d9-63ce-4fdb-8474-18c9385d993d"
+KEY="eade7421f669441d9b9b76b04f13f712"
 KEY_LOCATION="https://${HOST}/${KEY}.txt"
 ENDPOINT="https://api.indexnow.org/indexnow"
 

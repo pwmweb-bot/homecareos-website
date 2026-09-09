@@ -111,3 +111,17 @@
   RewriteCond %{REQUEST_FILENAME}\.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
+
+# ── Block build tooling from the public docroot ───────────────────────────
+#   website/ IS the docroot, so anything in it is downloadable. These were all
+#   returning 200: /build.py, /scripts/submit-indexnow.sh, /partials/header.html
+#   and the buyer's guide print source. None is secret, but none should be
+#   served either, and a shell script advertising the site's tooling is free
+#   reconnaissance. Deny the directories and the two build file types outright.
+<FilesMatch "\.(py|sh)$">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 404 ^/(partials|scripts)(/|$)
+RedirectMatch 404 ^/guides/buyers-guide-source\.html$
+RedirectMatch 404 ^/\.(git|gitignore|DS_Store)
