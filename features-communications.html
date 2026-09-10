@@ -280,6 +280,16 @@
     </section>
 
     <!-- VoIP / Pro Tier Section -->
+    <!-- The call flow, animated -->
+    <section class="section motion-band" aria-label="How a call is routed">
+      <div class="container" style="max-width:820px;text-align:center">
+        <h2 data-reveal style="margin-bottom:10px">Follow a call from ringing to answered</h2>
+        <p data-reveal style="max-width:620px;margin:0 auto 22px">In office hours a caller picks an option, reaches the right team and gets a person. After six, the same number follows your on-call rota to a mobile, and anything unanswered becomes a voicemail your coordinator can read at eight the next morning.</p>
+        <div class="lottie-stage" style="max-width:700px"><div id="voip-anim" data-lottie="/lottie/homecareos-voip-flow.json" style="aspect-ratio:19/10" role="img" aria-label="A call arrives and reaches an IVR menu offering three options. The caller chooses one, the call rings a department and a coordinator answers. The scene shifts to out of hours: the same call follows the on-call rota to a mobile, and when it is not answered the caller leaves a voicemail, which turns into readable transcript lines."></div></div>
+        <p class="lottie-cap">Menus, departments, on-call divert and voicemail transcription are configured per agency. Available on any Pro plan.</p>
+      </div>
+    </section>
+
     <section class="section" aria-label="VoIP phone system">
       <div class="container">
         <div class="section-header" data-reveal>
@@ -725,6 +735,40 @@
         answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
       });
     });
+  </script>
+
+  <script>
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SRC = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+      var state = 0, queue = [];
+      function lib(cb){                     // fetch the player only when an animation is near
+        if (state === 2){ cb(); return; }
+        queue.push(cb);
+        if (state === 1) return;
+        state = 1;
+        var s = document.createElement('script');
+        s.src = SRC; s.async = true;
+        s.integrity = 'sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm'; s.crossOrigin = 'anonymous';
+        s.onload = function(){ state = 2; queue.splice(0).forEach(function(f){ f(); }); };
+        s.onerror = function(){ state = 0; queue.length = 0; };
+        document.head.appendChild(s);
+      }
+      function mount(el){
+        if (el.dataset.mounted) return;
+        el.dataset.mounted = '1';
+        lib(function(){
+          var anim = lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: !reduced, path: el.dataset.lottie });
+          if (reduced){ anim.addEventListener('DOMLoaded', function(){ anim.goToAndStop(280, true); }); }
+        });
+      }
+      var targets = document.querySelectorAll('[data-lottie]');
+      if (!('IntersectionObserver' in window)){ targets.forEach(mount); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '250px 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
   </script>
 </body>
 </html>
