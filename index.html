@@ -83,6 +83,36 @@
     .hero-phone{position:absolute;overflow:hidden;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.15)}
     .hero-phone img{display:block;width:100%;height:auto}
     .hero-phone-1{width:110px;bottom:-10px;right:0}
+    /* Click-to-play hero video. Facade pattern: the poster stays a plain <img>
+       so it remains the LCP element with fetchpriority, and the <video> is only
+       created on click, so no video bytes load until someone asks for them.
+       Self-hosted deliberately: the site CSP allows frame-src for Calendly only,
+       while media-src falls back to default-src 'self'. */
+    .hero-video{position:relative;line-height:0}
+    .hero-video img,.hero-video video{width:100%;height:auto;display:block}
+    .hero-video video{background:#000}
+    .hero-video-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;height:100%;padding:0;border:0;cursor:pointer;font:inherit;color:var(--white);background:linear-gradient(180deg,rgba(22,50,61,.22) 0%,rgba(22,50,61,.62) 100%);transition:background .25s ease}
+    .hero-video-play:hover,.hero-video-play:focus-visible{background:linear-gradient(180deg,rgba(22,50,61,.12) 0%,rgba(22,50,61,.5) 100%)}
+    .hero-video-play:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+    .hero-video-icon{display:flex;align-items:center;justify-content:center;width:68px;height:68px;border-radius:50%;background:var(--accent);color:var(--primary);box-shadow:0 12px 34px rgba(0,0,0,.4);transition:transform .25s ease}
+    .hero-video-play:hover .hero-video-icon{transform:scale(1.07)}
+    .hero-video-label{font-size:.9rem;font-weight:600;line-height:1.3;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+    @media (prefers-reduced-motion:reduce){.hero-video-play,.hero-video-icon{transition:none}.hero-video-play:hover .hero-video-icon{transform:none}}
+    /* Video lightbox. The video plays centred on a dimmed backdrop so nothing
+       else on the page competes with it. Built on click, torn down on close. */
+    .video-lightbox{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px);background:rgba(10,22,28,.9);opacity:0;transition:opacity .22s ease}
+    .video-lightbox.is-open{opacity:1}
+    @supports (backdrop-filter:blur(6px)){.video-lightbox{backdrop-filter:blur(8px)}}
+    .video-lightbox-frame{position:relative;width:100%;max-width:1180px;transform:scale(.97);transition:transform .22s ease}
+    .video-lightbox.is-open .video-lightbox-frame{transform:scale(1)}
+    .video-lightbox video{display:block;width:100%;max-height:82vh;aspect-ratio:16/9;border-radius:10px;background:#000;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+    .video-lightbox-close{position:absolute;top:-46px;right:0;display:flex;align-items:center;gap:7px;padding:7px 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s ease}
+    .video-lightbox-close:hover{background:rgba(255,255,255,.2)}
+    .video-lightbox-close:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+    .video-lightbox-note{margin:12px 0 0;text-align:center;font-size:.82rem;color:rgba(255,255,255,.62)}
+    body.has-lightbox{overflow:hidden}
+    @media (max-width:640px){.video-lightbox-close{top:auto;bottom:-44px;right:50%;transform:translateX(50%)}}
+    @media (prefers-reduced-motion:reduce){.video-lightbox,.video-lightbox-frame{transition:none}.video-lightbox-frame{transform:none}}
     .hero-phone-2{width:95px;bottom:60px;right:-30px;opacity:.8}
     @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:360px}.hero-phone-1{width:80px;bottom:-8px;right:0}.hero-phone-2{width:68px;bottom:40px;right:-16px}.nav-toggle{display:flex}.nav-links{display:none}}
   </style>
@@ -223,6 +253,20 @@
         "@type": "BusinessAudience",
         "audienceType": "Home care workers / domiciliary carers"
       }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.homecareos.co.uk/#overview-video",
+      "name": "homecareOS product overview",
+      "description": "A walk through homecareOS, home care management software for UK agencies: building the rota with AI, care plans that carry into every visit, NFC clock in and offline working, medication and body maps, the family portal, visit to invoice and timesheet, and inspection evidence for CQC, CIW, the Care Inspectorate and RQIA.",
+      "thumbnailUrl": "https://www.homecareos.co.uk/images/video-overview-poster.jpg",
+      "uploadDate": "2026-09-10",
+      "duration": "PT1M42S",
+      "contentUrl": "https://www.homecareos.co.uk/video/homecareos-overview.mp4",
+      "isFamilyFriendly": true,
+      "inLanguage": "en-GB",
+      "publisher": {"@id": "https://www.homecareos.co.uk/#organization"},
+      "about": {"@id": "https://www.homecareos.co.uk/#software"}
     },
     {
       "@type": "WebSite",
@@ -482,7 +526,15 @@
           <div class="hero-visual">
             <div class="hero-devices">
               <div class="hero-desktop">
-                <img src="images/photos/dashboard.webp" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860" fetchpriority="high">
+                <div class="hero-video" id="heroVideo">
+                  <img src="images/photos/dashboard.webp" alt="homecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860" fetchpriority="high">
+                  <button type="button" class="hero-video-play" id="heroVideoPlay" aria-label="Play the homecareOS product overview">
+                    <span class="hero-video-icon" aria-hidden="true">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.4-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>
+                    </span>
+                    <span class="hero-video-label">Watch the overview</span>
+                  </button>
+                </div>
               </div>
               <div class="hero-phone hero-phone-1">
                 <img src="images/photos/observations-224.webp" srcset="images/photos/observations-224.webp 224w, images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 110px" alt="homecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" loading="lazy">
@@ -541,7 +593,7 @@
           <a tabindex="-1" href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
           <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
           <a tabindex="-1" href="features-policies.html" class="feature-pill" data-tooltip="40 UK care policy &amp; procedure templates mapped to CQC, CIW, Care Inspectorate and RQIA. One-click adopt, version control and inspector PDF exports.">UK Policy Library</a>
-          <a tabindex="-1" href="features-communications.html" class="feature-pill" data-tooltip="UK number in your browser, IVR, voicemail transcription, on-call diversion and two-way SMS, Pro plan.">VoIP Phone System</a>
+          <a tabindex="-1" href="features-communications.html" class="feature-pill" data-tooltip="UK number in your browser, IVR, voicemail transcription and on-call diversion, Pro plan.">VoIP Phone System</a>
           <a tabindex="-1" href="features-stock-vehicles.html" class="feature-pill" data-tooltip="PPE inventory with reorder alerts, carer kit issue/return and vehicle MOT/service tracking.">PPE &amp; Vehicle Tracking</a>
           <a tabindex="-1" href="features-visa-sponsorship.html" class="feature-pill" data-tooltip="Sponsor-licence compliance for UK home care: CoS allocation, RTW workflow, visa expiry alerts, 10-day UKVI reporting.">Visa Sponsorship</a>
           <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, free before you register, live the day your registration lands.">CQC Registration</a>
@@ -561,7 +613,7 @@
           <a tabindex="-1" href="features-compliance.html" class="feature-pill" data-tooltip="Track DBS status, renewal dates and disclosure levels for every carer automatically.">DBS Tracking</a>
           <a tabindex="-1" href="features-care-records.html" class="feature-pill" data-tooltip="Structured risk assessments with scoring, review dates and linked care plan actions.">Risk Assessments</a>
           <a tabindex="-1" href="features-policies.html" class="feature-pill" data-tooltip="40 UK care policy &amp; procedure templates mapped to CQC, CIW, Care Inspectorate and RQIA. One-click adopt, version control and inspector PDF exports.">UK Policy Library</a>
-          <a tabindex="-1" href="features-communications.html" class="feature-pill" data-tooltip="UK number in your browser, IVR, voicemail transcription, on-call diversion and two-way SMS, Pro plan.">VoIP Phone System</a>
+          <a tabindex="-1" href="features-communications.html" class="feature-pill" data-tooltip="UK number in your browser, IVR, voicemail transcription and on-call diversion, Pro plan.">VoIP Phone System</a>
           <a tabindex="-1" href="features-stock-vehicles.html" class="feature-pill" data-tooltip="PPE inventory with reorder alerts, carer kit issue/return and vehicle MOT/service tracking.">PPE &amp; Vehicle Tracking</a>
           <a tabindex="-1" href="features-visa-sponsorship.html" class="feature-pill" data-tooltip="Sponsor-licence compliance for UK home care: CoS allocation, RTW workflow, visa expiry alerts, 10-day UKVI reporting.">Visa Sponsorship</a>
           <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, free before you register, live the day your registration lands.">CQC Registration</a>
@@ -1260,6 +1312,101 @@
         dot.addEventListener('click', function() {
           updateGallery(parseInt(this.dataset.index));
         });
+      });
+    })();
+  </script>
+
+  <script>
+    /* Hero video lightbox.
+       Nothing about the video is fetched until the visitor presses play: the
+       hero holds a plain poster <img> (which stays the LCP element) and the
+       <video> is created on click, centred on a dimmed backdrop.
+       Self-hosted on purpose. The site CSP allows frame-src for Calendly only,
+       while media-src falls back to default-src 'self', so an embed would be
+       blocked but our own file plays. */
+    (function () {
+      var wrap = document.getElementById('heroVideo');
+      var btn = wrap && document.getElementById('heroVideoPlay');
+      if (!wrap || !btn) return;
+
+      /* MP4 only. A VP9 WebM of this content encoded LARGER than the H.264
+         file (flat UI colours suit x264), so a second source would just mean
+         serving more bytes to the browsers that prefer it. */
+      var SOURCES = [['/video/homecareos-overview.mp4', 'video/mp4']];
+      var box = null;
+
+      function close() {
+        if (!box) return;
+        var v = box.querySelector('video');
+        if (v) { v.pause(); v.removeAttribute('src'); v.load(); }
+        box.remove();
+        box = null;
+        document.body.classList.remove('has-lightbox');
+        document.removeEventListener('keydown', onKey);
+        btn.focus();
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') { close(); return; }
+        if (e.key !== 'Tab' || !box) return;
+        // Keep focus inside the lightbox while it is open.
+        var f = box.querySelectorAll('button, video');
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+
+      btn.addEventListener('click', function () {
+        var poster = wrap.querySelector('img');
+
+        box = document.createElement('div');
+        box.className = 'video-lightbox';
+        box.setAttribute('role', 'dialog');
+        box.setAttribute('aria-modal', 'true');
+        box.setAttribute('aria-label', 'homecareOS product overview');
+
+        var frame = document.createElement('div');
+        frame.className = 'video-lightbox-frame';
+
+        var closeBtn = document.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.className = 'video-lightbox-close';
+        closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg> Close';
+        closeBtn.addEventListener('click', close);
+
+        var v = document.createElement('video');
+        v.setAttribute('controls', '');
+        v.setAttribute('playsinline', '');
+        v.setAttribute('preload', 'auto');
+        v.setAttribute('autoplay', '');
+        if (poster) v.setAttribute('poster', poster.currentSrc || poster.src);
+        SOURCES.forEach(function (src) {
+          var el = document.createElement('source');
+          el.src = src[0]; el.type = src[1];
+          v.appendChild(el);
+        });
+
+        var note = document.createElement('p');
+        note.className = 'video-lightbox-note';
+        note.textContent = 'Press Escape to close.';
+
+        frame.appendChild(closeBtn);
+        frame.appendChild(v);
+        frame.appendChild(note);
+        box.appendChild(frame);
+
+        // Click the backdrop, but not the video, to close.
+        box.addEventListener('click', function (e) { if (e.target === box) close(); });
+
+        document.body.appendChild(box);
+        document.body.classList.add('has-lightbox');
+        document.addEventListener('keydown', onKey);
+        requestAnimationFrame(function () { box.classList.add('is-open'); });
+
+        closeBtn.focus();
+        var played = v.play();
+        if (played && played.catch) played.catch(function () { /* controls are there */ });
       });
     })();
   </script>
