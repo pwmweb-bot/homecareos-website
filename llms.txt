@@ -127,7 +127,8 @@ Philip Martin is the founder of homecareOS and an independent care-sector busine
 - **Phone:** 01905 674704
 - **Email:** hello@homecareos.co.uk
 - **Carer app:** "homecareOS Carer" on the Apple App Store and Google Play
-- **Hosting:** UK data centres, GDPR compliant, ICO registered
+- **Hosting:** care records and uploaded files stored in Ireland (Amazon Web Services eu-west-1, via Supabase); application server functions in Dublin (Vercel). Voicemail recordings and text messages are held by Twilio, and AI, email, maps, payment and notification providers may process data outside the UK and EU.
+- **ICO registration:** PsycheMeta Ltd, ZC101853
 
 ## License
 

@@ -76,95 +76,6 @@
 </script>
 <script src="/cookie-consent.js?v=20260719" defer></script>
 
-<!-- FAQPage schema, feature-specific Q&As for SERP rich snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What features are included in homecareOS?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "homecareOS includes 12 core modules, drag-and-drop scheduling and rota, AI Rota Builder, carer mobile app, digital care records with eMAR, four-nation compliance (CQC/CIW/Care Inspectorate/RQIA), staff management with Bradford Factor, recruitment, finance and billing, reporting and analytics, phone system with VoIP, UK policy library and stock/PPE/vehicle tracking, plus two stakeholder portals for families and commissioners."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does homecareOS include a carer mobile app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The carer mobile app (iOS and Android) is included free on every plan. Carers get GPS-verified visit check-in/out, digital care notes, eMAR, body maps, observations, holiday requests and full offline mode for poor signal areas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Bradford Factor and how does homecareOS calculate it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bradford Factor is an absence-pattern score (S² × D) where S is number of absences and D is total days. homecareOS calculates it automatically for every staff member with traffic-light scoring (green 0-99, amber 100-199, red 200+). It's a feature most home care competitors lack, making attendance management easier for managers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does AI Cover Finder work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "AI Cover Finder scores available carers when a visit needs cover, ranking them by distance (30%), continuity of care with the service user (25%), hours headroom (20%), preferred-carer flag (15%) and schedule fit (10%). It runs in seconds when you click 'Find Cover' on any visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does homecareOS support all four UK nations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Compliance frameworks for England (CQC), Wales (CIW), Scotland (Care Inspectorate) and Northern Ireland (RQIA) are built in from day one, including the right regulator IDs for staff (DBS, SCW, SSSC, NISCC), nation-specific care plan templates and PIR auto-population for England."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there an API for integrations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not yet as a public API with API keys. What exists today is a FHIR R4 interface: thirteen record types are mapped to UK Core profiles and homecareOS publishes a FHIR CapabilityStatement, though those endpoints answer to a signed in session rather than an external token. Pay runs also export as files shaped for Sage, Xero and BrightPay. Named connectors such as GP Connect and the accounting platforms sit in the integrations hub, where agencies vote for which are built first."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does homecareOS work offline?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The carer mobile app works fully offline, visits, care notes, MAR records and observations all sync automatically when connectivity returns. This is critical for community care where carers visit rural areas or basement flats with poor signal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the family portal and is it included free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Family & Service User Portal lets relatives see real-time visit confirmations, carer profiles, recent care notes and message the agency directly. It's included free on every plan and dramatically reduces 'did the carer turn up?' phone calls to the office."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does homecareOS work for residential care homes or nursing homes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. homecareOS is built exclusively for domiciliary home care, UK agencies whose carers travel to service users in their own homes. For residential care homes or nursing homes, we'd recommend Person Centred Software or Nourish, both of which specialise in residential settings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between home care and care homes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Home care (also called domiciliary care) is when carers visit service users in their own homes for short visits, typically 30 minutes to an hour at a time. A care home is a residential facility where people live full-time and receive 24-hour support. They're regulated under different frameworks and need different software. homecareOS is for the former, domiciliary home care."
-      }
-    }
-  ]
-}
-</script>
 
 <!-- BreadcrumbList schema -->
 <script type="application/ld+json">
@@ -230,6 +141,7 @@
               <a href="/features-compliance.html" role="menuitem">Compliance &amp; Forms</a>
               <a href="/features-finance.html" role="menuitem">Finance &amp; Billing</a>
               <a href="/features-reporting.html" role="menuitem">Reporting</a>
+              <a href="/features-multi-branch.html" role="menuitem">Enterprise &amp; Multi-Branch</a>
               <a href="/features-policies.html" role="menuitem">Policies</a>
               <a href="/features-document-management.html" role="menuitem">Document Management</a>
             </div>
@@ -375,7 +287,7 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             </div>
             <h3><a href="features-care-records.html">Digital Care Records</a></h3>
-            <p>Person-centred care plans, eMAR, body maps, observations and outcome-focused goals, all linked to visits with a complete, immutable audit trail. Build a plan straight from a recorded conversation with Care Conversations.</p>
+            <p>Person-centred care plans, eMAR, body maps, observations and outcome-focused goals, all linked to visits, with an audit trail behind every change. Build a plan straight from a recorded conversation with Care Conversations.</p>
             <div class="feature-highlights">
               <span class="feature-tag">Care Plans</span>
               <span class="feature-tag">eMAR</span>
@@ -465,13 +377,28 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
             </div>
             <h3><a href="features-reporting.html">Reporting & Analytics</a></h3>
-            <p>Eight built-in report types covering visits, compliance, staff performance, finance, and more. Export to CSV or PDF, schedule automated reports, and benchmark against the sector.</p>
+            <p>Built-in reports covering operations, care quality, people and money. Choose a period where a report covers one, export any report as a CSV, and compare every branch you run on the group dashboard.</p>
             <div class="feature-highlights">
-              <span class="feature-tag">8 Report Types</span>
-              <span class="feature-tag">PDF Export</span>
-              <span class="feature-tag">Benchmarking</span>
+              <span class="feature-tag">Care Quality Reports</span>
+              <span class="feature-tag">CSV Export</span>
+              <span class="feature-tag">Branch Benchmarks</span>
             </div>
             <a href="features-reporting.html" class="card-link">Explore Reporting &rarr;</a>
+          </div>
+
+          <!-- 9b. Enterprise & Multi-Branch -->
+          <div class="feature-category-card" data-reveal data-reveal-delay="150">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 011-1h12a1 1 0 011 1v3"/><path d="M12 12V8"/></svg>
+            </div>
+            <h3><a href="features-multi-branch.html">Enterprise &amp; Multi-Branch</a></h3>
+            <p>Enterprise home care software for groups: the branches you work in behind one login, Ctrl+B and a number to switch branch, and a group dashboard that compares care, workforce and money across them, counted the same way.</p>
+            <div class="feature-highlights">
+              <span class="feature-tag">Group Dashboard</span>
+              <span class="feature-tag">Branch Switching</span>
+              <span class="feature-tag">Nine Office Roles</span>
+            </div>
+            <a href="features-multi-branch.html" class="card-link">Explore Enterprise &rarr;</a>
           </div>
 
           <!-- 10. Phone System & Comms -->

@@ -45,45 +45,45 @@
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can I migrate easily to homecareOS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across free from a CSV export, with relationships preserved and every import reversible in one step. Historic records are a separate job, they are optional, and they are quoted on what your current provider will actually release. Remote training for your team is included on Pro."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes homecareOS better than other home care software?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "homecareOS is a true holistic operating system, not just scheduling software. We combine care plans, compliance tracking, staff management, family portal, and business tools in one platform. Built by someone with 13+ years in the industry who understands your real challenges."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is homecareOS CQC compliant?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, so you are always inspection-ready."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my data secure?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We use bank-level 256-bit SSL encryption, daily backups, and UK-based servers. We're fully GDPR compliant and undergo regular security audits."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I migrate easily to homecareOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across free from a CSV export, with relationships preserved and every import reversible in one step. Historic records are a separate job, they are optional, and they are quoted on what your current provider will actually release. Remote training for your team is included on Pro."
       }
-    ]
-  }
-  </script><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
+    },
+    {
+      "@type": "Question",
+      "name": "What makes homecareOS better than other home care software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "homecareOS is a true holistic operating system, not just scheduling software. We combine care plans, compliance tracking, staff management, a family portal, and business intelligence tools into one seamless platform. What truly sets us apart is that homecareOS was built by someone with 13+ years of hands-on experience in the home care industry who understands your real, day-to-day challenges. Every feature is designed to solve actual problems that agency owners and managers face."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is homecareOS CQC compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, and we keep the platform current as each regulator's rules change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your care records and uploaded files are stored in Ireland, on Amazon Web Services through our database provider Supabase, and the homecareOS application's server functions run in Dublin. Data is encrypted in transit (TLS) and at rest (AES-256), and the database is backed up automatically every day. Every application table has row-level security switched on, so staff only see records from the agency they work for, and each person's menu follows the permissions of their role. Some features rely on specialist providers for phone calls, text messages, email, maps, payments, notifications and AI, and some of them process data outside the UK and EU. PsycheMeta Ltd, the company behind homecareOS, is registered with the Information Commissioner's Office (registration number ZC101853)."
+      }
+    }
+  ]
+}
+</script><noscript></noscript><!-- Google tag (gtag.js), with Consent Mode v2 defaults -->
 <script>
   // Consent Mode v2, default all to denied. cookie-consent.js updates after user chooses.
   window.dataLayer = window.dataLayer || [];
@@ -184,6 +184,7 @@
               <a href="/features-compliance.html" role="menuitem">Compliance &amp; Forms</a>
               <a href="/features-finance.html" role="menuitem">Finance &amp; Billing</a>
               <a href="/features-reporting.html" role="menuitem">Reporting</a>
+              <a href="/features-multi-branch.html" role="menuitem">Enterprise &amp; Multi-Branch</a>
               <a href="/features-policies.html" role="menuitem">Policies</a>
               <a href="/features-document-management.html" role="menuitem">Document Management</a>
             </div>
@@ -276,7 +277,7 @@
               <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer" role="region">
-              <p>Your data belongs to you, always. Under UK GDPR regulations, you have the legal right to request a full copy of all your data from any provider. We can help you navigate this process and have extensive experience working with other providers to ensure a smooth data transfer. If needed, we can assist you with formal data portability requests under Article 20 of GDPR. We have never encountered a situation where we couldn't successfully retrieve a client's data.</p>
+              <p>Your data belongs to you, always. Under UK GDPR regulations, you have the legal right to request a full copy of all your data from any provider. We can help you through this process, and our team has already moved agencies across from other systems. If needed, we can assist you with formal data portability requests under Article 20 of GDPR.</p>
             </div>
           </div>
 
@@ -287,7 +288,7 @@
               <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer" role="region">
-              <p>Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, and we keep the platform current as each regulator's rules change, so you never fall behind. Agencies have reached the top inspection ratings, including CQC Outstanding in England, after switching to homecareOS.</p>
+              <p>Yes, and not only for CQC. homecareOS builds compliance for all four UK regulators into every feature: CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland. Your agency's nation drives the right frameworks, documentation and automated reporting, and we keep the platform current as each regulator's rules change.</p>
             </div>
           </div>
 
@@ -331,7 +332,7 @@
               <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer" role="region">
-              <p>Security is our top priority. We use bank-level 256-bit SSL encryption for all data in transit, and AES-256 encryption for data at rest. Daily automated backups ensure your data is never at risk, and all servers are UK-based, keeping your information within UK jurisdiction. We are fully GDPR compliant and undergo regular independent security audits. Role-based access controls ensure that only authorised personnel can view sensitive information.</p>
+              <p>Your care records and uploaded files are stored in Ireland, on Amazon Web Services through our database provider Supabase, and the homecareOS application's server functions run in Dublin. Data is encrypted in transit (TLS) and at rest (AES-256), and the database is backed up automatically every day. Every application table has row-level security switched on, so staff only see records from the agency they work for, and each person's menu follows the permissions of their role. Some features rely on specialist providers for phone calls, text messages, email, maps, payments, notifications and AI, and some of them process data outside the UK and EU. PsycheMeta Ltd, the company behind homecareOS, is registered with the Information Commissioner's Office (registration number ZC101853).</p>
             </div>
           </div>
 

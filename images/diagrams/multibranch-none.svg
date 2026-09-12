@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 292" role="img" aria-labelledby="mb-none-t mb-none-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+  <title id="mb-none-t">None recorded is not the same as zero</title>
+  <desc id="mb-none-d">Example. Two benchmark cells for the same measure, doses given. Branch A shows 0.0 percent with an empty bar: 12 doses were recorded and none were given, so the zero is real. Branch B shows the words None recorded yet in muted italic, with no bar at all: nothing has been recorded at this branch, so there is no figure to show. The two are not equal.</desc>
+
+  <!-- Header -->
+  <rect x="10" y="4" width="84" height="28" rx="14" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="52" y="24" text-anchor="middle" font-size="17" font-weight="500" fill="#4b5563">Example</text>
+  <text x="108" y="25" font-size="19" font-weight="600" fill="#16323D">Doses given</text>
+
+  <!-- Branch A: a real zero -->
+  <rect x="10" y="50" width="230" height="136" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="30" y="84" font-size="17" font-weight="500" fill="#4b5563">Branch A</text>
+  <text x="30" y="134" font-size="34" font-weight="700" fill="#16323D">0.0%</text>
+  <rect x="30" y="152" width="190" height="10" rx="5" fill="#e5e7eb"/>
+
+  <!-- Not equal -->
+  <g fill="none" stroke="#E8A14A" stroke-width="3" stroke-linecap="round">
+    <path d="M249 112 H271 M249 124 H271"/>
+    <path d="M266 104 L254 132"/>
+  </g>
+
+  <!-- Branch B: nothing recorded -->
+  <rect x="280" y="50" width="230" height="136" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="300" y="84" font-size="17" font-weight="500" fill="#4b5563">Branch B</text>
+  <text x="300" y="132" font-size="20" font-style="italic" fill="#6b7280">None recorded yet</text>
+
+  <!-- What each one means -->
+  <line x1="30" y1="186" x2="30" y2="204" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="300" y1="186" x2="300" y2="204" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <text x="30" y="228" font-size="19" font-weight="700" fill="#16323D">Recorded, and</text>
+  <text x="30" y="252" font-size="19" font-weight="700" fill="#16323D">it is zero</text>
+  <text x="30" y="280" font-size="17" fill="#4b5563">12 recorded, 0 given</text>
+
+  <text x="300" y="228" font-size="19" font-weight="700" fill="#16323D">Nothing recorded</text>
+  <text x="300" y="252" font-size="19" font-weight="700" fill="#16323D">at this branch</text>
+  <text x="300" y="280" font-size="17" fill="#4b5563">0 recorded</text>
+</svg>

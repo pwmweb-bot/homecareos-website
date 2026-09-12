@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 238" role="img" aria-labelledby="mb-ontime-t mb-ontime-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+  <title id="mb-ontime-t">On time means no more than 15 minutes after the planned start</title>
+  <desc id="mb-ontime-d">Example. A timeline around a visit planned to start at 09:00. Everything up to 09:15 is shaded green and labelled on time, including arrivals before 09:00. The 15 minutes from 09:00 to 09:15 are marked as the grace window. Everything after 09:15 is shaded red and labelled late. Three example arrivals, each the lead carer's clock-in: 08:55 is on time, 09:10 is on time, and 09:25 is late.</desc>
+  <style>
+    .mb-ontime-meta { font-size: 17px; font-weight: 400; fill: #4b5563; }
+    .mb-ontime-pill { font-size: 17px; font-weight: 600; fill: #4b5563; }
+    .mb-ontime-time { font-size: 19px; font-weight: 700; fill: #16323D; }
+    .mb-ontime-zone { font-size: 18px; font-weight: 700; fill: #16323D; }
+    .mb-ontime-tick { font-size: 17px; font-weight: 400; fill: #4b5563; }
+    .mb-ontime-start { font-size: 17px; font-weight: 700; fill: #16323D; }
+    .mb-ontime-grace { font-size: 17px; font-weight: 600; fill: #16323D; }
+  </style>
+
+  <!-- Example tag and legend -->
+  <rect x="0.75" y="0.75" width="86" height="28" rx="14" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="43.75" y="20.5" text-anchor="middle" class="mb-ontime-pill">Example</text>
+  <circle cx="112" cy="14.75" r="6" fill="#16323D" stroke="#ffffff" stroke-width="2"/>
+  <text x="126" y="20.5" class="mb-ontime-meta">Arrival, measured on the lead carer's clock-in</text>
+
+  <!-- Zones: on time up to 09:15, late after -->
+  <path d="M32 128 H306 V168 H32 A8 8 0 0 1 24 160 V136 A8 8 0 0 1 32 128 Z" fill="#1D9E75" fill-opacity="0.13" stroke="#1D9E75" stroke-width="1.5"/>
+  <path d="M306 128 H488 A8 8 0 0 1 496 136 V160 A8 8 0 0 1 488 168 H306 Z" fill="#E24B4A" fill-opacity="0.11" stroke="#E24B4A" stroke-width="1.5"/>
+
+  <circle cx="50" cy="148" r="10" fill="#1D9E75"/>
+  <path d="M45 148.2 L48.6 151.8 L55.2 144.6" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="66" y="154.5" class="mb-ontime-zone">On time</text>
+
+  <circle cx="374" cy="148" r="10" fill="#E24B4A"/>
+  <path d="M374 142.5 V149.5" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="374" cy="153.6" r="1.6" fill="#ffffff"/>
+  <text x="390" y="154.5" class="mb-ontime-zone">Late</text>
+
+  <!-- 5 minute ticks under the bar -->
+  <g stroke="#9ca3af" stroke-width="1.5">
+    <path d="M71 168 V174"/><path d="M118 168 V174"/><path d="M212 168 V174"/><path d="M259 168 V174"/>
+    <path d="M353 168 V174"/><path d="M400 168 V174"/><path d="M447 168 V174"/>
+  </g>
+
+  <!-- Planned start 09:00 and the 09:15 limit -->
+  <path d="M165 118 V200" stroke="#16323D" stroke-width="2.5"/>
+  <path d="M306 118 V200" stroke="#16323D" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- Grace window 09:00 to 09:15 -->
+  <path d="M165 187 H180 M291 187 H306" stroke="#E8A14A" stroke-width="3" stroke-linecap="butt"/>
+  <path d="M165 180 V194 M306 180 V194" stroke="#E8A14A" stroke-width="3"/>
+  <text x="235.5" y="193" text-anchor="middle" class="mb-ontime-grace">15 min grace</text>
+
+  <!-- Time labels -->
+  <text x="165" y="226" text-anchor="middle" class="mb-ontime-start">Planned 09:00</text>
+  <text x="306" y="226" text-anchor="middle" class="mb-ontime-tick">09:15</text>
+  <text x="447" y="226" text-anchor="middle" class="mb-ontime-tick">09:30</text>
+
+  <!-- Example arrivals -->
+  <path d="M118 96 V122" stroke="#16323D" stroke-width="1.5"/>
+  <rect x="68.75" y="60.75" width="98.5" height="34.5" rx="17.25" fill="#ffffff" stroke="#1D9E75" stroke-width="2"/>
+  <circle cx="88" cy="78" r="10" fill="#1D9E75"/>
+  <path d="M83 78.2 L86.6 81.8 L93.2 74.6" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="84.5" class="mb-ontime-time">08:55</text>
+  <circle cx="118" cy="128" r="6" fill="#16323D" stroke="#ffffff" stroke-width="2"/>
+
+  <path d="M259 96 V122" stroke="#16323D" stroke-width="1.5"/>
+  <rect x="209.75" y="60.75" width="98.5" height="34.5" rx="17.25" fill="#ffffff" stroke="#1D9E75" stroke-width="2"/>
+  <circle cx="229" cy="78" r="10" fill="#1D9E75"/>
+  <path d="M224 78.2 L227.6 81.8 L234.2 74.6" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="246" y="84.5" class="mb-ontime-time">09:10</text>
+  <circle cx="259" cy="128" r="6" fill="#16323D" stroke="#ffffff" stroke-width="2"/>
+
+  <path d="M400 96 V122" stroke="#16323D" stroke-width="1.5"/>
+  <rect x="350.75" y="60.75" width="98.5" height="34.5" rx="17.25" fill="#ffffff" stroke="#E24B4A" stroke-width="2"/>
+  <circle cx="370" cy="78" r="10" fill="#E24B4A"/>
+  <path d="M370 72.5 V79.5" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="370" cy="83.6" r="1.6" fill="#ffffff"/>
+  <text x="387" y="84.5" class="mb-ontime-time">09:25</text>
+  <circle cx="400" cy="128" r="6" fill="#16323D" stroke="#ffffff" stroke-width="2"/>
+</svg>

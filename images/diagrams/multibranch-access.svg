@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-labelledby="mb-access-t mb-access-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+  <title id="mb-access-t">What one person sees across three branches</title>
+  <desc id="mb-access-d">Example. One person is connected to three branches, and each branch shows its own regulator. Branch A, regulated by CQC: their role there is Owner, which includes finance, so they see care, workforce and money figures. Branch B, regulated by CIW: their role there is HR, with no finance access, so they see care and workforce figures while money is locked. Branch C, regulated by the Care Inspectorate, is drawn faintly with a dashed outline: an invitation has been sent but not accepted, so the branch is not visible until the invitation is accepted.</desc>
+
+  <!-- Example tag -->
+  <rect x="6" y="8" width="90" height="28" rx="14" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="51" y="28" text-anchor="middle" font-size="17" font-weight="600" fill="#4b5563">Example</text>
+
+  <!-- Connectors -->
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <path d="M84,210 H130" stroke="#24485A"/>
+    <path d="M108,210 V82 Q108,70 120,70 H130" stroke="#24485A"/>
+    <path d="M108,210 V338 Q108,350 120,350 H130" stroke="#9ca3af" stroke-dasharray="5 5"/>
+  </g>
+
+  <!-- Person -->
+  <circle cx="52" cy="210" r="32" fill="#16323D"/>
+  <circle cx="52" cy="199" r="10" fill="#ffffff"/>
+  <path d="M33,229 C33,218 42,213 52,213 C62,213 71,218 71,229 Z" fill="#ffffff"/>
+  <text x="52" y="270" text-anchor="middle" font-size="17" font-weight="600" fill="#16323D">One person</text>
+
+  <!-- Branch A: Owner, CQC -->
+  <g>
+    <rect x="130" y="8" width="386" height="124" rx="12" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+    <text x="148" y="43" font-size="19" font-weight="700" fill="#16323D">Branch A</text>
+    <rect x="438" y="22" width="62" height="28" rx="14" fill="#f6f1e7"/>
+    <text x="469" y="42" text-anchor="middle" font-size="17" font-weight="600" fill="#24485A">CQC</text>
+    <text x="148" y="76" font-size="17" fill="#4b5563">Role: <tspan font-weight="600" fill="#16323D">Owner</tspan>, includes finance</text>
+
+    <g font-size="17" font-weight="600" fill="#16323D">
+      <rect x="148" y="88" width="84" height="30" rx="15" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+      <path d="M161,103 l4,4.5 l8,-9" fill="none" stroke="#16323D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="181" y="109">Care</text>
+
+      <rect x="242" y="88" width="131" height="30" rx="15" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+      <path d="M255,103 l4,4.5 l8,-9" fill="none" stroke="#16323D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="275" y="109">Workforce</text>
+
+      <rect x="383" y="88" width="100" height="30" rx="15" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+      <path d="M396,103 l4,4.5 l8,-9" fill="none" stroke="#16323D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="416" y="109">Money</text>
+    </g>
+  </g>
+
+  <!-- Branch B: HR, CIW, money hidden -->
+  <g>
+    <rect x="130" y="148" width="386" height="124" rx="12" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+    <text x="148" y="183" font-size="19" font-weight="700" fill="#16323D">Branch B</text>
+    <rect x="442" y="162" width="58" height="28" rx="14" fill="#f6f1e7"/>
+    <text x="471" y="182" text-anchor="middle" font-size="17" font-weight="600" fill="#24485A">CIW</text>
+    <text x="148" y="216" font-size="17" fill="#4b5563">Role: <tspan font-weight="600" fill="#16323D">HR</tspan>, no finance access</text>
+
+    <g font-size="17" font-weight="600" fill="#16323D">
+      <rect x="148" y="228" width="84" height="30" rx="15" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+      <path d="M161,243 l4,4.5 l8,-9" fill="none" stroke="#16323D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="181" y="249">Care</text>
+
+      <rect x="242" y="228" width="131" height="30" rx="15" fill="#ffffff" stroke="#24485A" stroke-width="1.5"/>
+      <path d="M255,243 l4,4.5 l8,-9" fill="none" stroke="#16323D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="275" y="249">Workforce</text>
+
+      <!-- Money: locked -->
+      <rect x="383" y="228" width="100" height="30" rx="15" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+      <path d="M398,241 v-3 a4,4 0 0 1 8,0 v3" fill="none" stroke="#6b7280" stroke-width="2"/>
+      <rect x="396" y="241" width="12" height="10" rx="2" fill="#6b7280"/>
+      <text x="416" y="249" fill="#6b7280">Money</text>
+    </g>
+  </g>
+
+  <!-- Branch C: invitation not accepted, Care Inspectorate -->
+  <g>
+    <rect x="130" y="288" width="386" height="124" rx="12" fill="#ffffff" fill-opacity="0.55" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="148" y="323" font-size="19" font-weight="700" fill="#6b7280">Branch C</text>
+    <rect x="328" y="302" width="172" height="28" rx="14" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="414" y="322" text-anchor="middle" font-size="17" font-weight="600" fill="#6b7280">Care Inspectorate</text>
+    <text x="148" y="356" font-size="17" fill="#6b7280">Invitation sent, not accepted</text>
+
+    <g fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round">
+      <path d="M148,383 Q158,374 168,383 Q158,392 148,383 Z"/>
+      <circle cx="158" cy="383" r="3"/>
+      <path d="M150,392 L166,374" stroke-width="2"/>
+    </g>
+    <text x="176" y="389" font-size="17" font-weight="600" fill="#4b5563">Not visible until accepted</text>
+  </g>
+</svg>
