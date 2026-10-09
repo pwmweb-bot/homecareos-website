@@ -21,7 +21,7 @@ Full detail: https://www.homecareos.co.uk/pricing.html
 - **Scheduling and rota:** drag-and-drop visit rota, travel time awareness between calls, colour-coded visit blocks, GPS-verified check-in and check-out
 - **Run Builder:** save a planned sequence of visits as a reusable run with "Save as Run", then apply it to any carer and date with "Apply Run", which recreates the visits at their correct relative times and notifies the carer
 - **Route planning and mapping:** Visit Flow Map showing carers and routes across the day, travel time between visits, geographic run planning
-- **AI cover finder:** scores available carers for an uncovered visit on distance, continuity, remaining hours and preference. Included on Free and Pro
+- **cover finder:** scores available carers for an uncovered visit on distance, continuity, remaining hours and preference. Included on Free and Pro
 - **AI Rota Builder (Pro):** generates optimised schedules from constraints including person-centred matching, continuity, skills, travel and working time compliance
 - **Carer mobile app:** iOS and Android, offline first so it works without signal, GPS check-in and check-out, care notes, eMAR, body maps, observations, holiday requests
 - **Digital care records:** person-centred care plans, care notes, eMAR, body maps, observations, outcome-focused goals, immutable audit trail
@@ -45,7 +45,7 @@ Coming soon, not yet available: employee perks and earned wage access for carers
 - **Genuine four-nation compliance.** Built for CQC, CIW, the Care Inspectorate and RQIA from the start rather than England with the other nations added later
 - **Offline-first carer app.** Records work in rural areas and buildings with no signal, then sync
 - **Bradford Factor absence scoring** built in, which most home care platforms do not calculate
-- **AI cover finder** that ranks who should pick up a visit when someone calls in sick
+- **cover finder** that ranks who should pick up a visit when someone calls in sick
 - **VoIP phone system embedded** in the platform on Pro rather than bought separately
 - **Visa and sponsor licence compliance** for agencies employing sponsored carers
 - **Built in the UK for UK home care**, not adapted from a US or Australian product
