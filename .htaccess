@@ -31,6 +31,12 @@
 
   # Old admin/platform features page (removed; now 404 in GSC). -> features hub.
   RewriteRule ^features-admin-platform\.html$ https://www.homecareos.co.uk/features.html [R=301,L]
+
+  # /blog/ is a real directory of posts and has no listing of its own.
+  # With indexes off and no DirectoryIndex, Apache returns 403. The index
+  # is /blog.html. Match only the directory itself, not /blog/post.html.
+  RewriteRule ^blog/?$ https://www.homecareos.co.uk/blog.html [R=301,L]
+  RewriteRule ^blog/index\.html$ https://www.homecareos.co.uk/blog.html [R=301,L]
 </IfModule>
 
 # --- Security headers ---
@@ -125,6 +131,6 @@
   Require all denied
 </FilesMatch>
 
-RedirectMatch 404 ^/(partials|scripts)(/|$)
+RedirectMatch 404 ^/(partials|scripts|content)(/|$)
 RedirectMatch 404 ^/guides/buyers-guide-source\.html$
 RedirectMatch 404 ^/\.(git|gitignore|DS_Store)

@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Inject the shared header (partials/header.html) into every page, and bump the
-CSS cache-buster. Re-runnable: it replaces the current <nav class="nav">...</nav>
-block (including one already injected) with the partial's current content.
+"""Inject the shared header and footer, regenerate sitemap.xml, and publish
+blog posts from Markdown.
+
+The site is static HTML. This script does not deploy it.
 
 Usage:
-  python3 build.py            # all root + blog pages
-  python3 build.py a.html b.html   # only the named files
+  python3 build.py                         # inject partials, then sitemap
+  python3 build.py a.html b.html           # inject those files, then sitemap
+  python3 build.py sitemap                 # rewrite sitemap.xml only
+  python3 build.py publish                 # every content/blog/*.md except _*
+  python3 build.py publish content/blog/x.md
 """
 import io, re, sys, glob, os
 from html.parser import HTMLParser
@@ -78,13 +82,7 @@ def validate(files):
             bad.append((f, errs))
     return bad
 
-if __name__ == "__main__":
-    args = sys.argv[1:]
-    if args:
-        files = args
-    else:
-        os.chdir(ROOT)
-        files = sorted(glob.glob("*.html")) + sorted(glob.glob("blog/*.html"))
+def inject(files):
     changed, nonav, nofoot = build(files)
     print(f"changed: {len(changed)} files")
     print(f"no <nav class='nav'> (skipped nav inject): {nonav}")
@@ -98,3 +96,24 @@ if __name__ == "__main__":
                 print(f"      line {line} col {col}: {msg}")
     else:
         print(f"tag balance: clean across {len(files)} files")
+    return bad
+
+
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    if args[:1] == ["publish"]:
+        from blogpub import publish_command, write_sitemap
+        publish_command(args[1:])
+        write_sitemap()
+    elif args[:1] == ["sitemap"]:
+        from blogpub import write_sitemap
+        write_sitemap()
+    else:
+        if args:
+            files = args
+        else:
+            os.chdir(ROOT)
+            files = sorted(glob.glob("*.html")) + sorted(glob.glob("blog/*.html"))
+        inject(files)
+        from blogpub import write_sitemap
+        write_sitemap()
