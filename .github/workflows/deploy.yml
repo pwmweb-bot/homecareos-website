@@ -1,0 +1,59 @@
+name: Deploy to 20i
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-20i
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy homecareos.co.uk
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 39355 ssh.lhr.stackcp.com >> ~/.ssh/known_hosts 2>/dev/null
+
+      # Uploads changed files only. No --delete, so nothing on the server
+      # that isn't in the repo gets removed.
+      #
+      # Kept because pages request them at runtime:
+      #   js/            book-demo.js and reveal.js
+      #   guides/*.pdf   /guides/uk-home-care-software-buyers-guide.pdf
+      #   account/       /account/delete.html (linked from the privacy page)
+      #   .htaccess, cookie-consent.js, fonts, images, lottie, video, llms.txt
+      #
+      # Left off public_html (source, tooling, or unlinked prototypes):
+      #   partials/      injected by build.py; .htaccess already 404s it
+      #   guides/buyers-guide-source.html   print source; .htaccess 404s it
+      #   *.py *.sh *.md build scripts and internal docs
+      #   experience.html, carer-day-*.html   noindex prototypes, not linked
+      #   features-v2.html, onboard.html      drafts; .htaccess 301s them
+      - name: Upload site with rsync
+        run: |
+          rsync -rltvz --checksum \
+            --exclude '.git/' --exclude '.github/' --exclude '.claude/' \
+            --exclude 'audits/' --exclude 'content/' --exclude 'scripts/' \
+            --exclude 'build.py' --exclude 'blogpub.py' --exclude 'README.md' \
+            --exclude '.DS_Store' --exclude '.gitignore' \
+            --exclude 'partials/' \
+            --exclude 'guides/buyers-guide-source.html' \
+            --exclude '*.py' --exclude '*.sh' --exclude '*.md' \
+            --exclude 'experience.html' \
+            --exclude 'carer-day-animation.html' \
+            --exclude 'carer-day-scroll.html' \
+            --exclude 'features-v2.html' \
+            --exclude 'onboard.html' \
+            -e "ssh -i ~/.ssh/deploy_key -p 39355 -o StrictHostKeyChecking=yes" \
+            ./ homecareos.co.uk@ssh.lhr.stackcp.com:public_html/
