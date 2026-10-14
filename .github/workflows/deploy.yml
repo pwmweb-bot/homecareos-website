@@ -21,9 +21,22 @@ jobs:
           SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p 39355 ssh.lhr.stackcp.com >> ~/.ssh/known_hosts 2>/dev/null
+
+      # ssh-keyscan to port 39355 exits 1 on GitHub runners, and the old step
+      # hid that error. accept-new stores the host key on first connect.
+      # This step fails in the open so the log shows the runner IP, whether
+      # port 39355 answers, and the SSH transcript.
+      - name: Preflight SSH to 20i
+        run: |
+          echo "Runner public IP: $(curl -4 -fsS --max-time 10 https://api.ipify.org || curl -4 -fsS --max-time 10 https://ifconfig.me || echo unavailable)"
+          nc -vz -w 10 ssh.lhr.stackcp.com 39355
+          ssh -v -o BatchMode=yes -o ConnectTimeout=10 -o IdentitiesOnly=yes \
+            -i ~/.ssh/deploy_key -p 39355 \
+            -o StrictHostKeyChecking=accept-new \
+            homecareos.co.uk@ssh.lhr.stackcp.com 'echo ok'
 
       # Uploads changed files only. No --delete, so nothing on the server
       # that isn't in the repo gets removed.
@@ -55,5 +68,5 @@ jobs:
             --exclude 'carer-day-scroll.html' \
             --exclude 'features-v2.html' \
             --exclude 'onboard.html' \
-            -e "ssh -i ~/.ssh/deploy_key -p 39355 -o StrictHostKeyChecking=yes" \
+            -e "ssh -i ~/.ssh/deploy_key -p 39355 -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new" \
             ./ homecareos.co.uk@ssh.lhr.stackcp.com:public_html/
