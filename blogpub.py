@@ -17,36 +17,12 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://www.homecareos.co.uk"
 CONTENT_DIR = os.path.join(ROOT, "content", "blog")
 
-GTAG = """  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'wait_for_update': 500
-    });
-  </script>
-  <script>
-    gtag('js', new Date());
-    var __gtmLoaded = false;
-    function __loadGTM() {
-      if (__gtmLoaded) return;
-      __gtmLoaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
-      s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
-      document.head.appendChild(s);
-    }
-    ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
-      window.addEventListener(e, __loadGTM, { once: true, passive: true });
-    });
-    setTimeout(__loadGTM, 5000);
-  </script>
-  <script src="/cookie-consent.js?v=20260719" defer></script>
-"""
+def _partial(name):
+    with open(os.path.join(ROOT, "partials", name), encoding="utf-8") as handle:
+        return handle.read().strip("\n")
+
+
+GTAG = _partial("gtag.html")
 
 NAV_JS = """  <script>
     const nav = document.querySelector('.nav');
@@ -535,9 +511,10 @@ def render_post(meta, body_html, markdown):
             <h2>{esc(cta_title)}</h2>
             <p>{esc(cta_text)}</p>
             <div class="cta-actions">
-              <a href="#" onclick="return bookDemo(event)" class="btn btn-primary btn-lg">Book a demo</a>
-              <a href="{esc_attr(cta_href)}" class="btn btn-ghost">{esc(cta_label)}</a>
+              <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
+              <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
             </div>
+            <p style="margin:16px 0 0"><a href="{esc_attr(cta_href)}" style="color:inherit;text-decoration:underline">{esc(cta_label)}</a></p>
           </div>
         </section>
       </div>
