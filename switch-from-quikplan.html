@@ -94,7 +94,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.homecareos.co.uk/"},{"@type":"ListItem","position":2,"name":"Migration","item":"https://www.homecareos.co.uk/migration.html"},{"@type":"ListItem","position":3,"name":"Switching from QuikPlan","item":"https://www.homecareos.co.uk/switch-from-quikplan.html"}]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does it take to move from QuikPlan?","acceptedAnswer":{"@type":"Answer","text":"Seven days. From the day we receive your exports, your live carers, service users, care plans and rota are loaded, checked with you and ready to work from within 7 days. Historic data, if you want it, follows on its own timetable and never holds up the switch."}},{"@type":"Question","name":"Do I have to do the migration myself?","acceptedAnswer":{"@type":"Answer","text":"No. Today the homecareOS team runs the migration for you. You send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you."}},{"@type":"Question","name":"What moves across from my current system?","acceptedAnswer":{"@type":"Answer","text":"Your current carers, current service users, their care plans and the running rota come across free. The import also covers visits, background checks such as DBS, training records, and worker registrations for SCW, SSSC and NISCC, from CSV. Care notes and medication (MAR) history are not imported. They stay in your previous provider's export."}},{"@type":"Question","name":"Is there a setup fee or a contract?","acceptedAnswer":{"@type":"Answer","text":"There is no setup fee, and the software has no annual contract minimum. Bringing your live data across is free. The one thing we charge for is historic data, such as past service users, staff who have left and old visits. You get that quote before any work starts."}},{"@type":"Question","name":"What if the import is not right?","acceptedAnswer":{"@type":"Answer","text":"Every row created by an import is stamped with that import, and the import can be undone in one step. A care plan your team has already started editing is left in place rather than thrown away. The record of what was attempted is kept, so a second attempt learns from the first."}},{"@type":"Question","name":"Can I talk it through before I give notice?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send a sample export and we will tell you what will come across cleanly and what will need attention. There is no obligation, and no pressure to give notice on anything first."}},{"@type":"Question","name":"What should I ask my current provider for?","acceptedAnswer":{"@type":"Answer","text":"Ask, in writing and early, for a full CSV export of clients, staff, the rota or visit history, care plans, training records and background checks. Under UK GDPR you have a right to personal data you have provided, in a portable format. Export requests are where notice periods quietly get used up."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does it take to move from QuikPlan?","acceptedAnswer":{"@type":"Answer","text":"Seven days. From the day we receive your exports, your live carers, service users, care plans and rota are loaded, checked with you and ready to work from within 7 days. Historic data, if you want it, follows on its own timetable and never holds up the switch."}},{"@type":"Question","name":"Do I have to do the migration myself?","acceptedAnswer":{"@type":"Answer","text":"No. Today the homecareOS team runs the migration for you. We agree a written migration plan with you first, then you send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you."}},{"@type":"Question","name":"What moves across from my current system?","acceptedAnswer":{"@type":"Answer","text":"Your current carers, current service users, their care plans and the running rota come across free. The import also covers visits, background checks such as DBS, training records, and worker registrations for SCW, SSSC and NISCC, from CSV. Care notes and medication (MAR) history are not imported. They stay in your previous provider's export."}},{"@type":"Question","name":"Is there a setup fee or a contract?","acceptedAnswer":{"@type":"Answer","text":"There is no setup fee, and the software has no annual contract minimum. Bringing your live data across is free. The one thing we charge for is historic data, such as past service users, staff who have left and old visits. You get that quote before any work starts."}},{"@type":"Question","name":"What if the import is not right?","acceptedAnswer":{"@type":"Answer","text":"Every row created by an import is stamped with that import, and the import can be undone in one step. A care plan your team has already started editing is left in place rather than thrown away. The record of what was attempted is kept, so a second attempt learns from the first."}},{"@type":"Question","name":"Can I talk it through before I give notice?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send a sample export and we will tell you what will come across cleanly and what will need attention. There is no obligation, and no pressure to give notice on anything first."}},{"@type":"Question","name":"What should I ask my current provider for?","acceptedAnswer":{"@type":"Answer","text":"Ask, in writing and early, for a full CSV export of clients, staff, the rota or visit history, care plans, training records and background checks. Under UK GDPR you have a right to personal data you have provided, in a portable format. Export requests are where notice periods quietly get used up."}}]}
   </script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 <!-- hcos:gtag -->
@@ -276,33 +276,40 @@
           <li>
             <strong class="step-num">1</strong>
             <div>
+              <h3>Agree a written plan</h3>
+              <p>Before any data moves, we write a migration plan and agree it with you. The seven days start afterwards, on the day your exports reach us.</p>
+            </div>
+          </li>
+          <li>
+            <strong class="step-num">2</strong>
+            <div>
               <h3>You send the exports</h3>
               <p>CSV is the format nearly every home care platform can produce. The seven days start when those files reach us, not when you first start thinking about it. Ask your current provider early, in writing.</p>
             </div>
           </li>
           <li>
-            <strong class="step-num">2</strong>
+            <strong class="step-num">3</strong>
             <div>
               <h3>We map the fields</h3>
               <p>The homecareOS team runs the migration. We map your columns onto our fields. Names arrive as "Smith, Jane" as often as "Jane Smith", and dates arrive in more than one format. That mapping is our job.</p>
             </div>
           </li>
           <li>
-            <strong class="step-num">3</strong>
+            <strong class="step-num">4</strong>
             <div>
               <h3>You check a preview</h3>
               <p>You look at a preview of exactly what will be created before anything is committed. Nothing goes live on a guess.</p>
             </div>
           </li>
           <li>
-            <strong class="step-num">4</strong>
+            <strong class="step-num">5</strong>
             <div>
               <h3>We commit it, and it can be undone</h3>
               <p>Each row is stamped with the import that created it. If something is not right, the whole import is reversed in one step. A care plan your team has already started editing is left in place, and the undo tells you which.</p>
             </div>
           </li>
           <li>
-            <strong class="step-num">5</strong>
+            <strong class="step-num">6</strong>
             <div>
               <h3>You are ready to work from</h3>
               <p>Live data is loaded, checked with you and ready within 7 days. That is your current carers, current service users, their care plans and the running rota: enough to open homecareOS on a Monday morning and carry on. Historic data, if you want it, follows on its own timetable and does not hold up the switch.</p>
@@ -317,18 +324,22 @@
         <div class="section-header" data-reveal>
           <span class="label">How we minimise risk</span>
           <h2 id="risk-heading">You are not handed an importer and wished well</h2>
-          <p>Today a real person does this with you. Self-service migration is on the roadmap. It is not how it works today.</p>
+          <p>Today a real person does this with you. The first thing you agree is a written migration plan. Self-service migration is on the roadmap. It is not how it works today.</p>
         </div>
         <div class="card-grid">
           <article class="card" data-reveal>
+            <h3><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:8px;color:var(--accent)"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>A written plan, agreed first</h3>
+            <p>We agree a written migration plan with you before any data moves, so the shape of the switch is settled before the work starts.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="100">
             <h3><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:8px;color:var(--accent)"><path d="M5 13l4 4L19 7"/></svg>We run the migration</h3>
             <p>You send the exports, we map the fields, you check the preview, and we commit it.</p>
           </article>
-          <article class="card" data-reveal data-reveal-delay="100">
+          <article class="card" data-reveal data-reveal-delay="200">
             <h3><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:8px;color:var(--accent)"><path d="M5 13l4 4L19 7"/></svg>Live data moves free</h3>
             <p>Current carers, current service users, their care plans and the running rota. There is no charge for that, and there is no setup fee.</p>
           </article>
-          <article class="card" data-reveal data-reveal-delay="200">
+          <article class="card" data-reveal data-reveal-delay="300">
             <h3><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:8px;color:var(--accent)"><path d="M5 13l4 4L19 7"/></svg>Checked before you go live</h3>
             <p>You see a preview before anything is committed, then we check the load with you. It is ready to work from within those 7 days.</p>
           </article>
@@ -416,7 +427,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="qk-faq-2" role="region">
-              <div class="faq-answer-inner">No. Today the homecareOS team runs the migration for you. You send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you.</div>
+              <div class="faq-answer-inner">No. Today the homecareOS team runs the migration for you. We agree a written migration plan with you first, then you send the exports, we map the fields, you check the preview, and we commit it. Self-service migration is on the roadmap, but at the moment a real person does it with you.</div>
             </div>
           </div>
           <div class="faq-item">
