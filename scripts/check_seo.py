@@ -22,6 +22,7 @@ NEW_POSTS = [
     "blog/national-minimum-wage-travel-time-home-care.html",
     "blog/safeguarding-adults-home-care-agencies.html",
     "blog/dbs-check-for-care-workers.html",
+    "blog/duty-of-candour-home-care-agencies.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
