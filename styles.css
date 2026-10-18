@@ -397,6 +397,16 @@ p {
   color: var(--secondary);
 }
 
+.nav-links a.btn-outline {
+  color: var(--primary);
+  background: transparent;
+}
+
+.nav-links a.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .btn-sm {
   padding: 10px 24px;
   font-size: 0.875rem;
@@ -507,8 +517,45 @@ p {
 .nav-phone svg {
   flex-shrink: 0;
 }
+.nav-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8px;
+  gap: 1px;
+}
+.nav-links a.nav-phone,
+.nav-links a.nav-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 1px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--primary);
+  background: none;
+  white-space: nowrap;
+}
+.nav-links a.nav-phone:hover,
+.nav-links a.nav-email:hover {
+  color: var(--accent);
+  background: none;
+}
+.nav-email svg,
+.nav-phone svg {
+  flex-shrink: 0;
+}
 .nav-cta {
   margin-left: 12px;
+}
+.nav-cta-secondary {
+  margin-left: 8px;
+}
+.nav-links a.nav-cta,
+.nav-links a.nav-cta-secondary {
+  gap: 6px;
 }
 
 /* --- Nav Dropdown --- */
@@ -603,7 +650,7 @@ p {
 }
 
 /* --- Mobile Nav --- */
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   /* backdrop-filter on the nav traps position:fixed children inside the nav bounds — remove it on mobile */
   .nav {
     backdrop-filter: none;
@@ -676,14 +723,20 @@ p {
     font-size: 1rem;
   }
 
-  .nav-phone {
-    margin-left: 0;
-    margin-top: 8px;
-    justify-content: center;
+  .nav-contact {
+    align-items: stretch;
+    margin: 12px 0 0;
   }
-  .nav-cta {
+  .nav-links a.nav-phone,
+  .nav-links a.nav-email {
+    justify-content: center;
+    margin-top: 4px;
+    font-size: 1rem;
+  }
+  .nav-cta,
+  .nav-cta-secondary {
     margin-left: 0;
-    margin-top: 16px;
+    margin-top: 12px;
     width: 100%;
     text-align: center;
   }
@@ -1458,6 +1511,38 @@ p {
 
 .footer-bottom a {
   color: var(--gray-400);
+}
+
+.footer-address {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+}
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.footer-contact-link:hover {
+  color: var(--accent);
+}
+.footer-contact-link svg {
+  flex-shrink: 0;
+}
+
+.mobile-cta-bar {
+  display: none;
 }
 
 .footer-bottom a:hover {
@@ -5552,7 +5637,7 @@ h2[data-reveal],
 }
 .nav-mega-footer a { font-weight: 600; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .nav-dropdown-mega .nav-dropdown-menu {
     grid-template-columns: 1fr;
     min-width: 0;
@@ -5562,4 +5647,51 @@ h2[data-reveal],
   .nav-dropdown-mega.nav-dropdown.open .nav-dropdown-menu { max-height: 2000px; }
   .nav-mega-group h4 { padding: 12px 16px 2px; margin: 0; }
   .nav-mega-footer { border-top: none; margin-top: 4px; padding-top: 4px; }
+}
+
+/* Sticky call / book bar. Shown once the header CTA collapses into the menu. */
+@media (max-width: 1240px) {
+  body {
+    padding-bottom: 72px;
+  }
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    background: var(--primary);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+  }
+  .mobile-cta-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 12px 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .mobile-cta-bar-call {
+    color: var(--white);
+    background: transparent;
+  }
+  .mobile-cta-bar-book {
+    color: var(--secondary);
+    background: var(--accent);
+  }
+  .mobile-cta-bar a:hover {
+    filter: brightness(1.05);
+  }
+  .lp-sticky-cta {
+    display: none !important;
+  }
+}
+@media print {
+  .mobile-cta-bar { display: none !important; }
+  body { padding-bottom: 0 !important; }
 }

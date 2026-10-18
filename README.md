@@ -8,7 +8,7 @@ Copy is British English.
 
 `python3 build.py` does two things:
 
-1. Replaces the first `<nav class="nav">` and `<footer class="footer">` in each HTML page with `partials/header.html` and `partials/footer.html`, and cache-busts `styles.css`.
+1. Replaces the first `<nav class="nav">` and `<footer class="footer">` in each HTML page with `partials/header.html` and `partials/footer.html`, injects `partials/gtag.html` (Consent Mode defaults, GA4 and Google Ads), and cache-busts `styles.css`.
 2. Rewrites `sitemap.xml`.
 
 It does not upload or deploy anything. Publishing to the live site is a separate manual step on the host. Do not run IndexNow until that upload has happened (`scripts/README-indexnow.md`).

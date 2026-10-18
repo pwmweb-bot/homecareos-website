@@ -42,37 +42,49 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/person-phone-laptop.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20260909insp"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'wait_for_update': 500
-    });
-  </script>
-  <script>
-    gtag('js', new Date());
-    var __gtmLoaded = false;
-    function __loadGTM() {
-      if (__gtmLoaded) return;
-      __gtmLoaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
-      s.onload = function() { gtag('config', 'G-6GD4NJK9LZ'); };
-      document.head.appendChild(s);
+<!-- hcos:gtag -->
+<script>
+  // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<script>
+  // Existing GA4 tag, plus Google Ads AW-18012658601 on the same gtag.js load.
+  gtag('js', new Date());
+  gtag('config', 'G-6GD4NJK9LZ');
+  gtag('config', 'AW-18012658601', {
+    'linker': {
+      'domains': ['homecareos.co.uk', 'www.homecareos.co.uk', 'app.homecareos.co.uk']
     }
-    ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
-      window.addEventListener(e, __loadGTM, { once: true, passive: true });
-    });
-    setTimeout(__loadGTM, 5000);
-  </script>
-  <script src="/cookie-consent.js?v=20260719" defer></script>
+  });
+  var __gtmLoaded = false;
+  function __loadGTM() {
+    if (__gtmLoaded) return;
+    __gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6GD4NJK9LZ';
+    document.head.appendChild(s);
+  }
+  ['mousemove','scroll','touchstart','keydown','click'].forEach(function(e) {
+    window.addEventListener(e, __loadGTM, { once: true, passive: true });
+  });
+  setTimeout(__loadGTM, 5000);
+</script>
+<script src="/cookie-consent.js?v=20261016" defer></script>
+<script src="/js/ads.js?v=20261016" defer></script>
+<!-- /hcos:gtag -->
 
   <!-- Article schema -->
   <script type="application/ld+json">
@@ -267,8 +279,12 @@
         </div>
         <a href="/pricing.html" role="menuitem">Pricing</a>
         <a href="/contact.html" role="menuitem">Contact</a>
-        <a href="tel:01905674704" class="nav-phone" role="menuitem" aria-label="Call us"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 01905 674704</a>
-        <a href="/start.html" class="btn btn-primary btn-sm nav-cta" role="menuitem">Get started for free</a>
+        <div class="nav-contact">
+          <a href="tel:01905674704" class="nav-phone" role="menuitem" aria-label="Call 01905 674704"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>01905 674704</span></a>
+          <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
+        </div>
+        <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -513,7 +529,8 @@
             <h2>See how homecareOS compares, on your own data</h2>
             <p>The fastest way to weigh homecareOS against your current platform is to use it. Set it up in about 10 minutes with your own rota, no demo call and no credit card. There's a free tier for agencies with up to 5 carers (no time limit), then transparent per-carer pricing as you grow, with the office team unmetered.</p>
             <div class="cta-actions">
-              <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">Get started for free</a>
+              <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started for free</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
             </div>
           </div>
@@ -534,7 +551,11 @@
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
           <p>The holistic operating system for UK home care agencies. Scheduling, care plans, compliance and more, all in one platform.</p>
-          <p style="font-size:0.85rem;color:var(--gray-400);margin-top:12px;line-height:1.6">F23, 18 Foregate Street, Worcester, WR1 1DN<br><a href="tel:01905674704" style="color:var(--gray-400)">01905 674704</a> · <a href="mailto:hello@homecareos.co.uk" style="color:var(--gray-400)">hello@homecareos.co.uk</a></p>
+          <p class="footer-address">F23, 18 Foregate Street, Worcester, WR1 1DN</p>
+          <div class="footer-contact">
+            <a href="tel:01905674704" class="footer-contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>01905 674704</span></a>
+            <a href="mailto:hello@homecareos.co.uk" class="footer-contact-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
+          </div>
           <div class="footer-social">
             <a href="https://www.linkedin.com/in/pwmmba/" target="_blank" rel="noopener noreferrer" aria-label="Philip Martin on LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77A1.75 1.75 0 000 1.73v20.54A1.75 1.75 0 001.77 24h20.46A1.75 1.75 0 0024 22.27V1.73A1.75 1.75 0 0022.23 0z"/></svg></a>
           </div>
@@ -579,7 +600,8 @@
             <li><a href="https://app.homecareos.co.uk/family/login">Family login</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="tel:01905674704">01905 674704</a></li>
-            <li><a href="#" onclick="return bookDemo(event)">Book a Demo</a></li>
+            <li><a href="mailto:hello@homecareos.co.uk">hello@homecareos.co.uk</a></li>
+            <li><a href="/booking.html">Book a 15-minute demo</a></li>
             <li><a href="/security.html">Security</a></li>
             <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/terms.html">Terms &amp; Conditions</a></li>
@@ -592,6 +614,16 @@
           <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="#" class="manage-cookies">Manage cookies</a>
         </div>
       </div>
+    </div>
+    <div class="mobile-cta-bar" role="region" aria-label="Call or book a demo">
+      <a href="tel:01905674704" class="mobile-cta-bar-call">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>Call</span>
+      </a>
+      <a href="/booking.html" class="mobile-cta-bar-book">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Book demo</span>
+      </a>
     </div>
   </footer>
 
