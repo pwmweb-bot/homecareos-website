@@ -2,7 +2,9 @@
 """Inject the shared header and footer, regenerate sitemap.xml, and publish
 blog posts from Markdown.
 
-The site is static HTML. This script does not deploy it.
+The site is static HTML. This script does not deploy it. The Google tag
+(partials/gtag.html) is injected with the header and footer, so page files
+are not edited by hand when the tag changes.
 
 Usage:
   python3 build.py                         # inject partials, then sitemap
@@ -15,13 +17,57 @@ import io, re, sys, glob, os
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CSS_VERSION = "20260909insp"
+CSS_VERSION = "20261016cta"
 
 HEADER = io.open(os.path.join(ROOT, "partials/header.html"), encoding="utf-8").read().rstrip("\n")
 FOOTER = io.open(os.path.join(ROOT, "partials/footer.html"), encoding="utf-8").read().rstrip("\n")
+GTAG = io.open(os.path.join(ROOT, "partials/gtag.html"), encoding="utf-8").read().strip("\n")
 NAV_RE = re.compile(r'<nav class="nav"[^>]*>.*?</nav>', re.S)
 FOOTER_RE = re.compile(r'<footer class="footer"[^>]*>.*?</footer>', re.S)
 CSS_RE = re.compile(r'(styles\.css\?v=)[^"\']*')
+GTAG_MARKER_RE = re.compile(r"[ \t]*<!-- hcos:gtag -->.*?<!-- /hcos:gtag -->\n?", re.S)
+COOKIE_SRC_RE = re.compile(
+    r'<script\s+src="/cookie-consent\.js[^"]*"\s+defer></script>'
+    r'|<script\s+defer\s+src="/cookie-consent\.js[^"]*"></script>'
+)
+
+
+def legacy_gtag_span(html):
+    """Return [start, end) of the pre-partial gtag bootstrap, if present."""
+    idx = 0
+    while True:
+        idx = html.find("window.dataLayer", idx)
+        if idx < 0:
+            return None
+        if "function gtag" not in html[idx:idx + 500]:
+            idx += len("window.dataLayer")
+            continue
+        script_start = html.rfind("<script", 0, idx)
+        if script_start < 0:
+            return None
+        before = html[:script_start].rstrip(" \t")
+        comment = re.search(r"<!-- Google tag \(gtag\.js\)[^>]*-->$", before)
+        start = comment.start() if comment else script_start
+        consent = COOKIE_SRC_RE.search(html, idx)
+        if not consent:
+            return None
+        end = consent.end()
+        if end < len(html) and html[end] == "\n":
+            end += 1
+        return start, end
+
+
+def inject_gtag(html):
+    block = GTAG + "\n"
+    if "<!-- hcos:gtag -->" in html:
+        return GTAG_MARKER_RE.sub(block, html, count=1)
+    span = legacy_gtag_span(html)
+    if span:
+        return html[:span[0]] + block + html[span[1]:]
+    head = re.search(r"</head>", html, re.I)
+    if not head:
+        return html
+    return html[:head.start()] + block + html[head.start():]
 
 def build(files):
     changed, skipped_nonav, skipped_nofoot = [], [], []
@@ -38,6 +84,7 @@ def build(files):
         else:
             skipped_nofoot.append(f)
         s = CSS_RE.sub(r"\g<1>" + CSS_VERSION, s)
+        s = inject_gtag(s)
         if s != orig:
             io.open(path, "w", encoding="utf-8").write(s)
             changed.append(f)
@@ -113,7 +160,11 @@ if __name__ == "__main__":
             files = args
         else:
             os.chdir(ROOT)
-            files = sorted(glob.glob("*.html")) + sorted(glob.glob("blog/*.html"))
+            files = (
+                sorted(glob.glob("*.html"))
+                + sorted(glob.glob("blog/*.html"))
+                + sorted(glob.glob("account/*.html"))
+            )
         inject(files)
         from blogpub import write_sitemap
         write_sitemap()

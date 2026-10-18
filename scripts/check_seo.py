@@ -15,15 +15,21 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
+    "blog/care-certificate-home-care-agencies.html",
     "blog/best-domiciliary-care-software-uk.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
+    "blog/national-minimum-wage-travel-time-home-care.html",
     "blog/safeguarding-adults-home-care-agencies.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
     "blog/home-care-software-uk-guide.html":
         "Home Care Software UK: Domiciliary Buyer's Guide | homecareOS",
+}
+# Ads landing pages. Google may crawl them, and they must stay out of the index.
+NOINDEX_ALLOW = {
+    "switch-from-quikplan.html",
 }
 
 
@@ -90,9 +96,14 @@ def main():
         parser.feed(open(path, encoding="utf-8", errors="ignore").read())
         title = parser.title.strip()
         desc = html.unescape(parser.description).strip()
-        if "noindex" in parser.robots.lower():
-            if title and len(title) > 60 or desc and len(desc) > 160:
-                print(f"note: noindex, left unchanged {rel} title {len(title)} description {len(desc)}")
+        if rel in NOINDEX_ALLOW or "noindex" in parser.robots.lower():
+            if rel in NOINDEX_ALLOW and "noindex" not in parser.robots.lower():
+                errors.append(f"{rel} is an ads landing page and must be noindex")
+            elif title and len(title) > 60 or desc and len(desc) > 160:
+                if rel in NOINDEX_ALLOW:
+                    pass
+                else:
+                    print(f"note: noindex, left unchanged {rel} title {len(title)} description {len(desc)}")
             continue
         if title and len(title) > 60:
             if KEEP_OVER_LIMIT.get(rel) == title:
@@ -113,6 +124,9 @@ def main():
     sitemap = open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8").read()
     if "testimonials.html" in sitemap:
         errors.append("testimonials.html is still in sitemap.xml")
+    for rel in sorted(NOINDEX_ALLOW):
+        if rel in sitemap or f"/{rel}" in sitemap:
+            errors.append(f"{rel} is noindex and must stay out of sitemap.xml")
     for rel in NEW_POSTS:
         loc = "https://www.homecareos.co.uk/" + rel
         if loc not in sitemap:

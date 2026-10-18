@@ -96,6 +96,7 @@
       '.hcos-cookie-btn-accept:hover{background:#d97706;border-color:#d97706;}' +
       '.hcos-cookie-btn-reject{background:transparent;color:#fff;border-color:rgba(255,255,255,0.4);}' +
       '.hcos-cookie-btn-reject:hover{border-color:#fff;background:rgba(255,255,255,0.08);}' +
+      '@media (max-width:1240px){.hcos-cookie-banner{bottom:56px;}}' +
       '@media (max-width:600px){' +
         '.hcos-cookie-banner{padding:16px 18px;}' +
         '.hcos-cookie-banner-inner{flex-direction:column;align-items:stretch;gap:12px;}' +
@@ -116,8 +117,8 @@
     banner.innerHTML =
       '<div class="hcos-cookie-banner-inner">' +
         '<div class="hcos-cookie-text">' +
-          'We use cookies to understand how you use our site and improve your experience. ' +
-          'You can accept or reject analytics cookies. Essential cookies remain active. ' +
+          'We use cookies to understand how the site is used and to measure whether a Google Ads click led to a demo booking or a contact message. ' +
+          'Analytics and advertising cookies stay off until you accept. Essential cookies stay on. ' +
           '<a href="/privacy.html#cookies">Privacy policy</a>.' +
         '</div>' +
         '<div class="hcos-cookie-buttons">' +
