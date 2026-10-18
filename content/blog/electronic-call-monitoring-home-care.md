@@ -68,7 +68,7 @@ A coordinator, a contracts officer and an inspector are usually asking the same 
 - If the visit was late, short, missed or delivered by a different carer, is the reason on the record?
 - Can the original entry still be read after a correction?
 
-Skills for Care's [state of the adult social care sector and workforce in England, 2025](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/The-state-of-the-adult-social-care-sector-and-workforce-in-England-2025.pdf) reports an estimated 59,000 vacant posts in CQC non-residential services in 2024/25, against 595,000 filled posts, a vacancy rate of 9.9%. Cover will fail some days. The record still has to show what happened, including the visit that did not.
+Skills for Care's [2025/26 summary of domiciliary care services](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/Summary-of-domiciliary-care-services-2026.pdf) reports an estimated 52,000 vacant posts in CQC non-residential services in 2025/26, against 580,000 filled posts, and a vacancy rate of 9.0%. Cover will fail some days. The record still has to show what happened, including the visit that did not.
 
 ## Ways of registering the visit
 
@@ -102,5 +102,5 @@ The price of the system is a separate question. Public list prices, where suppli
 - [Lambeth electronic call monitoring notice](https://www.contractsfinder.service.gov.uk/Notice/f27f3b2e-f403-408f-8db0-e125320e5d96), Contracts Finder.
 - [Regulation 17](https://www.legislation.gov.uk/uksi/2014/2936/regulation/17) and [CQC's guidance on Regulation 17](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-17).
 - [Consent to use technology as part of someone's care](https://www.cqc.org.uk/guidance-providers/all-services/find-out-if-you-need-consent-use-technology-part-someones-care), Care Quality Commission.
-- [The state of the adult social care sector and workforce in England, 2025](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/The-state-of-the-adult-social-care-sector-and-workforce-in-England-2025.pdf), Skills for Care.
+- [Domiciliary care services in the adult social care sector 2025/26](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/Summary-of-domiciliary-care-services-2026.pdf), Skills for Care.
 - [homecareOS carer app](/features-mobile-app.html), for the four clock-in methods and the 150 metre check. That page describes our product.
