@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var CALENDLY_URL = 'https://calendly.com/190align/15min';
+  var CALENDLY_URL = 'https://calendly.com/psychemeta/15min';
   var CSS_URL = 'https://assets.calendly.com/assets/external/widget.css';
   var JS_URL = 'https://assets.calendly.com/assets/external/widget.js';
 
