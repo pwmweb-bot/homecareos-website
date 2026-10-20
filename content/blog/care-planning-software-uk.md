@@ -84,7 +84,7 @@ On homecareOS, [GP Connect is named on the integrations page](/integrations.html
 
 ## How the record works in homecareOS
 
-[Digital care records](/features-care-records.html) in homecareOS are written on the carer's phone and tied to the visit. The feature page says a medication record cannot be edited or deleted once it is saved, for any role. A care note can be corrected only with a written reason, and the original wording, the person who changed it and the time are kept. Risks sit against the matching part of the plan. Goals carry a baseline, a measure and a review date, and progress is recorded at the visit.
+[Digital care records](/features-care-records.html) in homecareOS are written on the carer's phone and tied to the visit. The feature page says a medication record or care note can be corrected only with a written reason, and the original wording, the person who changed it and the time are kept. Risks sit against the matching part of the plan. Goals carry a baseline, a measure and a review date, and progress is recorded at the visit.
 
 That is a description of our product, from that page. It is not a statement that homecareOS is on the NHS assured solutions list. Look the list up. If a supplier tells you they are on it, ask them to show you the entry.
 
