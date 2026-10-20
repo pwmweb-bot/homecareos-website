@@ -24,16 +24,17 @@
   <meta property="og:url" content="https://www.homecareos.co.uk/features-scheduling.html">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
-  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
+  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The new homecareOS rota, a day of visit blocks for a UK home care agency, with carers down the left and visits across">
+  <meta property="og:image:alt" content="The homecareOS rota on a tablet with the cover finder open, ranking the carers free for an unallocated visit">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Care Rota Software for UK Home Care Agencies | homecareOS">
   <meta name="twitter:description" content="Care rota and rostering software for UK home care agencies. Schedule visits, cut travel time and fill cover with AI, compliant across all four nations.">
-  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
+  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
+  <meta name="twitter:image:alt" content="The homecareOS rota on a tablet with the cover finder open, ranking the carers free for an unallocated visit">
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -185,6 +186,7 @@
 </script>
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="/js/inview-video.js?v=20261020" defer></script>
   <style>
     .lottie-cap{margin:16px auto 0;max-width:560px}
     .rota-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:30px 44px;text-align:left;margin:34px auto 0;max-width:800px}
@@ -198,6 +200,19 @@
     .legend-bar{width:16px;height:5px;border-radius:3px;background:#1D9E75;flex:0 0 16px;margin-top:7px}
     .legend-avail{width:14px;height:14px;border:2px dashed #BA7517;border-radius:4px;flex:0 0 14px;margin-top:3px}
     @media (max-width:600px){.rota-legend{grid-template-columns:1fr}.legend-list.cols{grid-template-columns:1fr}}
+  </style>
+  <!-- Cover finder tablet animation -->
+  <style>
+    .rota-video{position:relative;margin:0;border-radius:var(--radius-xl,24px);overflow:hidden;background:linear-gradient(135deg,#16323D 0%,#0f172a 100%);box-shadow:0 24px 64px rgba(15,23,42,.28);line-height:0}
+    .rota-video video,.rota-video img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1600/1040}
+    .rota-video-toggle{position:absolute;right:10px;top:10px;line-height:1;font:inherit;font-size:.75rem;font-weight:600;color:#fff;background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 11px;cursor:pointer}
+    .rota-video-toggle:hover,.rota-video-toggle:focus-visible{background:rgba(15,23,42,.8)}
+    .rota-video-toggle:focus-visible{outline:3px solid var(--accent,#E8A14A);outline-offset:2px}
+    .rota-video-cap{margin-top:10px;font-size:.8125rem;color:var(--gray-500,#6b7280);text-align:center}
+    .rota-video-link{display:inline-block;margin-top:20px;font-weight:600;color:var(--primary,#16323D)}
+    .rota-video-link:hover{color:var(--accent-hover,#CE8A2E)}
+    .feature-hero.rota-cover-hero{grid-template-columns:5fr 7fr;padding:0}
+    @media (max-width:1024px){.feature-hero.rota-cover-hero{grid-template-columns:1fr;gap:32px}}
   </style>
 </head>
 <body>
@@ -356,6 +371,33 @@
           <div class="lottie-stage" style="max-width:760px"><div data-lottie="/lottie/homecareos-rotamarks.json" data-rest="410" style="aspect-ratio:760/250" role="img" aria-label="Five visit blocks in a row, each picking up one mark: two dots for a double-up, an amber warning triangle where a second visit cascades underneath it, a margin square that walks from green through amber to red, a hollow dot for a carer covering the run's regular, and an amber dashed outline where the carer is working outside their usual availability. A run thread runs beneath the whole row."></div></div>
           <p class="lottie-cap" style="margin:18px auto 0">The colour tells you the state of a visit. These tell you the things about it that a colour cannot: that it needs two carers, that it collides with another call, that it is running at a loss, that the person attending is not the usual carer for that run, or that they are working outside the hours they normally give you.</p>
           <p class="lottie-cap" style="margin:14px auto 0">The margin marker is deliberately a square rather than a dot, so it can never be mistaken for a status. It sits at green above twenty-five per cent, amber above ten, and red below that, turning a deeper red once a visit is actually losing money. Most rota software will not tell you that a call is unprofitable while you can still do something about it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover finder, tablet rota animation -->
+    <section class="section" id="cover-finder" aria-labelledby="cover-heading">
+      <div class="container">
+        <div class="feature-hero rota-cover-hero" data-reveal>
+          <div class="feature-hero-content">
+            <span class="label">COVER FINDER</span>
+            <h2 id="cover-heading">Then the Cover Finder Goes to Work</h2>
+            <p>Tap a visit in the unallocated lane and the cover finder opens beside the rota. Everyone free at that time is ranked by continuity with the client, contract hours left and travel time, with a short line on each so you can see why. Anything worth weighing up, such as expired training or an overdue DBS update check, is flagged but never hides a carer. Carers who are already booked or absent are listed underneath, with the clash spelled out.</p>
+            <p style="margin-top:14px">Assign the best fit and the visit drops into their row. An undo message confirms the change, so a wrong tap is one click from being put back.</p>
+          </div>
+          <div class="feature-hero-visual-wrap">
+            <figure class="rota-video">
+              <video data-inview-video muted loop playsinline preload="none" width="1600" height="1040"
+                     poster="images/photos/tablet-rota-poster.jpg"
+                     aria-label="The homecareOS rota on a tablet, with illustrative data. An unallocated 08:30 visit is tapped and the cover finder opens. It ranks the carers free at that time by continuity, contract hours left and travel, shows an expired training warning, and lists the carers already booked or off sick separately. Assign is tapped, the visit drops into the best match's row and a message confirms it, with an undo.">
+                <source src="video/tablet-rota.webm" type="video/webm">
+                <source src="video/tablet-rota.mp4" type="video/mp4">
+                <img src="images/photos/tablet-rota-poster.jpg" width="1600" height="1040" loading="lazy" alt="The homecareOS rota on a tablet, with one unallocated visit waiting for cover">
+              </video>
+              <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
+            </figure>
+            <p class="rota-video-cap">Illustrative data. The office rota runs in the browser on a desktop or tablet.</p>
+          </div>
         </div>
       </div>
     </section>

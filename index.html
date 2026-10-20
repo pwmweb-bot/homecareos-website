@@ -22,10 +22,10 @@
   <meta property="og:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Free for 5 carers, then £10 per carer.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/">
-  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
+  <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The new homecareOS rota, a day of visit blocks for a UK home care agency, with carers down the left and visits across">
+  <meta property="og:image:alt" content="The homecareOS rota on a tablet with the cover finder open, ranking the carers free for an unallocated visit">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="homecareOS">
 
@@ -33,8 +33,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Home Care Software UK | Domiciliary Care Software">
   <meta name="twitter:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Free for 5 carers, then £10 per carer.">
-  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota.jpg">
-  <meta name="twitter:image:alt" content="homecareOS, UK home care management software">
+  <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
+  <meta name="twitter:image:alt" content="The homecareOS rota on a tablet with the cover finder open, ranking the carers free for an unallocated visit">
 
   <!-- Critical above-the-fold CSS (inlined to eliminate render-blocking) -->
   <style>
@@ -406,6 +406,7 @@
 <!-- /hcos:gtag -->
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
+  <script src="/js/inview-video.js?v=20261020" defer></script>
   <!-- Branded page loader (first paint, no JS library needed) -->
   <style>
     #hco-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
@@ -418,6 +419,19 @@
     @keyframes hco-spin{to{transform:rotate(360deg);}}
     @keyframes hco-beat{0%,100%{transform:scale(1);}42%{transform:scale(1.15);}72%{transform:scale(1);}}
     @media (prefers-reduced-motion:reduce){#hco-loader .hco-arc,#hco-loader .hco-heart{animation:none;}}
+  </style>
+  <!-- Cover finder tablet animation -->
+  <style>
+    .rota-video{position:relative;margin:0;border-radius:var(--radius-xl,24px);overflow:hidden;background:linear-gradient(135deg,#16323D 0%,#0f172a 100%);box-shadow:0 24px 64px rgba(15,23,42,.28);line-height:0}
+    .rota-video video,.rota-video img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1600/1040}
+    .rota-video-toggle{position:absolute;right:10px;top:10px;line-height:1;font:inherit;font-size:.75rem;font-weight:600;color:#fff;background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 11px;cursor:pointer}
+    .rota-video-toggle:hover,.rota-video-toggle:focus-visible{background:rgba(15,23,42,.8)}
+    .rota-video-toggle:focus-visible{outline:3px solid var(--accent,#E8A14A);outline-offset:2px}
+    .rota-video-cap{margin-top:10px;font-size:.8125rem;color:var(--gray-500,#6b7280);text-align:center}
+    .rota-video-link{display:inline-block;margin-top:20px;font-weight:600;color:var(--primary,#16323D)}
+    .rota-video-link:hover{color:var(--accent-hover,#CE8A2E)}
+    .feature-hero.rota-cover-hero{grid-template-columns:5fr 7fr;padding:0}
+    @media (max-width:1024px){.feature-hero.rota-cover-hero{grid-template-columns:1fr;gap:32px}}
   </style>
 </head>
 <body>
@@ -764,6 +778,36 @@
             <p>Outcome dashboards, automated reporting, and audit trails for evidence-based commissioning.</p>
             <span class="role-card-link">See how &rarr;</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         COVER FINDER, tablet rota animation
+         ============================================ -->
+    <section class="section" id="cover-finder" aria-labelledby="cover-heading">
+      <div class="container">
+        <div class="feature-hero rota-cover-hero" data-reveal>
+          <div class="feature-hero-content">
+            <span class="label">COVER FINDER</span>
+            <h2 id="cover-heading">Cover a Gap on the Rota in a Few Taps</h2>
+            <p>When a carer is recorded as off sick, their visits move into the unallocated lane at the top of the rota. Tap one and the cover finder ranks everyone who is free at that time by continuity with the client, contract hours left and travel time, and flags anything to weigh up, such as expired training. Carers who are already booked are listed separately, with the clash spelled out.</p>
+            <p style="margin-top:14px">Assign the best fit and the visit drops straight into their row, with an undo if you change your mind.</p>
+            <a class="rota-video-link" href="features-scheduling.html">See scheduling and rota &rarr;</a>
+          </div>
+          <div class="feature-hero-visual-wrap">
+            <figure class="rota-video">
+              <video data-inview-video muted loop playsinline preload="none" width="1600" height="1040"
+                     poster="images/photos/tablet-rota-poster.jpg"
+                     aria-label="The homecareOS rota on a tablet, with illustrative data. An unallocated 08:30 visit is tapped and the cover finder opens. It ranks the carers free at that time by continuity, contract hours left and travel, shows an expired training warning, and lists the carers already booked or off sick separately. Assign is tapped, the visit drops into the best match's row and a message confirms it, with an undo.">
+                <source src="video/tablet-rota.webm" type="video/webm">
+                <source src="video/tablet-rota.mp4" type="video/mp4">
+                <img src="images/photos/tablet-rota-poster.jpg" width="1600" height="1040" loading="lazy" alt="The homecareOS rota on a tablet, with one unallocated visit waiting for cover">
+              </video>
+              <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
+            </figure>
+            <p class="rota-video-cap">Illustrative data. The office rota runs in the browser on a desktop or tablet.</p>
+          </div>
         </div>
       </div>
     </section>
