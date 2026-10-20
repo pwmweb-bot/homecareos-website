@@ -459,7 +459,7 @@ def render_post(meta, body_html, markdown):
   {_json(crumbs)}
   </script>
   {faq_ld}
-  <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
