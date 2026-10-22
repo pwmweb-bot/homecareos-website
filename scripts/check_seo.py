@@ -24,6 +24,8 @@ NEW_POSTS = [
     "blog/dbs-check-for-care-workers.html",
     "blog/duty-of-candour-home-care-agencies.html",
     "blog/cqc-notifications-home-care-agencies.html",
+    "blog/cqc-statement-of-purpose-home-care.html",
+    "blog/medication-management-home-care-nice-ng67.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
