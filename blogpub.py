@@ -203,6 +203,17 @@ def md_to_html(markdown):
         if not stripped:
             i += 1
             continue
+        if stripped == "```html":
+            # Raw HTML block, passed through unchanged, for icon cards and
+            # tables that Markdown cannot express. Close it with ``` on its own line.
+            i += 1
+            raw = []
+            while i < len(lines) and lines[i].strip() != "```":
+                raw.append(lines[i])
+                i += 1
+            i += 1
+            html_parts.append("\n".join(raw))
+            continue
         if stripped.startswith("## "):
             title = stripped[3:].strip()
             html_parts.append(f'<h2 id="{heading_id(title, used_ids)}">{format_inline(title)}</h2>')
@@ -256,7 +267,7 @@ def md_to_html(markdown):
 
 def _block_start(line):
     s = line.strip()
-    return s.startswith(("## ", "### ", "> ", "- ", "|")) or bool(re.match(r"\d+\. ", s))
+    return s.startswith(("## ", "### ", "> ", "- ", "|", "```")) or bool(re.match(r"\d+\. ", s))
 
 
 def _table(rows):
@@ -286,6 +297,7 @@ def _date_label(iso):
 
 
 def _word_count(markdown):
+    markdown = re.sub(r"^```html\n.*?^```$", lambda m: re.sub(r"<[^>]+>", " ", m.group(0)), markdown, flags=re.S | re.M)
     text = re.sub(r"[#>*\[\]\(\)_|]", " ", markdown)
     return len(re.findall(r"[A-Za-z0-9'’£-]+", text))
 
