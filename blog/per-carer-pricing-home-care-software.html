@@ -149,61 +149,61 @@
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is per-carer pricing in home care software?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Per-carer pricing means you only pay for the field carers who actually delivered care in a given month. Office staff (coordinators, managers, payroll, owners) use the software at no per-seat charge. Most legacy home care platforms charge per user, which counts every login regardless of whether they're in the field or in the office."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does per-user pricing cost agencies more?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Home care has an unusually high office-to-field ratio: most agencies need at least one office person for every 4-6 carers (coordinator, manager, registered manager, payroll, recruitment). Per-user pricing turns every office seat into another line on the invoice. A 12-carer agency with 4 office staff pays for 16 seats under per-user models, but only 12 under per-carer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is my carer count worked out for billing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your bill is based on your carer headcount, taken at your renewal date. A carer who joins mid-cycle is billed from the next cycle, and a leaver is not charged for after they go. It is free while you have up to 5 carers, then £10 per carer per month for every carer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does homecareOS charge for the office team?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Coordinators, registered managers, owners, payroll, recruiters, and any other office staff log into the platform free of charge on every plan, and there is no cap on service users. None of them count toward the per-carer bill."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does homecareOS compare to Birdie on pricing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Birdie publishes a per-active-service-user price, plus additional charges for some modules and office logins. homecareOS bills only on the carers who actually delivered care in the month. Office team and service-user records are unmetered. For a typical 12-carer agency with 4 office staff, the per-carer model usually saves 25-35% on the monthly software bill, and the Free tier covers agencies up to 5 carers at no cost."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if a carer leaves mid-month?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "They still count for that month if they delivered any care, but they drop off automatically the following month. There's no leaver fee, no minimum lock-in, and no need to manually deactivate. The system reads the visit attendance log nightly and updates the next month's count automatically."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is per-carer pricing in home care software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per-carer pricing charges for the carers on your books rather than for everyone with a login. Coordinators, managers, the registered manager, payroll and owners use the system without adding to the bill, and there is no cap on service users. Most legacy platforms charge per user, which counts every login regardless of whether that person delivers care or sits in the office."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Why does per-user pricing cost agencies more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Home care runs an office-heavy ratio compared with most industries: coordination, compliance, recruitment and payroll all need people who never deliver a visit. Under a per-user model every one of those seats is another line on the invoice. The honest way to compare two quotes is to price your own headcount, field and office separately, rather than comparing the headline rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is my carer count worked out for billing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By headcount, taken at your renewal date. It is free while you have up to 5 carers, and once you go past that it is £10 per carer per month for every carer, not just the ones above five, so 6 carers is £60 and 20 is £200. The free allowance is spent once: an agency that crosses it and later shrinks back to 5 keeps paying."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS charge for the office team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Coordinators, registered managers, owners, payroll and recruiters log in free on every plan, and service user records are not counted or capped. None of them affect the per-carer bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if a carer joins or leaves mid-cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Headcount is read at your renewal date, so a carer who joins mid-cycle is billed from the next cycle, and a carer who leaves part way through a cycle is not refunded for the remainder of it. There is no leaver fee and no minimum term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does per-carer pricing compare to charging per service user?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It moves with your staffing rather than your caseload. If you support a lot of people with short calls, a per service user price climbs while your staff costs do not; if you deliver long or live-in packages to fewer people, it does the opposite. Neither model is fairer in the abstract. Price both against your own numbers before deciding, and ask what happens to the bill in the month you win a new contract."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -508,6 +508,20 @@
         </section>
 
         <!-- Bottom CTA -->
+          <h2 id="faq">Per-carer pricing, answered</h2>
+          <h3>What is per-carer pricing in home care software?</h3>
+          <p>Per-carer pricing charges for the carers on your books rather than for everyone with a login. Coordinators, managers, the registered manager, payroll and owners use the system without adding to the bill, and there is no cap on service users. Most legacy platforms charge per user, which counts every login regardless of whether that person delivers care or sits in the office.</p>
+          <h3>Why does per-user pricing cost agencies more?</h3>
+          <p>Home care runs an office-heavy ratio compared with most industries: coordination, compliance, recruitment and payroll all need people who never deliver a visit. Under a per-user model every one of those seats is another line on the invoice. The honest way to compare two quotes is to price your own headcount, field and office separately, rather than comparing the headline rate.</p>
+          <h3>How is my carer count worked out for billing?</h3>
+          <p>By headcount, taken at your renewal date. It is free while you have up to 5 carers, and once you go past that it is £10 per carer per month for every carer, not just the ones above five, so 6 carers is £60 and 20 is £200. The free allowance is spent once: an agency that crosses it and later shrinks back to 5 keeps paying.</p>
+          <h3>Does homecareOS charge for the office team?</h3>
+          <p>No. Coordinators, registered managers, owners, payroll and recruiters log in free on every plan, and service user records are not counted or capped. None of them affect the per-carer bill.</p>
+          <h3>What happens if a carer joins or leaves mid-cycle?</h3>
+          <p>Headcount is read at your renewal date, so a carer who joins mid-cycle is billed from the next cycle, and a carer who leaves part way through a cycle is not refunded for the remainder of it. There is no leaver fee and no minimum term.</p>
+          <h3>How does per-carer pricing compare to charging per service user?</h3>
+          <p>It moves with your staffing rather than your caseload. If you support a lot of people with short calls, a per service user price climbs while your staff costs do not; if you deliver long or live-in packages to fewer people, it does the opposite. Neither model is fairer in the abstract. Price both against your own numbers before deciding, and ask what happens to the bill in the month you win a new contract.</p>
+
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>Run the maths on your own agency</h2>

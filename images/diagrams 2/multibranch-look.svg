@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 556" role="img" aria-labelledby="mb-look-t mb-look-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+  <title id="mb-look-t">How Where to look decides which branch to raise</title>
+  <desc id="mb-look-d">Example dot plot of continuity for five branches over the last 30 days, on a 0 to 100 percent scale. The group median is 78 percent, and a shaded band runs 10 points below it, down to 68 percent. Branch A is 90 percent from 860 visits. Branch B is 78 percent from 920 visits and Branch C is 78 percent from 640 visits, both on the median. None of these three is raised. Branch D is 60 percent from 710 visits, below the band with plenty of visits behind it, so it is flagged Where to look. Branch E is 54 percent but from only 6 visits, so it is shown muted and labelled too few to raise. A branch is raised only when both are true: it is 10 or more points below the median, and there are 20 or more events behind the figure, which for continuity means visits.</desc>
+  <style>
+    .mb-look-h { font-size: 20px; font-weight: 700; fill: #16323D; }
+    .mb-look-s { font-size: 17px; font-weight: 400; fill: #6b7280; }
+    .mb-look-name { font-size: 17px; font-weight: 600; fill: #111827; }
+    .mb-look-n { font-size: 17px; font-weight: 400; fill: #6b7280; }
+    .mb-look-v { font-size: 17px; font-weight: 600; fill: #374151; text-anchor: middle; }
+    .mb-look-vd { fill: #111827; font-weight: 700; }
+    .mb-look-ve { fill: #6b7280; font-weight: 500; }
+    .mb-look-ax { font-size: 17px; font-weight: 400; fill: #6b7280; text-anchor: middle; }
+    .mb-look-lab { font-size: 17px; font-weight: 700; fill: #16323D; }
+    .mb-look-mute { font-size: 17px; font-weight: 500; fill: #4b5563; }
+    .mb-look-rule { font-size: 17px; font-weight: 500; fill: #374151; }
+    .mb-look-vs { text-anchor: start; }
+    .mb-look-axe { text-anchor: end; }
+    .mb-look-lead { stroke: #d1d5db; stroke-width: 1.5; stroke-dasharray: 1.5 5; stroke-linecap: round; fill: none; }
+  </style>
+
+  <!-- Header -->
+  <text class="mb-look-h" x="0" y="24">Continuity by branch</text>
+  <text class="mb-look-s" x="0" y="50">Last 30 days</text>
+  <rect x="432" y="7" width="87" height="28" rx="14" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="475.5" y="27" font-size="17" font-weight="600" fill="#4b5563" text-anchor="middle">Example</text>
+
+  <!-- Band: median down 10 points (68% to 78%) -->
+  <rect x="375.2" y="124" width="39" height="268" fill="#E8A14A" fill-opacity="0.2"/>
+  <path d="M375.2 117 V109 H414.2" fill="none" stroke="#E8A14A" stroke-width="2"/>
+  <text class="mb-look-lab" x="368" y="116" text-anchor="end">10 points</text>
+
+  <!-- Median line -->
+  <line x1="414.2" y1="94" x2="414.2" y2="392" stroke="#16323D" stroke-width="2"/>
+  <text class="mb-look-lab" x="414.2" y="86" text-anchor="middle">Group median 78%</text>
+
+  <!-- Row A: 90%, 860 visits -->
+  <text class="mb-look-name" x="0" y="150">Branch A</text>
+  <text class="mb-look-n" x="0" y="171">860 visits</text>
+  <line class="mb-look-lead" x1="110" y1="152" x2="449" y2="152"/>
+  <circle cx="461" cy="152" r="8" fill="#16323D"/>
+  <text class="mb-look-v" x="461" y="138">90%</text>
+
+  <!-- Row B: 78%, 920 visits, on the median -->
+  <text class="mb-look-name" x="0" y="202">Branch B</text>
+  <text class="mb-look-n" x="0" y="223">920 visits</text>
+  <line class="mb-look-lead" x1="110" y1="204" x2="402.2" y2="204"/>
+  <circle cx="414.2" cy="204" r="8" fill="#16323D"/>
+  <text class="mb-look-v mb-look-vs" x="429" y="210">78%</text>
+
+  <!-- Row C: 78%, 640 visits, on the median -->
+  <text class="mb-look-name" x="0" y="254">Branch C</text>
+  <text class="mb-look-n" x="0" y="275">640 visits</text>
+  <line class="mb-look-lead" x1="110" y1="256" x2="402.2" y2="256"/>
+  <circle cx="414.2" cy="256" r="8" fill="#16323D"/>
+  <text class="mb-look-v mb-look-vs" x="429" y="262">78%</text>
+
+  <!-- Row D: 60%, 710 visits, flagged -->
+  <text class="mb-look-name" x="0" y="306">Branch D</text>
+  <text class="mb-look-n" x="0" y="327">710 visits</text>
+  <line class="mb-look-lead" x1="110" y1="308" x2="155" y2="308"/>
+  <rect x="163.4" y="292" width="158.6" height="32" rx="16" fill="none" stroke="#E24B4A" stroke-width="2"/>
+  <circle cx="182.4" cy="308" r="9" fill="#E24B4A"/>
+  <rect x="180.9" y="302" width="3" height="8" rx="1.5" fill="#ffffff"/>
+  <circle cx="182.4" cy="313" r="1.8" fill="#ffffff"/>
+  <text class="mb-look-lab" x="199.4" y="314">Where to look</text>
+  <circle cx="344" cy="308" r="8" fill="#E24B4A"/>
+  <text class="mb-look-v mb-look-vd" x="344" y="294">60%</text>
+
+  <!-- Row E: 54%, 6 visits, muted -->
+  <text class="mb-look-name" x="0" y="358">Branch E</text>
+  <text class="mb-look-n" x="0" y="379">6 visits</text>
+  <line class="mb-look-lead" x1="110" y1="360" x2="160" y2="360"/>
+  <text class="mb-look-mute" x="304" y="366" text-anchor="end">Too few to raise</text>
+  <circle cx="320.6" cy="360" r="7" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
+  <text class="mb-look-v mb-look-ve" x="320.6" y="346">54%</text>
+
+  <!-- Axis -->
+  <line x1="110" y1="392" x2="500" y2="392" stroke="#9ca3af" stroke-width="1.5"/>
+  <path d="M110 392 v6 M207.5 392 v6 M305 392 v6 M402.5 392 v6 M500 392 v6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text class="mb-look-ax" x="110" y="418">0%</text>
+  <text class="mb-look-ax" x="207.5" y="418">25%</text>
+  <text class="mb-look-ax" x="305" y="418">50%</text>
+  <text class="mb-look-ax" x="402.5" y="418">75%</text>
+  <text class="mb-look-ax mb-look-axe" x="519" y="418">100%</text>
+
+  <!-- Rules -->
+  <rect x="0.75" y="438" width="518.5" height="116" rx="12" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text class="mb-look-lab" x="20" y="468">Raised only when both are true</text>
+  <circle cx="32" cy="496" r="11" fill="#16323D"/>
+  <text x="32" y="502" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text class="mb-look-rule" x="54" y="502">10 or more points below the median</text>
+  <circle cx="32" cy="528" r="11" fill="#16323D"/>
+  <text x="32" y="534" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text class="mb-look-rule" x="54" y="534">20 or more events (here, visits) behind it</text>
+</svg>

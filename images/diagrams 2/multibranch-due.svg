@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 424" role="img" aria-labelledby="mb-due-t mb-due-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+<title id="mb-due-t">Only visits that have happened are counted</title>
+<desc id="mb-due-d">An example day at Branch A drawn as a timeline with a line marking now. Before now, four visits were completed, one was missed and one was cancelled. After now, three visits are booked. The completed and missed visits are counted as due. The cancelled visit and the three booked visits are greyed and not counted. Visits delivered is 4 of 5 due, 80 percent, so the branch is not marked down for visits that have not happened yet.</desc>
+<text x="20" y="22" font-size="17" fill="#6b7280">Example day, Branch A</text>
+<text x="20" y="58" font-size="17" font-weight="700" fill="#16323D">Window closed</text>
+<text x="500" y="58" font-size="17" font-weight="700" fill="#6b7280" text-anchor="end">Still to come</text>
+<rect x="300" y="72" width="200" height="118" fill="#f3f4f6"/>
+<path d="M300 66 V198" stroke="#E8A14A" stroke-width="2.5"/>
+<rect x="270" y="38" width="60" height="28" rx="14" fill="#E8A14A"/>
+<text x="300" y="58" font-size="17" font-weight="700" fill="#16323D" text-anchor="middle">Now</text>
+<rect x="20" y="80" width="44" height="40" rx="6" fill="#1D9E75"/><path d="M34.0 101.0 L40.0 107.0 L51.0 94.0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="100" y="80" width="44" height="40" rx="6" fill="#E24B4A"/><path d="M122.0 90.0 V103.0" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="122.0" cy="109.0" r="2.2" fill="#ffffff"/>
+<rect x="180" y="80" width="44" height="40" rx="6" fill="#1D9E75"/><path d="M194.0 101.0 L200.0 107.0 L211.0 94.0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="340.75" y="80.75" width="42.5" height="38.5" rx="6" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/><circle cx="362.0" cy="100.0" r="8.0" fill="none" stroke="#6b7280" stroke-width="2"/><path d="M362.0 95.0 V100.0 L366.0 102.5" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440.75" y="80.75" width="42.5" height="38.5" rx="6" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/><circle cx="462.0" cy="100.0" r="8.0" fill="none" stroke="#6b7280" stroke-width="2"/><path d="M462.0 95.0 V100.0 L466.0 102.5" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="132" width="44" height="40" rx="6" fill="#1D9E75"/><path d="M74.0 153.0 L80.0 159.0 L91.0 146.0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="140.75" y="132.75" width="42.5" height="38.5" rx="6" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/><path d="M156.0 146.0 L168.0 158.0 M168.0 146.0 L156.0 158.0" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="240" y="132" width="44" height="40" rx="6" fill="#1D9E75"/><path d="M254.0 153.0 L260.0 159.0 L271.0 146.0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="380.75" y="132.75" width="42.5" height="38.5" rx="6" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/><circle cx="402.0" cy="152.0" r="8.0" fill="none" stroke="#6b7280" stroke-width="2"/><path d="M402.0 147.0 V152.0 L406.0 154.5" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 190 H500" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M20 190 V196" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="20" y="218" font-size="17" fill="#6b7280" text-anchor="start">08:00</text>
+<path d="M180 190 V196" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="180" y="218" font-size="17" fill="#6b7280" text-anchor="middle">12:00</text>
+<path d="M340 190 V196" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="340" y="218" font-size="17" fill="#6b7280" text-anchor="middle">16:00</text>
+<path d="M500 190 V196" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="500" y="218" font-size="17" fill="#6b7280" text-anchor="end">20:00</text>
+<text x="20" y="262" font-size="18" font-weight="700" fill="#16323D">Counted as due</text>
+<text x="280" y="262" font-size="18" font-weight="700" fill="#6b7280">Not counted</text>
+<rect x="20" y="278" width="34" height="26" rx="6" fill="#1D9E75"/><path d="M31.2 291.7 L35.6 296.0 L43.5 286.7" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="66" y="297" font-size="17" fill="#111827">4 completed</text>
+<rect x="20" y="314" width="34" height="26" rx="6" fill="#E24B4A"/><path d="M37.0 319.8 V329.2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="37.0" cy="333.5" r="2.2" fill="#ffffff"/>
+<text x="66" y="333" font-size="17" fill="#111827">1 missed</text>
+<rect x="280.75" y="278.75" width="32.5" height="24.5" rx="6" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/><path d="M292.7 286.7 L301.3 295.3 M301.3 286.7 L292.7 295.3" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round"/>
+<text x="326" y="297" font-size="17" fill="#4b5563">1 cancelled</text>
+<rect x="280.75" y="314.75" width="32.5" height="24.5" rx="6" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/><circle cx="297.0" cy="327.0" r="5.8" fill="none" stroke="#6b7280" stroke-width="2"/><path d="M297.0 323.4 V327.0 L299.9 328.8" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="326" y="333" font-size="17" fill="#4b5563">3 booked</text>
+<rect x="20.75" y="360.75" width="478.5" height="50.5" rx="10" fill="#ffffff" stroke="#16323D" stroke-width="1.5"/>
+<text x="38" y="392" font-size="18" fill="#374151">Visits delivered</text>
+<text x="482" y="393" font-size="22" font-weight="700" fill="#16323D" text-anchor="end">4 of 5 due, 80%</text>
+</svg>

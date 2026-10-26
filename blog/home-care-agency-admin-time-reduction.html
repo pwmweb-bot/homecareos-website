@@ -99,15 +99,45 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Is a 60% admin time reduction realistic for home care agencies?","acceptedAnswer":{"@type":"Answer","text":"For agencies moving from paper-based or partially-digital systems to a properly integrated home care platform, a 50-70% reduction in non-care administrative time is realistic and consistent with patterns observed across the sector. The savings come predominantly from rota allocation, cover finding, payroll preparation, invoice generation, and PIR/audit assembly, not from direct care work, which doesn't change."}},
-    {"@type":"Question","name":"What admin work disappears completely when going digital?","acceptedAnswer":{"@type":"Answer","text":"Several categories of work essentially disappear: re-typing visit times into payroll, re-typing visit data into invoices, manually phoning around for cover, hand-transcribing care notes from paper to a database, manually compiling training compliance reports, and manually preparing PIR submissions. These don't get faster. They stop being necessary work because the data is already in the system."}},
-    {"@type":"Question","name":"Where does new admin work appear when going digital?","acceptedAnswer":{"@type":"Answer","text":"Some categories of work increase modestly: setting up service users initially (more thorough than paper), maintaining digital care plans (because they're easier to keep current), managing carer mobile-app access, and responding to family-portal questions. The net is still strongly positive, but it's worth being honest that 'digital' doesn't mean 'no admin'."}},
-    {"@type":"Question","name":"How long does the transition from paper to digital actually take?","acceptedAnswer":{"@type":"Answer","text":"For a small-to-medium UK domiciliary agency (5-30 carers), 4-8 weeks is typical for a full transition. Larger agencies (50+ carers) usually need 8-16 weeks because the data migration is bigger and the change management more complex. The first 30 days are the hardest. Agencies that get past day 30 rarely revert."}},
-    {"@type":"Question","name":"What's the first thing to digitise?","acceptedAnswer":{"@type":"Answer","text":"Visits and the rota, always. Scheduling is the highest-volume admin task in any home care agency. Once visits and rotas are digital, everything else (visit notes, MAR, payroll, invoices) follows naturally because the data is already there. Trying to digitise care plans before scheduling is a common mistake: care plans without rota integration become extra work, not less."}},
-    {"@type":"Question","name":"How does homecareOS pricing work as an agency grows?","acceptedAnswer":{"@type":"Answer","text":"Pricing is transparent and per carer: free while you have up to 5 carers, then £10 per carer per month on Pro for every carer. Your office team is always unmetered and there is no cap on service users. Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle. A small agency can run on the free tier and see the value before committing to spend."}}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a 60% admin time reduction realistic for home care agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat it as an illustration rather than a measured result. We have not run a controlled study, and any vendor quoting a precise percentage for your agency is guessing at your starting point. What can be said plainly is where the time goes in a paper or part-digital agency, and which of those tasks stop existing when the data is captured once. The size of your saving depends almost entirely on how much re-typing you do today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What admin work disappears completely when going digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The work that only exists to move information between places. Re-typing visit times into payroll, re-typing the same visits into invoices, ringing round for cover, copying handwritten notes into a database, assembling a training compliance list by hand, and gathering figures for a return that the system already holds. These do not get faster. They stop being work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does new admin work appear when going digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some things genuinely take longer. Setting a service user up properly at the start is more thorough than a paper file. Care plans get maintained because they are easy to change. Carer app access needs managing, and a family portal produces questions that previously nobody asked because nobody knew. The balance is still strongly positive, but digital does not mean no admin, and a vendor who implies otherwise is selling you a disappointment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the transition from paper to digital actually take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a small to medium agency it is usually a few weeks rather than a few days, and the limiting factor is your data rather than the software. We move your live data for you, meaning current carers, service users, care plans and the running rota, and you switch within 7 days of sending us your exports. Historic records are a separate, optional piece of work. The hardest part is the first fortnight, when people are learning a new habit while still doing the job."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -351,6 +381,16 @@
             </div></article>
           </div>
         </section>
+
+          <h2 id="faq">Cutting admin time, answered</h2>
+          <h3>Is a 60% admin time reduction realistic for home care agencies?</h3>
+          <p>Treat it as an illustration rather than a measured result. We have not run a controlled study, and any vendor quoting a precise percentage for your agency is guessing at your starting point. What can be said plainly is where the time goes in a paper or part-digital agency, and which of those tasks stop existing when the data is captured once. The size of your saving depends almost entirely on how much re-typing you do today.</p>
+          <h3>What admin work disappears completely when going digital?</h3>
+          <p>The work that only exists to move information between places. Re-typing visit times into payroll, re-typing the same visits into invoices, ringing round for cover, copying handwritten notes into a database, assembling a training compliance list by hand, and gathering figures for a return that the system already holds. These do not get faster. They stop being work.</p>
+          <h3>Where does new admin work appear when going digital?</h3>
+          <p>Some things genuinely take longer. Setting a service user up properly at the start is more thorough than a paper file. Care plans get maintained because they are easy to change. Carer app access needs managing, and a family portal produces questions that previously nobody asked because nobody knew. The balance is still strongly positive, but digital does not mean no admin, and a vendor who implies otherwise is selling you a disappointment.</p>
+          <h3>How long does the transition from paper to digital actually take?</h3>
+          <p>For a small to medium agency it is usually a few weeks rather than a few days, and the limiting factor is your data rather than the software. We move your live data for you, meaning current carers, service users, care plans and the running rota, and you switch within 7 days of sending us your exports. Historic records are a separate, optional piece of work. The hardest part is the first fortnight, when people are learning a new habit while still doing the job.</p>
 
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">

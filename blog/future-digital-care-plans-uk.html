@@ -99,15 +99,77 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is a digital care plan?","acceptedAnswer":{"@type":"Answer","text":"A digital care plan is a structured, software-managed record of a person's care needs, goals, preferences, risks, and the way care is delivered. Unlike a paper care plan, a digital plan is updated continuously, accessible from a phone or tablet, and connected to the rest of the care record (visit notes, MAR, body maps, observations) so changes propagate automatically."}},
-    {"@type":"Question","name":"What is DSCR (Digital Social Care Records)?","acceptedAnswer":{"@type":"Answer","text":"DSCR is an NHS England programme that has been working since 2022 to drive adoption of digital care records across adult social care. The programme funded care providers to move from paper to digital, publishes the Assured Solutions List, and works with CQC and ICBs to set standards. The Digital Transformation Fund closed at the end of the 2024/25 financial year. NHS England says Integrated Care Boards and local authorities are increasingly looking for assured products before awarding or continuing contracts."}},
-    {"@type":"Question","name":"What is GP Connect and why does it matter for home care?","acceptedAnswer":{"@type":"Answer","text":"GP Connect is the NHS service that lets approved care providers see a service user's GP record (with consent), including current medications, allergies, recent appointments, and key clinical information. For home care, this matters because medication errors are the most common safeguarding incident category. Being able to see the GP's current medication list is the most reliable way to catch a medication-record drift."}},
-    {"@type":"Question","name":"What's the difference between a digital care plan and digital care notes?","acceptedAnswer":{"@type":"Answer","text":"Care notes describe what happened during a specific visit (e.g. 'helped with personal care, breakfast eaten, mood low'). The care plan describes what should happen and why ('person prefers shower over bath, requires support transferring, uses a Zimmer frame, daughter visits Tuesdays'). The plan is the standing intent; the notes are the running log. A good digital care record connects them, so notes that contradict the plan automatically prompt a plan review."}},
-    {"@type":"Question","name":"Are digital care plans mandatory in the UK?","acceptedAnswer":{"@type":"Answer","text":"Not legally mandatory yet, but increasingly expected. CQC inspectors expect to see structured care plans (paper or digital, but auditable). NHS England's DSCR programme is steadily moving the social care sector to digital. NHS England says Integrated Care Boards and local authorities are increasingly looking for assured products before awarding or continuing contracts. Whether that applies to you depends on your own commissioner, so ask them rather than assuming."}},
-    {"@type":"Question","name":"How do digital care plans support person-centred care?","acceptedAnswer":{"@type":"Answer","text":"A well-designed digital care plan captures preferences and outcomes alongside needs and tasks. Instead of just 'support with breakfast', the record includes 'prefers porridge with banana, doesn't like supplement drinks, wants to eat at the kitchen table not in bed'. Carers see this on their phone before each visit. The result is care that feels personal rather than processed, even when delivered by a different carer to yesterday's."}}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a digital care plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A digital care plan is a structured, software-managed record of a person's care needs, goals, preferences, risks, and the way care is delivered. Unlike a paper plan, it's updated continuously, accessible from a phone, and connected to the rest of the care record so changes propagate automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is DSCR (Digital Social Care Records)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An NHS England programme driving adoption of digital care records across adult social care. The programme funded providers to move from paper to digital, publishes the Assured Solutions List, and works with CQC and ICBs on standards. The Digital Transformation Fund closed at the end of the 2024/25 financial year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GP Connect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An NHS service that lets approved care providers (with consent) see a service user's GP record, current medications, allergies, recent appointments. For home care, the most useful application is catching medication-record drift before it causes a safeguarding incident."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a care plan and care notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Care notes describe what happened during a visit. The care plan describes what should happen and why. The plan is the standing intent; notes are the running log. A good digital care record connects them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are digital care plans mandatory in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not legally mandatory yet, but increasingly expected. CQC expects structured plans, NHS England's DSCR programme is steadily moving the sector to digital, and NHS England says Integrated Care Boards and local authorities are increasingly looking for assured products before awarding or continuing contracts. Whether it applies to you depends on your own commissioner, so ask them directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GP Connect and why does it matter for home care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GP Connect is the NHS service that lets approved care providers view a person's GP record with consent, including current medications, allergies and key clinical information. It matters in home care because the medication list a provider holds drifts from the one the GP holds, and the drift is invisible until something goes wrong. Seeing the current list is the most direct way to catch that. homecareOS does not connect to GP Connect today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a digital care plan and digital care notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Care notes describe what happened at a particular visit. The care plan describes what should happen and why: the preferences, the risks, the equipment, who visits on a Tuesday. The plan is the standing intent and the notes are the running log. A good digital record connects the two, so a pattern in the notes that contradicts the plan prompts somebody to look at the plan rather than quietly carrying on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do digital care plans support person-centred care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By holding the detail that makes care feel like it is for a person rather than about a task. Not just support with breakfast, but porridge with banana, at the kitchen table, not in bed, and does not like supplement drinks. A carer sees that on the phone before the visit, which is what lets a different carer from yesterday's still get it right."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -282,6 +344,15 @@
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Are digital care plans mandatory in the UK?</summary>
           <p style="margin-top:12px">Not legally mandatory yet, but increasingly expected. CQC expects structured plans, NHS England's DSCR programme is steadily moving the sector to digital, and NHS England says Integrated Care Boards and local authorities are increasingly looking for assured products before awarding or continuing contracts. Whether it applies to you depends on your own commissioner, so ask them directly.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What is GP Connect and why does it matter for home care?</summary>
+          <p style="margin-top:12px">GP Connect is the NHS service that lets approved care providers view a person's GP record with consent, including current medications, allergies and key clinical information. It matters in home care because the medication list a provider holds drifts from the one the GP holds, and the drift is invisible until something goes wrong. Seeing the current list is the most direct way to catch that. homecareOS does not connect to GP Connect today.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What is the difference between a digital care plan and digital care notes?</summary>
+          <p style="margin-top:12px">Care notes describe what happened at a particular visit. The care plan describes what should happen and why: the preferences, the risks, the equipment, who visits on a Tuesday. The plan is the standing intent and the notes are the running log. A good digital record connects the two, so a pattern in the notes that contradicts the plan prompts somebody to look at the plan rather than quietly carrying on.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">How do digital care plans support person-centred care?</summary>
+          <p style="margin-top:12px">By holding the detail that makes care feel like it is for a person rather than about a task. Not just support with breakfast, but porridge with banana, at the kitchen table, not in bed, and does not like supplement drinks. A carer sees that on the phone before the visit, which is what lets a different carer from yesterday's still get it right.</p></details>
         </section>
 
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px" data-reveal>

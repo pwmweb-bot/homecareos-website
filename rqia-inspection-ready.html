@@ -114,13 +114,52 @@
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Does homecareOS provide a digital audit trail for home care?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every visit logged, care note written and training record tracked feeds directly into your compliance picture, timestamped and attributed. Your data is always current, always accurate and always audit-ready, so evidence is there when inspectors ask for it."}},
-{"@type":"Question","name":"Which UK care regulators does homecareOS cover?","acceptedAnswer":{"@type":"Answer","text":"All four nations. CQC in England, CIW in Wales, the Care Inspectorate in Scotland and RQIA in Northern Ireland, with the right framework applied to your agency, including all 34 CQC quality statements, CIW lines of enquiry, Care Inspectorate quality indicators and RQIA standards tracking."}},
-{"@type":"Question","name":"Can homecareOS prepare my Provider Information Return (PIR)?","acceptedAnswer":{"@type":"Answer","text":"Yes. PIR data is populated automatically from your live operations, so the weeks of manual data gathering that most agencies dread are replaced with an export built from the records you already keep day to day."}},
-{"@type":"Question","name":"How does homecareOS handle incidents and safeguarding?","acceptedAnswer":{"@type":"Answer","text":"Log incidents, assign follow-up actions with deadlines, track safeguarding referrals and maintain complete timelines. Nothing falls through the cracks, and the full history is available as inspection evidence."}},
-{"@type":"Question","name":"Can I run internal audits and self-assessments in homecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. Create audit templates, schedule recurring audits, assign actions and track completion, and use guided self-assessments to map your performance against your regulator's framework and highlight gaps before inspectors find them."}}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does homecareOS give me a digital audit trail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every visit, care note, medication record, observation and training entry is stored with a timestamp and the person who entered it, and an audit log records changes to the records that matter, including who changed a visit's carers and when. It is not a claim that every keystroke is captured. It means the evidence an inspector asks to see was created as the work happened rather than assembled afterwards, which is the difference they are actually testing for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which UK care regulators does homecareOS cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All four. RQIA's framework in Northern Ireland, CQC's in England, CIW's in Wales and the Care Inspectorate's in Scotland is applied from your agency's nation, along with the background check and the workforce register that go with it: the DBS in England and Wales, the PVG scheme in Scotland and AccessNI in Northern Ireland, and Social Care Wales, the SSSC or NISCC where individual registration is required. Nation is set once on the agency and then drives the compliance templates, the identifiers held against each carer and the wording on printed documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does homecareOS help with RQIA quality monitoring reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, by holding the underlying data. Under the Domiciliary Care Agencies Regulations (Northern Ireland) 2007 the registered person must operate a system for monitoring and improving the quality of the service and report on it. Visit completion, medication records, incidents, complaints and staff training all sit in the platform, so the report is evidenced from your own records rather than reconstructed from spreadsheets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does homecareOS handle incidents and safeguarding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incidents are logged against the person and the date they happened, not the date somebody got round to typing them up. Each one carries follow-up actions with owners and due dates, safeguarding referrals are tracked separately with their own status, and the timeline stays attached to the person's record. Carers can report an incident from the app during or after a visit, so the first account comes from the person who was there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run internal audits and self-assessments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can build audit templates, schedule them to repeat, assign the actions that come out of them and track those to completion. Self-assessment maps your own view of the service against your regulator's framework so you can see the gaps while you still have time to close them."
+      }
+    }
+  ]
+}
 </script>
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -306,6 +345,66 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section section-gray" aria-labelledby="rqiafaq-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">RQIA FAQ</span>
+          <h2 id="rqiafaq-heading">RQIA Inspection, Answered</h2>
+          <p>What RQIA asks to see in Northern Ireland, and how the records support it.</p>
+        </div>
+
+        <div class="faq-list" data-reveal>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="rqiafaq-1">
+              Does homecareOS give me a digital audit trail?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="rqiafaq-1" role="region">
+              <div class="faq-answer-inner">Every visit, care note, medication record, observation and training entry is stored with a timestamp and the person who entered it, and an audit log records changes to the records that matter, including who changed a visit's carers and when. It is not a claim that every keystroke is captured. It means the evidence an inspector asks to see was created as the work happened rather than assembled afterwards, which is the difference they are actually testing for.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="rqiafaq-2">
+              Which UK care regulators does homecareOS cover?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="rqiafaq-2" role="region">
+              <div class="faq-answer-inner">All four. RQIA's framework in Northern Ireland, CQC's in England, CIW's in Wales and the Care Inspectorate's in Scotland is applied from your agency's nation, along with the background check and the workforce register that go with it: the DBS in England and Wales, the PVG scheme in Scotland and AccessNI in Northern Ireland, and Social Care Wales, the SSSC or NISCC where individual registration is required. Nation is set once on the agency and then drives the compliance templates, the identifiers held against each carer and the wording on printed documents.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="rqiafaq-3">
+              Does homecareOS help with RQIA quality monitoring reports?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="rqiafaq-3" role="region">
+              <div class="faq-answer-inner">Yes, by holding the underlying data. Under the Domiciliary Care Agencies Regulations (Northern Ireland) 2007 the registered person must operate a system for monitoring and improving the quality of the service and report on it. Visit completion, medication records, incidents, complaints and staff training all sit in the platform, so the report is evidenced from your own records rather than reconstructed from spreadsheets.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="rqiafaq-4">
+              How does homecareOS handle incidents and safeguarding?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="rqiafaq-4" role="region">
+              <div class="faq-answer-inner">Incidents are logged against the person and the date they happened, not the date somebody got round to typing them up. Each one carries follow-up actions with owners and due dates, safeguarding referrals are tracked separately with their own status, and the timeline stays attached to the person's record. Carers can report an incident from the app during or after a visit, so the first account comes from the person who was there.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="rqiafaq-5">
+              Can I run internal audits and self-assessments?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="rqiafaq-5" role="region">
+              <div class="faq-answer-inner">Yes. You can build audit templates, schedule them to repeat, assign the actions that come out of them and track those to completion. Self-assessment maps your own view of the service against your regulator's framework so you can see the gaps while you still have time to close them.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section" aria-labelledby="cta-heading">
       <div class="container">
         <h2 id="cta-heading" data-reveal>See it against your own records</h2>
@@ -473,6 +572,27 @@
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
     })();
+  </script>
+  <script>
+    /* FAQ accordion. Plain JS because the site's Content-Security-Policy has no
+       'unsafe-eval', which Alpine needs to evaluate its inline expressions. */
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+        item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
+      });
+    });
   </script>
 </body>
 </html>

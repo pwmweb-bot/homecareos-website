@@ -148,53 +148,53 @@
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does AI in home care software actually work in 2026, or is it mostly marketing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Some of it genuinely works and earns its keep every day; a lot of it is roadmap dressed up as a shipped feature. The reliable, in-production category in 2026 is operational AI: cover finders that rank available carers when someone calls in sick, rota builders that draft a week's schedule for a coordinator to review, retention risk scoring that flags absence patterns early, and note summarisation. Anything promising fully autonomous rostering or predictive clinical outcomes should be treated as a demo, not a deployed capability, until you have run it on your own data."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between an cover finder and an AI rota builder?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A cover finder solves a single-slot problem: a carer drops out of one visit and the system ranks who else could take it, scored on distance, continuity, hours headroom, preferred-carer flags and schedule fit. A rota builder solves the whole-week problem: it drafts an entire schedule across all carers and visits at once, balancing the same variables plus contracted hours and qualifications. In homecareOS the Cover Finder is available on all paid tiers and the AI Rota Builder is a Pro feature; both produce suggestions a human coordinator confirms."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my agency's data safe if a platform uses AI features?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends entirely on the vendor's data-handling, not on the word 'AI'. Ask three questions in writing: is our data used to train shared models (it should not be), where is it processed and stored (UK or EU for GDPR comfort), and can we turn the AI features off without losing the core platform. A well-built system treats AI as augmentation, the scheduling, care records and compliance work fully without it, so switching AI off never breaks day-to-day operations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need the AI features to run an agency on homecareOS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. homecareOS is designed so the whole platform functions without a single AI call, you can build rotas by hand, find cover manually and run compliance on the underlying records. The AI features (cover finder, rota builder, retention risk scoring) exist to save coordinator time, not to gate the basics behind a model. That is a deliberate architectural principle: AI augments, it never becomes a dependency."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I test a vendor's AI claims before buying?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ask them to run it live on your data, today. For a cover finder, put a real carer off sick and watch it rank replacements, then sanity-check the top suggestion yourself. For a rota builder, feed it one real week and see how much of the draft you would actually keep. If a feature only appears in a polished slide or a canned demo account, it is roadmap. Anything you cannot exercise on your own rota during a trial should be scored as not-yet-shipped."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does AI in home care software actually work in 2026, or is it mostly marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some of it works and earns its keep; a lot of it is roadmap dressed as a shipped feature. The category that genuinely runs in production is operational: ranking who could cover a dropped visit, drafting a week's rota for a coordinator to check, and flagging absence patterns. Anything promising fully autonomous rostering or predictive clinical outcomes should be treated as a demo until you have run it on your own data."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a cover finder and an AI rota builder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cover finder solves one slot: a carer drops out and the system ranks who else could take it. A rota builder solves the whole week, drafting a schedule across every carer and visit at once. In homecareOS the cover finder is a fixed weighted score rather than a model, scoring continuity 45, hours headroom 30 and travel 25 out of 100. The AI Rota Builder is the Pro feature that uses a model. Both produce suggestions a coordinator confirms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my agency's data safe if a platform uses AI features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the vendor's data handling, not on the word AI. Ask three things in writing: is our data used to train shared models, where is it processed and stored, and can we turn the AI features off without losing the core platform. homecareOS stores care records in Ireland and the application's server functions run in Dublin; some features use specialist providers that process data outside the UK and EU, which is set out in the privacy notice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need the AI features to run an agency on homecareOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The platform works without a single AI call. You can build rotas by hand, find cover yourself and run compliance on the underlying records. The AI features exist to save coordinator time, not to put the basics behind a model, and that is deliberate: a system that stops working when a model is unavailable is not a system you can run a care service on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I test a vendor's AI claims before buying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask them to run it on your data, during the trial. For a cover finder, take a real carer off a real visit and look at who it puts top, then sanity check that yourself. For a rota builder, give it one real week and count how much of the draft you would actually keep. If a feature only appears in a polished demo account, score it as not yet shipped."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -432,6 +432,18 @@
         </section>
 
         <!-- Bottom CTA -->
+          <h2 id="faq">AI in Home Care Software, Answered</h2>
+          <h3>Does AI in home care software actually work in 2026, or is it mostly marketing?</h3>
+          <p>Some of it works and earns its keep; a lot of it is roadmap dressed as a shipped feature. The category that genuinely runs in production is operational: ranking who could cover a dropped visit, drafting a week's rota for a coordinator to check, and flagging absence patterns. Anything promising fully autonomous rostering or predictive clinical outcomes should be treated as a demo until you have run it on your own data.</p>
+          <h3>What is the difference between a cover finder and an AI rota builder?</h3>
+          <p>A cover finder solves one slot: a carer drops out and the system ranks who else could take it. A rota builder solves the whole week, drafting a schedule across every carer and visit at once. In homecareOS the cover finder is a fixed weighted score rather than a model, scoring continuity 45, hours headroom 30 and travel 25 out of 100. The AI Rota Builder is the Pro feature that uses a model. Both produce suggestions a coordinator confirms.</p>
+          <h3>Is my agency&#x27;s data safe if a platform uses AI features?</h3>
+          <p>It depends on the vendor's data handling, not on the word AI. Ask three things in writing: is our data used to train shared models, where is it processed and stored, and can we turn the AI features off without losing the core platform. homecareOS stores care records in Ireland and the application's server functions run in Dublin; some features use specialist providers that process data outside the UK and EU, which is set out in the privacy notice.</p>
+          <h3>Do I need the AI features to run an agency on homecareOS?</h3>
+          <p>No. The platform works without a single AI call. You can build rotas by hand, find cover yourself and run compliance on the underlying records. The AI features exist to save coordinator time, not to put the basics behind a model, and that is deliberate: a system that stops working when a model is unavailable is not a system you can run a care service on.</p>
+          <h3>How do I test a vendor&#x27;s AI claims before buying?</h3>
+          <p>Ask them to run it on your data, during the trial. For a cover finder, take a real carer off a real visit and look at who it puts top, then sanity check that yourself. For a rota builder, give it one real week and count how much of the draft you would actually keep. If a feature only appears in a polished demo account, score it as not yet shipped.</p>
+
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>See the AI that actually ships, on your own rota</h2>

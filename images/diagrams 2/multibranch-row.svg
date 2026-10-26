@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" role="img" aria-labelledby="mb-row-t mb-row-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
+  <title id="mb-row-t">How to read the on time column of the group dashboard</title>
+  <desc id="mb-row-d">Example. The on time column of the group dashboard for four branches. Each branch has a figure above a bar, and the bar's length is that figure. A dark tick on every bar marks the group median. Branch A shows 94% in green, labelled best in group. Branch B shows 86% with a grey bar. Branch C shows 71% in red, labelled needs a look, 15 points below the group median. Branch D shows 60% in muted grey with a small few tag, labelled too few to rank because it has under 10 arrivals behind the figure, so it is marked neither best nor needs a look.</desc>
+  <style>
+    .mb-row-pill { font-size: 17px; font-weight: 600; fill: #4b5563; }
+    .mb-row-head { font-size: 17px; font-weight: 500; fill: #6b7280; }
+    .mb-row-name { font-size: 17px; font-weight: 600; fill: #16323D; }
+    .mb-row-num { font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .mb-row-few { font-size: 17px; font-weight: 400; fill: #6b7280; }
+    .mb-row-lab { font-size: 17px; font-weight: 700; fill: #16323D; }
+    .mb-row-good { fill: #1D9E75; }
+    .mb-row-bad { fill: #E24B4A; }
+    .mb-row-mute { fill: #374151; }
+    .mb-row-sub { font-size: 17px; font-weight: 400; fill: #4b5563; }
+    .mb-row-lead { fill: none; stroke: #6b7280; stroke-width: 1.5; }
+    .mb-row-dot { fill: #16323D; stroke: #ffffff; stroke-width: 1.5; }
+  </style>
+
+  <!-- Example tag -->
+  <rect x="0.75" y="0.75" width="86" height="28" rx="14" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="43.75" y="20.5" text-anchor="middle" class="mb-row-pill">Example</text>
+
+  <!-- Table card, as on the Care quality tab -->
+  <rect x="0.75" y="44" width="315" height="354" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <path d="M0.75 86 V54 A10 10 0 0 1 10.75 44 H305.75 A10 10 0 0 1 315.75 54 V86 Z" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="16" y="71" class="mb-row-head">Branch</text>
+  <text x="108" y="71" class="mb-row-head">On time</text>
+  <path d="M1.5 164 H315 M1.5 242 H315 M1.5 320 H315" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- Branch A: best in group -->
+  <text x="16" y="128" class="mb-row-name">Branch A</text>
+  <text x="108" y="116" class="mb-row-num mb-row-good">94%</text>
+  <rect x="108" y="128" width="190" height="7" rx="3.5" fill="#e5e7eb"/>
+  <rect x="108" y="128" width="178.6" height="7" rx="3.5" fill="#1D9E75"/>
+  <rect x="270.15" y="123" width="2.5" height="17" rx="1" fill="#374151"/>
+
+  <!-- Branch B: ranked, no flag -->
+  <text x="16" y="206" class="mb-row-name">Branch B</text>
+  <text x="108" y="194" class="mb-row-num" fill="#16323D">86%</text>
+  <rect x="108" y="206" width="190" height="7" rx="3.5" fill="#e5e7eb"/>
+  <rect x="108" y="206" width="163.4" height="7" rx="3.5" fill="#9ca3af"/>
+  <rect x="270.15" y="201" width="2.5" height="17" rx="1" fill="#374151"/>
+
+  <!-- Branch C: needs a look -->
+  <text x="16" y="284" class="mb-row-name">Branch C</text>
+  <text x="108" y="272" class="mb-row-num mb-row-bad">71%</text>
+  <rect x="108" y="284" width="190" height="7" rx="3.5" fill="#e5e7eb"/>
+  <rect x="108" y="284" width="134.9" height="7" rx="3.5" fill="#E24B4A"/>
+  <rect x="270.15" y="279" width="2.5" height="17" rx="1" fill="#374151"/>
+
+  <!-- Branch D: too few to rank, shown muted -->
+  <text x="16" y="362" class="mb-row-name">Branch D</text>
+  <text x="108" y="350" class="mb-row-num" fill="#6b7280">60%</text>
+  <text x="158" y="350" class="mb-row-few">few</text>
+  <rect x="108" y="362" width="190" height="7" rx="3.5" fill="#e5e7eb"/>
+  <rect x="108" y="362" width="114" height="7" rx="3.5" fill="#9ca3af"/>
+  <rect x="270.15" y="357" width="2.5" height="17" rx="1" fill="#374151"/>
+
+  <!-- Annotation: best in group (Branch A) -->
+  <path d="M163 110 H332" class="mb-row-lead"/>
+  <circle cx="160" cy="110" r="4" class="mb-row-dot"/>
+  <circle cx="349" cy="110" r="9" fill="#1D9E75"/>
+  <path d="M344.6 110.2 L347.8 113.4 L353.6 107" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="364" y="116" class="mb-row-lab mb-row-good">Best in group</text>
+  <text x="340" y="139" class="mb-row-sub">highest ranked rate</text>
+
+  <!-- Annotation: needs a look (Branch C) -->
+  <path d="M163 266 H332" class="mb-row-lead"/>
+  <circle cx="160" cy="266" r="4" class="mb-row-dot"/>
+  <circle cx="349" cy="266" r="9" fill="#E24B4A"/>
+  <path d="M349 261.2 V267.2" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="349" cy="271" r="1.5" fill="#ffffff"/>
+  <text x="364" y="272" class="mb-row-lab mb-row-bad">Needs a look</text>
+  <text x="340" y="296" class="mb-row-sub">15 points below</text>
+  <text x="340" y="318" class="mb-row-sub">the group median</text>
+
+  <!-- Annotation: few (Branch D) -->
+  <path d="M195 344 H332" class="mb-row-lead"/>
+  <circle cx="192" cy="344" r="4" class="mb-row-dot"/>
+  <text x="340" y="350" class="mb-row-lab mb-row-mute">Too few to rank</text>
+  <text x="340" y="372" class="mb-row-sub">under 10 arrivals</text>
+
+  <!-- Annotation: the bar (bottom) -->
+  <path d="M150 369 V416" class="mb-row-lead"/>
+  <circle cx="150" cy="365.5" r="4" class="mb-row-dot"/>
+  <text x="150" y="438" text-anchor="middle" class="mb-row-lab">The bar</text>
+  <text x="150" y="460" text-anchor="middle" class="mb-row-sub">length is the rate</text>
+
+  <!-- Annotation: group median (bottom) -->
+  <path d="M271.4 378 V416" class="mb-row-lead"/>
+  <circle cx="271.4" cy="376" r="4" class="mb-row-dot"/>
+  <text x="258" y="438" class="mb-row-lab">Group median</text>
+  <text x="258" y="460" class="mb-row-sub">tick on every bar</text>
+</svg>

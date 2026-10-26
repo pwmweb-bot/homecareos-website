@@ -148,53 +148,69 @@
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Who regulates home care in each UK nation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Each UK nation has its own regulator for domiciliary care. In England it is the Care Quality Commission (CQC), inspecting against the Single Assessment Framework. In Wales it is Care Inspectorate Wales (CIW), inspecting under the Regulation and Inspection of Social Care (Wales) Act 2016 (RISCA). In Scotland it is the Care Inspectorate, grading services against the Health and Social Care Standards. In Northern Ireland it is the Regulation and Quality Improvement Authority (RQIA), inspecting under the Domiciliary Care Agencies Regulations (NI) 2007 and the DHSSPS Minimum Standards. None of these bodies has jurisdiction outside its own nation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do care workers have to register with a professional body in the UK?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on the nation. Wales, Scotland and Northern Ireland each run a mandatory register for the care workforce: Social Care Wales (SCW) in Wales, the Scottish Social Services Council (SSSC) in Scotland, and the Northern Ireland Social Care Council (NISCC) in Northern Ireland. Workers in those nations must register, keep the registration current and complete ongoing learning. England is the exception: there is no equivalent mandatory register for the general care workforce, so English agencies track training, DBS checks and supervision instead of a registration number."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is a DBS check valid across the whole UK?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The Disclosure and Barring Service (DBS) covers England and Wales only. In Scotland, background checking for regulated work runs through the Protecting Vulnerable Groups (PVG) scheme, operated by Disclosure Scotland. In Northern Ireland it runs through AccessNI, with care workers in regulated activity typically needing an Enhanced disclosure. An agency recruiting across borders therefore needs to hold the right type of check for each nation, and software with only a DBS field will record the wrong evidence for Scottish and Northern Irish staff."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can one software platform handle all four UK care regulators?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Only if it treats the nation as a configuration choice rather than an afterthought. homecareOS applies the right framework to your agency based on its nation: CQC mapping in England, CIW Quality Framework alignment in Wales, Care Inspectorate quality indicators in Scotland and RQIA standards tracking in Northern Ireland, with nation-specific DBS, SCW, SSSC and NISCC tracking for the workforce. Many platforms are built England-first and only render CQC dashboards, which leaves agencies in the other three nations translating their evidence by hand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should an agency operating in more than one UK nation do about compliance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Treat each nation's service as its own regulatory entity. A provider running services in England and Wales, for example, answers to CQC for the English service and CIW for the Welsh one, with separate registrations, separate inspection frameworks and different workforce rules. The day-to-day discipline is the same everywhere: capture visits, care notes, medication records and training as you work, so the evidence exists whichever inspector asks. What must change per nation is the framework the evidence is mapped to and the identifiers held for each worker."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who regulates home care in each UK nation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "England: the CQC, against the Single Assessment Framework. Wales: CIW, under RISCA. Scotland: the Care Inspectorate, against the Health and Social Care Standards. Northern Ireland: RQIA, under the 2007 Regulations and the DHSSPS Minimum Standards. None of the four has jurisdiction outside its own nation."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Do care workers have to register with a professional body?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Wales (SCW), Scotland (SSSC) and Northern Ireland (NISCC), yes: registration is mandatory and must be kept current. England has no equivalent register for the general care workforce, so English agencies evidence competence through training, supervision and DBS currency instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a DBS check valid across the whole UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The DBS covers England and Wales. Scotland uses the PVG scheme through Disclosure Scotland, and Northern Ireland uses AccessNI, typically at Enhanced level for care roles. Cross-border agencies need the right check, and the right record fields, for each nation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one software platform handle all four regulators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if nation is a real configuration choice. homecareOS applies CQC, CIW, Care Inspectorate or RQIA frameworks based on your agency's nation, with the matching workforce register and vetting fields. England-first platforms that only render CQC dashboards leave agencies elsewhere translating evidence by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my agency operates in more than one nation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each nation's service is its own regulatory entity: separate registration, separate framework, different workforce rules. Keep the daily evidence discipline identical everywhere and let each service map that evidence to its own regulator's framework and reporting cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one software platform handle all four UK care regulators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if nation is a first-class setting rather than a label. In homecareOS the agency's nation drives the compliance framework, the background check, the workforce register and the wording on printed documents: CQC and the DBS in England, CIW, the DBS and Social Care Wales in Wales, the Care Inspectorate, the PVG scheme and the SSSC in Scotland, and RQIA, AccessNI and NISCC in Northern Ireland. Platforms built England first tend to render CQC dashboards and leave everyone else translating by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should an agency operating in more than one UK nation do about compliance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat each nation's service as its own regulated entity. A provider in England and Wales answers to CQC for one and CIW for the other, with separate registrations, separate frameworks and different workforce rules. The daily discipline does not change: capture visits, notes, medication and training as you go. What changes per nation is the framework the evidence maps to and the identifiers you hold against each worker."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -420,6 +436,12 @@
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What if my agency operates in more than one nation?</summary>
           <p style="margin-top:12px">Each nation's service is its own regulatory entity: separate registration, separate framework, different workforce rules. Keep the daily evidence discipline identical everywhere and let each service map that evidence to its own regulator's framework and reporting cycle.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Can one software platform handle all four UK care regulators?</summary>
+          <p style="margin-top:12px">Only if nation is a first-class setting rather than a label. In homecareOS the agency's nation drives the compliance framework, the background check, the workforce register and the wording on printed documents: CQC and the DBS in England, CIW, the DBS and Social Care Wales in Wales, the Care Inspectorate, the PVG scheme and the SSSC in Scotland, and RQIA, AccessNI and NISCC in Northern Ireland. Platforms built England first tend to render CQC dashboards and leave everyone else translating by hand.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What should an agency operating in more than one UK nation do about compliance?</summary>
+          <p style="margin-top:12px">Treat each nation's service as its own regulated entity. A provider in England and Wales answers to CQC for one and CIW for the other, with separate registrations, separate frameworks and different workforce rules. The daily discipline does not change: capture visits, notes, medication and training as you go. What changes per nation is the framework the evidence maps to and the identifiers you hold against each worker.</p></details>
         </section>
 
         <!-- Author bio -->

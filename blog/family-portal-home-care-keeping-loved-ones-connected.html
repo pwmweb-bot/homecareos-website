@@ -99,15 +99,69 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What does the homecareOS Family Portal show?","acceptedAnswer":{"@type":"Answer","text":"Family members with consent see: today's planned visits with arrival window and assigned carer, real-time arrival/departure confirmations, daily care summaries (what happened during each visit), medication confirmation, missed-visit alerts within minutes, the carer profile for each visit (name, photo, languages, brief bio), and a contact channel back to the office. They do not see clinical detail beyond a summary unless explicitly granted access."}},
-    {"@type":"Question","name":"Is the Family Portal free for families?","acceptedAnswer":{"@type":"Answer","text":"The standard Family Portal is included in every agency plan including the free starter tier. There is also a Family Premium subscription (£4.99/month, paid by the family member, not the agency) which adds richer features: photo updates, body-map visibility, longer message history, video updates, and support for multiple service users in one account. Most families never need premium; it exists for distant relatives who want fuller visibility."}},
-    {"@type":"Question","name":"How quickly are missed-visit alerts sent?","acceptedAnswer":{"@type":"Answer","text":"Missed-visit alerts go out the moment the visit window closes without a check-in. For a 09:00-09:30 visit, if no carer has checked in by 09:30 (or the agency's configured tolerance), an alert goes to the family contacts and the office simultaneously. The alert names the service user, the missed visit, and the steps the office is taking. This 'fail forward' behaviour is what families consistently say matters most."}},
-    {"@type":"Question","name":"What's the difference between the Family Portal and a 'client portal'?","acceptedAnswer":{"@type":"Answer","text":"Most home care platforms offer a 'client portal', typically a simple read-only view of visits and basic care plan information, designed for the service user themselves or one designated next of kin. The homecareOS Family Portal is built for whole-family engagement: multiple consented family members can have access, real-time push notifications go to phones, and the experience is mobile-first because that's where families are. The portal is a different design problem to a client portal."}},
-    {"@type":"Question","name":"Does the family see what the carer wrote in the daily notes?","acceptedAnswer":{"@type":"Answer","text":"Families see a structured care summary, not the raw clinical notes. The summary includes: time of visit, carer name, tasks completed, mood/wellbeing observations, medication taken, and any flags raised. Detailed clinical notes (e.g. body map marks, specific medication doses, safeguarding concerns) are visible only if the agency has explicitly granted that level of access, typically only to a designated decision-maker."}},
-    {"@type":"Question","name":"How is family consent managed?","acceptedAnswer":{"@type":"Answer","text":"Each service user (or their authorised representative) decides which family members get portal access and at what level. Three default levels: Visit-only (just the schedule and arrival confirmations), Standard (visits plus daily summaries and missed-visit alerts), Full (everything in Standard plus access to clinical detail). Consent is recorded with date and signature, and can be withdrawn or changed at any time."}}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the Family Portal show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Family members with consent see: today's planned visits, real-time arrival/departure confirmations, daily care summaries, medication confirmation, missed-visit alerts within minutes, the carer profile for each visit, and a contact channel back to the office."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Family Portal free for families?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard Family Portal is included in every agency plan (including the free starter tier). A Family Premium subscription (£4.99/month, paid by the family) adds richer features like photo updates, body-map visibility, and longer message history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly are missed-visit alerts sent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The moment the visit window closes without a check-in, typically within 5 minutes. The alert goes to family contacts and the office simultaneously, naming the visit, the service user, and what happens next."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between the Family Portal and a \"client portal\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A client portal is typically read-only and designed for the service user or one next-of-kin. The Family Portal supports whole-family engagement: multiple consented family members at different access levels, real-time push notifications, mobile-first design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is family consent managed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each service user (or authorised representative) decides which family members get portal access and at what level (Visit-only / Standard / Full). Consent is recorded with date and signature, and can be withdrawn or changed at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the homecareOS family portal show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A family member with access sees the schedule of planned visits and who is coming, confirmation of when a carer arrived and left, the visits already delivered, medications, observations, and the care plan and care needs for the person they are connected to. They can message the office, and they can approve or query a visit, which is advisory and recorded rather than a sign-off that changes the record. Times are shown in UK time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the family see what the carer wrote in the daily notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the notes the office has chosen to share. Each note carries a flag for whether it is visible to the family, and that flag is enforced in the database rather than by hiding things in the interface, so a note that is not shared is not returned to a family login at all. The office decides note by note, which matters when a note concerns a safeguarding issue or a family disagreement."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -293,6 +347,12 @@
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">How is family consent managed?</summary>
           <p style="margin-top:12px">Each service user (or authorised representative) decides which family members get portal access and at what level (Visit-only / Standard / Full). Consent is recorded with date and signature, and can be withdrawn or changed at any time.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What does the homecareOS family portal show?</summary>
+          <p style="margin-top:12px">A family member with access sees the schedule of planned visits and who is coming, confirmation of when a carer arrived and left, the visits already delivered, medications, observations, and the care plan and care needs for the person they are connected to. They can message the office, and they can approve or query a visit, which is advisory and recorded rather than a sign-off that changes the record. Times are shown in UK time.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Does the family see what the carer wrote in the daily notes?</summary>
+          <p style="margin-top:12px">Only the notes the office has chosen to share. Each note carries a flag for whether it is visible to the family, and that flag is enforced in the database rather than by hiding things in the interface, so a note that is not shared is not returned to a family login at all. The office decides note by note, which matters when a note concerns a safeguarding issue or a family disagreement.</p></details>
         </section>
 
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px" data-reveal>

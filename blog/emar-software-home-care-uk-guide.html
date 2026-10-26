@@ -148,53 +148,53 @@
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is eMAR in home care?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "eMAR stands for electronic Medication Administration Record. In domiciliary care it replaces the paper MAR chart with a digital record on the carer's mobile app. The carer sees exactly which medicines are due at each visit, records whether each one was given, refused, or not required, and signs electronically with a timestamp. Every entry syncs to the office in real time, so a coordinator can see medication compliance across every service user without waiting for paper charts to come back at the end of the month."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is eMAR a legal requirement for domiciliary care agencies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No UK regulator mandates electronic MAR specifically, you can still run compliant medication support on paper. But an accurate, contemporaneous MAR record is expected everywhere: by CQC in England under the Safe key question, by CIW in Wales under RISCA, by the Care Inspectorate in Scotland against the Health and Social Care Standards, and by RQIA in Northern Ireland. eMAR is not required, but it makes meeting those expectations far easier, because it removes the gaps, illegible signatures and missing charts that paper MAR routinely produces."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between scheduled and PRN medication on an eMAR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Scheduled medicines are given at set times, a carer records each one as given, refused or not administered at the visit it is due. PRN (pro re nata, or 'as required') medicines are given only when needed, such as pain relief or anxiety medication. A strong eMAR treats PRN differently: it prompts the carer for the reason it was given, the dose, and the time, and then follows up on effectiveness at the next relevant visit. Recording PRN without an effectiveness check is one of the most common medication findings at inspection."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can carers record eMAR offline?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "They should be able to. Home care visits happen in basement flats, rural blackspots and buildings with no signal, so any eMAR that needs a live connection to record an administration will lose records. A well-built eMAR captures the medication round, the signature and any refusal or PRN reason offline on the carer's phone, then syncs the timestamped entry to the office the moment signal returns, with no data loss if the app closes mid-visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does eMAR software integrate with GP and pharmacy systems?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Some do, to varying degrees. A number of UK eMAR products exchange data with dispensing pharmacies so that a service user's medication list flows into the record rather than being typed in by hand, which reduces transcription error. Direct GP-system integration is less common in domiciliary care. When evaluating a platform, ask specifically which pharmacy partners it exchanges data with and what happens when a prescription changes mid-cycle, that is where transcription errors and MAR reconciliation problems usually appear."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is eMAR in home care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eMAR stands for electronic Medication Administration Record. In domiciliary care it replaces the paper MAR chart with a record on the carer's phone. The carer sees which medicines are due at that visit, records each one as given, refused or not given with a reason, and signs with a timestamp. The entry reaches the office as it happens, so a coordinator can see medication across every service user without waiting for charts to come back at the end of the month."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Is eMAR a legal requirement for domiciliary care agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No UK regulator mandates an electronic MAR, and you can run compliant medication support on paper. What is expected everywhere is an accurate, contemporaneous record: by CQC in England, by CIW in Wales under RISCA, by the Care Inspectorate in Scotland against the Health and Social Care Standards, and by RQIA in Northern Ireland. eMAR is not required. It removes the gaps, illegible signatures and missing charts that paper produces, which is a different argument and a better one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between scheduled and PRN medication on an eMAR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scheduled medicines are given at set times and recorded at the visit they are due. PRN, meaning as required, is given only when needed, such as pain relief. A good eMAR treats them differently: for a PRN it asks why it was given, the dose and the time, and then asks someone to record whether it worked. Recording a PRN with no effectiveness check is one of the most common medication findings at inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can carers record eMAR offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They have to be able to, or you will lose records. Home care happens in basement flats and rural blackspots, and any eMAR needing a live connection will drop entries. The homecareOS carer app holds the medication round, the signature and any refusal or PRN reason on the device and sends them when signal returns, along with the rest of the visit, so the carer finishes the visit properly and the phone deals with the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does eMAR software integrate with GP and pharmacy systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some products exchange data with dispensing pharmacies so a medication list flows in rather than being typed, which removes a transcription step and the errors that come with it. Direct GP system integration is much less common in domiciliary care. When you are evaluating a platform, ask which pharmacies specifically, and ask what happens when a prescription changes mid-cycle, because that is where reconciliation problems appear."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -417,6 +417,18 @@
         </section>
 
         <!-- Bottom CTA -->
+          <h2 id="faq">eMAR in home care, answered</h2>
+          <h3>What is eMAR in home care?</h3>
+          <p>eMAR stands for electronic Medication Administration Record. In domiciliary care it replaces the paper MAR chart with a record on the carer's phone. The carer sees which medicines are due at that visit, records each one as given, refused or not given with a reason, and signs with a timestamp. The entry reaches the office as it happens, so a coordinator can see medication across every service user without waiting for charts to come back at the end of the month.</p>
+          <h3>Is eMAR a legal requirement for domiciliary care agencies?</h3>
+          <p>No. No UK regulator mandates an electronic MAR, and you can run compliant medication support on paper. What is expected everywhere is an accurate, contemporaneous record: by CQC in England, by CIW in Wales under RISCA, by the Care Inspectorate in Scotland against the Health and Social Care Standards, and by RQIA in Northern Ireland. eMAR is not required. It removes the gaps, illegible signatures and missing charts that paper produces, which is a different argument and a better one.</p>
+          <h3>What is the difference between scheduled and PRN medication on an eMAR?</h3>
+          <p>Scheduled medicines are given at set times and recorded at the visit they are due. PRN, meaning as required, is given only when needed, such as pain relief. A good eMAR treats them differently: for a PRN it asks why it was given, the dose and the time, and then asks someone to record whether it worked. Recording a PRN with no effectiveness check is one of the most common medication findings at inspection.</p>
+          <h3>Can carers record eMAR offline?</h3>
+          <p>They have to be able to, or you will lose records. Home care happens in basement flats and rural blackspots, and any eMAR needing a live connection will drop entries. The homecareOS carer app holds the medication round, the signature and any refusal or PRN reason on the device and sends them when signal returns, along with the rest of the visit, so the carer finishes the visit properly and the phone deals with the rest.</p>
+          <h3>Does eMAR software integrate with GP and pharmacy systems?</h3>
+          <p>Some products exchange data with dispensing pharmacies so a medication list flows in rather than being typed, which removes a transcription step and the errors that come with it. Direct GP system integration is much less common in domiciliary care. When you are evaluating a platform, ask which pharmacies specifically, and ask what happens when a prescription changes mid-cycle, because that is where reconciliation problems appear.</p>
+
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>See eMAR working inside homecareOS</h2>

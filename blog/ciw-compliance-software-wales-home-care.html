@@ -148,53 +148,61 @@
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does the CQC regulate home care in Wales?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The Care Quality Commission (CQC) and the Care Act 2014 apply in England only. Domiciliary care in Wales is regulated by Care Inspectorate Wales (CIW) under the Regulation and Inspection of Social Care (Wales) Act 2016, known as RISCA. Any guide, template or software configured only for CQC will not produce the evidence a CIW inspector expects, and buying an England-only platform is one of the most common mistakes Welsh agencies make."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is RISCA, and which quality themes apply to home care?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "RISCA is the Regulation and Inspection of Social Care (Wales) Act 2016, the legal framework CIW inspects against. CIW has four inspection themes, but its framework applies Environment to accommodation-based services only, so a domiciliary support service is inspected and rated against three: Well-being, Care and Support, and Leadership and Management. Well-being sits at the centre and reflects the person-centred duties of the Social Services and Well-being (Wales) Act 2014. Your care records, audits and reports should be organised so that evidence maps cleanly onto those three themes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do care workers in Wales need to register with Social Care Wales?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Domiciliary care workers in Wales must register with Social Care Wales (SCW), the workforce regulator, and maintain that registration through continuing professional development. This is different from England, where there is no equivalent mandatory register for care workers. Your software should hold each worker's SCW registration number and renewal date alongside their DBS check, and alert you before either expires. An unregistered worker delivering care is a serious compliance failure."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the Responsible Individual's reporting duties under RISCA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every registered service in Wales must have a designated Responsible Individual (RI). The RI must visit the service regularly, at least once each quarter, to speak with people receiving support and with staff, and record what they find. Separately, the provider must review the quality of care at least every six months, drawing on feedback, outcomes and audit data. Both duties depend on being able to pull current visit, care and workforce evidence quickly rather than reconstructing it from spreadsheets."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the Welsh language Active Offer and how does it affect care records?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Active Offer means providing a service in Welsh without someone having to ask for it, in line with the Welsh Government's 'More than just words' framework and the wider Welsh Language Standards. In practice it affects your care records and communications: recording each person's language preference, matching Welsh-speaking carers where it matters (particularly in dementia care), and being able to produce care documents and family updates bilingually. It is a care-quality duty CIW looks at, not just a matter for your website."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the CQC regulate home care in Wales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The CQC and the Care Act 2014 apply in England only. Domiciliary care in Wales is regulated by Care Inspectorate Wales (CIW) under RISCA, the Regulation and Inspection of Social Care (Wales) Act 2016. Software configured only for CQC will not produce the evidence a CIW inspector expects."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "What is RISCA, and which quality themes apply to home care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RISCA is the Regulation and Inspection of Social Care (Wales) Act 2016. CIW has four inspection themes, but Environment applies to accommodation-based services only, so a domiciliary support service is rated against three: Well-being, Care & Support, and Leadership & Management. Well-being reflects the person-centred duties of the Social Services and Well-being (Wales) Act 2014."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do care workers in Wales need to register with Social Care Wales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Domiciliary care workers in Wales must register with Social Care Wales (SCW) and keep that registration current. England has no equivalent register, so your software should hold each worker's SCW number and renewal date alongside their DBS check and alert you before either lapses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Responsible Individual's reporting duties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every registered service must have a Responsible Individual (RI). The RI must visit the service at least once each quarter, speaking with people and staff, and the provider must review the quality of care at least every six months. Both rely on being able to pull current visit, care and workforce data quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Welsh language Active Offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Active Offer means providing a service in Welsh without someone having to ask, under the \"More than just words\" framework and the Welsh Language Standards. In practice it means recording language preference, matching Welsh-speaking carers, and producing bilingual records where needed, a care-quality duty CIW assesses, not just a website matter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Welsh language Active Offer and how does it affect care records?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Active Offer means providing a service in Welsh without the person having to ask, under the Welsh Government's More than just words framework. In practice it reaches your records: noting each person's language preference, matching Welsh-speaking carers where it matters, which it does particularly in dementia care, and being able to produce documents and family updates in Welsh. CIW treats it as a care quality duty, not a website matter."
+      }
+    }
+  ]
+}
+</script>
 
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -386,6 +394,9 @@
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What is the Welsh language Active Offer?</summary>
           <p style="margin-top:12px">The <strong>Active Offer</strong> means providing a service in Welsh without someone having to ask, under the "More than just words" framework and the Welsh Language Standards. In practice it means recording language preference, matching Welsh-speaking carers, and producing bilingual records where needed, a care-quality duty CIW assesses, not just a website matter.</p></details>
+
+          <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What is the Welsh language Active Offer and how does it affect care records?</summary>
+          <p style="margin-top:12px">The Active Offer means providing a service in Welsh without the person having to ask, under the Welsh Government's More than just words framework. In practice it reaches your records: noting each person's language preference, matching Welsh-speaking carers where it matters, which it does particularly in dementia care, and being able to produce documents and family updates in Welsh. CIW treats it as a care quality duty, not a website matter.</p></details>
         </section>
 
         <!-- Author bio -->
