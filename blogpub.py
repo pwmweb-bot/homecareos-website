@@ -627,7 +627,8 @@ def _refresh_blog_index(metas):
 def _public_pages():
     pages = []
     for folder, names in (("", glob.glob(os.path.join(ROOT, "*.html"))),
-                          ("blog", glob.glob(os.path.join(ROOT, "blog", "*.html")))):
+                          ("blog", glob.glob(os.path.join(ROOT, "blog", "*.html"))),
+                          ("help", glob.glob(os.path.join(ROOT, "help", "*.html")))):
         for path in names:
             rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
             if rel == "blog/index.html":
@@ -644,6 +645,8 @@ def _public_pages():
             return (2, "")
         if rel.startswith("blog/"):
             return (3, rel)
+        if rel.startswith("help/"):
+            return (4, rel)
         return (1, rel)
     return sorted(set(pages), key=key)
 

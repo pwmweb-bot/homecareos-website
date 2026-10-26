@@ -17,7 +17,6 @@ from html.parser import HTMLParser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
     "blog/care-certificate-home-care-agencies.html",
-    "blog/best-domiciliary-care-software-uk.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
     "blog/national-minimum-wage-travel-time-home-care.html",
@@ -32,6 +31,13 @@ NEW_POSTS = [
     "blog/lone-working-home-care-agencies.html",
     "blog/mandatory-training-care-workers.html",
 ]
+# Help centre pages (scripts/build_help.py). Checked like new posts: in the
+# sitemap, and every link resolves.
+HELP_PAGES = ["help.html"] + sorted(
+    "help/" + name
+    for name in os.listdir(os.path.join(ROOT, "help"))
+    if name.endswith(".html")
+)
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
     "blog/home-care-software-uk-guide.html":
@@ -96,10 +102,10 @@ def pages():
     for dirpath, names in ((ROOT, [f for f in os.listdir(ROOT) if f.endswith(".html")]),):
         for name in names:
             found.append(name)
-    blog = os.path.join(ROOT, "blog")
-    for name in os.listdir(blog):
-        if name.endswith(".html"):
-            found.append("blog/" + name)
+    for folder in ("blog", "help"):
+        for name in os.listdir(os.path.join(ROOT, folder)):
+            if name.endswith(".html"):
+                found.append(folder + "/" + name)
     return sorted(found)
 
 
@@ -144,12 +150,12 @@ def main():
     for rel in sorted(NOINDEX_ALLOW):
         if rel in sitemap or f"/{rel}" in sitemap:
             errors.append(f"{rel} is noindex and must stay out of sitemap.xml")
-    for rel in NEW_POSTS:
+    for rel in NEW_POSTS + HELP_PAGES:
         loc = "https://www.homecareos.co.uk/" + rel
         if loc not in sitemap:
             errors.append(f"missing from sitemap: {loc}")
 
-    link_errors = check_links(NEW_POSTS)
+    link_errors = check_links(NEW_POSTS + HELP_PAGES)
     errors.extend(link_errors)
     if errors:
         print(f"{len(errors)} problem(s):")
@@ -157,7 +163,7 @@ def main():
         return 1
     print(f"titles and descriptions within limits across {len(pages()) - 1} pages")
     print("JSON-LD parses; testimonials noindexed and absent from the sitemap")
-    print(f"links checked on {len(NEW_POSTS)} new posts")
+    print(f"links checked on {len(NEW_POSTS)} new posts and {len(HELP_PAGES)} help pages")
     return 0
 
 
