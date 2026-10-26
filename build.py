@@ -8,6 +8,7 @@ are not edited by hand when the tag changes.
 
 Usage:
   python3 build.py                         # inject partials, then sitemap
+                                           # (*.html, blog/, help/, account/)
   python3 build.py a.html b.html           # inject those files, then sitemap
   python3 build.py sitemap                 # rewrite sitemap.xml only
   python3 build.py publish                 # every content/blog/*.md except _*
@@ -163,6 +164,7 @@ if __name__ == "__main__":
             files = (
                 sorted(glob.glob("*.html"))
                 + sorted(glob.glob("blog/*.html"))
+                + sorted(glob.glob("help/*.html"))
                 + sorted(glob.glob("account/*.html"))
             )
         inject(files)

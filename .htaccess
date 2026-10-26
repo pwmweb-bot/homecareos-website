@@ -37,6 +37,9 @@
   # is /blog.html. Match only the directory itself, not /blog/post.html.
   RewriteRule ^blog/?$ https://www.homecareos.co.uk/blog.html [R=301,L]
   RewriteRule ^blog/index\.html$ https://www.homecareos.co.uk/blog.html [R=301,L]
+  # /help/ is the folder of help articles; the help centre itself is /help.html.
+  RewriteRule ^help/?$ https://www.homecareos.co.uk/help.html [R=301,L]
+  RewriteRule ^help/index\.html$ https://www.homecareos.co.uk/help.html [R=301,L]
   RewriteRule ^blog/best-domiciliary-care-software-uk\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
 </IfModule>
 
