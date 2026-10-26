@@ -29,6 +29,7 @@ NEW_POSTS = [
     "blog/medication-management-home-care-nice-ng67.html",
     "blog/riddor-reporting-home-care-agencies.html",
     "blog/home-care-app-login-portals.html",
+    "blog/lone-working-home-care-agencies.html",
     "blog/mandatory-training-care-workers.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
