@@ -3,3 +3,4 @@
 
 # Internal SEO/strategy artifacts — never deploy to public web root
 audits/
+.vercel
