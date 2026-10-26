@@ -624,6 +624,9 @@ def _refresh_blog_index(metas):
     print(f"blog.html cards: {len(metas)}")
 
 
+_ICLOUD_COPY = re.compile(r" [2-9](\.[A-Za-z0-9]+)?$")
+
+
 def _public_pages():
     pages = []
     for folder, names in (("", glob.glob(os.path.join(ROOT, "*.html"))),
@@ -631,6 +634,12 @@ def _public_pages():
         for path in names:
             rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
             if rel == "blog/index.html":
+                continue
+            # iCloud conflict copies ("home-care-software-uk-guide 2.html") are
+            # stale duplicates of pages we already rank with. Three of them were
+            # published as live sitemap URLs before this check existed.
+            if _ICLOUD_COPY.search(rel):
+                print(f"sitemap: skipping iCloud copy {rel}")
                 continue
             text = open(path, encoding="utf-8", errors="ignore").read()
             robots = re.search(r'<meta\s+[^>]*name="robots"[^>]*>', text, re.I)

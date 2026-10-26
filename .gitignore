@@ -4,3 +4,15 @@
 # Internal SEO/strategy artifacts — never deploy to public web root
 audits/
 .vercel
+
+# iCloud conflict copies. Syncing this folder leaves duplicates named
+# "header 2.html", "lottie 2/", "pay-224 2.webp" and so on, counting up from 2.
+# They are stale copies of files the site already has, and they do real damage:
+# build.py globs blog/*.html, so three of them were published as live sitemap
+# URLs pointing at older versions of our best-ranking pages (26 Oct 2026), and a
+# git add -A swept forty more into the repository the same day.
+# If you ever need one back, it is a copy. Take it from git history instead.
+* 2
+* 2.*
+* [3-9]
+* [3-9].*
