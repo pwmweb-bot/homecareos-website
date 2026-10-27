@@ -17,7 +17,6 @@ from html.parser import HTMLParser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
     "blog/care-certificate-home-care-agencies.html",
-    "blog/best-domiciliary-care-software-uk.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
     "blog/national-minimum-wage-travel-time-home-care.html",
@@ -31,6 +30,7 @@ NEW_POSTS = [
     "blog/home-care-app-login-portals.html",
     "blog/lone-working-home-care-agencies.html",
     "blog/mandatory-training-care-workers.html",
+    "blog/complaints-procedure-home-care-agencies.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
