@@ -155,9 +155,9 @@ Where something has gone wrong in the person's care, the [duty of candour](/blog
 - Decide separately whether CQC, the local authority or the person's family also need to be told
 - Keep records for at least three years
 
-## Where homecareOS fits
+## Where HomecareOS fits
 
-The decision to report, and the report itself, belong to the agency. In homecareOS, an incident is recorded in the [compliance area](/features-compliance.html), where follow-up actions are assigned and safeguarding referrals are tracked against it, so the record of what happened sits alongside the care plan and risk assessment that the reportability question depends on. homecareOS does not send RIDDOR reports to HSE and does not decide whether an incident is reportable. Use HSE's online forms for that.
+The decision to report, and the report itself, belong to the agency. In HomecareOS, an incident is recorded in the [compliance area](/features-compliance.html), where follow-up actions are assigned and safeguarding referrals are tracked against it, so the record of what happened sits alongside the care plan and risk assessment that the reportability question depends on. HomecareOS does not send RIDDOR reports to HSE and does not decide whether an incident is reportable. Use HSE's online forms for that.
 
 ## Sources
 
@@ -169,4 +169,4 @@ The decision to report, and the report itself, belong to the agency. In homecare
 - [Who regulates health and social care](https://www.hse.gov.uk/healthservices/arrangements.htm), Health and Safety Executive, for when HSE investigates incidents involving service users.
 - [Regulation 3](https://www.legislation.gov.uk/uksi/2013/1471/regulation/3), [regulation 4](https://www.legislation.gov.uk/uksi/2013/1471/regulation/4), [regulation 5](https://www.legislation.gov.uk/uksi/2013/1471/regulation/5) and [regulation 12](https://www.legislation.gov.uk/uksi/2013/1471/regulation/12), Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013, for the responsible person, specified and over-seven-day injuries, injuries to non-workers, and records.
 - [Accident reporting](https://www.hseni.gov.uk/articles/accident-reporting), Health and Safety Executive for Northern Ireland, for the separate Northern Ireland regulations.
-- [Compliance features](/features-compliance.html), for how homecareOS records incidents and follow-up actions. That page describes the product.
+- [Compliance features](/features-compliance.html), for how HomecareOS records incidents and follow-up actions. That page describes the product.

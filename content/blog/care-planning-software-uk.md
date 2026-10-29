@@ -22,7 +22,7 @@ related:
 feature_title: Digital care records and eMAR
 feature_href: /features-care-records.html
 feature_category: Feature
-feature_summary: Care plans, medication records and visit notes in homecareOS, with corrections that keep the original wording.
+feature_summary: Care plans, medication records and visit notes in HomecareOS, with corrections that keep the original wording.
 faqs:
   - q: What is care planning software?
     a: Software that holds a person's care plan and the ongoing record of care, instead of a paper file in the house. The Department of Health and Social Care calls this kind of system a digital social care record when it replaces paper notes.
@@ -72,7 +72,7 @@ Use one real person, with their permission or with details you have invented for
 - A medication entry that cannot be quietly overwritten. Refused, missed and not available are different events. Our [guide to eMAR in home care](/blog/emar-software-home-care-uk-guide.html) goes through that record in more detail.
 - An export of the whole record, in a format you can open without the supplier.
 
-The Department of Health and Social Care says that, when you are making the case for digital records, one benefit reported for this kind of system is time: digital social care records can free up over 20 minutes per care worker per shift by making handovers faster. That figure is theirs, from the [guidance published on 29 September 2026](https://www.gov.uk/guidance/digital-social-care-records-choosing-and-implementing-solutions). It is not a result measured in homecareOS, and it will not appear on its own if the handover is still a paper sheet photographed at the end of the run.
+The Department of Health and Social Care says that, when you are making the case for digital records, one benefit reported for this kind of system is time: digital social care records can free up over 20 minutes per care worker per shift by making handovers faster. That figure is theirs, from the [guidance published on 29 September 2026](https://www.gov.uk/guidance/digital-social-care-records-choosing-and-implementing-solutions). It is not a result measured in HomecareOS, and it will not appear on its own if the handover is still a paper sheet photographed at the end of the run.
 
 ## The assured solutions list, and what it does not decide
 
@@ -80,13 +80,13 @@ NHS England keeps an [assured solutions list](https://www.gov.uk/guidance/digita
 
 Being on the list is about the care record. It is not a verdict on rostering, payroll or electronic call monitoring. The same page says a provider that wants to use NHS GP Connect needs an assured solution that integrates with it, 'standards met' on the Data Security and Protection Toolkit, and a signed National Data Sharing Agreement. Those are conditions for GP Connect, not a claim that every care system offers it.
 
-On homecareOS, [GP Connect is named on the integrations page](/integrations.html) as a connector agencies can ask to have built. The page does not describe it as switched on today. If GP Connect is essential to your specification, treat that as an open question and get the answer in writing.
+On HomecareOS, [GP Connect is named on the integrations page](/integrations.html) as a connector agencies can ask to have built. The page does not describe it as switched on today. If GP Connect is essential to your specification, treat that as an open question and get the answer in writing.
 
-## How the record works in homecareOS
+## How the record works in HomecareOS
 
-[Digital care records](/features-care-records.html) in homecareOS are written on the carer's phone and tied to the visit. The feature page says a medication record or care note can be corrected only with a written reason, and the original wording, the person who changed it and the time are kept. Risks sit against the matching part of the plan. Goals carry a baseline, a measure and a review date, and progress is recorded at the visit.
+[Digital care records](/features-care-records.html) in HomecareOS are written on the carer's phone and tied to the visit. The feature page says a medication record or care note can be corrected only with a written reason, and the original wording, the person who changed it and the time are kept. Risks sit against the matching part of the plan. Goals carry a baseline, a measure and a review date, and progress is recorded at the visit.
 
-That is a description of our product, from that page. It is not a statement that homecareOS is on the NHS assured solutions list. Look the list up. If a supplier tells you they are on it, ask them to show you the entry.
+That is a description of our product, from that page. It is not a statement that HomecareOS is on the NHS assured solutions list. Look the list up. If a supplier tells you they are on it, ask them to show you the entry.
 
 CQC may still ask for the sample plan and the policy. Software does not write those for you. It should make the plan you agreed with the person readable at the next visit, and keep what was written when someone needs to correct a mistake.
 
@@ -96,4 +96,4 @@ CQC may still ask for the sample plan and the policy. Software does not write th
 - [Regulation 9](https://www.legislation.gov.uk/uksi/2014/2936/regulation/9) and [CQC guidance on Regulation 9](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-9).
 - [Regulation 17](https://www.legislation.gov.uk/uksi/2014/2936/regulation/17) and [CQC guidance on Regulation 17](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-17).
 - [Home care (domiciliary care) agencies](https://www.cqc.org.uk/guidance-regulation/registration/supporting-documents-provider/extra-documents/home-care), Care Quality Commission, on documents that may be requested.
-- [homecareOS digital care records](/features-care-records.html), for how our product stores plans, notes and medication records.
+- [HomecareOS digital care records](/features-care-records.html), for how our product stores plans, notes and medication records.

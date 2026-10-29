@@ -22,23 +22,23 @@ related:
 feature_title: Home care software features
 feature_href: /features.html
 feature_category: Feature
-feature_summary: Rota, care records, eMAR, invoicing and payroll in one homecareOS system.
+feature_summary: Rota, care records, eMAR, invoicing and payroll in one HomecareOS system.
 faqs:
   - q: Is there one best domiciliary care software package in the UK?
     a: No. A system priced per carer can cost less than one priced per hour of care for one agency, and more for another. Compare the price unit, what is excluded, and the record of care, then ask for a written quote.
   - q: Why do starting prices differ so much?
-    a: Suppliers publish different units. homecareOS publishes a price per carer. Birdie publishes a starting monthly price based on scheduled care hours. CareLineLive publishes a price per carer with a monthly minimum. Others ask you to request a quote.
+    a: Suppliers publish different units. HomecareOS publishes a price per carer. Birdie publishes a starting monthly price based on scheduled care hours. CareLineLive publishes a price per carer with a monthly minimum. Others ask you to request a quote.
   - q: Should I only buy from the NHS assured solutions list?
     a: The Department of Health and Social Care says every solution on the list offers care planning, recording, reporting and audit trails, meets national standards, and can connect with GP records. Check the current list for the product you are buying. Membership can change, and the list is not a ranking of rota or payroll tools.
 cta_title: Compare the shortlist against your own rota
-cta_text: Bring a week of visits to a short demo, or start on homecareOS free for up to 5 carers. No card needed.
-cta_secondary: See homecareOS pricing
+cta_text: Bring a week of visits to a short demo, or start on HomecareOS free for up to 5 carers. No card needed.
+cta_secondary: See HomecareOS pricing
 cta_secondary_href: /pricing.html
 ---
 
 A search for the best domiciliary care software in the UK returns a lot of lists, and very few of them show where the prices came from. This one only uses figures a supplier has published on its own website, checked on 13 October 2026. Where a supplier does not publish a price, the table says so. It does not guess.
 
-homecareOS is our product, so it is in the table with the others. It is not declared the winner. For a five-carer agency and a 40-carer agency the cheapest system is often a different one, because the bills are calculated in different units.
+HomecareOS is our product, so it is in the table with the others. It is not declared the winner. For a five-carer agency and a 40-carer agency the cheapest system is often a different one, because the bills are calculated in different units.
 
 ## Start with the unit, not the headline price
 
@@ -57,7 +57,7 @@ Ask for the quote in writing, excluding VAT and then including it, with minimums
 
 | Supplier | Public price, checked 13 October 2026 | What the bill follows |
 |---|---|---|
-| [homecareOS](/pricing.html) | Free while you have up to 5 carers, then £10 per carer a month. The pricing page says annual billing saves 20%. It does not say whether VAT is added. | Carers. The page says office users are not counted, and there is no cap on service users. |
+| [HomecareOS](/pricing.html) | Free while you have up to 5 carers, then £10 per carer a month. The pricing page says annual billing saves 20%. It does not say whether VAT is added. | Carers. The page says office users are not counted, and there is no cap on service users. |
 | [Birdie](https://www.birdie.care/pricing) | From £200 a month, excluding VAT. | Scheduled care hours. Birdie says each plan has a monthly cost based on the hours you schedule, and that you need a quote for the final figure. |
 | [CareLineLive](https://carelinelive.com/pricing/) | £8.10, £19.70 or £45.00 per carer a month, excluding VAT, depending on the plan. Minimum £120 a month plus VAT. | Carers using the carer app. Admin users are not charged. Onboarding is up to £300 plus VAT. On-site training is £600 plus VAT a day. |
 | [Careberry](https://www.careberry.com/pricing-care-management-software) | Starter from £110 a month plus VAT. | Small-team starter price. The growth plan is per client, with no public unit price. Enterprise is a custom quote. No setup fee. Three months' notice to cancel. |
@@ -70,7 +70,7 @@ Ask for the quote in writing, excluding VAT and then including it, with minimums
 
 Two extras are easy to miss. Birdie's pricing page also sells SmartPlans, its AI assessments, separately from the monthly plans: £3.50 per recording hour if you pay as you go, after three free hours, or from £2.75 per recording hour if you commit for a month. CareLineLive's £120 minimum is what £8.10 times 15 carers comes to on the eRoster plan, which is how their page explains the minimum. A four-carer agency does not pay four times £8.10.
 
-Nourish's own page says [CarePlanner is now part of Nourish](https://nourishcare.com/careplanner/) following the acquisition in October 2023. If you are comparing CarePlanner, you are comparing a product inside that group. Our [homecareOS and CarePlanner](/compare-careplanner.html) page says the same thing, and links on to the Nourish comparison.
+Nourish's own page says [CarePlanner is now part of Nourish](https://nourishcare.com/careplanner/) following the acquisition in October 2023. If you are comparing CarePlanner, you are comparing a product inside that group. Our [HomecareOS and CarePlanner](/compare-careplanner.html) page says the same thing, and links on to the Nourish comparison.
 
 ## What the price does not tell you
 
@@ -82,7 +82,7 @@ If you hold a council contract, ask whether you must use the council's electroni
 
 For the care record itself, use the [NHS England assured solutions list](https://www.gov.uk/guidance/digital-social-care-records-choosing-and-implementing-solutions). The Department of Health and Social Care says every solution on it offers care planning, recording, reporting and audit trails, meets national quality and security standards, and can connect with GP records. The list is not a ranking, and it changes. Check it on the day you buy. Do not take a supplier's word for membership without looking.
 
-GP Connect has its own conditions on that same page. A provider needs an assured digital social care record that integrates with GP Connect, 'standards met' on the Data Security and Protection Toolkit, and a signed National Data Sharing Agreement. On the [homecareOS integrations page](/integrations.html), GP Connect is listed among connectors agencies can ask for. It is not described there as a live connection.
+GP Connect has its own conditions on that same page. A provider needs an assured digital social care record that integrates with GP Connect, 'standards met' on the Data Security and Protection Toolkit, and a signed National Data Sharing Agreement. On the [HomecareOS integrations page](/integrations.html), GP Connect is listed among connectors agencies can ask for. It is not described there as a live connection.
 
 ## A shortlist you can explain to a board
 
@@ -94,7 +94,7 @@ GP Connect has its own conditions on that same page. A provider needs an assured
 
 Skills for Care's [summary of domiciliary care services for 2025/26](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/Summary-of-domiciliary-care-services-2026.pdf) reports that, as at March 2026, CQC regulated 15,695 non-residential locations in England, up from 8,856 in 2018. In 2025/26 those services had an estimated 580,000 filled posts and 52,000 vacant posts, and a vacancy rate of 9.0%. Software will not fill those posts. It does decide how much of a coordinator's day is spent rebuilding a rota around them.
 
-## Where homecareOS sits
+## Where HomecareOS sits
 
 The [pricing page](/pricing.html) is the source for our figures: free while you have up to 5 carers, with no credit card and no time limit, then £10 per carer a month. Office users are not counted. There is no cap on service users. Annual billing saves 20%, according to that page. VAT is not stated there, so ask before you compare it with a price that is explicitly excluding VAT.
 
@@ -102,7 +102,7 @@ The [features](/features.html) cover the rota, digital care plans, eMAR, the car
 
 ## Sources
 
-- [homecareOS pricing](/pricing.html), for the free tier, the £10 rate, office users and the annual saving.
+- [HomecareOS pricing](/pricing.html), for the free tier, the £10 rate, office users and the annual saving.
 - [Birdie pricing](https://www.birdie.care/pricing), for the £200 starting price, hourly billing and SmartPlans rates.
 - [CareLineLive pricing](https://carelinelive.com/pricing/), for the per-carer rates, the £120 minimum, onboarding and training.
 - [Careberry pricing](https://www.careberry.com/pricing-care-management-software), for the £110 starter price and the other two plans.

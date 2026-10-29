@@ -1,5 +1,5 @@
 /*
- * homecareOS — play silent product animations only while they are on screen
+ * HomecareOS — play silent product animations only while they are on screen
  *
  * Usage:
  *   <figure class="rota-video">

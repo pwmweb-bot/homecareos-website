@@ -1,5 +1,5 @@
 /*
- * homecareOS — Calendly lazy-loader
+ * HomecareOS — Calendly lazy-loader
  *
  * Defers Calendly CSS+JS (~80 KiB) until the visitor either:
  *   1. Clicks a "Book a Demo" button (load + open popup)

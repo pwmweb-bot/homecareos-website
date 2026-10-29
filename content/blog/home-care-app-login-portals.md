@@ -72,7 +72,7 @@ Most UK home care agencies use software with three front doors: an office login 
 ```
 
 - **Office staff** sign in at [app.homecareos.co.uk/login](https://app.homecareos.co.uk/login).
-- **Carers** are invited by their office by email. The link in that email opens the homecareOS Carer app if it is installed, or the browser if not, and you set your password there. The app is on the [App Store](https://apps.apple.com/gb/app/homecareos-carer/id6763616793) and [Google Play](https://play.google.com/store/apps/details?id=com.psychemeta.homecareos.carer), and carers can also sign in on the web at [app.homecareos.co.uk/carer/login](https://app.homecareos.co.uk/carer/login).
+- **Carers** are invited by their office by email. The link in that email opens the HomecareOS Carer app if it is installed, or the browser if not, and you set your password there. The app is on the [App Store](https://apps.apple.com/gb/app/homecareos-carer/id6763616793) and [Google Play](https://play.google.com/store/apps/details?id=com.psychemeta.homecareos.carer), and carers can also sign in on the web at [app.homecareos.co.uk/carer/login](https://app.homecareos.co.uk/carer/login).
 - **Families** are invited by the agency by email, set a password from that email, then sign in at [app.homecareos.co.uk/family/login](https://app.homecareos.co.uk/family/login). The agency chooses what is shared. See [what the Family Portal shows](/features-family-portal.html).
 - **Locked out?** Use "Forgotten password" on the sign-in page, or ask your agency's office to send a fresh link.
 
