@@ -162,7 +162,7 @@ The rules above are the test of a policy. A useful policy names which duty appli
 
 Staff who might be the first to hear that something has gone wrong need to know that the conversation is part of the job, and who they call before they improvise one. CQC says it may question frontline staff on exactly that.
 
-The record is the part an inspector can still see after the visit. [Incident records in homecareOS](/features-compliance.html) hold the incident, the follow-up actions and the timeline. That is a description of the product on that page. It does not carry out the conversation, decide whether an incident meets a threshold, or write the apology. Those remain with the registered person.
+The record is the part an inspector can still see after the visit. [Incident records in HomecareOS](/features-compliance.html) hold the incident, the follow-up actions and the timeline. That is a description of the product on that page. It does not carry out the conversation, decide whether an incident meets a threshold, or write the apology. Those remain with the registered person.
 
 ## Sources
 
@@ -178,4 +178,4 @@ The record is the part an inspector can still see after the visit. [Incident rec
 - [Regulation 13](https://www.legislation.gov.uk/wsi/2017/1264/regulation/13), the Regulated Services (Service Providers and Responsible Individuals) (Wales) Regulations 2017.
 - [Section 3](https://www.legislation.gov.uk/asc/2020/1/section/3), Health and Social Care (Quality and Engagement) (Wales) Act 2020, for the duty on an NHS body.
 - [Statutory guidance for service providers and responsible individuals](https://www.gov.wales/sites/default/files/publications/2024-03/guidance-for-care-home-and-domiciliary-suppliers-2024.pdf), Welsh Government, March 2024, for the expectations published alongside the Welsh regulation.
-- [Incidents, audits and compliance records](/features-compliance.html), for how homecareOS stores an incident and its follow-up. That page describes the product.
+- [Incidents, audits and compliance records](/features-compliance.html), for how HomecareOS stores an incident and its follow-up. That page describes the product.

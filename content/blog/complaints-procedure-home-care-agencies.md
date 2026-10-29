@@ -22,7 +22,7 @@ related:
 feature_title: CQC inspection readiness
 feature_href: /cqc-inspection-ready.html
 feature_category: Feature
-feature_summary: How homecareOS tracks complaint response deadlines alongside reviews, training and incidents in one overdue view.
+feature_summary: How HomecareOS tracks complaint response deadlines alongside reviews, training and incidents in one overdue view.
 faqs:
   - q: Does a home care agency have to have a complaints procedure?
     a: Yes. Regulation 16(2) of the Health and Social Care Act 2008 (Regulated Activities) Regulations 2014 requires the registered person to establish and operate effectively an accessible system for identifying, receiving, recording, handling and responding to complaints. CQC says it must refuse registration if a provider cannot satisfy it that it can and will comply.
@@ -35,7 +35,7 @@ faqs:
   - q: Does CQC investigate individual complaints about a care agency?
     a: No. CQC says it is not able to take forward complaints on someone's behalf, but asks people to tell it about poor care, because that information helps it protect others. Individual complaints about adult social care in England go to the provider and then to the Local Government and Social Care Ombudsman.
 cta_title: Keep every complaint on one timeline
-cta_text: Book a 15-minute demo, or call Phil on 01905 674704 to see how complaint deadlines sit with reviews, incidents and training in homecareOS.
+cta_text: Book a 15-minute demo, or call Phil on 01905 674704 to see how complaint deadlines sit with reviews, incidents and training in HomecareOS.
 cta_secondary: CQC inspection readiness
 cta_secondary_href: /cqc-inspection-ready.html
 ---
@@ -151,9 +151,9 @@ Drawing the points above together, a complaints policy for a home care agency in
 - where to go if the person is not satisfied, including the Local Government and Social Care Ombudsman
 - how complaints are recorded, reviewed for trends, and summarised for CQC within 28 days of a request
 
-## Where homecareOS fits
+## Where HomecareOS fits
 
-The [homecareOS CQC inspection readiness page](/cqc-inspection-ready.html) describes how complaint response deadlines are tracked with care plan reviews, training expiry, supervisions, audits and incident investigations in one overdue view. The [policies library](/features-policies.html) includes nation-specific complaints procedures for each agency to adapt. Neither decides whether a complaint is upheld, writes the response, or replaces the registered manager's judgement. They keep the dates and the record in one place.
+The [HomecareOS CQC inspection readiness page](/cqc-inspection-ready.html) describes how complaint response deadlines are tracked with care plan reviews, training expiry, supervisions, audits and incident investigations in one overdue view. The [policies library](/features-policies.html) includes nation-specific complaints procedures for each agency to adapt. Neither decides whether a complaint is upheld, writes the response, or replaces the registered manager's judgement. They keep the dates and the record in one place.
 
 ## Sources
 

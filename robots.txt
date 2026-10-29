@@ -1,4 +1,4 @@
-# homecareOS — robots.txt
+# HomecareOS — robots.txt
 # Updated: 2026-04-29
 #
 # All crawlers are welcome by default. AI crawlers are explicitly listed

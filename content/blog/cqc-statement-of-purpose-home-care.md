@@ -156,9 +156,9 @@ The practical risk for a new agency comes earlier. The registration guide explai
 - Your business name, the person responsible, the date created and the review date, which CQC's supporting documents guidance asks for on every document
 - No personal information about anyone who will use the service
 
-## Where homecareOS fits
+## Where HomecareOS fits
 
-The statement of purpose is written by the provider and sent to CQC by the provider. The [CQC registration checklist in homecareOS](/features-cqc-registration.html) includes the statement of purpose as one item, kept with the rest of your registration evidence, such as policies, DBS checks and training records. It does not submit anything to CQC, and it does not decide which service types or service user bands apply to you. Those remain decisions for the registered person.
+The statement of purpose is written by the provider and sent to CQC by the provider. The [CQC registration checklist in HomecareOS](/features-cqc-registration.html) includes the statement of purpose as one item, kept with the rest of your registration evidence, such as policies, DBS checks and training records. It does not submit anything to CQC, and it does not decide which service types or service user bands apply to you. Those remain decisions for the registered person.
 
 ## Sources
 
@@ -171,4 +171,4 @@ The statement of purpose is written by the provider and sent to CQC by the provi
 - [Regulation 12](https://www.legislation.gov.uk/uksi/2009/3112/regulation/12), [Schedule 3](https://www.legislation.gov.uk/uksi/2009/3112/schedule/3) and [Regulation 25](https://www.legislation.gov.uk/uksi/2009/3112/regulation/25), Care Quality Commission (Registration) Regulations 2009, for the duty, its contents and the offence.
 - [Schedule 1, paragraph 1](https://www.legislation.gov.uk/uksi/2014/2936/schedule/1/paragraph/1), Health and Social Care Act 2008 (Regulated Activities) Regulations 2014, for the regulated activity of personal care.
 - [Section 93](https://www.legislation.gov.uk/ukpga/2008/14/section/93) and [section 94](https://www.legislation.gov.uk/ukpga/2008/14/section/94), Health and Social Care Act 2008, for how notices are given and when they are taken to be received.
-- [CQC registration checklist](/features-cqc-registration.html), for how homecareOS keeps the statement with your registration evidence. That page describes the product.
+- [CQC registration checklist](/features-cqc-registration.html), for how HomecareOS keeps the statement with your registration evidence. That page describes the product.
