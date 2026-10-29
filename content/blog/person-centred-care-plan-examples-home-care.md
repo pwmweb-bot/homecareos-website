@@ -22,7 +22,7 @@ related:
 feature_title: Digital care plans and reviews
 feature_href: /features-care-planning.html
 feature_category: Feature
-feature_summary: How homecareOS builds each plan in sections with review dates and puts the right part of it in front of the carer at every visit.
+feature_summary: How HomecareOS builds each plan in sections with review dates and puts the right part of it in front of the carer at every visit.
 faqs:
   - q: What is a person-centred care plan?
     a: It is a written plan, agreed with the person, that sets out the support they will get and how it will be given, starting from what matters to them, what they can do for themselves and the outcomes they want. In England, Regulation 9 of the Health and Social Care Act 2008 (Regulated Activities) Regulations 2014 requires care that is appropriate, meets the person's needs and reflects their preferences, and CQC's guidance says the plan should include agreed goals and an agreed review date.
@@ -37,7 +37,7 @@ faqs:
   - q: Can families see the care plan?
     a: NICE NG21 recommends giving the person, and their carers with the person's permission, a copy of the home care plan in a format that meets their needs. Whether a relative can see it depends on the person's consent, or on who has lawful authority to act for them if they lack capacity to decide.
 cta_title: See a plan like this on the carer's phone
-cta_text: Book a 15-minute demo, or call Phil on 01905 674704, and we will show you a care plan in homecareOS from the office screen to the doorstep.
+cta_text: Book a 15-minute demo, or call Phil on 01905 674704, and we will show you a care plan in HomecareOS from the office screen to the doorstep.
 cta_secondary: Care planning features
 cta_secondary_href: /features-care-planning.html
 ---
@@ -606,9 +606,9 @@ We have turned the twelve sections above into a plain, printable template you ca
 
 It includes a one-page summary, prompts for each section, tables for outcomes, visits and risks, and a review and sign-off page. Print it, adapt it to your service, and make sure it fits your own policies and your regulator's requirements.
 
-## How care plans work in homecareOS
+## How care plans work in HomecareOS
 
-In homecareOS, each person's [care plan](/features-care-planning.html) is written in sections that follow your regulator, including about me, personal care, mobility, nutrition, medication and communication, and each section has its own review date. Tasks show which calls they belong to, so the morning call gets the morning tasks. Risks, medicines and outcome goals link back to the section they belong to, and carers update goals at each visit.
+In HomecareOS, each person's [care plan](/features-care-planning.html) is written in sections that follow your regulator, including about me, personal care, mobility, nutrition, medication and communication, and each section has its own review date. Tasks show which calls they belong to, so the morning call gets the morning tasks. Risks, medicines and outcome goals link back to the section they belong to, and carers update goals at each visit.
 
 Carers read the relevant parts of the plan on their phone during the visit, and you can preview exactly what a carer will see before you publish a change. With the person's agreement, you can also let a relative read the care plan in the [family portal](/blog/family-portal-home-care-keeping-loved-ones-connected.html), choosing what they can see.
 
