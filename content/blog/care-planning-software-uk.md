@@ -15,8 +15,8 @@ related:
     href: /blog/electronic-call-monitoring-home-care.html
     category: Operations
     summary: The visit record that shows whether the planned care was attended.
-  - title: Best home and domiciliary care software UK: 16 compared
-    href: /blog/home-care-software-uk-guide.html
+  - title: Best domiciliary care software UK: 10 compared
+    href: /blog/best-domiciliary-care-software-uk.html
     category: Comparison
     summary: Public prices, and why a care-record product and a rota product are not always the same purchase.
 feature_title: Digital care records and eMAR
@@ -38,7 +38,7 @@ cta_secondary_href: /features-care-records.html
 
 Care planning software is the tool a home care agency uses to write a person's plan and to keep the notes, risks and, often, the medication record that show the plan being followed. The Department of Health and Social Care describes these systems as [digital social care records](https://www.gov.uk/guidance/digital-social-care-records-choosing-and-implementing-solutions): software for recording a person's care information, replacing paper. The same guidance says they are sometimes called electronic care plans, care records or care management systems, and that they do not normally include rostering or an electronic medication chart, though some products do both.
 
-That last point is why shortlists get muddled. A brilliant rota product can still leave the care plan in a PDF. A care-record product can still leave you building runs in a spreadsheet. If you need both, say so in the specification. Prices for UK systems, and which of them publish a price at all, are in [best domiciliary care software UK](/blog/home-care-software-uk-guide.html).
+That last point is why shortlists get muddled. A brilliant rota product can still leave the care plan in a PDF. A care-record product can still leave you building runs in a spreadsheet. If you need both, say so in the specification. Prices for ten UK systems, and which of them publish a price at all, are in [best domiciliary care software UK](/blog/best-domiciliary-care-software-uk.html).
 
 ## What Regulation 9 requires of the plan
 
