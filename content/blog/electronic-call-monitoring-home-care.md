@@ -11,10 +11,10 @@ image: /images/photos/mobile-app-hand.webp
 image_alt: A hand holding a phone showing a home care visit on a mobile app
 image_caption: A clock-in is only as useful as the record it leaves behind for the office, the council and the inspector.
 related:
-  - title: Best home and domiciliary care software UK: 16 compared
-    href: /blog/home-care-software-uk-guide.html
+  - title: Best domiciliary care software UK: 10 compared
+    href: /blog/best-domiciliary-care-software-uk.html
     category: Comparison
-    summary: Public prices for UK systems, and the questions a price does not answer.
+    summary: Public prices for ten UK systems, and the questions a price does not answer.
   - title: Care planning software for UK home care
     href: /blog/care-planning-software-uk.html
     category: Care records
@@ -38,7 +38,7 @@ cta_secondary_href: /features-mobile-app.html
 
 Electronic call monitoring, often shortened to ECM, is the digital record of a home care visit. The carer registers arrival and departure. The office, and often the council that commissioned the care, can see whether the visit took place, how long it lasted, and whether that lines up with what was purchased.
 
-It is not the care plan, and it is not the medication chart. It is the evidence that someone was there to follow them. If you are choosing [domiciliary care software](/blog/home-care-software-uk-guide.html), ask about ECM before you ask about dashboards. A council framework can make it a condition of getting paid.
+It is not the care plan, and it is not the medication chart. It is the evidence that someone was there to follow them. If you are choosing [domiciliary care software](/blog/best-domiciliary-care-software-uk.html), ask about ECM before you ask about dashboards. A council framework can make it a condition of getting paid.
 
 ## What commissioners actually say it is for
 
@@ -94,7 +94,7 @@ This article is not that advice. It is a prompt to write down, before you switch
 4. Can anyone change a clock time, and is the original kept?
 5. How are missed and late visits counted, and can we export that count for a contract review?
 
-The price of the system is a separate question. Public list prices, where suppliers publish them, are in the [comparison of UK home care systems](/blog/home-care-software-uk-guide.html).
+The price of the system is a separate question. Public list prices, where suppliers publish them, are in the [comparison of ten UK systems](/blog/best-domiciliary-care-software-uk.html).
 
 ## Sources
 
