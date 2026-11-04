@@ -32,11 +32,14 @@ NEW_POSTS = [
     "blog/mandatory-training-care-workers.html",
     "blog/complaints-procedure-home-care-agencies.html",
     "blog/dignity-in-care-home-care-agencies.html",
+    "faq.html",
+    "blog/infection-prevention-control-home-care.html",
+    "blog/how-to-write-care-notes-home-care.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
     "blog/home-care-software-uk-guide.html":
-        "Home Care Software UK: Domiciliary Buyer's Guide | homecareOS",
+        "Home Care Software UK: Domiciliary Buyer's Guide | HomecareOS",
 }
 # Vendor help centres behind a Cloudflare bot check. They answer some scripted
 # requests with 403 at random, while the same page opens in a browser. A 403 from

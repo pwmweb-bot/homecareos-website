@@ -22,7 +22,7 @@ related:
 feature_title: eMAR for home care
 feature_href: /features-emar.html
 feature_category: Feature
-feature_summary: How homecareOS shows carers the doses due on the call they are on, and records each outcome.
+feature_summary: How HomecareOS shows carers the doses due on the call they are on, and records each outcome.
 faqs:
   - q: Does NICE NG67 apply to home care agencies?
     a: Yes. NG67 covers medicines support for adults aged 18 and over who receive social care in the community, which includes people supported by a domiciliary care agency in their own home. People living in care homes are covered by a separate NICE guideline.
@@ -185,7 +185,7 @@ Where a medicine needs specific skills, such as giving it through a PEG tube, NG
 
 Software does not decide what support a person needs, and it does not replace the prescriber, the pharmacist or the competency assessment. It can make the record easier to keep and easier to check.
 
-In homecareOS, [the eMAR](/features-emar.html) shows a carer the doses due within the call they are on, with the person's allergies on the same screen, and records each dose with an outcome code, keeping refused and withheld separate. The office sees a weekly chart where doses that were due but not recorded are flagged, and a check for medicines that no visit covers. A saved entry can be corrected, but the correction needs a written reason and the original is kept. Those are the features described on that page today. If you want to see them against your own rota, [book a short demo](https://www.homecareos.co.uk/booking.html) or call 01905 674704.
+In HomecareOS, [the eMAR](/features-emar.html) shows a carer the doses due within the call they are on, with the person's allergies on the same screen, and records each dose with an outcome code, keeping refused and withheld separate. The office sees a weekly chart where doses that were due but not recorded are flagged, and a check for medicines that no visit covers. A saved entry can be corrected, but the correction needs a written reason and the original is kept. Those are the features described on that page today. If you want to see them against your own rota, [book a short demo](https://www.homecareos.co.uk/booking.html) or call 01905 674704.
 
 ## Sources
 
@@ -196,4 +196,4 @@ In homecareOS, [the eMAR](/features-emar.html) shows a carer the doses due withi
 - [Medicines administration records in adult social care](https://www.cqc.org.uk/guidance-regulation/adult-social-care/medicines-information-adult-social-care-services/medicines-administration-records-adult-social-care), Care Quality Commission, updated 4 November 2025, for home care recording, compliance aids and retention.
 - [Controlled drugs in home care](https://www.cqc.org.uk/guidance-regulation/adult-social-care/medicines-information-adult-social-care-services/controlled-drugs-home-care), Care Quality Commission, updated 7 January 2025, for storage, witnessing and policy requirements.
 - [Yellow Card scheme](https://yellowcard.mhra.gov.uk/), Medicines and Healthcare products Regulatory Agency, for reporting side effects.
-- [eMAR for home care](/features-emar.html), for how homecareOS records medicines. That page describes the product.
+- [eMAR for home care](/features-emar.html), for how HomecareOS records medicines. That page describes the product.

@@ -141,9 +141,9 @@ The [Care Certificate](https://www.skillsforcare.org.uk/Developing-your-workforc
 5. **Watch expiry dates.** Review who is due before they lapse, and decide what happens if someone is out of date, for example taking them off visits that involve that task until they are refreshed.
 6. **Keep the evidence.** Certificates, observation records and supervision notes should be easy to find for any carer, not spread across inboxes.
 
-## How homecareOS helps
+## How HomecareOS helps
 
-homecareOS does not sell or deliver training courses. It records the training your carers complete, whoever provides it. On the [training features page](/features-training.html) you can see what is included today:
+HomecareOS does not sell or deliver training courses. It records the training your carers complete, whoever provides it. On the [training features page](/features-training.html) you can see what is included today:
 
 - you choose which courses are mandatory for your agency, add your own courses, and apply the list to existing staff in one step
 - certificates are flagged as expiring from 30 days before the expiry date, and as expired once it passes, on the carer record and the staff compliance screen
