@@ -16,6 +16,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
+    "blog/mental-capacity-act-home-care-agencies.html",
     "blog/care-certificate-home-care-agencies.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
