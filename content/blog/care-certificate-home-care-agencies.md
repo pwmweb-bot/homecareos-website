@@ -160,7 +160,7 @@ An inspector, and a new coordinator picking up the file after you, will look for
 - The workplace induction that the certificate does not cover: your procedures, and the tasks this rota actually includes.
 - Supervision and spot checks after the certificate, because the assessor guide treats certification as the start of indirect supervision, not the end of oversight.
 
-On homecareOS, the [staff record](/features-staff-management.html) stores training certificates and flags them from 30 days before they expire, then as expired once the date has passed. Supervisions, annual appraisals and competency assessments sit on the same record. Overdue and upcoming reviews show in red and amber on the carer record and the staff compliance screen. That is the file. The judgement that a carer is safe to be left in the house, and the signature on the certificate, stay with the registered manager.
+On HomecareOS, the [staff record](/features-staff-management.html) stores training certificates and flags them from 30 days before they expire, then as expired once the date has passed. Supervisions, annual appraisals and competency assessments sit on the same record. Overdue and upcoming reviews show in red and amber on the carer record and the staff compliance screen. That is the file. The judgement that a carer is safe to be left in the house, and the signature on the certificate, stay with the registered manager.
 
 ## Sources
 
