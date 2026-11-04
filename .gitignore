@@ -4,6 +4,7 @@
 # Internal SEO/strategy artifacts — never deploy to public web root
 audits/
 .vercel
+__pycache__/
 
 # iCloud conflict copies. Syncing this folder leaves duplicates named
 # "header 2.html", "lottie 2/", "pay-224 2.webp" and so on, counting up from 2.

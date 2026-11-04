@@ -52,6 +52,17 @@ Check lengths and the links in newly published posts:
 python3 scripts/check_seo.py
 ```
 
+## Help centre
+
+The help centre is `/help.html`, with one page per article in `help/`. The articles live in `content/help/articles.py`; `scripts/build_help.py` renders them (landing page, articles, header and footer, sitemap). Edit the data, never the generated HTML:
+
+```bash
+python3 scripts/build_help.py
+python3 scripts/check_seo.py
+```
+
+Each article has a status badge: **Live** (every agency has it), **Rolling out** (it works in the new HomecareOS design, which is being switched on agency by agency) or **Coming soon** (planned; never write steps for it). Check every step against the app on `main` before publishing. Steps describe the new design screens, not the old office pages. Screenshots go in `images/help/` and must be the new design on demo data; an article without one shows a marked placeholder (`data-screenshot-needed`). `.htaccess` sends `/help/` to `/help.html`, as it does for `/blog/`.
+
 ## `/blog/`
 
 `blog/` is a real directory of post files, so Apache will not apply the pretty-URL rewrite and, with indexes off, `/blog/` returns 403. `.htaccess` 301-redirects `/blog/` and `/blog/index.html` to `/blog.html`. `blog/index.html` is a noindex fallback with the same destination, for a host that ignores the rewrite.
