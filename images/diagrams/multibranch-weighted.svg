@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 686" role="img" aria-labelledby="mb-weighted-t mb-weighted-d" font-family="DM Sans, system-ui, -apple-system, sans-serif">
   <title id="mb-weighted-t">Weighted, not averaged: two branches of very different size</title>
-  <desc id="mb-weighted-d">Example. Each square is 30 visits. Branch A has 30 visits, shown as one square, and delivered 18 of them, 60%. Branch B has 3,000 visits, shown as 100 squares, and delivered 2,850 of them, 95%, so it has 100 times the visits. Averaging the two percentages gives 77.5%, which gives 30 visits the same say as 3,000. The homecareOS group figure is weighted: 2,868 of 3,030 visits delivered, 94.7%.</desc>
+  <desc id="mb-weighted-d">Example. Each square is 30 visits. Branch A has 30 visits, shown as one square, and delivered 18 of them, 60%. Branch B has 3,000 visits, shown as 100 squares, and delivered 2,850 of them, 95%, so it has 100 times the visits. Averaging the two percentages gives 77.5%, which gives 30 visits the same say as 3,000. The HomecareOS group figure is weighted: 2,868 of 3,030 visits delivered, 94.7%.</desc>
   <style>
     .mb-weighted-lab { font-size: 17px; font-weight: 600; fill: #374151; }
     .mb-weighted-strong { font-weight: 700; fill: #16323D; }
@@ -45,7 +45,7 @@
   <text class="mb-weighted-sub" x="20" y="540">Gives 30 visits the same say as 3,000</text>
 
   <rect x="0.75" y="574.75" width="518.5" height="108.5" rx="10" fill="#f6f1e7" stroke="#E8A14A" stroke-width="1.5"/>
-  <text class="mb-weighted-lab mb-weighted-strong" x="20" y="604">homecareOS group figure, weighted</text>
+  <text class="mb-weighted-lab mb-weighted-strong" x="20" y="604">HomecareOS group figure, weighted</text>
   <rect x="20" y="618" width="400" height="18" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
   <rect x="20" y="618" width="378.6" height="18" rx="4" fill="#16323D"/>
   <text class="mb-weighted-val" x="504" y="635" text-anchor="end">94.7%</text>

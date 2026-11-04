@@ -144,9 +144,9 @@ A training record that will stand up to those questions shows, for each member o
 
 New carers also meet this subject in induction. Standard 16 of the [Care Certificate](/blog/care-certificate-home-care-agencies.html) is awareness of learning disability and autism, and the Care Certificate questions and answers name the Oliver McGowan training as the preferred training for it. Ticking standard 16 does not, on its own, show training at the tier the role needs.
 
-## Keeping track in homecareOS
+## Keeping track in HomecareOS
 
-homecareOS does not deliver or sell training. In the [training and Care Certificate area](/features-training.html) you choose which courses are mandatory for your agency and can add your own, so Tier 1 and Tier 2 can each be set up as a course and applied to the staff who need them. Certificates are stored on the carer's staff file, an expiry date is flagged from 30 days before it passes, and the training matrix shows every carer against every course. The Care Certificate tracker's standard 16 notes Oliver McGowan training as the preferred evidence.
+HomecareOS does not deliver or sell training. In the [training and Care Certificate area](/features-training.html) you choose which courses are mandatory for your agency and can add your own, so Tier 1 and Tier 2 can each be set up as a course and applied to the staff who need them. Certificates are stored on the carer's staff file, an expiry date is flagged from 30 days before it passes, and the training matrix shows every carer against every course. The Care Certificate tracker's standard 16 notes Oliver McGowan training as the preferred evidence.
 
 Training sits beside DBS, right to work and supervisions on the staff compliance screen, so you can see whether a carer is ready to work. If you are also reviewing how your carers record and report concerns, the [safeguarding adults guide](/blog/safeguarding-adults-home-care-agencies.html) covers the duty that often comes up in the same inspection conversation.
 

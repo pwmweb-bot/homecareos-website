@@ -22,7 +22,7 @@ related:
 feature_title: Care staff management
 feature_href: /features-staff-management.html
 feature_category: Feature
-feature_summary: How homecareOS keeps supervisions in each carer's staff file alongside training, checks, leave and absence.
+feature_summary: How HomecareOS keeps supervisions in each carer's staff file alongside training, checks, leave and absence.
 faqs:
   - q: Is supervision a legal requirement for care workers?
     a: Yes, in regulated home care in England. Regulation 18(2)(a) of the Health and Social Care Act 2008 (Regulated Activities) Regulations 2014 says staff must receive such appropriate support, training, professional development, supervision and appraisal as is necessary to enable them to carry out the duties they are employed to perform.
@@ -35,7 +35,7 @@ faqs:
   - q: Who can carry out supervision in a home care agency?
     a: It does not have to be the registered manager. Skills for Care lists deputy managers, team leaders, senior and experienced care workers, trainers and registered nurses among the people who can supervise, and suggests at least one year's experience before someone takes on a supervisory role. The registered manager stays accountable to CQC for making sure effective supervision happens.
 cta_title: Keep every supervision on the staff file
-cta_text: Book a 15-minute demo, or call Phil on 01905 674704 to see how supervisions sit with training, checks and absence in homecareOS.
+cta_text: Book a 15-minute demo, or call Phil on 01905 674704 to see how supervisions sit with training, checks and absence in HomecareOS.
 cta_secondary: Care staff management
 cta_secondary_href: /features-staff-management.html
 ---
@@ -121,9 +121,9 @@ When an inspector samples a carer's file, the supervision trail should answer a 
 
 The records that answer those questions are the ones that link up: the supervision note, the training it led to, the spot check it discussed and the incident it followed. Kept in separate folders, they are hard to show together. [Mandatory training](/blog/mandatory-training-care-workers.html) gaps found in supervision should turn into booked training, and a safeguarding concern raised in a session should follow your [safeguarding procedure](/blog/safeguarding-adults-home-care-agencies.html).
 
-## How homecareOS helps
+## How HomecareOS helps
 
-In homecareOS, supervisions sit in each carer's staff file alongside their training, background checks, right to work, leave and absence. You can see the full [care staff management](/features-staff-management.html) picture on one screen rather than across a filing cabinet and several spreadsheets, and completed supervisions count towards the evidence you can show against CQC's quality statements.
+In HomecareOS, supervisions sit in each carer's staff file alongside their training, background checks, right to work, leave and absence. You can see the full [care staff management](/features-staff-management.html) picture on one screen rather than across a filing cabinet and several spreadsheets, and completed supervisions count towards the evidence you can show against CQC's quality statements.
 
 If you would like to see how that looks for your team, [book a 15-minute demo](https://www.homecareos.co.uk/booking.html) or call Phil on 01905 674704.
 

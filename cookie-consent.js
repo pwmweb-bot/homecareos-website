@@ -1,5 +1,5 @@
 /*
- * homecareOS Cookie Consent Banner
+ * HomecareOS Cookie Consent Banner
  *
  * Consent Mode v2 aware. Works with the inline gtag consent defaults
  * that are set in each page's <head> before the gtag.js script loads.
