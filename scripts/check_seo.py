@@ -10,6 +10,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 
@@ -17,7 +18,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
     "blog/mental-capacity-act-home-care-agencies.html",
     "blog/care-certificate-home-care-agencies.html",
-    "blog/best-domiciliary-care-software-uk.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
     "blog/national-minimum-wage-travel-time-home-care.html",
@@ -25,11 +25,30 @@ NEW_POSTS = [
     "blog/dbs-check-for-care-workers.html",
     "blog/duty-of-candour-home-care-agencies.html",
     "blog/cqc-notifications-home-care-agencies.html",
+    "blog/cqc-statement-of-purpose-home-care.html",
+    "blog/medication-management-home-care-nice-ng67.html",
+    "blog/riddor-reporting-home-care-agencies.html",
+    "blog/home-care-app-login-portals.html",
+    "blog/lone-working-home-care-agencies.html",
+    "blog/mandatory-training-care-workers.html",
+    "blog/complaints-procedure-home-care-agencies.html",
+    "blog/person-centred-care-plan-examples-home-care.html",
+    "blog/dignity-in-care-home-care-agencies.html",
+    "faq.html",
+    "blog/infection-prevention-control-home-care.html",
+    "blog/how-to-write-care-notes-home-care.html",
 ]
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
     "blog/home-care-software-uk-guide.html":
-        "Home Care Software UK: Domiciliary Buyer's Guide | homecareOS",
+        "Home Care Software UK: Domiciliary Buyer's Guide | HomecareOS",
+}
+# Vendor help centres behind a Cloudflare bot check. They answer some scripted
+# requests with 403 at random, while the same page opens in a browser. A 403 from
+# these hosts is printed as a note to check by hand, not counted as a failure.
+BOT_CHECK_HOSTS = {
+    "onetouchhealthhelp.zendesk.com",
+    "support.carelinelive.com",
 }
 # Ads landing pages. Google may crawl them, and they must stay out of the index.
 NOINDEX_ALLOW = {
@@ -179,6 +198,10 @@ def check_links(rels):
                     problems.append(f"missing file for {href} from {rel}")
             elif href.startswith("http"):
                 status = fetch_status(href)
+                host = urllib.parse.urlsplit(href).hostname or ""
+                if status == 403 and host in BOT_CHECK_HOSTS:
+                    print(f"note: 403 from bot check, open by hand: {href}")
+                    continue
                 if status is None or status >= 400:
                     problems.append(f"HTTP {status} {href}")
     return problems

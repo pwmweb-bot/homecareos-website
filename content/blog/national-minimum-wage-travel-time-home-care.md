@@ -8,7 +8,7 @@ category: Payroll
 standfirst: The minimum wage test for a home care worker is an average across the pay period. The hours usually include the journeys between visits. The drive from home to the first call is a different rule, and a mileage payment is not a substitute for those hours.
 breadcrumb: Minimum wage and travel time
 image: /images/photos/mapping.webp
-image_alt: A map in homecareOS with home care visits plotted across a town and a drive time between two of them
+image_alt: A map in HomecareOS with home care visits plotted across a town and a drive time between two of them
 image_caption: A drive time on a map is a planning figure. The minimum wage test uses the time the journey actually took.
 related:
   - title: Carer payroll software for UK home care agencies
@@ -22,7 +22,7 @@ related:
 feature_title: Billing and payroll
 feature_href: /features-finance.html
 feature_category: Feature
-feature_summary: Paid time, mileage claims and the pay run in homecareOS, kept separate from what you charge the council or the family.
+feature_summary: Paid time, mileage claims and the pay run in HomecareOS, kept separate from what you charge the council or the family.
 faqs:
   - q: Does travel between home care visits count for the National Minimum Wage?
     a: For time work, yes, when the worker is travelling between assignments they are obliged to carry out at different places. The minimum wage guidance uses a care worker driving from one client to the next as the example. The journey from home to the first visit, and from the last visit home, is generally not included.
@@ -136,11 +136,11 @@ The visit record is the other half of that. [Electronic call monitoring](/blog/e
 
 ## What the software can show, and what it cannot
 
-[Billing and payroll](/features-finance.html) in homecareOS keeps what you charge separate from what you pay. Planned time, actual time, paid time and charged time are recorded independently on each visit. Travel between consecutive visits is measured by road distance and logged from the visits the carer checked into. A manager approves or rejects each journey with the postcodes, the miles and a drive time already filled in, and an approved claim goes into the pay run.
+[Billing and payroll](/features-finance.html) in HomecareOS keeps what you charge separate from what you pay. Planned time, actual time, paid time and charged time are recorded independently on each visit. Travel between consecutive visits is measured by road distance and logged from the visits the carer checked into. A manager approves or rejects each journey with the postcodes, the miles and a drive time already filled in, and an approved claim goes into the pay run.
 
 [Route planning](/features-route-planning.html) puts a travel gap on the rota, so a run is not drawn as if the carer could be in two houses at once.
 
-None of that is the minimum wage calculation. A drive time taken from the road network is a mileage and planning figure. HMRC's manual, cited above, says a computer-calculated route that does not reflect the journey that happened, including traffic, is not the figure an officer has to accept. The pay run still has to be checked in the way this article describes: hours that count, pay that counts, divided, for each pay reference period. homecareOS prepares that pay run. It does not file payroll with HMRC. The payroll guide says where that handoff sits.
+None of that is the minimum wage calculation. A drive time taken from the road network is a mileage and planning figure. HMRC's manual, cited above, says a computer-calculated route that does not reflect the journey that happened, including traffic, is not the figure an officer has to accept. The pay run still has to be checked in the way this article describes: hours that count, pay that counts, divided, for each pay reference period. HomecareOS prepares that pay run. It does not file payroll with HMRC. The payroll guide says where that handoff sits.
 
 If you want to see one carer's visits, the journeys between them and the pay run on one screen, [book a 15-minute demo](/booking.html).
 
@@ -169,4 +169,4 @@ The department's [checklist for employers](https://www.gov.uk/guidance/calculati
 - [NMWM08300, travelling time for time work](https://www.gov.uk/hmrc-internal-manuals/national-minimum-wage-manual/nmwm08300), HMRC internal manual.
 - [NMWM09170, expenses paid to the worker](https://www.gov.uk/hmrc-internal-manuals/national-minimum-wage-manual/nmwm09170), HMRC internal manual.
 - [Working time for someone who travels for their job](https://www.acas.org.uk/working-time-rules/working-time-for-someone-who-travels-for-their-job), Acas.
-- [homecareOS billing and payroll](/features-finance.html), for the four-value time model and mileage claims. That page describes our product.
+- [HomecareOS billing and payroll](/features-finance.html), for the four-value time model and mileage claims. That page describes our product.

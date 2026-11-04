@@ -205,7 +205,7 @@ CQC's guidance pages on regulations 14, 15, 16 and 18 each say CQC can prosecute
 
 ## The record beside the form
 
-The notification tells CQC. The agency still needs the account of what happened, who was told, and what was done next. [Incident records in homecareOS](/features-compliance.html) hold the incident, the follow-up actions and the safeguarding timeline. That is a description of the product on that page. It does not decide whether Regulation 16 or 18 is met, and it does not submit the CQC form. Those remain with the registered person.
+The notification tells CQC. The agency still needs the account of what happened, who was told, and what was done next. [Incident records in HomecareOS](/features-compliance.html) hold the incident, the follow-up actions and the safeguarding timeline. That is a description of the product on that page. It does not decide whether Regulation 16 or 18 is met, and it does not submit the CQC form. Those remain with the registered person.
 
 ## Sources
 
@@ -224,4 +224,4 @@ The notification tells CQC. The agency still needs the account of what happened,
 - [Registered manager for an activity](https://www.cqc.org.uk/guidance-regulation/providers/registration/changes-registered-details-registered-manager-activity), Care Quality Commission, updated 6 August 2024, for the notice and the manager's own application.
 - [Changes to your statement of purpose](https://www.cqc.org.uk/guidance-regulation/providers/registration/changes-your-statement-purpose-notification-form), Care Quality Commission, updated 11 March 2024.
 - [Notifiable diseases and how to report them](https://www.gov.uk/guidance/notifiable-diseases-and-how-to-report-them), GOV.UK, and [regulation 2](https://www.legislation.gov.uk/uksi/2010/659/regulation/2) of the Health Protection (Notification) Regulations 2010, for the duty on a registered medical practitioner.
-- [Incidents, audits and compliance records](/features-compliance.html), for how homecareOS stores an incident and its follow-up. That page describes the product.
+- [Incidents, audits and compliance records](/features-compliance.html), for how HomecareOS stores an incident and its follow-up. That page describes the product.

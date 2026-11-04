@@ -141,7 +141,7 @@ A record that will still make sense in six months says:
 - the option chosen, and why a less restrictive option would not achieve the purpose
 - when it will be looked at again, including if the person's condition fluctuates
 
-That record belongs on the [care plan](/blog/care-planning-software-uk.html) the carer opens at the door, not in a side conversation. On homecareOS the plan is what the carer sees on the phone, and a ReSPECT form, a DNACPR decision or another document can be filed on it so the carer can read the one you choose during the visit. The software holds the record. It does not assess capacity, and it does not authorise a deprivation of liberty.
+That record belongs on the [care plan](/blog/care-planning-software-uk.html) the carer opens at the door, not in a side conversation. On HomecareOS the plan is what the carer sees on the phone, and a ReSPECT form, a DNACPR decision or another document can be filed on it so the carer can read the one you choose during the visit. The software holds the record. It does not assess capacity, and it does not authorise a deprivation of liberty.
 
 ## Scotland, Wales and Northern Ireland
 

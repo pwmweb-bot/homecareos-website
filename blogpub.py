@@ -203,6 +203,17 @@ def md_to_html(markdown):
         if not stripped:
             i += 1
             continue
+        if stripped == "```html":
+            # Raw HTML block, passed through unchanged, for icon cards and
+            # tables that Markdown cannot express. Close it with ``` on its own line.
+            i += 1
+            raw = []
+            while i < len(lines) and lines[i].strip() != "```":
+                raw.append(lines[i])
+                i += 1
+            i += 1
+            html_parts.append("\n".join(raw))
+            continue
         if stripped.startswith("## "):
             title = stripped[3:].strip()
             html_parts.append(f'<h2 id="{heading_id(title, used_ids)}">{format_inline(title)}</h2>')
@@ -256,7 +267,7 @@ def md_to_html(markdown):
 
 def _block_start(line):
     s = line.strip()
-    return s.startswith(("## ", "### ", "> ", "- ", "|")) or bool(re.match(r"\d+\. ", s))
+    return s.startswith(("## ", "### ", "> ", "- ", "|", "```")) or bool(re.match(r"\d+\. ", s))
 
 
 def _table(rows):
@@ -286,6 +297,7 @@ def _date_label(iso):
 
 
 def _word_count(markdown):
+    markdown = re.sub(r"^```html\n.*?^```$", lambda m: re.sub(r"<[^>]+>", " ", m.group(0)), markdown, flags=re.S | re.M)
     text = re.sub(r"[#>*\[\]\(\)_|]", " ", markdown)
     return len(re.findall(r"[A-Za-z0-9'’£-]+", text))
 
@@ -380,13 +392,13 @@ def render_post(meta, body_html, markdown):
         "author": {
             "@type": "Person",
             "name": "Philip Martin",
-            "jobTitle": "Founder, homecareOS",
+            "jobTitle": "Founder, HomecareOS",
             "url": f"{SITE}/team.html",
             "worksFor": {"@type": "Organization", "name": "PsycheMeta Ltd", "url": SITE},
         },
         "publisher": {
             "@type": "Organization",
-            "name": "homecareOS",
+            "name": "HomecareOS",
             "url": SITE,
             "logo": {
                 "@type": "ImageObject",
@@ -438,7 +450,7 @@ def render_post(meta, body_html, markdown):
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{esc_attr(meta["image_alt"])}">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="homecareOS">
+  <meta property="og:site_name" content="HomecareOS">
   <meta property="article:published_time" content="{published}">
   <meta property="article:modified_time" content="{modified}">
   <meta property="article:author" content="Philip Martin">
@@ -459,7 +471,7 @@ def render_post(meta, body_html, markdown):
   {_json(crumbs)}
   </script>
   {faq_ld}
-  <script src="/js/book-demo.js?v=20260429" defer></script>
+  <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
 <body>
@@ -479,7 +491,7 @@ def render_post(meta, body_html, markdown):
         <h1>{esc(title)}</h1>
         <p>{esc(meta["standfirst"])}</p>
         <div class="post-meta" style="display:flex;align-items:center;gap:16px;margin-top:24px;color:var(--gray-600);font-size:0.95rem">
-          <span><strong style="color:var(--text)">By Philip Martin</strong> &middot; Founder, homecareOS</span>
+          <span><strong style="color:var(--text)">By Philip Martin</strong> &middot; Founder, HomecareOS</span>
           <span aria-hidden="true">&middot;</span>
           <time datetime="{esc_attr(meta["date"])}">Published {_date_label(meta["date"])}</time>
         </div>
@@ -500,8 +512,8 @@ def render_post(meta, body_html, markdown):
             <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%"></div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of homecareOS and managing director of PsycheMeta Ltd. He works with UK home care agencies on the software they use to run the service.</p>
-              <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about homecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He works with UK home care agencies on the software they use to run the service.</p>
+              <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about HomecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
         </aside>
@@ -612,6 +624,9 @@ def _refresh_blog_index(metas):
     print(f"blog.html cards: {len(metas)}")
 
 
+_ICLOUD_COPY = re.compile(r" [2-9](\.[A-Za-z0-9]+)?$")
+
+
 def _public_pages():
     pages = []
     for folder, names in (("", glob.glob(os.path.join(ROOT, "*.html"))),
@@ -619,6 +634,12 @@ def _public_pages():
         for path in names:
             rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
             if rel == "blog/index.html":
+                continue
+            # iCloud conflict copies ("home-care-software-uk-guide 2.html") are
+            # stale duplicates of pages we already rank with. Three of them were
+            # published as live sitemap URLs before this check existed.
+            if _ICLOUD_COPY.search(rel):
+                print(f"sitemap: skipping iCloud copy {rel}")
                 continue
             text = open(path, encoding="utf-8", errors="ignore").read()
             robots = re.search(r'<meta\s+[^>]*name="robots"[^>]*>', text, re.I)
