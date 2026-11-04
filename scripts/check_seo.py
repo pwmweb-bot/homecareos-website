@@ -31,6 +31,7 @@ NEW_POSTS = [
     "blog/lone-working-home-care-agencies.html",
     "blog/mandatory-training-care-workers.html",
     "blog/complaints-procedure-home-care-agencies.html",
+    "blog/person-centred-care-plan-examples-home-care.html",
     "blog/dignity-in-care-home-care-agencies.html",
     "faq.html",
     "blog/infection-prevention-control-home-care.html",
