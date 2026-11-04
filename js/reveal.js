@@ -1,5 +1,5 @@
 /*
- * homecareOS — native scroll-reveal
+ * HomecareOS — native scroll-reveal
  *
  * Tiny IntersectionObserver replacement for AOS (Animate On Scroll).
  * Saved ~16 KiB transfer + ~750ms render-blocking on mobile by removing
