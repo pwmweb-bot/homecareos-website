@@ -22,7 +22,7 @@ related:
 feature_title: The home care app for carers
 feature_href: /features-mobile-app.html
 feature_category: Feature
-feature_summary: GPS, NFC, QR and office clock-in on the homecareOS carer app, including offline.
+feature_summary: GPS, NFC, QR and office clock-in on the HomecareOS carer app, including offline.
 faqs:
   - q: Is electronic call monitoring a CQC requirement?
     a: CQC does not publish a fundamental standard with that name. Regulation 17 requires an accurate, complete and contemporaneous record of the care provided. A council contract can require electronic call monitoring on top of that.
@@ -48,7 +48,7 @@ The London Borough of Newham's contract notice for an [electronic call monitorin
 
 Lambeth's notice for [electronic call monitoring](https://www.contractsfinder.service.gov.uk/Notice/f27f3b2e-f403-408f-8db0-e125320e5d96) says the service should let the council monitor when care is delivered and whether it is in line with the person's care and support plan, and keep the cost in line with actual hours rather than the hours that were commissioned.
 
-Read your own contract. Another borough may want a feed from your system into theirs, a login for a contract manager, or the use of their device only. The [commissioner portal](/features-commissioner-portal.html) on homecareOS is built for sharing visit and quality information with councils without a monthly spreadsheet. Whether your council will accept it is a question for the contract, not for a software brochure.
+Read your own contract. Another borough may want a feed from your system into theirs, a login for a contract manager, or the use of their device only. The [commissioner portal](/features-commissioner-portal.html) on HomecareOS is built for sharing visit and quality information with councils without a monthly spreadsheet. Whether your council will accept it is a question for the contract, not for a software brochure.
 
 ## The regulation that does apply
 
@@ -74,7 +74,7 @@ Skills for Care's [2025/26 summary of domiciliary care services](https://www.ski
 
 Suppliers offer different methods. The differences that matter are whether the method can be used in a house with no signal, and whether the record states which method was used.
 
-On homecareOS, the [carer app](/features-mobile-app.html) lets an agency allow any of four: GPS at the door, an NFC tag in the home, a printed QR code, or a manual entry made by the office when something has genuinely gone wrong. Each GPS, NFC and QR clock-in and clock-out is checked against the registered address. Beyond 150 metres the record is flagged for a coordinator. It is not blocked, because a tower block or a thick wall would otherwise stop an honest carer recording the visit. A manual office entry is stored as a manual entry. That behaviour is described on the feature page. It is our product, not a regulatory minimum.
+On HomecareOS, the [carer app](/features-mobile-app.html) lets an agency allow any of four: GPS at the door, an NFC tag in the home, a printed QR code, or a manual entry made by the office when something has genuinely gone wrong. Each GPS, NFC and QR clock-in and clock-out is checked against the registered address. Beyond 150 metres the record is flagged for a coordinator. It is not blocked, because a tower block or a thick wall would otherwise stop an honest carer recording the visit. A manual office entry is stored as a manual entry. That behaviour is described on the feature page. It is our product, not a regulatory minimum.
 
 Whatever you buy, ask for a visit that was clocked manually to be visibly different from one that was clocked at the door. Ask what is stored when the phone has no signal, and when that stored visit reaches the office. Ask who can edit the time afterwards, and whether the first time remains readable.
 
@@ -103,4 +103,4 @@ The price of the system is a separate question. Public list prices, where suppli
 - [Regulation 17](https://www.legislation.gov.uk/uksi/2014/2936/regulation/17) and [CQC's guidance on Regulation 17](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-17).
 - [Consent to use technology as part of someone's care](https://www.cqc.org.uk/guidance-providers/all-services/find-out-if-you-need-consent-use-technology-part-someones-care), Care Quality Commission.
 - [Domiciliary care services in the adult social care sector 2025/26](https://www.skillsforcare.org.uk/Adult-Social-Care-Workforce-Data/workforceintelligence/resources/Reports/National/Summary-of-domiciliary-care-services-2026.pdf), Skills for Care.
-- [homecareOS carer app](/features-mobile-app.html), for the four clock-in methods and the 150 metre check. That page describes our product.
+- [HomecareOS carer app](/features-mobile-app.html), for the four clock-in methods and the 150 metre check. That page describes our product.
