@@ -111,7 +111,7 @@ def head(title, description, canonical, ld, og_type="article"):
   <meta property="og:type" content="{og_type}">
   <meta property="og:url" content="{canonical}">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="homecareOS">
+  <meta property="og:site_name" content="HomecareOS">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(description)}">
@@ -388,7 +388,7 @@ def main():
         for s in a["related"]:
             assert s in BY_SLUG, f"{a['slug']}: unknown related {s}"
         assert a["status"] in STATUS
-        assert "CareOS" not in json.dumps(a).replace("HomecareOS", "").replace("homecareOS", ""), a["slug"]
+        assert "CareOS" not in json.dumps(a).replace("HomecareOS", "").replace("HomecareOS", ""), a["slug"]
         rel = f"help/{a['slug']}.html"
         open(os.path.join(ROOT, rel), "w", encoding="utf-8").write(article(a))
         files.append(rel)

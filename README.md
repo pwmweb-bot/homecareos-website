@@ -1,4 +1,4 @@
-# homecareOS marketing site
+# HomecareOS marketing site
 
 Static HTML for [homecareos.co.uk](https://www.homecareos.co.uk). The agency app at `app.homecareos.co.uk` is a separate product and is not built from this repository.
 

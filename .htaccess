@@ -40,6 +40,8 @@
   # /help/ is the folder of help articles; the help centre itself is /help.html.
   RewriteRule ^help/?$ https://www.homecareos.co.uk/help.html [R=301,L]
   RewriteRule ^help/index\.html$ https://www.homecareos.co.uk/help.html [R=301,L]
+  # /faqs and /faqs.html are common guesses for the FAQ page.
+  RewriteRule ^faqs(\.html)?/?$ https://www.homecareos.co.uk/faq.html [R=301,L]
   RewriteRule ^blog/best-domiciliary-care-software-uk\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
 </IfModule>
 

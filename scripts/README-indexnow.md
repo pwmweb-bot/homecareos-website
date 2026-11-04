@@ -104,7 +104,7 @@ submissions. Bing typically begins crawling submitted URLs within an hour.
 
 To verify URLs are being indexed faster:
 - Bing Webmaster Tools → URL Inspection
-- ChatGPT search ("homecareOS pricing" should surface the latest copy faster)
+- ChatGPT search ("HomecareOS pricing" should surface the latest copy faster)
 
 ---
 

@@ -16,6 +16,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEW_POSTS = [
+    "blog/mental-capacity-act-home-care-agencies.html",
     "blog/care-certificate-home-care-agencies.html",
     "blog/electronic-call-monitoring-home-care.html",
     "blog/care-planning-software-uk.html",
@@ -30,6 +31,12 @@ NEW_POSTS = [
     "blog/home-care-app-login-portals.html",
     "blog/lone-working-home-care-agencies.html",
     "blog/mandatory-training-care-workers.html",
+    "blog/complaints-procedure-home-care-agencies.html",
+    "blog/person-centred-care-plan-examples-home-care.html",
+    "blog/dignity-in-care-home-care-agencies.html",
+    "faq.html",
+    "blog/infection-prevention-control-home-care.html",
+    "blog/how-to-write-care-notes-home-care.html",
 ]
 # Help centre pages (scripts/build_help.py). Checked like new posts: in the
 # sitemap, and every link resolves.
@@ -41,7 +48,7 @@ HELP_PAGES = ["help.html"] + sorted(
 # Audit row marked keep. Do not shorten it in this change.
 KEEP_OVER_LIMIT = {
     "blog/home-care-software-uk-guide.html":
-        "Home Care Software UK: Domiciliary Buyer's Guide | homecareOS",
+        "Home Care Software UK: Domiciliary Buyer's Guide | HomecareOS",
 }
 # Vendor help centres behind a Cloudflare bot check. They answer some scripted
 # requests with 403 at random, while the same page opens in a browser. A 403 from
