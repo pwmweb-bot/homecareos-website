@@ -39,6 +39,7 @@ NEW_POSTS = [
     "blog/how-to-write-care-notes-home-care.html",
     "blog/pressure-ulcer-prevention-home-care.html",
     "blog/falls-prevention-home-care.html",
+    "blog/applicant-tracking-home-care-agencies.html",
 ]
 # Help centre pages (scripts/build_help.py). Checked like new posts: in the
 # sitemap, and every link resolves.
