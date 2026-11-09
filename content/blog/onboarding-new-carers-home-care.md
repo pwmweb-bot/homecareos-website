@@ -123,7 +123,7 @@ The first week of solo visits is when a new carer is most likely to feel overwhe
 
 Onboarding does not end at the first solo visit. Skills for Care's [week one](https://www.skillsforcare.org.uk/Recruitment-and-retention/Induction-toolkit/Week-one.aspx) and [month one](https://www.skillsforcare.org.uk/Recruitment-and-retention/Induction-toolkit/Month-one.aspx) guidance recommends an early supervision meeting to explain probation and review points, then regular supervision through the first month. It suggests month one is a good time to agree a personal development plan. The toolkit continues to [months three to six](https://www.skillsforcare.org.uk/Recruitment-and-retention/Induction-toolkit/Months-three-to-six.aspx).
 
-Record each of these conversations. They are part of the evidence for Regulation 18, and our guide to [supervision and appraisal for care workers](/blog/supervision-appraisal-care-workers.html) sets out a structure. They are also when you find out, early, that someone is struggling with a particular person or a long run, while there is still time to fix it.
+Record each of these conversations. They are part of the evidence for Regulation 18, and our guide to [supervision and appraisal for care workers](/blog/supervision-appraisal-care-workers.html) sets out a structure. They are also when you find out, early, that someone is struggling with a particular person or a long run, while there is still time to fix it. Skills for Care's turnover figures show why this early stretch matters: first-year leavers drive a large share of turnover, which is why these check-ins sit alongside our practical [care worker retention ideas](/blog/care-worker-retention-ideas.html).
 
 ## A one-page onboarding checklist
 
