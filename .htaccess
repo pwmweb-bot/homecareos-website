@@ -43,6 +43,19 @@
   # /faqs and /faqs.html are common guesses for the FAQ page.
   RewriteRule ^faqs(\.html)?/?$ https://www.homecareos.co.uk/faq.html [R=301,L]
   RewriteRule ^blog/best-domiciliary-care-software-uk\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+
+  # Six competitor comparison pages merged into the buyer guide, 10 Nov 2026.
+  # Google had never fetched any of them in six months, while crawling four of
+  # their identical siblings, so they were not losing to a linking problem:
+  # the site's crawl allowance simply does not stretch to twelve of them. The
+  # guide covers all six platforms with prices, so each redirect lands on an
+  # answer to the same question. Content is in git history if we want it back.
+  RewriteRule ^compare-access\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+  RewriteRule ^compare-carelinelive\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+  RewriteRule ^compare-uniqueiq\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+  RewriteRule ^compare-onetouch\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+  RewriteRule ^compare-shiftcare\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
+  RewriteRule ^compare-tagcare\.html$ https://www.homecareos.co.uk/blog/home-care-software-uk-guide.html [R=301,L]
 </IfModule>
 
 # --- Security headers ---
