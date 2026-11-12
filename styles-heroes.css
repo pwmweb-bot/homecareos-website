@@ -1364,3 +1364,130 @@ body.look-heroes .page-header .cta-actions {
 body.look-heroes .page-header .contact-strip {
   justify-content: flex-start;
 }
+
+/* --- Pricing growth calculator and licence ladder (12 Nov 2026) --- */
+body.look-heroes .pricing-calculator.growth-calculator {
+  max-width: 960px;
+  padding: 32px 36px 36px;
+}
+body.look-heroes .growth-calculator .calculator-staff-input {
+  display: grid;
+  grid-template-columns: auto 1fr 5.5rem;
+  align-items: center;
+  gap: 16px 20px;
+  margin-bottom: 8px;
+}
+body.look-heroes .growth-calculator .calculator-staff-input label {
+  grid-column: 1 / -1;
+  white-space: normal;
+  margin: 0;
+}
+body.look-heroes .growth-calculator .calculator-hint {
+  grid-column: 1 / -1;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  margin: 0;
+}
+body.look-heroes .growth-calculator .calculator-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+body.look-heroes .growth-calculator .addon-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  line-height: 1.45;
+}
+body.look-heroes .growth-calculator .addon-option input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+body.look-heroes .growth-calculator .addon-option.is-included {
+  cursor: default;
+  color: var(--ink-2);
+}
+body.look-heroes .growth-calculator .addon-option .addon-state {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+body.look-heroes .growth-results {
+  display: block;
+}
+body.look-heroes .growth-calculator .calculator-display {
+  display: block;
+}
+body.look-heroes .growth-calculator .calculator-display-card {
+  max-width: 32rem;
+  text-align: left;
+  padding: 24px 26px;
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-name {
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-price {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+  margin: 8px 0 0;
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-unit {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  margin-top: 4px;
+}
+body.look-heroes .growth-calculator .calc-inc-vat,
+body.look-heroes .growth-calculator .tier-equivalent,
+body.look-heroes .growth-calculator .calc-breakdown {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+body.look-heroes .growth-examples {
+  margin-top: 28px;
+}
+body.look-heroes .growth-examples h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+body.look-heroes .growth-examples p {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+body.look-heroes .feature-table .coming-soon-badge {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+body.look-heroes .feature-table .cell-note {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  body.look-heroes .pricing-calculator.growth-calculator {
+    padding: 24px 18px 28px;
+  }
+  body.look-heroes .growth-calculator .calculator-staff-input {
+    grid-template-columns: 1fr 5.5rem;
+  }
+  body.look-heroes .growth-calculator .calculator-slider {
+    grid-column: 1 / 2;
+  }
+}
