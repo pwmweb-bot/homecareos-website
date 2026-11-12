@@ -69,7 +69,7 @@
       if (/\.(pdf|zip|png|jpe?g|gif|webp|svg|css|js|xml|txt|ico|woff2?)$/i.test(url.pathname)) return false;
       return true;
     }
-    return url.hostname === 'app.homecareos.co.uk' && (linkText(anchor) === 'get started' || linkText(anchor) === 'get started for free');
+    return url.hostname === 'app.homecareos.co.uk' && (linkText(anchor) === 'get started' || linkText(anchor) === 'get started for free'); // CTA text is 'Get started'; keep the old wording for any stale page
   }
 
   function withAttribution(raw, params) {
