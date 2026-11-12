@@ -1015,3 +1015,18 @@ body.look-heroes .lottie-cap { max-width: 640px; margin-left: auto; margin-right
   body.look-heroes .phone-cluster img { max-width: 28%; }
   body.look-heroes .page-header h1 { font-size: clamp(36px, 11vw, 52px); max-width: none; }
 }
+
+/* App Store badges: ink background, white type (do not inherit the green link colour) */
+body.look-heroes .app-store-badge,
+body.look-heroes .app-store-badge:hover,
+body.look-heroes .footer-app-store,
+body.look-heroes .footer-app-store:hover {
+  background: var(--ink);
+  color: #fff !important;
+}
+body.look-heroes .app-store-badge .app-store-label,
+body.look-heroes .app-store-badge .app-store-name,
+body.look-heroes .app-store-badge svg {
+  color: #fff;
+  fill: currentColor;
+}
