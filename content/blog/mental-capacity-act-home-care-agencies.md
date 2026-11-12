@@ -31,7 +31,7 @@ faqs:
   - q: Can the agency authorise a deprivation of liberty in the person's own home?
     a: No. The Act does not authorise a deprivation of liberty, except when someone is giving effect to a Court of Protection welfare order, or when Schedule A1 authorises it for a hospital or care home resident. A person's own home is not a Deprivation of Liberty Safeguards setting. If the arrangements might be a deprivation of liberty, refer them. The care plan is not the authorisation.
 cta_title: Put the decision on the plan the carer opens
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Care planning
 cta_secondary_href: /features-care-planning.html
 ---

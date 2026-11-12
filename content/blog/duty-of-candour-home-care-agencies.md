@@ -31,7 +31,7 @@ faqs:
   - q: Is a notifiable safety incident the same as a notification to CQC?
     a: CQC says the phrase notifiable safety incident is a term defined in the duty of candour regulation, and that it should not be confused with other notifications. An incident can also meet a notification threshold. If it does, CQC says it should be reported through the notification system for that care sector as well.
 cta_title: Keep the account with the incident
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Compliance features
 cta_secondary_href: /features-compliance.html
 ---

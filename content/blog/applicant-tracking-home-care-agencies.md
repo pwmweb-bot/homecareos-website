@@ -33,9 +33,9 @@ faqs:
   - q: Does hiring someone put them on the rota automatically?
     a: No. Conversion creates a carer record that is ready to be added to the rota. You still choose when they start visits.
   - q: How much is the HomecareOS recruitment portal?
-    a: Free for 3 months for agencies that sign up now, then £49 a month plus VAT.
+    a: The HomecareOS recruitment portal starts at £49 a month plus VAT.
 cta_title: See applicant tracking on a pipeline like yours
-cta_text: Try the HomecareOS recruitment portal free for 3 months, then £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal starts at £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -114,7 +114,7 @@ HomecareOS recruitment is applicant tracking built for domiciliary care, not a g
 - The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically.
 
-Agencies that sign up now get the portal **free for 3 months**, then **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

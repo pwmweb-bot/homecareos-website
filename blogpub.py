@@ -378,7 +378,7 @@ def render_post(meta, body_html, markdown):
             + "".join(cards) + "</div></section>"
         )
     cta_title = meta.get("cta_title") or "See it on a rota like yours"
-    cta_text = meta.get("cta_text") or "Book a short demo, or start free for up to 5 carers. No card needed."
+    cta_text = meta.get("cta_text") or "Book a short demo, or get started from £49 per month + VAT."
     cta_href = meta.get("cta_secondary_href") or "/pricing.html"
     cta_label = meta.get("cta_secondary") or "See pricing"
     article_ld = {
@@ -524,7 +524,7 @@ def render_post(meta, body_html, markdown):
             <p>{esc(cta_text)}</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+              <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
             </div>
             <p style="margin:16px 0 0"><a href="{esc_attr(cta_href)}" style="color:inherit;text-decoration:underline">{esc(cta_label)}</a></p>
           </div>

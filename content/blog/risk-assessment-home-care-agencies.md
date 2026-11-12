@@ -35,7 +35,7 @@ faqs:
   - q: Do we have to write the risk assessment down?
     a: For people who use the service, CQC expects risk assessments to include plans for managing the risks, and NICE says the risk plan goes into the home care plan, so in practice it is written. For health and safety at work, HSE says that if you employ five or more people you must record your significant findings.
 cta_title: See risks scored and linked to the care plan
-cta_text: Book a 15-minute demo, or call 01905 674704. Start free for up to 5 carers. No card needed.
+cta_text: Book a 15-minute demo, or call 01905 674704. Get started from £49 per month + VAT. Starts at £49 per month + VAT.
 cta_secondary: Care planning features
 cta_secondary_href: /features-care-planning.html
 ---
