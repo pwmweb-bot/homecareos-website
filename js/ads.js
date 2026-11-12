@@ -14,7 +14,7 @@
  * conversions can be created later. They are not the demo-request conversion.
  *
  * gclid and UTM parameters already on the landing URL are copied onto
- * same-site links and onto "Get started for free" links to the app, so
+ * same-site links and onto "Get started" links to the app, so
  * auto-tagging survives the hop to app.homecareos.co.uk. Nothing is written
  * to a cookie or to storage.
  */
@@ -69,7 +69,7 @@
       if (/\.(pdf|zip|png|jpe?g|gif|webp|svg|css|js|xml|txt|ico|woff2?)$/i.test(url.pathname)) return false;
       return true;
     }
-    return url.hostname === 'app.homecareos.co.uk' && linkText(anchor) === 'get started for free';
+    return url.hostname === 'app.homecareos.co.uk' && (linkText(anchor) === 'get started' || linkText(anchor) === 'get started for free');
   }
 
   function withAttribution(raw, params) {

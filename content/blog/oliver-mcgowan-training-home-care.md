@@ -35,7 +35,7 @@ faqs:
   - q: Is there funding for Oliver McGowan training in adult social care?
     a: Skills for Care says DHSC funding continues in 2026-27 through a ring-fenced pot in the Learning and Development Support Scheme. You need an ASC-WDS account to claim, and the pot is limited, so claims stop when it runs out.
 cta_title: Keep every carer's training in date
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Training tracking
 cta_secondary_href: /features-training.html
 ---

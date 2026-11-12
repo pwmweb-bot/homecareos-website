@@ -31,7 +31,7 @@ faqs:
   - q: If the contract says travel is unpaid, can it be left out of the calculation?
     a: No. Regulation 34 treats qualifying travel as hours of time work. Describing those hours as unpaid in the contract does not remove them. The check is whether pay that counts, divided by the hours that count, meets the rate for that worker.
 cta_title: Look at one carer's week of journeys
-cta_text: Book a 15-minute demo and bring one carer's visits, the gaps between them, and the pay run. Or start free for up to 5 carers. No card needed.
+cta_text: Book a 15-minute demo and bring one carer's visits, the gaps between them, and the pay run. Or get started from £49 per month + VAT. Starts at £49 per month + VAT.
 cta_secondary: Billing and payroll
 cta_secondary_href: /features-finance.html
 ---

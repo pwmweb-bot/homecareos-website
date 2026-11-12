@@ -35,7 +35,7 @@ faqs:
   - q: Does HomecareOS add a new carer to the rota automatically when they are hired?
     a: No. On hire, the applicant is converted into a carer record that is ready to be added to the rota. You decide when they start visits.
 cta_title: Take new carers from application to onboarding in one place
-cta_text: Try the HomecareOS recruitment portal free for 3 months, then £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal starts at £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -147,7 +147,7 @@ The HomecareOS recruitment portal keeps the first half of this journey in one pl
 - The agency tracks each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. You can see at a glance who is waiting on what. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that matters.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**, without retyping their details. They are **not** added to the rota automatically, so you still decide when shadowing ends and visits begin.
 
-Agencies that sign up now get the portal **free for 3 months**, then **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
