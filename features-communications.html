@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -119,7 +121,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -128,7 +130,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -207,6 +209,7 @@
           <span class="current" aria-current="page">Phone System &amp; Comms</span>
         </nav>
         <h1>A phone system built into your home care software</h1>
+        <p><span class="soon-tag">Coming soon</span></p>
         <p>Every other platform tells you to buy your phone system somewhere else, then glue the two together. HomecareOS puts a full UK phone system inside the software that already runs your rota and your records. Every call is logged in the same place as the care records. Out of hours, the number diverts to your on-call mobile and anything unanswered comes back as a transcribed voicemail. <strong>Check our comparison pages: of the sixteen UK platforms we compare, not one builds the phone system in.</strong></p>
       </div>
     </header>
@@ -221,7 +224,7 @@
             <p>A UK landline your coordinators answer from a browser, at the office or at their kitchen table. An IVR that greets every caller and routes them to the right team. Voicemail transcribed before the morning rush. And because the phone lives inside the care platform, the call log, the voicemail and its transcript all sit in the software an inspector is already reading.</p>
           </div>
           <div class="feature-hero-visual has-photo" style="padding:0;background:transparent;min-height:0">
-            <img src="images/photos/coordinator-headset-call.webp" alt="A home care agency coordinator answering a call on a headset at a laptop" width="1400" height="933" loading="lazy" style="border-radius:16px;box-shadow:0 20px 45px rgba(20,33,58,0.18)">
+            <img src="images/photos/coordinator-headset-call.webp" alt="A home care agency coordinator answering a call on a headset at a laptop" width="1400" height="933" loading="lazy" style="border-radius:16px;box-shadow:0 20px 45px rgba(20,33,58,0.18)" decoding="async">
           </div>
         </div>
       </div>
@@ -600,7 +603,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

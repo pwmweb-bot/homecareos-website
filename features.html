@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -108,7 +110,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -117,7 +119,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -197,6 +199,36 @@
         <p>One platform. Every tool. From scheduling and care plans to compliance, billing and beyond, built specifically for UK home care agencies. New to choosing software? Start with our <a href="blog/home-care-software-uk-guide.html">UK home care software guide</a>.</p>
       </div>
     </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots across the platform">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>See the platform</h2>
+          <p>Rota, care plans, eMAR, recruitment and the family portal — the same look your team works in.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot" data-reveal>
+            <img src="images/photos/dashboard.webp" alt="The new HomecareOS Today screen, the daily overview for a UK home care office" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/app-rota-week-grid.webp" alt="The weekly rota in the new HomecareOS, with visit blocks across the week" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/care-plan-overview.webp" alt="A care plan overview in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/app-emar-chart.webp" alt="An eMAR chart in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/recruitment-pipeline.webp" alt="The HomecareOS recruitment pipeline" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/family-portal-access.webp" alt="Family portal access in HomecareOS, included in the platform" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Stats -->
     <section class="stats-bar" aria-label="Platform statistics">
@@ -705,7 +737,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

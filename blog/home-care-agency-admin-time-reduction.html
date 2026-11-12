@@ -41,8 +41,10 @@
   <meta name="twitter:description" content="Practical ways UK home care agencies cut admin time with digital rotas, care records and automatic invoicing.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/team-reviewing-analytics.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -142,14 +144,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -241,7 +243,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/team-reviewing-analytics.webp" alt="Care agency team reviewing analytics and performance data together" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/team-reviewing-analytics.webp" alt="Care agency team reviewing analytics and performance data together" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px" decoding="async" fetchpriority="high">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:8px;text-align:center">Reviewing the operational picture (visits, rotas, compliance, finance) in a single workspace.</figcaption>
         </figure>
 
@@ -350,7 +352,7 @@
 
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px" data-reveal>
           <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
-            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%"></div>
+            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async"></div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
               <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS. He's spent the last decade working with UK home care agencies on the transition from paper to digital, including the awkward middle phase where neither is quite working.</p>
@@ -415,7 +417,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

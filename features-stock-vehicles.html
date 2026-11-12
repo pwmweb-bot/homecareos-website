@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -116,7 +118,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -125,7 +127,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -204,6 +206,7 @@
           <span class="current" aria-current="page">Stock, PPE, Kit &amp; Vehicles</span>
         </nav>
         <h1>PPE, stock, kit and vehicles in one register</h1>
+        <p><span class="soon-tag">Coming soon</span></p>
         <p>Stop juggling spreadsheets and post-it notes. Track every box of gloves, every uniform and every carer's vehicle paperwork in one place. See what has dropped to its reorder level and build the order in one click, keep MOT, insurance and licence dates on file so you spot them before they lapse, and prove every issue and return, included.</p>
       </div>
     </header>
@@ -218,7 +221,7 @@
             <p>Most agencies discover they are out of gloves at 06:50 on a Monday. They forget a vehicle's MOT until the day it expires. They have no idea which carer still has the spare door fob. HomecareOS replaces those scattered spreadsheets with one register: PPE inventory, carer kit issue and return, a vehicle log with MOT, insurance and licence dates on file, and a full order trail. You stop firefighting and start managing.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/dashboard.webp" alt="HomecareOS dashboard showing today's visits, active carers and compliance alerts" width="1400" height="840" loading="lazy">
+            <img src="images/photos/dashboard.webp" alt="HomecareOS dashboard showing today's visits, active carers and compliance alerts" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -483,7 +486,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

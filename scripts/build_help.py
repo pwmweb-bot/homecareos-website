@@ -119,11 +119,12 @@ def head(title, description, canonical, ld, og_type="article"):
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20261016cta">
   <link rel="stylesheet" href="{HELP_CSS}">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112e">
 {lds}
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="{HELP_JS}" defer></script>
 </head>
-<body class="help-page">
+<body class="help-page look-heroes">
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
   <nav class="nav" role="navigation" aria-label="Main navigation"></nav>
 """
@@ -308,7 +309,7 @@ def article(a):
         src, alt = a["image"]
         cap = a.get("image_caption") or "The new HomecareOS design, shown with demo data."
         figure = (f'<figure class="help-figure"><img src="/images/help/{src}" alt="{esc(alt)}" width="1600" height="900" '
-                  f'loading="lazy"><figcaption>{esc(cap)}</figcaption></figure>')
+                  f'loading="lazy" decoding="async"><figcaption>{esc(cap)}</figcaption></figure>')
     else:
         figure = (f'<figure class="help-figure help-figure-placeholder" data-screenshot-needed="true">'
                   f'<div class="help-placeholder">{icon("image", 32)}<span>Screenshot coming soon</span></div>'

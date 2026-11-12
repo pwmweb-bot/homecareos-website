@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -107,7 +109,7 @@
     @media (max-width:768px){.phone-split{grid-template-columns:1fr;gap:28px;text-align:center}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -116,7 +118,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -205,6 +207,21 @@
         </div>
       </div>
     </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>Training, on the same record</h2>
+          <p>See what is in date, what is due, and who needs a refresher.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot shot-wide" data-reveal>
+            <img src="images/photos/staff-compliance.webp" alt="Staff training and compliance in the new HomecareOS, with due dates and certificates on one screen" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Hero Section -->
     <section class="section">
@@ -217,7 +234,7 @@
           </div>
           <!-- IMAGE SLOT: new preview carer training tab or training matrix, laptop 1400x840 (replace the stock photo when captured) -->
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/diverse-carers-home.webp" alt="A team of home care workers together in a client&rsquo;s home" width="1400" height="933" loading="lazy">
+            <img src="images/photos/diverse-carers-home.webp" alt="A team of home care workers together in a client&rsquo;s home" width="1400" height="933" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -460,7 +477,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

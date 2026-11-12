@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -96,7 +98,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -105,7 +107,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -183,6 +185,21 @@
         <p data-reveal data-reveal-delay="100">Staff files, client records and your own agency paperwork, filed where the work happens, with expiry dates tracked and access enforced by the database rather than by good intentions.</p>
       </div>
     </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>Documents with the person they belong to</h2>
+          <p>Certificates, checks and care documents sit on the record, not in a shared drive.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot shot-wide" data-reveal>
+            <img src="images/photos/staff-compliance.webp" alt="Staff files and compliance documents in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section" aria-label="Three filing cabinets overview">
       <div class="container">
@@ -294,7 +311,7 @@
             <p>The background check itself is tracked on the carer's record rather than on the file, and it is there that the wording follows your nation, with DBS in England and Wales, PVG in Scotland and AccessNI in Northern Ireland.</p>
           </div>
           <div class="feature-image" data-reveal data-reveal-delay="100">
-            <img src="images/photos/carer-care-plan-table.webp" alt="A carer sitting at a table reviewing care documentation with a service user" width="800" height="600" loading="lazy">
+            <img src="images/photos/carer-care-plan-table.webp" alt="A carer sitting at a table reviewing care documentation with a service user" width="800" height="600" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -428,7 +445,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

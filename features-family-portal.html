@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -116,7 +118,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -125,7 +127,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -218,16 +220,34 @@
             <p>Families deserve to know their loved one is being cared for, not just trust that it's happening. HomecareOS gives every family member a secure portal, with care note summaries, the name of the carer who attended, and missed visits flagged rather than left unexplained. It's the transparency that builds trust, reduces anxious phone calls, and lets families feel connected to the care their loved one receives every single day.</p>
           </div>
           <div class="feature-hero-visual has-screenshot-mobile">
-            <img src="images/photos/visitinfo.webp" alt="HomecareOS visit details showing carer information, visit time, navigation and key safe access" width="390" height="844" loading="lazy">
+            <img src="images/photos/visitinfo.webp" alt="HomecareOS visit details showing carer information, visit time, navigation and key safe access" width="390" height="844" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
+    <section class="section feature-extra-section" aria-label="Family portal screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>Access you control</h2>
+          <p>Invite the right relatives, set what they can see, and keep the family portal included in HomecareOS.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot" data-reveal>
+            <img src="images/photos/family-portal-access.webp" alt="Family portal access in HomecareOS: the people who can see a service user&rsquo;s care, and the permissions you set" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/family-portal-controls.webp" alt="Family portal controls in HomecareOS, so you decide what each relative can see and approve" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section" aria-label="Family involved in care at home">
       <div class="container">
         <figure data-reveal style="margin:0 auto;max-width:960px">
-          <img src="images/photos/home-care-assessment.webp" alt="A carer and a family member support an older woman in a wheelchair during a health check at home" width="1100" height="734" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block">
+          <img src="images/photos/home-care-assessment.webp" alt="A carer and a family member support an older woman in a wheelchair during a health check at home" width="1100" height="734" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block" decoding="async">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:14px;text-align:center;max-width:640px;margin-inline:auto">Families see what the carer recorded at each visit, with the agency choosing what is shared, so everyone stays on the same page.</figcaption>
         </figure>
       </div>
@@ -486,7 +506,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>

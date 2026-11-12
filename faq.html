@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -78,7 +80,7 @@
       "name": "Can I migrate easily to HomecareOS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across free from a CSV export, with relationships preserved. If something is not right, the whole import is reversed in one step rather than unpicked by hand. Historic records, such as past service users, former staff and old visit history, are optional and quoted separately, because the price depends on what your current provider will actually hand over. We look at a sample first at no charge. See how a migration runs."
+        "text": "Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across from a CSV export, with relationships preserved. If something is not right, the whole import is reversed in one step rather than unpicked by hand. Historic records, such as past service users, former staff and old visit history, are optional and quoted separately, because the price depends on what your current provider will actually hand over. We look at a sample first at no charge. See how a migration runs."
       }
     },
     {
@@ -94,7 +96,7 @@
       "name": "Do you offer training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Free includes a 30 minute remote overview, then support by email and chat. Pro includes live remote training for your office team and your carers, and it is available again when you take on new coordinators or change how you work. Onsite training at your office sits outside the licence and is quoted before anything is booked."
+        "text": "Yes. HomecareOS includes getting started in the product. Telephone support and training is an optional add-on at £39 per month + VAT, with live remote training for your office team and your carers, and it is available again when you take on new coordinators or change how you work. Onsite training at your office sits outside the licence and is quoted before anything is booked."
       }
     },
     {
@@ -513,7 +515,7 @@
   @media (prefers-reduced-motion:reduce){.faq-group summary svg{transition:none}}
 </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#" class="skip-link" id="skip-link">Skip to main content</a>
@@ -524,7 +526,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -648,7 +650,7 @@
           </details>
           <details>
             <summary><span>Can I migrate easily to HomecareOS?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-            <div class="faq-body"><p>Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across free from a CSV export, with relationships preserved. If something is not right, the whole import is reversed in one step rather than unpicked by hand.</p><p>Historic records, such as past service users, former staff and old visit history, are optional and quoted separately, because the price depends on what your current provider will actually hand over. We look at a sample first at no charge. See <a href="/migration.html">how a migration runs</a>.</p></div>
+            <div class="faq-body"><p>Yes. We run the migration for you rather than handing you an importer. Your live data, meaning current carers, service users, care plans and the running rota, comes across from a CSV export, with relationships preserved. If something is not right, the whole import is reversed in one step rather than unpicked by hand.</p><p>Historic records, such as past service users, former staff and old visit history, are optional and quoted separately, because the price depends on what your current provider will actually hand over. We look at a sample first at no charge. See <a href="/migration.html">how a migration runs</a>.</p></div>
           </details>
           <details>
             <summary><span>My current provider will not let me have my data. What can I do?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -656,7 +658,7 @@
           </details>
           <details>
             <summary><span>Do you offer training?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-            <div class="faq-body"><p>Yes. Free includes a 30 minute remote overview, then support by email and chat. Pro includes live remote training for your office team and your carers, and it is available again when you take on new coordinators or change how you work. Onsite training at your office sits outside the licence and is quoted before anything is booked.</p></div>
+            <div class="faq-body"><p>Yes. HomecareOS includes getting started in the product. Telephone support and training is an optional add-on at £39 per month + VAT, with live remote training for your office team and your carers, and it is available again when you take on new coordinators or change how you work. Onsite training at your office sits outside the licence and is quoted before anything is booked.</p></div>
           </details>
           <details>
             <summary><span>Can I try before I buy?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -879,7 +881,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
