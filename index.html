@@ -124,9 +124,11 @@
   <!-- Async-load full stylesheets (non-blocking) -->
   <link rel="preload" as="style" href="/fonts/dmsans.css?v=20260521" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="styles.css?v=20261016cta" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="styles-heroes.css?v=20261112" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
     <link rel="stylesheet" href="styles.css?v=20261016cta">
+    <link rel="stylesheet" href="styles-heroes.css?v=20261112">
   </noscript>
 
   <!-- AOS CSS (deferred, not render-critical) -->
@@ -216,17 +218,11 @@
         },
         {
           "@type": "Offer",
-          "name": "Pro",
+          "name": "Telephone support and training",
           "availability": "https://schema.org/InStock",
-          "price": "10",
+          "price": "39",
           "priceCurrency": "GBP",
-          "description": "Telephone support and training is an optional add-on at £39 per month + VAT.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "10",
-            "priceCurrency": "GBP",
-            "unitText": "per carer per month"
-          }
+          "description": "Optional telephone support and training add-on at £39 per month + VAT."
         }
       ],
       "description": "Home care management software for UK agencies. Scheduling, digital care records, compliance, finance, mobile app and AI-powered features.",
@@ -336,7 +332,7 @@
       "name": "How does HomecareOS pricing compare to Birdie or Access?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HomecareOS Pro is £10 per carer per month, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. HomecareOS starts at £49 per month + VAT, with telephone support and training as an optional £39 per month add-on + VAT."
+        "text": "HomecareOS starts at £49 per month + VAT, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. Telephone support and training is an optional £39 per month add-on + VAT."
       }
     },
     {
@@ -438,7 +434,7 @@
     @media (max-width:1024px){.feature-hero.rota-cover-hero{grid-template-columns:1fr;gap:32px}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Branded loader overlay -->
   <div id="hco-loader" role="status" aria-label="Loading HomecareOS">
@@ -546,7 +542,7 @@
         <div class="hero-grid">
           <div class="hero-content">
             <span class="hero-eyebrow">Built for UK domiciliary care &middot; CQC &middot; CIW &middot; Care Inspectorate &middot; RQIA</span>
-            <h1 class="hero-title">Home care software for UK domiciliary agencies</h1>
+            <h1 class="hero-title">Home care software<br>for UK domiciliary<br><span class="accent-text">agencies.</span></h1>
             <p class="hero-subtitle">Everything a UK home care agency runs on, recruit and onboard carers, build the rota, invoice your payers, run payroll, and stay compliant across CQC, CIW, Care Inspectorate and RQIA. <strong>Built for home care, not care homes.</strong></p>
             <div class="hero-actions">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
@@ -554,7 +550,7 @@
           <a href="pricing.html" class="btn btn-ghost">See pricing</a>
         </div>
             <p class="hero-note">One platform for onboarding, scheduling, invoicing, payroll and compliance. Live in 15 minutes, no sales call.</p>
-            <p class="hero-note"><strong style="color:#fff">Switching from another system?</strong> <a href="/migration.html" style="color:#E8A14A;text-decoration:underline;text-underline-offset:3px">Switch in 7 days. We migrate your live data for you.</a></p>
+            <p class="hero-note"><strong style="color:var(--ink)">Switching from another system?</strong> <a href="/migration.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">Switch in 7 days. We migrate your live data for you.</a></p>
           </div>
           <div class="hero-visual">
             <div class="hero-devices">
@@ -600,8 +596,8 @@
             <span class="stat-label">Reports built in</span>
           </div>
           <div class="stat-item" data-reveal data-reveal-delay="300">
-            <strong class="stat-number">&pound;10</strong>
-            <span class="stat-label">Per carer, office unmetered</span>
+            <strong class="stat-number">&pound;49</strong>
+            <span class="stat-label">Starts at, per month + VAT</span>
           </div>
         </div>
       </div>
@@ -1219,7 +1215,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-5" role="region">
-              <div class="faq-answer-inner">HomecareOS Pro is £10 per carer per month, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. HomecareOS starts at £49 per month + VAT, with telephone support and training as an optional £39 per month add-on + VAT.</div>
+              <div class="faq-answer-inner">HomecareOS starts at £49 per month + VAT, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. Telephone support and training is an optional £39 per month add-on + VAT.</div>
             </div>
           </div>
 
@@ -1266,7 +1262,7 @@
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
           <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-outline-light">Get started</a>
         </div>
-          <p style="margin:28px auto 0;font-size:0.95rem">Still weighing up your options? <a href="/blog/home-care-software-uk-guide.html" style="color:rgba(255,255,255,0.9);text-decoration:underline">Read our complete UK home care software guide</a>.</p>
+          <p style="margin:28px auto 0;font-size:0.95rem">Still weighing up your options? <a href="/blog/home-care-software-uk-guide.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">Read our complete UK home care software guide</a>.</p>
         </div>
       </div>
     </section>
