@@ -43,7 +43,7 @@
   <!-- AOS CSS -->
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=20261016cta">
-  <link rel="stylesheet" href="styles-heroes.css?v=20261112g">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261112pricing">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -112,7 +112,7 @@
       "name": "What is included in HomecareOS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HomecareOS gives you the full core platform: scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, invoicing, payroll, the family portal, four-nation compliance and the full reporting suite. HomecareOS starts at £49 per month + VAT, with your office team and service users unmetered. Telephone support and training is an optional add-on at £39 per month + VAT."
+        "text": "HomecareOS gives you the full core platform: scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, invoicing, payroll, the family portal, four-nation compliance, stock control and the full reporting suite. HomecareOS starts at £49 per month + VAT for up to 5 carers, with your office team and service users unmetered. From 6 carers, Pro is £100 per month + VAT (the first 10 licences are included), then £10 per carer + VAT. Telephone support and training is an optional add-on at £39 per month + VAT on Start, and is included on Pro. The recruitment portal is £49 per month + VAT on Start, and is included on Pro."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "How does per-carer pricing work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HomecareOS starts at £49 per month + VAT. Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle and leavers are not charged after they go. Coordinators, managers, owners and other office staff who don't deliver visits are never counted, and there is no limit on service users. See how per-carer pricing compares to per-user pricing, and what is included in the rota and scheduling features."
+        "text": "HomecareOS starts at £49 per month + VAT for up to 5 carers (Start). From 6 carers you move to Pro: £100 per month + VAT covers the first 10 licences, and each carer after that is £10 + VAT. Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle and leavers are not charged after they go. Coordinators, managers, owners and other office staff who don't deliver visits are never counted, and there is no limit on service users. Annual billing saves 20%. See how per-carer pricing compares to per-user pricing, and what is included in the rota and scheduling features."
       }
     },
     {
@@ -152,7 +152,7 @@
       "name": "What does telephone support and training cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HomecareOS starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT. Your data is fully preserved, and your office team and service users stay unmetered."
+        "text": "HomecareOS starts at £49 per month + VAT for up to 5 carers. Telephone support and training is an optional add-on at £39 per month + VAT on Start, and is included on Pro (6 or more carers). Your data is fully preserved, and your office team and service users stay unmetered."
       }
     },
     {
@@ -168,7 +168,15 @@
       "name": "Is training included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Support by email and chat is included. Telephone support and live training is an optional add-on at £39 per month + VAT, and it is available again when you take on new coordinators or change how you work. Onsite training, delivered at your office, sits outside the licence and is quoted before anything is booked."
+        "text": "Support by email and chat is included on every plan. Telephone support and live training is an optional add-on at £39 per month + VAT on Start, and is included on Pro (6 or more carers). It is available again when you take on new coordinators or change how you work. Onsite training, delivered at your office, sits outside the licence and is quoted before anything is booked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What extra services do I get as I add licences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 6 licences, extras unlock in steps as you grow: an included website and SEO / GEO hours, IT and cyber help (including DSPT and Cyber Essentials guidance), hosted email, carer SIMs, PPE supply, and MBA-led business support. Support hours and indicative SLAs also build with your licences. A named customer success contact is included from 30 licences. Hours and quantities are indicative; we confirm the package with you as you grow. Phone system features are coming soon."
       }
     }
   ]
@@ -216,7 +224,7 @@
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
       "url": "https://www.homecareos.co.uk/pricing.html",
-      "description": "Starts at £49 per month + VAT. The full core platform. Office team always unmetered, no cap on service users.",
+      "description": "Starts at £49 per month + VAT for up to 5 carers. From 6 carers, Pro is £100 per month + VAT (first 10 licences included), then £10 per carer + VAT. Office team always unmetered, no cap on service users.",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "49",
@@ -232,10 +240,26 @@
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
       "url": "https://www.homecareos.co.uk/pricing.html",
-      "description": "Optional add-on. Telephone support and training at £39 per month + VAT.",
+      "description": "Optional add-on on Start at £39 per month + VAT. Included on Pro.",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "39",
+        "priceCurrency": "GBP",
+        "valueAddedTaxIncluded": false,
+        "unitText": "per month"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Recruitment portal",
+      "price": "49",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.homecareos.co.uk/pricing.html",
+      "description": "Optional add-on on Start at £49 per month + VAT. Included on Pro.",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "49",
         "priceCurrency": "GBP",
         "valueAddedTaxIncluded": false,
         "unitText": "per month"
@@ -338,8 +362,8 @@
           <span class="current" aria-current="page">Pricing</span>
         </nav>
         <h1 data-reveal>Home care software pricing: starts at <span class="accent-text">£49</span> per month + VAT</h1>
-        <p data-reveal data-reveal-delay="100">HomecareOS <strong>starts at £49 per month + VAT</strong>. Telephone support and training is an optional add-on at <strong>&pound;39 per month + VAT</strong>. The recruitment portal is an optional extra. Your coordinators, managers and back-office team are always unmetered, and there is no cap on service users.</p>
-        <p data-reveal data-reveal-delay="150">Home care software in the UK typically costs &pound;15-30 per staff member per month, and most providers charge for every login, including office coordinators and managers, not just the carers doing visits. HomecareOS prices differently: it starts at &pound;49 per month + VAT. Telephone support and training is an optional add-on at &pound;39 per month + VAT. Unlimited office staff and unlimited service users are included, so a 30-carer agency with 4 coordinators only pays the platform price, not a fee for every login. Annual billing saves a further 20%. Every plan includes CQC, CIW, Care Inspectorate, and RQIA compliance frameworks for all four UK nations, so agencies in Wales or Scotland aren't paying for an England-only tool that doesn't fit their regulator.</p>
+        <p data-reveal data-reveal-delay="100">HomecareOS <strong>starts at £49 per month + VAT</strong> for up to 5 carers. From 6 carers, Pro is <strong>£100 per month + VAT</strong> (the first 10 licences are included), then <strong>£10 per carer + VAT</strong>. Telephone support and training is an optional add-on at <strong>&pound;39 per month + VAT</strong> on Start, and is included on Pro. The recruitment portal is <strong>£49 per month + VAT</strong> on Start, and is included on Pro. Your coordinators, managers and back-office team are always unmetered, and there is no cap on service users.</p>
+        <p data-reveal data-reveal-delay="150">Home care software in the UK typically costs &pound;15-30 per staff member per month, and most providers charge for every login, including office coordinators and managers, not just the carers doing visits. HomecareOS prices differently: it starts at &pound;49 per month + VAT for up to 5 carers, then grows with your licences. Unlimited office staff and unlimited service users are included, so a 30-carer agency with 4 coordinators only pays for the carers, not a fee for every login. Annual billing saves a further 20%. Every plan includes CQC, CIW, Care Inspectorate, and RQIA compliance frameworks for all four UK nations, so agencies in Wales or Scotland aren't paying for an England-only tool that doesn't fit their regulator.</p>
       </div>
     </section>
 
@@ -360,7 +384,7 @@
           <div class="journey-step">
             <div class="journey-icon" style="background: var(--accent); color: #fff;">2</div>
             <h4>Get started</h4>
-            <p>The full platform starts at <strong>£49 per month + VAT</strong>. Office team and service users unmetered. Telephone support and training is an optional add-on at £39 per month + VAT.</p>
+            <p>The full platform starts at <strong>£49 per month + VAT</strong> for up to 5 carers. Office team and service users unmetered. Telephone support and training is an optional add-on at £39 per month + VAT on Start.</p>
           </div>
           <div class="journey-arrow" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -368,7 +392,7 @@
           <div class="journey-step">
             <div class="journey-icon" style="background: var(--accent); color: #fff;">3</div>
             <h4>Grow &amp; Upgrade</h4>
-            <p>Add telephone support and training for <strong>&pound;39 per month + VAT</strong>. The recruitment portal is an optional extra.</p>
+            <p>From 6 carers, Pro is <strong>£100 per month + VAT</strong> for the first 10 licences, then £10 per carer + VAT. Extra services unlock as you add licences.</p>
           </div>
         </div>
       </div>
@@ -391,33 +415,82 @@
         </div>
 
         <!-- Interactive Calculator -->
-        <div class="pricing-calculator" data-reveal data-reveal-delay="100">
-          <h3>Your price</h3>
-          <p class="calculator-subtitle" id="calc-subtitle">Your monthly price, plus VAT. Add telephone support and training if you want them.</p>
+        <div class="pricing-calculator growth-calculator" data-reveal data-reveal-delay="100">
+          <h3>Your price as you grow</h3>
+          <p class="calculator-subtitle" id="calc-subtitle">See how monthly billing changes as you add carers, and which services unlock with your licences. All prices plus VAT.</p>
 
           <div class="calculator-staff-input">
             <label for="staff-slider">Number of carers</label>
-            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" value="10" aria-label="Number of carers">
-            <input type="number" id="staff-number" min="1" max="200" value="10" aria-label="Carer count">
-            <p class="calculator-hint" style="font-size:0.85rem;color:var(--text-light);margin-top:0.5rem;">Office team (coordinators, managers, owners who don't deliver visits) and service users are unmetered.</p>
+            <input type="range" id="staff-slider" class="calculator-slider" min="1" max="200" value="10" aria-valuemin="1" aria-valuemax="200" aria-valuenow="10" aria-describedby="staff-hint">
+            <input type="number" id="staff-number" min="1" max="200" value="10" inputmode="numeric" aria-describedby="staff-hint">
+            <p class="calculator-hint" id="staff-hint">Office team (coordinators, managers, owners who don&rsquo;t deliver visits) and service users are unmetered.</p>
           </div>
 
-          <p style="margin:16px 0 20px">
-            <label style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:0.95rem">
-              <input type="checkbox" id="support-addon" style="width:18px;height:18px">
-              Add telephone support &amp; training (&pound;39 per month + VAT)
+          <div class="calculator-addons">
+            <label class="addon-option" id="support-addon-label" for="support-addon">
+              <input type="checkbox" id="support-addon">
+              <span>
+                Telephone support &amp; training (&pound;39 per month + VAT)
+                <span class="addon-state" id="support-addon-state"></span>
+              </span>
             </label>
-          </p>
-          <div class="calculator-display" id="calc-paid" aria-live="polite">
-            <div class="calculator-display-card highlight">
-              <div class="tier-name">HomecareOS</div>
-              <div class="tier-price" id="calc-price">&pound;49</div>
-              <div class="tier-unit" id="calc-unit">/mo</div>
-              <div class="tier-equivalent" id="calc-equivalent" style="display:none"></div>
-              <div class="tier-saving" id="calc-saving" style="display:none"></div>
+            <label class="addon-option" id="recruitment-addon-label" for="recruitment-addon">
+              <input type="checkbox" id="recruitment-addon">
+              <span>
+                Recruitment portal (&pound;49 per month + VAT)
+                <span class="addon-state" id="recruitment-addon-state"></span>
+              </span>
+            </label>
+          </div>
+
+          <div class="growth-results">
+            <div class="calculator-display" id="calc-paid" aria-live="polite">
+              <div class="calculator-display-card highlight">
+                <div class="tier-name" id="calc-plan-name">Pro</div>
+                <div class="tier-price" id="calc-price">&pound;100</div>
+                <div class="tier-unit" id="calc-unit">/ month + VAT</div>
+                <div class="calc-inc-vat" id="calc-inc-vat">&pound;120 including VAT</div>
+                <div class="tier-equivalent" id="calc-equivalent"></div>
+                <div class="tier-saving" id="calc-saving" style="display:none"></div>
+                <p class="calc-breakdown" id="calc-breakdown">Pro floor: first 10 licences included at &pound;100 per month + VAT.</p>
+              </div>
+            </div>
+            <div class="growth-unlocks" aria-live="polite">
+              <h4 id="unlock-heading">Included with 10 licences</h4>
+              <p class="unlock-lead" id="unlock-lead">You are on the Growing site band.</p>
+              <ul id="unlock-list"></ul>
+              <div class="unlock-next">
+                <h4>What your next licences unlock</h4>
+                <p class="unlock-next-lead" id="unlock-next-lead"></p>
+                <ul id="unlock-next-list"></ul>
+              </div>
             </div>
           </div>
 
+          <div class="growth-examples">
+            <h4>How the bill changes</h4>
+            <p>Software only, plus VAT. Add-ons are shown in the calculator above. Annual billing saves 20%.</p>
+            <div class="feature-table-wrapper">
+              <table class="feature-table">
+                <thead>
+                  <tr>
+                    <th>Carers</th>
+                    <th>Plan</th>
+                    <th>Monthly + VAT</th>
+                    <th>Including VAT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1&ndash;5</td><td>Start</td><td>&pound;49</td><td>&pound;58.80</td></tr>
+                  <tr><td>6&ndash;10</td><td>Pro</td><td>&pound;100</td><td>&pound;120</td></tr>
+                  <tr><td>15</td><td>Pro</td><td>&pound;150</td><td>&pound;180</td></tr>
+                  <tr><td>20</td><td>Pro</td><td>&pound;200</td><td>&pound;240</td></tr>
+                  <tr><td>30</td><td>Pro</td><td>&pound;300</td><td>&pound;360</td></tr>
+                  <tr><td>50</td><td>Pro</td><td>&pound;500</td><td>&pound;600</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
         <!-- ============================================
@@ -430,7 +503,7 @@
             <div class="pricing-badge">Starts at</div>
             <h3>HomecareOS</h3>
             <div class="price">&pound;49<span> / month + VAT</span></div>
-            <p class="price-note">The full platform &middot; office team &amp; service users unmetered &middot; annual billing saves 20%</p>
+            <p class="price-note">Start: up to 5 carers. From 6 carers, Pro is £100 / month + VAT (first 10 licences included), then £10 per carer + VAT. Office team and service users unmetered. Annual billing saves 20%.</p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -489,7 +562,7 @@
             <div class="pricing-badge pricing-badge-extra">Optional add-on</div>
             <h3>Telephone support &amp; training</h3>
             <div class="price">&pound;39<span> / month + VAT</span></div>
-            <p class="price-note">Optional add-on, on top of HomecareOS</p>
+            <p class="price-note">On Start. Priority support and remote training are included on Pro.</p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -507,17 +580,12 @@
             <a href="https://app.homecareos.co.uk/onboard" class="btn btn-outline">Get started</a>
           </div>
 
-          <!-- Recruitment portal add-on.
-               Price not yet confirmed. When it is, replace the .price-addon block with:
-               <div class="price">&pound;XX<span> / month + VAT</span></div>
-               and keep the Optional extra badge. -->
+          <!-- Recruitment portal add-on. Confirmed £49 / month + VAT. Included on Pro. -->
           <div class="pricing-card" id="addon-recruitment">
-            <div class="pricing-badge pricing-badge-extra">Optional extra</div>
+            <div class="pricing-badge pricing-badge-extra">Optional add-on on Start</div>
             <h3>Recruitment portal</h3>
-            <div class="price price-addon">
-              <span class="addon-label">Add-on</span>
-            </div>
-            <p class="price-note">Optional extra, on top of HomecareOS</p>
+            <div class="price">&pound;49<span> / month + VAT</span></div>
+            <p class="price-note">On Start. Included on Pro (6 or more carers).</p>
             <ul class="pricing-features">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -537,6 +605,137 @@
 
         </div>
 
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         LICENCE LADDER / EXTRA SERVICES
+         ============================================ -->
+    <section class="section section-gray licence-ladder" aria-labelledby="ladder-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">As you grow</span>
+          <h2 id="ladder-heading">Services that unlock as you add licences</h2>
+          <p>The software grows with you, and so do the extras that come with your licences: website pages, SEO and GEO hours, IT and cyber help, email hosting, carer SIMs, PPE supply, and MBA-led business support. Hours and quantities below are indicative. Phone system features are <span class="coming-soon-badge">Coming soon</span>.</p>
+        </div>
+        <div class="feature-table-wrapper" data-reveal data-reveal-delay="100">
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th>Licences</th>
+                <th>Band</th>
+                <th>What unlocks</th>
+                <th>Website, SEO and GEO</th>
+                <th>IT, cyber and email</th>
+                <th>Phone <span class="coming-soon-badge">Coming soon</span></th>
+                <th>Support (indicative)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1&ndash;5</td>
+                <td>Start</td>
+                <td>The full core platform</td>
+                <td>Included later, from 6 licences</td>
+                <td>Email and chat support for the app</td>
+                <td>Not yet in this band</td>
+                <td>Email and chat. Telephone support and training is the £39/month + VAT add-on</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Foundation</td>
+                <td>Included 1-page website and first virtual number</td>
+                <td>1-page site (services, contact, privacy), basic on-page SEO at build</td>
+                <td>MFA and access-hygiene guidance; DSPT signposting</td>
+                <td>Virtual number and voicemail-to-email</td>
+                <td>Up to 2 hours/month, email, UK business hours</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Measured</td>
+                <td>Analytics, Search Console and device hygiene</td>
+                <td>Google Analytics 4 and Search Console verified</td>
+                <td>Office device inventory, password-manager guidance, backup checklist</td>
+                <td>Business-hours greeting on the virtual line</td>
+                <td>Up to 3 hours/month, email</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Growing site</td>
+                <td>About and Services pages, IVR, light SEO hours</td>
+                <td>3-page site. Up to 2 hours/month SEO / GEO</td>
+                <td>Light Microsoft 365 or Google Workspace admin help; Cyber Essentials readiness checklist</td>
+                <td>IVR (auto-attendant) and call groups</td>
+                <td>Up to 4 hours/month, email and chat</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Connected</td>
+                <td>First mailboxes, call recording, Google Business Profile, Cyber Essentials path</td>
+                <td>Google Business Profile set-up or refresh. Up to 3 hours/month SEO / GEO</td>
+                <td>Up to 2 hosted mailboxes (indicative). Cyber Essentials action plan coaching (certification fees quoted separately)</td>
+                <td>Optional call recording, with policy and consent guidance</td>
+                <td>Up to 5 hours/month</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Established</td>
+                <td>Careers and request-care pages, DSPT help, out-of-hours routing</td>
+                <td>Join our team and Request care pages. Up to 6 hours/month SEO / GEO. Google Ads account created paused (spend needs your approval)</td>
+                <td>Up to 5 hosted mailboxes. DSPT gap review against Standards Met</td>
+                <td>Out-of-hours routing and voicemail schedules</td>
+                <td>Up to 8 hours/month, email and phone</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Scaling</td>
+                <td>Area pages, screen-pop, quarterly review, Ads hours</td>
+                <td>Area pages and a simple blog. Up to 12 hours/month SEO / GEO. Light Google Ads management (campaigns stay paused until you approve spend)</td>
+                <td>Up to 10 mailboxes plus 1 shared inbox. Managed basics for a small set of office endpoints</td>
+                <td>Screen-pop / CRM context and call analytics</td>
+                <td>Up to 12 hours/month priority phone and email. Quarterly business review</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Visible</td>
+                <td>GEO pack for AI answers and deeper cyber coaching</td>
+                <td>GEO content pack (schema and FAQ pages for AI answers). Up to 15 hours/month SEO / GEO</td>
+                <td>Up to 15 mailboxes. Cyber Essentials Plus coaching path (fees quoted separately)</td>
+                <td>Queue and agent reporting upgrades</td>
+                <td>Up to 16 hours/month. Half-day growth planning workshop</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Multi-branch</td>
+                <td>Multi-branch web and phone, named customer success, inspection dry-run</td>
+                <td>Multi-branch site structure. Up to 20 hours/month SEO / GEO</td>
+                <td>Up to 25 mailboxes plus department inboxes. Multi-site admin and access reviews</td>
+                <td>Multi-branch numbers, queues and reporting</td>
+                <td>Up to 20 hours/month with a named customer success contact. CQC inspection readiness dry-run</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td>Managed</td>
+                <td>Fuller managed IT, monthly business support, Ads programme</td>
+                <td>Up to 30 hours/month SEO / GEO. Structured Ads programme (spend still needs your approval)</td>
+                <td>Up to 40 mailboxes. Fuller managed IT pack for your office estate (scope agreed with you)</td>
+                <td>Advanced routing and deeper analytics</td>
+                <td>Up to 30 hours/month. Monthly business support hours</td>
+              </tr>
+              <tr>
+                <td>50+</td>
+                <td>Enterprise</td>
+                <td>Custom packs across web, IT, phone, business support and SLA</td>
+                <td>Custom information architecture. Up to 40 hours/month SEO / GEO, or a quoted retainer</td>
+                <td>Custom mailbox pack. Custom managed IT and cyber programme</td>
+                <td>Full suite: multi-branch, integrations and advanced routing</td>
+                <td>Dedicated support pack, escalation path and training days. MBA-led advisory pack</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ladder-note" data-reveal>Carer SIMs, PPE supply and MBA-led business support also build with your licences &mdash; from partner-rate quotes and a first-90-days onboarding checklist at Foundation, through to custom supply and advisory packs at Enterprise. Indicative SIM and mailbox counts are in the calculator when you choose a size. Hours are an upper guide, not a separate billable catalogue. Nothing here is priced on top of your licences; we will confirm the exact package with you as you grow.</p>
       </div>
     </section>
 
@@ -564,7 +763,7 @@
           <div class="feature-content" data-reveal data-reveal-delay="200">
             <span class="label">Optional extra</span>
             <h3 style="margin-top:8px">Recruitment portal</h3>
-            <p>The recruitment portal is an optional extra, on top of HomecareOS: applicant tracking from invite to hire, with documents, checks and onboarding on one pipeline. <a href="#addon-recruitment">See the add-on</a>.</p>
+            <p>The recruitment portal is £49 per month + VAT on Start, and is included on Pro: applicant tracking from invite to hire, with documents, checks and onboarding on one pipeline. <a href="#addon-recruitment">See the add-on</a>.</p>
           </div>
         </div>
         <div class="card-grid" style="margin-top:48px">
@@ -594,8 +793,8 @@
     <section class="section motion-band" aria-label="What a licence counts">
       <div class="container" style="max-width:900px;text-align:center">
         <h2 data-reveal style="margin-bottom:12px">You pay for carers, not logins</h2>
-        <p class="lottie-cap">HomecareOS starts at &pound;49 per month + VAT. Telephone support and training is an optional add-on at &pound;39 per month + VAT. Coordinators, managers and owners who do not deliver visits are never counted, and there is no cap on service users.</p>
-        <p class="lottie-cap" style="margin-top:12px">The <a href="features-recruitment.html" style="text-decoration:underline;text-underline-offset:2px">recruitment portal</a> is an optional extra, on top of HomecareOS. <a href="#addon-recruitment" style="text-decoration:underline;text-underline-offset:2px">See the add-on</a>.</p>
+        <p class="lottie-cap">HomecareOS starts at &pound;49 per month + VAT for up to 5 carers, then grows with your licences. Telephone support and training is an optional add-on at &pound;39 per month + VAT on Start, and is included on Pro. Coordinators, managers and owners who do not deliver visits are never counted, and there is no cap on service users.</p>
+        <p class="lottie-cap" style="margin-top:12px">The <a href="features-recruitment.html" style="text-decoration:underline;text-underline-offset:2px">recruitment portal</a> is £49 per month + VAT on Start, and is included on Pro. <a href="#addon-recruitment" style="text-decoration:underline;text-underline-offset:2px">See the add-on</a>.</p>
         <div class="anim-wrap" data-reveal>
           <div class="lottie-stage"><div data-lottie="/lottie/homecareos-pricing.json" data-rest="285" style="aspect-ratio:640/190" role="img" aria-label="Twelve filled dots representing billed carers appear, alongside five hollow dots representing office staff who are never counted"></div></div>
           <ul class="anim-legend legend-2">
@@ -622,7 +821,7 @@
         <div class="section-header" data-reveal>
           <span class="label">Compare</span>
           <h2 id="comparison-heading">Full Feature Comparison</h2>
-          <p>The full platform starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT.</p>
+          <p>The full platform starts at £49 per month + VAT for up to 5 carers. From 6 carers, Pro is £100 per month + VAT (first 10 licences included), then £10 per carer + VAT. Telephone support and training is £39 per month + VAT on Start, and is included on Pro.</p>
         </div>
 
         <div class="feature-table-wrapper" data-reveal data-reveal-delay="100">
@@ -736,7 +935,7 @@
               </tr>
               <tr>
                 <td>Recruitment portal</td>
-                <td><a href="#addon-recruitment">Add-on</a></td>
+                <td class="cell-note">£49/month + VAT on Start. Included on Pro. <a href="#addon-recruitment">See the add-on</a></td>
               </tr>
 
               <!-- Reporting & Analytics -->
@@ -770,7 +969,7 @@
               </tr>
               <tr>
                 <td>VoIP phone system (call minute &amp; SMS bundles extra)</td>
-                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="cell-note">Coming soon <span class="coming-soon-badge">Coming soon</span></td>
               </tr>
 
               <!-- Support -->
@@ -781,33 +980,30 @@
               </tr>
               <tr>
                 <td>Phone &amp; chat support</td>
-                <td class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="cell-note">Chat is included. Telephone support is the £39/month + VAT add-on on Start, and is included on Pro</td>
               </tr>
               <tr>
                 <td>Dedicated account manager</td>
-                <td>Add-on, £39/month + VAT</td>
+                <td class="cell-note">Named customer success contact from 30 licences</td>
               </tr>
               <tr>
                 <td>Priority support &amp; SLA</td>
-                <td>Add-on, £39/month + VAT</td>
+                <td class="cell-note">Priority support included on Pro. Indicative SLAs strengthen as you add licences</td>
               </tr>
 
               <!-- Limits -->
               <tr class="category-row"><td colspan="2">Limits</td></tr>
               <tr>
                 <td>Carers</td>
-                <td>Up to 5</td>
-                <td>Unlimited</td>
+                <td class="cell-note">Start: up to 5 at £49/month + VAT. Pro from 6 carers: £100/month + VAT covers the first 10 licences, then £10 per carer + VAT</td>
               </tr>
               <tr>
                 <td>Service users</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td class="cell-note">Unmetered</td>
               </tr>
               <tr>
                 <td>Office &amp; coordinator users</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td class="cell-note">Unmetered</td>
               </tr>
             </tbody>
           </table>
@@ -823,7 +1019,7 @@
         <div class="section-header" data-reveal>
           <span class="label">Add-Ons</span>
           <h2 id="bolt-on-heading">Bolt-On Services</h2>
-          <p>Additional services to help your agency thrive. The phone system itself is included in Pro; call minute and SMS bundles are the only extra. Everything else here is coming soon. Register your interest and we will notify you at launch.</p>
+          <p>Additional services to help your agency thrive. The VoIP phone system is <span class="coming-soon-badge">Coming soon</span> &mdash; when it ships, call minute and SMS bundles will be the usage extra. Register your interest and we will notify you at launch.</p>
         </div>
 
         <div class="bolt-on-grid" data-reveal data-reveal-delay="100">
@@ -833,8 +1029,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <h4>Call Minute &amp; SMS Bundles</h4>
-            <p>The VoIP phone system is included in Pro: a UK number in your browser, IVR, voicemail transcription and on-call diversion. Call minutes and text messages are bought in bundles, on top of your plan. <a href="features-communications.html" style="color:var(--accent);">See the phone system features</a>.</p>
-            <span class="bolt-on-badge" style="background:linear-gradient(135deg,#E8A14A,#CE8A2E);color:#fff;">Pro phone system</span>
+            <p>The VoIP phone system is coming soon: a UK number in your browser, IVR, voicemail transcription and on-call diversion. When it ships, call minutes and text messages will be bought in bundles, on top of your plan. <a href="features-communications.html" style="color:var(--accent);">See the planned phone system features</a>.</p>
+            <span class="coming-soon-badge">Coming soon</span>
           </div>
 
           <div class="bolt-on-card">
@@ -906,7 +1102,7 @@
             </button>
             <div class="faq-answer" id="faq-answer-1" role="region">
               <div class="faq-answer-inner">
-                HomecareOS gives you the full core platform: scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, invoicing, payroll, the family portal, four-nation compliance and the full reporting suite. HomecareOS starts at £49 per month + VAT, with your office team and service users unmetered. Telephone support and training is an optional add-on at £39 per month + VAT.
+                HomecareOS gives you the full core platform: scheduling, digital care plans, the carer mobile app with GPS check-in/out, MAR records, invoicing, payroll, the family portal, four-nation compliance, stock control and the full reporting suite. HomecareOS starts at £49 per month + VAT for up to 5 carers, with your office team and service users unmetered. From 6 carers, Pro is £100 per month + VAT (the first 10 licences are included), then £10 per carer + VAT. Telephone support and training is an optional add-on at £39 per month + VAT on Start, and is included on Pro. The recruitment portal is £49 per month + VAT on Start, and is included on Pro.
               </div>
             </div>
           </div>
@@ -918,7 +1114,7 @@
             </button>
             <div class="faq-answer" id="faq-answer-2" role="region">
               <div class="faq-answer-inner">
-                HomecareOS starts at £49 per month + VAT. Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle and leavers are not charged after they go. Coordinators, managers, owners and other office staff who don't deliver visits are never counted, and there is no limit on service users. See how <a href="/blog/per-carer-pricing-home-care-software.html">per-carer pricing compares to per-user pricing</a>, and what is included in the <a href="features-scheduling.html">rota and scheduling features</a>.
+                HomecareOS starts at £49 per month + VAT for up to 5 carers (Start). From 6 carers you move to Pro: £100 per month + VAT covers the first 10 licences, and each carer after that is £10 + VAT. Headcount is taken at your renewal date, so a carer who joins mid-cycle is billed from the next cycle and leavers are not charged after they go. Coordinators, managers, owners and other office staff who don't deliver visits are never counted, and there is no limit on service users. Annual billing saves 20%. See how <a href="/blog/per-carer-pricing-home-care-software.html">per-carer pricing compares to per-user pricing</a>, and what is included in the <a href="features-scheduling.html">rota and scheduling features</a>.
               </div>
             </div>
           </div>
@@ -966,7 +1162,7 @@
             </button>
             <div class="faq-answer" id="faq-answer-6" role="region">
               <div class="faq-answer-inner">
-                HomecareOS starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT. Your data is fully preserved, and your office team and service users stay unmetered.
+                HomecareOS starts at £49 per month + VAT for up to 5 carers. Telephone support and training is an optional add-on at £39 per month + VAT on Start, and is included on Pro (6 or more carers). Your data is fully preserved, and your office team and service users stay unmetered.
               </div>
             </div>
           </div>
@@ -990,7 +1186,19 @@
             </button>
             <div class="faq-answer" id="faq-answer-8" role="region">
               <div class="faq-answer-inner">
-                Support by email and chat is included. Telephone support and live training is an optional add-on at £39 per month + VAT, and it is available again when you take on new coordinators or change how you work. Onsite training, delivered at your office, sits outside the licence and is quoted before anything is booked.
+                Support by email and chat is included on every plan. Telephone support and live training is an optional add-on at £39 per month + VAT on Start, and is included on Pro (6 or more carers). It is available again when you take on new coordinators or change how you work. Onsite training, delivered at your office, sits outside the licence and is quoted before anything is booked.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+              What extra services do I get as I add licences?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-answer-9" role="region">
+              <div class="faq-answer-inner">
+                From 6 licences, extras unlock in steps as you grow: an included website and SEO / GEO hours, IT and cyber help (including DSPT and Cyber Essentials guidance), hosted email, carer SIMs, PPE supply, and MBA-led business support. Support hours and indicative SLAs also build with your licences. A named customer success contact is included from 30 licences. Hours and quantities are indicative; we confirm the package with you as you grow. Phone system features are coming soon. Use the calculator above to see what is included at your size, and what your next licences unlock.
               </div>
             </div>
           </div>
@@ -1193,43 +1401,353 @@
        Plain JS on purpose: the site sends a Content-Security-Policy without
        'unsafe-eval', which blocks Alpine's expression evaluation entirely. */
     (function () {
-      var START = 49;          // pounds per month, plus VAT
-      var SUPPORT = 39;        // optional telephone support & training add-on
+      var START = 49;           // Start: up to 5 carers, pounds / month + VAT
+      var PRO_FLOOR = 100;      // Pro minimum, first 10 licences included
+      var PER_CARER = 10;       // Pro rate from 11 carers
+      var SUPPORT = 39;         // optional on Start; included on Pro
+      var RECRUITMENT = 49;     // optional on Start; included on Pro
       var ANNUAL_DISCOUNT = 0.2;
+      var VAT = 0.2;
+      var START_CAP = 5;
+      var FLOOR_LICENCES = 10;
 
       var supportOn = false;
+      var recruitmentOn = false;
       var billing = 'monthly';
+      var carers = 10;
+      var wasPro = false;
+
+      var STEPS = [
+        {
+          licences: 6,
+          name: 'Foundation',
+          headline: 'Included 1-page website and first virtual number',
+          items: [
+            'Included 1-page website (services summary, contact, privacy), with basic on-page SEO at build',
+            'Virtual phone number and voicemail-to-email (Coming soon)',
+            'MFA and access-hygiene guidance, plus DSPT signposting',
+            'Up to 2 hours/month pooled support, email, UK business hours (indicative)',
+            'Onboarding checklist for your first 90 days',
+            'Partner SIM / data and staff PPE rate cards on request'
+          ]
+        },
+        {
+          licences: 8,
+          name: 'Measured',
+          headline: 'Analytics, Search Console and device hygiene',
+          items: [
+            'Google Analytics 4 and Search Console verified',
+            'Business-hours greeting on the virtual line (Coming soon)',
+            'Office device inventory template, password-manager guidance and a basic backup checklist',
+            'Up to 3 hours/month support by email (indicative)',
+            'One-page local-authority rate snapshot for your area (not legal advice)'
+          ]
+        },
+        {
+          licences: 10,
+          name: 'Growing site',
+          headline: 'About and Services pages, IVR, and light SEO hours',
+          items: [
+            '3-page site (Home, About, Services). Up to 2 hours/month SEO / GEO (indicative)',
+            'IVR (auto-attendant) and call groups (Coming soon)',
+            'Light Microsoft 365 or Google Workspace admin help, and a Cyber Essentials readiness checklist',
+            'Up to 4 hours/month support by email and chat (indicative)',
+            'Up to 2 carer SIMs at partner rates (indicative)'
+          ]
+        },
+        {
+          licences: 12,
+          name: 'Connected',
+          headline: 'First mailboxes, call recording, Google Business Profile and a Cyber Essentials path',
+          items: [
+            'Google Business Profile set-up or refresh. Up to 3 hours/month SEO / GEO (indicative)',
+            'Optional call recording, with policy and consent guidance (Coming soon)',
+            'Cyber Essentials action plan coaching (certification fees quoted separately)',
+            'Up to 2 hosted mailboxes on your domain (indicative)',
+            'Up to 4 carer SIMs (indicative)',
+            'Up to 5 hours/month support (indicative)'
+          ]
+        },
+        {
+          licences: 15,
+          name: 'Established',
+          headline: 'Careers and request-care pages, DSPT help, and out-of-hours routing',
+          items: [
+            'Join our team and Request care pages. Up to 6 hours/month SEO / GEO (indicative)',
+            'Google Ads account created paused — live spend needs your approval',
+            'Out-of-hours routing and voicemail schedules (Coming soon)',
+            'DSPT gap review against Standards Met',
+            'Up to 5 hosted mailboxes (indicative)',
+            'Up to 8 hours/month support, email and phone (indicative)'
+          ]
+        },
+        {
+          licences: 20,
+          name: 'Scaling',
+          headline: 'Area pages, screen-pop, quarterly review and Ads hours',
+          items: [
+            'Area / location pages and a simple blog. Up to 12 hours/month SEO / GEO (indicative)',
+            'Light Google Ads management hours (campaigns stay paused until you approve spend)',
+            'Screen-pop / CRM context and call analytics (Coming soon)',
+            'Up to 10 mailboxes plus 1 shared inbox (indicative)',
+            'Quarterly business review: finance, pricing and growth priorities',
+            'Up to 12 hours/month priority phone and email support (indicative)'
+          ]
+        },
+        {
+          licences: 25,
+          name: 'Visible',
+          headline: 'GEO pack for AI answers and deeper cyber coaching',
+          items: [
+            'GEO content pack (schema and FAQ pages for AI answers). Up to 15 hours/month SEO / GEO (indicative)',
+            'Queue and agent reporting upgrades (Coming soon)',
+            'Cyber Essentials Plus coaching path (fees quoted separately)',
+            'Up to 15 mailboxes (indicative)',
+            'Half-day growth planning workshop',
+            'Up to 16 hours/month support (indicative)'
+          ]
+        },
+        {
+          licences: 30,
+          name: 'Multi-branch',
+          headline: 'Multi-branch web and phone, named customer success, and an inspection dry-run',
+          items: [
+            'Multi-branch / multi-location site structure. Up to 20 hours/month SEO / GEO (indicative)',
+            'Multi-branch numbers, queues and reporting (Coming soon)',
+            'Named customer success contact and up to 20 hours/month support (indicative)',
+            'Named advisor hours and a CQC inspection readiness dry-run',
+            'Up to 25 mailboxes plus department inboxes (indicative)'
+          ]
+        },
+        {
+          licences: 40,
+          name: 'Managed',
+          headline: 'Fuller managed IT, monthly business support and an Ads programme',
+          items: [
+            'Up to 30 hours/month SEO / GEO (indicative). Structured Ads programme under an agreed plan (spend still needs your approval)',
+            'Fuller managed IT pack for your office estate (scope agreed with you)',
+            'Advanced routing and deeper analytics (Coming soon)',
+            'Monthly business support hours: strategy, pricing, cash flow and recruitment',
+            'Up to 40 mailboxes (indicative)',
+            'Up to 30 hours/month support (indicative)'
+          ]
+        },
+        {
+          licences: 50,
+          name: 'Enterprise',
+          headline: 'Custom packs across web, IT, phone, business support and SLA',
+          items: [
+            'Custom site information architecture. Up to 40 hours/month SEO / GEO, or a quoted retainer (indicative)',
+            'Custom managed IT and cyber programme',
+            'Full phone suite: multi-branch, integrations and advanced routing (Coming soon)',
+            'Dedicated MBA-led advisory pack: quarterly reviews and growth planning',
+            'Dedicated support pack with an escalation path and training days',
+            'Custom mailbox, connectivity and PPE supply agreements'
+          ]
+        }
+      ];
 
       function $(id) { return document.getElementById(id); }
 
-      function money(v) { return '£' + v.toLocaleString('en-GB'); }
-      function monthly() {
-        var base = START + (supportOn ? SUPPORT : 0);
-        return Math.round(base * (billing === 'annual' ? 1 - ANNUAL_DISCOUNT : 1));
+      function money(v, pence) {
+        var n = pence ? Math.round(v * 100) / 100 : Math.round(v);
+        var opts = pence
+          ? { minimumFractionDigits: n % 1 === 0 ? 0 : 2, maximumFractionDigits: 2 }
+          : { maximumFractionDigits: 0 };
+        return '£' + n.toLocaleString('en-GB', opts);
       }
-      function total() { return billing === 'annual' ? monthly() * 12 : monthly(); }
-      function saving() { return Math.round((START + (supportOn ? SUPPORT : 0)) * 12 * ANNUAL_DISCOUNT); }
+
+      function softwareMonthly(n) {
+        if (n <= 0) return 0;
+        if (n <= START_CAP) return START;
+        return Math.max(PRO_FLOOR, n * PER_CARER);
+      }
+
+      function isPro(n) { return n > START_CAP; }
+
+      function stepFor(n) {
+        var current = null;
+        for (var i = 0; i < STEPS.length; i++) {
+          if (n >= STEPS[i].licences) current = STEPS[i];
+        }
+        return current;
+      }
+
+      function nextStep(step) {
+        if (!step) return STEPS[0];
+        var idx = -1;
+        for (var i = 0; i < STEPS.length; i++) {
+          if (STEPS[i].licences === step.licences) { idx = i; break; }
+        }
+        return (idx >= 0 && idx < STEPS.length - 1) ? STEPS[idx + 1] : null;
+      }
+
+      function addOns(n) {
+        if (isPro(n)) return 0;
+        return (supportOn ? SUPPORT : 0) + (recruitmentOn ? RECRUITMENT : 0);
+      }
+
+      function monthlyGross(n) {
+        return softwareMonthly(n) + addOns(n);
+      }
+
+      function billedMonthly(n) {
+        var m = monthlyGross(n);
+        return billing === 'annual' ? Math.round(m * (1 - ANNUAL_DISCOUNT) * 100) / 100 : m;
+      }
+
+      function billedTotal(n) {
+        return billing === 'annual' ? Math.round(billedMonthly(n) * 12 * 100) / 100 : billedMonthly(n);
+      }
+
+      function annualSaving(n) {
+        return Math.round(monthlyGross(n) * 12 * ANNUAL_DISCOUNT * 100) / 100;
+      }
+
+      function clampCarers(v) {
+        var n = parseInt(v, 10);
+        if (isNaN(n) || n < 1) n = 1;
+        if (n > 200) n = 200;
+        return n;
+      }
+
+      function badgeText(s) {
+        return s.replace(/\(Coming soon\)/g, '<span class="coming-soon-badge">Coming soon</span>');
+      }
+
+      function fillList(el, items) {
+        if (!el) return;
+        el.innerHTML = '';
+        (items || []).forEach(function (item) {
+          var li = document.createElement('li');
+          li.innerHTML = badgeText(item);
+          el.appendChild(li);
+        });
+      }
 
       function show(el, on) { if (el) el.style.display = on ? '' : 'none'; }
       function text(el, v) { if (el) el.textContent = v; }
 
+      function breakdown(n) {
+        var parts = [];
+        if (!isPro(n)) {
+          parts.push('Start: up to 5 carers at ' + money(START) + ' per month + VAT.');
+          if (supportOn) parts.push('Telephone support and training ' + money(SUPPORT) + ' + VAT.');
+          if (recruitmentOn) parts.push('Recruitment portal ' + money(RECRUITMENT) + ' + VAT.');
+        } else {
+          if (n <= FLOOR_LICENCES) {
+            parts.push('Pro floor: first 10 licences included at ' + money(PRO_FLOOR) + ' per month + VAT.');
+          } else {
+            parts.push(n + ' carers × ' + money(PER_CARER) + ' = ' + money(n * PER_CARER) + ' per month + VAT.');
+          }
+          parts.push('Recruitment portal and priority support are included on Pro.');
+        }
+        return parts.join(' ');
+      }
+
+      function renderAddons(pro) {
+        var supportInput = $('support-addon');
+        var recInput = $('recruitment-addon');
+        var supportLabel = $('support-addon-label');
+        var recLabel = $('recruitment-addon-label');
+        if (supportInput) {
+          supportInput.disabled = pro;
+          if (pro) supportInput.checked = true;
+        }
+        if (recInput) {
+          recInput.disabled = pro;
+          if (pro) recInput.checked = true;
+        }
+        if (supportLabel) supportLabel.classList.toggle('is-included', pro);
+        if (recLabel) recLabel.classList.toggle('is-included', pro);
+        if (!pro && wasPro) {
+          if (supportInput) supportInput.checked = false;
+          if (recInput) recInput.checked = false;
+          supportOn = false;
+          recruitmentOn = false;
+        }
+        wasPro = pro;
+        text($('support-addon-state'), pro
+          ? 'Included on Pro (priority support and remote training).'
+          : 'Optional add-on on Start.');
+        text($('recruitment-addon-state'), pro
+          ? 'Included on Pro.'
+          : 'Optional add-on on Start.');
+      }
+
+      function renderUnlocks(n) {
+        var step = stepFor(n);
+        var next = nextStep(step);
+        var heading = $('unlock-heading');
+        var lead = $('unlock-lead');
+        var nextLead = $('unlock-next-lead');
+        var nextWrap = document.querySelector('.unlock-next');
+
+        if (!step) {
+          text(heading, 'Included on Start');
+          text(lead, 'At ' + n + ' carer' + (n === 1 ? '' : 's') + ' you are on Start: the full core platform, with office team and service users unmetered. Licence extras begin at 6 carers, when you move to Pro.');
+          fillList($('unlock-list'), [
+            'Scheduling, digital care plans, the carer app, MAR, invoicing, stock control, the family portal and reporting',
+            'Support by email and chat',
+            'Telephone support and training, and the recruitment portal, as optional add-ons'
+          ]);
+          text(nextLead, (6 - n) + ' more licence' + (6 - n === 1 ? '' : 's') + ' to 6 · Foundation: ' + STEPS[0].headline + '.');
+          fillList($('unlock-next-list'), STEPS[0].items);
+          show(nextWrap, true);
+          return;
+        }
+
+        text(heading, 'Included with ' + n + ' licence' + (n === 1 ? '' : 's'));
+        text(lead, 'You are on the ' + step.name + ' band: ' + step.headline + '. Each band keeps what you already have, and adds the extras below. Hours and quantities are indicative.');
+        fillList($('unlock-list'), step.items);
+
+        if (!next) {
+          text(nextLead, 'Enterprise is the top automatic step. Further gains are agreed as a custom package.');
+          fillList($('unlock-next-list'), []);
+          show(nextWrap, true);
+          return;
+        }
+
+        var remaining = Math.max(0, next.licences - n);
+        if (remaining === 0) {
+          text(nextLead, 'Licence ' + (n + 1) + ' stays in ' + step.name + '.');
+        } else if (remaining === 1) {
+          text(nextLead, 'Your next licence reaches ' + next.licences + ' · ' + next.name + ': ' + next.headline + '.');
+        } else {
+          text(nextLead, remaining + ' more licences to ' + next.licences + ' · ' + next.name + ': ' + next.headline + '. Until then, each added licence counts toward that unlock.');
+        }
+        fillList($('unlock-next-list'), remaining <= 1 ? next.items : []);
+        if (remaining > 1) {
+          var li = document.createElement('li');
+          li.textContent = next.headline;
+          $('unlock-next-list').appendChild(li);
+        }
+        show(nextWrap, true);
+      }
+
       function render() {
         var annual = billing === 'annual';
+        var pro = isPro(carers);
+        var total = billedTotal(carers);
+        var monthly = billedMonthly(carers);
+        var usePence = annual || (monthly % 1 !== 0) || (total % 1 !== 0);
 
         text($('calc-subtitle'), annual
-          ? 'Your annual price, plus VAT. Add telephone support and training if you want them.'
-          : 'Your monthly price, plus VAT. Add telephone support and training if you want them.');
+          ? 'Your annual price, plus VAT, at this carer count. Extra services unlock as you add licences.'
+          : 'Your monthly price, plus VAT, at this carer count. Extra services unlock as you add licences.');
 
-        show($('calc-paid'), true);
-        text($('calc-price'), money(total()));
-        text($('calc-unit'), annual ? '/yr + VAT' : '/mo + VAT');
+        text($('calc-plan-name'), pro ? 'HomecareOS Pro' : 'HomecareOS Start');
+        text($('calc-price'), money(total, usePence));
+        text($('calc-unit'), annual ? '/ year + VAT' : '/ month + VAT');
+        text($('calc-inc-vat'), money(total * (1 + VAT), true) + ' including VAT');
         show($('calc-equivalent'), annual);
-        text($('calc-equivalent'), '(' + money(monthly()) + '/mo + VAT)');
+        text($('calc-equivalent'), annual ? '(' + money(monthly, true) + ' / month equivalent + VAT)' : '');
         show($('calc-saving'), annual);
-        text($('calc-saving'), 'Save ' + money(saving()) + '/yr');
+        text($('calc-saving'), annual ? 'Save ' + money(annualSaving(carers), true) + ' / year' : '');
+        text($('calc-breakdown'), breakdown(carers));
 
-        var name = $('calc-paid') && $('calc-paid').querySelector('.tier-name');
-        if (name) name.textContent = supportOn ? 'HomecareOS + support' : 'HomecareOS';
+        renderAddons(pro);
+        renderUnlocks(carers);
 
         var sw = $('billing-switch');
         if (sw) { sw.classList.toggle('active', annual); sw.setAttribute('aria-checked', annual ? 'true' : 'false'); }
@@ -1237,6 +1755,16 @@
         if (lm) lm.classList.toggle('active', !annual);
         if (la) la.classList.toggle('active', annual);
         show($('billing-badge'), annual);
+
+        var slider = $('staff-slider'), number = $('staff-number');
+        if (slider && String(slider.value) !== String(carers)) slider.value = carers;
+        if (slider) slider.setAttribute('aria-valuenow', String(carers));
+        if (number && String(number.value) !== String(carers)) number.value = carers;
+      }
+
+      function setCarers(v) {
+        carers = clampCarers(v);
+        render();
       }
 
       function setBilling(v) { billing = v; render(); }
@@ -1244,14 +1772,29 @@
 
       var supportToggle = $('support-addon');
       if (supportToggle) {
-        supportToggle.addEventListener('change', function () { supportOn = supportToggle.checked; render(); });
+        supportToggle.addEventListener('change', function () {
+          if (supportToggle.disabled) return;
+          supportOn = supportToggle.checked;
+          render();
+        });
+      }
+      var recToggle = $('recruitment-addon');
+      if (recToggle) {
+        recToggle.addEventListener('change', function () {
+          if (recToggle.disabled) return;
+          recruitmentOn = recToggle.checked;
+          render();
+        });
       }
 
       var slider = $('staff-slider'), number = $('staff-number');
-      // Staff slider removed from the price; hide if still in the markup.
-      if (slider && slider.closest) {
-        var wrap = slider.closest('.calculator-staff-input');
-        if (wrap) wrap.style.display = 'none';
+      if (slider) {
+        slider.addEventListener('input', function () { setCarers(slider.value); });
+        slider.addEventListener('change', function () { setCarers(slider.value); });
+      }
+      if (number) {
+        number.addEventListener('input', function () { setCarers(number.value); });
+        number.addEventListener('change', function () { setCarers(number.value); });
       }
 
       var sw = $('billing-switch');
@@ -1270,7 +1813,7 @@
         });
       });
 
-            render();
+      render();
     })();
 
     /* FAQ accordion, the same vanilla pattern used across the site. */

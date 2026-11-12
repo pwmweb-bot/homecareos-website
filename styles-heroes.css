@@ -1364,3 +1364,206 @@ body.look-heroes .page-header .cta-actions {
 body.look-heroes .page-header .contact-strip {
   justify-content: flex-start;
 }
+
+/* --- Pricing growth calculator and licence ladder (12 Nov 2026) --- */
+body.look-heroes .pricing-calculator.growth-calculator {
+  max-width: 960px;
+  padding: 32px 36px 36px;
+}
+body.look-heroes .growth-calculator .calculator-staff-input {
+  display: grid;
+  grid-template-columns: auto 1fr 5.5rem;
+  align-items: center;
+  gap: 16px 20px;
+  margin-bottom: 8px;
+}
+body.look-heroes .growth-calculator .calculator-staff-input label {
+  grid-column: 1 / -1;
+  white-space: normal;
+  margin: 0;
+}
+body.look-heroes .growth-calculator .calculator-hint {
+  grid-column: 1 / -1;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  margin: 0;
+}
+body.look-heroes .growth-calculator .calculator-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+body.look-heroes .growth-calculator .addon-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  line-height: 1.45;
+}
+body.look-heroes .growth-calculator .addon-option input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+body.look-heroes .growth-calculator .addon-option.is-included {
+  cursor: default;
+  color: var(--ink-2);
+}
+body.look-heroes .growth-calculator .addon-option .addon-state {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+body.look-heroes .growth-results {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
+  gap: 20px;
+  align-items: stretch;
+}
+body.look-heroes .growth-calculator .calculator-display {
+  display: block;
+}
+body.look-heroes .growth-calculator .calculator-display-card {
+  height: 100%;
+  text-align: left;
+  padding: 24px 26px;
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-name {
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-price {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+  margin: 8px 0 0;
+}
+body.look-heroes .growth-calculator .calculator-display-card .tier-unit {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  margin-top: 4px;
+}
+body.look-heroes .growth-calculator .calc-inc-vat,
+body.look-heroes .growth-calculator .tier-equivalent,
+body.look-heroes .growth-calculator .calc-breakdown {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+body.look-heroes .growth-unlocks {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+body.look-heroes .growth-unlocks h4 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+body.look-heroes .growth-unlocks .unlock-lead,
+body.look-heroes .growth-unlocks .unlock-next-lead {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+body.look-heroes .growth-unlocks ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body.look-heroes .growth-unlocks li {
+  position: relative;
+  padding: 6px 0 6px 1.15rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+body.look-heroes .growth-unlocks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+body.look-heroes .growth-unlocks .unlock-next {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+body.look-heroes .growth-unlocks .coming-soon-badge {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+body.look-heroes .growth-examples {
+  margin-top: 28px;
+}
+body.look-heroes .growth-examples h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+body.look-heroes .growth-examples p {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+body.look-heroes .licence-ladder {
+  margin-top: 8px;
+}
+body.look-heroes .licence-ladder .feature-table-wrapper {
+  margin-top: 8px;
+}
+body.look-heroes .licence-ladder .feature-table td:first-child,
+body.look-heroes .licence-ladder .feature-table th:first-child {
+  white-space: nowrap;
+}
+body.look-heroes .licence-ladder .is-current td {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+body.look-heroes .ladder-note {
+  margin-top: 14px;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  max-width: 72ch;
+}
+body.look-heroes .feature-table .coming-soon-badge {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+body.look-heroes .feature-table .cell-note {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  body.look-heroes .pricing-calculator.growth-calculator {
+    padding: 24px 18px 28px;
+  }
+  body.look-heroes .growth-calculator .calculator-staff-input {
+    grid-template-columns: 1fr 5.5rem;
+  }
+  body.look-heroes .growth-calculator .calculator-slider {
+    grid-column: 1 / 2;
+  }
+  body.look-heroes .growth-results {
+    grid-template-columns: 1fr;
+  }
+}
