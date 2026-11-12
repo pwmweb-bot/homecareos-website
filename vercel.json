@@ -1,11 +1,226 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<host>.+\\.vercel\\.app)"
+        }
+      ],
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "0"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self' https://app.homecareos.co.uk; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets.calendly.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://tracker.metricool.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://assets.calendly.com https://tracker.metricool.com https://*.clarity.ms https://c.bing.com; font-src 'self' data:; connect-src 'self' https://app.homecareos.co.uk https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://pagead2.googlesyndication.com https://assets.calendly.com https://tracker.metricool.com https://*.clarity.ms https://c.bing.com; frame-src https://calendly.com https://assets.calendly.com https://td.doubleclick.net; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(ico|png|jpg|jpeg|gif|webp|avif|svg|woff|woff2)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-care-software-migration.html",
+      "destination": "/compare.html",
+      "permanent": true
+    },
+    {
+      "source": "/onboard.html",
+      "destination": "/start.html",
+      "permanent": true
+    },
+    {
+      "source": "/onboard",
+      "destination": "/start.html",
+      "permanent": true
+    },
+    {
+      "source": "/onboard/",
+      "destination": "/start.html",
+      "permanent": true
+    },
+    {
+      "source": "/features-v2.html",
+      "destination": "/features.html",
+      "permanent": true
+    },
+    {
+      "source": "/features-admin-platform.html",
+      "destination": "/features.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/index.html",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/help",
+      "destination": "/help.html",
+      "permanent": true
+    },
+    {
+      "source": "/help/",
+      "destination": "/help.html",
+      "permanent": true
+    },
+    {
+      "source": "/help/index.html",
+      "destination": "/help.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs/",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs.html",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-domiciliary-care-software-uk.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-access.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-carelinelive.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-uniqueiq.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-onetouch.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-shiftcare.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/compare-tagcare.html",
+      "destination": "/blog/home-care-software-uk-guide.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path([^./]+)",
+      "destination": "/:path.html"
+    },
+    {
+      "source": "/:path([^./]+)/",
+      "destination": "/:path.html"
+    },
+    {
+      "source": "/:dir([^./]+)/:path([^./]+)",
+      "destination": "/:dir/:path.html"
+    },
+    {
+      "source": "/:dir([^./]+)/:path([^./]+)/",
+      "destination": "/:dir/:path.html"
     }
   ]
 }
