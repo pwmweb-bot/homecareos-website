@@ -135,7 +135,7 @@
     body.look-heroes .hero-desktop{width:85%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
     body.look-heroes .hero-video,body.look-heroes #heroVideo{width:100%;aspect-ratio:1400/840;position:relative;line-height:0}
     body.look-heroes .hero-video img,body.look-heroes .hero-desktop img{width:100%;height:100%;aspect-ratio:1400/840;object-fit:cover;display:block}
-    @media (max-width:768px){body.look-heroes .hero,body.look-heroes header.hero{min-height:0;padding:36px 0 88px}body.look-heroes .hero-grid{text-align:left}body.look-heroes .hero-title{font-size:clamp(42px,12vw,64px)}body.look-heroes .hero-subtitle,body.look-heroes .hero-title,body.look-heroes .hero-note{margin-left:0;margin-right:0}}
+    @media (max-width:768px){body.look-heroes .hero,body.look-heroes header.hero{min-height:0;padding:36px 0 88px}body.look-heroes .hero-grid{text-align:left}body.look-heroes .hero-title{font-size:clamp(42px,12vw,64px);min-height:calc(3 * 1.05 * clamp(42px,12vw,64px))}body.look-heroes .hero-subtitle,body.look-heroes .hero-title,body.look-heroes .hero-note{margin-left:0;margin-right:0}}
   </style>
 
   <!-- Preload LCP fonts (parallel with HTML parse) -->
@@ -143,15 +143,13 @@
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Async-load full stylesheets (non-blocking) -->
-  <link rel="preload" as="style" href="/fonts/dmsans.css?v=20260521" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="styles.css?v=20261016cta" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="styles-heroes.css?v=20261112f" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-    <link rel="stylesheet" href="styles.css?v=20261016cta">
-    <link rel="stylesheet" href="styles-heroes.css?v=20261112f">
-  </noscript>
+  <!-- Render-blocking stylesheets: the previous async-onload pattern painted
+       the compact critical CSS first, then reflowed the full nav and hero once
+       styles.css arrived (desktop CLS ~0.5). Inner pages already load these
+       blocking and score CLS 0. -->
+  <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261112g">
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
