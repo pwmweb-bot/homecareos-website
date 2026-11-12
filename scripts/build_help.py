@@ -309,7 +309,7 @@ def article(a):
         src, alt = a["image"]
         cap = a.get("image_caption") or "The new HomecareOS design, shown with demo data."
         figure = (f'<figure class="help-figure"><img src="/images/help/{src}" alt="{esc(alt)}" width="1600" height="900" '
-                  f'loading="lazy"><figcaption>{esc(cap)}</figcaption></figure>')
+                  f'loading="lazy" decoding="async"><figcaption>{esc(cap)}</figcaption></figure>')
     else:
         figure = (f'<figure class="help-figure help-figure-placeholder" data-screenshot-needed="true">'
                   f'<div class="help-placeholder">{icon("image", 32)}<span>Screenshot coming soon</span></div>'

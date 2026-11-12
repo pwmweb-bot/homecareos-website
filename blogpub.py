@@ -501,7 +501,7 @@ def render_post(meta, body_html, markdown):
     <article class="section" aria-label="{esc_attr(title)}">
       <div class="container" style="max-width:760px">
         <figure style="margin:0 0 40px">
-          <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="1200" height="630" loading="eager" decoding="async" fetchpriority="high" style="width:100%;height:auto;border-radius:12px">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:8px;text-align:center">{esc(caption)}</figcaption>
         </figure>
         <div class="post-body">
@@ -510,7 +510,7 @@ def render_post(meta, body_html, markdown):
         {faq_html}
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px">
           <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
-            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%"></div>
+            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async"></div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
               <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He works with UK home care agencies on the software they use to run the service.</p>
@@ -545,7 +545,7 @@ def card_html(meta):
     return f"""          <!-- post:{meta["slug"]} -->
           <article class="blog-card" data-reveal data-reveal-delay="0">
             <div class="blog-card-image">
-              <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="640" height="360" loading="lazy">
+              <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="640" height="360" loading="lazy" decoding="async">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
