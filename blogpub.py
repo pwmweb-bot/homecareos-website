@@ -463,6 +463,7 @@ def render_post(meta, body_html, markdown):
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20260909insp">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112e">
 {GTAG}
   <script type="application/ld+json">
   {_json(article_ld)}
@@ -474,7 +475,7 @@ def render_post(meta, body_html, markdown):
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
   <nav class="nav" role="navigation" aria-label="Main navigation"></nav>
   <main id="main-content" tabindex="-1">

@@ -1030,3 +1030,296 @@ body.look-heroes .app-store-badge svg {
   color: #fff;
   fill: currentColor;
 }
+
+/* ========== Site-wide restyle for every remaining page ========== */
+
+/* Prose, blog posts, legal, guides */
+body.look-heroes .post-body,
+body.look-heroes .prose,
+body.look-heroes .legal,
+body.look-heroes .policy-body,
+body.look-heroes article .container,
+body.look-heroes .guide-body {
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1.75;
+}
+body.look-heroes .post-body h2,
+body.look-heroes .post-body h3,
+body.look-heroes .prose h2,
+body.look-heroes .legal h2,
+body.look-heroes .guide-body h2 {
+  color: var(--ink);
+  letter-spacing: -0.035em;
+  margin-top: 1.6em;
+}
+body.look-heroes .post-body a,
+body.look-heroes .prose a,
+body.look-heroes .legal a { color: var(--accent); }
+body.look-heroes .post-body img,
+body.look-heroes .prose img,
+body.look-heroes article figure img {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+body.look-heroes .post-meta,
+body.look-heroes .post-meta strong { color: var(--ink-2); }
+body.look-heroes aside.section-sm,
+body.look-heroes .author-box,
+body.look-heroes .related-posts {
+  background: var(--surface) !important;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink-2);
+}
+body.look-heroes .blog-grid { gap: 20px; }
+body.look-heroes .blog-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body.look-heroes .blog-card img { border-radius: 0; border: 0; }
+body.look-heroes .blog-card h3 a { color: var(--ink); text-decoration: none; }
+body.look-heroes .blog-card h3 a:hover { color: var(--accent); }
+body.look-heroes .read-more { color: var(--accent); font-weight: 600; }
+
+/* Audience callout, disclaimers */
+body.look-heroes .audience-callout-wrap { background: var(--bg); }
+body.look-heroes .audience-callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink-2);
+  padding: 16px 20px;
+}
+body.look-heroes .audience-callout a { color: var(--accent); }
+
+/* Help centre */
+body.look-heroes .help-header,
+body.look-heroes .help-section,
+body.look-heroes.help-page {
+  background: var(--bg);
+  color: var(--ink-2);
+}
+body.look-heroes .help-header.page-header,
+body.look-heroes .help-header { text-align: left; }
+body.look-heroes .help-search input {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  border-radius: 10px;
+  min-height: 50px;
+}
+body.look-heroes .help-card,
+body.look-heroes .help-path-step a,
+body.look-heroes .help-article,
+body.look-heroes .help-toc,
+body.look-heroes .help-related a,
+body.look-heroes .help-step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink-2);
+  box-shadow: none;
+}
+body.look-heroes .help-path-step a { border-top: 3px solid var(--accent); }
+body.look-heroes .help-path-step a:hover,
+body.look-heroes .help-card:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+body.look-heroes .help-path-num,
+body.look-heroes .help-card-icon,
+body.look-heroes .help-role-icon {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+body.look-heroes .help-card-icon,
+body.look-heroes .help-role-icon { background: var(--accent-soft); color: var(--accent); }
+body.look-heroes .help-card-title,
+body.look-heroes .help-path-title,
+body.look-heroes .help-article h1,
+body.look-heroes .help-article h2 { color: var(--ink); }
+body.look-heroes .help-badge { border-radius: 999px; font-weight: 600; letter-spacing: 0.04em; }
+body.look-heroes .help-article-body,
+body.look-heroes .help-body { max-width: 760px; }
+body.look-heroes .help-article-body img { border-radius: 14px; border: 1px solid var(--line); }
+
+/* Forms: contact, booking, start, onboard */
+body.look-heroes input,
+body.look-heroes select,
+body.look-heroes textarea {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  border-radius: 7px;
+  font-family: inherit;
+}
+body.look-heroes input:focus,
+body.look-heroes select:focus,
+body.look-heroes textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+body.look-heroes label { color: var(--ink); font-weight: 600; }
+body.look-heroes .form-card,
+body.look-heroes .contact-card,
+body.look-heroes .booking-card,
+body.look-heroes .lp-card,
+body.look-heroes .start-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+/* Compare, inspection-ready, tables already partly covered */
+body.look-heroes .compare-table,
+body.look-heroes .score-card,
+body.look-heroes .competitor-card,
+body.look-heroes .integration-card,
+body.look-heroes .team-card,
+body.look-heroes .portfolio-card,
+body.look-heroes .press-card,
+body.look-heroes .persona-card,
+body.look-heroes .service-card,
+body.look-heroes .roadmap-item,
+body.look-heroes .faq-item,
+body.look-heroes .accordion-item,
+body.look-heroes .evidence-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink-2);
+  box-shadow: none;
+}
+body.look-heroes .compare-table th,
+body.look-heroes .competitor-card h3,
+body.look-heroes .team-card h3 { color: var(--ink); }
+
+/* Feature-page specifics */
+body.look-heroes .feature-detail-list,
+body.look-heroes .feature-detail-item {
+  color: var(--ink-2);
+}
+body.look-heroes .feature-detail-item h4 { color: var(--ink); }
+body.look-heroes .check-icon {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+}
+body.look-heroes .soon-box,
+body.look-heroes .soon-tag {
+  border-radius: 14px;
+}
+body.look-heroes .soon-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 24px 28px;
+}
+body.look-heroes .feature-extra-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 32px 0 0;
+}
+body.look-heroes .feature-extra-shots .shot:only-child,
+body.look-heroes .feature-extra-shots .shot.shot-wide { grid-column: 1 / -1; }
+body.look-heroes .feature-hero-copy h2 { max-width: 18ch; }
+
+/* Free-banner reused as add-on banner on recruitment */
+body.look-heroes .free-banner,
+body.look-heroes .addon-banner {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  color: var(--ink-2);
+}
+body.look-heroes .free-banner-badge,
+body.look-heroes .addon-banner-badge,
+body.look-heroes .free-banner .addon-pill {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+}
+body.look-heroes .free-banner h2,
+body.look-heroes .addon-banner h2 { color: var(--ink); }
+
+/* Landing / start */
+body.look-heroes .lp-hero,
+body.look-heroes .lp-section { background: var(--bg); color: var(--ink-2); }
+body.look-heroes .lp-hero h1 { color: var(--ink); }
+body.look-heroes .lp-free-badge,
+body.look-heroes .lp-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+
+/* Misc leftover navy/white pockets */
+body.look-heroes .section-dark,
+body.look-heroes .band-dark {
+  background: var(--bg-deep);
+  color: var(--ink-2);
+}
+body.look-heroes .section-dark h2,
+body.look-heroes .band-dark h2 { color: var(--ink); }
+body.look-heroes [style*="color:#fff"] { /* handled case-by-case; breadcrumbs already overridden */ }
+
+@media (max-width: 800px) {
+  body.look-heroes .feature-extra-shots { grid-template-columns: 1fr; }
+  body.look-heroes .help-path,
+  body.look-heroes .help-grid { grid-template-columns: 1fr; }
+}
+
+/* Feature hub category cards */
+body.look-heroes .stats-bar { background: var(--bg-deep); border-block: 1px solid var(--line); }
+body.look-heroes .stat-item strong { color: var(--ink); letter-spacing: -0.04em; }
+body.look-heroes .stat-item span { color: var(--ink-2); }
+body.look-heroes .feature-category-card,
+body.look-heroes .features-category-grid > * {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: none;
+  color: var(--ink-2);
+}
+body.look-heroes .feature-category-card h3,
+body.look-heroes .feature-category-card h3 a { color: var(--ink); }
+body.look-heroes .feature-category-card:hover { border-color: var(--accent); }
+body.look-heroes .card-icon {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 10px;
+}
+body.look-heroes .feature-tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+body.look-heroes .card-link { color: var(--accent); font-weight: 600; }
+
+/* Inline page styles set contact-strip to white for the old navy header */
+body.look-heroes .page-header .contact-strip a,
+body.look-heroes .page-header .contact-strip a span,
+body.look-heroes .section-dark .contact-strip a,
+body.look-heroes .section-dark .contact-strip a span {
+  color: var(--accent) !important;
+}
+body.look-heroes .page-header .cta-actions {
+  justify-content: flex-start;
+}
+body.look-heroes .page-header .contact-strip {
+  justify-content: flex-start;
+}

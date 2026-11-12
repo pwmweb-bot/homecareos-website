@@ -119,11 +119,12 @@ def head(title, description, canonical, ld, og_type="article"):
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20261016cta">
   <link rel="stylesheet" href="{HELP_CSS}">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112e">
 {lds}
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="{HELP_JS}" defer></script>
 </head>
-<body class="help-page">
+<body class="help-page look-heroes">
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
   <nav class="nav" role="navigation" aria-label="Main navigation"></nav>
 """
