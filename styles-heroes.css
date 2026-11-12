@@ -1420,16 +1420,13 @@ body.look-heroes .growth-calculator .addon-option .addon-state {
   color: var(--ink-2);
 }
 body.look-heroes .growth-results {
-  display: grid;
-  grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
-  gap: 20px;
-  align-items: stretch;
+  display: block;
 }
 body.look-heroes .growth-calculator .calculator-display {
   display: block;
 }
 body.look-heroes .growth-calculator .calculator-display-card {
-  height: 100%;
+  max-width: 32rem;
   text-align: left;
   padding: 24px 26px;
 }
@@ -1460,56 +1457,6 @@ body.look-heroes .growth-calculator .calc-breakdown {
   margin-top: 8px;
   line-height: 1.5;
 }
-body.look-heroes .growth-unlocks {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 22px 24px;
-}
-body.look-heroes .growth-unlocks h4 {
-  margin: 0 0 6px;
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-body.look-heroes .growth-unlocks .unlock-lead,
-body.look-heroes .growth-unlocks .unlock-next-lead {
-  margin: 0 0 10px;
-  font-size: 0.9rem;
-  color: var(--ink-2);
-  line-height: 1.5;
-}
-body.look-heroes .growth-unlocks ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-body.look-heroes .growth-unlocks li {
-  position: relative;
-  padding: 6px 0 6px 1.15rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--ink);
-}
-body.look-heroes .growth-unlocks li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-body.look-heroes .growth-unlocks .unlock-next {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-}
-body.look-heroes .growth-unlocks .coming-soon-badge {
-  margin-left: 6px;
-  vertical-align: middle;
-}
 body.look-heroes .growth-examples {
   margin-top: 28px;
 }
@@ -1522,26 +1469,6 @@ body.look-heroes .growth-examples p {
   margin: 0 0 14px;
   font-size: 0.9rem;
   color: var(--ink-2);
-}
-body.look-heroes .licence-ladder {
-  margin-top: 8px;
-}
-body.look-heroes .licence-ladder .feature-table-wrapper {
-  margin-top: 8px;
-}
-body.look-heroes .licence-ladder .feature-table td:first-child,
-body.look-heroes .licence-ladder .feature-table th:first-child {
-  white-space: nowrap;
-}
-body.look-heroes .licence-ladder .is-current td {
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-}
-body.look-heroes .ladder-note {
-  margin-top: 14px;
-  font-size: 0.875rem;
-  color: var(--ink-2);
-  line-height: 1.55;
-  max-width: 72ch;
 }
 body.look-heroes .feature-table .coming-soon-badge {
   margin-left: 6px;
@@ -1562,8 +1489,5 @@ body.look-heroes .feature-table .cell-note {
   }
   body.look-heroes .growth-calculator .calculator-slider {
     grid-column: 1 / 2;
-  }
-  body.look-heroes .growth-results {
-    grid-template-columns: 1fr;
   }
 }
