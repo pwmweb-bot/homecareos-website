@@ -32,9 +32,9 @@ faqs:
     a: HomecareOS invites applicants by email today. SMS invites are not built. The applicant then completes an online application portal covering documents, right to work, references, DBS details and a health questionnaire.
   - q: What happens when we hire someone in HomecareOS?
     a: The applicant is converted into a carer record that is ready to be added to the rota. They are not added to the rota automatically. You still decide when they start visits.
-  - q: Is the HomecareOS recruitment portal free?
+  - q: How much is the HomecareOS recruitment portal?
     a: Agencies that sign up now get it £49 a month plus VAT. Book a demo or call 01905 674704 if you want to see the pipeline on a screen.
-cta_title: Try the recruitment portal free for 3 months
+cta_title: The recruitment portal, from £49 a month + VAT
 cta_text: The HomecareOS recruitment portal starts at £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
