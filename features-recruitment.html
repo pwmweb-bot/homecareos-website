@@ -123,16 +123,37 @@
     .pipeline-labels{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);margin:12px 0 0;padding:0}
     .pipeline-labels li{font-size:0.78rem;color:var(--gray-600);text-align:center;line-height:1.3}
     @media (max-width:620px){.pipeline-labels li{font-size:0.6rem}}
-    .free-banner{display:flex;align-items:center;gap:24px;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:24px 28px;border-radius:var(--radius-md,10px);background:rgba(29,158,117,0.07);border:1px solid rgba(29,158,117,0.25);border-left:5px solid #1D9E75}
-    .free-banner-text{flex:1 1 420px}
-    .free-banner-badge{display:inline-block;margin-bottom:8px;padding:3px 10px;border-radius:999px;background:#1D9E75;color:#fff;font-size:0.75rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
-    .free-banner h2{font-size:1.35rem;margin:0 0 6px;color:var(--primary,#16323D)}
-    .free-banner p{margin:0;color:var(--gray-700,#374151);line-height:1.55}
-    .free-banner p + p{margin-top:6px;font-size:0.875rem;color:var(--gray-600,#4B5563)}
-    .free-banner .btn{flex:0 0 auto}
-    .cta-section .cta-free-note{margin:24px auto 0;max-width:620px;font-size:0.9375rem;color:rgba(255,255,255,0.9)}
-    .cta-section .cta-free-note a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
-    @media (max-width:600px){.free-banner{padding:18px 18px;gap:16px}.free-banner h2{font-size:1.15rem}.free-banner .btn{width:100%;text-align:center}}
+    .addon-banner{display:flex;align-items:center;gap:24px;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:24px 28px;border-radius:var(--radius-md,10px);background:rgba(29,158,117,0.07);border:1px solid rgba(29,158,117,0.25);border-left:5px solid #1D9E75}
+    .addon-banner-text{flex:1 1 420px}
+    .addon-banner-badge{display:inline-block;margin-bottom:8px;padding:3px 10px;border-radius:999px;background:#1D9E75;color:#fff;font-size:0.75rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+    .addon-banner h2{font-size:1.35rem;margin:0 0 6px;color:var(--primary,#16323D)}
+    .addon-banner p{margin:0;color:var(--gray-700,#374151);line-height:1.55}
+    .addon-banner p + p{margin-top:6px;font-size:0.875rem;color:var(--gray-600,#4B5563)}
+    .addon-banner .btn{flex:0 0 auto}
+    .cta-section .cta-addon-note{margin:24px auto 0;max-width:620px;font-size:0.9375rem;color:rgba(255,255,255,0.9)}
+    .cta-section .cta-addon-note a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+    @media (max-width:600px){.addon-banner{padding:18px 18px;gap:16px}.addon-banner h2{font-size:1.15rem}.addon-banner .btn{width:100%;text-align:center}}
+
+    /* Recruitment portal hero film */
+    .rh-film{position:relative;min-width:0;width:100%}
+    .rh-stage{position:relative;border-radius:14px;overflow:hidden;background:#1d1a16;aspect-ratio:16/9;box-shadow:0 22px 48px -28px rgba(22,50,61,.4)}
+    .rh-loop,.rh-still{display:block;width:100%;height:100%;object-fit:cover;background:#1d1a16}
+    .rh-still{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0}
+    .rh-watch{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:10px 18px;border:0;border-radius:999px;background:var(--accent,#E8A14A);color:var(--primary,#16323D);font:600 14px/1.2 inherit;cursor:pointer;box-shadow:0 10px 28px -10px rgba(0,0,0,.55);white-space:nowrap}
+    .rh-watch:hover{filter:brightness(1.06)}
+    .rh-watch:focus-visible{outline:3px solid var(--accent,#E8A14A);outline-offset:4px}
+    .rh-watch-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(22,50,61,.16)}
+    .rh-watch-icon svg{display:block;margin-left:1px}
+    .rh-dialog{border:0;padding:0;background:transparent;max-width:min(1180px,calc(100vw - 32px));width:100%}
+    .rh-dialog::backdrop{background:rgba(10,22,28,.9)}
+    @supports (backdrop-filter:blur(8px)){.rh-dialog::backdrop{backdrop-filter:blur(8px)}}
+    .rh-dialog-frame{position:relative;border-radius:14px;overflow:hidden;background:#0a161c;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+    .rh-narrated{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0a161c}
+    .rh-dialog-close{position:absolute;top:12px;right:12px;z-index:2;min-height:40px;padding:8px 14px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(29,26,22,.78);color:#fff;font:600 13px/1 inherit;cursor:pointer}
+    .rh-dialog-close:hover{background:rgba(29,26,22,.95)}
+    .rh-dialog-close:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    @media(max-width:700px){.rh-watch{max-width:calc(100% - 24px);font-size:13.5px;padding:10px 16px}}
+    @media(prefers-reduced-motion:reduce){.rh-loop{display:none}.rh-still{opacity:1}}
   </style>
 </head>
 <body class="look-heroes">
@@ -237,19 +258,32 @@
             <p>Candidates are invited by email, then work through a secure multi-step application portal that collects documents, qualifications and references before they even walk through the door. No paper forms, no re-keying data. Approved applicants flow straight into your carer database, ready to work.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/carers.webp" alt="The new HomecareOS carers list, with roles, areas and each carer's worst staff check" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="rh-film" data-rh-film>
+              <div class="rh-stage">
+                <video class="rh-loop" autoplay muted loop playsinline preload="metadata" poster="/video/recruitment-portal/recruitment-portal-hero-poster.jpg" width="1280" height="720" aria-hidden="true">
+                  <source src="/video/recruitment-portal/homecareos-recruitment-portal-hero-muted-loop.mp4" type="video/mp4">
+                </video>
+                <img class="rh-still" src="/video/recruitment-portal/recruitment-portal-hero-poster.jpg" alt="The HomecareOS recruitment portal, with an applicant’s stages, documents and alerts. People and records are illustrative." width="1920" height="1080" decoding="async">
+                <button type="button" class="rh-watch" data-rh-watch>
+                  <span class="rh-watch-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.4-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>
+                  </span>
+                  Watch the film (with sound)
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Recruitment portal banner -->
-    <section class="section" aria-labelledby="free-recruitment-heading" style="padding-top:0">
+    <section class="section" aria-labelledby="recruitment-addon-heading" style="padding-top:0">
       <div class="container">
-        <div class="free-banner" data-reveal>
-          <div class="free-banner-text">
-            <span class="free-banner-badge addon-banner-badge">Optional extra</span>
-            <h2 id="free-recruitment-heading">Recruitment portal, a paid optional extra</h2>
+        <div class="addon-banner" data-reveal>
+          <div class="addon-banner-text">
+            <span class="addon-banner-badge">Optional extra</span>
+            <h2 id="recruitment-addon-heading">Recruitment portal, a paid optional extra</h2>
             <p>Use the HomecareOS recruitment portal to invite candidates, collect their documents and references, and keep inspection-ready staff files. It is a paid add-on to HomecareOS. Contact us for pricing. HomecareOS itself starts at &pound;49 per month + VAT.</p>
             <p>We check every new agency by phone before switching your account on.</p>
           </div>
@@ -517,7 +551,7 @@
           <a href="/booking.html" class="btn btn-primary">Book a 15-minute demo</a>
           <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
         </div>
-        <p class="cta-free-note">The recruitment portal is a paid optional extra. HomecareOS starts at £49 per month + VAT. <a href="https://app.homecareos.co.uk/onboard">Get started</a>.</p>
+        <p class="cta-addon-note">The recruitment portal is a paid optional extra. HomecareOS starts at £49 per month + VAT. <a href="https://app.homecareos.co.uk/onboard">Get started</a>.</p>
       </div>
     </section>
 
@@ -714,6 +748,65 @@
         entries.forEach(function(e){ if (e.isIntersecting){ mount(e.target); io.unobserve(e.target); } });
       }, { rootMargin: '250px 0px' });
       targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
+
+  <dialog class="rh-dialog" data-rh-dialog aria-label="HomecareOS recruitment portal, narrated">
+    <div class="rh-dialog-frame">
+      <button type="button" class="rh-dialog-close" data-rh-close aria-label="Close the film">Close</button>
+      <video class="rh-narrated" controls playsinline preload="metadata" poster="/video/recruitment-portal/recruitment-portal-hero-poster.jpg" width="1920" height="1080">
+        <source src="/video/recruitment-portal/homecareos-recruitment-portal-hero.mp4" type="video/mp4">
+        <track kind="captions" srclang="en-GB" label="English (British)" src="/video/recruitment-portal/recruitment-portal-hero.vtt">
+      </video>
+    </div>
+  </dialog>
+  <script>
+    (function(){
+      var root = document.querySelector('[data-rh-film]');
+      var dialog = document.querySelector('[data-rh-dialog]');
+      if (!root || !dialog) return;
+      var loop = root.querySelector('.rh-loop');
+      var still = root.querySelector('.rh-still');
+      var watch = root.querySelector('[data-rh-watch]');
+      var narrated = dialog.querySelector('.rh-narrated');
+      var closeBtn = dialog.querySelector('[data-rh-close]');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      function applyMotion(){
+        if (!loop) return;
+        if (reduce.matches){
+          loop.pause();
+          loop.removeAttribute('autoplay');
+          loop.setAttribute('hidden','');
+          if (still) still.style.opacity = '1';
+        } else {
+          loop.removeAttribute('hidden');
+          if (still) still.style.opacity = '';
+          var p = loop.play();
+          if (p && p.catch) p.catch(function(){});
+        }
+      }
+      applyMotion();
+      if (reduce.addEventListener) reduce.addEventListener('change', applyMotion);
+      function closeFilm(){
+        if (narrated) narrated.pause();
+        if (dialog.open) dialog.close();
+        applyMotion();
+        if (watch) watch.focus();
+      }
+      function openFilm(){
+        if (loop && !loop.paused) loop.pause();
+        if (typeof dialog.showModal === 'function') dialog.showModal();
+        else dialog.setAttribute('open','');
+        if (narrated){
+          try { narrated.currentTime = 0; } catch (e) {}
+          var p = narrated.play();
+          if (p && p.catch) p.catch(function(){});
+        }
+      }
+      if (watch) watch.addEventListener('click', openFilm);
+      if (closeBtn) closeBtn.addEventListener('click', closeFilm);
+      dialog.addEventListener('close', function(){ if (narrated) narrated.pause(); applyMotion(); });
+      dialog.addEventListener('click', function(e){ if (e.target === dialog) closeFilm(); });
     })();
   </script>
 </body>
