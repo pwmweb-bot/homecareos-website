@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -110,7 +112,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -119,7 +121,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -177,7 +179,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -279,7 +281,7 @@
         <!-- Solution Feature Grid -->
         <div class="feature-grid mt-48" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/analytics-charts-laptop.webp" alt="Business analytics dashboard showing agency performance metrics" width="600" height="450" loading="lazy">
+            <img src="images/photos/analytics-charts-laptop.webp" alt="Business analytics dashboard showing agency performance metrics" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -321,7 +323,7 @@
         <!-- Persona CTA -->
         <div class="text-center mt-48" style="margin-top:48px" data-reveal>
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">See the Owner's Dashboard</a>
-          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">Free for your first 5 carers. No credit card, no time limit.</p>
+          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">From £49 per month + VAT. Starts at £49 per month + VAT.</p>
         </div>
       </div>
     </section>
@@ -369,7 +371,7 @@
 
         <div class="feature-grid reverse" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/carer-care-plan-table.webp" alt="Carer managing digital care plans with elderly service user" width="600" height="450" loading="lazy">
+            <img src="images/photos/carer-care-plan-table.webp" alt="Carer managing digital care plans with elderly service user" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -394,7 +396,7 @@
 
         <div class="text-center" style="margin-top:48px" data-reveal>
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">See Care Plan Management</a>
-          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">Free for your first 5 carers. No credit card, no time limit.</p>
+          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">From £49 per month + VAT. Starts at £49 per month + VAT.</p>
         </div>
       </div>
     </section>
@@ -442,7 +444,7 @@
 
         <div class="feature-grid" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/carer-activities-elderly-couple.webp" alt="Carer helping elderly couple with activities at home" width="600" height="450" loading="lazy">
+            <img src="images/photos/carer-activities-elderly-couple.webp" alt="Carer helping elderly couple with activities at home" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -468,7 +470,7 @@
 
         <div class="text-center" style="margin-top:48px" data-reveal>
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">See Smart Scheduling</a>
-          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">Free for your first 5 carers. No credit card, no time limit.</p>
+          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">From £49 per month + VAT. Starts at £49 per month + VAT.</p>
         </div>
       </div>
     </section>
@@ -516,7 +518,7 @@
 
         <div class="feature-grid reverse" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/carer-elderly-phone-thumbsup.webp" alt="Carer and elderly person using mobile phone app together at home" width="600" height="450" loading="lazy">
+            <img src="images/photos/carer-elderly-phone-thumbsup.webp" alt="Carer and elderly person using mobile phone app together at home" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -542,7 +544,7 @@
 
         <div class="text-center" style="margin-top:48px" data-reveal>
           <a href="https://app.homecareos.co.uk" class="btn btn-primary btn-lg">See the Carer App</a>
-          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">Free for your first 5 carers. No credit card, no time limit.</p>
+          <p class="text-sm" style="color:var(--gray-500);margin-top:12px">From £49 per month + VAT. Starts at £49 per month + VAT.</p>
         </div>
       </div>
     </section>
@@ -590,7 +592,7 @@
 
         <div class="feature-grid" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/companion-elderly-garden.webp" alt="Family member checking in on elderly loved one in the garden" width="600" height="450" loading="lazy">
+            <img src="images/photos/companion-elderly-garden.webp" alt="Family member checking in on elderly loved one in the garden" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -663,7 +665,7 @@
 
         <div class="feature-grid reverse" style="margin-top:64px" data-reveal>
           <div class="feature-image">
-            <img src="images/photos/team-reviewing-analytics.webp" alt="Team reviewing data analytics dashboard showing care delivery outcomes" width="600" height="450" loading="lazy">
+            <img src="images/photos/team-reviewing-analytics.webp" alt="Team reviewing data analytics dashboard showing care delivery outcomes" width="600" height="450" loading="lazy" decoding="async">
           </div>
           <div class="feature-content">
             <span class="label">The Solution</span>
@@ -741,7 +743,7 @@
         <p>One platform that connects every role in your agency, from the office to the carer's phone to the family at home.</p>
         <div class="cta-actions">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started for free</a>
+          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started</a>
           <a href="contact.html" class="btn btn-ghost">Book a Personalised Demo</a>
         </div>
       </div>
@@ -755,7 +757,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -790,7 +792,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

@@ -33,7 +33,7 @@ faqs:
   - q: Can care workers dress a pressure ulcer?
     a: That depends on the person's plan, the care worker's training and what has been delegated by a healthcare professional. Wound care for a pressure ulcer is clinical, so agree in writing who does what with the district nursing team.
 cta_title: See body maps on a visit like yours
-cta_text: Book a short demo, call 01905 674704, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, call 01905 674704, or get started from £49 per month + VAT.
 cta_secondary: Book a demo
 cta_secondary_href: /booking.html
 ---

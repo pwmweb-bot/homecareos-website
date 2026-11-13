@@ -35,7 +35,7 @@ faqs:
   - q: Can HomecareOS fix retention for us?
     a: No software can do that on its own. HomecareOS helps with the recruitment end, where retention starts. Applicants are invited by email, complete an online apply portal, and are tracked through seven stages. On hire they become a carer record ready to be added to the rota.
 cta_title: Start retention at recruitment
-cta_text: Agencies that sign up now get the HomecareOS recruitment portal free for 3 months, then £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal starts at £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -177,7 +177,7 @@ HomecareOS does not claim to fix retention for you. Pay, hours, training and lea
 - You track each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding.
 - On hire, the applicant converts into a carer record that is **ready to be added to the rota**. They are not added to the rota automatically, so you stay in control of how and when a new carer starts.
 
-Agencies that sign up now get the recruitment portal **free for 3 months**, then **£49 a month plus VAT**. See the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month plus VAT**. See the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
 
 ## Sources
 

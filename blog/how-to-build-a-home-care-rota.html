@@ -41,8 +41,10 @@
   <meta name="twitter:description" content="Care packages first, geography second, people last. The practical order of work for a weekly domiciliary rota, plus how software automates each step.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/coordinator-headset-call.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -191,14 +193,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -256,7 +258,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -292,7 +294,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/coordinator-headset-call.webp" alt="A home care coordinator on a headset call while building the weekly rota" width="1400" height="933" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/coordinator-headset-call.webp" alt="A home care coordinator on a headset call while building the weekly rota" width="1400" height="933" loading="eager" style="width:100%;height:auto;border-radius:12px" decoding="async" fetchpriority="high">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:8px;text-align:center">The weekly rota decides whether the next seven days run smoothly or on the phone.</figcaption>
         </figure>
 
@@ -321,7 +323,7 @@
           <p>In practice, protecting continuity means assigning each client a small named team of two or three carers rather than a single person (one carer alone breaks the moment they take a holiday), then keeping every visit inside that team wherever possible. When you must introduce someone new, plan it: a shadow visit alongside a familiar carer beats a stranger arriving unannounced.</p>
 
           <figure data-reveal style="margin:32px 0 40px">
-            <img src="/images/photos/run-builder-suggestions.webp" alt="HomecareOS Apply Run panel suggesting carers who can cover a whole morning run in Worcester" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px">
+            <img src="/images/photos/run-builder-suggestions.webp" alt="HomecareOS Apply Run panel suggesting carers who can cover a whole morning run in Worcester" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px" decoding="async">
           </figure>
 
           <h2 id="step-4">Step 4: Schedule double-ups and specialing properly</h2>
@@ -354,7 +356,7 @@
 
           <h2 id="conclusion">Bringing it together</h2>
           <p>A good home care rota is built in layers, in order: demand from care packages, geography into runs, people with continuity protected, double-ups locked in early, honest travel time, hours checked, and cover planned before it is needed. Follow the sequence and the rota mostly builds itself; skip a layer and you will spend the week paying for it in phone calls.</p>
-          <p>If you would rather see the whole sequence running inside real software, <a href="/booking.html">book a 20-minute demo</a> and we will build a week live on a sample rota, or <a href="https://app.homecareos.co.uk">get started</a> and try it with your own visits. Pricing is per carer: free while you have up to 5 carers, then £10 per carer per month on Pro, with the office team unmetered; details are on the <a href="/pricing.html">pricing page</a>. If the rota is only one of the jobs you are trying to solve, our <a href="/blog/home-care-software-uk-guide.html">complete guide to home care software</a> covers the rest of the operational picture.</p>
+          <p>If you would rather see the whole sequence running inside real software, <a href="/booking.html">book a 20-minute demo</a> and we will build a week live on a sample rota, or <a href="https://app.homecareos.co.uk">get started</a> and try it with your own visits. Pricing is per carer: starts at £49 per month + VAT, with the office team unmetered; details are on the <a href="/pricing.html">pricing page</a>. If the rota is only one of the jobs you are trying to solve, our <a href="/blog/home-care-software-uk-guide.html">complete guide to home care software</a> covers the rest of the operational picture.</p>
 
         </div>
 
@@ -387,11 +389,11 @@
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px" data-reveal>
           <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
             <div style="flex:0 0 auto">
-              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%">
+              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async">
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS as an accessible platform that helps agencies onboard, schedule, invoice, pay, and stay compliant across all four UK nations, with transparent per-carer pricing and a free starter tier for the smallest agencies.</p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS as an accessible platform that helps agencies onboard, schedule, invoice, pay, and stay compliant across all four UK nations, with transparent per-carer pricing starting at £49 per month + VAT.</p>
               <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about HomecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
@@ -443,7 +445,7 @@
             <p>Book a 20-minute demo and we'll run every step in this guide on a live rota: patterns, runs, double-ups, conflict checks and one-click AI generation.</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+              <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
               <a href="/features-scheduling.html" class="btn btn-ghost">Explore Scheduling</a>
             </div>
           </div>
@@ -459,7 +461,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -494,7 +496,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

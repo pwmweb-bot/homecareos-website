@@ -35,7 +35,7 @@ faqs:
   - q: Where can I advertise a care worker job for free?
     a: In England, Scotland and Wales you can post vacancies on the government's Find a job service through GOV.UK. Northern Ireland has a different service. Your own website, staff referrals and local community groups are other low-cost channels.
 cta_title: Turn advert clicks into tracked applicants
-cta_text: Send applicants to the HomecareOS recruitment portal, free for 3 months, then £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: Send applicants to the HomecareOS recruitment portal, £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -173,7 +173,7 @@ The HomecareOS recruitment portal gives the "how to apply" line in your advert s
 - The agency tracks each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding, so nobody who answered your advert gets forgotten. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that beats a spreadsheet.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically.
 
-Agencies that sign up now get the portal **free for 3 months**, then **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

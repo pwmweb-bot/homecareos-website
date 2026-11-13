@@ -35,7 +35,7 @@ faqs:
   - q: Why do care workers leave?
     a: There is rarely one reason. In a 2023 Skills for Care scoping study of current care workers, poor workplace culture or communication was the most common reason given for leaving a previous care job (30%), followed by burnout or stress (20%) and low pay (16%). The study was small and self-selecting, so treat it as indicative.
 cta_title: Hire carers who are set up to stay
-cta_text: The HomecareOS recruitment portal is free for 3 months for agencies that sign up now, then £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal starts at £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -208,7 +208,7 @@ HomecareOS will not fix turnover for you. Pay, hours, culture and leadership are
 - You track each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that beats a spreadsheet.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are not added to the rota automatically, so you decide when a new carer is ready for solo visits.
 
-Agencies that sign up now get the recruitment portal **free for 3 months**, then **£49 a month plus VAT**. See the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), the [recruitment feature page](/features-recruitment.html), or [book a demo](/booking.html). You can also call Phil on 01905 674704.
+Agencies that sign up now get the portal **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

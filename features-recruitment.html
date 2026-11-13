@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -133,7 +135,7 @@
     @media (max-width:600px){.free-banner{padding:18px 18px;gap:16px}.free-banner h2{font-size:1.15rem}.free-banner .btn{width:100%;text-align:center}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -142,7 +144,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -200,7 +202,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -235,26 +237,44 @@
             <p>Candidates are invited by email, then work through a secure multi-step application portal that collects documents, qualifications and references before they even walk through the door. No paper forms, no re-keying data. Approved applicants flow straight into your carer database, ready to work.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/carers.webp" alt="The new HomecareOS carers list, with roles, areas and each carer's worst staff check" width="1400" height="840" loading="lazy">
+            <img src="images/photos/carers.webp" alt="The new HomecareOS carers list, with roles, areas and each carer's worst staff check" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Free recruitment portal banner -->
+    <!-- Recruitment portal banner -->
     <section class="section" aria-labelledby="free-recruitment-heading" style="padding-top:0">
       <div class="container">
         <div class="free-banner" data-reveal>
           <div class="free-banner-text">
-            <span class="free-banner-badge">Free</span>
-            <h2 id="free-recruitment-heading">Free for every UK home care agency</h2>
-            <p>Use the HomecareOS recruitment portal on its own at no cost, for as long as you like. Invite candidates, collect their documents and references, and keep inspection-ready staff files without paying a penny. You only pay (&pound;10 per carer per month, plus VAT) if you later schedule visits with HomecareOS.</p>
-            <p>No card needed. We check every new agency by phone before switching your account on.</p>
+            <span class="free-banner-badge addon-banner-badge">Optional extra</span>
+            <h2 id="free-recruitment-heading">Recruitment portal, a paid optional extra</h2>
+            <p>Use the HomecareOS recruitment portal to invite candidates, collect their documents and references, and keep inspection-ready staff files. It is a paid add-on to HomecareOS. Contact us for pricing. HomecareOS itself starts at &pound;49 per month + VAT.</p>
+            <p>We check every new agency by phone before switching your account on.</p>
           </div>
-          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-primary">Get started for free</a>
+          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-primary">Get started</a>
         </div>
       </div>
     </section>
+    <section class="section feature-extra-section" aria-label="Recruitment portal screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>From applicant to inspection-ready file</h2>
+          <p>Invite candidates, collect documents and references, and keep staff files ready for inspection.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot" data-reveal>
+            <img src="images/photos/recruitment-pipeline.webp" alt="The HomecareOS recruitment pipeline, with applicants moving through stages from application to hired" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/staff-compliance.webp" alt="Staff compliance in the new HomecareOS, with training, DBS and right-to-work dates on one screen" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section motion-band" aria-label="The recruitment pipeline">
       <div class="container" style="max-width:900px;text-align:center">
@@ -274,7 +294,7 @@
     <section class="section" aria-label="The work carers are hired to do">
       <div class="container">
         <figure data-reveal style="margin:0 auto;max-width:960px">
-          <img src="images/photos/carer-holding-hands.webp" alt="A care worker gently holds an older person's hands during a home visit" width="1100" height="619" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block">
+          <img src="images/photos/carer-holding-hands.webp" alt="A care worker gently holds an older person's hands during a home visit" width="1100" height="619" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block" decoding="async">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:14px;text-align:center;max-width:640px;margin-inline:auto">Hire faster and keep the good ones, so more of the week goes on care and less on paperwork.</figcaption>
         </figure>
       </div>
@@ -497,7 +517,7 @@
           <a href="/booking.html" class="btn btn-primary">Book a 15-minute demo</a>
           <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
         </div>
-        <p class="cta-free-note">The recruitment portal is free for every home care agency. <a href="https://app.homecareos.co.uk/onboard">Get started for free</a> and only pay if you later schedule visits with HomecareOS.</p>
+        <p class="cta-free-note">The recruitment portal is a paid optional extra. HomecareOS starts at £49 per month + VAT. <a href="https://app.homecareos.co.uk/onboard">Get started</a>.</p>
       </div>
     </section>
 
@@ -547,7 +567,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -582,7 +602,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

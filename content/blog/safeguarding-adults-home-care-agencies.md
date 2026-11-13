@@ -31,7 +31,7 @@ faqs:
   - q: Is every missed visit a safeguarding referral?
     a: The Care Act statutory guidance does not say that. It says repeated poor care may be a sign of organisational abuse, and that incidents have to be recorded so a pattern can be seen. A single late visit still has to be written down. If you suspect neglect, Regulation 13 applies and the local procedure is the route.
 cta_title: See how a concern stays on the record
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Compliance
 cta_secondary_href: /features-compliance.html
 ---

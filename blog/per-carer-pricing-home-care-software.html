@@ -42,8 +42,10 @@
   <meta name="twitter:description" content="Every office admin you add to your home care software shouldn't cost you another seat. Here's the breakdown, and how much it actually saves a real agency.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/team-reviewing-analytics.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -174,7 +176,7 @@
       "name": "How is my carer count worked out for billing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "By headcount, taken at your renewal date. It is free while you have up to 5 carers, and once you go past that it is £10 per carer per month for every carer, not just the ones above five, so 6 carers is £60 and 20 is £200. The free allowance is spent once: an agency that crosses it and later shrinks back to 5 keeps paying."
+        "text": "HomecareOS starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT. Office logins and service users are unmetered."
       }
     },
     {
@@ -208,14 +210,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -273,7 +275,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -307,7 +309,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/team-reviewing-analytics.webp" alt="Care agency owner reviewing software pricing on a laptop" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/team-reviewing-analytics.webp" alt="Care agency owner reviewing software pricing on a laptop" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px" decoding="async" fetchpriority="high">
         </figure>
 
         <section data-reveal>
@@ -346,14 +348,14 @@
             <li>1 part-time recruiter / training coordinator</li>
           </ul>
           <p>That's <strong>16 user accounts</strong> on a per-user platform. At an indicative £8/user/month, that's £128/mo for software. At £10/user/month (closer to where the established home care platforms sit once you add modules) it's £160/mo. Multiply by 12 months and the office team has added <strong>£480-£640 a year</strong> to a bill that already covers your field carers.</p>
-          <p>On a per-carer model, the same agency pays for the <strong>12 carers only</strong>. At £10 per carer per month on Pro that's £120/mo. The office team is free, and there is no cap on service users.</p>
+          <p>On a per-carer model, the same agency pays for the <strong>12 carers only</strong>, not the office team. HomecareOS itself starts at £49 per month + VAT, with the office team unmetered and no cap on service users.</p>
 
           <div style="background:#f0fdf4;border-left:4px solid #16a34a;border-radius:8px;padding:20px;margin:24px 0">
             <p style="margin:0 0 8px;color:#166534"><strong>Side-by-side, same 12-carer agency:</strong></p>
             <ul style="color:#166534;margin:8px 0;padding-left:20px">
               <li>Per-user at £8/user × 16 users = <strong>£128/mo</strong> (£1,536/yr)</li>
               <li>Per-user at £10/user × 16 users = <strong>£160/mo</strong> (£1,920/yr)</li>
-              <li>HomecareOS Pro at £10 per carer × 12 = <strong>£120/mo</strong> (£1,440/yr)</li>
+              <li>HomecareOS starts at <strong>£49 per month + VAT</strong></li>
             </ul>
             <p style="margin:8px 0 0;color:#166534">Like for like at £10 a head, that is <strong>£40/mo (25%)</strong> saved, purely because you pay for 12 carers rather than 16 seats. Against a cheaper £8 per-user platform the gap narrows to £8/mo, and either way it widens as your office team grows.</p>
           </div>
@@ -395,7 +397,7 @@
             <li>Auditor / inspector temporary logins</li>
             <li>API access for integrations (on Pro)</li>
           </ul>
-          <p>The free tier covers up to 5 carers at zero cost, with no time limit. Office logins and service users are unmetered on every plan, including the free one. Past five carers it is £10 per carer per month for every carer.</p>
+          <p>HomecareOS starts at £49 per month + VAT. Office logins and service users are unmetered. Telephone support and training is an optional add-on at £39 per month + VAT.</p>
         </section>
 
         <section data-reveal>
@@ -420,7 +422,7 @@
             <li><strong>Onboarding new office staff shouldn't be a finance decision.</strong> We've watched small agencies hesitate to bring in a quality manager or part-time recruiter because every additional login adds to the monthly invoice. That's the wrong incentive. Better office staffing means better care, better compliance, and less burnout for the existing team.</li>
             <li><strong>It's defensible long-term.</strong> The carer count is the metric that matters. It's what scales with your business. Tying our revenue to that means our incentive is aligned with yours: we grow when you grow.</li>
           </ol>
-          <p>We're holding the £10 per-carer price through 2026. The free tier (up to 5 carers) is permanent, no trial, no time bomb.</p>
+          <p>HomecareOS starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT.</p>
         </section>
 
         <section data-reveal>
@@ -434,7 +436,7 @@
           <h2>What this looks like in practice</h2>
           <p>A few real-world scenarios we've seen:</p>
           <ul>
-            <li><strong>A 4-carer micro-agency in Wales:</strong> sits on the Free tier indefinitely. £0/mo software cost. Adds a part-time office admin without changing the bill.</li>
+            <li><strong>A 4-carer micro-agency in Wales:</strong> starts at £49 per month + VAT. Adds a part-time office admin without changing the bill, because office logins are unmetered.</li>
             <li><strong>An 18-carer agency in the Midlands</strong> with 5 office staff: previously paid ~£200/mo on a per-user platform. Moved to HomecareOS Pro (£180/mo for 18 carers) and gained cover finder + Bradford Factor + family portal.</li>
             <li><strong>A 35-carer Scottish agency:</strong> on Pro at £350/mo. Tested adding a part-time training coordinator and a payroll temp; bill stayed at £350.</li>
           </ul>
@@ -459,7 +461,7 @@
           <h2>The bottom line</h2>
           <p>Per-user pricing is the SaaS default because it's easy to bill and easy to forecast, for the vendor. In home care it quietly penalises agencies for hiring the office staff their regulator requires them to have.</p>
           <p>Per-carer pricing, billing on the people who actually deliver care, tracks the thing that generates your revenue, makes the software cost predictable, and removes a small but real friction every time you want to add an office hire.</p>
-          <p>It's the model we chose for HomecareOS. It's why our free tier covers a 5-carer agency at £0, and why Pro at £10 per carer keeps the office team and your service users unmetered while unlocking the AI rota and cover features.</p>
+          <p>It's the model we chose for HomecareOS. It's why HomecareOS starts at £49 per month + VAT, and why the office team and your service users stay unmetered.</p>
           <p>If the back-office tax has been eating into your margin, the maths is worth running.</p>
         </section>
 
@@ -467,11 +469,11 @@
         <aside data-reveal style="margin-top:64px;padding:24px;border-radius:12px;background:var(--surface,#f8fafc);border:1px solid var(--gray-200,#e5e7eb)">
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
             <div style="flex:0 0 auto">
-              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%">
+              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async">
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, with a genuinely free starter tier for small agencies, transparent per-carer pricing as they grow, and the office team unmetered.</p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, with transparent pricing starting at £49 per month + VAT for small agencies, transparent per-carer pricing as they grow, and the office team unmetered.</p>
               <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about HomecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
@@ -501,7 +503,7 @@
               <div class="blog-card-body">
                 <div class="blog-meta"><span class="blog-category">Pricing</span></div>
                 <h3><a href="/pricing.html">HomecareOS pricing</a></h3>
-                <p>Free while you have up to 5 carers, with the office team and service users unmetered. Then £10 per carer per month on Pro.</p>
+                <p>Starts at £49 per month + VAT, with the office team and service users unmetered. Telephone support and training is an optional add-on at £39 per month + VAT.</p>
                 <a href="/pricing.html" class="read-more">See pricing &rarr;</a>
               </div>
             </article>
@@ -515,7 +517,7 @@
           <h3>Why does per-user pricing cost agencies more?</h3>
           <p>Home care runs an office-heavy ratio compared with most industries: coordination, compliance, recruitment and payroll all need people who never deliver a visit. Under a per-user model every one of those seats is another line on the invoice. The honest way to compare two quotes is to price your own headcount, field and office separately, rather than comparing the headline rate.</p>
           <h3>How is my carer count worked out for billing?</h3>
-          <p>By headcount, taken at your renewal date. It is free while you have up to 5 carers, and once you go past that it is £10 per carer per month for every carer, not just the ones above five, so 6 carers is £60 and 20 is £200. The free allowance is spent once: an agency that crosses it and later shrinks back to 5 keeps paying.</p>
+          <p>HomecareOS starts at £49 per month + VAT. Telephone support and training is an optional add-on at £39 per month + VAT. Office logins and service users are unmetered.</p>
           <h3>Does HomecareOS charge for the office team?</h3>
           <p>No. Coordinators, registered managers, owners, payroll and recruiters log in free on every plan, and service user records are not counted or capped. None of them affect the per-carer bill.</p>
           <h3>What happens if a carer joins or leaves mid-cycle?</h3>
@@ -526,10 +528,10 @@
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>Run the maths on your own agency</h2>
-            <p>Free while you have up to 5 carers, no time limit, no credit card. See exactly what you'd pay before you commit a penny.</p>
+            <p>Starts at £49 per month + VAT. See <a href="/pricing.html">pricing</a> for the full picture.</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started for free</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
             </div>
           </div>
@@ -545,7 +547,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -580,7 +582,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

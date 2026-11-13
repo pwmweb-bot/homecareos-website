@@ -31,7 +31,7 @@ faqs:
   - q: Can a coordinator send the notification?
     a: The regulations put the duty on the registered person, which CQC describes as the organisation, partnership or individual registered to provide the regulated activity, and any registered manager. CQC says the task can be delegated. The registered person remains responsible for the notification being submitted correctly.
 cta_title: Keep the incident with the follow-up
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Compliance features
 cta_secondary_href: /features-compliance.html
 ---

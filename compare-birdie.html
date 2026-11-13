@@ -30,8 +30,10 @@
   <meta name="twitter:title" content="Birdie Alternative for UK Home Care Software | HomecareOS">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/rota-og.png">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -106,14 +108,14 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -171,7 +173,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -221,7 +223,7 @@
             Birdie publishes "from &pound;200 a month", priced on the hours of care you schedule, so the bill grows as your delivered hours grow. On HomecareOS only carers count, <strong>your office team is unmetered</strong>, so the bill follows your headcount instead. Which works out cheaper depends on your hours per carer, so compare both against your own rota.
           </p>
           <p style="color:#065f46;font-size:0.875rem;line-height:1.55;margin:0;font-style:italic;">
-            Plus our free tier covers up to 5 carers, no credit card. <a href="pricing.html" style="color:#059669;font-weight:600;text-decoration:underline;">See full pricing &rarr;</a>
+            Starts at £49 per month + VAT. <a href="pricing.html" style="color:#059669;font-weight:600;text-decoration:underline;">See full pricing &rarr;</a>
           </p>
         </div>
 
@@ -264,7 +266,7 @@
           <div class="advantage-card">
             <span class="advantage-badge">HomecareOS: Per carer / Birdie: Per user</span>
             <h4>Per-Carer Pricing</h4>
-            <p>Only carers count towards your bill, your office team is unmetered. free for your first 5 carers, then &pound;10 per carer/month, with a free starter tier for agencies under 5 carers.</p>
+            <p>HomecareOS starts at £49 per month + VAT. Your office team is unmetered.</p>
           </div>
         </div>
       </div>
@@ -361,7 +363,7 @@
     <section class="section section-gray" aria-label="Platform screenshot">
       <div class="container">
         <div class="feature-hero-visual has-screenshot" data-reveal>
-          <img src="images/photos/app-rota-day.webp" alt="HomecareOS rota grid used to plan a day of home care visits with colour coded status and travel times" width="1400" height="840" loading="lazy">
+          <img src="images/photos/app-rota-day.webp" alt="HomecareOS rota grid used to plan a day of home care visits with colour coded status and travel times" width="1400" height="840" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -372,7 +374,7 @@
         <div data-reveal style="max-width:760px;margin:0 auto;text-align:center">
           <h2>Thinking of switching from Birdie?</h2>
           <p style="margin:0 0 14px"><a href="/migration.html">See exactly what moves across</a>, who runs the migration, and why every import can be undone. For the wider market, compare <a href="/blog/home-care-software-uk-guide.html">16 UK home care platforms side by side</a>.</p>
-          <p style="color:var(--gray-700);line-height:1.7">Moving is more straightforward than most agencies expect. Our step-by-step guide to <a href="/blog/migrating-from-birdie-to-homecareos.html">migrating from Birdie to HomecareOS</a> covers exporting, mapping and going live, and you can run both systems in parallel while you get started. It is free for your first 5 carers, with no time limit and no credit card. Still comparing your options? See the wider list of <a href="/blog/birdie-alternatives-uk-home-care-software.html">Birdie alternatives for UK home care</a>.</p>
+          <p style="color:var(--gray-700);line-height:1.7">Moving is more straightforward than most agencies expect. Our step-by-step guide to <a href="/blog/migrating-from-birdie-to-homecareos.html">migrating from Birdie to HomecareOS</a> covers exporting, mapping and going live, and you can run both systems in parallel while you get started. It starts at £49 per month + VAT. Still comparing your options? See the wider list of <a href="/blog/birdie-alternatives-uk-home-care-software.html">Birdie alternatives for UK home care</a>.</p>
         </div>
       </div>
     </section>
@@ -384,7 +386,7 @@
         <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly how HomecareOS outperforms Birdie.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
           <a href="compare.html" class="btn btn-ghost">View All Comparisons</a>
         </div>
       </div>
@@ -398,7 +400,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -433,7 +435,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

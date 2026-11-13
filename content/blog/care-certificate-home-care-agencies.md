@@ -35,7 +35,7 @@ faqs:
   - q: Is this the same as the Level 2 Adult Social Care Certificate?
     a: No. The Level 2 certificate is an Ofqual-regulated qualification. Skills for Care says it is expected to take a new learner around six to eight months. The Care Certificate standards are the separate, non-accredited induction framework.
 cta_title: See training and supervision on a carer record
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Staff management
 cta_secondary_href: /features-staff-management.html
 ---

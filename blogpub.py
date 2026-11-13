@@ -378,7 +378,7 @@ def render_post(meta, body_html, markdown):
             + "".join(cards) + "</div></section>"
         )
     cta_title = meta.get("cta_title") or "See it on a rota like yours"
-    cta_text = meta.get("cta_text") or "Book a short demo, or start free for up to 5 carers. No card needed."
+    cta_text = meta.get("cta_text") or "Book a short demo, or get started from £49 per month + VAT."
     cta_href = meta.get("cta_secondary_href") or "/pricing.html"
     cta_label = meta.get("cta_secondary") or "See pricing"
     article_ld = {
@@ -463,6 +463,7 @@ def render_post(meta, body_html, markdown):
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20260909insp">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112e">
 {GTAG}
   <script type="application/ld+json">
   {_json(article_ld)}
@@ -474,7 +475,7 @@ def render_post(meta, body_html, markdown):
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
   <nav class="nav" role="navigation" aria-label="Main navigation"></nav>
   <main id="main-content" tabindex="-1">
@@ -500,7 +501,7 @@ def render_post(meta, body_html, markdown):
     <article class="section" aria-label="{esc_attr(title)}">
       <div class="container" style="max-width:760px">
         <figure style="margin:0 0 40px">
-          <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="1200" height="630" loading="eager" decoding="async" fetchpriority="high" style="width:100%;height:auto;border-radius:12px">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:8px;text-align:center">{esc(caption)}</figcaption>
         </figure>
         <div class="post-body">
@@ -509,7 +510,7 @@ def render_post(meta, body_html, markdown):
         {faq_html}
         <aside class="section-sm" style="margin-top:64px;padding:32px;background:var(--gray-100);border-radius:12px">
           <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
-            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%"></div>
+            <div style="flex:0 0 auto"><img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async"></div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
               <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He works with UK home care agencies on the software they use to run the service.</p>
@@ -524,7 +525,7 @@ def render_post(meta, body_html, markdown):
             <p>{esc(cta_text)}</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+              <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
             </div>
             <p style="margin:16px 0 0"><a href="{esc_attr(cta_href)}" style="color:inherit;text-decoration:underline">{esc(cta_label)}</a></p>
           </div>
@@ -544,7 +545,7 @@ def card_html(meta):
     return f"""          <!-- post:{meta["slug"]} -->
           <article class="blog-card" data-reveal data-reveal-delay="0">
             <div class="blog-card-image">
-              <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="640" height="360" loading="lazy">
+              <img src="{esc_attr(image)}" alt="{esc_attr(meta["image_alt"])}" width="640" height="360" loading="lazy" decoding="async">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">

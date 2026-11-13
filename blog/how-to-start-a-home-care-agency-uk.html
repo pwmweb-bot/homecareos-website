@@ -44,8 +44,10 @@
   <meta name="twitter:description" content="Practical guide to starting a UK home care agency: regulator registration, realistic costs, first hires, and software from day one.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/team-reviewing-analytics.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -210,14 +212,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -275,7 +277,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -309,7 +311,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/team-reviewing-analytics.webp" alt="Founder of a new UK home care agency planning the business at a laptop" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/team-reviewing-analytics.webp" alt="Founder of a new UK home care agency planning the business at a laptop" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px" decoding="async" fetchpriority="high">
         </figure>
 
         <!--  Reality check  -->
@@ -465,8 +467,8 @@
             <li><strong>Invoice generation</strong> at a minimum; payroll export ideally</li>
             <li><strong>Compliance dashboard</strong> aligned to your regulator's evidence shape</li>
           </ul>
-          <p>For a new agency under five carers, the realistic choice is between a free starter tier (so software cost is £0 until you grow) or a small monthly subscription. Check the vendor's published prices, or ask for a written quote, for a 5-carer agency.</p>
-          <p>This is where HomecareOS fits for new agencies: every feature above (drag-and-drop rota, offline mobile carer app, electronic care plans, eMAR, training and background-check (DBS, PVG or AccessNI) tracking, invoicing and a four-nation compliance dashboard) in one platform, with a cover finder that ranks available carers on continuity, hours left and travel time, and Bradford Factor absence scoring built in. Pricing is per carer, so your office admin logins never count against the bill, and there's a free starter tier for agencies up to 5 carers. You can register on Day 1, practise on Day 1, and run real care from Day 90. If you want the wider landscape view of UK home care platforms, see <a href="/blog/home-care-software-uk-guide.html">our buyer's guide to UK home care software</a> and the <a href="/blog/how-to-choose-home-care-software-uk-checklist.html">12-point evaluation checklist</a>.</p>
+          <p>For a new agency, check the vendor's published prices, or ask for a written quote. HomecareOS starts at £49 per month + VAT.</p>
+          <p>This is where HomecareOS fits for new agencies: every feature above (drag-and-drop rota, offline mobile carer app, electronic care plans, eMAR, training and background-check (DBS, PVG or AccessNI) tracking, invoicing and a four-nation compliance dashboard) in one platform, with a cover finder that ranks available carers on continuity, hours left and travel time, and Bradford Factor absence scoring built in. Pricing is per carer, so your office admin logins never count against the bill, starting at £49 per month + VAT. You can register on Day 1, practise on Day 1, and run real care from Day 90. If you want the wider landscape view of UK home care platforms, see <a href="/blog/home-care-software-uk-guide.html">our buyer's guide to UK home care software</a> and the <a href="/blog/how-to-choose-home-care-software-uk-checklist.html">12-point evaluation checklist</a>.</p>
         </section>
 
         <!--  Step 9: First clients  -->
@@ -512,7 +514,7 @@
               <tr><td style="padding:4px 0">Office setup (phone, broadband, laptop, lockable cabinet)</td><td style="text-align:right">£500-£1,500</td></tr>
               <tr><td style="padding:4px 0">Recruitment costs for first 5-10 carers</td><td style="text-align:right">£500-£2,000</td></tr>
               <tr><td style="padding:4px 0">Initial training (Care Certificate × 5-10 carers)</td><td style="text-align:right">£500-£2,000</td></tr>
-              <tr><td style="padding:4px 0">Software (start on a free tier)</td><td style="text-align:right">£0-£500</td></tr>
+              <tr><td style="padding:4px 0">Software (HomecareOS starts at £49 per month + VAT)</td><td style="text-align:right">from £49 + VAT</td></tr>
               <tr><td style="padding:4px 0"><strong>Working capital (3-6 months payroll)</strong></td><td style="text-align:right"><strong>£5,000-£15,000</strong></td></tr>
               <tr><td style="padding:8px 0;border-top:1px solid #166534"><strong>Total realistic startup</strong></td><td style="text-align:right;padding:8px 0;border-top:1px solid #166534"><strong>£8,000-£25,000</strong></td></tr>
             </table>
@@ -532,11 +534,11 @@
         <aside data-reveal style="margin-top:64px;padding:24px;border-radius:12px;background:var(--surface,#f8fafc);border:1px solid var(--gray-200,#e5e7eb)">
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
             <div style="flex:0 0 auto">
-              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%">
+              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async">
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, a four-nation home care platform that handles scheduling, care records, eMAR, invoicing and compliance in one place, with per-carer pricing (office team unmetered) and a free starter tier for the smallest agencies.</p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, a four-nation home care platform that handles scheduling, care records, eMAR, invoicing and compliance in one place, with per-carer pricing (office team unmetered) starting at £49 per month + VAT.</p>
               <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about HomecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
@@ -591,10 +593,10 @@
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>Start practising on the platform before you go live</h2>
-            <p>HomecareOS brings scheduling, care records, eMAR, invoicing and four-nation compliance into one platform, priced per carer with your office team unmetered, and a free tier for agencies with up to 5 carers. Set up your statement of purpose, rota templates, policy library and care plans while you wait for your regulator application to come back. By the time you're live, you've got months of muscle memory on the system.</p>
+            <p>HomecareOS brings scheduling, care records, eMAR, invoicing and four-nation compliance into one platform, priced per carer with your office team unmetered, starting at £49 per month + VAT. Set up your statement of purpose, rota templates, policy library and care plans while you wait for your regulator application to come back. By the time you're live, you've got months of muscle memory on the system.</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started for free</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
             </div>
           </div>
@@ -610,7 +612,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -645,7 +647,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

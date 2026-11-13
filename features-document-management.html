@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -96,7 +98,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -105,7 +107,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -163,7 +165,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -183,6 +185,21 @@
         <p data-reveal data-reveal-delay="100">Staff files, client records and your own agency paperwork, filed where the work happens, with expiry dates tracked and access enforced by the database rather than by good intentions.</p>
       </div>
     </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>Documents with the person they belong to</h2>
+          <p>Certificates, checks and care documents sit on the record, not in a shared drive.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot shot-wide" data-reveal>
+            <img src="images/photos/staff-compliance.webp" alt="Staff files and compliance documents in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section" aria-label="Three filing cabinets overview">
       <div class="container">
@@ -294,7 +311,7 @@
             <p>The background check itself is tracked on the carer's record rather than on the file, and it is there that the wording follows your nation, with DBS in England and Wales, PVG in Scotland and AccessNI in Northern Ireland.</p>
           </div>
           <div class="feature-image" data-reveal data-reveal-delay="100">
-            <img src="images/photos/carer-care-plan-table.webp" alt="A carer sitting at a table reviewing care documentation with a service user" width="800" height="600" loading="lazy">
+            <img src="images/photos/carer-care-plan-table.webp" alt="A carer sitting at a table reviewing care documentation with a service user" width="800" height="600" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -412,7 +429,7 @@
 <section class="cta-section" aria-label="Call to action">
       <div class="container">
         <h2 data-reveal>See it with your own files</h2>
-        <p data-reveal data-reveal-delay="100">Set up an agency, upload a handful of real documents, and see how the filing, the expiry dates and the access rules behave. Free while you have up to 5 carers, with your office team unmetered.</p>
+        <p data-reveal data-reveal-delay="100">Set up an agency, upload a handful of real documents, and see how the filing, the expiry dates and the access rules behave. Starts at £49 per month + VAT, with your office team unmetered.</p>
         <div class="cta-buttons" data-reveal data-reveal-delay="200">
           <a href="https://app.homecareos.co.uk/onboard" class="btn btn-primary btn-lg">Get started</a>
           <a href="/booking.html" class="btn btn-secondary btn-lg">Book a 15-minute demo</a>
@@ -428,7 +445,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -463,7 +480,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

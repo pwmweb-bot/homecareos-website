@@ -31,7 +31,7 @@ faqs:
   - q: Can a carer start before the certificate arrives?
     a: Only under the Adult First service, and only under supervision, and only if DBS replies that no match exists on the adults' barred list. That reply is not a clear criminal record check. If the reply says the registered body must wait, you wait for the certificate.
 cta_title: Keep the check next to the person
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Staff management
 cta_secondary_href: /features-staff-management.html
 ---

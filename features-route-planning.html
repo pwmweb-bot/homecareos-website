@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -119,7 +121,7 @@
 {"@type":"Question","name":"How does GPS visit verification work in home care?","acceptedAnswer":{"@type":"Answer","text":"Carers check in and out of each visit with one tap on the mobile app, and their GPS location is recorded and compared with the service user's registered address. Anything more than 150m out is flagged for the office to review rather than blocking the carer, so you get an accurate arrival and departure record for compliance, billing and safeguarding, and nobody is locked out where the signal is poor. NFC tags and QR codes work the same way."}},
 {"@type":"Question","name":"Can I plan carer runs geographically with HomecareOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. Group a round's recurring calls into a run and every week's visits carry it, then assign a carer to the whole round in one go. The rota factors actual travel times between visits, and HomecareOS can suggest runs from a day's ungrouped visits by chaining each next stop to the nearest call that can still be reached in time, so each carer's day stays in one area rather than criss-crossing town."}},
 {"@type":"Question","name":"How does HomecareOS cut travel time between visits?","acceptedAnswer":{"@type":"Answer","text":"The rota factors real travel times between consecutive visits so carers are not rushed, the Visit Flow Map makes travel patterns across your patch visible, and the cover finder weighs drive time when ranking carers for a vacant visit, alongside continuity and hours headroom."}},
-{"@type":"Question","name":"How much does domiciliary care mapping software cost in the UK?","acceptedAnswer":{"@type":"Answer","text":"The Visit Flow Map, travel-time awareness and GPS check-in are part of the HomecareOS platform, priced per carer with the office team unmetered. It is free for your first 5 carers, then £10 per carer per month on Pro. See pricing."}}
+{"@type":"Question","name":"How much does domiciliary care mapping software cost in the UK?","acceptedAnswer":{"@type":"Answer","text":"The Visit Flow Map, travel-time awareness and GPS check-in are part of the HomecareOS platform, priced per carer with the office team unmetered. It starts at £49 per month + VAT. See pricing."}}
 ]}
 </script>
 
@@ -147,12 +149,12 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Free Plan",
-      "price": "0",
+      "name": "HomecareOS",
+      "price": "49",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "description": "Free for your first 5 carers, the full core platform, no credit card required. Office team and service users unmetered.",
-      "category": "Free"
+      "description": "From £49 per month + VAT, the full core platform, starts at £49 per month + VAT. Office team and service users unmetered.",
+      "category": "Subscription"
     },
     {
       "@type": "Offer",
@@ -160,7 +162,7 @@
       "price": "10",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "description": "£10 per carer per month, adding the AI Rota Builder, advanced analytics and white-label options.",
+      "description": "Telephone support and training is an optional add-on at £39 per month + VAT.",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "10",
@@ -183,7 +185,7 @@
     .lottie-cap{margin:16px auto 0;max-width:560px}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -192,7 +194,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -250,7 +252,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -293,7 +295,7 @@
             <p>The Visit Flow Map plots every visit on an interactive map at its real address, with each visit's status driven by the actual check-in and check-out times. Play the day through and each carer's dot travels along real roads between their calls, drawn from their visits and clock times rather than from tracking anyone's phone. Late and missed calls stand out, travel patterns across your whole patch become obvious, and you can scrub back through the timeline to see how any day actually unfolded, all from one screen in the office.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/app-visit-flow-map.webp" alt="HomecareOS Visit Flow Map showing carers and their routes across Worcester with visit status markers" width="1400" height="840" loading="lazy">
+            <img src="images/photos/app-visit-flow-map.webp" alt="HomecareOS Visit Flow Map showing carers and their routes across Worcester with visit status markers" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -387,7 +389,7 @@
             <p>The drag-and-drop rota shows every carer, every visit and every travel gap on one screen. Because travel time sits inside the schedule rather than in a coordinator's head, you can see at a glance when a run is too tight, and the <a href="features-ai-rota.html">AI rota builder</a> schedules around availability, preferences, qualifications and travel when it drafts the week for you.</p>
           </div>
           <div class="feature-hero-visual has-screenshot" style="direction:ltr">
-            <img src="images/photos/rota.webp" alt="HomecareOS rota grid showing visits, carers and travel gaps across the day" width="1400" height="840" loading="lazy">
+            <img src="images/photos/rota.webp" alt="HomecareOS rota grid showing visits, carers and travel gaps across the day" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -582,7 +584,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="mfaq-5" role="region">
-              <div class="faq-answer-inner">The Visit Flow Map, travel-time awareness and GPS check-in are part of the HomecareOS platform, priced per carer with the office team unmetered. It is free for your first 5 carers, then &pound;10 per carer per month on Pro. <a href="pricing.html">See pricing</a>.</div>
+              <div class="faq-answer-inner">The Visit Flow Map, travel-time awareness and GPS check-in are part of the HomecareOS platform, priced per carer with the office team unmetered. It starts at £49 per month + VAT. <a href="pricing.html">See pricing</a>.</div>
             </div>
           </div>
 
@@ -596,7 +598,7 @@
         <p data-reveal data-reveal-delay="100">Book a personalised demo and watch the Visit Flow Map, travel-aware rota and GPS check-in working with a real day's visits.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
           <a href="features.html" class="btn btn-ghost">View All Features</a>
         </div>
       </div>
@@ -636,7 +638,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -671,7 +673,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

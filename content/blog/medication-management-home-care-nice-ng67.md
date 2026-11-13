@@ -33,7 +33,7 @@ faqs:
   - q: Can a care worker leave tablets out for later?
     a: NG67 says care workers should give medicines directly from the container they are supplied in, and should not leave doses out for later unless that has been agreed with the person after a risk assessment and recorded in the care plan.
 cta_title: See a week of medicines on one chart
-cta_text: Book a short demo, or call 01905 674704. Start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or call 01905 674704. Starts at £49 per month + VAT.
 cta_secondary: eMAR features
 cta_secondary_href: /features-emar.html
 ---

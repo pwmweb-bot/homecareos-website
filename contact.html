@@ -27,8 +27,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/rota-og.png">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -97,7 +99,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -106,7 +108,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -164,7 +166,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -353,7 +355,7 @@
 
           <div class="contact-expect-card">
             <h3>No hard sell</h3>
-            <p>No commission, no contract, no sales quota chasing you, and your office team (coordinators, managers) is always unmetered on our per-carer pricing. It's free for your first 5 carers, then £10 per carer per month. We'd rather help you decide whether HomecareOS fits your agency than push you into something you'll regret.</p>
+            <p>No commission, no contract, no sales quota chasing you, and your office team (coordinators, managers) is always unmetered on our per-carer pricing. It starts at £49 per month + VAT. We'd rather help you decide whether HomecareOS fits your agency than push you into something you'll regret.</p>
           </div>
 
           <div class="contact-expect-card">
@@ -366,9 +368,9 @@
           <h3 style="margin-top:48px;text-align:center">Common reasons people get in touch</h3>
           <ul class="contact-reasons">
             <li><strong>Booking a demo</strong>, see the rota, mobile app and compliance dashboards in action with your own data. About 30 minutes, no slide deck.</li>
-            <li><strong>Migrating from another system</strong>, we offer a free import service from Birdie, Access Care Planning, Log my Care, Nourish, CareLineLive, CarePlanner and others. Most agencies are fully migrated within a week.</li>
+            <li><strong>Migrating from another system</strong>, we migrate your live data for you from Birdie, Access Care Planning, Log my Care, Nourish, CareLineLive, CarePlanner and others. Most agencies are fully migrated within a week.</li>
             <li><strong>CQC compliance questions</strong>, PIR auto-population, audit trails, training expiry, incident management. We can walk you through how each maps to your KLOEs.</li>
-            <li><strong>Pricing or plan advice</strong>, we'll help you work out which tier (Free, then Pro £10 per carer/month) fits your agency and how per-carer pricing works as your team grows.</li>
+            <li><strong>Pricing or plan advice</strong>, we'll help you work out how HomecareOS, starting at £49 per month + VAT, fits your agency. Telephone support and training is an optional add-on at £39 per month + VAT.</li>
             <li><strong>Partnership and integration enquiries</strong>, payroll, accounting, NHS Spine, GP Connect, ICBs and local authority data sharing.</li>
             <li><strong>Press, careers, or general enquiries</strong>, drop a line and we'll route it to the right person. Journalists can find boilerplates, founder background and contact details on the <a href="press.html">press page</a>.</li>
           </ul>
@@ -381,7 +383,7 @@
       <div class="container">
         <h2 id="map-heading" data-reveal class="text-center" style="margin-bottom:32px">Find Us</h2>
         <div data-reveal data-reveal-delay="100" style="background:var(--white);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-md);position:relative;height:400px">
-          <img src="images/office-map-worcester.webp" alt="Map of Worcester city centre showing HomecareOS at 18 Foregate Street, WR1 1DN" width="1240" height="460" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+          <img src="images/office-map-worcester.webp" alt="Map of Worcester city centre showing HomecareOS at 18 Foregate Street, WR1 1DN" width="1240" height="460" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" decoding="async">
           <span style="position:absolute;right:8px;bottom:6px;z-index:2;font-size:11px;line-height:1;color:var(--gray-600);background:rgba(255,255,255,0.72);padding:3px 7px;border-radius:4px">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" style="color:inherit">OpenStreetMap</a> contributors</span>
           <div style="position:absolute;left:24px;bottom:24px;z-index:2;background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--gray-200);box-shadow:var(--shadow-lg);padding:20px 22px;max-width:300px;text-align:left">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
@@ -404,7 +406,7 @@
         <p data-reveal data-reveal-delay="100">Book a demo and see HomecareOS in action, rota, mobile app and compliance dashboards with your own data. Our team will tailor the session to your agency's needs.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
           <a href="services.html" class="btn btn-ghost btn-lg">View Services</a>
         </div>
       </div>
@@ -418,7 +420,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -453,7 +455,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

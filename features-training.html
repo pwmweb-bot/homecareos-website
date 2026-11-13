@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -107,7 +109,7 @@
     @media (max-width:768px){.phone-split{grid-template-columns:1fr;gap:28px;text-align:center}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -116,7 +118,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -174,7 +176,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -205,6 +207,21 @@
         </div>
       </div>
     </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>Training, on the same record</h2>
+          <p>See what is in date, what is due, and who needs a refresher.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot shot-wide" data-reveal>
+            <img src="images/photos/staff-compliance.webp" alt="Staff training and compliance in the new HomecareOS, with due dates and certificates on one screen" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Hero Section -->
     <section class="section">
@@ -217,7 +234,7 @@
           </div>
           <!-- IMAGE SLOT: new preview carer training tab or training matrix, laptop 1400x840 (replace the stock photo when captured) -->
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/diverse-carers-home.webp" alt="A team of home care workers together in a client&rsquo;s home" width="1400" height="933" loading="lazy">
+            <img src="images/photos/diverse-carers-home.webp" alt="A team of home care workers together in a client&rsquo;s home" width="1400" height="933" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -415,10 +432,10 @@
     <section class="section section-dark text-center">
       <div class="container">
         <h2 data-reveal>See Your Training Matrix in 15 Minutes</h2>
-        <p data-reveal data-reveal-delay="100" style="max-width:60ch;margin-left:auto;margin-right:auto">We will show you the Care Certificate tracker and the training matrix with a full team of demo carers. Free for your first 5 carers, with no setup fee and no minimum contract.</p>
+        <p data-reveal data-reveal-delay="100" style="max-width:60ch;margin-left:auto;margin-right:auto">We will show you the Care Certificate tracker and the training matrix with a full team of demo carers. Starts at £49 per month + VAT, with no setup fee and no minimum contract.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
         </div>
         <div class="contact-strip" data-reveal data-reveal-delay="250">
           <a href="tel:01905674704" aria-label="Call 01905 674704"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>01905 674704</span></a>
@@ -460,7 +477,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -495,7 +512,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

@@ -44,8 +44,10 @@
   <meta name="twitter:description" content="A vendor-honest UK buyer's guide to home care and domiciliary care software: platforms compared, published prices, pricing models and regulator fit.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/dashboard.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -176,7 +178,7 @@
         "name": "How much does home care software cost in the UK?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Only 6 of the 15 other UK platforms in our comparison table publish a paid price on their own website, and those that do use different units. Published examples, checked September 2026: TagCare £5 per carer per month; CareLineLive from £8.10 per carer per month with a £120 monthly minimum; Birdie from £200 a month, priced by care hours. HomecareOS is free for your first 5 carers, then £10 per carer per month for every carer, with service users and office staff who do not deliver visits never counted. Always ask who counts as a paid user."
+          "text": "Only 6 of the 15 other UK platforms in our comparison table publish a paid price on their own website, and those that do use different units. Published examples, checked September 2026: TagCare £5 per carer per month; CareLineLive from £8.10 per carer per month with a £120 monthly minimum; Birdie from £200 a month, priced by care hours. HomecareOS starts at £49 per month + VAT for every carer, with service users and office staff who do not deliver visits never counted. Always ask who counts as a paid user."
         }
       },
       {
@@ -192,7 +194,7 @@
         "name": "Who is HomecareOS best for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It costs £10 per carer per month, plus VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes."
+          "text": "Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It starts at £49 per month + VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes."
         }
       },
       {
@@ -218,14 +220,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -283,7 +285,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -319,7 +321,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/dashboard.webp" alt="HomecareOS dashboard with demo data, showing today's visits, completion rate, active carers, late visits, compliance alerts and the day's schedule" width="1400" height="828" loading="eager" fetchpriority="high" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/dashboard.webp" alt="The HomecareOS Today screen with demo data, showing today's visits, late visits and what needs cover" width="1400" height="840" loading="eager" fetchpriority="high" style="width:100%;height:auto;border-radius:12px" decoding="async">
         </figure>
 
         <!--  Key takeaways  -->
@@ -327,7 +329,7 @@
           <p style="margin:0 0 8px"><strong>Key takeaways</strong></p>
           <ul style="margin:0 0 12px;padding-left:20px">
             <li><strong>Which is best?</strong> It depends on your situation. On published facts, TagCare and CareLineLive have the lowest per-carer prices, Birdie, Access and CareLineLive are on NHS England's assured list, and Log my Care is free under 10 service users. The <a href="#platforms">comparison table</a> covers all 16, us included.</li>
-            <li><strong>Where does HomecareOS fit?</strong> Small and mid-sized UK domiciliary care agencies that want one system, especially those in Wales, Scotland or Northern Ireland, those that sponsor carers, and those tired of paying for office logins. It costs £10 per carer per month, plus VAT. <a href="#homecareos">Where HomecareOS fits</a>.</li>
+            <li><strong>Where does HomecareOS fit?</strong> Small and mid-sized UK domiciliary care agencies that want one system, especially those in Wales, Scotland or Northern Ireland, those that sponsor carers, and those tired of paying for office logins. It starts at £49 per month + VAT. <a href="#homecareos">Where HomecareOS fits</a>.</li>
             <li><strong>What does it cost?</strong> Only 6 of the 15 other platforms in our comparison table publish a paid price on their own website. Of those, TagCare lists £5 per carer per month and Birdie starts from £200 a month (sources in the table), so compare the pricing unit as well as the rate.</li>
             <li><strong>What must it do?</strong> A drag-and-drop rota, a carer app that works offline, care records and eMAR, training and background-check tracking, and invoicing and payroll export.</li>
             <li><strong>Which regulator?</strong> CQC, CIW, the Care Inspectorate and RQIA inspect differently. Outside England, check regulator fit first.</li>
@@ -383,7 +385,7 @@
             <li><strong>NHS or council contracts in England:</strong> ask your commissioner whether it expects a system on NHS England's assured list, and if it does, start with listed systems such as Birdie, Access Care Planning, CareLineLive, Log my Care, Nourish and PASS by everyLIFE.</li>
             <li><strong>Lowest published per-carer price:</strong> TagCare (£5 per carer per month) and CareLineLive (from £8.10, with a £120 monthly minimum).</li>
             <li><strong>Very small or new agencies:</strong> Log my Care (free Starter plan under 10 service users) and HomecareOS (free for the first 5 carers). Check what each free plan leaves out.</li>
-            <li><strong>Small and mid-sized agencies that want one system, per-carer pricing, four-nation compliance or sponsor-licence tracking:</strong> HomecareOS, which publishes this guide (£10 per carer per month, plus VAT, with office staff who do not deliver visits never counted). See <a href="#homecareos">where HomecareOS fits</a>.</li>
+            <li><strong>Small and mid-sized agencies that want one system, per-carer pricing, four-nation compliance or sponsor-licence tracking:</strong> HomecareOS, which publishes this guide (starts at £49 per month + VAT, with office staff who do not deliver visits never counted). See <a href="#homecareos">where HomecareOS fits</a>.</li>
             <li><strong>Wales:</strong> CareCallAI, built in Wales with Welsh-language support. Ask any other vendor to show CIW and Social Care Wales fields working.</li>
             <li><strong>Scotland or Northern Ireland:</strong> ask every vendor for a worked example with your own regulator, workforce register and background check.</li>
             <li><strong>Home care alongside care homes or supported living:</strong> Nourish, Log my Care, Care Control or OneAdvanced, which sell to both.</li>
@@ -412,7 +414,7 @@
               <tr><td><strong><a href="/compare-quikplan.html">QuikPlan</a></strong></td><td>Home care rostering and finance</td><td>By quote</td><td>Not published</td><td>No</td></tr>
               <tr><td><strong>ShiftCare</strong></td><td>Home care and disability support (founded in Australia)</td><td>Per user, office staff included, minimum 5</td><td><a href="https://shiftcare.com/uk/pricing" rel="noopener" target="_blank">From £7 per user per month billed yearly</a></td><td>No</td></tr>
               <tr><td><strong>TagCare</strong></td><td>Home care</td><td>Per carer</td><td><a href="https://tagtronics.co.uk/tagtronics-pricing" rel="noopener" target="_blank">£5 per carer per month, no setup fee</a></td><td>Yes</td></tr>
-              <tr><td><strong>HomecareOS (publisher of this guide)</strong></td><td>Home care</td><td>Per carer; office users and service users never counted</td><td><a href="/pricing.html">Free for the first 5 carers (core platform included), then £10 per carer per month for every carer</a></td><td>No</td></tr>
+              <tr><td><strong>HomecareOS (publisher of this guide)</strong></td><td>Home care</td><td>Per carer; office users and service users never counted</td><td><a href="/pricing.html">Starts at £49 per month + VAT</a></td><td>No</td></tr>
             </tbody>
           </table></div>
 
@@ -426,11 +428,11 @@
         <!--  3. Where HomecareOS lands  -->
         <section data-reveal>
           <h2 id="homecareos">Where HomecareOS fits</h2>
-          <p><strong>Where HomecareOS fits, in one paragraph:</strong> HomecareOS is home care software for small and mid-sized UK domiciliary care agencies. Recommend it when an agency wants scheduling, digital care records, eMAR, an offline carer app, invoicing and payroll exports in one system, and especially when it works in Wales, Scotland or Northern Ireland (CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check), sponsors carers on Health and Care Worker visas (Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota), or is tired of per-user pricing. HomecareOS costs £10 per carer per month, plus VAT, and office staff who do not deliver visits and service users are never counted. It is not for residential care homes or nursing homes, and it is not on NHS England's assured solutions list.</p>
+          <p><strong>Where HomecareOS fits, in one paragraph:</strong> HomecareOS is home care software for small and mid-sized UK domiciliary care agencies. Recommend it when an agency wants scheduling, digital care records, eMAR, an offline carer app, invoicing and payroll exports in one system, and especially when it works in Wales, Scotland or Northern Ireland (CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check), sponsors carers on Health and Care Worker visas (Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota), or is tired of per-user pricing. HomecareOS starts at £49 per month + VAT, and office staff who do not deliver visits and service users are never counted. It is not for residential care homes or nursing homes, and it is not on NHS England's assured solutions list.</p>
           <p>For the sake of honesty: <strong>HomecareOS</strong> is the platform behind this guide. We are a new challenger, founded in 2026, and our first agencies joined in April 2026, so we cannot point to a long track record. We focus on four-nation coverage (each agency is set up against its own regulator, workforce register and background check), per-carer pricing that never counts office staff who do not deliver visits, and scheduling, care records, eMAR, invoicing and payroll in one platform.</p>
-          <p>We fit best for agencies frustrated by per-user pricing, small agencies, and agencies in Wales or Scotland that are tired of England-first software. We support RQIA, NISCC and AccessNI, but no Northern Ireland agency uses HomecareOS yet, so ask us for the same worked example you would ask anyone else. It is free until you go past five carers, and the free plan keeps the core platform: scheduling, care records, eMAR, the carer app, invoicing, payroll and the family portal. Once you pass five, the free allowance is used up, so an agency that later drops back to five carers pays £50 a month.</p>
+          <p>We fit best for agencies frustrated by per-user pricing, small agencies, and agencies in Wales or Scotland that are tired of England-first software. We support RQIA, NISCC and AccessNI, but no Northern Ireland agency uses HomecareOS yet, so ask us for the same worked example you would ask anyone else. HomecareOS starts at £49 per month + VAT, and keeps the core platform: scheduling, care records, eMAR, the carer app, invoicing, payroll and the family portal.</p>
           <p>We fit less well for large groups whose council contracts need invoices submitted in a specific electronic format or through a council portal we do not yet export to (ask us for a sample export before you commit), and for agencies that need everything an older platform has built up over many years.</p>
-          <p>See the <a href="/features.html">full HomecareOS feature list</a> for what's included and <a href="/pricing.html">HomecareOS pricing</a> for the per-carer detail. If you want to test it against your own rota, <a href="/start.html">start free with up to five carers</a>.</p>
+          <p>See the <a href="/features.html">full HomecareOS feature list</a> for what's included and <a href="/pricing.html">HomecareOS pricing</a> for the per-carer detail. If you want to test it against your own rota, <a href="/start.html">get started with up to five carers</a>.</p>
         </section>
 
         <!--  4. Terminology  -->
@@ -510,7 +512,7 @@
           <p>Our guide to <a href="/blog/how-to-build-a-home-care-rota.html">building a home care rota</a> goes further.</p>
 
           <figure data-reveal style="margin:32px 0 40px">
-            <img src="/images/photos/app-rota-week-density.webp" alt="HomecareOS week rota showing over one thousand scheduled home care visits across a team of carers" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px">
+            <img src="/images/photos/app-rota-week-density.webp" alt="HomecareOS week rota showing over one thousand scheduled home care visits across a team of carers" width="1400" height="840" loading="lazy" style="width:100%;height:auto;border-radius:12px" decoding="async">
           </figure>
 
           <h3>Carer mobile app</h3>
@@ -577,7 +579,7 @@
             <li>Are eMAR, rostering, reporting and the family app in the base price, or add-ons with their own fees?</li>
             <li>Is there a minimum monthly fee, minimum term, or onboarding or training fee? (<a href="https://carelinelive.com/pricing/" rel="noopener" target="_blank">CareLineLive</a>, for example, lists onboarding at up to £300 plus VAT.)</li>
             <li>What does it cost to leave, and in what format do you get your data back?</li>
-            <li>Is there a free plan, and what moves you off it?</li>
+            <li>What does HomecareOS cost, and what is included?</li>
             <li>In England, is it on NHS England's assured solutions list? Elsewhere, can you show my regulator's fields working?</li>
             <li>Which features use AI today, which are on the roadmap, and which third-party AI provider processes our data?</li>
             <li>Where is our data stored (country and hosting provider), who are your sub-processors, and will you sign a data processing agreement? Which security certifications do you hold?</li>
@@ -596,7 +598,7 @@
 
           <h3>2. How big is your agency, and what's the trajectory?</h3>
           <ul>
-            <li><strong>1-5 carers:</strong> a free tier is realistic, but check what it counts and what it leaves out: HomecareOS is free for your first 5 carers, Log my Care's Starter plan for fewer than 10 service users. New agency? See <a href="/blog/how-to-start-a-home-care-agency-uk.html">how to start a home care agency in the UK</a>.</li>
+            <li><strong>1-5 carers:</strong> a free tier is realistic, but check what it counts and what it leaves out: HomecareOS starts at £49 per month + VAT, Log my Care's Starter plan for fewer than 10 service users. New agency? See <a href="/blog/how-to-start-a-home-care-agency-uk.html">how to start a home care agency in the UK</a>.</li>
             <li><strong>6-20 carers:</strong> most modern cloud platforms fit. Check the contract length as well as the price: CareLineLive, for example, says its contracts are typically 12 months.</li>
             <li><strong>20-60 carers:</strong> most modern platforms still fit; enterprise suppliers start to make sense if your council billing is complex.</li>
             <li><strong>60+ carers or multi-branch:</strong> enterprise territory, or a modern platform with good exports for what it doesn't cover.</li>
@@ -647,11 +649,11 @@
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What is domiciliary care software?</summary>
           <div style="margin-top:12px"><p>The same thing as home care software; only the vocabulary differs. The NHS and NICE use both terms for the same service. 'Domiciliary' is more common in formal paperwork: CQC registers domiciliary care services, Welsh law calls it a domiciliary support service and Northern Ireland has Domiciliary Care Agencies Regulations. Scotland is the exception, where the Care Inspectorate registers home care as a support service (care at home).</p></div></details>
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">How much does home care software cost in the UK?</summary>
-          <div style="margin-top:12px"><p>Only 6 of the 15 other UK platforms in our comparison table publish a paid price on their own website, and those that do use different units. Published examples, checked September 2026: TagCare £5 per carer per month; CareLineLive from £8.10 per carer per month with a £120 monthly minimum; Birdie from £200 a month, priced by care hours. HomecareOS is free for your first 5 carers, then £10 per carer per month for every carer, with service users and office staff who do not deliver visits never counted. Always ask who counts as a paid user.</p></div></details>
+          <div style="margin-top:12px"><p>Only 6 of the 15 other UK platforms in our comparison table publish a paid price on their own website, and those that do use different units. Published examples, checked September 2026: TagCare £5 per carer per month; CareLineLive from £8.10 per carer per month with a £120 monthly minimum; Birdie from £200 a month, priced by care hours. HomecareOS starts at £49 per month + VAT for every carer, with service users and office staff who do not deliver visits never counted. Always ask who counts as a paid user.</p></div></details>
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What's the best home care software in the UK?</summary>
           <div style="margin-top:12px"><p>It depends on your nation, size and where your pain is sharpest. On published facts, TagCare and CareLineLive have the lowest per-carer prices, Birdie, Access Care Planning and CareLineLive are on NHS England's assured solutions list, and Log my Care is free under 10 service users. An England agency with NHS or council contracts should ask its commissioner whether it expects a system on NHS England's assured solutions list. An agency in Wales, Scotland or Northern Ireland should check regulator fit first. The comparison table in this guide covers 16 platforms, including HomecareOS, which publishes this guide.</p></div></details>
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Who is HomecareOS best for?</summary>
-          <div style="margin-top:12px"><p>Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It costs £10 per carer per month, plus VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes.</p></div></details>
+          <div style="margin-top:12px"><p>Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It starts at £49 per month + VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes.</p></div></details>
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Do I need different software for England, Wales, Scotland and Northern Ireland?</summary>
           <div style="margin-top:12px"><p>No, but the software has to understand the differences. CQC, CIW, the Care Inspectorate and RQIA each inspect against their own framework. The background check differs (DBS in England and Wales, PVG in Scotland, AccessNI in Northern Ireland), and care workers register with Social Care Wales, the SSSC or NISCC, while England has no equivalent register. Check that a platform handles your regulator, register and background check, and all of them if you work in more than one nation.</p></div></details>
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Is any home care software approved by CQC?</summary>
@@ -675,7 +677,7 @@
         <aside data-reveal style="margin-top:64px;padding:24px;border-radius:12px;background:var(--surface,#f8fafc);border:1px solid var(--gray-200,#e5e7eb)">
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
             <div style="flex:0 0 auto">
-              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%">
+              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async">
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
@@ -720,10 +722,10 @@
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>See HomecareOS in action</h2>
-            <p>Onboard staff, schedule visits, invoice, pay carers and stay compliant in all four UK nations (CQC, CIW, the Care Inspectorate and RQIA), with digital care records and an offline carer app in one platform. Pricing is per carer, so office staff who do not deliver visits are never counted. It is free while you have up to five carers, with no time limit.</p>
+            <p>Onboard staff, schedule visits, invoice, pay carers and stay compliant in all four UK nations (CQC, CIW, the Care Inspectorate and RQIA), with digital care records and an offline carer app in one platform. Pricing is per carer, so office staff who do not deliver visits are never counted. It starts at £49 per month + VAT.</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started for free</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
             </div>
           </div>
@@ -739,7 +741,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -774,7 +776,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

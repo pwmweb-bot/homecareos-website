@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -89,7 +91,7 @@
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.homecareos.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.homecareos.co.uk/features.html"}, {"@type": "ListItem", "position": 3, "name": "Electronic Call Monitoring", "item": "https://www.homecareos.co.uk/features-electronic-call-monitoring.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is electronic call monitoring in home care?", "acceptedAnswer": {"@type": "Answer", "text": "Electronic call monitoring, often shortened to ECM, records when a carer arrives at and leaves a visit, so the agency and any commissioner can see that care was delivered as planned. In HomecareOS it is done from the carer app rather than the client’s landline."}}, {"@type": "Question", "name": "How do carers clock in?", "acceptedAnswer": {"@type": "Answer", "text": "By GPS on their phone, by tapping an NFC tag placed in the home, by scanning a printed QR code, or by an office entry when something has genuinely gone wrong. The method used is recorded on the visit."}}, {"@type": "Question", "name": "What stops a carer clocking in from somewhere else?", "acceptedAnswer": {"@type": "Answer", "text": "Every GPS, NFC and QR clock in and clock out is checked against the service user’s registered address. Beyond 150 metres the record is flagged for a coordinator to review. It is deliberately not blocked, so rural rounds and thick-walled homes do not lock honest carers out."}}, {"@type": "Question", "name": "Do we need extra hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. Carers use the HomecareOS app on their own phone, free for every carer. NFC tags and QR codes are optional if you want a tag in the home."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is electronic call monitoring in home care?", "acceptedAnswer": {"@type": "Answer", "text": "Electronic call monitoring, often shortened to ECM, records when a carer arrives at and leaves a visit, so the agency and any commissioner can see that care was delivered as planned. In HomecareOS it is done from the carer app rather than the client’s landline."}}, {"@type": "Question", "name": "How do carers clock in?", "acceptedAnswer": {"@type": "Answer", "text": "By GPS on their phone, by tapping an NFC tag placed in the home, by scanning a printed QR code, or by an office entry when something has genuinely gone wrong. The method used is recorded on the visit."}}, {"@type": "Question", "name": "What stops a carer clocking in from somewhere else?", "acceptedAnswer": {"@type": "Answer", "text": "Every GPS, NFC and QR clock in and clock out is checked against the service user’s registered address. Beyond 150 metres the record is flagged for a coordinator to review. It is deliberately not blocked, so rural rounds and thick-walled homes do not lock honest carers out."}}, {"@type": "Question", "name": "Do we need extra hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. Carers use the HomecareOS app on their own phone. The app is included for every carer. NFC tags and QR codes are optional if you want a tag in the home."}}]}
 </script>
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
@@ -107,7 +109,7 @@
     @media (max-width:768px){.phone-split{grid-template-columns:1fr;gap:28px;text-align:center}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -116,7 +118,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -174,7 +176,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -217,7 +219,7 @@
           </div>
           <!-- IMAGE SLOT: new preview Visits list with live status, laptop 1400x840 (add beside the phone shot) -->
           <div class="feature-hero-visual has-phone">
-            <img src="images/photos/visit-detail-phone-390.webp" srcset="images/photos/visit-detail-phone-390.webp 1x, images/photos/visit-detail-phone.webp 2x" alt="The HomecareOS carer app on a visit: the address, visit time and buttons to check in, record tasks, medications and observations" width="390" height="844" loading="lazy">
+            <img src="images/photos/visit-detail-phone-390.webp" srcset="images/photos/visit-detail-phone-390.webp 1x, images/photos/visit-detail-phone.webp 2x" alt="The HomecareOS carer app on a visit: the address, visit time and buttons to check in, record tasks, medications and observations" width="390" height="844" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -266,7 +268,7 @@
     <section class="section">
       <div class="container">
         <div class="phone-split" data-reveal>
-          <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="The HomecareOS carer app home screen listing today&rsquo;s visits with times, addresses and status" width="390" height="844" loading="lazy">
+          <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="The HomecareOS carer app home screen listing today&rsquo;s visits with times, addresses and status" width="390" height="844" loading="lazy" decoding="async">
           <div>
             <span class="label">On the carer&rsquo;s phone</span>
             <h2>The carer&rsquo;s day on one screen</h2>
@@ -403,7 +405,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="electrfaq-4" role="region">
-              <div class="faq-answer-inner">No. Carers use the HomecareOS app on their own phone, free for every carer. NFC tags and QR codes are optional if you want a tag in the home.</div>
+              <div class="faq-answer-inner">No. Carers use the HomecareOS app on their own phone. The app is included for every carer. NFC tags and QR codes are optional if you want a tag in the home.</div>
             </div>
           </div>
         </div>
@@ -429,10 +431,10 @@
     <section class="section section-dark text-center">
       <div class="container">
         <h2 data-reveal>See Call Monitoring in a 15-Minute Demo</h2>
-        <p data-reveal data-reveal-delay="100" style="max-width:60ch;margin-left:auto;margin-right:auto">We will show you a carer clocking in on the phone and what the office sees a moment later. Free for your first 5 carers, with no setup fee and no minimum contract.</p>
+        <p data-reveal data-reveal-delay="100" style="max-width:60ch;margin-left:auto;margin-right:auto">We will show you a carer clocking in on the phone and what the office sees a moment later. Starts at £49 per month + VAT, with no setup fee and no minimum contract.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
         </div>
         <div class="contact-strip" data-reveal data-reveal-delay="250">
           <a href="tel:01905674704" aria-label="Call 01905 674704"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>01905 674704</span></a>
@@ -474,7 +476,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -509,7 +511,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

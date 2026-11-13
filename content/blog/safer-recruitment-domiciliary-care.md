@@ -35,7 +35,7 @@ faqs:
   - q: Does HomecareOS put a new hire on the rota automatically?
     a: No. On hire, the applicant converts to a carer record ready to be added to the rota. Adding them is a separate step. Invites are by email only; SMS invites are not built.
 cta_title: Run safer recruitment in one portal
-cta_text: Agencies that sign up now get HomecareOS recruitment free for 3 months, then £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
+cta_text: Agencies that sign up now get HomecareOS recruitment £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -114,7 +114,7 @@ HomecareOS is built around the recruitment process registered managers already r
 - The applicant completes an online **/apply** journey covering the application, documents, right to work, **two references**, DBS details and a health questionnaire.
 - You track **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, the applicant converts to a carer record **ready to be added to the rota** — not added automatically.
-- Agencies that sign up now get recruitment **free for 3 months**, then **£49 a month plus VAT**.
+- The recruitment portal starts at **£49 a month plus VAT**.
 
 Open the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), see [recruitment features](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 

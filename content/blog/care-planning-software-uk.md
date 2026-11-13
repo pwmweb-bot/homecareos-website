@@ -31,7 +31,7 @@ faqs:
   - q: What should we test in a trial?
     a: Write a plan with a goal and a review date, change it, and check the previous wording is still there. Record a refused medicine and a late visit. Then open the same plan on a phone with no signal.
 cta_title: Look at a care plan on the carer app
-cta_text: Book a short demo, or start free for up to 5 carers and import one plan. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT and import one plan. Starts at £49 per month + VAT.
 cta_secondary: Care records
 cta_secondary_href: /features-care-records.html
 ---

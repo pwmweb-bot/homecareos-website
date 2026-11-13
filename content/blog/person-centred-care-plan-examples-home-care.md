@@ -1,6 +1,6 @@
 ---
 title: Person-centred care plan examples for home care
-description: Six worked person-centred care plan examples for UK home care, visit by visit, with risks, medicines and reviews, plus a free printable template.
+description: Six worked person-centred care plan examples for UK home care, visit by visit, with risks, medicines and reviews, plus a printable template.
 slug: person-centred-care-plan-examples-home-care
 date: 2026-10-29
 keywords: person-centred care plan examples, person-centred care plan example, care plan examples home care, domiciliary care plan example, care plan template uk, positive risk taking care plan, dementia care plan example
@@ -61,7 +61,7 @@ This guide covers home care (domiciliary care) in England, and links the rules t
 </div>
 ```
 
-Or skip to the [free printable template](#free-printable-person-centred-care-plan-template), which you can download without signing up.
+Or skip to the [printable template](#free-printable-person-centred-care-plan-template), which you can download without signing up.
 
 ## What the rules ask a care plan to do
 
@@ -596,9 +596,9 @@ NICE NG21 recommends an initial review within 6 weeks of care starting, then at 
 
 In practice, most agencies review more often than once a year. Bring a review forward after a fall, an infection, a hospital stay, new medicines, a safeguarding concern, a change in who lives with the person, or whenever the person or their family says something is not working. Reviews are also the natural time to look at whether outcomes are being met, and to stop anything that is no longer needed.
 
-## Free printable person-centred care plan template
+## Printable person-centred care plan template
 
-We have turned the twelve sections above into a plain, printable template you can use for free. No sign-up, no email address needed.
+We have turned the twelve sections above into a plain, printable template. No sign-up, no email address needed.
 
 ```html
 <p style="margin:20px 0"><a class="btn btn-primary btn-lg" style="white-space:normal;max-width:100%;text-align:center" href="/guides/person-centred-care-plan-template.pdf" download>Download the template (PDF, 5 pages)</a></p>

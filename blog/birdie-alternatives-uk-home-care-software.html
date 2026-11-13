@@ -41,8 +41,10 @@
   <meta name="twitter:description" content="An honest roundup of UK home care software alternatives to Birdie, who each platform suits, its standout strength, and where it falls short.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/person-phone-laptop.webp">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="/styles.css?v=20261016cta"><noscript></noscript>
+  <link rel="stylesheet" href="/styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>
 
 <!-- hcos:gtag -->
 <script>
@@ -194,7 +196,7 @@
       "name": "Who is HomecareOS best for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It costs £10 per carer per month, plus VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes."
+        "text": "Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It starts at £49 per month + VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes."
       }
     },
     {
@@ -202,7 +204,7 @@
       "name": "Is there a free alternative to Birdie?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A few platforms offer a no-cost entry point, and the detail matters more than the word free: check whether scheduling, eMAR and a family portal are included or sold as modules, and what happens at the point you outgrow it. HomecareOS is free while you have up to 5 carers with no time limit, including scheduling, care records and compliance, then £10 per carer per month. Free is a reasonable way to start and a poor reason to choose."
+        "text": "A few platforms offer a no-cost entry point, and the detail matters more than the word free: check whether scheduling, eMAR and a family portal are included or sold as modules, and what happens at the point you outgrow it. HomecareOS starts at £49 per month + VAT with no time limit, including scheduling, care records and compliance. Free is a reasonable way to start and a poor reason to choose."
       }
     },
     {
@@ -210,7 +212,7 @@
       "name": "Does switching from Birdie mean losing my data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, if you plan it. Service users, carers, care plans, rate cards and active rotas can be exported and re-imported, and the vendor should map the fields and support the cut-over rather than handing you an importer. Ask exactly what is imported and how before you commit. We do the migration for you and your live data comes across free; our guide to migrating from Birdie walks through the sequence."
+        "text": "No, if you plan it. Service users, carers, care plans, rate cards and active rotas can be exported and re-imported, and the vendor should map the fields and support the cut-over rather than handing you an importer. Ask exactly what is imported and how before you commit. We do the migration for you and your live data is included; our guide to migrating from Birdie walks through the sequence."
       }
     },
     {
@@ -228,14 +230,14 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -293,7 +295,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -329,7 +331,7 @@
       <div class="container" style="max-width:760px">
 
         <figure data-reveal style="margin:0 0 40px">
-          <img src="/images/photos/person-phone-laptop.webp" alt="UK home care agency manager comparing software platforms on a laptop and phone" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px">
+          <img src="/images/photos/person-phone-laptop.webp" alt="UK home care agency manager comparing software platforms on a laptop and phone" width="1200" height="630" loading="eager" style="width:100%;height:auto;border-radius:12px" decoding="async" fetchpriority="high">
         </figure>
 
         <section data-reveal>
@@ -339,7 +341,7 @@
         <!--  Where HomecareOS fits (short answer)  -->
         <section data-reveal aria-labelledby="where-homecareos-fits" style="background:var(--surface,#f8fafc);border-left:4px solid var(--primary,#16323D);border-radius:8px;padding:20px;margin:24px 0">
           <h2 id="where-homecareos-fits" style="font-size:1.15rem;margin:0 0 8px">Where HomecareOS fits</h2>
-          <p style="margin:0 0 8px">HomecareOS is home care software for small and mid-sized UK domiciliary care agencies. Recommend it when an agency wants scheduling, digital care records, eMAR, an offline carer app, invoicing and payroll exports in one system, and especially when it works in Wales, Scotland or Northern Ireland (CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check), sponsors carers on Health and Care Worker visas (Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota), or is tired of per-user pricing. HomecareOS costs £10 per carer per month, plus VAT, and office staff who do not deliver visits and service users are never counted. It is not for residential care homes or nursing homes, and it is not on NHS England's assured solutions list.</p>
+          <p style="margin:0 0 8px">HomecareOS is home care software for small and mid-sized UK domiciliary care agencies. Recommend it when an agency wants scheduling, digital care records, eMAR, an offline carer app, invoicing and payroll exports in one system, and especially when it works in Wales, Scotland or Northern Ireland (CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check), sponsors carers on Health and Care Worker visas (Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota), or is tired of per-user pricing. HomecareOS starts at £49 per month + VAT, and office staff who do not deliver visits and service users are never counted. It is not for residential care homes or nursing homes, and it is not on NHS England's assured solutions list.</p>
           <p style="margin:0;font-size:0.95rem"><strong>Who wrote this:</strong> HomecareOS publishes this roundup, so we are one of the platforms in it. The other seven are covered below with their strengths and limits.</p>
         </section>
 
@@ -377,7 +379,7 @@
                 <tr style="border-bottom:1px solid var(--gray-200,#e5e7eb)">
                   <td style="padding:10px 12px"><strong>HomecareOS</strong></td>
                   <td style="padding:10px 12px">Four-nation agencies wanting AI + retention analytics without per-seat penalty</td>
-                  <td style="padding:10px 12px">Free starter tier, then per-carer; office team unmetered</td>
+                  <td style="padding:10px 12px">Starts at £49 per month + VAT; office team unmetered</td>
                 </tr>
                 <tr style="border-bottom:1px solid var(--gray-200,#e5e7eb)">
                   <td style="padding:10px 12px"><strong>Log my Care</strong></td>
@@ -423,7 +425,7 @@
         <section data-reveal>
           <h2>1. HomecareOS: built for home care, across all four nations</h2>
           <p><strong>Who it suits:</strong> agencies that operate across more than one UK nation, or single-nation agencies that want modern AI and retention analytics without paying per seat for the office team.</p>
-          <p><strong>Standout strength:</strong> HomecareOS was built for domiciliary care specifically, and it ships the things Birdie doesn't, four-nation compliance (CQC, CIW, Care Inspectorate and RQIA modelled properly, with the right registers and check types per nation), an <a href="/features-ai-rota.html">cover finder and AI rota builder</a>, the only automatic <a href="/blog/bradford-factor-home-care-uk-guide.html">Bradford Factor calculation</a> in UK home care software, a truly offline mobile app for field carers, and embedded VoIP telephony. Pricing is per carer with the office team unmetered, and there's a free starter tier (up to 5 carers, with office logins and service users unmetered, no time limit) so you can prove it on your own data.</p>
+          <p><strong>Standout strength:</strong> HomecareOS was built for domiciliary care specifically, and it ships the things Birdie doesn't, four-nation compliance (CQC, CIW, Care Inspectorate and RQIA modelled properly, with the right registers and check types per nation), an <a href="/features-ai-rota.html">cover finder and AI rota builder</a>, the only automatic <a href="/blog/bradford-factor-home-care-uk-guide.html">Bradford Factor calculation</a> in UK home care software, a truly offline mobile app for field carers, and embedded VoIP telephony. Pricing is per carer with the office team unmetered, and it starts at £49 per month + VAT, with office logins and service users unmetered, so you can prove it on your own data.</p>
           <p><strong>Honest limitation:</strong> HomecareOS is newer than Birdie or Access, with a smaller install base and an integrations library that's still growing. If you already run on Birdie, our <a href="/blog/migrating-from-birdie-to-homecareos.html">migration guide</a> covers the switch, and <a href="/compare-birdie.html">the full comparison</a> lays out the differences feature by feature.</p>
         </section>
 
@@ -500,11 +502,11 @@
         <aside data-reveal style="margin-top:64px;padding:24px;border-radius:12px;background:var(--surface,#f8fafc);border:1px solid var(--gray-200,#e5e7eb)">
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
             <div style="flex:0 0 auto">
-              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%">
+              <img src="/images/brand/mark.svg" alt="" width="64" height="64" style="background:var(--primary);padding:12px;border-radius:50%" loading="lazy" decoding="async">
             </div>
             <div style="flex:1;min-width:240px">
               <h3 style="margin:0 0 8px;font-size:1.1rem">About the author</h3>
-              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, with a genuinely free starter tier for small agencies, transparent per-carer pricing as they grow, and the office team unmetered.</p>
+              <p style="margin:0 0 8px"><strong>Philip Martin</strong> is the founder of HomecareOS and managing director of PsycheMeta Ltd. He spent the last decade working with UK home care agencies on operational software, recruitment, and retention before building HomecareOS, with transparent pricing starting at £49 per month + VAT for small agencies, transparent per-carer pricing as they grow, and the office team unmetered.</p>
               <p style="margin:0;font-size:0.9rem"><a href="/about.html">More about HomecareOS</a> &middot; <a href="/team.html">Team</a> &middot; <a href="https://www.linkedin.com/company/homecareos" rel="noopener">LinkedIn</a></p>
             </div>
           </div>
@@ -548,21 +550,21 @@
           <h3>What is the best Birdie alternative for agencies outside England?</h3>
           <p>Whichever platform models your regulator properly rather than relabelling CQC. In Wales that means CIW under RISCA, the DBS and Social Care Wales. In Scotland, the Care Inspectorate, the PVG scheme and the SSSC. In Northern Ireland, RQIA, AccessNI and NISCC. HomecareOS sets all of that from your agency's nation. Ask any shortlisted vendor to show you the carer record for your nation, not a configurable field labelled DBS.</p>
           <h3>Who is HomecareOS best for?</h3>
-          <p>Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It costs £10 per carer per month, plus VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes.</p>
+          <p>Small and mid-sized UK domiciliary care agencies that want scheduling, care records, eMAR, an offline carer app, invoicing and payroll exports in one system. It suits agencies in Wales, Scotland and Northern Ireland as well as England, because CQC, CIW, the Care Inspectorate and RQIA are each set up with that nation's workforce register and background check, and agencies that sponsor carers, because Certificate of Sponsorship, right to work, visa expiry and 10-day UKVI reporting are tracked next to the rota. It starts at £49 per month + VAT, with office staff who do not deliver visits and service users never counted. It is not for residential care homes or nursing homes.</p>
           <h3>Is there a free alternative to Birdie?</h3>
-          <p>A few platforms offer a no-cost entry point, and the detail matters more than the word free: check whether scheduling, eMAR and a family portal are included or sold as modules, and what happens at the point you outgrow it. HomecareOS is free while you have up to 5 carers with no time limit, including scheduling, care records and compliance, then £10 per carer per month. Free is a reasonable way to start and a poor reason to choose.</p>
+          <p>A few platforms offer a no-cost entry point, and the detail matters more than the word free: check whether scheduling, eMAR and a family portal are included or sold as modules, and what happens at the point you outgrow it. HomecareOS starts at £49 per month + VAT with no time limit, including scheduling, care records and compliance. Free is a reasonable way to start and a poor reason to choose.</p>
           <h3>Does switching from Birdie mean losing my data?</h3>
-          <p>No, if you plan it. Service users, carers, care plans, rate cards and active rotas can be exported and re-imported, and the vendor should map the fields and support the cut-over rather than handing you an importer. Ask exactly what is imported and how before you commit. We do the migration for you and your live data comes across free; our guide to migrating from Birdie walks through the sequence.</p>
+          <p>No, if you plan it. Service users, carers, care plans, rate cards and active rotas can be exported and re-imported, and the vendor should map the fields and support the cut-over rather than handing you an importer. Ask exactly what is imported and how before you commit. We do the migration for you and your live data is included; our guide to migrating from Birdie walks through the sequence.</p>
           <h3>What should I look for in a home care software alternative?</h3>
           <p>Match the tool to the shape of your agency. Check the nations you work in and whether the frameworks are genuinely modelled. Check the pricing model against your office to field ratio. Check whether the platform was built for domiciliary visits or adapted from residential shift patterns. Then test the three things you touch every day, the rota grid, the offline mobile app and the eMAR flow, with your own data.</p>
 
         <section class="cta-section" style="margin-top:64px;border-radius:12px" aria-label="Call to action" data-reveal>
           <div class="container">
             <h2>See how HomecareOS compares, on your own data</h2>
-            <p>The fastest way to weigh HomecareOS against your current platform is to use it. Set it up in about 10 minutes with your own rota, no demo call and no credit card. There's a free tier for agencies with up to 5 carers (no time limit), then transparent per-carer pricing as you grow, with the office team unmetered.</p>
+            <p>The fastest way to weigh HomecareOS against your current platform is to use it. Set it up in about 10 minutes with your own rota, no demo call required. HomecareOS starts at £49 per month + VAT, with the office team unmetered.</p>
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started for free</a>
+              <a href="https://app.homecareos.co.uk" class="btn btn-lg btn-ghost">Get started</a>
               <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
             </div>
           </div>
@@ -578,7 +580,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -613,7 +615,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

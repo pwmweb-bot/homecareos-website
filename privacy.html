@@ -33,11 +33,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -106,7 +108,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#" class="skip-link" id="skip-link">Skip to main content</a>
@@ -117,7 +119,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -175,7 +177,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -335,7 +337,7 @@
           <h3>8.2 Our Consent Banner</h3>
           <p>When you first visit our website, a consent banner appears at the bottom of the screen asking whether you would like to accept or reject non-essential cookies (analytics and advertising). Your decision is stored in your browser's local storage so we don't ask again on subsequent visits. You can change it on any page. By default, advertising and analytics storage are denied until you explicitly accept. That covers Google's Consent Mode signals for ad storage, ad user data, ad personalisation and analytics storage.</p>
           <p>We use Google Analytics 4 and Google Ads conversion tracking (Google tag AW-18012658601) with Consent Mode v2. If you reject, we do not set analytics or advertising cookies. Google may still receive anonymised, cookieless pings for statistical modelling, which cannot be linked back to you. A demo booking on the booking page, or a contact form that is successfully sent, is measured as a demo-request conversion. Opening the page, or clicking the button before the form succeeds, is not.</p>
-          <p>If you arrive from a Google advert, the address can include a click identifier (gclid) and campaign parameters (UTM parameters). We add those parameters to links you follow on this site, and to the "Get started for free" link that opens the application at app.homecareos.co.uk, so a later sign-up can be matched to the advert. We do not store that identifier in a cookie. The sign-up conversion itself is recorded in the application when registration is completed, not on this website.</p>
+          <p>If you arrive from a Google advert, the address can include a click identifier (gclid) and campaign parameters (UTM parameters). We add those parameters to links you follow on this site, and to the "Get started" link that opens the application at app.homecareos.co.uk, so a later sign-up can be matched to the advert. We do not store that identifier in a cookie. The sign-up conversion itself is recorded in the application when registration is completed, not on this website.</p>
           <p>We also use <strong>Microsoft Clarity</strong> and <strong>Metricool</strong> to understand how our website is used, for example, aggregated usage statistics and heatmaps. These are loaded <strong>only after you accept analytics cookies</strong>; if you reject, they do not run and collect nothing. You can read Microsoft's privacy statement at <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">privacy.microsoft.com</a>.</p>
 
           <h3>8.3 Changing Your Mind</h3>
@@ -348,7 +350,7 @@
             <li>which chapters of the page you reach</li>
             <li>whether you turn the sound on or off</li>
             <li>the number of carers you try in the price calculator</li>
-            <li>clicks on the book-a-call, free trial and Speak to the creator buttons</li>
+            <li>clicks on the book-a-call, get started and Speak to the creator buttons</li>
           </ul>
           <p>We do not send your name, email address or any other personal data from that page to Google Analytics.</p>
 
@@ -456,7 +458,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -491,7 +493,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

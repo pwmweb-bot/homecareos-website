@@ -37,11 +37,13 @@
 
   <!-- Google Fonts -->
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
 
   <!-- AOS CSS -->
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript><!-- hcos:gtag -->
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript><!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
   window.dataLayer = window.dataLayer || [];
@@ -119,7 +121,7 @@
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
@@ -128,7 +130,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -186,7 +188,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -229,7 +231,7 @@
             <p>Filing cabinets overflowing with paper care plans. Illegible handwriting on MAR charts. Hours wasted searching for the right file before an inspection. Sound familiar? HomecareOS replaces it all with structured, searchable, real-time digital records that carers actually want to use, and regulators love to see.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/app-care-plan.webp" alt="HomecareOS digital care plan showing communication needs, preferences and review dates for a service user" width="1400" height="840" loading="lazy">
+            <img src="images/photos/app-care-plan.webp" alt="HomecareOS digital care plan showing communication needs, preferences and review dates for a service user" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -238,7 +240,7 @@
     <section class="section" aria-label="Care recorded at the point of delivery">
       <div class="container">
         <figure data-reveal style="margin:0 auto;max-width:960px">
-          <img src="images/photos/home-care-nurse-visit.webp" alt="A HomecareOS carer checks an older man's health with a stethoscope during a home visit, recording the observation on the app as she goes" width="1100" height="734" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block">
+          <img src="images/photos/home-care-nurse-visit.webp" alt="A HomecareOS carer checks an older man's health with a stethoscope during a home visit, recording the observation on the app as she goes" width="1100" height="734" loading="lazy" style="width:100%;height:auto;border-radius:14px;display:block" decoding="async">
           <figcaption style="font-size:0.9rem;color:var(--gray-600);margin-top:14px;text-align:center;max-width:640px;margin-inline:auto">Observations captured at the point of care, on the app, not written up from memory hours later.</figcaption>
         </figure>
       </div>
@@ -447,7 +449,7 @@
             <p>The eMAR chart shows every scheduled medication round across the week at a glance. Given, refused, withheld and not available each carry their own outcome code, and a round that was due but never recorded is flagged in red on the chart, so managers can spot a pattern before it becomes a problem. Every entry is timestamped and attributed for a complete audit trail.</p>
           </div>
           <div class="feature-hero-visual has-screenshot">
-            <img src="images/photos/app-emar-chart.webp" alt="HomecareOS eMAR chart showing a week of medication administration records with given and refused codes" width="1400" height="840" loading="lazy">
+            <img src="images/photos/app-emar-chart.webp" alt="HomecareOS eMAR chart showing a week of medication administration records with given and refused codes" width="1400" height="840" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -671,11 +673,11 @@
 
 <section class="cta-section" aria-label="Call to action">
       <div class="container">
-        <h2 data-reveal>Start recording care digitally this week, free</h2>
-        <p data-reveal data-reveal-delay="100">Set your agency up in under fifteen minutes and have your carers recording on their phones the same week. Free for your first five carers, no card, and your records export whenever you want them.</p>
+        <h2 data-reveal>Start recording care digitally this week</h2>
+        <p data-reveal data-reveal-delay="100">Set your agency up in under fifteen minutes and have your carers recording on their phones the same week. from £49 per month + VAT, no card, and your records export whenever you want them.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started for free</a>
+          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started</a>
         </div>
       </div>
     </section>
@@ -727,7 +729,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -762,7 +764,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

@@ -16,8 +16,10 @@
   <meta name="description" content="Explore every feature of HomecareOS: scheduling, AI rota building, mobile carer app, digital care records, compliance, finance, reporting and more. Built for UK home care agencies.">
   <meta name="robots" content="noindex">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-  <link rel="stylesheet" href="styles.css?v=20261016cta"><noscript></noscript>  <style>
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261112g"><noscript></noscript>  <style>
     /* Feature Showcase, alternating layout */
     .feature-showcase {
       padding: 0;
@@ -261,7 +263,7 @@
 <script src="/js/ads.js?v=20261016" defer></script>
 <!-- /hcos:gtag -->
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
@@ -269,7 +271,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -327,7 +329,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -347,6 +349,30 @@
       <p data-reveal data-reveal-delay="100">One platform. Every tool. From scheduling and care plans to compliance, billing and beyond, built specifically for UK home care agencies.</p>
     </div>
   </header>
+    <section class="section feature-extra-section" aria-label="Product screenshots">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="label">In HomecareOS</span>
+          <h2>The new HomecareOS</h2>
+          <p>The screens your office team actually works in.</p>
+        </div>
+        <div class="feature-extra-shots">
+          <figure class="shot" data-reveal>
+            <img src="images/photos/dashboard.webp" alt="The new HomecareOS Today screen" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/app-rota-week-grid.webp" alt="The weekly rota in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/care-plan-overview.webp" alt="A care plan in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+          <figure class="shot" data-reveal>
+            <img src="images/photos/app-finance-overview.webp" alt="Money and finance in the new HomecareOS" width="1400" height="840" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
 
   <!-- Stats -->
   <section class="stats-bar" aria-label="Platform statistics">
@@ -1048,7 +1074,7 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
             </div>
             <h3 style="color: var(--white);">Transparent Pricing</h3>
-            <p style="color: var(--gray-400);">One predictable per-carer licence: free for your first 5 carers, then Pro £10 per carer per month, with your office team unmetered. No module fees and no "contact sales" to unlock essential functionality. There's a free tier for agencies with up to 5 carers.</p>
+            <p style="color: var(--gray-400);">One predictable per-carer licence: from £49 per month + VAT, with your office team unmetered. No module fees and no "contact sales" to unlock essential functionality. HomecareOS starts at £49 per month + VAT.</p>
           </div>
           <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
             <div class="card-icon accent">
@@ -1068,7 +1094,7 @@
         <p data-reveal data-reveal-delay="100">Book a personalised demo and we'll show you exactly how HomecareOS can transform your agency's operations.</p>
         <div class="cta-actions" data-reveal data-reveal-delay="200">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="/start.html" class="btn btn-ghost btn-lg">Get started for free</a>
+          <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
           <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
         </div>
       </div>
@@ -1082,7 +1108,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -1117,7 +1143,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

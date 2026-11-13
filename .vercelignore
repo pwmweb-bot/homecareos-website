@@ -1,0 +1,10 @@
+# Do not upload build tooling or source that 20i already blocks.
+*.py
+*.sh
+__pycache__/
+partials/
+scripts/
+content/
+guides/buyers-guide-source.html
+guides/person-centred-care-plan-template-source.html
+docs/vercel-production-cutover.md

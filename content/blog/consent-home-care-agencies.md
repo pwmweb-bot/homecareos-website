@@ -31,7 +31,7 @@ faqs:
   - q: Can a family member give consent on someone's behalf?
     a: Not simply because they are family. Regulation 11 refers to the consent of the relevant person, and CQC's guidance refers to a person acting lawfully on the service user's behalf. Where an adult lacks capacity for a decision, the Mental Capacity Act 2005 sets out how it is made, including the best interests test in section 4. Check whether anyone holds a lasting power of attorney or a court-appointed role that covers the decision.
 cta_title: Keep the plan and the visit together
-cta_text: Book a short demo, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, or get started from £49 per month + VAT.
 cta_secondary: Care planning features
 cta_secondary_href: /features-care-planning.html
 ---

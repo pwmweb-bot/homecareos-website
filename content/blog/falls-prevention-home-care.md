@@ -35,7 +35,7 @@ faqs:
   - q: Does preventing falls mean stopping the person walking about?
     a: No. NG249 encourages people to stay active, and CQC's managing risks guidance asks whether risk arrangements respect people's freedom, choice and control. The plan should reduce avoidable hazards without turning the person into a prisoner in their own chair.
 cta_title: See falls risks where carers will notice them
-cta_text: Book a short demo, call Phil on 01905 674704, or start free for up to 5 carers. No card needed.
+cta_text: Book a short demo, call Phil on 01905 674704, or get started from £49 per month + VAT.
 cta_secondary: Care planning
 cta_secondary_href: /features-care-planning.html
 ---

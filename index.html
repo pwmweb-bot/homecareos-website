@@ -12,14 +12,14 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#16323D">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>homecareOS: Rota, Care Records and Payroll for UK Home Care Agencies</title>
-  <meta name="description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Free for 5 carers, then £10 per carer.">
+  <title>HomecareOS: Rota, Care Records and Payroll for UK Agencies</title>
+  <meta name="description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Starts at £49 per month + VAT.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.homecareos.co.uk/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="homecareOS: Rota, Care Records and Payroll for UK Home Care Agencies">
-  <meta property="og:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Free for 5 carers, then £10 per carer.">
+  <meta property="og:title" content="HomecareOS: Rota, Care Records and Payroll for UK Agencies">
+  <meta property="og:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Starts at £49 per month + VAT.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.homecareos.co.uk/">
   <meta property="og:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
@@ -31,8 +31,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="homecareOS: Rota, Care Records and Payroll for UK Home Care Agencies">
-  <meta name="twitter:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Free for 5 carers, then £10 per carer.">
+  <meta name="twitter:title" content="HomecareOS: Rota, Care Records and Payroll for UK Agencies">
+  <meta name="twitter:description" content="Home care software for UK domiciliary agencies: rota, care plans, eMAR, ECM, invoicing and payroll. Starts at £49 per month + VAT.">
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/og-rota-cover.jpg">
   <meta name="twitter:image:alt" content="The HomecareOS rota on a tablet with the cover finder open, ranking the carers free for an unallocated visit">
 
@@ -115,19 +115,41 @@
     @media (prefers-reduced-motion:reduce){.video-lightbox,.video-lightbox-frame{transition:none}.video-lightbox-frame{transform:none}}
     .hero-phone-2{width:95px;bottom:60px;right:-30px;opacity:.8}
     @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:360px}.hero-phone-1{width:80px;bottom:-8px;right:0}.hero-phone-2{width:68px;bottom:40px;right:-16px}.nav-toggle{display:flex}.nav-links{display:none}}
+
+    /* First-paint look-heroes rules so the async stylesheets cannot shift the hero. */
+    @font-face{font-family:"Hanken Grotesk Fallback";src:local("Arial"),local("Liberation Sans"),local("Nimbus Sans");size-adjust:98.12%;ascent-override:100%;descent-override:30.3%;line-gap-override:0%}
+    @font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:400 700;font-display:optional;src:url("/fonts/hanken-grotesk-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    body.look-heroes{--bg:#f4f0ea;--ink:#292620;--ink-2:#625b51;--accent:#3e6b5c;--accent-hover:#315749;--line:#e7e1d8;--line-strong:#c9c0b3;--font-heading:"Hanken Grotesk","Hanken Grotesk Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;--font-body:"Hanken Grotesk","Hanken Grotesk Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink-2)}
+    body.look-heroes .nav{background:rgba(255,253,250,.96);border-bottom:1px solid var(--line);min-height:73px}
+    body.look-heroes .nav-inner{height:72px}
+    body.look-heroes .nav-logo{color:var(--ink);font-weight:700}
+    body.look-heroes .nav-logo span{color:var(--accent)}
+    body.look-heroes .hero,body.look-heroes header.hero{min-height:0;padding:56px 0 80px;background:var(--bg);color:var(--ink);display:block;overflow:visible}
+    body.look-heroes .hero::before,body.look-heroes .hero::after{display:none;content:none}
+    body.look-heroes .hero-title{color:var(--ink);font-size:clamp(48px,5.4vw,80px);letter-spacing:-.045em;line-height:1.05;font-weight:600;max-width:16ch;margin-bottom:0}
+    body.look-heroes .hero-subtitle{color:var(--ink-2);font-size:16px;line-height:1.7;max-width:460px;margin:24px 0 28px}
+    body.look-heroes .hero-note{color:var(--ink-2);font-size:13px;margin-top:18px;max-width:460px}
+    body.look-heroes .hero-actions{gap:10px}
+    body.look-heroes .btn-ghost{color:var(--ink);border-color:var(--line-strong);background:#fffdfa}
+    body.look-heroes .hero-devices{max-width:600px;padding-bottom:10px}
+    body.look-heroes .hero-desktop{width:85%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
+    body.look-heroes .hero-video,body.look-heroes #heroVideo{width:100%;aspect-ratio:1400/840;position:relative;line-height:0}
+    body.look-heroes .hero-video img,body.look-heroes .hero-desktop img{width:100%;height:100%;aspect-ratio:1400/840;object-fit:cover;display:block}
+    @media (max-width:768px){body.look-heroes .hero,body.look-heroes header.hero{min-height:0;padding:36px 0 88px}body.look-heroes .hero-grid{text-align:left}body.look-heroes .hero-title{font-size:clamp(42px,12vw,64px);min-height:calc(3 * 1.05 * clamp(42px,12vw,64px))}body.look-heroes .hero-subtitle,body.look-heroes .hero-title,body.look-heroes .hero-note{margin-left:0;margin-right:0}}
   </style>
 
   <!-- Preload LCP fonts (parallel with HTML parse) -->
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Async-load full stylesheets (non-blocking) -->
-  <link rel="preload" as="style" href="/fonts/dmsans.css?v=20260521" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" as="style" href="styles.css?v=20261016cta" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
-    <link rel="stylesheet" href="styles.css?v=20261016cta">
-  </noscript>
+  <!-- Render-blocking stylesheets: the previous async-onload pattern painted
+       the compact critical CSS first, then reflowed the full nav and hero once
+       styles.css arrived (desktop CLS ~0.5). Inner pages already load these
+       blocking and score CLS 0. -->
+  <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
+  <link rel="stylesheet" href="styles.css?v=20261016cta">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261112g">
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
@@ -207,26 +229,20 @@
       "offers": [
         {
           "@type": "Offer",
-          "name": "Free Plan",
+          "name": "HomecareOS",
           "availability": "https://schema.org/InStock",
-          "price": "0",
+          "price": "49",
           "priceCurrency": "GBP",
-          "description": "Free for your first 5 carers, the full core platform, no credit card required. Office team and service users unmetered.",
-          "category": "Free"
+          "description": "From £49 per month + VAT, the full core platform, starts at £49 per month + VAT. Office team and service users unmetered.",
+          "category": "Subscription"
         },
         {
           "@type": "Offer",
-          "name": "Pro",
+          "name": "Telephone support and training",
           "availability": "https://schema.org/InStock",
-          "price": "10",
+          "price": "39",
           "priceCurrency": "GBP",
-          "description": "£10 per carer per month, adding the AI Rota Builder, advanced analytics and white-label options.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "10",
-            "priceCurrency": "GBP",
-            "unitText": "per carer per month"
-          }
+          "description": "Optional telephone support and training add-on at £39 per month + VAT."
         }
       ],
       "description": "Home care management software for UK agencies. Scheduling, digital care records, compliance, finance, mobile app and AI-powered features.",
@@ -247,9 +263,9 @@
       "description": "The carer-side mobile app for UK domiciliary home care agencies running HomecareOS. Visit check-in/out, eMAR, body maps, observations, holiday requests and offline mode.",
       "offers": {
         "@type": "Offer",
-        "price": "0",
+        "price": "49",
         "priceCurrency": "GBP",
-        "description": "Free for every carer on every plan."
+        "description": "Included for every carer on every plan."
       },
       "publisher": {"@id": "https://www.homecareos.co.uk/#organization"},
       "isPartOf": {"@id": "https://www.homecareos.co.uk/#software"},
@@ -301,10 +317,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is HomecareOS really free?",
+      "name": "How much does HomecareOS cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. HomecareOS is free for your first 5 carers, the full core platform including scheduling, digital care records, compliance and the carer mobile app. Coordinators, managers and other office staff who don't deliver visits are unmetered, and there is no cap on service users. No credit card required, no time limit. Above 5 carers, simple per-carer pricing is £10 per carer per month."
+        "text": "HomecareOS starts at £49 per month + VAT, the full core platform including scheduling, digital care records, compliance and the carer mobile app. Coordinators, managers and other office staff who don't deliver visits are unmetered, and there is no cap on service users. Telephone support and training is an optional add-on at £39 per month + VAT."
       }
     },
     {
@@ -312,7 +328,7 @@
       "name": "Does HomecareOS support CQC compliance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. HomecareOS is built specifically for the UK across all four nations: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland). PIR auto-population, incident audit trails, training expiry tracking and inspection-ready dashboards are all included free."
+        "text": "Yes. HomecareOS is built specifically for the UK across all four nations: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland). PIR auto-population, incident audit trails, training expiry tracking and inspection-ready dashboards are all included."
       }
     },
     {
@@ -320,7 +336,7 @@
       "name": "Can I import data from Birdie, Access, CarePlanner or other care software?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, and migrating your live data is free. We move your current carers, service users, care plans and rota from Birdie, Access Care Planning, CarePlanner, Nourish, CareLineLive, Log my Care and other UK care software, and you switch within 7 days of sending us your exports. Historic records are the one thing we charge for, priced on how many people and how many years of history they cover."
+        "text": "Yes, and migrating your live data is included. We move your current carers, service users, care plans and rota from Birdie, Access Care Planning, CarePlanner, Nourish, CareLineLive, Log my Care and other UK care software, and you switch within 7 days of sending us your exports. Historic records are the one thing we charge for, priced on how many people and how many years of history they cover."
       }
     },
     {
@@ -328,7 +344,7 @@
       "name": "What's included in the carer mobile app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GPS-verified visit check-in/out, digital care notes, eMAR (electronic Medication Administration Record), body maps, observations, holiday requests and offline mode for poor signal areas. Available on iOS and Android, included free on every plan."
+        "text": "GPS-verified visit check-in/out, digital care notes, eMAR (electronic Medication Administration Record), body maps, observations, holiday requests and offline mode for poor signal areas. Available on iOS and Android, included on every plan."
       }
     },
     {
@@ -336,7 +352,7 @@
       "name": "How does HomecareOS pricing compare to Birdie or Access?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HomecareOS Pro is £10 per carer per month, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. The free tier (your first 5 carers) means small and starting agencies pay nothing."
+        "text": "HomecareOS starts at £49 per month + VAT, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. Telephone support and training is an optional £39 per month add-on + VAT."
       }
     },
     {
@@ -360,13 +376,13 @@
       "name": "Do you offer a family portal for service users' relatives?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The Family & Service User Portal is included free on every plan. Families get visit updates, carer profiles, care notes access and a direct communication channel with the agency. No more anxious phone calls about whether the carer turned up."
+        "text": "Yes. The Family & Service User Portal is included on every plan. Families get visit updates, carer profiles, care notes access and a direct communication channel with the agency. No more anxious phone calls about whether the carer turned up."
       }
     }
   ]
 }
 </script><noscript><noscript></noscript></noscript><!-- Preload LCP image (hero dashboard preview) -->
-<link rel="preload" as="image" href="images/photos/dashboard.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/photos/dashboard-800.webp" type="image/webp" imagesrcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" imagesizes="(max-width: 768px) 90vw, 510px" fetchpriority="high">
 <!-- hcos:gtag -->
 <script>
   // Consent Mode v2. Defaults stay denied until cookie-consent.js updates them.
@@ -438,7 +454,7 @@
     @media (max-width:1024px){.feature-hero.rota-cover-hero{grid-template-columns:1fr;gap:32px}}
   </style>
 </head>
-<body>
+<body class="look-heroes">
 
   <!-- Branded loader overlay -->
   <div id="hco-loader" role="status" aria-label="Loading HomecareOS">
@@ -467,7 +483,7 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/index.html" class="nav-logo" aria-label="HomecareOS home">
-        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+        <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="eager" decoding="async">
         Homecare<span>OS</span>
       </a>
       <div class="nav-links" id="nav-links" role="menubar">
@@ -525,7 +541,7 @@
           <a href="mailto:hello@homecareos.co.uk" class="nav-email" role="menuitem" aria-label="Email hello@homecareos.co.uk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homecareos.co.uk</span></a>
         </div>
         <a href="/booking.html" class="btn btn-primary btn-sm nav-cta" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a 15-minute demo</a>
-        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started for free</a>
+        <a href="/start.html" class="btn btn-outline btn-sm nav-cta-secondary" role="menuitem">Get started</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -546,21 +562,21 @@
         <div class="hero-grid">
           <div class="hero-content">
             <span class="hero-eyebrow">Built for UK domiciliary care &middot; CQC &middot; CIW &middot; Care Inspectorate &middot; RQIA</span>
-            <h1 class="hero-title">Home care software for UK domiciliary agencies</h1>
+            <h1 class="hero-title">Home care software<br>for UK domiciliary<br><span class="accent-text">agencies.</span></h1>
             <p class="hero-subtitle">Everything a UK home care agency runs on, recruit and onboard carers, build the rota, invoice your payers, run payroll, and stay compliant across CQC, CIW, Care Inspectorate and RQIA. <strong>Built for home care, not care homes.</strong></p>
             <div class="hero-actions">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started for free</a>
+          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-ghost">Get started</a>
           <a href="pricing.html" class="btn btn-ghost">See pricing</a>
         </div>
             <p class="hero-note">One platform for onboarding, scheduling, invoicing, payroll and compliance. Live in 15 minutes, no sales call.</p>
-            <p class="hero-note"><strong style="color:#fff">Switching from another system?</strong> <a href="/migration.html" style="color:#E8A14A;text-decoration:underline;text-underline-offset:3px">Switch in 7 days, with free migration of your live data.</a></p>
+            <p class="hero-note"><strong style="color:var(--ink)">Switching from another system?</strong> <a href="/migration.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">Switch in 7 days. We migrate your live data for you.</a></p>
           </div>
           <div class="hero-visual">
             <div class="hero-devices">
               <div class="hero-desktop">
                 <div class="hero-video" id="heroVideo">
-                  <img src="images/photos/dashboard.webp" alt="HomecareOS dashboard showing today's visits, completion rates, active carers and compliance status" width="1400" height="860" fetchpriority="high">
+                  <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="The HomecareOS Today screen, showing today's visits, late visits and what needs cover" width="1400" height="840" fetchpriority="high" loading="eager" decoding="async">
                   <button type="button" class="hero-video-play" id="heroVideoPlay" aria-label="Play the HomecareOS product overview">
                     <span class="hero-video-icon" aria-hidden="true">
                       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.4-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>
@@ -570,10 +586,10 @@
                 </div>
               </div>
               <div class="hero-phone hero-phone-1">
-                <img src="images/photos/observations-224.webp" srcset="images/photos/observations-224.webp 224w, images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 110px" alt="HomecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" loading="lazy">
+                <img src="images/photos/observations-224.webp" srcset="images/photos/observations-224.webp 224w, images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 110px" alt="HomecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" loading="eager" decoding="async">
               </div>
               <div class="hero-phone hero-phone-2">
-                <img src="images/photos/pay-224.webp" srcset="images/photos/pay-224.webp 224w, images/photos/pay-390.webp 390w, images/photos/pay.webp 780w" sizes="(max-width: 768px) 68px, 95px" alt="HomecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="lazy">
+                <img src="images/photos/pay-224.webp" srcset="images/photos/pay-224.webp 224w, images/photos/pay-390.webp 390w, images/photos/pay.webp 780w" sizes="(max-width: 768px) 68px, 95px" alt="HomecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="eager" decoding="async">
               </div>
             </div>
           </div>
@@ -600,8 +616,8 @@
             <span class="stat-label">Reports built in</span>
           </div>
           <div class="stat-item" data-reveal data-reveal-delay="300">
-            <strong class="stat-number">&pound;10</strong>
-            <span class="stat-label">Per carer, office unmetered</span>
+            <strong class="stat-number">&pound;49</strong>
+            <span class="stat-label">Starts at, per month + VAT</span>
           </div>
         </div>
       </div>
@@ -630,7 +646,7 @@
           <a tabindex="-1" href="features-stock-vehicles.html" class="feature-pill" data-tooltip="PPE inventory with reorder alerts, carer kit issue/return and vehicle MOT/service tracking.">PPE &amp; Vehicle Tracking</a>
           <a tabindex="-1" href="features-visa-sponsorship.html" class="feature-pill" data-tooltip="Sponsor-licence compliance for UK home care: CoS allocation, RTW workflow, visa expiry alerts, 10-day UKVI reporting.">Visa Sponsorship</a>
           <a tabindex="-1" href="features-recruitment.html" class="feature-pill" data-tooltip="Applications, references, background checks and employment gaps on one staff file, printed as a single document when an inspector asks.">Recruitment &amp; Staff Files</a>
-          <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, free before you register, live the day your registration lands.">CQC Registration</a>
+          <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, from £49 a month + VAT, live the day your registration lands.">CQC Registration</a>
           <a tabindex="-1" href="features-reporting.html" class="feature-pill" data-tooltip="Built-in reports across operations, care quality, people and money, each with a CSV export.">Reporting &amp; Analytics</a>
           <a tabindex="-1" href="features-route-planning.html" class="feature-pill" data-tooltip="Plan carer runs geographically with the Visit Flow Map, travel time between visits and GPS-verified check-in.">Route Planning</a>
           <!-- duplicate set for seamless loop -->
@@ -651,7 +667,7 @@
           <a tabindex="-1" href="features-stock-vehicles.html" class="feature-pill" data-tooltip="PPE inventory with reorder alerts, carer kit issue/return and vehicle MOT/service tracking.">PPE &amp; Vehicle Tracking</a>
           <a tabindex="-1" href="features-visa-sponsorship.html" class="feature-pill" data-tooltip="Sponsor-licence compliance for UK home care: CoS allocation, RTW workflow, visa expiry alerts, 10-day UKVI reporting.">Visa Sponsorship</a>
           <a tabindex="-1" href="features-recruitment.html" class="feature-pill" data-tooltip="Applications, references, background checks and employment gaps on one staff file, printed as a single document when an inspector asks.">Recruitment &amp; Staff Files</a>
-          <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, free before you register, live the day your registration lands.">CQC Registration</a>
+          <a tabindex="-1" href="features-cqc-registration.html" class="feature-pill" data-tooltip="Guided CQC registration checklist for new agencies, from £49 a month + VAT, live the day your registration lands.">CQC Registration</a>
           <a tabindex="-1" href="features-reporting.html" class="feature-pill" data-tooltip="Built-in reports across operations, care quality, people and money, each with a CSV export.">Reporting &amp; Analytics</a>
           <a tabindex="-1" href="features-route-planning.html" class="feature-pill" data-tooltip="Plan carer runs geographically with the Visit Flow Map, travel time between visits and GPS-verified check-in.">Route Planning</a>
         </div>
@@ -669,22 +685,22 @@
         <span class="label">Aligned with UK Care Industry Standards</span>
         <div class="partners-logos">
           <a href="https://www.homecareassociation.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Homecare Association">
-            <img src="images/partners/homecare-association.webp" alt="Homecare Association logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/homecare-association-144.webp" srcset="images/partners/homecare-association-144.webp 144w, images/partners/homecare-association-288.webp 288w" sizes="144px" alt="Homecare Association logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
           <a href="https://www.cqc.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Care Quality Commission">
-            <img src="images/partners/cqc.webp" alt="Care Quality Commission (CQC) logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/cqc-144.webp" srcset="images/partners/cqc-144.webp 144w, images/partners/cqc-288.webp 288w" sizes="144px" alt="Care Quality Commission (CQC) logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
           <a href="https://www.rqia.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="Regulation and Quality Improvement Authority">
-            <img src="images/partners/rqia.webp" alt="RQIA, Regulation and Quality Improvement Authority logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/rqia-144.webp" srcset="images/partners/rqia-144.webp 144w, images/partners/rqia-288.webp 288w" sizes="144px" alt="RQIA, Regulation and Quality Improvement Authority logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
           <a href="https://www.careinspectorate.com/" target="_blank" rel="noopener noreferrer" aria-label="Care Inspectorate Scotland">
-            <img src="images/partners/care-inspectorate.webp" alt="Care Inspectorate Scotland logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/care-inspectorate-144.webp" srcset="images/partners/care-inspectorate-144.webp 144w, images/partners/care-inspectorate-288.webp 288w" sizes="144px" alt="Care Inspectorate Scotland logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
           <a href="https://www.careinspectorate.wales/" target="_blank" rel="noopener noreferrer" aria-label="Care Inspectorate Wales">
-            <img src="images/partners/care-inspectorate-wales.webp" alt="Care Inspectorate Wales logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/care-inspectorate-wales-144.webp" srcset="images/partners/care-inspectorate-wales-144.webp 144w, images/partners/care-inspectorate-wales-288.webp 288w" sizes="144px" alt="Care Inspectorate Wales logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
           <a href="https://www.hiqa.ie/" target="_blank" rel="noopener noreferrer" aria-label="Health Information and Quality Authority">
-            <img src="images/partners/hiqa.webp" alt="HIQA, Health Information and Quality Authority logo" height="48" width="144" loading="lazy">
+            <img src="images/partners/hiqa-144.webp" srcset="images/partners/hiqa-144.webp 144w, images/partners/hiqa-288.webp 288w" sizes="144px" alt="HIQA, Health Information and Quality Authority logo" height="48" width="144" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -792,6 +808,177 @@
     <!-- ============================================
          COVER FINDER, tablet rota animation
          ============================================ -->
+
+    <!-- ============================================
+         CARE PLANNING
+         ============================================ -->
+    <section class="showcase" id="care-planning" aria-labelledby="care-planning-heading">
+      <div class="container">
+        <div class="showcase-layout">
+          <div class="showcase-copy" data-reveal>
+            <span class="section-label">Care planning</span>
+            <h2 id="care-planning-heading">Care plans built around the person, not a blank form.</h2>
+            <p class="lead">What someone can do themselves, what they need help with, their wishes and the risks that matter — written in one plan carers can actually use at the door. Assessments, reviews and changes are dated and attributed, so you can show how the plan is kept up to date.</p>
+            <ul class="showcase-points">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Person-centred sections</strong> — about me, daily living, health, communication and consent, in the person’s own words where you have them.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Assessments and reviews</strong> — see what is published, what is still to record, and when the next review is due.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Health, medicines and risk on the same record</strong> — allergies, conditions and medication support sit with the plan, not in a separate file.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Built for UK regulation</strong> — a plan can follow CQC, CIW, Care Inspectorate or RQIA frameworks, so the structure matches the nation you work in.</span></li>
+            </ul>
+            <div class="showcase-actions">
+              <a href="features-care-planning.html" class="btn btn-primary">See care planning</a>
+            </div>
+          </div>
+          <div class="showcase-visual" data-reveal data-reveal-delay="100">
+            <div class="shot-stack">
+              <figure class="shot">
+                <img src="images/photos/care-plan-about.webp" srcset="images/photos/care-plan-about-800.webp 800w, images/photos/care-plan-about.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="Albert Hughes’s HomecareOS care plan, About me section, with what he can do himself and what he needs support with" width="1400" height="840" loading="lazy" decoding="async">
+                <figcaption>About me — what Bert can do himself, and where he wants help.</figcaption>
+              </figure>
+              <div class="shot-pair">
+                <figure class="shot">
+                  <img src="images/photos/care-plan-overview.webp" srcset="images/photos/care-plan-overview-800.webp 800w, images/photos/care-plan-overview.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS care plan overview for Albert Hughes, showing published sections, consent, allergies, hours and the next review date" width="1400" height="840" loading="lazy" decoding="async">
+                  <figcaption>Overview — what is published, and when the next review is due.</figcaption>
+                </figure>
+                <figure class="shot">
+                  <img src="images/photos/care-plan-health.webp" alt="Health conditions section of Albert Hughes’s HomecareOS care plan, with allergies and medication support" width="1400" height="840" loading="lazy" decoding="async">
+                  <figcaption>Health — conditions, allergies and medication support, on the same record.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         RECRUITMENT PORTAL (optional extra)
+         ============================================ -->
+    <section class="showcase showcase-alt" id="recruitment" aria-labelledby="recruitment-heading">
+      <div class="container">
+        <div class="showcase-layout reverse">
+          <div class="showcase-copy" data-reveal>
+            <span class="section-label">Recruitment portal <span class="addon-pill">Optional extra</span></span>
+            <h2 id="recruitment-heading">From invite to hire, on one pipeline.</h2>
+            <p class="lead">Follow every applicant through application, documents, references, DBS, interview, offer and onboarding — and keep the staff file an inspector may ask for in one place. The recruitment portal is an <strong>optional extra</strong>, on top of HomecareOS.</p>
+            <ul class="showcase-points">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>A pipeline you can see at a glance</strong> — who is at each stage, what is complete, and what still needs to be done.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Documents and checks on the applicant’s file</strong> — proof of ID, right to work, references and DBS, tracked to a hire.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Onboarding into the carer record</strong> — when you hire, the work you have already done becomes the staff file.</span></li>
+            </ul>
+            <div class="showcase-actions">
+              <a href="https://heroes.homecareos.co.uk/recruitment" class="btn btn-primary">See the recruitment portal</a>
+              <a href="features-recruitment.html" class="showcase-link">How recruitment works <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="showcase-visual" data-reveal data-reveal-delay="100">
+            <div class="shot-stack">
+              <figure class="shot">
+                <img src="images/photos/recruitment-pipeline.webp" alt="HomecareOS recruitment pipeline showing applicants at application, documents, references, DBS, interview, offer and onboarding" width="1400" height="840" loading="lazy" decoding="async">
+                <figcaption>The pipeline — every applicant, from application through to onboarding.</figcaption>
+              </figure>
+              <figure class="shot">
+                <img src="images/photos/staff-compliance.webp" alt="HomecareOS staff compliance view, with training and DBS checks on the staff file" width="1400" height="840" loading="lazy" decoding="async">
+                <figcaption>The staff file — training and DBS, ready if an inspector asks.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FAMILY PORTAL
+         ============================================ -->
+    <section class="showcase" id="family-portal" aria-labelledby="family-heading">
+      <div class="container">
+        <div class="showcase-layout">
+          <div class="showcase-copy" data-reveal>
+            <span class="section-label">Family portal</span>
+            <h2 id="family-heading">Peace of mind for families, with access you control.</h2>
+            <p class="lead">Families can see that a visit happened, who attended, and the notes you choose to share. You decide who is invited, and what they can see — so relatives stay informed without a phone call at the end of every run.</p>
+            <ul class="showcase-points">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>What families can see</strong> — visits, the carer who attended, and care notes you have chosen to share.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Access you control</strong> — invite the right people, and set what is visible, including whether a family member signs a visit off.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Included with HomecareOS</strong> — the family portal is part of the platform, at no extra charge.</span></li>
+            </ul>
+            <div class="showcase-actions">
+              <a href="features-family-portal.html" class="btn btn-primary">See the family portal</a>
+            </div>
+          </div>
+          <div class="showcase-visual" data-reveal data-reveal-delay="100">
+            <div class="shot-stack">
+              <figure class="shot">
+                <img src="images/photos/family-portal-access.webp" alt="HomecareOS family portal access settings, where the office invites relatives and controls what they can see" width="1400" height="840" loading="lazy" decoding="async">
+                <figcaption>You invite the family, and you control what they can see.</figcaption>
+              </figure>
+              <figure class="shot">
+                <img src="images/photos/family-portal-controls.webp" alt="HomecareOS settings for the family portal, including visit sign-off by family and how records outside a visit are shown" width="1400" height="840" loading="lazy" decoding="async">
+                <figcaption>Visit sign-off and what appears on the family’s timeline, set by the office.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         OTHER MODULES
+         ============================================ -->
+    <section class="modules" id="modules" aria-labelledby="modules-heading">
+      <div class="container">
+        <div class="modules-head" data-reveal>
+          <span class="section-label">The rest of the platform</span>
+          <h2 id="modules-heading">Rota, medicines, the map, the carer app and quality — in the same place.</h2>
+          <p>The screens below are the new HomecareOS, with demo data. Each one is live in the product today.</p>
+        </div>
+        <div class="module-grid">
+          <a class="module-card" href="features-scheduling.html" data-reveal>
+            <img src="images/photos/rota.webp" srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS day rota for Friday 13 November, with visits on each carer’s row" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>Rota</h3>
+              <p>A day or week view of every visit, with cover found in a few taps when someone calls in sick.</p>
+            </div>
+          </a>
+          <a class="module-card" href="features-emar.html" data-reveal data-reveal-delay="80">
+            <img src="images/photos/app-emar-chart.webp" alt="HomecareOS eMAR chart for Gladys Thomas, showing planned and given doses" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>eMAR</h3>
+              <p>Electronic medication records on the same person as the care plan, with a chart carers update at the visit.</p>
+            </div>
+          </a>
+          <a class="module-card" href="features-scheduling.html" data-reveal data-reveal-delay="120">
+            <img src="images/photos/mapping.webp" alt="HomecareOS live visit map, with carer locations around Worcester" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>Live map</h3>
+              <p>See where carers are in the day, spot a late visit, and follow the run on a map of the area.</p>
+            </div>
+          </a>
+          <a class="module-card" href="features-mobile-app.html" data-reveal>
+            <img src="images/photos/visits.webp" alt="HomecareOS carer app, showing today’s visits on a phone" width="390" height="844" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>Carer app</h3>
+              <p>Check in and out with GPS, read the plan, record notes and medicines, even when there is no signal.</p>
+            </div>
+          </a>
+          <a class="module-card" href="features-compliance.html" data-reveal data-reveal-delay="80">
+            <img src="images/photos/compliance.webp" alt="HomecareOS Quality overview, with audits, incidents and safeguarding" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>Quality and audit</h3>
+              <p>Audits, incidents, complaints and safeguarding in one place, so you are not assembling a pack the night before.</p>
+            </div>
+          </a>
+          <a class="module-card" href="features-finance.html" data-reveal data-reveal-delay="120">
+            <img src="images/photos/app-finance-overview.webp" alt="HomecareOS Money overview, with invoices and care costs" width="1400" height="840" loading="lazy" decoding="async">
+            <div class="module-body">
+              <h3>Money</h3>
+              <p>Invoices, payroll exports and a clear view of care cost and margin, from the visits you already run.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="cover-finder" aria-labelledby="cover-heading">
       <div class="container">
         <div class="feature-hero rota-cover-hero" data-reveal>
@@ -805,11 +992,11 @@
           <div class="feature-hero-visual-wrap">
             <figure class="rota-video">
               <video data-inview-video muted loop playsinline preload="none" width="1600" height="1040"
-                     poster="images/photos/tablet-rota-poster.jpg"
+                     poster="images/photos/tablet-rota-poster.webp"
                      aria-label="The HomecareOS rota on a tablet, with illustrative data. An unallocated 08:30 visit is tapped and the cover finder opens. It ranks the carers free at that time by continuity, contract hours left and travel, shows an expired training warning, and lists the carers already booked or off sick separately. Assign is tapped, the visit drops into the best match's row and a message confirms it, with an undo.">
                 <source src="video/tablet-rota.webm" type="video/webm">
                 <source src="video/tablet-rota.mp4" type="video/mp4">
-                <img src="images/photos/tablet-rota-poster.jpg" width="1600" height="1040" loading="lazy" alt="The HomecareOS rota on a tablet, with one unallocated visit waiting for cover">
+                <img src="images/photos/tablet-rota-poster.jpg" srcset="images/photos/tablet-rota-poster-800.webp 800w, images/photos/tablet-rota-poster.webp 1600w" sizes="(max-width: 768px) 90vw, 640px" width="1600" height="1040" loading="lazy" alt="The HomecareOS rota on a tablet, with one unallocated visit waiting for cover" decoding="async">
               </video>
               <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
             </figure>
@@ -835,15 +1022,15 @@
           <div class="onboarding-inner container">
             <div class="onboarding-screen">
               <div class="onboarding-images">
-                <img src="images/photos/signup.webp" alt="HomecareOS sign-up screen" class="onboarding-img active" data-index="0" width="1400" height="840">
-                <img src="images/photos/analytics-charts-laptop.webp" alt="Importing and organising agency data" class="onboarding-img" loading="lazy" data-index="1" width="1400" height="840">
-                <img src="images/photos/carers.webp" alt="Creating carers and service users" class="onboarding-img" loading="lazy" data-index="2" width="1400" height="840">
-                <img src="images/photos/rota.webp" alt="Creating visits on the rota" class="onboarding-img" loading="lazy" data-index="3" width="1400" height="840">
-                <img src="images/photos/messaging.webp" alt="Inviting team members" class="onboarding-img" loading="lazy" data-index="4" width="1400" height="840">
-                <img src="images/photos/dashboard.webp" alt="Dashboard after going live" class="onboarding-img" loading="lazy" data-index="5" width="1400" height="840">
-                <img src="images/photos/visits.webp" alt="Carer mobile app with visits" class="onboarding-img" loading="lazy" data-index="6" width="1400" height="840">
-                <img src="images/photos/mapping.webp" alt="Real-time alerts and live map" class="onboarding-img" loading="lazy" data-index="7" width="1400" height="840">
-                <img src="images/photos/compliance.webp" alt="Invoices and compliance reports" class="onboarding-img" loading="lazy" data-index="8" width="1400" height="840">
+                <img src="images/photos/signup.webp" srcset="images/photos/signup-800.webp 800w, images/photos/signup.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="The HomecareOS Today screen, the office home you see after you create your agency" class="onboarding-img active" data-index="0" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/analytics-charts-laptop.webp" alt="Importing and organising agency data" class="onboarding-img" loading="lazy" data-index="1" width="1400" height="840" decoding="async">
+                <img src="images/photos/carers.webp" alt="Creating carers and service users" class="onboarding-img" loading="lazy" data-index="2" width="1400" height="840" decoding="async">
+                <img src="images/photos/rota.webp" srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="Creating visits on the rota" class="onboarding-img" loading="lazy" data-index="3" width="1400" height="840" decoding="async">
+                <img src="images/photos/messaging.webp" alt="Inviting team members" class="onboarding-img" loading="lazy" data-index="4" width="1400" height="840" decoding="async">
+                <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="Dashboard after going live" class="onboarding-img" loading="lazy" data-index="5" width="1400" height="840" decoding="async">
+                <img src="images/photos/visits.webp" alt="Carer mobile app with visits" class="onboarding-img" loading="lazy" data-index="6" width="1400" height="840" decoding="async">
+                <img src="images/photos/mapping.webp" alt="Real-time alerts and live map" class="onboarding-img" loading="lazy" data-index="7" width="1400" height="840" decoding="async">
+                <img src="images/photos/compliance.webp" alt="Invoices and compliance reports" class="onboarding-img" loading="lazy" data-index="8" width="1400" height="840" decoding="async">
               </div>
             </div>
             <div class="onboarding-info">
@@ -864,7 +1051,7 @@
               </div>
               <div class="onboarding-slide" data-index="1">
                 <h3>Import Your Data</h3>
-                <p>Switch in 7 days: we migrate your live data from your existing provider for free, even if they are slow to help, or not helpful at all. Send the CSV exports you can get of carers, clients, visits, care plans, training, DBS checks and registrations, and we'll load them for you. Past care notes and MAR history stay in your old system's export.</p>
+                <p>Switch in 7 days: we migrate your live data from your existing provider for you, even if they are slow to help, or not helpful at all. Send the CSV exports you can get of carers, clients, visits, care plans, training, DBS checks and registrations, and we'll load them for you. Past care notes and MAR history stay in your old system's export.</p>
               </div>
               <div class="onboarding-slide" data-index="2">
                 <h3>Create Carers &amp; Service Users</h3>
@@ -916,11 +1103,15 @@
           <div class="desktop-gallery-inner container">
             <div class="desktop-gallery-screen">
               <div class="desktop-gallery-images">
-                <img src="images/photos/dashboard.webp" alt="HomecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840">
-                <img src="images/photos/rota.webp" alt="HomecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840" loading="lazy">
-                <img src="images/photos/mapping.webp" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840" loading="lazy">
-                <img src="images/photos/carers.webp" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840" loading="lazy">
-                <img src="images/photos/compliance.webp" alt="The new HomecareOS Quality overview with audits, incidents and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840" loading="lazy">
+                <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="HomecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/rota.webp" srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/mapping.webp" alt="Visit Flow Map with live carer locations" class="desktop-gallery-img" data-index="2" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/carers.webp" alt="Carers list with staff details and DBS tracking" class="desktop-gallery-img" data-index="3" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/compliance.webp" alt="The new HomecareOS Quality overview with audits, incidents and safeguarding" class="desktop-gallery-img" data-index="4" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/care-plan-about.webp" srcset="images/photos/care-plan-about-800.webp 800w, images/photos/care-plan-about.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="Albert Hughes’s HomecareOS care plan, About me section" class="desktop-gallery-img" data-index="5" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/app-emar-chart.webp" alt="HomecareOS eMAR chart for Gladys Thomas" class="desktop-gallery-img" data-index="6" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/recruitment-pipeline.webp" alt="HomecareOS recruitment pipeline from application to onboarding" class="desktop-gallery-img" data-index="7" width="1400" height="840" loading="lazy" decoding="async">
+                <img src="images/photos/app-finance-overview.webp" alt="HomecareOS Money overview" class="desktop-gallery-img" data-index="8" width="1400" height="840" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="desktop-gallery-info">
@@ -930,6 +1121,10 @@
                 <button class="desktop-gallery-tab" data-index="2">Flow Map</button>
                 <button class="desktop-gallery-tab" data-index="3">Carers</button>
                 <button class="desktop-gallery-tab" data-index="4">Compliance</button>
+                <button class="desktop-gallery-tab" data-index="5">Care plan</button>
+                <button class="desktop-gallery-tab" data-index="6">eMAR</button>
+                <button class="desktop-gallery-tab" data-index="7">Recruitment</button>
+                <button class="desktop-gallery-tab" data-index="8">Money</button>
               </div>
               <div class="desktop-gallery-slide active" data-index="0">
                 <h3>Dashboard</h3>
@@ -950,6 +1145,22 @@
               <div class="desktop-gallery-slide" data-index="4">
                 <h3>CQC Compliance Hub</h3>
                 <p>Training records, compliance framework self-assessment, PIR export, CQC notifications, complaints, safeguarding, audits, incidents, and improvement plans, all in one place, always audit-ready.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="5">
+                <h3>Care plan</h3>
+                <p>A person-centred plan carers can read at the door: what someone can do themselves, what they need help with, and the reviews that keep it current.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="6">
+                <h3>eMAR</h3>
+                <p>The medication chart sits on the same record as the care plan, so what is prescribed is what carers record at the visit.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="7">
+                <h3>Recruitment</h3>
+                <p>The recruitment portal is an optional extra. Follow every applicant from invite to hire, with documents, checks and onboarding on one pipeline.</p>
+              </div>
+              <div class="desktop-gallery-slide" data-index="8">
+                <h3>Money</h3>
+                <p>Invoices and care costs from the visits you already run, so billing is not a separate Sunday-night job.</p>
               </div>
             </div>
           </div>
@@ -1015,7 +1226,11 @@
             </div>
           </div>
           <div class="feature-image feature-image-phone" data-reveal>
-            <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="HomecareOS mobile app showing today's visits schedule" width="390" height="844" loading="lazy">
+            <div class="phone-cluster">
+              <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="HomecareOS carer app, observations on a visit" width="390" height="844" loading="lazy" decoding="async">
+              <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="HomecareOS carer app, today’s visits schedule" width="390" height="844" loading="lazy" decoding="async">
+              <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 1x, images/photos/emar-phone.webp 2x" alt="HomecareOS carer app, medication record on a visit" width="390" height="844" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
       </div>
@@ -1105,7 +1320,7 @@
             <a href="about.html" class="btn btn-outline">Learn More About Us</a>
           </div>
           <div class="feature-image" data-reveal>
-            <img src="images/photos/carer-helping-elderly-man.webp" alt="Carer providing compassionate support to an elderly gentleman at home" width="700" height="500" loading="lazy">
+            <img src="images/photos/carer-helping-elderly-man.webp" alt="Carer providing compassionate support to an elderly gentleman at home" width="700" height="500" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -1147,10 +1362,10 @@
         </p>
         <div class="guide-download-banner" data-reveal style="margin-top:28px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px 28px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap">
           <div style="flex:1 1 340px;min-width:0">
-            <h3 style="margin:0 0 4px;font-size:1.1rem">Free download: The UK Home Care Software Buyer's Guide</h3>
+            <h3 style="margin:0 0 4px;font-size:1.1rem">The UK Home Care Software Buyer's Guide</h3>
             <p style="margin:0;color:var(--gray-600);font-size:0.92rem">A 10 page PDF workbook with a 12 point scorecard, pricing and total cost of ownership, four nation compliance and a vendor comparison worksheet. No sign up.</p>
           </div>
-          <a href="/home-care-software-buyers-guide.html" class="btn btn-primary">Get the free guide</a>
+          <a href="/home-care-software-buyers-guide.html" class="btn btn-primary">Download the buyer's guide</a>
         </div>
         <div style="text-align:center;margin-top:32px" data-reveal>
           <a href="/blog.html" class="btn btn-ghost">View all guides &amp; articles</a>
@@ -1175,11 +1390,11 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="hfaq-1">
-              Is HomecareOS really free?
+              How much does HomecareOS cost?
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-1" role="region">
-              <div class="faq-answer-inner">Yes. HomecareOS is free for your first 5 carers, the full core platform including scheduling, digital care records, compliance and the carer mobile app. Coordinators, managers and other office staff who don't deliver visits are unmetered, and there is no cap on service users. No credit card required, no time limit. Above 5 carers, simple per-carer pricing is £10 per carer per month.</div>
+              <div class="faq-answer-inner">HomecareOS starts at £49 per month + VAT, the full core platform including scheduling, digital care records, compliance and the carer mobile app. Coordinators, managers and other office staff who don't deliver visits are unmetered, and there is no cap on service users. Telephone support and training is an optional add-on at £39 per month + VAT.</div>
             </div>
           </div>
 
@@ -1189,7 +1404,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-2" role="region">
-              <div class="faq-answer-inner">Yes. HomecareOS is built specifically for the UK across all four nations: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland). PIR auto-population, incident audit trails, training expiry tracking and inspection-ready dashboards are all included free.</div>
+              <div class="faq-answer-inner">Yes. HomecareOS is built specifically for the UK across all four nations: CQC (England), CIW (Wales), Care Inspectorate (Scotland) and RQIA (Northern Ireland). PIR auto-population, incident audit trails, training expiry tracking and inspection-ready dashboards are all included.</div>
             </div>
           </div>
 
@@ -1199,7 +1414,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-3" role="region">
-              <div class="faq-answer-inner">Yes, and migrating your live data is free. We move your current carers, service users, care plans and rota from Birdie, Access Care Planning, CarePlanner, Nourish, CareLineLive, Log my Care and other UK care software, and you switch within 7 days of sending us your exports. Historic records are the one thing we charge for, priced on how many people and how many years of history they cover.</div>
+              <div class="faq-answer-inner">Yes, and migrating your live data is included. We move your current carers, service users, care plans and rota from Birdie, Access Care Planning, CarePlanner, Nourish, CareLineLive, Log my Care and other UK care software, and you switch within 7 days of sending us your exports. Historic records are the one thing we charge for, priced on how many people and how many years of history they cover.</div>
             </div>
           </div>
 
@@ -1209,7 +1424,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-4" role="region">
-              <div class="faq-answer-inner">GPS-verified visit check-in/out, digital care notes, eMAR (electronic Medication Administration Record), body maps, observations, holiday requests and offline mode for poor signal areas. Available on iOS and Android, included free on every plan.</div>
+              <div class="faq-answer-inner">GPS-verified visit check-in/out, digital care notes, eMAR (electronic Medication Administration Record), body maps, observations, holiday requests and offline mode for poor signal areas. Available on iOS and Android, included on every plan.</div>
             </div>
           </div>
 
@@ -1219,7 +1434,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-5" role="region">
-              <div class="faq-answer-inner">HomecareOS Pro is £10 per carer per month, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. The free tier (your first 5 carers) means small and starting agencies pay nothing.</div>
+              <div class="faq-answer-inner">HomecareOS starts at £49 per month + VAT, with the office team unmetered, typically 50-75% cheaper than enterprise alternatives like Birdie, Access Care Planning and Nourish, which charge £15-30 per user per month including coordinators. Telephone support and training is an optional £39 per month add-on + VAT.</div>
             </div>
           </div>
 
@@ -1249,7 +1464,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="hfaq-8" role="region">
-              <div class="faq-answer-inner">Yes. The Family & Service User Portal is included free on every plan. Families get visit updates, carer profiles, care notes access and a direct communication channel with the agency. No more anxious phone calls about whether the carer turned up.</div>
+              <div class="faq-answer-inner">Yes. The Family & Service User Portal is included on every plan. Families get visit updates, carer profiles, care notes access and a direct communication channel with the agency. No more anxious phone calls about whether the carer turned up.</div>
             </div>
           </div>
 
@@ -1261,12 +1476,12 @@
       <div class="container">
         <div class="cta-content" data-reveal>
           <h2 id="cta-heading">Ready to Transform Your Home Care Agency?</h2>
-          <p>One platform for onboarding, scheduling, invoicing, payroll and four-nation compliance. Start free with up to 5 carers.</p>
+          <p>One platform for onboarding, scheduling, invoicing, payroll and four-nation compliance. Starts at £49 per month + VAT.</p>
           <div class="cta-actions">
           <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
-          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-outline-light">Get started for free</a>
+          <a href="https://app.homecareos.co.uk/onboard" class="btn btn-lg btn-outline-light">Get started</a>
         </div>
-          <p style="margin:28px auto 0;font-size:0.95rem">Still weighing up your options? <a href="/blog/home-care-software-uk-guide.html" style="color:rgba(255,255,255,0.9);text-decoration:underline">Read our complete UK home care software guide</a>.</p>
+          <p style="margin:28px auto 0;font-size:0.95rem">Still weighing up your options? <a href="/blog/home-care-software-uk-guide.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">Read our complete UK home care software guide</a>.</p>
         </div>
       </div>
     </section>
@@ -1281,7 +1496,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/index.html" class="nav-logo" style="margin-bottom:16px" aria-label="HomecareOS home">
-            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;">
+            <img src="/images/brand/mark.svg" width="36" height="36" alt="" aria-hidden="true" style="display:block;" loading="lazy" decoding="async">
             Homecare<span>OS</span>
           </a>
           <p style="font-size:0.8rem;color:#ffffff;margin:4px 0 8px 0;letter-spacing:0.5px">part of PSYCHEMETA LTD</p>
@@ -1316,7 +1531,7 @@
           <li><a href="/personas.html">Who It's For</a></li>
             <li><a href="/portfolio.html">Worked Examples</a></li>
             <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started for free</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li><li><a href="/start.html">Get started</a></li>
           </ul>
         </div>
         <div>

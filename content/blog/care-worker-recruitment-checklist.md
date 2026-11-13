@@ -35,7 +35,7 @@ faqs:
   - q: Does conversion to a carer put them on the rota?
     a: No. The carer record is ready to be added to the rota. Adding them is a separate step.
 cta_title: Run the checklist in one portal
-cta_text: Agencies that sign up now get HomecareOS recruitment free for 3 months, then £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
+cta_text: Agencies that sign up now get HomecareOS recruitment £49 a month plus VAT. Or book a demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -119,7 +119,7 @@ In HomecareOS:
 - The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, conversion creates a carer record **ready to be added to the rota**. It is **not** added automatically.
 
-Agencies that sign up now get the recruitment portal **free for 3 months**, then **£49 a month plus VAT**. Open the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), see [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month plus VAT**. Open the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), see [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
