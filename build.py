@@ -19,6 +19,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CSS_VERSION = "20261016cta"
+HEROES_CSS_VERSION = "20261116nav"
 
 HEADER = io.open(os.path.join(ROOT, "partials/header.html"), encoding="utf-8").read().rstrip("\n")
 FOOTER = io.open(os.path.join(ROOT, "partials/footer.html"), encoding="utf-8").read().rstrip("\n")
@@ -26,6 +27,7 @@ GTAG = io.open(os.path.join(ROOT, "partials/gtag.html"), encoding="utf-8").read(
 NAV_RE = re.compile(r'<nav class="nav"[^>]*>.*?</nav>', re.S)
 FOOTER_RE = re.compile(r'<footer class="footer"[^>]*>.*?</footer>', re.S)
 CSS_RE = re.compile(r'(styles\.css\?v=)[^"\']*')
+HEROES_CSS_RE = re.compile(r'(styles-heroes\.css\?v=)[^"\']*')
 GTAG_MARKER_RE = re.compile(r"[ \t]*<!-- hcos:gtag -->.*?<!-- /hcos:gtag -->\n?", re.S)
 COOKIE_SRC_RE = re.compile(
     r'<script\s+src="/cookie-consent\.js[^"]*"\s+defer></script>'
@@ -85,6 +87,7 @@ def build(files):
         else:
             skipped_nofoot.append(f)
         s = CSS_RE.sub(r"\g<1>" + CSS_VERSION, s)
+        s = HEROES_CSS_RE.sub(r"\g<1>" + HEROES_CSS_VERSION, s)
         s = inject_gtag(s)
         if s != orig:
             io.open(path, "w", encoding="utf-8").write(s)

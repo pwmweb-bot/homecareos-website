@@ -486,6 +486,16 @@ body.look-heroes .footer .footer-brand { color: #fff; }
 
 /* Mobile nav */
 body.look-heroes .nav-toggle { color: var(--ink); }
+
+/* backdrop-filter on the nav makes it a containing block for position:fixed
+   children, which clips the mobile menu to the 72px bar. styles.css already
+   drops the blur at this breakpoint; this overlay was putting it back. */
+@media (max-width: 1240px) {
+  body.look-heroes .nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
 @media (max-width: 900px) {
   body.look-heroes h1,
   body.look-heroes .hero-title,
