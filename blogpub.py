@@ -463,7 +463,7 @@ def render_post(meta, body_html, markdown):
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20260909insp">
-  <link rel="stylesheet" href="/styles-heroes.css?v=20261112e">
+  <link rel="stylesheet" href="/styles-heroes.css?v=20261116nav">
 {GTAG}
   <script type="application/ld+json">
   {_json(article_ld)}
