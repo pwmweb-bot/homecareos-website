@@ -1491,3 +1491,30 @@ body.look-heroes .feature-table .cell-note {
     grid-column: 1 / 2;
   }
 }
+
+/* Homepage word cloud, after the features overview */
+body.look-heroes .wordcloud-head {
+  text-align: left;
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+body.look-heroes .wordcloud-head h2 {
+  margin: 0 0 12px;
+}
+body.look-heroes .wordcloud-head p {
+  max-width: 540px;
+  margin: 0;
+}
+body.look-heroes .wordcloud-figure {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+body.look-heroes .wordcloud-figure img,
+body.look-heroes .wordcloud-figure picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
