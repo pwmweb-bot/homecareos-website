@@ -38,6 +38,7 @@
   <meta name="twitter:image" content="https://www.homecareos.co.uk/images/photos/carer-groceries-doorstep.webp">
 
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20261117nav2">
   <link rel="stylesheet" href="/styles-heroes.css?v=20261116nav"><noscript></noscript>
@@ -182,40 +183,39 @@
   </script>
 
   <style>
-    .page-header .label{color:var(--accent);display:block;margin-bottom:12px}
-    .page-header .post-meta{justify-content:center;color:rgba(255,255,255,0.78) !important}
-    .page-header .post-meta strong{color:#fff !important}
+    .nh-byline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:24px;font-size:.95rem}
+    .nh-byline strong{color:var(--ink);font-weight:600}
     .nh-hero-img{margin:0 0 40px}
-    .nh-hero-img img{width:100%;height:auto;border-radius:12px;display:block}
+    .nh-hero-img img{width:100%;height:auto;display:block}
     .nh-prose{max-width:760px;margin:0 auto}
-    .nh-prose h2{margin-top:48px;scroll-margin-top:96px}
-    .nh-prose h2:first-child{margin-top:0}
-    .nh-prose h3{margin-top:28px;scroll-margin-top:96px}
-    .nh-prose p,.nh-prose li{font-size:1.05rem;line-height:1.75;color:var(--gray-700)}
+    .nh-prose h2{font-size:clamp(28px,3vw,38px);margin:56px 0 14px;scroll-margin-top:96px}
+    .nh-prose h3{font-size:1.2rem;letter-spacing:-0.02em;margin-top:28px;scroll-margin-top:96px}
+    .nh-prose p,.nh-prose li{font-size:17px;line-height:1.75;color:var(--ink-2)}
+    .nh-prose strong{color:var(--ink);font-weight:600}
     .nh-prose ul{list-style:disc;padding-left:1.25rem;margin:0 0 18px}
     .nh-toc ol,.nh-sources ol{list-style:decimal}
     .nh-prose li{margin-bottom:8px}
     .nh-prose a{overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:3px}
-    .nh-toc{border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:22px 26px;background:var(--white);margin:0 0 40px}
-    .nh-toc h2{font-size:1rem;margin:0 0 10px !important;letter-spacing:.02em}
+    .nh-toc{border:1px solid var(--line);border-radius:14px;padding:22px 26px;background:var(--surface);margin:0 0 40px}
+    .nh-prose .nh-toc h2{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.065em;text-transform:uppercase;color:var(--ink-2);margin:0 0 10px}
     .nh-toc ol{margin:0;padding-left:1.25rem}
     .nh-toc li{font-size:.98rem;margin-bottom:6px}
-    .nh-part{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:56px}
-    .nh-part + h2{margin-top:8px !important}
-    .nh-note{border-left:4px solid var(--accent);background:rgba(232,161,74,0.08);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:16px 20px;margin:24px 0}
+    .nh-part{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.065em;text-transform:uppercase;color:var(--ink-2);margin-top:64px}
+    .nh-part::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .nh-prose .nh-part + h2{margin-top:10px}
+    .nh-note{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0}
     .nh-note p{margin:0;font-size:.98rem}
-    .nh-steps{list-style:none;padding:0 !important;margin:24px 0 0;counter-reset:nhstep}
+    .nh-steps{list-style:none;padding:0;margin:24px 0 0;counter-reset:nhstep}
     .nh-steps > li{position:relative;padding:0 0 0 52px;margin:0 0 26px;counter-increment:nhstep}
-    .nh-steps > li::before{content:counter(nhstep);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;background:#16323D;color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
-    .nh-steps h3{margin:0 0 6px !important;font-size:1.1rem}
+    .nh-steps > li::before{content:counter(nhstep);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:600;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+    .nh-prose .nh-steps h3{margin:0 0 6px;font-size:1.1rem}
     .nh-steps p{margin:0 0 8px}
-    .nh-feature{border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px 26px;background:var(--white);margin:0 0 20px}
-    .nh-feature h3{margin:0 0 8px !important;font-size:1.12rem}
-    .nh-feature p{margin:0 0 10px;font-size:1rem}
+    .nh-feature{border:1px solid var(--line);border-radius:14px;padding:24px 26px;background:var(--surface);margin:0 0 20px}
+    .nh-prose .nh-feature h3{margin:0 0 8px;font-size:1.15rem}
+    .nh-feature p{margin:0 0 10px}
     .nh-feature p:last-child{margin-bottom:0}
-    .nh-feature .nh-where{font-size:.88rem;color:var(--gray-500)}
-    .nh-shot{margin:20px 0 6px;border:2px dashed var(--gray-300,#d1d5db);border-radius:var(--radius-md);background:var(--gray-50,#f9fafb);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:28px 20px;text-align:center;color:var(--gray-500)}
-    .nh-shot strong{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-600)}
+    .nh-shot{margin:20px 0 6px;border:1px dashed var(--line-strong);border-radius:10px;background:var(--bg);min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:28px 20px;text-align:center;color:var(--ink-2)}
+    .nh-shot strong{font-size:10px;font-weight:600;letter-spacing:.065em;text-transform:uppercase;color:var(--ink-2)}
     .nh-shot span{font-size:.92rem;max-width:460px;line-height:1.5}
     .nh-sources ol{padding-left:1.25rem}
     .nh-sources li{font-size:.95rem}
@@ -229,7 +229,7 @@
   <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
 </head>
-<body>
+<body class="look-heroes">
 
   <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
 
@@ -322,8 +322,8 @@
         <span class="label" data-reveal>Guide for agencies</span>
         <h1 data-reveal>Neighbourhood home care commissioning: how agencies get ready</h1>
         <p data-reveal data-reveal-delay="100">On 12 November 2026 the government asked councils in England to start buying home care by neighbourhood, with one or two main providers in each small area. This guide sets out what was actually announced, what has not been decided yet, and the practical steps an agency can take now. The second half explains how homecareOS helps you win and run that kind of contract, using only what is in the product today.</p>
-        <div class="post-meta" data-reveal data-reveal-delay="150" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:24px;color:var(--gray-600);font-size:0.95rem">
-          <span><strong style="color:var(--text)">By Philip Martin</strong> &middot; Founder, homecareOS</span>
+        <div class="post-meta nh-byline" data-reveal data-reveal-delay="150">
+          <span><strong>By Philip Martin</strong> &middot; Founder, homecareOS</span>
           <span aria-hidden="true">&middot;</span>
           <time datetime="2026-11-17">Published 17 November 2026</time>
         </div>
