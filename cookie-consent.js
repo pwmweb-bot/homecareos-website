@@ -13,6 +13,11 @@
  *
  * Choice is stored in localStorage under key 'hcos_cookie_consent'.
  * Values: 'granted' | 'denied'
+ *
+ * After accept, Metricool and Microsoft Clarity load, and the Meta Pixel
+ * and LinkedIn Insight Tag load only when their IDs are set in
+ * /js/marketing-config.js. Withdrawing consent stops those tags and
+ * clears first-party advertising cookies this site set.
  */
 (function () {
   'use strict';
@@ -32,7 +37,103 @@
       'ad_user_data': decision,
       'ad_personalization': decision
     });
-    if (decision === CONSENT_GRANTED) { loadMetricool(); loadClarity(); }
+    if (decision === CONSENT_GRANTED) {
+      loadMetricool();
+      loadClarity();
+      loadMetaPixel();
+      loadLinkedInTag();
+    } else {
+      revokeMetaPixel();
+      revokeLinkedInTag();
+    }
+  }
+
+  function marketingConfig() {
+    var cfg = window.HCOS_MARKETING || {};
+    return {
+      metaPixelId: String(cfg.META_PIXEL_ID || '').trim(),
+      linkedinPartnerId: String(cfg.LINKEDIN_PARTNER_ID || '').trim()
+    };
+  }
+
+  function deleteFirstPartyCookie(name) {
+    var expires = 'expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    var host = window.location.hostname;
+    document.cookie = name + '=; ' + expires + '; path=/; SameSite=Lax';
+    document.cookie = name + '=; ' + expires + '; path=/; domain=' + host + '; SameSite=Lax';
+    if (host.indexOf('.') !== -1) {
+      document.cookie = name + '=; ' + expires + '; path=/; domain=.' + host + '; SameSite=Lax';
+    }
+  }
+
+  // Meta Pixel, only loaded after advertising consent, and only if
+  // META_PIXEL_ID is set. Idempotent per page. No noscript image is
+  // used, so the tag cannot fire when JavaScript or consent is off.
+  var metaLoaded = false;
+  function loadMetaPixel() {
+    var id = marketingConfig().metaPixelId;
+    if (!id || metaLoaded) return;
+    metaLoaded = true;
+    var f = window;
+    var b = document;
+    if (!f.fbq) {
+      var n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = '2.0';
+      n.queue = [];
+      var t = b.createElement('script');
+      t.async = true;
+      t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      var s = b.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    }
+    try { f.fbq('consent', 'grant'); } catch (e) { /* ignore */ }
+    f.fbq('init', id);
+    f.fbq('track', 'PageView');
+  }
+
+  function revokeMetaPixel() {
+    if (typeof window.fbq === 'function') {
+      try { window.fbq('consent', 'revoke'); } catch (e) { /* ignore */ }
+    }
+    deleteFirstPartyCookie('_fbp');
+    deleteFirstPartyCookie('_fbc');
+  }
+
+  // LinkedIn Insight Tag, only loaded after advertising consent, and
+  // only if LINKEDIN_PARTNER_ID is set. Idempotent per page.
+  var linkedinLoaded = false;
+  function loadLinkedInTag() {
+    var id = marketingConfig().linkedinPartnerId;
+    if (!id || linkedinLoaded) return;
+    linkedinLoaded = true;
+    window._linkedin_partner_id = id;
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    if (window._linkedin_data_partner_ids.indexOf(id) === -1) {
+      window._linkedin_data_partner_ids.push(id);
+    }
+    if (!window.lintrk) {
+      window.lintrk = function (a, b) { window.lintrk.q.push([a, b]); };
+      window.lintrk.q = [];
+    }
+    var s = document.getElementsByTagName('script')[0];
+    var tag = document.createElement('script');
+    tag.type = 'text/javascript';
+    tag.async = true;
+    tag.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+    s.parentNode.insertBefore(tag, s);
+  }
+
+  function revokeLinkedInTag() {
+    deleteFirstPartyCookie('li_fat_id');
+    deleteFirstPartyCookie('li_sugr');
+    deleteFirstPartyCookie('AnalyticsSyncHistory');
+    deleteFirstPartyCookie('lms_ads');
+    deleteFirstPartyCookie('lms_analytics');
   }
 
   // Metricool tracker, only loaded after analytics consent is granted.
@@ -117,7 +218,7 @@
     banner.innerHTML =
       '<div class="hcos-cookie-banner-inner">' +
         '<div class="hcos-cookie-text">' +
-          'We use cookies to understand how the site is used and to measure whether a Google Ads click led to a demo booking or a contact message. ' +
+          'We use cookies to understand how the site is used and to measure whether an advert click led to a demo booking, a contact message or a sign-up click. ' +
           'Analytics and advertising cookies stay off until you accept. Essential cookies stay on. ' +
           '<a href="/privacy.html#cookies">Privacy policy</a>.' +
         '</div>' +
