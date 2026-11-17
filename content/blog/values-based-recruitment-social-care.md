@@ -35,7 +35,7 @@ faqs:
   - q: How do I make values-based recruitment fair?
     a: Write down the behaviours you are looking for, use the same questions and scoring for every candidate, use more than one assessment method, and offer reasonable adjustments. Skills for Care suggests options such as sending interview questions in advance for neurodivergent candidates.
 cta_title: Keep every applicant's values and checks in one place
-cta_text: The HomecareOS recruitment portal is £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -141,7 +141,7 @@ Values-based recruitment needs a process you can run the same way for every appl
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding, so nobody who interviewed well is left waiting. When you hire, the applicant becomes a carer record that is ready to add to the rota.
 
-The HomecareOS recruitment portal is **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

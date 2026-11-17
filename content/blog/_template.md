@@ -27,7 +27,7 @@ faqs:
   - q: A question a registered manager actually asks?
     a: A short answer with no invented numbers. Link the source in the body, not only here.
 cta_title: See it on a rota like yours
-cta_text: Book a short demo, or get started from £49 per month + VAT.
+cta_text: Book a short demo, or get started from £49 per month.
 cta_secondary: See pricing
 cta_secondary_href: /pricing.html
 ---

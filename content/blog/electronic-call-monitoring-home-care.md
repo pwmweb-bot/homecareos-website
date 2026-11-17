@@ -31,7 +31,7 @@ faqs:
   - q: Does a manual clock-in count?
     a: It can, if the record says it was entered by the office and why. A system that labels an office entry as a verified doorstep arrival makes the record worse, not better.
 cta_title: See clock-in on a visit like yours
-cta_text: Book a short demo of the carer app, or get started from £49 per month + VAT.
+cta_text: Book a short demo of the carer app, or get started from £49 per month.
 cta_secondary: Carer app
 cta_secondary_href: /features-mobile-app.html
 ---

@@ -35,7 +35,7 @@ faqs:
   - q: Do we have to refer a carer to the DBS if they fail probation?
     a: Not just for failing probation. The legal duty to refer applies when you remove someone from regulated activity, or would have done had they not left, and the conduct or harm conditions in the DBS guidance are met. Poor timekeeping alone would not normally meet them. Check the DBS guidance for any case involving harm or risk of harm.
 cta_title: Give every new carer a clear, organised start
-cta_text: The HomecareOS recruitment portal is £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -162,7 +162,7 @@ A good probation starts with a well-organised recruitment process. The HomecareO
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding. When you hire, the applicant becomes a carer record that is ready to add to the rota, so the details you collected are there from day one of probation.
 
-The HomecareOS recruitment portal is **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

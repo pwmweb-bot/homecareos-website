@@ -35,7 +35,7 @@ faqs:
   - q: Does CQC look at staff engagement?
     a: Yes. Under the Well-led key question, CQC's Freedom to speak up and Shared direction and culture quality statements look for a culture where staff are listened to and feel able to raise concerns. Under Safe, the Safe and effective staffing statement expects staff to get supervision, appraisal and support to develop.
 cta_title: Start every carer's journey with a clear, organised process
-cta_text: The HomecareOS recruitment portal is £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -165,7 +165,7 @@ Engagement starts with how you bring people in. The HomecareOS recruitment porta
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding, so nobody is left wondering what happens next. When you hire, the applicant becomes a carer record that is ready to add to the rota.
 
-The HomecareOS recruitment portal is **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
