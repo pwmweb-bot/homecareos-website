@@ -13,6 +13,12 @@
  * click_to_call and click_to_email are separate events so matching Google Ads
  * conversions can be created later. They are not the demo-request conversion.
  *
+ * After advertising consent, and only when IDs are set in
+ * /js/marketing-config.js, a successful demo booking or contact submit
+ * and a Get started / sign-up click also send a Meta Lead and, when a
+ * LinkedIn conversion ID is set, a LinkedIn conversion. PageView is
+ * fired by cookie-consent.js when those tags first load.
+ *
  * gclid and UTM parameters already on the landing URL are copied onto
  * same-site links and onto "Get started" links to the app, so
  * auto-tagging survives the hop to app.homecareos.co.uk. Nothing is written
@@ -25,15 +31,61 @@
   var ATTR_KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'];
   var lastDemoAt = 0;
 
+  function hasMarketingConsent() {
+    try { return localStorage.getItem('hcos_cookie_consent') === 'granted'; } catch (e) { return false; }
+  }
+
+  function marketingConfig() {
+    var cfg = window.HCOS_MARKETING || {};
+    return {
+      metaPixelId: String(cfg.META_PIXEL_ID || '').trim(),
+      linkedinPartnerId: String(cfg.LINKEDIN_PARTNER_ID || '').trim(),
+      linkedinConversionId: String(cfg.LINKEDIN_CONVERSION_ID || '').trim()
+    };
+  }
+
+  var lastLeadAt = 0;
+  function trackLead(source) {
+    if (!hasMarketingConsent()) return;
+    var now = Date.now();
+    if (now - lastLeadAt < 3000) return;
+    lastLeadAt = now;
+    var cfg = marketingConfig();
+    if (cfg.metaPixelId && typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead', { content_name: source || 'lead' });
+    }
+    if (cfg.linkedinPartnerId && cfg.linkedinConversionId && typeof window.lintrk === 'function') {
+      window.lintrk('track', { conversion_id: cfg.linkedinConversionId });
+    }
+  }
+  window.hcosTrackLead = trackLead;
+
   function trackDemoRequest() {
     var now = Date.now();
     if (now - lastDemoAt < 3000) return;
     lastDemoAt = now;
     if (typeof window.__loadGTM === 'function') window.__loadGTM();
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', 'conversion', { 'send_to': DEMO_SEND_TO });
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', { 'send_to': DEMO_SEND_TO });
+    }
+    trackLead('demo_request');
   }
   window.hcosTrackDemoRequest = trackDemoRequest;
+
+  function isSignupUrl(url) {
+    if (url.hostname !== 'app.homecareos.co.uk') return false;
+    var path = (url.pathname || '/').replace(/\/+$/, '') || '/';
+    return path === '/onboard' || path === '/onboard.html';
+  }
+
+  function isSignupClick(anchor, url) {
+    if (isSignupUrl(url)) return true;
+    if (url.hostname !== 'app.homecareos.co.uk') return false;
+    var path = (url.pathname || '/').replace(/\/+$/, '') || '/';
+    if (path !== '/') return false;
+    var text = linkText(anchor);
+    return text === 'get started' || text.indexOf('get started') === 0;
+  }
 
   function pagePath() {
     return (window.location.pathname || '/').replace(/\/+$/, '') || '/';
@@ -116,6 +168,12 @@
     var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
     if (!anchor) return;
     var href = anchor.getAttribute('href') || '';
+    var url;
+    try { url = new URL(anchor.href, window.location.href); } catch (err) { url = null; }
+    if (url && isSignupClick(anchor, url)) {
+      trackLead('signup_click');
+    }
+
     if (/^tel:/i.test(href)) {
       if (typeof window.__loadGTM === 'function') window.__loadGTM();
       if (typeof window.gtag === 'function') {
