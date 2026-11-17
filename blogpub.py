@@ -378,7 +378,7 @@ def render_post(meta, body_html, markdown):
             + "".join(cards) + "</div></section>"
         )
     cta_title = meta.get("cta_title") or "See it on a rota like yours"
-    cta_text = meta.get("cta_text") or "Book a short demo, or get started from £49 per month + VAT."
+    cta_text = meta.get("cta_text") or "Book a short demo, or get started from £49 per month."
     cta_href = meta.get("cta_secondary_href") or "/pricing.html"
     cta_label = meta.get("cta_secondary") or "See pricing"
     article_ld = {

@@ -31,7 +31,7 @@ faqs:
   - q: Should I only buy from the NHS assured solutions list?
     a: The Department of Health and Social Care says every solution on the list offers care planning, recording, reporting and audit trails, meets national standards, and can connect with GP records. Check the current list for the product you are buying. Membership can change, and the list is not a ranking of rota or payroll tools.
 cta_title: Compare the shortlist against your own rota
-cta_text: Bring a week of visits to a short demo, or get started from £49 per month + VAT.
+cta_text: Bring a week of visits to a short demo, or get started from £49 per month.
 cta_secondary: See HomecareOS pricing
 cta_secondary_href: /pricing.html
 ---
@@ -57,10 +57,10 @@ Ask for the quote in writing, excluding VAT and then including it, with minimums
 
 | Supplier | Public price, checked 13 October 2026 | What the bill follows |
 |---|---|---|
-| [HomecareOS](/pricing.html) | Starts at £49 per month + VAT. Telephone support and training is a £39 per month add-on + VAT. Annual billing saves 20%. | Office users are not counted, and there is no cap on service users. |
+| [HomecareOS](/pricing.html) | Starts at £49 per month. Telephone support and training is a £39 per month add-on. Annual billing saves 20%. | Office users are not counted, and there is no cap on service users. |
 | [Birdie](https://www.birdie.care/pricing) | From £200 a month, excluding VAT. | Scheduled care hours. Birdie says each plan has a monthly cost based on the hours you schedule, and that you need a quote for the final figure. |
-| [CareLineLive](https://carelinelive.com/pricing/) | £8.10, £19.70 or £45.00 per carer a month, excluding VAT, depending on the plan. Minimum £120 a month plus VAT. | Carers using the carer app. Admin users are not charged. Onboarding is up to £300 plus VAT. On-site training is £600 plus VAT a day. |
-| [Careberry](https://www.careberry.com/pricing-care-management-software) | Starter from £110 a month plus VAT. | Small-team starter price. The growth plan is per client, with no public unit price. Enterprise is a custom quote. No setup fee. Three months' notice to cancel. |
+| [CareLineLive](https://carelinelive.com/pricing/) | £8.10, £19.70 or £45.00 per carer a month, excluding VAT, depending on the plan. Minimum £120 a month. | Carers using the carer app. Admin users are not charged. Onboarding is up to £300 plus VAT. On-site training is £600 plus VAT a day. |
+| [Careberry](https://www.careberry.com/pricing-care-management-software) | Starter from £110 a month. | Small-team starter price. The growth plan is per client, with no public unit price. Enterprise is a custom quote. No setup fee. Three months' notice to cancel. |
 | [Log my Care](https://www.logmycare.co.uk/pricing) | No pound figure on the pricing page. Starter is described for providers with fewer than 10 service users. | Their [help centre](https://support.logmycare.co.uk/en/articles/1584269-how-much-does-it-cost) says the starter plan is free for a UK care home with up to 10 service users, and that paid plans are per active service user. Confirm the domiciliary price. Rostering and eMAR are listed as Pro add-ons. |
 | [Nourish, including CarePlanner](https://nourishcare.com/careplanner/) | No public list price on the CarePlanner page. | CarePlanner has been part of Nourish since October 2023. Ask Nourish for one written quote for the products you would actually use. |
 | [Access Care Planning](/compare-access.html) | Not cited here. | We did not find a supplier list price we were prepared to treat as current. Ask Access for a quote, and read our notes on the comparison page. |
@@ -96,13 +96,13 @@ Skills for Care's [summary of domiciliary care services for 2025/26](https://www
 
 ## Where HomecareOS sits
 
-The [pricing page](/pricing.html) is the source for our figures: starts at £49 per month + VAT. Telephone support and training is a £39 per month add-on + VAT. Office users are not counted. There is no cap on service users. Annual billing saves 20%.
+The [pricing page](/pricing.html) is the source for our figures: starts at £49 per month. Telephone support and training is a £39 per month add-on. Office users are not counted. There is no cap on service users. Annual billing saves 20%.
 
 The [features](/features.html) cover the rota, digital care plans, eMAR, the carer app, invoicing and payroll in one system, including for CQC, CIW, the Care Inspectorate and RQIA. Side-by-side notes on individual suppliers are on the [comparison hub](/compare.html).
 
 ## Sources
 
-- [HomecareOS pricing](/pricing.html), for the starting price of £49 per month + VAT, the £39 support-and-training add-on, office users and the annual saving.
+- [HomecareOS pricing](/pricing.html), for the starting price of £49 per month, the £39 support-and-training add-on, office users and the annual saving.
 - [Birdie pricing](https://www.birdie.care/pricing), for the £200 starting price, hourly billing and SmartPlans rates.
 - [CareLineLive pricing](https://carelinelive.com/pricing/), for the per-carer rates, the £120 minimum, onboarding and training.
 - [Careberry pricing](https://www.careberry.com/pricing-care-management-software), for the £110 starter price and the other two plans.

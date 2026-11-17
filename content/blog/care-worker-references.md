@@ -35,7 +35,7 @@ faqs:
   - q: Are character references enough for care work?
     a: A character reference can help for someone with little or no work history, but it is not evidence of conduct in previous care employment. Where the applicant has worked in care before, Schedule 3 points you to that employment. Use character references alongside, not instead of, the checks the regulations ask for.
 cta_title: Keep every reference in one tidy place
-cta_text: The HomecareOS recruitment portal is £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -158,7 +158,7 @@ Chasing references by email and keeping the replies in a shared inbox is where m
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding, so you can see at a glance who is still waiting on references. When you hire, the applicant becomes a carer record that is ready to add to the rota, with the details you collected already in place.
 
-The HomecareOS recruitment portal is **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

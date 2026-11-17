@@ -10,9 +10,9 @@
 
 ## Pricing model
 
-HomecareOS starts at £49 per month + VAT. Pricing is per active carer per month. An active carer is someone rostered for at least one visit in the billing month. Office staff, meaning coordinators, managers and owners, are never counted or charged, which differs from the per-user pricing most competitors use. Service users are unmetered.
+HomecareOS starts at £49 per month. Pricing is per active carer per month. An active carer is someone rostered for at least one visit in the billing month. Office staff, meaning coordinators, managers and owners, are never counted or charged, which differs from the per-user pricing most competitors use. Service users are unmetered.
 
-Telephone support and training is an optional add-on at £39 per month + VAT. The recruitment portal is a paid optional extra. The VoIP phone system is included in Pro; call minutes and text messages are bought in bundles. Annual billing saves 20%.
+Telephone support and training is an optional add-on at £39 per month. The recruitment portal is a paid optional extra. The VoIP phone system is included in Pro; call minutes and text messages are bought in bundles. Annual billing saves 20%.
 
 Full detail: https://www.homecareos.co.uk/pricing.html
 

@@ -29,13 +29,13 @@ faqs:
   - q: Do I need a care-specific applicant tracking system?
     a: Not always, but a care-specific tool usually understands checks that general hiring software does not, such as employment history gaps, enhanced DBS, references from previous care work and right to work evidence. CQC Regulation 19 expects you to hold that information for every person you employ.
   - q: How much does care recruitment software cost?
-    a: It varies widely. Some suppliers publish prices, for example CVMinder ATS from £79 plus VAT a month on its care page, CarerHR from £299 a month, and the HomecareOS recruitment portal at £49 a month plus VAT. Many larger systems quote on request. Check each supplier's current pricing page before you decide.
+    a: It varies widely. Some suppliers publish prices, for example CVMinder ATS from £79 plus VAT a month on its care page, CarerHR from £299 a month, and the HomecareOS recruitment portal at £49 a month. Many larger systems quote on request. Check each supplier's current pricing page before you decide.
   - q: Can recruitment software do right to work and DBS checks for me?
     a: Some tools connect to certified identity service providers or the DBS, and others help you collect and record the evidence. Either way, the employer stays responsible for the check. GOV.UK sets out how right to work checks must be done, including the online check using a share code.
   - q: Should recruitment software connect to my rota system?
     a: For a home care agency it helps a lot. If your recruitment tool and your care management system are separate, someone usually has to re-type each new carer's details and documents. Tools that hand a hired applicant straight into a staff or carer record save that step.
 cta_title: Run safer recruitment in the same system as your rota
-cta_text: The HomecareOS recruitment portal is £49 a month plus VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -78,7 +78,7 @@ Listed by type, not ranked. Each summary is based on the supplier's public pages
 
 ### HomecareOS recruitment portal
 
-**Type:** recruitment inside a home care management system. **Published price:** £49 a month plus VAT.
+**Type:** recruitment inside a home care management system. **Published price:** £49 a month.
 
 HomecareOS is our own care management system for UK home care agencies, so treat this entry with that in mind. Here is what the recruitment portal does today:
 
@@ -164,4 +164,4 @@ Whatever you choose, it will not fix slow decisions on its own. Applicants drop 
 
 HomecareOS is a good fit if you are a home care agency that wants recruitment, staff records and the rota in one place, at a published price. Applicants complete one online portal with their documents, right to work, two references, DBS details and health questionnaire. You see every applicant across seven stages, and a hire becomes a carer record ready to add to the rota.
 
-The HomecareOS recruitment portal is **£49 a month plus VAT**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
