@@ -490,6 +490,22 @@ p {
   transition: all var(--transition-fast);
 }
 
+/* The logo never shrinks or wraps, so nothing in the bar can slide under it. */
+.nav-logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Narrow desktops (1241px to 1439px): the full bar (menus, phone and email,
+   two buttons) is wider than the space beside the logo, so the phone/email
+   block is hidden here. Both stay in the footer and the Contact page, and the
+   block returns from 1440px. Below 1241px the bar is the mobile menu. */
+@media (min-width: 1241px) and (max-width: 1439px) {
+  .nav-links .nav-contact {
+    display: none;
+  }
+}
+
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary);
