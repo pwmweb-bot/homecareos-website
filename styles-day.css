@@ -1,0 +1,396 @@
+/* ---- Phase 3: a day that holds ---- */
+body.look-heroes .day-holds {
+  padding: 88px 0 48px;
+  background: var(--bg);
+}
+
+body.look-heroes .day-holds-head {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+body.look-heroes .day-holds-head h2 {
+  margin: 0 0 12px;
+}
+
+body.look-heroes .day-holds-head .lead {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+body.look-heroes .day-holds-track {
+  position: relative;
+}
+
+body.look-heroes .day-holds-panel {
+  position: relative;
+}
+
+body.look-heroes .day-holds-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+body.look-heroes .day-rail {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+}
+
+body.look-heroes .day-rail::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 14px;
+  height: 2px;
+  background: var(--line);
+  z-index: 0;
+}
+
+body.look-heroes .day-rail-progress {
+  position: absolute;
+  left: 8%;
+  top: 14px;
+  height: 2px;
+  width: calc(var(--day-progress, 0) * 84%);
+  background: var(--accent);
+  z-index: 1;
+  transform-origin: left center;
+}
+
+body.look-heroes .day-rail-tick {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0;
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink-3);
+}
+
+body.look-heroes .day-rail-tick .day-rail-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--line-strong);
+  transition: background var(--motion-fade) var(--motion-ease), border-color var(--motion-fade) var(--motion-ease), transform var(--motion-fade) var(--motion-ease);
+}
+
+body.look-heroes .day-rail-tick.is-done .day-rail-dot,
+body.look-heroes .day-rail-tick.is-on .day-rail-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+body.look-heroes .day-rail-tick.is-on .day-rail-dot {
+  transform: scale(1.25);
+}
+
+body.look-heroes .day-rail-tick .day-rail-time {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+body.look-heroes .day-rail-tick.is-on {
+  color: var(--ink);
+}
+
+body.look-heroes .day-rail-tick:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+body.look-heroes .day-beats {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+body.look-heroes .day-beat {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+}
+
+body.look-heroes .day-beat-copy h3 {
+  margin: 0 0 8px;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+
+body.look-heroes .day-beat-kicker {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+body.look-heroes .day-beat-copy p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 42ch;
+}
+
+body.look-heroes .day-beat-visual {
+  position: relative;
+  margin: 0;
+}
+
+body.look-heroes .day-shot {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(41, 38, 32, 0.07);
+  overflow: hidden;
+  margin: 0;
+}
+
+body.look-heroes .day-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 840;
+  object-fit: cover;
+  object-position: top;
+  background: var(--bg-deep);
+}
+
+body.look-heroes .day-shot figcaption {
+  font-size: 12px;
+  color: var(--ink-3);
+  padding: 10px 14px 12px;
+  margin: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+body.look-heroes .day-shot--phone {
+  width: min(260px, 70%);
+  margin: 0 auto;
+  border-radius: 22px;
+  border: 3px solid #1a1a1a;
+}
+
+body.look-heroes .day-shot--phone img {
+  aspect-ratio: 390 / 844;
+  object-fit: cover;
+}
+
+body.look-heroes .day-beat-visual:has(.day-shot--support) {
+  padding: 20px 28px 12px 36px;
+}
+
+body.look-heroes .day-shot--support {
+  position: absolute;
+  width: 36%;
+  max-width: 200px;
+  margin: 0;
+  z-index: 2;
+  box-shadow: 0 16px 40px rgba(41, 38, 32, 0.16);
+}
+
+body.look-heroes .day-shot--support img {
+  aspect-ratio: 800 / 533;
+}
+
+body.look-heroes .day-shot--support-phone {
+  width: 22%;
+  max-width: 120px;
+  border-radius: 18px;
+  border: 3px solid #1a1a1a;
+}
+
+body.look-heroes .day-shot--support-phone img {
+  aspect-ratio: 390 / 844;
+}
+
+body.look-heroes .day-shot--tl {
+  top: -12px;
+  left: -8px;
+  transform: rotate(-5deg);
+}
+
+body.look-heroes .day-shot--tr {
+  top: 12px;
+  right: -6px;
+  left: auto;
+  transform: rotate(7deg);
+}
+
+body.look-heroes .day-shot--br {
+  right: -8px;
+  bottom: 36px;
+  left: auto;
+  transform: rotate(5deg);
+}
+
+/* Desktop pin (class is applied by JS only when motion is allowed) */
+@media (min-width: 769px) {
+  body.look-heroes .day-rail {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  body.look-heroes .day-rail-tick { max-width: none; flex: 1 1 0; }
+
+  body.look-heroes .day-rail::before {
+    left: calc(100% / 12);
+    right: calc(100% / 12);
+  }
+
+  body.look-heroes .day-rail-progress {
+    left: calc(100% / 12);
+    width: calc(var(--day-progress, 0) * 83.333%);
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-holds-panel {
+    width: 100%;
+    height: calc(100vh - 84px);
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 0 28px;
+    background: var(--bg);
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-holds-panel.is-fixed {
+    position: fixed;
+    top: 84px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-holds-panel.is-released {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-holds-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beats {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beat {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.9fr) minmax(340px, 1.2fr);
+    gap: 48px 64px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 16px, 0);
+    transition:
+      opacity var(--motion-fade) var(--motion-ease),
+      transform var(--motion-move) var(--motion-ease),
+      visibility 0s linear var(--motion-fade);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beat:not(.is-on) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beat.is-on {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    z-index: 1;
+    transition:
+      opacity var(--motion-fade) var(--motion-ease),
+      transform var(--motion-move) var(--motion-ease),
+      visibility 0s linear 0s;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beat-visual {
+    position: relative;
+    width: auto;
+    max-width: none;
+  }
+
+  body.look-heroes .day-holds-track.is-pinning .day-beat-copy h3 {
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+    max-width: 16ch;
+  }
+}
+
+@media (max-width: 768px) {
+  body.look-heroes .day-holds {
+    padding: 56px 0 32px;
+  }
+
+  body.look-heroes .day-holds-head { text-align: left; margin-bottom: 28px; }
+
+  body.look-heroes .day-rail {
+    display: none;
+  }
+
+  body.look-heroes .day-beats { gap: 48px; }
+
+  body.look-heroes .day-shot--support {
+    width: 40%;
+    max-width: 140px;
+  }
+
+  body.look-heroes .day-shot--tl { left: 0; top: -8px; }
+  body.look-heroes .day-shot--tr,
+  body.look-heroes .day-shot--br { right: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.look-heroes .day-rail-progress,
+  body.look-heroes .day-rail-tick .day-rail-dot,
+  body.look-heroes .day-beat {
+    transition: none !important;
+  }
+}
