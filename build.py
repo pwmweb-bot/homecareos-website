@@ -19,7 +19,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CSS_VERSION = "20261117tp"
-HEROES_CSS_VERSION = "20261121nophone"
+HEROES_CSS_VERSION = "20261121p2"
 
 HEADER = io.open(os.path.join(ROOT, "partials/header.html"), encoding="utf-8").read().rstrip("\n")
 FOOTER = io.open(os.path.join(ROOT, "partials/footer.html"), encoding="utf-8").read().rstrip("\n")

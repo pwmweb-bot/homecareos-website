@@ -154,7 +154,7 @@
        blocking and score CLS 0. -->
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="styles.css?v=20261117tp">
-  <link rel="stylesheet" href="styles-heroes.css?v=20261121nophone">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261121p2">
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
@@ -433,6 +433,7 @@
   <script src="/js/reveal.js?v=20260507" defer></script>
   <script src="/js/inview-video.js?v=20261121" defer></script>
   <script src="/js/count-up.js?v=20261121" defer></script>
+  <script src="/js/scroll-frame.js?v=20261121p2" defer></script>
   <!-- Branded page loader (first paint, no JS library needed) -->
   <style>
     #hco-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
@@ -758,6 +759,19 @@
             <p>Hours disappear into admin: re-keying the same details from one app to the next, and chasing updates that should have flowed through on their own.</p>
           </div>
         </div>
+        <div class="week-morph" data-scroll-frame>
+          <div class="week-morph-stage" aria-hidden="true">
+            <figure class="week-morph-center shot">
+              <img data-src="images/photos/rota-800.webp" data-srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="" width="1400" height="840" decoding="async">
+            </figure>
+            <span class="week-chip week-chip--1">Spreadsheet<em>unallocated visits</em></span>
+            <span class="week-chip week-chip--2">WhatsApp group<em>who is covering?</em></span>
+            <span class="week-chip week-chip--3">Missed visit<em>not on the rota</em></span>
+            <span class="week-chip week-chip--4">Call log<em>chasing updates</em></span>
+            <span class="week-chip week-chip--5">Email thread<em>typed in twice</em></span>
+          </div>
+          <p class="week-morph-caption">A messy week of scattered tools, brought into one rota. Demo data.</p>
+        </div>
       </div>
     </section>
 
@@ -848,22 +862,28 @@
               <a href="features-care-planning.html" class="btn btn-primary">See care planning</a>
             </div>
           </div>
-          <div class="showcase-visual" data-reveal data-reveal-delay="100">
-            <div class="shot-stack">
-              <figure class="shot">
-                <img src="images/photos/care-plan-about.webp" srcset="images/photos/care-plan-about-800.webp 800w, images/photos/care-plan-about.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="Albert Hughes’s HomecareOS care plan, About me section, with what he can do himself and what he needs support with" width="1400" height="840" loading="lazy" decoding="async">
-                <figcaption>About me — what Bert can do himself, and where he wants help.</figcaption>
+          <div class="showcase-visual">
+            <div class="frame-stage" data-scroll-frame>
+              <figure class="frame-center shot">
+                <div class="still-loop" data-still-loop data-still-interval="5200">
+                  <div class="still-loop-frames">
+                    <img class="is-on" src="images/photos/care-plan-about-800.webp" srcset="images/photos/care-plan-about-800.webp 800w, images/photos/care-plan-about.webp 1400w" sizes="(max-width: 768px) 90vw, 520px" alt="Albert Hughes’s HomecareOS care plan, About me section, with what he can do himself and what he needs support with" width="1400" height="840" loading="lazy" decoding="async">
+                    <img src="images/photos/care-plan-overview-800.webp" srcset="images/photos/care-plan-overview-800.webp 800w, images/photos/care-plan-overview.webp 1400w" sizes="(max-width: 768px) 90vw, 520px" alt="HomecareOS care plan overview for Albert Hughes, showing published sections, consent, allergies, hours and the next review date" width="1400" height="840" loading="lazy" decoding="async">
+                    <img src="images/photos/care-plan-health-800.webp" srcset="images/photos/care-plan-health-800.webp 800w, images/photos/care-plan-health.webp 1400w" sizes="(max-width: 768px) 90vw, 520px" alt="Health conditions section of Albert Hughes’s HomecareOS care plan, with allergies and medication support" width="1400" height="840" loading="lazy" decoding="async">
+                  </div>
+                  <button type="button" class="rota-video-toggle still-loop-toggle" hidden>Pause animation</button>
+                </div>
+                <figcaption>Care plan for Albert Hughes — About me, overview and health. Demo data.</figcaption>
               </figure>
-              <div class="shot-pair">
-                <figure class="shot">
-                  <img src="images/photos/care-plan-overview.webp" srcset="images/photos/care-plan-overview-800.webp 800w, images/photos/care-plan-overview.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS care plan overview for Albert Hughes, showing published sections, consent, allergies, hours and the next review date" width="1400" height="840" loading="lazy" decoding="async">
-                  <figcaption>Overview — what is published, and when the next review is due.</figcaption>
-                </figure>
-                <figure class="shot">
-                  <img src="images/photos/care-plan-health.webp" alt="Health conditions section of Albert Hughes’s HomecareOS care plan, with allergies and medication support" width="1400" height="840" loading="lazy" decoding="async">
-                  <figcaption>Health — conditions, allergies and medication support, on the same record.</figcaption>
-                </figure>
-              </div>
+              <figure class="frame-piece frame-piece--tl">
+                <img src="images/photos/care-plan-overview-800.webp" srcset="images/photos/care-plan-overview-800.webp 800w, images/photos/care-plan-overview.webp 1400w" sizes="(max-width: 768px) 40vw, 240px" alt="" width="1400" height="840" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-piece frame-piece--br">
+                <img src="images/photos/care-plan-health-800.webp" srcset="images/photos/care-plan-health-800.webp 800w, images/photos/care-plan-health.webp 1400w" sizes="(max-width: 768px) 40vw, 240px" alt="" width="1400" height="840" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-piece frame-piece--phone">
+                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
             </div>
           </div>
         </div>
@@ -933,15 +953,23 @@
               <a href="features-family-portal.html" class="btn btn-primary">See the family portal</a>
             </div>
           </div>
-          <div class="showcase-visual" data-reveal data-reveal-delay="100">
-            <div class="shot-stack">
-              <figure class="shot">
-                <img src="images/photos/family-portal-access.webp" alt="HomecareOS family portal access settings, where the office invites relatives and controls what they can see" width="1400" height="840" loading="lazy" decoding="async">
-                <figcaption>You invite the family, and you control what they can see.</figcaption>
+          <div class="showcase-visual">
+            <div class="frame-stage" data-scroll-frame>
+              <figure class="frame-center shot">
+                <div class="still-loop" data-still-loop data-still-interval="5000">
+                  <div class="still-loop-frames">
+                    <img class="is-on" src="images/photos/family-portal-access.webp" alt="HomecareOS family portal access settings, where the office invites relatives and controls what they can see" width="1400" height="840" loading="lazy" decoding="async">
+                    <img src="images/photos/family-portal-controls.webp" alt="HomecareOS settings for the family portal, including visit sign-off by family and how records outside a visit are shown" width="1400" height="840" loading="lazy" decoding="async">
+                  </div>
+                  <button type="button" class="rota-video-toggle still-loop-toggle" hidden>Pause animation</button>
+                </div>
+                <figcaption>You invite the family and set what they can see, including visit sign-off. Demo data.</figcaption>
               </figure>
-              <figure class="shot">
-                <img src="images/photos/family-portal-controls.webp" alt="HomecareOS settings for the family portal, including visit sign-off by family and how records outside a visit are shown" width="1400" height="840" loading="lazy" decoding="async">
-                <figcaption>Visit sign-off and what appears on the family’s timeline, set by the office.</figcaption>
+              <figure class="frame-piece frame-piece--photo">
+                <img src="images/photos/family-elderly-tablet.webp" alt="A family gathered around a tablet at the kitchen table" width="800" height="533" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-piece frame-piece--tr">
+                <img src="images/photos/messaging-390.webp" srcset="images/photos/messaging-390.webp 390w, images/photos/messaging.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="" width="390" height="844" loading="lazy" decoding="async">
               </figure>
             </div>
           </div>
@@ -1133,7 +1161,9 @@
       <div class="desktop-gallery-track">
         <div class="desktop-gallery-sticky">
           <div class="desktop-gallery-inner container">
+            <div class="gallery-frame" data-scroll-frame>
             <div class="desktop-gallery-screen">
+              <button type="button" class="rota-video-toggle gallery-loop-toggle" hidden>Pause animation</button>
               <div class="desktop-gallery-images">
                 <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="HomecareOS dashboard with today's visits, stats and compliance" class="desktop-gallery-img active" data-index="0" width="1400" height="840" loading="lazy" decoding="async">
                 <img src="images/photos/rota.webp" srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS rota grid with drag-and-drop scheduling" class="desktop-gallery-img" data-index="1" width="1400" height="840" loading="lazy" decoding="async">
@@ -1145,6 +1175,13 @@
                 <img src="images/photos/recruitment-pipeline.webp" alt="HomecareOS recruitment pipeline from application to onboarding" class="desktop-gallery-img" data-index="7" width="1400" height="840" loading="lazy" decoding="async">
                 <img src="images/photos/app-finance-overview.webp" alt="HomecareOS Money overview" class="desktop-gallery-img" data-index="8" width="1400" height="840" loading="lazy" decoding="async">
               </div>
+              </div>
+              <figure class="frame-piece frame-piece--phone frame-piece--gal-left">
+                <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 390w, images/photos/visits.webp 780w" sizes="110px" alt="" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-piece frame-piece--phone frame-piece--gal-right">
+                <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 390w, images/photos/emar-phone.webp 780w" sizes="110px" alt="" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
             </div>
             <div class="desktop-gallery-info">
               <div class="desktop-gallery-nav">
@@ -1257,11 +1294,17 @@
               </a>
             </div>
           </div>
-          <div class="feature-image feature-image-phone" data-reveal>
-            <div class="phone-cluster">
-              <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="HomecareOS carer app, observations on a visit" width="390" height="844" loading="lazy" decoding="async">
-              <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="HomecareOS carer app, today’s visits schedule" width="390" height="844" loading="lazy" decoding="async">
-              <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 1x, images/photos/emar-phone.webp 2x" alt="HomecareOS carer app, medication record on a visit" width="390" height="844" loading="lazy" decoding="async">
+          <div class="feature-image feature-image-phone">
+            <div class="phone-cluster frame-stage" data-scroll-frame>
+              <figure class="frame-piece frame-piece--phone frame-piece--phone-left">
+                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 1x, images/photos/observations.webp 2x" alt="HomecareOS carer app, observations on a visit" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-center-phone">
+                <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 1x, images/photos/visits.webp 2x" alt="HomecareOS carer app, today’s visits schedule" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
+              <figure class="frame-piece frame-piece--phone frame-piece--phone-right">
+                <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 1x, images/photos/emar-phone.webp 2x" alt="HomecareOS carer app, medication record on a visit" width="390" height="844" loading="lazy" decoding="async">
+              </figure>
             </div>
           </div>
         </div>
@@ -1800,33 +1843,6 @@
       dots.forEach(dot => {
         dot.addEventListener('click', function() {
           updateStep(parseInt(this.dataset.index));
-        });
-      });
-    })();
-  </script>
-
-  <!-- Desktop Gallery Click Controller -->
-  <script>
-    (function() {
-      const track = document.querySelector('.desktop-gallery-track');
-      if (!track) return;
-
-      const images = track.querySelectorAll('.desktop-gallery-img');
-      const slides = track.querySelectorAll('.desktop-gallery-slide');
-      const dots = track.querySelectorAll('.desktop-gallery-tab');
-      let currentIndex = 0;
-
-      function updateGallery(index) {
-        if (index === currentIndex) return;
-        currentIndex = index;
-        images.forEach((img, i) => img.classList.toggle('active', i === index));
-        slides.forEach((s, i) => s.classList.toggle('active', i === index));
-        dots.forEach((d, i) => d.classList.toggle('active', i === index));
-      }
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-          updateGallery(parseInt(this.dataset.index));
         });
       });
     })();

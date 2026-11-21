@@ -1511,3 +1511,511 @@ body.look-heroes .feature-table .cell-note {
     grid-column: 1 / 2;
   }
 }
+
+/* ---- Phase 2: scroll-driven image framing ---- */
+body.look-heroes [data-scroll-frame] {
+  --frame-progress: 1;
+}
+body.look-heroes .frame-stage,
+body.look-heroes .week-morph-stage,
+body.look-heroes .gallery-frame {
+  position: relative;
+  isolation: isolate;
+}
+
+body.look-heroes .frame-stage {
+  padding: 44px 28px 52px;
+}
+
+body.look-heroes .frame-center {
+  position: relative;
+  z-index: 2;
+  width: 84%;
+  margin: 0 auto;
+}
+
+body.look-heroes .frame-center .still-loop {
+  position: relative;
+}
+
+body.look-heroes .still-loop-frames {
+  position: relative;
+  line-height: 0;
+  background: var(--surface);
+}
+
+body.look-heroes .still-loop-frames img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body.look-heroes .still-loop-frames img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+body.look-heroes .still-loop-frames img.is-on,
+body.look-heroes .still-loop-frames img:first-child {
+  opacity: 1;
+}
+
+body.look-heroes .still-loop-frames img:first-child:not(.is-on) {
+  opacity: 0;
+}
+
+body.look-heroes .still-loop-frames img:first-child {
+  position: relative;
+}
+
+body.look-heroes .frame-piece {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 40px rgba(41, 38, 32, 0.14);
+  --piece-p: clamp(0, (var(--frame-progress, 1) - var(--stagger, 0)) / max(0.001, calc(1 - var(--stagger, 0))), 1);
+  --rest-rotate: 0deg;
+  --from-x: 0px;
+  --from-y: 0px;
+  --stagger: 0;
+  transform:
+    translate3d(
+      calc((1 - var(--piece-p)) * var(--from-x)),
+      calc((1 - var(--piece-p)) * var(--from-y)),
+      0
+    )
+    rotate(var(--rest-rotate))
+    scale(calc(0.94 + 0.06 * var(--piece-p)));
+  will-change: transform;
+}
+
+body.look-heroes .frame-piece img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body.look-heroes .frame-piece--tl {
+  top: 8px;
+  left: 0;
+  width: 42%;
+  --rest-rotate: -6deg;
+  --from-x: -80px;
+  --from-y: -40px;
+  --stagger: 0.05;
+  border-radius: 12px;
+}
+
+body.look-heroes .frame-piece--br {
+  right: 0;
+  bottom: 16px;
+  width: 40%;
+  --rest-rotate: 5.5deg;
+  --from-x: 84px;
+  --from-y: 44px;
+  --stagger: 0.14;
+  border-radius: 12px;
+}
+
+body.look-heroes .frame-piece--phone {
+  left: 6px;
+  bottom: 92px;
+  width: 22%;
+  max-width: 124px;
+  z-index: 4;
+  border-radius: 18px;
+  border: 3px solid #1a1a1a;
+  --rest-rotate: -8deg;
+  --from-x: -36px;
+  --from-y: 70px;
+  --stagger: 0.2;
+}
+
+body.look-heroes .frame-piece--photo {
+  left: -4px;
+  top: 18px;
+  width: 36%;
+  --rest-rotate: -5deg;
+  --from-x: -70px;
+  --from-y: -28px;
+  --stagger: 0.08;
+  border-radius: 16px;
+}
+
+body.look-heroes .frame-piece--tr {
+  top: 10px;
+  right: 0;
+  width: 24%;
+  max-width: 130px;
+  z-index: 4;
+  border-radius: 18px;
+  border: 3px solid #1a1a1a;
+  --rest-rotate: 7deg;
+  --from-x: 48px;
+  --from-y: -36px;
+  --stagger: 0.18;
+}
+
+body.look-heroes .frame-stage.is-armed .frame-center {
+  transform: translate3d(0, calc((1 - var(--frame-progress, 1)) * 16px), 0) scale(calc(0.975 + 0.025 * var(--frame-progress, 1)));
+  will-change: transform;
+}
+
+/* Mobile app phone cluster as a frame */
+body.look-heroes .phone-cluster.frame-stage {
+  padding: 28px 12px 20px;
+  gap: 0;
+  display: block;
+  min-height: 420px;
+}
+
+body.look-heroes .phone-cluster.frame-stage .frame-center-phone {
+  position: relative;
+  z-index: 2;
+  width: 42%;
+  max-width: 220px;
+  margin: 0 auto;
+  border-radius: 22px;
+  border: 3px solid #1a1a1a;
+  box-shadow: 0 16px 40px rgba(41, 38, 32, 0.18);
+  overflow: hidden;
+  background: #111;
+  line-height: 0;
+}
+
+body.look-heroes .phone-cluster.frame-stage .frame-center-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: none;
+  transform: none;
+  opacity: 1;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-left {
+  left: 4%;
+  top: 40px;
+  bottom: auto;
+  width: 32%;
+  max-width: 170px;
+  --rest-rotate: -10deg;
+  --from-x: -90px;
+  --from-y: 24px;
+  --stagger: 0.08;
+}
+
+body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-right {
+  right: 4%;
+  left: auto;
+  top: 40px;
+  bottom: auto;
+  width: 32%;
+  max-width: 170px;
+  --rest-rotate: 10deg;
+  --from-x: 90px;
+  --from-y: 24px;
+  --stagger: 0.16;
+}
+
+/* Gallery: supporting phones frame the screen, no extra pin */
+body.look-heroes .gallery-frame {
+  padding: 36px 72px 28px;
+}
+
+body.look-heroes .gallery-frame .desktop-gallery-screen {
+  position: relative;
+  z-index: 2;
+}
+
+body.look-heroes .gallery-frame .frame-piece--gal-left {
+  left: 8px;
+  bottom: 48px;
+  top: auto;
+  width: 18%;
+  max-width: 110px;
+  --rest-rotate: -9deg;
+  --from-x: -56px;
+  --from-y: 40px;
+  --stagger: 0.1;
+}
+
+body.look-heroes .gallery-frame .frame-piece--gal-right {
+  right: 8px;
+  top: 28px;
+  left: auto;
+  width: 18%;
+  max-width: 110px;
+  --rest-rotate: 8deg;
+  --from-x: 56px;
+  --from-y: -32px;
+  --stagger: 0.18;
+}
+
+body.look-heroes .gallery-loop-toggle {
+  z-index: 5;
+}
+
+/* Problem section: scattered-to-settled week morph */
+body.look-heroes .week-morph {
+  margin: 36px 0 8px;
+}
+
+body.look-heroes .week-morph-stage {
+  min-height: 420px;
+  padding: 36px 48px 48px;
+}
+
+body.look-heroes .week-morph-center {
+  position: relative;
+  z-index: 2;
+  width: 78%;
+  max-width: 720px;
+  margin: 0 auto;
+  transform: translate3d(0, calc((1 - var(--frame-progress, 1)) * 22px), 0) scale(calc(0.92 + 0.08 * var(--frame-progress, 1)));
+}
+
+body.look-heroes .week-chip {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(41, 38, 32, 0.12);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  --piece-p: clamp(0, (var(--frame-progress, 1) - var(--stagger, 0)) / max(0.001, calc(1 - var(--stagger, 0))), 1);
+  --rest-rotate: 0deg;
+  --from-x: 0px;
+  --from-y: 0px;
+  --stagger: 0;
+  transform:
+    translate3d(
+      calc((1 - var(--piece-p)) * var(--from-x)),
+      calc((1 - var(--piece-p)) * var(--from-y)),
+      0
+    )
+    rotate(calc(var(--rest-rotate) + (1 - var(--piece-p)) * var(--mess-rotate, 0deg)));
+  will-change: transform;
+}
+
+body.look-heroes .week-chip em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ink-3);
+  font-size: 11px;
+}
+
+body.look-heroes .week-chip--1 {
+  top: 16px;
+  left: 4%;
+  --rest-rotate: -7deg;
+  --mess-rotate: -18deg;
+  --from-x: -90px;
+  --from-y: -50px;
+  --stagger: 0.02;
+}
+body.look-heroes .week-chip--2 {
+  top: 28px;
+  right: 6%;
+  --rest-rotate: 6deg;
+  --mess-rotate: 16deg;
+  --from-x: 110px;
+  --from-y: -40px;
+  --stagger: 0.08;
+}
+body.look-heroes .week-chip--3 {
+  bottom: 36px;
+  left: 8%;
+  --rest-rotate: 5deg;
+  --mess-rotate: -14deg;
+  --from-x: -70px;
+  --from-y: 70px;
+  --stagger: 0.12;
+}
+body.look-heroes .week-chip--4 {
+  bottom: 28px;
+  right: 8%;
+  --rest-rotate: -5deg;
+  --mess-rotate: 20deg;
+  --from-x: 80px;
+  --from-y: 60px;
+  --stagger: 0.18;
+}
+body.look-heroes .week-chip--5 {
+  top: 46%;
+  left: 0;
+  --rest-rotate: -4deg;
+  --mess-rotate: 12deg;
+  --from-x: -100px;
+  --from-y: 20px;
+  --stagger: 0.22;
+}
+
+body.look-heroes .week-morph-center img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 840;
+  background: var(--surface);
+}
+
+body.look-heroes .frame-stage:has(.frame-piece--phone) .frame-center figcaption {
+  padding-left: 24%;
+}
+
+body.look-heroes .week-morph-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-3);
+  margin: 4px 0 28px;
+}
+
+
+/* Override generic .phone-cluster img sizing so framed phones keep their shape */
+body.look-heroes .phone-cluster.frame-stage {
+  min-height: 520px;
+}
+body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-left,
+body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-right {
+  width: 34%;
+  max-width: 200px;
+  height: auto;
+}
+body.look-heroes .phone-cluster.frame-stage .frame-piece img,
+body.look-heroes .phone-cluster.frame-stage .frame-center-phone img,
+body.look-heroes .feature-image-phone .frame-stage img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  transform: none;
+  opacity: 1;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Mobile: simpler slide-ins, no scrub, no pin */
+@media (max-width: 768px) {
+  body.look-heroes .frame-piece,
+  body.look-heroes .week-chip,
+  body.look-heroes .frame-stage.is-armed .frame-center,
+  body.look-heroes .week-morph-center {
+    will-change: auto;
+  }
+
+  body.look-heroes .frame-stage.is-armed .frame-piece,
+  body.look-heroes .week-morph.is-armed .week-chip {
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--stagger, 0) * 0.7s);
+  }
+
+  body.look-heroes .frame-stage.is-armed:not(.is-settled) .frame-piece {
+    transform: translate3d(var(--from-x), var(--from-y), 0) rotate(var(--rest-rotate)) scale(0.96);
+  }
+
+  body.look-heroes .week-morph.is-armed:not(.is-settled) .week-chip {
+    transform: translate3d(var(--from-x), var(--from-y), 0) rotate(calc(var(--rest-rotate) + var(--mess-rotate, 0deg)));
+  }
+
+  body.look-heroes .frame-stage.is-armed .frame-center,
+  body.look-heroes .week-morph.is-armed .week-morph-center {
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body.look-heroes .frame-stage.is-armed:not(.is-settled) .frame-center,
+  body.look-heroes .week-morph.is-armed:not(.is-settled) .week-morph-center {
+    transform: translate3d(0, 16px, 0) scale(0.97);
+  }
+
+  body.look-heroes .frame-stage.is-settled .frame-piece,
+  body.look-heroes .frame-stage:not(.is-armed) .frame-piece {
+    transform: rotate(var(--rest-rotate));
+  }
+
+  body.look-heroes .week-morph.is-settled .week-chip,
+  body.look-heroes .week-morph:not(.is-armed) .week-chip {
+    transform: rotate(var(--rest-rotate));
+  }
+
+  body.look-heroes .frame-stage.is-settled .frame-center,
+  body.look-heroes .frame-stage:not(.is-armed) .frame-center,
+  body.look-heroes .week-morph.is-settled .week-morph-center,
+  body.look-heroes .week-morph:not(.is-armed) .week-morph-center {
+    transform: none;
+  }
+
+  body.look-heroes .frame-stage {
+    padding: 28px 12px 36px;
+  }
+
+  body.look-heroes .frame-center { width: 92%; }
+
+  body.look-heroes .frame-piece--tl,
+  body.look-heroes .frame-piece--br { width: 36%; }
+
+  body.look-heroes .frame-piece--phone { width: 20%; max-width: 92px; }
+
+  body.look-heroes .frame-piece--photo { width: 32%; }
+
+  body.look-heroes .week-morph-stage {
+    min-height: 280px;
+    padding: 24px 8px 32px;
+  }
+
+  body.look-heroes .week-morph-center { width: 92%; }
+
+  body.look-heroes .week-chip--5 { display: none; }
+
+  body.look-heroes .gallery-frame { padding: 16px 8px 12px; }
+
+  body.look-heroes .gallery-frame .frame-piece { display: none; }
+
+  body.look-heroes .phone-cluster.frame-stage { min-height: 380px; padding: 16px 0 8px; }
+
+  body.look-heroes .phone-cluster.frame-stage .frame-center-phone { width: 44%; }
+
+  body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-left,
+  body.look-heroes .phone-cluster.frame-stage .frame-piece--phone-right {
+    width: 30%;
+    top: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.look-heroes .frame-piece,
+  body.look-heroes .week-chip,
+  body.look-heroes .frame-center,
+  body.look-heroes .week-morph-center,
+  body.look-heroes .still-loop-frames img {
+    transition: none !important;
+    will-change: auto;
+    --frame-progress: 1;
+    --piece-p: 1;
+  }
+
+  body.look-heroes .frame-piece { transform: rotate(var(--rest-rotate, 0deg)); }
+  body.look-heroes .week-chip { transform: rotate(var(--rest-rotate, 0deg)); }
+  body.look-heroes .frame-center,
+  body.look-heroes .week-morph-center { transform: none; }
+
+  body.look-heroes .still-loop-toggle,
+  body.look-heroes .gallery-loop-toggle { display: none !important; }
+}
