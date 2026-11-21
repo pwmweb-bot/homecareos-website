@@ -78,11 +78,8 @@
     .hero-note{font-size:.85rem;color:rgba(255,255,255,.5);margin-top:12px}
     .hero-visual{position:relative;z-index:2}
     .hero-devices{position:relative;width:100%;max-width:600px;margin:0 auto}
-    .hero-desktop{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);width:85%}
+    .hero-desktop{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);width:100%}
     .hero-desktop img{width:100%;height:auto;display:block}
-    .hero-phone{position:absolute;overflow:hidden;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.15)}
-    .hero-phone img{display:block;width:100%;height:auto}
-    .hero-phone-1{width:110px;bottom:-10px;right:0}
     /* Click-to-play hero video. Facade pattern: the poster stays a plain <img>
        so it remains the LCP element with fetchpriority, and the <video> is only
        created on click, so no video bytes load until someone asks for them.
@@ -98,6 +95,14 @@
     .hero-video-play:hover .hero-video-icon{transform:scale(1.07)}
     .hero-video-label{font-size:.9rem;font-weight:600;line-height:1.3;text-shadow:0 1px 8px rgba(0,0,0,.55)}
     @media (prefers-reduced-motion:reduce){.hero-video-play,.hero-video-icon{transition:none}.hero-video-play:hover .hero-video-icon{transform:none}}
+    /* Muted in-view loop behind the LCP still. The dashboard <img> stays in
+       the document with fetchpriority; the <video> is preload=none, opacity 0
+       until it is actually playing, and is removed under reduced motion. */
+    .hero-loop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;z-index:1;background:transparent}
+    .hero-loop.is-on{opacity:1;transition:opacity .7s ease}
+    .hero-video-play{z-index:2}
+    .hero-loop-toggle{z-index:3;top:10px;right:10px}
+    @media (prefers-reduced-motion:reduce){.hero-loop,.hero-loop-toggle{display:none!important}}
     /* Video lightbox. The video plays centred on a dimmed backdrop so nothing
        else on the page competes with it. Built on click, torn down on close. */
     .video-lightbox{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px);background:rgba(10,22,28,.9);opacity:0;transition:opacity .22s ease}
@@ -113,8 +118,7 @@
     body.has-lightbox{overflow:hidden}
     @media (max-width:640px){.video-lightbox-close{top:auto;bottom:-44px;right:50%;transform:translateX(50%)}}
     @media (prefers-reduced-motion:reduce){.video-lightbox,.video-lightbox-frame{transition:none}.video-lightbox-frame{transform:none}}
-    .hero-phone-2{width:95px;bottom:60px;right:-30px;opacity:.8}
-    @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:360px}.hero-phone-1{width:80px;bottom:-8px;right:0}.hero-phone-2{width:68px;bottom:40px;right:-16px}.nav-toggle{display:flex}.nav-links{display:none}}
+    @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:100%}.nav-toggle{display:flex}.nav-links{display:none}}
 
     /* First-paint look-heroes rules so the async stylesheets cannot shift the hero. */
     @font-face{font-family:"Hanken Grotesk Fallback";src:local("Arial"),local("Liberation Sans"),local("Nimbus Sans");size-adjust:98.12%;ascent-override:100%;descent-override:30.3%;line-gap-override:0%}
@@ -131,10 +135,11 @@
     body.look-heroes .hero-note{color:var(--ink-2);font-size:13px;margin-top:18px;max-width:460px}
     body.look-heroes .hero-actions{gap:10px}
     body.look-heroes .btn-ghost{color:var(--ink);border-color:var(--line-strong);background:#fffdfa}
-    body.look-heroes .hero-devices{max-width:600px;padding-bottom:10px}
-    body.look-heroes .hero-desktop{width:85%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
+    body.look-heroes .hero-devices{max-width:600px;padding-bottom:0}
+    body.look-heroes .hero-desktop{width:100%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
     body.look-heroes .hero-video,body.look-heroes #heroVideo{width:100%;aspect-ratio:1400/840;position:relative;line-height:0}
     body.look-heroes .hero-video img,body.look-heroes .hero-desktop img{width:100%;height:100%;aspect-ratio:1400/840;object-fit:cover;display:block}
+    body.look-heroes .hero-video video.hero-loop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
     @media (max-width:768px){body.look-heroes .hero,body.look-heroes header.hero{min-height:0;padding:36px 0 88px}body.look-heroes .hero-grid{text-align:left}body.look-heroes .hero-title{font-size:clamp(42px,12vw,64px);min-height:calc(3 * 1.05 * clamp(42px,12vw,64px))}body.look-heroes .hero-subtitle,body.look-heroes .hero-title,body.look-heroes .hero-note{margin-left:0;margin-right:0}}
   </style>
 
@@ -149,7 +154,7 @@
        blocking and score CLS 0. -->
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="styles.css?v=20261117tp">
-  <link rel="stylesheet" href="styles-heroes.css?v=20261116nav">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261121nophone">
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
@@ -426,7 +431,8 @@
 <!-- /hcos:gtag -->
 <script src="/js/book-demo.js?v=20261020" defer></script>
   <script src="/js/reveal.js?v=20260507" defer></script>
-  <script src="/js/inview-video.js?v=20261020" defer></script>
+  <script src="/js/inview-video.js?v=20261121" defer></script>
+  <script src="/js/count-up.js?v=20261121" defer></script>
   <!-- Branded page loader (first paint, no JS library needed) -->
   <style>
     #hco-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
@@ -448,6 +454,15 @@
     .rota-video-toggle:hover,.rota-video-toggle:focus-visible{background:rgba(15,23,42,.8)}
     .rota-video-toggle:focus-visible{outline:3px solid var(--accent,#E8A14A);outline-offset:2px}
     .rota-video-cap{margin-top:10px;font-size:.8125rem;color:var(--gray-500,#6b7280);text-align:center}
+    .rota-video.ratio-16x9 video,.rota-video.ratio-16x9 img{aspect-ratio:16/9}
+    .cover-story{position:absolute;left:12px;top:14px;z-index:2;margin:0;padding:0;list-style:none;pointer-events:none}
+    .cover-story li{position:absolute;left:0;top:0;opacity:0;white-space:nowrap;background:rgba(15,23,42,.82);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.01em;padding:8px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.2);animation:coverStory 9s ease-in-out infinite}
+    .cover-story li:nth-child(1){animation-delay:0s}
+    .cover-story li:nth-child(2){animation-delay:3s}
+    .cover-story li:nth-child(3){animation-delay:6s}
+    @keyframes coverStory{0%,28%{opacity:1}33%,100%{opacity:0}}
+    .rota-video.is-paused .cover-story,.rota-video:not(.is-playing) .cover-story{display:none}
+    @media (prefers-reduced-motion:reduce){.cover-story{display:none!important}}
     .rota-video-link{display:inline-block;margin-top:20px;font-weight:600;color:var(--primary,#16323D)}
     .rota-video-link:hover{color:var(--accent-hover,#CE8A2E)}
     .feature-hero.rota-cover-hero{grid-template-columns:5fr 7fr;padding:0}
@@ -585,19 +600,15 @@
               <div class="hero-desktop">
                 <div class="hero-video" id="heroVideo">
                   <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="The HomecareOS Today screen, showing today's visits, late visits and what needs cover" width="1400" height="840" fetchpriority="high" loading="eager" decoding="async">
+                  <video class="hero-loop" data-inview-video data-inview-defer="load" data-src-webm="video/hero-monday-loop.webm" data-src-mp4="video/hero-monday-loop.mp4" muted loop playsinline preload="none" width="960" height="540" aria-hidden="true"></video>
                   <button type="button" class="hero-video-play" id="heroVideoPlay" aria-label="Play the HomecareOS product overview">
                     <span class="hero-video-icon" aria-hidden="true">
                       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.4-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>
                     </span>
                     <span class="hero-video-label">Watch the overview</span>
                   </button>
+                  <button type="button" class="rota-video-toggle hero-loop-toggle" hidden>Pause animation</button>
                 </div>
-              </div>
-              <div class="hero-phone hero-phone-1">
-                <img src="images/photos/observations-224.webp" srcset="images/photos/observations-224.webp 224w, images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 110px" alt="HomecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" loading="eager" decoding="async">
-              </div>
-              <div class="hero-phone hero-phone-2">
-                <img src="images/photos/pay-224.webp" srcset="images/photos/pay-224.webp 224w, images/photos/pay-390.webp 390w, images/photos/pay.webp 780w" sizes="(max-width: 768px) 68px, 95px" alt="HomecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="eager" decoding="async">
               </div>
             </div>
           </div>
@@ -612,19 +623,19 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item" data-reveal>
-            <strong class="stat-number">4</strong>
+            <strong class="stat-number" data-count-to="4">4</strong>
             <span class="stat-label">UK nations covered</span>
           </div>
           <div class="stat-item" data-reveal data-reveal-delay="100">
-            <strong class="stat-number">99.9%</strong>
+            <strong class="stat-number" data-count-to="99.9" data-count-decimals="1" data-count-suffix="%">99.9%</strong>
             <span class="stat-label">Platform uptime</span>
           </div>
           <div class="stat-item" data-reveal data-reveal-delay="200">
-            <strong class="stat-number">15</strong>
+            <strong class="stat-number" data-count-to="15">15</strong>
             <span class="stat-label">Reports built in</span>
           </div>
           <div class="stat-item" data-reveal data-reveal-delay="300">
-            <strong class="stat-number">&pound;49</strong>
+            <strong class="stat-number" data-count-to="49" data-count-prefix="&pound;">&pound;49</strong>
             <span class="stat-label">Starts at, per month</span>
           </div>
         </div>
@@ -882,8 +893,16 @@
           <div class="showcase-visual" data-reveal data-reveal-delay="100">
             <div class="shot-stack">
               <figure class="shot">
-                <img src="images/photos/recruitment-pipeline.webp" alt="HomecareOS recruitment pipeline showing applicants at application, documents, references, DBS, interview, offer and onboarding" width="1400" height="840" loading="lazy" decoding="async">
-                <figcaption>The pipeline — every applicant, from application through to onboarding.</figcaption>
+                <div class="rota-video ratio-16x9 shot-video">
+                  <video data-inview-video muted loop playsinline preload="none" width="1280" height="720"
+                         poster="/video/recruitment-portal/recruitment-portal-hero-poster-960.webp"
+                         aria-label="The HomecareOS recruitment portal, with an applicant moving through stages, documents and alerts. People and records are illustrative.">
+                    <source src="video/recruitment-portal/homecareos-recruitment-portal-hero-muted-loop.webm" type="video/webm">
+                    <source src="video/recruitment-portal/homecareos-recruitment-portal-hero-muted-loop.mp4" type="video/mp4">
+                  </video>
+                  <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
+                </div>
+                <figcaption>The pipeline — every applicant, from application through to onboarding. Illustrative data.</figcaption>
               </figure>
               <figure class="shot">
                 <img src="images/photos/staff-compliance.webp" alt="HomecareOS staff compliance view, with training and DBS checks on the staff file" width="1400" height="840" loading="lazy" decoding="async">
@@ -1001,11 +1020,16 @@
             <figure class="rota-video">
               <video data-inview-video muted loop playsinline preload="none" width="1600" height="1040"
                      poster="images/photos/tablet-rota-poster.webp"
-                     aria-label="The HomecareOS rota on a tablet, with illustrative data. An unallocated 08:30 visit is tapped and the cover finder opens. It ranks the carers free at that time by continuity, contract hours left and travel, shows an expired training warning, and lists the carers already booked or off sick separately. Assign is tapped, the visit drops into the best match's row and a message confirms it, with an undo.">
+                     aria-label="The HomecareOS rota on a tablet, with illustrative data. An unallocated 08:30 visit is tapped and the cover finder opens. It ranks the carers free at that time by continuity, contract hours left and travel, shows an expired training warning, and lists the carers already booked or off sick separately. Assign is tapped, the visit drops into Priya's row and a message confirms Priya accepted, with an undo.">
                 <source src="video/tablet-rota.webm" type="video/webm">
                 <source src="video/tablet-rota.mp4" type="video/mp4">
                 <img src="images/photos/tablet-rota-poster.jpg" srcset="images/photos/tablet-rota-poster-800.webp 800w, images/photos/tablet-rota-poster.webp 1600w" sizes="(max-width: 768px) 90vw, 640px" width="1600" height="1040" loading="lazy" alt="The HomecareOS rota on a tablet, with one unallocated visit waiting for cover" decoding="async">
               </video>
+              <ol class="cover-story" aria-hidden="true">
+                <li>Unallocated visit</li>
+                <li>Cover ranked</li>
+                <li>Priya accepted</li>
+              </ol>
               <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
             </figure>
             <p class="rota-video-cap">Illustrative data. The office rota runs in the browser on a desktop or tablet.</p>
