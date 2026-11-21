@@ -128,7 +128,7 @@ A [person-centred care plan](/blog/care-planning-software-uk.html) is where most
 
 ## How HomecareOS helps
 
-In HomecareOS, each person's [care plan](/features-care-planning.html) has an About me section alongside sections such as personal care, communication and mobility, each with its own review date, so carers can see how someone likes to be supported before they arrive. Each service user's preferred carers are held on their record and are visible when a visit is assigned, and on the Pro tier the AI Rota Builder can weigh continuity and recorded preferences, including gender preferences, when it drafts a rota for a coordinator to review.
+In HomecareOS, each person's [care plan](/features-care-planning.html) has an About me section alongside sections such as personal care, communication and mobility, each with its own review date, so carers can see how someone likes to be supported before they arrive. Each service user's preferred carers are held on their record and are visible when a visit is assigned, and the Cover Finder and Fill unallocated visits can weigh continuity and recorded preferences, including gender preferences, when they propose a carer for a coordinator to review.
 
 None of that replaces a good carer. It makes it more likely that the good practice one carer has learned about a person reaches the next one. If you would like to see how that looks, [book a 15-minute demo](https://www.homecareos.co.uk/booking.html) or call Phil on 01905 674704.
 

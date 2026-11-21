@@ -101,7 +101,7 @@
     "publisher": {"@type":"Organization","name":"HomecareOS","url":"https://www.homecareos.co.uk","logo":{"@type":"ImageObject","url":"https://www.homecareos.co.uk/images/brand/mark-logo.png","width":600,"height":600}},
     "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.homecareos.co.uk/blog/smart-scheduling-ai-powered-rota-management.html"},
     "articleSection": "Software & Features",
-    "keywords": "AI rota, smart scheduling, cover finder, home care, domiciliary, AI rota builder",
+    "keywords": "AI rota, smart scheduling, cover finder, home care, domiciliary, fill unallocated visits",
     "wordCount": 1750
   }
   </script>
@@ -124,7 +124,7 @@
       "name": "What does \"AI rota management\" actually do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In home care, AI rota management means two things in practice: cover finding (scoring every available carer on continuity with that person, headroom against their contracted hours and travel to the address when a visit becomes uncovered) and rota building (generating a full week's rota from visit patterns and carer availability). Anything else marketed as \"AI rota management\" is usually marketing language, not algorithmic."
+        "text": "In home care, AI rota management, used honestly, means scored matching: cover finding (ranking every available carer on continuity with that person, headroom against their contracted hours and travel to the address when a visit becomes uncovered) and filling gaps (proposing a carer for visits or recurring calls that still need someone). A tool that claims to generate a full week's rota from scratch should be treated as a vendor claim until you have run it on your own data. HomecareOS does not currently ship a week generator."
       }
     },
     {
@@ -140,7 +140,7 @@
       "name": "Does AI rota building replace coordinators?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. AI rota building generates a starting rota in minutes, typically 60-90% of visits will be in sensible places. Coordinators then review, adjust, and approve. The boring 90% gets automated, the interesting 10% (managing real human situations) is what they still do."
+        "text": "No. The Cover Finder, Fill unallocated visits and Plan suggestions propose scored matches. Coordinators review, adjust, and apply the ones they want. The search space is compressed; the interesting work (managing real human situations) is what they still do."
       }
     },
     {
@@ -148,7 +148,7 @@
       "name": "Is AI rota building included in HomecareOS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI cover finder and the AI rota builder are included, starting at £49 per month, with the office team unmetered."
+        "text": "The Cover Finder, Fill unallocated visits and Plan suggestions are included, starting at £49 per month, with the office team unmetered."
       }
     },
     {
@@ -290,7 +290,7 @@
           <h2 id="why-this-matters">The two-thirds problem</h2>
           <p>Talk to any UK home care coordinator and ask what their day actually looks like. The honest answer, more often than not: "I spent two-thirds of it filling cover." Not building rotas. Not coaching carers. Not improving care plans. Re-shuffling the rota every time a carer calls in sick, runs late, or has a personal emergency.</p>
           <p>That work is genuinely hard. To find good cover for a 30-minute visit at 7:15am you need to know: who's free, who's nearby, who already knows this service user, who's got hours headroom this week, who's trained on this person's medication, and who the service user actually likes. In your head, while three other carers are also calling in. Most rota systems hand you a list and say "good luck".</p>
-          <p>This update changes that. The new <a href="/features-ai-rota.html">cover finder</a> does the legwork before the coordinator picks up the phone. The <a href="/features-ai-rota.html">AI rota builder</a> (Pro tier) takes it further, generating an entire week's rota in under 60 seconds, ready for review. Here's what's actually under the hood.</p>
+          <p>This update changes that. The <a href="/features-ai-rota.html">Cover Finder</a> does the legwork before the coordinator picks up the phone. <a href="/features-ai-rota.html">Fill unallocated visits</a> and the Plan's suggest-carers tools do the same for visits that still need someone. Here's what's actually under the hood.</p>
 
           <h2 id="cover-finder">How the cover finder works</h2>
 
@@ -314,28 +314,28 @@
           <p>The output is a ranked top-three. The coordinator sees scores like 87 / 82 / 76 with one-line explanations: "12 mins away, 4 prior visits, 8h headroom this week" or "20 mins away, no prior history, but on shift already". They make the final call, the AI just compresses the search space from "everyone available" to "the three most likely matches".</p>
           <p>Weights are configurable. An agency that prioritises dementia continuity over travel time can flip the order. The defaults work for most agencies, but the point is they're not hard-coded.</p>
 
-          <h2 id="rota-builder">The AI rota builder (Pro tier)</h2>
-          <p>If cover finding is reactive, rota building is proactive. Once a week, usually Wednesday, the AI rota builder takes existing visit patterns, run templates, and carer availability, and generates a complete rota for the upcoming week.</p>
-          <p>The algorithm does roughly this:</p>
+          <h2 id="rota-builder">Filling the gaps: unallocated visits and Plan suggestions</h2>
+          <p>If cover finding is reactive, filling gaps is how you close the week. Recurring visit patterns still generate the visits themselves, and you can copy a settled week forward. What remains are the calls that do not yet have a carer.</p>
+          <p>Fill unallocated visits, on the rota and the visits list, proposes a scored carer for each of those gaps. On the Plan, suggest-carers (Auto-assign) proposes a lead carer for unfilled recurring calls, and Optimise suggests a better match for calls that already have someone, for example a more familiar carer or less driving between visits. In both cases the tools roughly:</p>
           <ol>
-            <li>Group visits into geographic clusters using K-means on visit location</li>
-            <li>For each cluster, identify carers who live within 15 minutes and have hours capacity</li>
-            <li>Run continuity weighting, visits with high prior history with a specific carer go to that carer first</li>
-            <li>Solve the remaining visits as a constraint satisfaction problem: minimise total travel time, maximise continuity, respect carer preferences and contractual hours</li>
-            <li>Surface anything that couldn't be solved (e.g. a visit no carer has capacity for) for coordinator review</li>
+            <li>Look at each visit or recurring call that still needs a carer (or, for Optimise, that already has one)</li>
+            <li>Rule out anyone already booked, on leave, outside their working hours, or missing a skill the person needs</li>
+            <li>Rank the rest on continuity with that person, hours left this week, and the drive from the previous call</li>
+            <li>Show the proposed match and its reasons</li>
+            <li>Leave anything that could not be matched for the coordinator to assign by hand</li>
           </ol>
-          <p>For an 80-carer agency with 480 visits in a week, the builder typically returns a draft rota in 45-60 seconds. Around 80% of the visits are placed cleanly; the remaining 20% are flagged for coordinator decisions. The coordinator now spends 90 minutes reviewing instead of 6 hours assembling.</p>
+          <p>Nothing changes on the live rota until the coordinator ticks the matches they want and applies them. The week's visits are not generated by a one-click week builder; the scoring tools close the gaps that are left once patterns and copy-week have done their work.</p>
 
           <h2 id="what-is-not-ai">What is, and isn't, actually AI here</h2>
           <p>"AI" is being used by every home care vendor at the moment, often loosely. To be honest about what we mean:</p>
           <ul>
-            <li><strong>This is AI:</strong> the cover-finder scoring model, the rota builder's constraint solver, retention risk scoring (separate feature), and document categorisation. These all involve trained models or scoring algorithms.</li>
+            <li><strong>This is AI:</strong> the cover-finder scoring model, the scored matching used by Fill unallocated visits and Plan suggestions, retention risk scoring (separate feature), and document categorisation. These all involve trained models or scoring algorithms.</li>
             <li><strong>This is NOT AI</strong> (despite the marketing language some vendors use): drag-and-drop rota grids, basic alerts, calendar conflict checks, route optimisation (that's Mapbox routing), or visit time tracking. These are useful, but they're regular software.</li>
           </ul>
-          <p>The honest answer to "is your rota system AI" is "the cover finder and rota builder are; everything else is good engineering." We think that distinction matters because it sets correct expectations.</p>
+          <p>The honest answer to "is your rota system AI" is "the Cover Finder and the scored matching for unallocated visits are; everything else is good engineering." We think that distinction matters because it sets correct expectations.</p>
 
           <h2 id="ethics">A note on AI in care work</h2>
-          <p>Care decisions affect real people. We don't let the algorithm decide alone, every cover suggestion goes through a coordinator, every generated rota is reviewable, every carer can flag a service user they shouldn't be sent to (or vice versa). The AI is a tool that compresses search space; the human is still in charge of the actual allocation.</p>
+          <p>Care decisions affect real people. We don't let the algorithm decide alone: every cover suggestion and every proposed match goes through a coordinator, and every carer can flag a service user they shouldn't be sent to (or vice versa). The AI is a tool that compresses search space; the human is still in charge of the actual allocation.</p>
           <p>We also don't use the algorithm for anything punitive. Bradford Factor scoring is calculated separately and surfaced as information, not enforcement. (More on that approach in our <a href="/blog/bradford-factor-home-care-uk-guide.html">Bradford Factor guide</a>.) Carer retention risk scoring exists, but it's surfaced to managers as "have a chat with this person", not "performance manage them out".</p>
 
           <h2 id="what-this-replaces">What does this replace?</h2>
@@ -343,7 +343,7 @@
           <p>The honest test for any AI feature in home care: does it free your team for higher-judgement work, or does it just produce more dashboards? If the answer is "more dashboards", it's not earning its keep.</p>
 
           <h2 id="trying-it">Trying it on your own data</h2>
-          <p>The cover finder and the AI rota builder are included, starting at £49 per month, with the office team unmetered. Both features work best on agencies with at least 30 days of visit history loaded, the algorithms get noticeably sharper once they have continuity patterns to learn from.</p>
+          <p>The Cover Finder, Fill unallocated visits and Plan suggestions are included, starting at £49 per month, with the office team unmetered. They work best on agencies with at least 30 days of visit history loaded, because continuity scoring gets sharper once familiar pairings are on record.</p>
           <p>The fastest way to see this in practice is to <a href="/booking.html">book a 20-minute demo</a>, we'll run cover-finder simulations against a handful of representative scenarios from your current rota. Or <a href="https://app.homecareos.co.uk">start an account</a> and import a week of visit data to evaluate the cover finder on your own rota. No card is required to begin, so there's no commitment.</p>
 
         </div>
@@ -352,16 +352,16 @@
           <h2 id="faq-heading">Frequently asked questions</h2>
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">What does "AI rota management" actually do?</summary>
-          <p style="margin-top:12px">In home care, AI rota management means two things in practice: <strong>cover finding</strong> (scoring every available carer on continuity with that person, headroom against their contracted hours and travel to the address when a visit becomes uncovered) and <strong>rota building</strong> (generating a full week's rota from visit patterns and carer availability). Anything else marketed as "AI rota management" is usually marketing language, not algorithmic.</p></details>
+          <p style="margin-top:12px">In home care, AI rota management, used honestly, means scored matching: <strong>cover finding</strong> (ranking every available carer on continuity with that person, headroom against their contracted hours and travel to the address when a visit becomes uncovered) and <strong>filling gaps</strong> (proposing a carer for visits or recurring calls that still need someone). A tool that claims to generate a full week's rota from scratch should be treated as a vendor claim until you have run it on your own data. HomecareOS does not currently ship a week generator.</p></details>
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">How is the cover finder different from a standard rota system?</summary>
           <p style="margin-top:12px">A standard rota system shows you a list of unallocated visits and a list of available carers, leaving it to the coordinator to manually match them. The cover finder pre-computes the match: scoring each available carer against the visit's specific requirements and surfacing the best three options ranked. Coordinators still make the final call.</p></details>
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Does AI rota building replace coordinators?</summary>
-          <p style="margin-top:12px">No. AI rota building generates a starting rota in minutes, typically 60-90% of visits will be in sensible places. Coordinators then review, adjust, and approve. The boring 90% gets automated, the interesting 10% (managing real human situations) is what they still do.</p></details>
+          <p style="margin-top:12px">No. The Cover Finder, Fill unallocated visits and Plan suggestions propose scored matches. Coordinators review, adjust, and apply the ones they want. The search space is compressed; the interesting work (managing real human situations) is what they still do.</p></details>
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Is AI rota building included in HomecareOS?</summary>
-          <p style="margin-top:12px">The AI <strong>cover finder</strong> and the AI <strong>rota builder</strong> are included, starting at £49 per month, with the office team unmetered.</p></details>
+          <p style="margin-top:12px">The <strong>Cover Finder</strong>, <strong>Fill unallocated visits</strong> and Plan suggestions are included, starting at £49 per month, with the office team unmetered.</p></details>
 
           <details style="margin:16px 0;padding:16px 20px;background:var(--gray-100);border-radius:8px"><summary style="font-weight:600;cursor:pointer">Can the scoring weights be customised?</summary>
           <p style="margin-top:12px">Not at the moment. The weights are fixed at continuity 45, hours headroom 30 and travel 25 out of 100, and they are the same for every agency. We would rather say so than imply a settings screen that does not exist. The argument for fixing them is that continuity should win in home care; the argument against is that a rural agency and a city one do not have the same travel problem, which is why it is on the list to revisit.</p></details>
@@ -393,8 +393,8 @@
             </div></article>
             <article class="blog-card"><div class="blog-card-body">
               <div class="blog-meta"><span class="blog-category">Feature</span></div>
-              <h3><a href="/features-ai-rota.html">AI Rota Builder feature</a></h3>
-              <p>The technical write-up of the rota builder and how it integrates with the rest of the platform.</p>
+              <h3><a href="/features-ai-rota.html">Cover Finder and rota tools</a></h3>
+              <p>How the Cover Finder, Fill unallocated visits and Plan suggestions work, and how they sit alongside the drag-and-drop rota.</p>
               <a href="/features-ai-rota.html" class="read-more">View feature &rarr;</a>
             </div></article>
             <article class="blog-card"><div class="blog-card-body">
@@ -413,7 +413,7 @@
             <div class="cta-actions">
               <a href="/booking.html" class="btn btn-primary btn-lg">Book a 15-minute demo</a>
               <a href="/start.html" class="btn btn-ghost btn-lg">Get started</a>
-              <a href="/features-ai-rota.html" class="btn btn-ghost">AI Rota Feature</a>
+              <a href="/features-ai-rota.html" class="btn btn-ghost">Cover Finder</a>
             </div>
           </div>
         </section>
