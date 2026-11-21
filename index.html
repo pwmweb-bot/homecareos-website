@@ -78,11 +78,8 @@
     .hero-note{font-size:.85rem;color:rgba(255,255,255,.5);margin-top:12px}
     .hero-visual{position:relative;z-index:2}
     .hero-devices{position:relative;width:100%;max-width:600px;margin:0 auto}
-    .hero-desktop{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);width:85%}
+    .hero-desktop{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);width:100%}
     .hero-desktop img{width:100%;height:auto;display:block}
-    .hero-phone{position:absolute;overflow:hidden;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.15)}
-    .hero-phone img{display:block;width:100%;height:auto}
-    .hero-phone-1{width:110px;bottom:-10px;right:0}
     /* Click-to-play hero video. Facade pattern: the poster stays a plain <img>
        so it remains the LCP element with fetchpriority, and the <video> is only
        created on click, so no video bytes load until someone asks for them.
@@ -121,8 +118,7 @@
     body.has-lightbox{overflow:hidden}
     @media (max-width:640px){.video-lightbox-close{top:auto;bottom:-44px;right:50%;transform:translateX(50%)}}
     @media (prefers-reduced-motion:reduce){.video-lightbox,.video-lightbox-frame{transition:none}.video-lightbox-frame{transform:none}}
-    .hero-phone-2{width:95px;bottom:60px;right:-30px;opacity:.8}
-    @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:360px}.hero-phone-1{width:80px;bottom:-8px;right:0}.hero-phone-2{width:68px;bottom:40px;right:-16px}.nav-toggle{display:flex}.nav-links{display:none}}
+    @media (max-width:768px){.container{padding:0 20px}.hero{min-height:auto;padding:100px 0 60px}.hero .container{padding:0 28px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:20px}.hero-subtitle{margin-left:auto;margin-right:auto;margin-bottom:32px;font-size:1rem}.hero-actions{justify-content:center}.hero-note{margin-top:20px}.hero-visual{margin-top:32px}.hero-devices{max-width:100%}.nav-toggle{display:flex}.nav-links{display:none}}
 
     /* First-paint look-heroes rules so the async stylesheets cannot shift the hero. */
     @font-face{font-family:"Hanken Grotesk Fallback";src:local("Arial"),local("Liberation Sans"),local("Nimbus Sans");size-adjust:98.12%;ascent-override:100%;descent-override:30.3%;line-gap-override:0%}
@@ -139,8 +135,8 @@
     body.look-heroes .hero-note{color:var(--ink-2);font-size:13px;margin-top:18px;max-width:460px}
     body.look-heroes .hero-actions{gap:10px}
     body.look-heroes .btn-ghost{color:var(--ink);border-color:var(--line-strong);background:#fffdfa}
-    body.look-heroes .hero-devices{max-width:600px;padding-bottom:10px}
-    body.look-heroes .hero-desktop{width:85%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
+    body.look-heroes .hero-devices{max-width:600px;padding-bottom:0}
+    body.look-heroes .hero-desktop{width:100%;aspect-ratio:1400/840;overflow:hidden;border-radius:12px;box-shadow:none}
     body.look-heroes .hero-video,body.look-heroes #heroVideo{width:100%;aspect-ratio:1400/840;position:relative;line-height:0}
     body.look-heroes .hero-video img,body.look-heroes .hero-desktop img{width:100%;height:100%;aspect-ratio:1400/840;object-fit:cover;display:block}
     body.look-heroes .hero-video video.hero-loop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
@@ -158,7 +154,7 @@
        blocking and score CLS 0. -->
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="styles.css?v=20261117tp">
-  <link rel="stylesheet" href="styles-heroes.css?v=20261121motion">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261121nophone">
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
@@ -613,12 +609,6 @@
                   </button>
                   <button type="button" class="rota-video-toggle hero-loop-toggle" hidden>Pause animation</button>
                 </div>
-              </div>
-              <div class="hero-phone hero-phone-1">
-                <img src="images/photos/observations-224.webp" srcset="images/photos/observations-224.webp 224w, images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 110px" alt="HomecareOS mobile app visit screen with Check In, Tasks, Medications and more" width="390" height="844" loading="eager" decoding="async">
-              </div>
-              <div class="hero-phone hero-phone-2">
-                <img src="images/photos/pay-224.webp" srcset="images/photos/pay-224.webp 224w, images/photos/pay-390.webp 390w, images/photos/pay.webp 780w" sizes="(max-width: 768px) 68px, 95px" alt="HomecareOS carer pay dashboard showing projected earnings" width="390" height="844" loading="eager" decoding="async">
               </div>
             </div>
           </div>

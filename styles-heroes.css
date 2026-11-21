@@ -236,13 +236,13 @@ body.look-heroes .hero-visual { min-width: 0; }
 body.look-heroes .hero-devices {
   width: 100%;
   max-width: 600px;
-  padding-bottom: 10px; /* room for the absolutely positioned phone frames */
+  padding-bottom: 0;
 }
 body.look-heroes .hero-desktop {
   background: transparent;
   box-shadow: none;
   border: none;
-  width: 85%;
+  width: 100%;
   aspect-ratio: 1400 / 840;
 }
 body.look-heroes .hero-video,
@@ -535,11 +535,6 @@ body.look-heroes .hero-note { color: var(--ink-2) !important; }
 body.look-heroes .hero-desktop {
   box-shadow: none;
   overflow: hidden;
-}
-body.look-heroes .hero-phone {
-  border: 3px solid #1a1a1a;
-  border-radius: 18px;
-  box-shadow: 0 16px 40px rgba(41, 38, 32, 0.18);
 }
 body.look-heroes .page-header {
   text-align: left;
