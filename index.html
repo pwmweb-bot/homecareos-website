@@ -154,7 +154,8 @@
        blocking and score CLS 0. -->
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="styles.css?v=20261117tp">
-  <link rel="stylesheet" href="styles-heroes.css?v=20261121p2">
+  <link rel="stylesheet" href="styles-heroes.css?v=20261121p3">
+  <noscript><link rel="stylesheet" href="styles-day.css?v=20261121p3"></noscript>
 
   <!-- AOS CSS (deferred, not render-critical) -->
 
@@ -434,6 +435,7 @@
   <script src="/js/inview-video.js?v=20261121" defer></script>
   <script src="/js/count-up.js?v=20261121" defer></script>
   <script src="/js/scroll-frame.js?v=20261121p2" defer></script>
+  <script src="/js/day-holds.js?v=20261121p3" defer></script>
   <!-- Branded page loader (first paint, no JS library needed) -->
   <style>
     #hco-loader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
@@ -1061,6 +1063,137 @@
               <button type="button" class="rota-video-toggle" hidden>Pause animation</button>
             </figure>
             <p class="rota-video-cap">Illustrative data. The office rota runs in the browser on a desktop or tablet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         A DAY THAT HOLDS (Phase 3)
+         ============================================ -->
+    <section class="day-holds" id="a-care-day" aria-labelledby="day-holds-heading">
+      <div class="container day-holds-head" data-reveal>
+        <span class="section-label">A day with HomecareOS</span>
+        <h2 id="day-holds-heading">One care day, from the first visit to a quiet evening.</h2>
+        <p class="lead">Follow a single day in the product, from a settled morning rota to a quiet evening. The screens use demo data.</p>
+      </div>
+      <div class="day-holds-track" data-day-holds>
+        <div class="day-holds-panel">
+          <div class="day-holds-inner container">
+            <div class="day-rail" role="list" aria-label="Time of day">
+              <span class="day-rail-progress" aria-hidden="true"></span>
+              <button type="button" class="day-rail-tick is-on" role="listitem" data-beat="0" aria-current="step">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">07:00</span>
+              </button>
+              <button type="button" class="day-rail-tick" role="listitem" data-beat="1" aria-current="false">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">08:30</span>
+              </button>
+              <button type="button" class="day-rail-tick" role="listitem" data-beat="2" aria-current="false">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">10:00</span>
+              </button>
+              <button type="button" class="day-rail-tick" role="listitem" data-beat="3" aria-current="false">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">13:00</span>
+              </button>
+              <button type="button" class="day-rail-tick" role="listitem" data-beat="4" aria-current="false">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">17:00</span>
+              </button>
+              <button type="button" class="day-rail-tick" role="listitem" data-beat="5" aria-current="false">
+                <span class="day-rail-dot" aria-hidden="true"></span>
+                <span class="day-rail-time">22:00</span>
+              </button>
+            </div>
+            <div class="day-beats">
+              <article class="day-beat is-on" data-beat="0">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">07:00</p>
+                  <h3>The rota is already settled.</h3>
+                  <p>Every visit is already on a carer’s row, before the first door of the day.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot">
+                    <img data-src="images/photos/rota-800.webp" data-srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 620px" alt="HomecareOS day rota, with visits arranged on each carer’s row. Demo data." width="1400" height="840" decoding="async">
+                    <figcaption>The day’s visits, already on the rota. Demo data.</figcaption>
+                  </figure>
+                </div>
+              </article>
+              <article class="day-beat" data-beat="1">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">08:30</p>
+                  <h3>The first visit is verified.</h3>
+                  <p>Priya checks in at the door, and the office can see the visit is underway — no call to confirm.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot day-shot--phone">
+                    <img data-src="images/photos/observations-390.webp" data-srcset="images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 60vw, 260px" alt="HomecareOS carer app visit screen, with Check In, Tasks and Medications. Demo data." width="390" height="844" decoding="async">
+                    <figcaption>Check-in at the door, on the carer app. Demo data.</figcaption>
+                  </figure>
+                </div>
+              </article>
+              <article class="day-beat" data-beat="2">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">10:00</p>
+                  <h3>A gap is covered, and Priya accepts.</h3>
+                  <p>A visit needs cover. Cover Finder ranks who can take it, Priya accepts, and her row updates.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot">
+                    <img data-src="images/photos/tablet-rota-poster-800.webp" data-srcset="images/photos/tablet-rota-poster-800.webp 800w, images/photos/tablet-rota-poster.webp 1600w" sizes="(max-width: 768px) 90vw, 620px" alt="The HomecareOS rota on a tablet, with one unallocated visit waiting for cover. Demo data." width="1600" height="1040" decoding="async">
+                    <figcaption>Cover Finder, with Priya accepted. Demo data.</figcaption>
+                  </figure>
+                </div>
+              </article>
+              <article class="day-beat" data-beat="3">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">13:00</p>
+                  <h3>Medication is signed, and the family can see the visit.</h3>
+                  <p>eMAR is recorded on the visit, and the family sees that it happened, without a phone call at the end of the run.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot">
+                    <img data-src="images/photos/app-emar-chart-800.webp" data-srcset="images/photos/app-emar-chart-800.webp 800w, images/photos/app-emar-chart.webp 1400w" sizes="(max-width: 768px) 90vw, 620px" alt="HomecareOS eMAR chart for Gladys Thomas, showing planned and given doses. Demo data." width="1400" height="840" decoding="async">
+                    <figcaption>eMAR, signed on the visit. Demo data.</figcaption>
+                  </figure>
+                  <figure class="day-shot day-shot--support day-shot--tl">
+                    <img data-src="images/photos/family-elderly-tablet.webp" alt="A family gathered around a tablet at the kitchen table" width="800" height="533" decoding="async">
+                  </figure>
+                </div>
+              </article>
+              <article class="day-beat" data-beat="4">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">17:00</p>
+                  <h3>Timesheets and pay are already in.</h3>
+                  <p>The day’s hours are already on the timesheet, and carers can see projected pay, so the office is not typing it in tonight.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot">
+                    <img data-src="images/photos/app-finance-overview-800.webp" data-srcset="images/photos/app-finance-overview-800.webp 800w, images/photos/app-finance-overview.webp 1400w" sizes="(max-width: 768px) 90vw, 620px" alt="HomecareOS Money overview, with the day’s finances in one place. Demo data." width="1400" height="840" decoding="async">
+                    <figcaption>Money overview, with the day already in. Demo data.</figcaption>
+                  </figure>
+                  <figure class="day-shot day-shot--support day-shot--support-phone day-shot--br">
+                    <img data-src="images/photos/pay-390.webp" data-srcset="images/photos/pay-390.webp 390w, images/photos/pay.webp 780w" sizes="120px" alt="HomecareOS carer pay dashboard showing projected earnings. Demo data." width="390" height="844" decoding="async">
+                  </figure>
+                </div>
+              </article>
+              <article class="day-beat" data-beat="5">
+                <div class="day-beat-copy">
+                  <p class="day-beat-kicker">22:00</p>
+                  <h3>On-call is quiet, and the day is recorded.</h3>
+                  <p>What’s still open is visible on Today. The rest of the day is already written up.</p>
+                </div>
+                <div class="day-beat-visual">
+                  <figure class="day-shot">
+                    <img data-src="images/photos/dashboard-800.webp" data-srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 620px" alt="The HomecareOS Today screen, showing today’s visits, late visits and what needs cover. Demo data." width="1400" height="840" decoding="async">
+                    <figcaption>Today, at the end of the day. Demo data.</figcaption>
+                  </figure>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
