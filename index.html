@@ -282,13 +282,13 @@
     },
     {
       "@type": "VideoObject",
-      "@id": "https://www.homecareos.co.uk/#overview-video",
-      "name": "HomecareOS product overview",
-      "description": "A walk through HomecareOS, home care management software for UK agencies: building the rota with AI, care plans that carry into every visit, NFC clock in and offline working, medication and body maps, the family portal, visit to invoice and timesheet, and inspection evidence for CQC, CIW, the Care Inspectorate and RQIA.",
-      "thumbnailUrl": "https://www.homecareos.co.uk/images/video-overview-poster.jpg",
-      "uploadDate": "2026-09-10",
-      "duration": "PT1M42S",
-      "contentUrl": "https://www.homecareos.co.uk/video/homecareos-overview.mp4",
+      "@id": "https://www.homecareos.co.uk/#great-reset-video",
+      "name": "HomecareOS: This is your great reset",
+      "description": "A two-minute film about Sam, a UK registered manager, and the Monday morning everything finally sat in one place. HomecareOS is home care software for UK domiciliary agencies.",
+      "thumbnailUrl": "https://www.homecareos.co.uk/images/homecareos-great-reset-poster.jpg",
+      "uploadDate": "2026-11-20",
+      "duration": "PT2M11S",
+      "contentUrl": "https://www.homecareos.co.uk/video/homecareos-great-reset.mp4",
       "isFamilyFriendly": true,
       "inLanguage": "en-GB",
       "publisher": {"@id": "https://www.homecareos.co.uk/#organization"},
@@ -604,11 +604,11 @@
                 <div class="hero-video" id="heroVideo">
                   <img src="images/photos/dashboard.webp" srcset="images/photos/dashboard-800.webp 800w, images/photos/dashboard.webp 1400w" sizes="(max-width: 768px) 90vw, 510px" alt="The HomecareOS Today screen, showing today's visits, late visits and what needs cover" width="1400" height="840" fetchpriority="high" loading="eager" decoding="async">
                   <video class="hero-loop" data-inview-video data-inview-defer="load" data-src-webm="video/hero-monday-loop.webm" data-src-mp4="video/hero-monday-loop.mp4" muted loop playsinline preload="none" width="960" height="540" aria-hidden="true"></video>
-                  <button type="button" class="hero-video-play" id="heroVideoPlay" aria-label="Play the HomecareOS product overview">
+                  <button type="button" class="hero-video-play" id="heroVideoPlay" aria-label="Watch the HomecareOS film, 2 minutes">
                     <span class="hero-video-icon" aria-hidden="true">
                       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.4-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>
                     </span>
-                    <span class="hero-video-label">Watch the overview</span>
+                    <span class="hero-video-label">Watch the film (2 min)</span>
                   </button>
                   <button type="button" class="rota-video-toggle hero-loop-toggle" hidden>Pause animation</button>
                 </div>
@@ -1983,22 +1983,30 @@
 
   <script>
     /* Hero video lightbox.
-       Nothing about the video is fetched until the visitor presses play: the
-       hero holds a plain poster <img> (which stays the LCP element) and the
-       <video> is created on click, centred on a dimmed backdrop.
+       The full film is not fetched until the visitor presses play: the hero
+       keeps the muted loop (or the poster image if motion is reduced) and
+       the narrated <video> is created on click, centred on a dimmed backdrop.
        Self-hosted on purpose. The site CSP allows frame-src for Calendly only,
        while media-src falls back to default-src 'self', so an embed would be
-       blocked but our own file plays. */
+       blocked but our own file plays. preload=none so the 2-minute file
+       stays off the critical path. */
     (function () {
       var wrap = document.getElementById('heroVideo');
       var btn = wrap && document.getElementById('heroVideoPlay');
       if (!wrap || !btn) return;
 
-      /* MP4 only. A VP9 WebM of this content encoded LARGER than the H.264
-         file (flat UI colours suit x264), so a second source would just mean
-         serving more bytes to the browsers that prefer it. */
-      var SOURCES = [['/video/homecareos-overview.mp4', 'video/mp4']];
+      /* MP4 only. The official louder 720p share encode is already 19 MB;
+         a VP9 WebM of similar quality would add another large file without
+         shrinking what most browsers download. */
+      var SOURCE = { src: '/video/homecareos-great-reset.mp4', type: 'video/mp4' };
+      var CAPTIONS = '/video/homecareos-great-reset.vtt';
+      var POSTER = '/images/homecareos-great-reset-poster.jpg';
       var box = null;
+      var loopWasPaused = true;
+
+      function heroLoop() {
+        return wrap.querySelector('video.hero-loop');
+      }
 
       function close() {
         if (!box) return;
@@ -2008,6 +2016,11 @@
         box = null;
         document.body.classList.remove('has-lightbox');
         document.removeEventListener('keydown', onKey);
+        var loop = heroLoop();
+        if (loop && !loopWasPaused) {
+          var p = loop.play();
+          if (p && p.catch) p.catch(function () {});
+        }
         btn.focus();
       }
 
@@ -2023,13 +2036,11 @@
       }
 
       btn.addEventListener('click', function () {
-        var poster = wrap.querySelector('img');
-
         box = document.createElement('div');
         box.className = 'video-lightbox';
         box.setAttribute('role', 'dialog');
         box.setAttribute('aria-modal', 'true');
-        box.setAttribute('aria-label', 'HomecareOS product overview');
+        box.setAttribute('aria-label', 'HomecareOS: This is your great reset, 2 minutes');
 
         var frame = document.createElement('div');
         frame.className = 'video-lightbox-frame';
@@ -2037,20 +2048,26 @@
         var closeBtn = document.createElement('button');
         closeBtn.type = 'button';
         closeBtn.className = 'video-lightbox-close';
+        closeBtn.setAttribute('aria-label', 'Close the film');
         closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg> Close';
         closeBtn.addEventListener('click', close);
 
         var v = document.createElement('video');
         v.setAttribute('controls', '');
         v.setAttribute('playsinline', '');
-        v.setAttribute('preload', 'auto');
+        v.setAttribute('preload', 'none');
         v.setAttribute('autoplay', '');
-        if (poster) v.setAttribute('poster', poster.currentSrc || poster.src);
-        SOURCES.forEach(function (src) {
-          var el = document.createElement('source');
-          el.src = src[0]; el.type = src[1];
-          v.appendChild(el);
-        });
+        v.setAttribute('poster', POSTER);
+        var src = document.createElement('source');
+        src.src = SOURCE.src;
+        src.type = SOURCE.type;
+        v.appendChild(src);
+        var track = document.createElement('track');
+        track.kind = 'captions';
+        track.srclang = 'en-GB';
+        track.label = 'English (British)';
+        track.src = CAPTIONS;
+        v.appendChild(track);
 
         var note = document.createElement('p');
         note.className = 'video-lightbox-note';
@@ -2063,6 +2080,10 @@
 
         // Click the backdrop, but not the video, to close.
         box.addEventListener('click', function (e) { if (e.target === box) close(); });
+
+        var loop = heroLoop();
+        loopWasPaused = !loop || loop.paused;
+        if (loop && !loop.paused) loop.pause();
 
         document.body.appendChild(box);
         document.body.classList.add('has-lightbox');
