@@ -197,16 +197,27 @@
 }
 </script>
 
-<!-- Product + Offers schema, pricing-page eligibility for price rich results -->
+<!-- SoftwareApplication + Offers. SaaS has no shipping or returns, so this is not a Product merchant listing. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "SoftwareApplication",
+  "@id": "https://www.homecareos.co.uk/pricing.html#software",
   "name": "HomecareOS",
+  "url": "https://www.homecareos.co.uk/pricing.html",
+  "image": [
+    "https://www.homecareos.co.uk/images/photos/rota-og.png",
+    "https://www.homecareos.co.uk/images/brand/mark-logo.png"
+  ],
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Domiciliary Home Care Management Software",
+  "operatingSystem": "Web, iOS, Android",
   "description": "Domiciliary home care management software for UK agencies covering scheduling, digital care records, eMAR, compliance and billing across all four nations.",
-  "brand": {
-    "@type": "Brand",
-    "name": "HomecareOS"
+  "isPartOf": {
+    "@id": "https://www.homecareos.co.uk/#software"
+  },
+  "provider": {
+    "@id": "https://www.homecareos.co.uk/#organization"
   },
   "offers": [
     {
@@ -221,7 +232,6 @@
         "@type": "UnitPriceSpecification",
         "price": "49",
         "priceCurrency": "GBP",
-        "valueAddedTaxIncluded": false,
         "unitText": "per month"
       }
     },
@@ -237,7 +247,6 @@
         "@type": "UnitPriceSpecification",
         "price": "39",
         "priceCurrency": "GBP",
-        "valueAddedTaxIncluded": false,
         "unitText": "per month"
       }
     },
@@ -253,7 +262,6 @@
         "@type": "UnitPriceSpecification",
         "price": "49",
         "priceCurrency": "GBP",
-        "valueAddedTaxIncluded": false,
         "unitText": "per month"
       }
     }
