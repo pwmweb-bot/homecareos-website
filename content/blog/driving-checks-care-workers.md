@@ -37,7 +37,7 @@ faqs:
   - q: What mileage rate can we pay carers without reporting it to HMRC?
     a: GOV.UK lists the approved mileage allowance rate for cars and vans as 55p per mile for the first 10,000 business miles from 6 April 2026 (45p before), and 25p above that. Paying more than the approved amount has tax and reporting consequences, so check the GOV.UK page before setting your rate.
 cta_title: Collect licences with the rest of the application
-cta_text: The HomecareOS recruitment portal is free for 3 months for agencies that sign up now, then £49 a month + VAT. Or book a short demo, or call Phil on 01905 674704.
+cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
 cta_secondary: Recruitment features
 cta_secondary_href: /features-recruitment.html
 ---
@@ -109,7 +109,7 @@ If a carer will ever drive a client, for example to an appointment or the shops,
 
 ## MOT, tax and roadworthiness
 
-Two free GOV.UK services cover most of the vehicle checks with just the number plate:
+Two GOV.UK services cover most of the vehicle checks with just the number plate:
 
 - [Check the MOT history of a vehicle](https://www.gov.uk/check-mot-history) shows past results, mileage at each test and when the next MOT is due.
 - [Check if a vehicle is taxed](https://www.gov.uk/check-vehicle-tax) shows whether the car has up-to-date vehicle tax or is declared off the road (SORN).
@@ -150,7 +150,7 @@ Keep driving records with the rest of the carer's file, so an inspector can see 
 
 ## How HomecareOS helps
 
-The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free) brings driving into the same application as everything else:
+The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal) brings driving into the same application as everything else:
 
 - You invite an applicant by email.
 - They complete an online **/apply** portal with their application, documents, right to work, two references, DBS details and a health questionnaire. On the documents step they are asked whether they drive, and if they say yes, the front and back of their driving licence become required documents.
@@ -159,7 +159,7 @@ The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?
 
 Once they are a carer, their record can hold their vehicle details, including registration, licence expiry, insurance expiry, MOT expiry and whether business use has been confirmed, with a clear warning when business use is not confirmed. Visits can be marked as needing a driver, and the office is warned if they choose a carer who does not drive.
 
-The recruitment portal is free for 3 months for agencies that sign up now, then £49 a month + VAT. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), [book a demo](/booking.html), or call Phil on 01905 674704.
+The recruitment portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
