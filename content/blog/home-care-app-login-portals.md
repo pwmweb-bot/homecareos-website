@@ -1,12 +1,12 @@
 ---
-title: Home Care App Login Portals: Carer and Family Guide
-description: Where to sign in to UK home care software: office logins, carer apps and family portals for HomecareOS, Birdie, OneTouch, Access, PASS and more.
+title: Where to Sign In: Carer, Family and Office
+description: Which sign-in you need depends on your role. Carers, families and office staff use different doors. HomecareOS is first, then other UK home care systems.
 slug: home-care-app-login-portals
 date: 2026-10-23
-keywords: home care app login, birdie family portal, onetouch family portal, care app family portal login, carer app login, carelinelive login, openpass login, access care planning login, log my care family app, nourish family portal
+keywords: carer app sign in, family portal login, care office login, home care software sign in
 category: Guide
-standfirst: Carers, relatives and office staff often know which care app their agency uses but not where to sign in. This page lists the official office logins, carer apps and family portals for UK home care software, with HomecareOS first.
-breadcrumb: Home care login portals
+standfirst: Carers, relatives and office staff often have the right agency and the wrong door. This page separates the carer app, the family portal and the office login, with HomecareOS first, then where other UK systems send each role.
+breadcrumb: Care app sign-in
 image: /images/photos/family-elderly-tablet.webp
 image_alt: An older man holding a tablet at a table, with a young man and a young woman smiling beside him
 image_caption: Family portals are switched on by the care agency, so the invitation always starts with the agency, not the software company.
@@ -42,9 +42,19 @@ cta_secondary: Family portal features
 cta_secondary_href: /features-family-portal.html
 ---
 
-Most UK home care agencies use software with three front doors: an office login for coordinators and managers, an app for carers, and a portal or app for families. This page collects the official sign-in links for each, so you can get to the right one first time.
+Most people who cannot sign in are at the wrong door. A UK home care agency usually has three: an office login for coordinators and managers, an app for carers, and a portal or app for families. They are not interchangeable. This page is here so you can tell which one you need, then open the official link.
 
-**A note before you start.** HomecareOS is not affiliated with, endorsed by or connected to any of the other companies listed here. All product names and trademarks belong to their owners and are used only to identify their products. Every link was taken from the vendor's own website, help centre or official app store listing and checked on 23 October 2026. HomecareOS cannot give anyone access to another company's software. If you are locked out, contact your care agency or the vendor's support page linked in each section.
+**Which door you need**
+
+- **You are a carer.** Your office invites you. Use the carer app named in that invitation, not the office website and not the family portal. If the app says your number or email is not recognised, the office has to add you. The software company usually cannot.
+- **You are a relative, or you receive the care.** The agency turns the family portal on and sends the invitation. A vendor's support team cannot add you to someone else's record. If you have no invitation, phone the agency that provides the care.
+- **You work in the office.** You want the office login, sometimes called the agency hub or care office. It is a different address from the carer app.
+
+If you do not know which system the agency uses, ask them. Searching for a similar brand and guessing a login will not open your visits.
+
+**A note before you start.** HomecareOS is not affiliated with, endorsed by or connected to any of the other companies listed here. All product names and trademarks belong to their owners and are used only to identify their products. Every link was taken from the vendor's own website, help centre or official app store listing and checked on 23 October 2026. HomecareOS cannot give anyone access to another company's software, and it cannot reset another company's password. If you are locked out, contact your care agency or the vendor's support page linked in each section.
+
+If you run an agency and you are choosing software, this page will not help you decide. See [home care software for UK agencies](/), [home care software pricing](/pricing.html) and the [home care app](/features-mobile-app.html).
 
 ## HomecareOS login
 
@@ -88,7 +98,7 @@ The table shows where each group signs in. "Agency's own address" means each age
 <thead><tr><th style="padding:12px 14px">Software</th><th style="padding:12px 14px">Office login</th><th style="padding:12px 14px">Carer app</th><th style="padding:12px 14px">Family portal</th><th style="padding:12px 14px">How families get access</th></tr></thead>
 <tbody>
 <tr><td style="padding:12px 14px"><strong><a href="#homecareos-login">HomecareOS</a></strong></td><td style="padding:12px 14px">app.homecareos.co.uk/login</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: Family Portal (web)</td><td style="padding:12px 14px">Email invitation from the agency</td></tr>
-<tr><td style="padding:12px 14px"><a href="#birdie">Birdie</a></td><td style="padding:12px 14px">admin.birdie.care (Agency Hub)</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: Family app, in the Birdie app</td><td style="padding:12px 14px">Text invitation from the agency, then the app</td></tr>
+<tr><td style="padding:12px 14px"><a href="#birdie">Birdie Care</a></td><td style="padding:12px 14px">admin.birdie.care (Agency Hub)</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: Family app, in the Birdie app</td><td style="padding:12px 14px">Text invitation from the agency, then the app</td></tr>
 <tr><td style="padding:12px 14px"><a href="#onetouch-health">OneTouch Health</a></td><td style="padding:12px 14px">care1 or care2.onetouchhealth.net/cm</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: Family Portal (web)</td><td style="padding:12px 14px">Activation email from the agency, then a web link</td></tr>
 <tr><td style="padding:12px 14px"><a href="#access-care-planning">Access Care Planning</a></td><td style="padding:12px 14px">cloud number.mobizio.com</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: next of kin view in the app</td><td style="padding:12px 14px">Agency registers your device and gives you a login</td></tr>
 <tr><td style="padding:12px 14px"><a href="#access-cm-formerly-cm2000">Access CM</a></td><td style="padding:12px 14px">acm-login.hsc.accessacloud.com</td><td style="padding:12px 14px">iOS and Android</td><td style="padding:12px 14px">Yes: Client Portal</td><td style="padding:12px 14px">Set up by the agency</td></tr>
@@ -113,7 +123,7 @@ The table shows where each group signs in. "Agency's own address" means each age
 ```html
 <nav aria-label="Providers on this page" style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 32px">
   <a href="#homecareos-login" style="display:inline-block;padding:6px 14px;border:1px solid var(--primary);border-radius:999px;background:var(--primary);color:var(--white);font-size:0.875rem;font-weight:600;text-decoration:none">HomecareOS</a>
-  <a href="#birdie" style="display:inline-block;padding:6px 14px;border:1px solid var(--gray-200);border-radius:999px;background:var(--white);color:var(--primary);font-size:0.875rem;font-weight:600;text-decoration:none">Birdie</a>
+  <a href="#birdie" style="display:inline-block;padding:6px 14px;border:1px solid var(--gray-200);border-radius:999px;background:var(--white);color:var(--primary);font-size:0.875rem;font-weight:600;text-decoration:none">Birdie Care</a>
   <a href="#onetouch-health" style="display:inline-block;padding:6px 14px;border:1px solid var(--gray-200);border-radius:999px;background:var(--white);color:var(--primary);font-size:0.875rem;font-weight:600;text-decoration:none">OneTouch Health</a>
   <a href="#access-care-planning" style="display:inline-block;padding:6px 14px;border:1px solid var(--gray-200);border-radius:999px;background:var(--white);color:var(--primary);font-size:0.875rem;font-weight:600;text-decoration:none">Access Care Planning</a>
   <a href="#access-cm-formerly-cm2000" style="display:inline-block;padding:6px 14px;border:1px solid var(--gray-200);border-radius:999px;background:var(--white);color:var(--primary);font-size:0.875rem;font-weight:600;text-decoration:none">Access CM</a>
@@ -131,7 +141,13 @@ The table shows where each group signs in. "Agency's own address" means each age
 </nav>
 ```
 
-## Birdie
+## The same three questions, for each system
+
+Each section below answers the same three questions: where office staff sign in, where carers sign in, and how a family gets access. The steps come from that company's own help pages. Start with the role above, then jump to the system your agency named. HomecareOS's own sign-in stays at the top of this page.
+
+## Birdie Care
+
+Birdie Care (birdie.care) is the UK home care software for domiciliary care agencies. The sign-in below is for that product.
 
 - **Office login (Agency Hub):** [admin.birdie.care](https://admin.birdie.care/). Birdie's help centre says the Agency Hub uses a one-time "magic link" sent to your email instead of a password.
 - **Carer app:** Birdie, on the [App Store](https://apps.apple.com/gb/app/birdie-care/id1254394392) and [Google Play](https://play.google.com/store/apps/details?id=com.kametventures.qoqoon.familyApp). Carers sign in with the mobile number their care manager has registered.
