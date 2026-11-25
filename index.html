@@ -80,8 +80,8 @@
     .hero-devices{position:relative;width:100%;max-width:600px;margin:0 auto}
     .hero-desktop{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);width:100%}
     .hero-desktop img{width:100%;height:auto;display:block}
-    /* Click-to-play hero video. Facade pattern: the poster stays a plain <img>
-       so it remains the LCP element with fetchpriority, and the <video> is only
+    /* Click-to-play hero video. Facade pattern: the poster stays a plain image
+       so it remains the LCP element with fetchpriority, and the video element is only
        created on click, so no video bytes load until someone asks for them.
        Self-hosted deliberately: the site CSP allows frame-src for Calendly only,
        while media-src falls back to default-src 'self'. */
@@ -95,8 +95,8 @@
     .hero-video-play:hover .hero-video-icon{transform:scale(1.07)}
     .hero-video-label{font-size:.9rem;font-weight:600;line-height:1.3;text-shadow:0 1px 8px rgba(0,0,0,.55)}
     @media (prefers-reduced-motion:reduce){.hero-video-play,.hero-video-icon{transition:none}.hero-video-play:hover .hero-video-icon{transform:none}}
-    /* Muted in-view loop behind the LCP still. The dashboard <img> stays in
-       the document with fetchpriority; the <video> is preload=none, opacity 0
+    /* Muted in-view loop behind the LCP still. The dashboard image stays in
+       the document with fetchpriority; the video element is preload=none, opacity 0
        until it is actually playing, and is removed under reduced motion. */
     .hero-loop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;z-index:1;background:transparent}
     .hero-loop.is-on{opacity:1;transition:opacity .7s ease}
@@ -764,7 +764,7 @@
         <div class="week-morph" data-scroll-frame>
           <div class="week-morph-stage" aria-hidden="true">
             <figure class="week-morph-center shot">
-              <img data-src="images/photos/rota-800.webp" data-srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="" width="1400" height="840" decoding="async">
+              <img data-src="images/photos/rota-800.webp" data-srcset="images/photos/rota-800.webp 800w, images/photos/rota.webp 1400w" sizes="(max-width: 768px) 90vw, 640px" alt="HomecareOS rota bringing a scattered week of home care visits into one grid. Demo data." width="1400" height="840" decoding="async">
             </figure>
             <span class="week-chip week-chip--1">Spreadsheet<em>unallocated visits</em></span>
             <span class="week-chip week-chip--2">WhatsApp group<em>who is covering?</em></span>
@@ -884,7 +884,7 @@
                 <img src="images/photos/care-plan-health-800.webp" srcset="images/photos/care-plan-health-800.webp 800w, images/photos/care-plan-health.webp 1400w" sizes="(max-width: 768px) 40vw, 240px" alt="" width="1400" height="840" loading="lazy" decoding="async">
               </figure>
               <figure class="frame-piece frame-piece--phone">
-                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="" width="390" height="844" loading="lazy" decoding="async">
+                <img src="images/photos/observations-390.webp" srcset="images/photos/observations-390.webp 390w, images/photos/observations.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="HomecareOS carer app showing observations recorded on a home care visit." width="390" height="844" loading="lazy" decoding="async">
               </figure>
             </div>
           </div>
@@ -971,7 +971,7 @@
                 <img src="images/photos/family-elderly-tablet.webp" alt="A family gathered around a tablet at the kitchen table" width="800" height="533" loading="lazy" decoding="async">
               </figure>
               <figure class="frame-piece frame-piece--tr">
-                <img src="images/photos/messaging-390.webp" srcset="images/photos/messaging-390.webp 390w, images/photos/messaging.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="" width="390" height="844" loading="lazy" decoding="async">
+                <img src="images/photos/messaging-390.webp" srcset="images/photos/messaging-390.webp 390w, images/photos/messaging.webp 780w" sizes="(max-width: 768px) 80px, 120px" alt="HomecareOS carer app messages between the carer and the office." width="390" height="844" loading="lazy" decoding="async">
               </figure>
             </div>
           </div>
@@ -1310,10 +1310,10 @@
               </div>
               </div>
               <figure class="frame-piece frame-piece--phone frame-piece--gal-left">
-                <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 390w, images/photos/visits.webp 780w" sizes="110px" alt="" width="390" height="844" loading="lazy" decoding="async">
+                <img src="images/photos/visits-390.webp" srcset="images/photos/visits-390.webp 390w, images/photos/visits.webp 780w" sizes="110px" alt="HomecareOS carer app listing the day's home care visits." width="390" height="844" loading="lazy" decoding="async">
               </figure>
               <figure class="frame-piece frame-piece--phone frame-piece--gal-right">
-                <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 390w, images/photos/emar-phone.webp 780w" sizes="110px" alt="" width="390" height="844" loading="lazy" decoding="async">
+                <img src="images/photos/emar-phone-390.webp" srcset="images/photos/emar-phone-390.webp 390w, images/photos/emar-phone.webp 780w" sizes="110px" alt="HomecareOS carer app medication record on a home care visit." width="390" height="844" loading="lazy" decoding="async">
               </figure>
             </div>
             <div class="desktop-gallery-info">
