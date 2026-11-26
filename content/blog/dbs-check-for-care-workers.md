@@ -120,7 +120,7 @@ Northern Ireland uses AccessNI. The official starting point for employers is the
 
 ## Recording the check without pretending it expires
 
-[Staff records](/features-staff-management.html) in HomecareOS keep a renewal date and the document on the carer record, alongside training and the registration your nation uses. [Recruitment](/features-recruitment.html) treats the background check as a stage in hiring, labelled DBS, PVG or AccessNI. That is a place to put the certificate number, the date of issue, the level, whether the barred list was included, and the date you will run the next status check.
+[Staff records](/features-staff-management.html) in HomecareOS keep a renewal date and the document on the carer record, alongside training and the registration your nation uses. The [HomecareOS recruitment portal](/features-recruitment.html) treats the background check as a stage in hiring, labelled DBS, PVG or AccessNI. That is a place to put the certificate number, the date of issue, the level, whether the barred list was included, and the date you will run the next status check.
 
 The software does not apply to DBS for you, and it does not log in to the Update Service. The date on the record is yours. DBS has already said the certificate itself does not expire. If the date you type is "three years from issue" because that is your policy, write the policy down. An inspector can ask why that interval, and the honest answer is that you chose it, not that DBS or CQC imposed it.
 
@@ -139,4 +139,4 @@ The hiring list this check belongs to, from the business plan through to the fir
 - [Section 7](https://www.legislation.gov.uk/ukpga/2006/47/section/7) and [section 9](https://www.legislation.gov.uk/ukpga/2006/47/section/9) of the Safeguarding Vulnerable Groups Act 2006.
 - [Regulated roles in care](https://www.mygov.scot/list-of-regulated-roles/care), the [PVG scheme](https://www.mygov.scot/pvg-scheme), and [PVG for work outside Scotland](https://www.mygov.scot/pvg-outside-scotland), Disclosure Scotland.
 - [AccessNI criminal record checks](https://www.nidirect.gov.uk/campaigns/accessni-criminal-record-checks).
-- [HomecareOS staff management](/features-staff-management.html) and [recruitment](/features-recruitment.html), for what the product stores.
+- [HomecareOS staff management](/features-staff-management.html) and [care recruitment software](/features-recruitment.html), for what the product stores.

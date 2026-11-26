@@ -19,7 +19,7 @@ related:
     href: /blog/onboarding-new-carers-home-care.html
     category: Recruitment
     summary: What happens after the interview, from the conditional offer to the first solo visit.
-feature_title: Recruitment
+feature_title: Care recruitment software
 feature_href: /features-recruitment.html
 feature_category: Feature
 feature_summary: Email invites, an online apply portal, and seven stages from application to onboarding in HomecareOS.
@@ -36,7 +36,7 @@ faqs:
     a: No. HomecareOS tracks applicants through seven stages, including an interview stage, so you can see who is waiting for an interview and who has moved on to an offer. The questions and the scoring decision stay with your managers.
 cta_title: Track every applicant from application to onboarding
 cta_text: The HomecareOS recruitment portal starts at £49 a month. Or book a short demo, or call Phil on 01905 674704.
-cta_secondary: Recruitment features
+cta_secondary: HomecareOS recruitment portal
 cta_secondary_href: /features-recruitment.html
 ---
 
@@ -131,14 +131,14 @@ If you use a short work trial, Acas says it should be a reasonable length, such 
 
 ## How HomecareOS helps
 
-HomecareOS does not write or score your interview questions. That stays with your managers. What it does is keep the whole applicant journey in one place, so interviews do not get lost between emails and spreadsheets.
+HomecareOS does not write or score your interview questions. That stays with your managers. What it does is keep the whole applicant journey in the [HomecareOS recruitment portal](/features-recruitment.html), so interviews do not get lost between emails and spreadsheets.
 
 - The agency invites an applicant **by email**. SMS invites are **not** built.
 - The applicant completes an online **/apply** portal with their application, documents, right to work, **two references**, DBS details and a health questionnaire.
 - The agency tracks each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. You can see who is waiting for an interview and who is ready for an offer. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that matters.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically, so you still decide when [onboarding](/blog/onboarding-new-carers-home-care.html) ends and visits begin.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

@@ -1,6 +1,6 @@
 ---
-title: "Applicant Tracking for Home Care Agencies"
-description: What applicant tracking is for a home care agency, why spreadsheets fail, and how a staged pipeline keeps safer recruitment evidence in one place.
+title: "Care Applicant Tracking System for UK Agencies"
+description: A care applicant tracking system for UK home care agencies. Keep DBS, references and right-to-work checks on one pipeline.
 slug: applicant-tracking-home-care-agencies
 date: 2026-11-06
 keywords: applicant tracking home care, ATS care agency, recruitment pipeline domiciliary care, care worker application tracking, safer recruitment tracking UK
@@ -19,7 +19,7 @@ related:
     href: /blog/care-worker-recruitment-checklist.html
     category: Recruitment
     summary: Right to work, DBS, references and a health questionnaire under Regulation 19.
-feature_title: Recruitment
+feature_title: Care recruitment software
 feature_href: /features-recruitment.html
 feature_category: Feature
 feature_summary: Email invites, an online apply portal, and seven stages from application to onboarding in HomecareOS.
@@ -36,7 +36,7 @@ faqs:
     a: The HomecareOS recruitment portal starts at £49 a month.
 cta_title: See applicant tracking on a pipeline like yours
 cta_text: The HomecareOS recruitment portal starts at £49 a month. Or book a short demo, or call Phil on 01905 674704.
-cta_secondary: Recruitment features
+cta_secondary: HomecareOS recruitment portal
 cta_secondary_href: /features-recruitment.html
 ---
 
@@ -44,7 +44,7 @@ Most home care agencies do not fail safer recruitment because they have never he
 
 Applicant tracking is the antidote. It means every applicant has one record, a clear stage, and the documents for that stage attached to it. When CQC samples a staff file under [Regulation 19](https://www.legislation.gov.uk/uksi/2014/2936/regulation/19) and [Schedule 3](https://www.legislation.gov.uk/uksi/2014/2936/schedule/3), you open one person, not five folders.
 
-This guide is for registered managers who are still running recruitment from inboxes and shared drives. It is not a vendor bake-off. For the checklist of checks themselves, see our [care worker recruitment checklist](/blog/care-worker-recruitment-checklist.html). For ideas on attracting applicants, see [how to recruit care workers in the UK](/blog/how-to-recruit-care-workers-uk.html).
+This guide is for registered managers who are still running recruitment from inboxes and shared drives. It is not a vendor bake-off. For a comparison of [care recruitment software](/blog/care-recruitment-software-uk.html) for UK agencies, see our round-up. For the checklist of checks themselves, see our [care worker recruitment checklist](/blog/care-worker-recruitment-checklist.html). For ideas on attracting applicants, see [how to recruit care workers in the UK](/blog/how-to-recruit-care-workers-uk.html).
 
 ## What applicant tracking actually is
 
@@ -114,7 +114,7 @@ HomecareOS recruitment is applicant tracking built for domiciliary care, not a g
 - The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [HomecareOS recruitment portal](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
@@ -124,4 +124,4 @@ The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recr
 - [Check a job applicant's right to work](https://www.gov.uk/check-job-applicant-right-to-work) and the [employer's guide to right to work checks](https://www.gov.uk/government/publications/right-to-work-checks-employers-guide).
 - [Skills for Care: recruitment and retention](https://www.skillsforcare.org.uk/Recruitment-and-retention/Recruitment-and-retention.aspx).
 - [Staff file requirements for UK home care agencies](/blog/safer-recruitment-staff-files-uk.html), for the four-nation file contents.
-- [HomecareOS recruitment](/features-recruitment.html) and the [portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free).
+- [Care recruitment software](/features-recruitment.html) and the [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free).

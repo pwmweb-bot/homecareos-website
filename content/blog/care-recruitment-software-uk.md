@@ -1,6 +1,6 @@
 ---
-title: "Best Care Recruitment Software in the UK: A Fair Round-up"
-description: A fair round-up of care recruitment software and applicant tracking systems for UK home care agencies, with published prices and how to choose.
+title: "Best Care Recruitment Software for UK Agencies"
+description: Compare UK care recruitment software and ATS tools for home care agencies, including DBS, references and right to work.
 slug: care-recruitment-software-uk
 date: 2026-11-13
 keywords: care recruitment software, care recruitment software UK, applicant tracking system care, ATS for care providers, domiciliary care recruitment software, home care recruitment software
@@ -11,7 +11,7 @@ image: /images/photos/analytics-charts-laptop.webp
 image_alt: A laptop showing charts, used to compare care recruitment software
 image_caption: Compare recruitment tools on the job they do for your agency, not on the length of the feature list.
 related:
-  - title: Applicant tracking for home care agencies
+  - title: Home care applicant tracking system
     href: /blog/applicant-tracking-home-care-agencies.html
     category: Recruitment
     summary: What applicant tracking is, why spreadsheets fail, and how a staged pipeline keeps evidence together.
@@ -19,7 +19,7 @@ related:
     href: /blog/care-worker-recruitment-checklist.html
     category: Recruitment
     summary: Right to work, DBS, references and health checks, in the order most agencies run them.
-feature_title: Recruitment
+feature_title: Care recruitment software
 feature_href: /features-recruitment.html
 feature_category: Feature
 feature_summary: Email invites, an online apply portal, and seven stages from application to onboarding in HomecareOS.
@@ -36,7 +36,7 @@ faqs:
     a: For a home care agency it helps a lot. If your recruitment tool and your care management system are separate, someone usually has to re-type each new carer's details and documents. Tools that hand a hired applicant straight into a staff or carer record save that step.
 cta_title: Run safer recruitment in the same system as your rota
 cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
-cta_secondary: Recruitment features
+cta_secondary: HomecareOS recruitment portal
 cta_secondary_href: /features-recruitment.html
 ---
 
@@ -44,7 +44,7 @@ Searching for "care recruitment software" brings up a long list of tools that al
 
 This round-up is written for UK home care agencies. It describes what each tool says it does on its own public pages, gives prices only where the supplier publishes them, and is upfront that HomecareOS is our product. Features and prices change, so check each supplier's current page before you decide.
 
-If you are still working from spreadsheets, start with our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html), which explains why a staged pipeline matters.
+If you are still working from spreadsheets, start with our [home care applicant tracking system](/blog/applicant-tracking-home-care-agencies.html) guide, which explains why a staged pipeline matters.
 
 ## What care recruitment software has to do
 
@@ -89,7 +89,7 @@ HomecareOS is our own care management system for UK home care agencies, so treat
 
 **Best for:** small and growing home care agencies that want safer recruitment evidence and the rota in one system. If you need to post adverts to many job boards in one click, or you hire at the scale of a large care group, look at the dedicated ATS options below as well.
 
-See the [recruitment feature page](/features-recruitment.html) for screens and detail.
+See the [HomecareOS recruitment portal](/features-recruitment.html) for screens and detail.
 
 ### CarePoint365
 
@@ -164,4 +164,4 @@ Whatever you choose, it will not fix slow decisions on its own. Applicants drop 
 
 HomecareOS is a good fit if you are a home care agency that wants recruitment, staff records and the rota in one place, at a published price. Applicants complete one online portal with their documents, right to work, two references, DBS details and health questionnaire. You see every applicant across seven stages, and a hire becomes a carer record ready to add to the rota.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.

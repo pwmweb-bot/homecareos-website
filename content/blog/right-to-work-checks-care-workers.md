@@ -19,7 +19,7 @@ related:
     href: /blog/dbs-check-for-care-workers.html
     category: Compliance
     summary: The other check every new carer needs, and why passing one does not cover the other.
-feature_title: Recruitment
+feature_title: Care recruitment software
 feature_href: /features-recruitment.html
 feature_category: Feature
 feature_summary: Email invites, an online apply portal, and seven stages from application to onboarding in HomecareOS.
@@ -36,7 +36,7 @@ faqs:
     a: Not by name. Schedule 3 asks for proof of identity with a recent photograph, a DBS certificate where required, conduct in previous care work, employment history, qualifications and health information. The right to work check is a separate legal duty under immigration law, enforced by the Home Office. Most agencies keep both in the same staff file.
 cta_title: Collect right to work details before the first visit
 cta_text: The HomecareOS recruitment portal is £49 a month. Or book a short demo, or call Phil on 01905 674704.
-cta_secondary: Recruitment features
+cta_secondary: HomecareOS recruitment portal
 cta_secondary_href: /features-recruitment.html
 ---
 
@@ -155,6 +155,8 @@ The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?
 - The applicant completes an online **/apply** portal with their application, documents, right to work details, two references, DBS details and a health questionnaire.
 - The office tracks each applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding.
 - When you hire, the applicant is converted into a carer record, ready for you to add to the rota.
+
+See how those stages work in our [care recruitment software](/features-recruitment.html), where right to work, DBS and references stay on one applicant until hire.
 
 HomecareOS does not carry out the Home Office check for you. You still view the share code result or check the original documents yourself, and record the date. What changes is that the details arrive in one place, and you are not chasing them on the morning of the first visit.
 

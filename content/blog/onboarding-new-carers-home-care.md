@@ -19,7 +19,7 @@ related:
     href: /blog/care-certificate-home-care-agencies.html
     category: Training
     summary: The 16 standards most new carers in England work through during induction, and who signs them off.
-feature_title: Recruitment
+feature_title: Care recruitment software
 feature_href: /features-recruitment.html
 feature_category: Feature
 feature_summary: Email invites, an online apply portal, and seven stages from application to onboarding in HomecareOS.
@@ -36,7 +36,7 @@ faqs:
     a: No. On hire, the applicant is converted into a carer record that is ready to be added to the rota. You decide when they start visits.
 cta_title: Take new carers from application to onboarding in one place
 cta_text: The HomecareOS recruitment portal starts at £49 a month. Or book a short demo, or call Phil on 01905 674704.
-cta_secondary: Recruitment features
+cta_secondary: HomecareOS recruitment portal
 cta_secondary_href: /features-recruitment.html
 ---
 
@@ -140,14 +140,14 @@ Record each of these conversations. They are part of the evidence for Regulation
 
 ## How HomecareOS helps
 
-The HomecareOS recruitment portal keeps the first half of this journey in one place.
+The [HomecareOS recruitment portal](/features-recruitment.html) keeps the first half of this journey in one place.
 
 - The agency invites an applicant **by email**. SMS invites are **not** built.
 - The applicant completes an online **/apply** portal with their application, documents, right to work, **two references**, DBS details and a health questionnaire.
 - The agency tracks each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. You can see at a glance who is waiting on what. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that matters.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**, without retyping their details. They are **not** added to the rota automatically, so you still decide when shadowing ends and visits begin.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
