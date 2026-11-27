@@ -167,7 +167,7 @@ When a carer leaves, you need to replace them without losing weeks to paperwork.
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding, so you can see who is waiting on what. When you hire, the applicant becomes a carer record that is ready to add to the rota, with the details you collected already in place. If your exit interviews show that new starters leave because the job was not what they expected, our guides to [how to recruit care workers in the UK](/blog/how-to-recruit-care-workers-uk.html) and [values-based recruitment](/blog/values-based-recruitment-social-care.html) can help you fix that at the start.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

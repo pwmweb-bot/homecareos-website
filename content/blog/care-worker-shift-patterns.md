@@ -197,7 +197,7 @@ The HomecareOS recruitment portal helps you fill those gaps steadily. You invite
 
 Once new carers are in, our guides to [onboarding new carers](/blog/onboarding-new-carers-home-care.html), [care worker retention ideas](/blog/care-worker-retention-ideas.html) and [reducing carer turnover](/blog/carer-turnover-home-care.html) can help them settle and stay.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

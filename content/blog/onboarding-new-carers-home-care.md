@@ -147,7 +147,7 @@ The [HomecareOS recruitment portal](/features-recruitment.html) keeps the first 
 - The agency tracks each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. You can see at a glance who is waiting on what. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that matters.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**, without retyping their details. They are **not** added to the rota automatically, so you still decide when shadowing ends and visits begin.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

@@ -164,4 +164,4 @@ Whatever you choose, it will not fix slow decisions on its own. Applicants drop 
 
 HomecareOS is a good fit if you are a home care agency that wants recruitment, staff records and the rota in one place, at a published price. Applicants complete one online portal with their documents, right to work, two references, DBS details and health questionnaire. You see every applicant across seven stages, and a hire becomes a carer record ready to add to the rota.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read about [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.

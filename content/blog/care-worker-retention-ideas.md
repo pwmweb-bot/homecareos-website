@@ -177,7 +177,7 @@ HomecareOS does not claim to fix retention for you. Pay, hours, training and lea
 - You track each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding.
 - On hire, the applicant converts into a carer record that is **ready to be added to the rota**. They are not added to the rota automatically, so you stay in control of how and when a new carer starts.
 
-The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
 
 ## Sources
 
@@ -188,4 +188,4 @@ The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitme
 - [Building a workforce that stays](https://www.skillsforcare.org.uk/Recruitment-and-retention/Retaining-your-workforce/Building-a-workforce-that-stays/Building-a-workforce-that-stays.aspx) and [Staff wellbeing, rewards and recognition](https://www.skillsforcare.org.uk/Recruitment-and-retention/Retaining-your-workforce/Building-a-workforce-that-stays/Staff-wellbeing-rewards-and-recognition.aspx), Skills for Care retention guidance.
 - [Induction toolkit](https://www.skillsforcare.org.uk/Recruitment-and-retention/Induction-toolkit/Induction-toolkit.aspx) and [Care Workforce Pathway: supporting recruitment and retention](https://www.skillsforcare.org.uk/Developing-your-workforce/Care-workforce-pathway/Supporting-recruitment-and-retention.aspx), Skills for Care.
 - [Regulation 18: Staffing](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-18), CQC.
-- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), for what the product does today.
+- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), for what the product does today.

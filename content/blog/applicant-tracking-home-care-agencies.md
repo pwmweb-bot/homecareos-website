@@ -114,7 +114,7 @@ HomecareOS recruitment is applicant tracking built for domiciliary care, not a g
 - The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [HomecareOS recruitment portal](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [HomecareOS recruitment portal](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
@@ -124,4 +124,4 @@ The HomecareOS recruitment portal starts at **£49 a month**. Start on the [recr
 - [Check a job applicant's right to work](https://www.gov.uk/check-job-applicant-right-to-work) and the [employer's guide to right to work checks](https://www.gov.uk/government/publications/right-to-work-checks-employers-guide).
 - [Skills for Care: recruitment and retention](https://www.skillsforcare.org.uk/Recruitment-and-retention/Recruitment-and-retention.aspx).
 - [Staff file requirements for UK home care agencies](/blog/safer-recruitment-staff-files-uk.html), for the four-nation file contents.
-- [Care recruitment software](/features-recruitment.html) and the [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free).
+- [Care recruitment software](/features-recruitment.html) and the [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal).

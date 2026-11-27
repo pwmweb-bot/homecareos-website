@@ -3,6 +3,11 @@
 Source posts live in content/blog/*.md (not served; .htaccess returns 404).
 `python3 build.py publish` writes blog/<slug>.html, refreshes the cards on
 blog.html, and rebuilds sitemap.xml.
+
+In-page images stay WebP when that is what the post names. Open Graph and
+Twitter images are JPEG or PNG: a WebP source is written to an og/ folder
+beside it (Pillow required) because WhatsApp, LinkedIn and some messaging
+apps do not render WebP share images.
 """
 import datetime
 import glob
@@ -302,13 +307,112 @@ def _word_count(markdown):
     return len(re.findall(r"[A-Za-z0-9'’£-]+", text))
 
 
+def share_image_target(image_path):
+    """Site path for og:image and twitter:image, and whether a JPEG must be written.
+
+    JPEG and PNG paths are used as they are. WebP is kept for the <img> tag and
+    a sibling JPEG is used for sharing: /images/photos/name.webp becomes
+    /images/photos/og/name.jpg.
+    """
+    path = image_path if str(image_path).startswith("/") else "/" + str(image_path)
+    path = path.split("?", 1)[0].split("#", 1)[0]
+    lower = path.lower()
+    if lower.endswith((".jpg", ".jpeg", ".png")):
+        return path, os.path.join(ROOT, path.lstrip("/")), False
+    if lower.endswith(".webp"):
+        rel = path.lstrip("/")
+        dest_rel = os.path.join(
+            os.path.dirname(rel), "og", os.path.splitext(os.path.basename(rel))[0] + ".jpg"
+        ).replace(os.sep, "/")
+        return "/" + dest_rel, os.path.join(ROOT, dest_rel), True
+    raise SystemExit(f"Open Graph image must be JPEG, PNG or WebP: {image_path}")
+
+
+def _write_og_jpeg(src_fs, dest_fs):
+    try:
+        from PIL import Image
+    except ImportError:
+        raise SystemExit(
+            "Pillow is required to build a JPEG Open Graph image from WebP. "
+            "Install it with: pip install pillow"
+        )
+    with Image.open(src_fs) as im:
+        if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+            rgba = im.convert("RGBA")
+            background = Image.new("RGB", rgba.size, (255, 255, 255))
+            background.paste(rgba, mask=rgba.split()[-1])
+            rgb = background
+        else:
+            rgb = im.convert("RGB")
+        os.makedirs(os.path.dirname(dest_fs), exist_ok=True)
+        rgb.save(dest_fs, "JPEG", quality=86, optimize=True)
+
+
+def _image_size(path):
+    """Pixel size of a PNG or JPEG. Stdlib only, so publish does not need Pillow for these."""
+    with open(path, "rb") as handle:
+        head = handle.read(24)
+        if head.startswith(b"\x89PNG\r\n\x1a\n"):
+            import struct
+            width, height = struct.unpack(">II", head[16:24])
+            return width, height
+        if not head.startswith(b"\xff\xd8"):
+            raise SystemExit(f"Open Graph image is not a JPEG or PNG: {path}")
+        handle.seek(2)
+        while True:
+            byte = handle.read(1)
+            if not byte:
+                break
+            if byte != b"\xff":
+                continue
+            while byte == b"\xff":
+                byte = handle.read(1)
+                if not byte:
+                    break
+            if not byte or byte in (b"\xd8", b"\xd9", b"\x01") or 0xD0 <= byte[0] <= 0xD7:
+                continue
+            length_bytes = handle.read(2)
+            if len(length_bytes) < 2:
+                break
+            length = int.from_bytes(length_bytes, "big")
+            if byte[0] in (0xC0, 0xC1, 0xC2):
+                handle.read(1)
+                height = int.from_bytes(handle.read(2), "big")
+                width = int.from_bytes(handle.read(2), "big")
+                return width, height
+            handle.seek(length - 2, 1)
+    raise SystemExit(f"could not read Open Graph image dimensions: {path}")
+
+
+def ensure_share_image(image_path):
+    """Return (site_path, width, height) for og:image and twitter:image.
+
+    Writes the JPEG when the source is WebP and the file is missing or older
+    than the source. The in-page <img> should keep using image_path.
+    """
+    url_path, dest, from_webp = share_image_target(image_path)
+    if from_webp:
+        src = image_path if str(image_path).startswith("/") else "/" + str(image_path)
+        src = src.split("?", 1)[0].split("#", 1)[0]
+        src_fs = os.path.join(ROOT, src.lstrip("/"))
+        if not os.path.isfile(src_fs):
+            raise SystemExit(f"share image source missing: {src}")
+        if not os.path.isfile(dest) or os.path.getmtime(src_fs) > os.path.getmtime(dest):
+            _write_og_jpeg(src_fs, dest)
+    if not os.path.isfile(dest):
+        raise SystemExit(f"share image missing: {url_path}")
+    width, height = _image_size(dest)
+    return url_path, width, height
+
+
 def render_post(meta, body_html, markdown):
     title = meta["title"]
     description = meta["description"]
     slug = meta["slug"]
     url = f"{SITE}/blog/{slug}.html"
     image = meta["image"] if meta["image"].startswith("/") else "/" + meta["image"]
-    image_url = SITE + image
+    share_path, share_w, share_h = ensure_share_image(image)
+    image_url = SITE + share_path
     published = meta["date"] + "T09:00:00+01:00"
     modified = meta["updated"] + "T09:00:00+01:00"
     if "T" in meta["updated"]:
@@ -386,7 +490,7 @@ def render_post(meta, body_html, markdown):
         "@type": "Article",
         "headline": title,
         "description": description,
-        "image": {"@type": "ImageObject", "url": image_url, "width": 1200, "height": 630},
+        "image": {"@type": "ImageObject", "url": image_url, "width": share_w, "height": share_h},
         "datePublished": published,
         "dateModified": modified,
         "author": {
@@ -446,8 +550,8 @@ def render_post(meta, body_html, markdown):
   <meta property="og:type" content="article">
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{image_url}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="{share_w}">
+  <meta property="og:image:height" content="{share_h}">
   <meta property="og:image:alt" content="{esc_attr(meta["image_alt"])}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="HomecareOS">

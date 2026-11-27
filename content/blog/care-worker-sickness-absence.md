@@ -190,14 +190,14 @@ That last one is often the real issue. When an agency runs with no slack, every 
 
 HomecareOS is built for the day-to-day side of this. When the office records a carer's absence, the visits they held are taken off them and appear on a **Needs Cover** list, and the managers who arrange cover are alerted to the sickness. The rota shows who is off sick or on leave each day. Each carer's record keeps their absence history, including whether a return to work meeting was done. The absence report shows a **Bradford Factor** leaderboard, absence rate, sickness by category and return to work compliance, so you can spot patterns and start the right conversations.
 
-Because so much sickness pressure comes from being short-staffed, the [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free) helps you keep a steady flow of new carers:
+Because so much sickness pressure comes from being short-staffed, the [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal) helps you keep a steady flow of new carers:
 
 - You invite an applicant by email.
 - They complete an online **/apply** portal with their application, documents, right to work, two references, DBS details and a health questionnaire.
 - You track them through seven stages: application, documents, references, DBS, interview, offer and onboarding.
 - When you hire, the applicant becomes a carer record, ready for you to add to the rota.
 
-The recruitment portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), [book a demo](/booking.html), or call Phil on 01905 674704.
+The recruitment portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

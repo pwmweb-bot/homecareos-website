@@ -119,7 +119,7 @@ In HomecareOS:
 - The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer, onboarding.
 - On hire, conversion creates a carer record **ready to be added to the rota**. It is **not** added automatically.
 
-The HomecareOS recruitment portal starts at **£49 a month**. Open the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), see [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. Open the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), see [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
@@ -128,4 +128,4 @@ The HomecareOS recruitment portal starts at **£49 a month**. Open the [recruitm
 - [CQC recruitment policy and procedures](https://www.cqc.org.uk/guidance-regulation/registration/supporting-documents-provider/document/recruitment-policy-procedures).
 - [Employer's guide to right to work checks](https://www.gov.uk/government/publications/right-to-work-checks-employers-guide), [Check a job applicant's right to work](https://www.gov.uk/check-job-applicant-right-to-work), [Legal right to work in the UK](https://www.gov.uk/legal-right-work-uk).
 - [DBS eligibility guidance](https://www.gov.uk/government/collections/dbs-eligibility-guidance), [Find out which DBS check](https://www.gov.uk/find-out-dbs-check), [DBS checks: guidance for applicants](https://www.gov.uk/dbs-check-applicant-criminal-record).
-- [HomecareOS recruitment](/features-recruitment.html) and the [portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free).
+- [HomecareOS recruitment](/features-recruitment.html) and the [portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal).
