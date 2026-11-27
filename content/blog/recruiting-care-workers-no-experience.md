@@ -157,7 +157,7 @@ When you widen your net to people new to care, you get more applicants, and more
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding, so you can see who is waiting on what. When you hire, the applicant becomes a carer record that is ready to add to the rota, with the details you collected already in place. Read more in our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) and [how to recruit care workers in the UK](/blog/how-to-recruit-care-workers-uk.html).
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

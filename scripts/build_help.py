@@ -21,6 +21,11 @@ from articles import ARTICLES, ROLES, GETTING_STARTED  # noqa: E402
 
 SITE = "https://www.homecareos.co.uk"
 UPDATED = "2026-10-28"
+# Same share image as the marketing pages. JPEG/PNG only: messaging apps drop WebP.
+OG_IMAGE = f"{SITE}/images/photos/rota-og.png"
+OG_IMAGE_W = "1650"
+OG_IMAGE_H = "976"
+OG_IMAGE_ALT = "The new HomecareOS rota, a day of visit blocks for a UK home care agency, with carers down the left and visits across"
 HELP_CSS = "/help/help.css?v=20261026"
 HELP_JS = "/js/help.js?v=20261026"
 BY_SLUG = {a["slug"]: a for a in ARTICLES}
@@ -112,9 +117,14 @@ def head(title, description, canonical, ld, og_type="article"):
   <meta property="og:url" content="{canonical}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="HomecareOS">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="{OG_IMAGE}">
+  <meta property="og:image:width" content="{OG_IMAGE_W}">
+  <meta property="og:image:height" content="{OG_IMAGE_H}">
+  <meta property="og:image:alt" content="{esc(OG_IMAGE_ALT)}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(description)}">
+  <meta name="twitter:image" content="{OG_IMAGE}">
   <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/dmsans.css?v=20260521">
   <link rel="stylesheet" href="/styles.css?v=20261016cta">

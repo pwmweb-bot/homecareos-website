@@ -162,7 +162,7 @@ A good probation starts with a well-organised recruitment process. The HomecareO
 
 You track every applicant through seven stages: application, documents, references, DBS, interview, offer and onboarding. When you hire, the applicant becomes a carer record that is ready to add to the rota, so the details you collected are there from day one of probation.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

@@ -171,7 +171,7 @@ The HomecareOS recruitment portal keeps every applicant in one place, so health 
 
 Because the health questionnaire is one of the sections in the applicant's /apply portal, agree with your HR adviser how it fits your Section 60 approach before you roll it out, including at what point in your process you invite applicants and who reviews their health answers.
 
-The HomecareOS recruitment portal is **£49 a month**. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read about [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read about [recruitment features](/features-recruitment.html), [book a 15-minute demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

@@ -161,7 +161,7 @@ The HomecareOS recruitment portal keeps that process in one place. You invite an
 
 If you are building up your team, our guides to [how to recruit care workers in the UK](/blog/how-to-recruit-care-workers-uk.html), [recruiting care workers with no experience](/blog/recruiting-care-workers-no-experience.html) and [onboarding new carers](/blog/onboarding-new-carers-home-care.html) can help new starters settle in well from day one.
 
-The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+The HomecareOS recruitment portal is **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

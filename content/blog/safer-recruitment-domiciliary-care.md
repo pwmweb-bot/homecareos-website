@@ -116,11 +116,11 @@ HomecareOS is built around the recruitment process registered managers already r
 - On hire, the applicant converts to a carer record **ready to be added to the rota** — not added automatically.
 - The recruitment portal starts at **£49 a month**.
 
-Open the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), see our [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+Open the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), see our [care recruitment software](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
 - [Regulation 19: Fit and proper persons employed](https://www.legislation.gov.uk/uksi/2014/2936/regulation/19) and [Schedule 3](https://www.legislation.gov.uk/uksi/2014/2936/schedule/3) on legislation.gov.uk.
 - [CQC guidance on Regulation 19](https://www.cqc.org.uk/guidance-regulation/providers/regulations-service-providers-and-managers/health-social-care-act/regulation-19) (good character, competence before unsupervised work, Care Certificate expectation, person employed, ongoing fitness).
 - [CQC recruitment policy and procedures](https://www.cqc.org.uk/guidance-regulation/registration/supporting-documents-provider/document/recruitment-policy-procedures) supporting document (stages, fair recruitment, Equality Act, UK GDPR, checking why previous employment ended).
-- [HomecareOS recruitment portal](/features-recruitment.html) and the [recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free).
+- [HomecareOS recruitment portal](/features-recruitment.html) and the [recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal).

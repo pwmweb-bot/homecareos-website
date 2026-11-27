@@ -208,7 +208,7 @@ HomecareOS will not fix turnover for you. Pay, hours, culture and leadership are
 - You track each applicant through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. Our guide to [applicant tracking for home care agencies](/blog/applicant-tracking-home-care-agencies.html) explains why that beats a spreadsheet.
 - On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are not added to the rota automatically, so you decide when a new carer is ready for solo visits.
 
-Agencies that sign up now get the portal **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
+Agencies that sign up now get the portal **£49 a month**. Start on the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), read the [recruitment feature page](/features-recruitment.html), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 
@@ -221,4 +221,4 @@ Agencies that sign up now get the portal **£49 a month**. Start on the [recruit
 - [How to involve people who use care in recruitment and retention](https://www.skillsforcare.org.uk/resources/documents/Recruitment-support/Application-and-selection-process/How-to-involve-people-who-use-care-in-recruitment-and-retention.pdf), Skills for Care.
 - [Exit and stay interviews](https://www.keepingwellnwl.nhs.uk/academy/using-workforce-intelligence-data/exit-interviews), Keeping Well North West London (NHS).
 - [Employee turnover and retention factsheet](https://www.cipd.org/uk/knowledge/factsheets/turnover-retention-factsheet/), CIPD.
-- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), for what the product does today.
+- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), for what the product does today.

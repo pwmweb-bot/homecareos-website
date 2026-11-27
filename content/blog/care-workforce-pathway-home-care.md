@@ -158,14 +158,14 @@ Skills for Care's [Care Workforce Pathway](https://www.skillsforcare.org.uk/Deve
 
 ## How HomecareOS helps
 
-The pathway starts with recruiting people who share the values. The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free) keeps that first stage organised:
+The pathway starts with recruiting people who share the values. The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal) keeps that first stage organised:
 
 - You invite an applicant by email.
 - They complete an online **/apply** portal with their application, documents, right to work, two references, DBS details and a health questionnaire.
 - You track them through seven stages: application, documents, references, DBS, interview, offer and onboarding.
 - When you hire, the applicant becomes a carer record, ready for you to add to the rota.
 
-The recruitment portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), [book a demo](/booking.html), or call Phil on 01905 674704.
+The recruitment portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

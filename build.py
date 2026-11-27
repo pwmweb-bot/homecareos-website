@@ -13,6 +13,9 @@ Usage:
   python3 build.py sitemap                 # rewrite sitemap.xml only
   python3 build.py publish                 # every content/blog/*.md except _*
   python3 build.py publish content/blog/x.md
+
+Publish keeps a WebP path on the in-page image. og:image and twitter:image
+are JPEG or PNG; a WebP source is written to images/.../og/<name>.jpg.
 """
 import io, re, sys, glob, os
 from html.parser import HTMLParser

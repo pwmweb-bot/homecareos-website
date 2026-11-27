@@ -113,7 +113,7 @@ HomecareOS is built for this sequence, not for a pile of PDFs in email.
 
 The agency invites an applicant **by email**. SMS invites are not built. The applicant completes an online **/apply** portal with their application, documents, right to work, two references, DBS details and a health questionnaire. The agency tracks them through **seven stages**: application, documents, references, DBS, interview, offer and onboarding. On hire, the applicant is converted into a carer record that is **ready to be added to the rota**. They are **not** added to the rota automatically.
 
-The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitment portal offer](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
+The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitment portal page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), the [recruitment feature page](/features-recruitment.html), or [book a 15-minute demo](/booking.html). You can also call Phil on 01905 674704.
 
 ## Sources
 
@@ -123,4 +123,4 @@ The HomecareOS recruitment portal starts at **£49 a month**. See the [recruitme
 - [Check a job applicant's right to work](https://www.gov.uk/check-job-applicant-right-to-work) and the [employer's guide to right to work checks](https://www.gov.uk/government/publications/right-to-work-checks-employers-guide), GOV.UK / Home Office.
 - [DBS eligibility guidance](https://www.gov.uk/government/collections/dbs-eligibility-guidance) and [Find out which DBS check to apply for](https://www.gov.uk/find-out-dbs-check).
 - [Skills for Care: recruitment and retention](https://www.skillsforcare.org.uk/Recruitment-and-retention/Recruitment-and-retention.aspx) and [values-based recruitment](https://www.skillsforcare.org.uk/Recruitment-and-retention/Values-based-recruitment/Values-based-recruitment.aspx).
-- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), for what the product does today.
+- [HomecareOS recruitment](/features-recruitment.html) and the [recruitment portal landing page](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), for what the product does today.

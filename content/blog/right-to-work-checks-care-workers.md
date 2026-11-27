@@ -149,7 +149,7 @@ GOV.UK says to keep these for the whole time the person works for you and for 2 
 
 ## How HomecareOS helps
 
-The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free) brings the paperwork forward, so it is ready before the offer:
+The [HomecareOS recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal) brings the paperwork forward, so it is ready before the offer:
 
 - The agency invites an applicant by email.
 - The applicant completes an online **/apply** portal with their application, documents, right to work details, two references, DBS details and a health questionnaire.
@@ -160,7 +160,7 @@ See how those stages work in our [care recruitment software](/features-recruitme
 
 HomecareOS does not carry out the Home Office check for you. You still view the share code result or check the original documents yourself, and record the date. What changes is that the details arrive in one place, and you are not chasing them on the morning of the first visit.
 
-The portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal-free), [book a demo](/booking.html), or call Phil on 01905 674704.
+The portal is £49 a month. [See the recruitment portal](https://heroes.homecareos.co.uk/recruitment?utm_source=blog&utm_medium=organic&utm_campaign=recruitment-portal), [book a demo](/booking.html), or call Phil on 01905 674704.
 
 ## Sources
 

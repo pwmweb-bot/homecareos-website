@@ -36,6 +36,8 @@ cta_secondary_href: /pricing.html
 
 Write in British English. Do not invent statistics, quotations, customer names or prices. If a figure is not on a public page you can link, leave it out.
 
+The `image` path can be WebP. Publish keeps that file on the in-page picture and writes a JPEG under `og/` for `og:image` and `twitter:image`.
+
 Link one feature page and two related posts from the body as well as from the front matter.
 
 ## Sources
