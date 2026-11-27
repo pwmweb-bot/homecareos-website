@@ -36,8 +36,11 @@
   }
 
   // Metricool tracker, only loaded after analytics consent is granted.
+  // Same load as the Metricool snippet (be.js, then beTracker.t), kept here
+  // so it does not run before the visitor accepts analytics cookies.
   // Idempotent: safe to call repeatedly.
   var metricoolLoaded = false;
+  var METRICOOL_HASH = '712e44fdf45d5920d9e67f033f090c50';
   function loadMetricool() {
     if (metricoolLoaded) return;
     metricoolLoaded = true;
@@ -48,7 +51,7 @@
     script.async = true;
     var fire = function () {
       if (typeof beTracker !== 'undefined') {
-        beTracker.t({ hash: 'f7e34aa86183f4790e7604e09af1db68' });
+        beTracker.t({ hash: METRICOOL_HASH });
       }
     };
     script.onload = fire;
