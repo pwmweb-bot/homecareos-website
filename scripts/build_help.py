@@ -301,7 +301,7 @@ def article(a):
                 for i, (t, d) in enumerate(a["steps"], 1)]
     ld = [
         {"@context": "https://schema.org", "@type": "HowTo", "name": a["title"], "description": a["description"],
-         "inLanguage": "en-GB", "dateModified": UPDATED, "step": steps_ld},
+         "inLanguage": "en-GB", "dateModified": a.get("updated", UPDATED), "step": steps_ld},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Help", "item": SITE + "/help.html"},
             {"@type": "ListItem", "position": 2, "name": role["name"], "item": f"{SITE}/help.html#{a['role']}"},
