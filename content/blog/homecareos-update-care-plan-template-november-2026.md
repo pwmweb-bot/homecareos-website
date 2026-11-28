@@ -42,8 +42,6 @@ Ask three registered managers what a good care plan asks and you will get three 
 
 That is why the biggest change in HomecareOS this fortnight is a care plan template your agency controls. You choose what every plan asks, how it reads and when a change goes live, and the parts that keep people safe stay locked in place.
 
-Everything below is in the new HomecareOS screens, which are being switched on agency by agency. If your screens look different from a description, call us and we will walk you through it.
-
 ## Make your care plan template uniquely yours
 
 Your care plan template is the list of sections and questions every plan in your agency asks. It starts as the HomecareOS standard for your nation, which is about 20 sections and over 200 questions, and it is yours to shape. You find it under **Settings**, then **Care plan template**.
@@ -55,8 +53,6 @@ Your care plan template is the list of sections and questions every plan in your
 - **Choose how plans read.** In **Settings**, **Agency**, **Details**, pick first person, third person or plain headings. In the third person, About me becomes About Ann. The choice follows the plan onto the screen, the printout and the carer's phone, and nothing already written is rewritten.
 
 Only the owner or the registered manager can change the template, so what your plans ask stays in senior hands. Everyone with access to Settings can see it. Step by step, it is in the help centre: [manage your care plan template](/help/care-plan-template.html) and [choose how care plans are written](/help/how-care-plans-are-written.html).
-
-Coming soon: adding your own questions and prompts to the template.
 
 ## Care plans that are quicker to get right
 
@@ -70,6 +66,7 @@ The template decides what a plan asks. A handful of other changes make the plan 
 - **Terms before sign-off.** Where you have uploaded client terms, sign-off waits until the office records who agreed to them, how, when and which version.
 - **Tell carers when it matters.** When you publish, Tell carers is ticked for you if tasks, medicines, risks or access have changed. Leave it unticked for a spelling fix.
 - **No known allergies, recorded properly.** It is now a recorded fact, with who confirmed it and when, not just an empty list. The carer app shows it too.
+- **Legal and capacity, on one screen.** Under **Safety**, **Legal and capacity** now shows CPR, lasting power of attorney, DoLS, an advance decision, an advance statement and the Mental Health Act as cards. Each card shows what is in force now, with its signed paper, and earlier decisions folded underneath. You can drag a file onto a card, or onto Consent, Advanced care, Referrals, Transfers of care, the care plan's ReSPECT form and Medical history. A short confirm asks what it is filed as, what it is linked to, and whether to show it to carers. Replacing a paper keeps the earlier one. See [legal and capacity](/help/legal-and-capacity.html).
 
 ## Carers hear about changes, and every carer sees the medicines round
 
@@ -93,9 +90,11 @@ Money gets more flexible without getting more manual.
 
 ## Recruitment, induction and training records
 
-If your agency uses the recruitment portal, adverts can now go on a public jobs board at jobs.homecareos.co.uk, with a share panel for each advert. Offer letters and contracts can be signed online with a typed name, and the signed copy is filed to the applicant.
+If your agency uses the recruitment portal, adverts can now go on a public jobs board at jobs.homecareos.co.uk, with a share panel for each advert. Offer letters and contracts can be signed online with a typed name, and the signed copy is filed to the applicant. The applicants list now shows active people by default, including anyone on hold. Tick **Show inactive applicants** to see people you have deactivated, or who have withdrawn or been rejected. On an applicant's page, **Deactivate** asks why, keeps everything on file, and their portal says their application is no longer being considered. **Reactivate** puts them back at the stage they had reached. A hired applicant cannot be deactivated. See [deactivate an applicant](/help/deactivate-an-applicant.html).
 
-For new carers, each agency now has its own induction checklist, copied from the HomecareOS standard for its nation and changed to suit: edit, add, reorder, remove and put back. See [set up your induction checklist](/help/induction-checklist.html). A training certificate uploaded to a carer's documents now marks the course done once you choose which course it is for, and a Certificates to match list catches the ones uploaded before. Confidential documents are set once by type, with one-click exceptions.
+For new carers, each agency now has its own induction checklist, copied from the HomecareOS standard for its nation and changed to suit: edit, add, reorder, remove and put back. See [set up your induction checklist](/help/induction-checklist.html).
+
+On a carer's record, under **Training**, you can drop a certificate on the course it belongs to, or use **Add a course not listed**. After every upload you are asked which course it is for, the date completed and when it expires, and the expiry fills from the course's renewal rule. A later certificate for a course already done is a renewal: the new record is added and the earlier one is kept. A certificate uploaded to a carer's documents still marks the course done once you choose which course it is for, and a **Certificates to match** list catches the ones uploaded before. **Quality > Staff compliance > Training** now opens with **Expired and due soon**. Coordinators can record training, as well as owners, registered managers, care managers and HR. See [record a training certificate](/help/training-certificates.html). Confidential documents are set once by type, with one-click exceptions.
 
 ## Evidence for commissioners
 
@@ -104,5 +103,7 @@ A new Neighbourhoods report shows each area over a chosen period: hours delivere
 ## Still coming soon
 
 The HomecareOS phone system is live. Caller ID matching and recording of answered calls are coming soon, and we will say so here when they arrive.
+
+Adding your own questions and prompts to the care plan template is also still to come. You can already show or hide any section or question, and choose how plans are worded.
 
 If you would like to see any of this on your own plans, [book a 15-minute demo](/booking.html).

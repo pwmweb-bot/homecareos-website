@@ -89,7 +89,7 @@ ARTICLES = [
     {
         "slug": "build-a-care-plan",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "clipboard",
         "updated": "2026-11-28",
         "screens": ["care-plan"],
@@ -123,7 +123,7 @@ ARTICLES = [
             "If your agency has uploaded client terms, sign-off waits until the office records who agreed to them, how, when and which version.",
             "Your agency decides which sections and questions plans ask, and how they read: see <a href=\"/help/care-plan-template.html\">Manage your care plan template</a> and <a href=\"/help/how-care-plans-are-written.html\">Choose how care plans are written</a>.",
         ],
-        "related": ["care-plan-template", "how-care-plans-are-written", "add-a-new-service-user", "schedule-a-visit"],
+        "related": ["care-plan-template", "how-care-plans-are-written", "legal-and-capacity", "add-a-new-service-user", "schedule-a-visit"],
         "reading": [
             ("/blog/homecareos-update-care-plan-template-november-2026.html", "Make your care plan template your own: the November 2026 update"),
             ("/blog/care-planning-software-uk.html", "Care planning software in the UK"),
@@ -134,7 +134,7 @@ ARTICLES = [
     {
         "slug": "care-plan-template",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "clipboard",
         "updated": "2026-11-28",
         "screens": ["care-plan-template"],
@@ -178,7 +178,7 @@ ARTICLES = [
     {
         "slug": "how-care-plans-are-written",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "message",
         "updated": "2026-11-28",
         "screens": ["settings-agency", "care-plan"],
@@ -212,6 +212,46 @@ ARTICLES = [
             ("/features-care-planning.html", "Care planning in HomecareOS"),
         ],
     },
+
+    {
+        "slug": "legal-and-capacity",
+        "role": "office",
+        "status": "live",
+        "icon": "shield",
+        "updated": "2026-11-28",
+        "screens": ["legal-capacity"],
+        "title": "Legal and capacity: decisions and signed papers",
+        "seo_title": "Legal and capacity on one screen | HomecareOS Help",
+        "description": "How to record CPR, powers of attorney, DoLS and advance decisions on one Legal and capacity screen in HomecareOS, and drop a signed paper where it belongs.",
+        "summary": "See what is in force on one screen, and drop the signed paper onto the card it belongs to.",
+        "keywords": "legal and capacity, CPR, DNACPR, lasting power of attorney, DoLS, advance decision, ReSPECT, signed paper",
+        "intro": "Safety &gt; Legal and capacity is one screen of cards for the decisions that must be clear in an emergency: CPR, power of attorney, DoLS, an advance decision, an advance statement and the Mental Health Act. Each card shows what is in force now, with its signed paper, and earlier records folded underneath.",
+        "before": [
+            "Open the person's record, then <strong>Safety</strong>, then <strong>Legal and capacity</strong>.",
+            "Recording or changing these decisions, and filing their papers, needs permission to edit the person's record, and your role must be on the agency's legal records list.",
+        ],
+        "steps": [
+            ("Read what is in force now", "The CPR card is the wide one. Each card shows the current decision in large type, or says it is not recorded. Earlier records fold under the card, such as <strong>1 earlier decision</strong>, and each opens its own record. Tags such as <strong>DNACPR in place</strong> appear beside the person's name when that read has worked."),
+            ("Record or change a decision", "Each card has its own action. CPR with nothing recorded offers <strong>Record the CPR decision</strong>. Once there is a decision, use <strong>Record a new decision</strong> (it supersedes the previous one) or <strong>Correct this one</strong>, which opens the form already filled in and saves a new version, keeping the old one. For a power of attorney use <strong>Add another LPA</strong> (in Scotland and Northern Ireland this reads <strong>Add another power of attorney</strong>). For DoLS use <strong>Record the renewal</strong>. For an advance decision or a Mental Health Act record use <strong>Record one</strong>, or <strong>Record a new one</strong> if one is already there. For an advance statement use <strong>Change</strong>."),
+            ("If two CPR decisions disagree", "The card says <strong>Two CPR decisions disagree</strong>, never DNACPR. Choose <strong>Record which one applies</strong>. Saving it retires the other."),
+            ("Add a signed paper", "Drag a file onto the card, or choose a file (on a phone the button reads <strong>Add a photo or file</strong>). A short confirm then shows <strong>Filed as</strong>, <strong>Linked to</strong> and <strong>Show to carers</strong>. Choose <strong>Save the document</strong>. If nothing is recorded on that card yet, the confirm offers <strong>Save, then record its details</strong>, which files the paper and opens the form."),
+            ("View, replace or show it to carers", "A paper already on the card has <strong>View</strong>, <strong>Replace</strong> and <strong>Show to carers</strong> or <strong>Stop showing to carers</strong>. Replacing files a new paper and keeps the earlier one. Nothing is deleted. <strong>Show to carers</strong> is on by default for a ReSPECT or DNACPR form, and off for every other paper."),
+            ("Drop a paper in other places too", "The same drop box is on Consent, Advanced care (the end of life plan and the contingency plan), Referrals, Transfers of care, the care plan's ReSPECT upload and Medical history. On a record's own page the drop is labelled <strong>Signed paper</strong>."),
+        ],
+        "image": None,
+        "image_note": "Screenshot to add: Safety > Legal and capacity with the CPR card and a drop box (new design, demo data).",
+        "tips": [
+            "The power of attorney card is called <strong>Lasting power of attorney</strong> in England and Wales, <strong>Power of attorney</strong> in Scotland, and <strong>Enduring power of attorney</strong> in Northern Ireland.",
+            "The CPR card also shows treatment escalation as four tiles.",
+            "A paper is linked to one record only, and a linked paper is never deleted.",
+        ],
+        "related": ["build-a-care-plan", "add-a-new-service-user", "check-the-mar-chart"],
+        "reading": [
+            ("/blog/homecareos-update-care-plan-template-november-2026.html", "Make your care plan template your own: the November 2026 update"),
+            ("/features-care-planning.html", "Care planning in HomecareOS"),
+        ],
+    },
+
     {
         "slug": "schedule-a-visit",
         "role": "office",
@@ -337,7 +377,7 @@ ARTICLES = [
     {
         "slug": "plan-repeating-visits",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "repeat",
         "updated": "2026-11-28",
         "screens": ["plan", "care-plan-visits"],
@@ -378,7 +418,7 @@ ARTICLES = [
     {
         "slug": "add-an-extra-visit",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "calendar",
         "updated": "2026-11-28",
         "screens": ["care-plan-visits", "visits"],
@@ -494,7 +534,7 @@ ARTICLES = [
     {
         "slug": "cancel-a-visit",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "calendar-x",
         "updated": "2026-11-28",
         "screens": ["visit-card"],
@@ -526,7 +566,7 @@ ARTICLES = [
     {
         "slug": "cancellation-pay-rules",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "calendar-x",
         "updated": "2026-11-28",
         "screens": ["rates-and-rules", "visit-card"],
@@ -593,7 +633,7 @@ ARTICLES = [
     {
         "slug": "check-the-mar-chart",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "pill",
         "updated": "2026-11-28",
         "screens": ["medicines-chart"],
@@ -708,7 +748,7 @@ ARTICLES = [
     {
         "slug": "pay-and-charge-bands",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "receipt",
         "updated": "2026-11-28",
         "screens": ["rates-and-rules"],
@@ -746,7 +786,7 @@ ARTICLES = [
     {
         "slug": "carer-expenses",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "receipt",
         "updated": "2026-11-28",
         "screens": ["expenses"],
@@ -823,7 +863,7 @@ ARTICLES = [
     {
         "slug": "build-and-send-a-form",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "clipboard",
         "updated": "2026-11-28",
         "screens": ["forms"],
@@ -861,7 +901,7 @@ ARTICLES = [
     {
         "slug": "carer-visit-change-alerts",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "smartphone",
         "updated": "2026-11-28",
         "screens": ["notifications"],
@@ -894,10 +934,46 @@ ARTICLES = [
             ("/features-mobile-app.html", "The carer app"),
         ],
     },
+
+    {
+        "slug": "deactivate-an-applicant",
+        "role": "office",
+        "status": "live",
+        "icon": "users",
+        "updated": "2026-11-28",
+        "screens": ["recruitment"],
+        "title": "Deactivate an applicant",
+        "seo_title": "Deactivate an applicant | HomecareOS Help",
+        "description": "How to deactivate a job applicant in HomecareOS so the list shows active people by default, and how to see or reactivate inactive applicants.",
+        "summary": "The list shows active applicants by default. Deactivate someone to take them off it, without deleting anything.",
+        "keywords": "deactivate applicant, inactive applicants, recruitment portal, reactivate applicant, withdrawn rejected",
+        "intro": "The applicants list on People &gt; Recruitment shows active people by default, including anyone on hold. When someone is no longer being considered, deactivate them. Nothing is deleted, and you can reactivate them later.",
+        "before": [
+            "Open <strong>People</strong>, then <strong>Recruitment</strong>. You need a role that can change applicants.",
+        ],
+        "steps": [
+            ("See the active list", "Active applicants, and those marked <strong>On hold</strong>, appear first. Hired applicants are counted off the pipeline, but are not a list of their own."),
+            ("Show inactive applicants", "Tick <strong>Show inactive applicants</strong>. Inactive rows sit underneath, greyed, with a label such as <strong>Inactive · Deactivated</strong>, <strong>Inactive · Withdrawn</strong> or <strong>Inactive · Rejected</strong>, and the reason."),
+            ("Deactivate someone", "Open the applicant and choose <strong>Deactivate</strong>. Under <strong>Why you are deactivating them</strong>, write a reason of at least five characters, then save. They leave the active list. Their portal says <strong>Your application is no longer being considered</strong>, with your agency's phone and email, and they cannot carry on. Their application, documents and notes are kept."),
+            ("Reactivate them", "With inactive applicants shown, open the person and choose <strong>Reactivate</strong>. They return to the active list at the stage they had reached."),
+        ],
+        "image": None,
+        "image_note": "Screenshot to add: the Recruitment applicants list with Show inactive applicants (new design, demo data).",
+        "tips": [
+            "A hired applicant cannot be deactivated, because they are on the staff file.",
+            "The callout on a deactivated applicant's page says who deactivated them, when and why.",
+        ],
+        "related": ["induction-checklist", "build-and-send-a-form", "email-from-your-own-domain"],
+        "reading": [
+            ("/blog/homecareos-update-care-plan-template-november-2026.html", "Make your care plan template your own: the November 2026 update"),
+            ("/blog/safer-recruitment-domiciliary-care.html", "Safer recruitment in domiciliary care"),
+        ],
+    },
+
     {
         "slug": "induction-checklist",
         "role": "office",
-        "status": "rolling",
+        "status": "live",
         "icon": "check-square",
         "updated": "2026-11-28",
         "screens": ["induction"],
@@ -924,12 +1000,50 @@ ARTICLES = [
             "Each nation has its own HomecareOS standard. <strong>Use another nation's standard</strong> switches to a different one: the tasks you removed are kept, and the tasks you added stay.",
             "Some tasks ask for evidence when they are signed off.",
         ],
-        "related": ["invite-a-carer-to-the-app", "team-and-access"],
+        "related": ["training-certificates", "deactivate-an-applicant", "invite-a-carer-to-the-app", "team-and-access"],
         "reading": [
             ("/blog/care-certificate-home-care-agencies.html", "The Care Certificate for home care agencies"),
             ("/blog/onboarding-new-carers-home-care.html", "Onboarding new carers"),
         ],
     },
+
+    {
+        "slug": "training-certificates",
+        "role": "office",
+        "status": "live",
+        "icon": "check-square",
+        "updated": "2026-11-28",
+        "screens": ["training"],
+        "title": "Record a training certificate",
+        "seo_title": "Record a training certificate | HomecareOS Help",
+        "description": "How to drop a training certificate onto a carer's Training record in HomecareOS, set the dates, renew a course and catch certificates that still need matching.",
+        "summary": "Drop a certificate onto the course, confirm the dates, and renewals keep the earlier record.",
+        "keywords": "training certificate, upload certificate, renew training, expired and due soon, add a course not listed",
+        "intro": "On a carer's record, Training is a list of courses with a drop box at the top. Each row shows its status in words: Expired, Due in a number of days, Done or To do. Drop a certificate on the course it belongs to, and the dates travel with it.",
+        "before": [
+            "Open <strong>People</strong>, then the carer, then <strong>Training</strong>. Recording training can be done by the owner, registered manager, care manager, HR or a coordinator.",
+        ],
+        "steps": [
+            ("Drop a certificate", "At the top, <strong>Drop a training certificate here</strong>, or choose a file. You can also drop a file onto a course row. Expired rows say <strong>Renewed? Upload the certificate</strong>."),
+            ("Answer the three questions", "After every upload you are asked <strong>Which course is it for?</strong>, <strong>Date completed</strong> and <strong>Expires</strong>. The expiry fills from the course's renewal rule, and you can change it. There is also <strong>Provider (optional)</strong>."),
+            ("Add a course not listed", "Choose <strong>Add a course not listed</strong> to name the course, set the dates, and attach its certificate if you have one, saved together."),
+            ("Renew a course already done", "A later completion for a course already done adds a new record with the new certificate, and leaves the earlier record and its certificate as they were."),
+            ("See what is expired or due soon", "Open <strong>Quality</strong>, then <strong>Staff compliance</strong>, then <strong>Training</strong>. <strong>Expired and due soon</strong> is at the top, for courses that have expired or are due within 60 days, and each row is a drop target."),
+            ("Match a certificate already uploaded", "A certificate uploaded to a carer's documents can still mark the course done once you choose which course it is for. A <strong>Certificates to match</strong> list catches ones uploaded before."),
+        ],
+        "image": None,
+        "image_note": "Screenshot to add: a carer's Training page with the drop box and course rows (new design, demo data).",
+        "tips": [
+            "The same three questions appear after an upload from the course row, from Staff compliance, and from Documents.",
+            "Carers cannot yet send in their own certificates from the app.",
+        ],
+        "related": ["induction-checklist", "invite-a-carer-to-the-app", "team-and-access"],
+        "reading": [
+            ("/blog/homecareos-update-care-plan-template-november-2026.html", "Make your care plan template your own: the November 2026 update"),
+            ("/blog/mandatory-training-care-workers.html", "Mandatory training for care workers"),
+        ],
+    },
+
     {
         "slug": "carer-sign-in",
         "role": "carer",
@@ -1263,7 +1377,7 @@ ARTICLES = [
     {
         "slug": "website-forms",
         "role": "owner",
-        "status": "rolling",
+        "status": "live",
         "icon": "message",
         "updated": "2026-11-28",
         "screens": ["website-forms"],
@@ -1297,7 +1411,7 @@ ARTICLES = [
     {
         "slug": "email-from-your-own-domain",
         "role": "owner",
-        "status": "rolling",
+        "status": "live",
         "icon": "message",
         "updated": "2026-11-28",
         "screens": ["email-sending"],
